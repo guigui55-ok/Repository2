@@ -1,0 +1,7 @@
+C:\Users\OK\source\repos\ErrorManager\ErrorManager\obj\Debug\ErrorManager.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\ErrorManager\ErrorManager\bin\Debug\ErrorManager.dll.config
+C:\Users\OK\source\repos\ErrorManager\ErrorManager\bin\Debug\ErrorManager.dll
+C:\Users\OK\source\repos\ErrorManager\ErrorManager\bin\Debug\ErrorManager.pdb
+C:\Users\OK\source\repos\ErrorManager\ErrorManager\obj\Debug\ErrorManager.dll
+C:\Users\OK\source\repos\ErrorManager\ErrorManager\obj\Debug\ErrorManager.pdb
+C:\Users\OK\source\repos\ErrorManager\ErrorManager\obj\Debug\ErrorManager.csprojAssemblyReference.cache

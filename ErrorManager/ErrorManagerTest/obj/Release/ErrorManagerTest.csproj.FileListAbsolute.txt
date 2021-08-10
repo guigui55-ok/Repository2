@@ -1,0 +1,11 @@
+C:\Users\OK\source\repos\ErrorManager\ErrorManagerTest\bin\Release\ErrorManagerTest.exe.config
+C:\Users\OK\source\repos\ErrorManager\ErrorManagerTest\bin\Release\ErrorManagerTest.exe
+C:\Users\OK\source\repos\ErrorManager\ErrorManagerTest\bin\Release\ErrorManagerTest.pdb
+C:\Users\OK\source\repos\ErrorManager\ErrorManagerTest\bin\Release\ErrorManager.dll
+C:\Users\OK\source\repos\ErrorManager\ErrorManagerTest\bin\Release\ErrorManager.pdb
+C:\Users\OK\source\repos\ErrorManager\ErrorManagerTest\bin\Release\ErrorManager.dll.config
+C:\Users\OK\source\repos\ErrorManager\ErrorManagerTest\obj\Release\ErrorManagerTest.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\ErrorManager\ErrorManagerTest\obj\Release\ErrorManagerTest.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\ErrorManager\ErrorManagerTest\obj\Release\ErrorManagerTest.csproj.CopyComplete
+C:\Users\OK\source\repos\ErrorManager\ErrorManagerTest\obj\Release\ErrorManagerTest.exe
+C:\Users\OK\source\repos\ErrorManager\ErrorManagerTest\obj\Release\ErrorManagerTest.pdb
