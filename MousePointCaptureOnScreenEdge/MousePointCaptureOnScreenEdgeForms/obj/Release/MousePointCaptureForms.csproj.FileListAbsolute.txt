@@ -1,0 +1,14 @@
+C:\Users\OK\source\repos\MousePointCapture\MousePointCaptureForms\obj\Release\MousePointCaptureForms.Form1.resources
+C:\Users\OK\source\repos\MousePointCapture\MousePointCaptureForms\obj\Release\MousePointCaptureForms.Properties.Resources.resources
+C:\Users\OK\source\repos\MousePointCapture\MousePointCaptureForms\obj\Release\MousePointCaptureForms.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\MousePointCapture\MousePointCaptureForms\obj\Release\MousePointCaptureForms.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\MousePointCapture\MousePointCaptureForms\bin\Release\MousePointCaptureForms.dll.config
+C:\Users\OK\source\repos\MousePointCapture\MousePointCaptureForms\bin\Release\MousePointCaptureForms.dll
+C:\Users\OK\source\repos\MousePointCapture\MousePointCaptureForms\bin\Release\MousePointCaptureForms.pdb
+C:\Users\OK\source\repos\MousePointCapture\MousePointCaptureForms\bin\Release\ErrorManager.dll
+C:\Users\OK\source\repos\MousePointCapture\MousePointCaptureForms\bin\Release\ErrorManager.pdb
+C:\Users\OK\source\repos\MousePointCapture\MousePointCaptureForms\bin\Release\ErrorManager.dll.config
+C:\Users\OK\source\repos\MousePointCapture\MousePointCaptureForms\obj\Release\MousePointCaptureForms.csproj.CopyComplete
+C:\Users\OK\source\repos\MousePointCapture\MousePointCaptureForms\obj\Release\MousePointCaptureForms.dll
+C:\Users\OK\source\repos\MousePointCapture\MousePointCaptureForms\obj\Release\MousePointCaptureForms.pdb
+C:\Users\OK\source\repos\MousePointCapture\MousePointCaptureForms\obj\Release\MousePointCaptureForms.csprojAssemblyReference.cache
