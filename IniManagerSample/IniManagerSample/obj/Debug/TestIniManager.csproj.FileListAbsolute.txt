@@ -1,0 +1,11 @@
+C:\Users\OK\source\repos\TestIniManager\TestIniManager\bin\Debug\TestIniManager.exe.config
+C:\Users\OK\source\repos\TestIniManager\TestIniManager\bin\Debug\TestIniManager.exe
+C:\Users\OK\source\repos\TestIniManager\TestIniManager\bin\Debug\TestIniManager.pdb
+C:\Users\OK\source\repos\TestIniManager\TestIniManager\bin\Debug\IniManager.dll
+C:\Users\OK\source\repos\TestIniManager\TestIniManager\bin\Debug\IniManager.pdb
+C:\Users\OK\source\repos\TestIniManager\TestIniManager\bin\Debug\IniManager.dll.config
+C:\Users\OK\source\repos\TestIniManager\TestIniManager\obj\Debug\TestIniManager.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\TestIniManager\TestIniManager\obj\Debug\TestIniManager.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\TestIniManager\TestIniManager\obj\Debug\TestIniManager.csproj.CopyComplete
+C:\Users\OK\source\repos\TestIniManager\TestIniManager\obj\Debug\TestIniManager.exe
+C:\Users\OK\source\repos\TestIniManager\TestIniManager\obj\Debug\TestIniManager.pdb
