@@ -1,0 +1,2 @@
+C:\Users\OK\source\repos\TestIniManager\TestIniManager\obj\Release\TestIniManager.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\TestIniManager\TestIniManager\obj\Release\TestIniManager.csproj.CoreCompileInputs.cache
