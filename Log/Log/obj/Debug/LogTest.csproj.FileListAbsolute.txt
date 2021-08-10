@@ -1,0 +1,10 @@
+C:\Users\OK\source\repos\Log\Log\obj\Debug\LogTest.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\Log\Log\obj\Debug\Log.LogTest.resources
+C:\Users\OK\source\repos\Log\Log\obj\Debug\Log.Properties.Resources.resources
+C:\Users\OK\source\repos\Log\Log\obj\Debug\LogTest.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\Log\Log\obj\Debug\LogTest.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Log\Log\bin\Debug\Log.exe.config
+C:\Users\OK\source\repos\Log\Log\bin\Debug\Log.exe
+C:\Users\OK\source\repos\Log\Log\bin\Debug\Log.pdb
+C:\Users\OK\source\repos\Log\Log\obj\Debug\Log.exe
+C:\Users\OK\source\repos\Log\Log\obj\Debug\Log.pdb
