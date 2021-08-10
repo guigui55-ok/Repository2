@@ -1,0 +1,10 @@
+C:\Users\OK\source\repos\MousePointCapture\MousePointCapture\obj\Debug\MousePointCapture.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\MousePointCapture\MousePointCapture\obj\Debug\MousePointCapture.mousePointCaptureForm.resources
+C:\Users\OK\source\repos\MousePointCapture\MousePointCapture\obj\Debug\MousePointCapture.Properties.Resources.resources
+C:\Users\OK\source\repos\MousePointCapture\MousePointCapture\obj\Debug\MousePointCapture.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\MousePointCapture\MousePointCapture\obj\Debug\MousePointCapture.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\MousePointCapture\MousePointCapture\bin\Debug\MousePointCapture.exe.config
+C:\Users\OK\source\repos\MousePointCapture\MousePointCapture\bin\Debug\MousePointCapture.exe
+C:\Users\OK\source\repos\MousePointCapture\MousePointCapture\bin\Debug\MousePointCapture.pdb
+C:\Users\OK\source\repos\MousePointCapture\MousePointCapture\obj\Debug\MousePointCapture.exe
+C:\Users\OK\source\repos\MousePointCapture\MousePointCapture\obj\Debug\MousePointCapture.pdb
