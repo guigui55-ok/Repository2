@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iniManager2", "iniManager2\iniManager2.csproj", "{5E1BA591-835E-42A5-A708-A801CE0D9DAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IniManager2Test", "IniManager2Test\IniManager2Test.csproj", "{6860695E-D66A-4A40-B0AE-495EE85D9473}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E1BA591-835E-42A5-A708-A801CE0D9DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E1BA591-835E-42A5-A708-A801CE0D9DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E1BA591-835E-42A5-A708-A801CE0D9DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E1BA591-835E-42A5-A708-A801CE0D9DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6860695E-D66A-4A40-B0AE-495EE85D9473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6860695E-D66A-4A40-B0AE-495EE85D9473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6860695E-D66A-4A40-B0AE-495EE85D9473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6860695E-D66A-4A40-B0AE-495EE85D9473}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BEE250D1-A366-4E14-A388-F6A9625CA206}
+	EndGlobalSection
+EndGlobal

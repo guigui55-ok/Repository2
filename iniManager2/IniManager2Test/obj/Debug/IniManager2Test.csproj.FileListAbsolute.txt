@@ -1,0 +1,11 @@
+C:\Users\OK\source\repos\iniManager2\IniManager2Test\obj\Debug\IniManager2Test.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\iniManager2\IniManager2Test\obj\Debug\IniManager2Test.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\iniManager2\IniManager2Test\bin\Debug\IniManager2Test.exe.config
+C:\Users\OK\source\repos\iniManager2\IniManager2Test\bin\Debug\IniManager2Test.exe
+C:\Users\OK\source\repos\iniManager2\IniManager2Test\bin\Debug\IniManager2Test.pdb
+C:\Users\OK\source\repos\iniManager2\IniManager2Test\bin\Debug\iniManager2.dll
+C:\Users\OK\source\repos\iniManager2\IniManager2Test\bin\Debug\iniManager2.pdb
+C:\Users\OK\source\repos\iniManager2\IniManager2Test\bin\Debug\iniManager2.dll.config
+C:\Users\OK\source\repos\iniManager2\IniManager2Test\obj\Debug\IniManager2Test.csproj.CopyComplete
+C:\Users\OK\source\repos\iniManager2\IniManager2Test\obj\Debug\IniManager2Test.exe
+C:\Users\OK\source\repos\iniManager2\IniManager2Test\obj\Debug\IniManager2Test.pdb
