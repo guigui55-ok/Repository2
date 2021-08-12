@@ -4,3 +4,9 @@ C:\Users\OK\source\repos\ErrorManager\ErrorManager\bin\Release\ErrorManager.pdb
 C:\Users\OK\source\repos\ErrorManager\ErrorManager\obj\Release\ErrorManager.csproj.CoreCompileInputs.cache
 C:\Users\OK\source\repos\ErrorManager\ErrorManager\obj\Release\ErrorManager.dll
 C:\Users\OK\source\repos\ErrorManager\ErrorManager\obj\Release\ErrorManager.pdb
+C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManager\obj\Release\ErrorManager.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManager\obj\Release\ErrorManager.dll
+C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManager\obj\Release\ErrorManager.pdb
+C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManager\bin\Release\ErrorManager.dll.config
+C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManager\bin\Release\ErrorManager.dll
+C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManager\bin\Release\ErrorManager.pdb

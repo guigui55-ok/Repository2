@@ -349,7 +349,7 @@ namespace Log
             {
                 if (Directory.Exists(Directory.GetDirectoryRoot(path)))
                 {
-                    string writePath = new Utility.FileUtility(_err).MakeNewFileNameNotLock(
+                    string writePath = new CommonUtility.FileUtility(_err).MakeNewFileNameNotLock(
                         System.IO.Path.GetFileName(path), System.IO.Path.GetDirectoryName(path));
                     if (!writePath.Equals(path))
                     {
