@@ -1,0 +1,4 @@
+C:\Users\OK\source\repos\guigui55-ok_Repos2\MethodProcessSuspender\MethodProcessSuspender\obj\Release\MethodProcessSuspender.FormWindow.ProcessingDialog.resources
+C:\Users\OK\source\repos\guigui55-ok_Repos2\MethodProcessSuspender\MethodProcessSuspender\obj\Release\MethodProcessSuspender.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\guigui55-ok_Repos2\MethodProcessSuspender\MethodProcessSuspender\obj\Release\MethodProcessSuspender.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\guigui55-ok_Repos2\MethodProcessSuspender\MethodProcessSuspender\obj\Release\MethodProcessSuspender.csprojAssemblyReference.cache
