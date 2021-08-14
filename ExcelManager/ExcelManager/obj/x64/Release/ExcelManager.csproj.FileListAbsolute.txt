@@ -1,0 +1,14 @@
+C:\Users\OK\source\repos\guigui55-ok_Repos2\ExcelManager\ExcelManager\obj\x64\Release\ExcelManager.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\guigui55-ok_Repos2\ExcelManager\ExcelManager\obj\x64\Release\ExcelManager.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\guigui55-ok_Repos2\ExcelManager\ExcelManager\bin\x64\Release\ExcelManager.dll.config
+C:\Users\OK\source\repos\guigui55-ok_Repos2\ExcelManager\ExcelManager\bin\x64\Release\ExcelManager.dll
+C:\Users\OK\source\repos\guigui55-ok_Repos2\ExcelManager\ExcelManager\bin\x64\Release\ExcelManager.pdb
+C:\Users\OK\source\repos\guigui55-ok_Repos2\ExcelManager\ExcelManager\bin\x64\Release\CommonUtility.dll
+C:\Users\OK\source\repos\guigui55-ok_Repos2\ExcelManager\ExcelManager\bin\x64\Release\ErrorManager.dll
+C:\Users\OK\source\repos\guigui55-ok_Repos2\ExcelManager\ExcelManager\bin\x64\Release\ErrorManager.pdb
+C:\Users\OK\source\repos\guigui55-ok_Repos2\ExcelManager\ExcelManager\bin\x64\Release\ErrorManager.dll.config
+C:\Users\OK\source\repos\guigui55-ok_Repos2\ExcelManager\ExcelManager\bin\x64\Release\CommonUtility.pdb
+C:\Users\OK\source\repos\guigui55-ok_Repos2\ExcelManager\ExcelManager\bin\x64\Release\CommonUtility.dll.config
+C:\Users\OK\source\repos\guigui55-ok_Repos2\ExcelManager\ExcelManager\obj\x64\Release\ExcelManager.csproj.CopyComplete
+C:\Users\OK\source\repos\guigui55-ok_Repos2\ExcelManager\ExcelManager\obj\x64\Release\ExcelManager.dll
+C:\Users\OK\source\repos\guigui55-ok_Repos2\ExcelManager\ExcelManager\obj\x64\Release\ExcelManager.pdb
