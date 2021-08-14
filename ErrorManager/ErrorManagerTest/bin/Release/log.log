@@ -214,3 +214,13 @@ TestString2
 2021/08/12 9:30:13 [NORMAL_][LOG] CommonUtility.FileUtility.MakeNewFileNameNotLock : path=C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManagerTest\bin\Release\Error.Log
 2021/08/12 9:30:13 [NORMAL_][LOG]   MakeNewFileNameNotLock=Error.Log
 
+2021/08/13 9:02:49 [ALERT__][EXP] TestString
+2021/08/13 9:02:49 [ALERT__][EXP] TestString2
+2021/08/13 9:02:49 [ALERT__][EXP] TestString3[TestString3_UserMessage]
+2021/08/13 9:02:49 [NORMAL_][LOG] log value 1
+2021/08/13 9:02:49 [NORMAL_][LOG] log value 2
+2021/08/13 9:02:49 [ALERT__][EXP] log value 3[MessagetoUser]
+2021/08/13 9:02:49 [NORMAL_][LOG] ErrorManager.ErrorManager.ClearAllDebugDataList : ClearDataCount=3
+2021/08/13 9:02:49 [NORMAL_][LOG] CommonUtility.FileUtility.MakeNewFileNameNotLock : path=C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManagerTest\bin\Release\Error.Log
+2021/08/13 9:02:49 [NORMAL_][LOG]   MakeNewFileNameNotLock=Error.Log
+

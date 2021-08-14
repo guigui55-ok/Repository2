@@ -47,16 +47,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LogManager.cs" />
-    <Compile Include="LogTestForm.cs">
+    <Compile Include="LogManagerSampleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LogTestForm.Designer.cs">
-      <DependentUpon>LogTestForm.cs</DependentUpon>
+    <Compile Include="LogManagerSampleForm.Designer.cs">
+      <DependentUpon>LogManagerSampleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogTest.cs" />
+    <Compile Include="LogManagerSample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="LogTest.resx">
-      <DependentUpon>LogTestForm.cs</DependentUpon>
+      <DependentUpon>LogManagerSampleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommonUtility
+namespace ErrorManagerUtility
 {
     class FileUtility
     {

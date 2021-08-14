@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace CloseHandleUtil
+namespace CommonUtility.CloseHandleUtil
 {
     public class HandleInfo
     {
@@ -105,6 +105,7 @@ namespace CloseHandleUtil
                     IntPtr hObj = IntPtr.Zero;
                     string hType = null;
                     string hName = null;
+                    HandleInfo hi = null;
                     try
                     {
                         if (shi.HandleValue.ToInt32() == 1104)
@@ -211,7 +212,7 @@ namespace CloseHandleUtil
                             }
                         }
 
-                        HandleInfo hi = new HandleInfo
+                        hi = new HandleInfo
                         {
                             Handle = shi.HandleValue,
                             Type = hType,
@@ -224,12 +225,16 @@ namespace CloseHandleUtil
                             Reserved = shi.Reserved,
                             UniqueProcessId = shi.UniqueProcessId
                         };
-                        yield return hi;
+                    } catch (Exception ex)
+                    {
+                        Console.WriteLine("Exception : " + ex.Message);
+                        Console.WriteLine(ex.StackTrace);
                     }
                     finally
                     {
                         CloseHandle(hObj);
                     }
+                    yield return hi;
 
                 }
                 CloseHandle(hProcess);
