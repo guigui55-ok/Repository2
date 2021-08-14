@@ -1,0 +1,11 @@
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\x64\Release\CommonUtility.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\x64\Release\CommonUtility.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\bin\x64\Release\CommonUtility.dll.config
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\bin\x64\Release\CommonUtility.dll
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\bin\x64\Release\CommonUtility.pdb
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\bin\x64\Release\ErrorManager.dll
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\bin\x64\Release\ErrorManager.pdb
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\bin\x64\Release\ErrorManager.dll.config
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\x64\Release\CommonUtility.csproj.CopyComplete
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\x64\Release\CommonUtility.dll
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\x64\Release\CommonUtility.pdb
