@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelCellsManager", "..\ExcelFindExtention\ExcelCellsManager\ExcelCellsManager.csproj", "{3375030A-423C-45FB-8CB2-E734FDC5E331}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3375030A-423C-45FB-8CB2-E734FDC5E331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3375030A-423C-45FB-8CB2-E734FDC5E331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3375030A-423C-45FB-8CB2-E734FDC5E331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3375030A-423C-45FB-8CB2-E734FDC5E331}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73DA1ED0-6ED2-4FEB-BFAE-2843D870C369}
+	EndGlobalSection
+EndGlobal

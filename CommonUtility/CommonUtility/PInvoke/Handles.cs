@@ -99,6 +99,7 @@ namespace CommonUtility.CloseHandleUtil
         {
             using (var proc = Process.GetProcessById(pid))
             {
+                Console.WriteLine("pid = ");
                 IntPtr hProcess = OpenProcess(ProcessAccessFlags.DupHandle, false, pid);
                 foreach (var shi in EnumHandles(pid))
                 {
@@ -187,10 +188,19 @@ namespace CommonUtility.CloseHandleUtil
                             }
                             else
                             {
+                                if(hObj == null)
+                                {
+                                    Console.WriteLine("hObj == null");
+                                }
+                                if (ObjectInformationClass.ObjectNameInformation == null)
+                                {
+                                    Console.WriteLine("ObjectInformationClass.ObjectNameInformation == null");
+                                }
                                 using (var nto2 = new NtObject(hObj, ObjectInformationClass.ObjectNameInformation, typeof(OBJECT_NAME_INFORMATION)))
                                 {
                                     try
                                     {
+                                        Console.WriteLine("ObjectNameInformationFromBuffer");
                                         var oni = ObjectNameInformationFromBuffer(nto2.Buffer);
                                         if (hType.Equals("File") || hType.Equals("Event"))
                                         {
@@ -198,6 +208,10 @@ namespace CommonUtility.CloseHandleUtil
                                         }
                                         else
                                         {
+                                            Console.WriteLine("oni =" + oni.Name.ToString());
+                                            Console.WriteLine("nto2.Buffer =" + nto2.Buffer);
+                                            Console.WriteLine("hObj =" + hObj);
+                                            Console.WriteLine("nto2 =" + nto2);
                                             hName = oni.Name.ToString();
                                         }
 

@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelManager", "ExcelManager\ExcelManager.csproj", "{BC570AB8-550E-43A8-BB30-12A5BA49876D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelManagerConsoleSample", "ExcelManagerConsoleSample\ExcelManagerConsoleSample.csproj", "{BCBC0ABA-1FB7-4594-B869-9961680C313C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BC570AB8-550E-43A8-BB30-12A5BA49876D} = {BC570AB8-550E-43A8-BB30-12A5BA49876D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelManagerWorkbookList", "ExcelManagerWorkbookList\ExcelManagerWorkbookList.csproj", "{6FB43FC9-3EEA-49E0-84F4-2F312F11BDB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC570AB8-550E-43A8-BB30-12A5BA49876D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC570AB8-550E-43A8-BB30-12A5BA49876D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC570AB8-550E-43A8-BB30-12A5BA49876D}.Debug|x64.ActiveCfg = Debug|x64
+		{BC570AB8-550E-43A8-BB30-12A5BA49876D}.Debug|x64.Build.0 = Debug|x64
+		{BC570AB8-550E-43A8-BB30-12A5BA49876D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC570AB8-550E-43A8-BB30-12A5BA49876D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC570AB8-550E-43A8-BB30-12A5BA49876D}.Release|x64.ActiveCfg = Release|x64
+		{BC570AB8-550E-43A8-BB30-12A5BA49876D}.Release|x64.Build.0 = Release|x64
+		{BCBC0ABA-1FB7-4594-B869-9961680C313C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCBC0ABA-1FB7-4594-B869-9961680C313C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCBC0ABA-1FB7-4594-B869-9961680C313C}.Debug|x64.ActiveCfg = Debug|x64
+		{BCBC0ABA-1FB7-4594-B869-9961680C313C}.Debug|x64.Build.0 = Debug|x64
+		{BCBC0ABA-1FB7-4594-B869-9961680C313C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCBC0ABA-1FB7-4594-B869-9961680C313C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCBC0ABA-1FB7-4594-B869-9961680C313C}.Release|x64.ActiveCfg = Release|x64
+		{BCBC0ABA-1FB7-4594-B869-9961680C313C}.Release|x64.Build.0 = Release|x64
+		{6FB43FC9-3EEA-49E0-84F4-2F312F11BDB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FB43FC9-3EEA-49E0-84F4-2F312F11BDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FB43FC9-3EEA-49E0-84F4-2F312F11BDB7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6FB43FC9-3EEA-49E0-84F4-2F312F11BDB7}.Debug|x64.Build.0 = Debug|Any CPU
+		{6FB43FC9-3EEA-49E0-84F4-2F312F11BDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FB43FC9-3EEA-49E0-84F4-2F312F11BDB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FB43FC9-3EEA-49E0-84F4-2F312F11BDB7}.Release|x64.ActiveCfg = Release|Any CPU
+		{6FB43FC9-3EEA-49E0-84F4-2F312F11BDB7}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {537E6983-A0C5-4B60-8C2A-6F28D24C8BE3}
+	EndGlobalSection
+EndGlobal
