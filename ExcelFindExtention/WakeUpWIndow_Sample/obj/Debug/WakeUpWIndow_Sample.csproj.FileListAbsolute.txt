@@ -1,0 +1,11 @@
+C:\Users\OK\source\repos\ExcelFindExtention\WakeUpWIndow_Sample\bin\Debug\WakeUpWIndow_Sample.exe.config
+C:\Users\OK\source\repos\ExcelFindExtention\WakeUpWIndow_Sample\bin\Debug\WakeUpWIndow_Sample.exe
+C:\Users\OK\source\repos\ExcelFindExtention\WakeUpWIndow_Sample\bin\Debug\WakeUpWIndow_Sample.pdb
+C:\Users\OK\source\repos\ExcelFindExtention\WakeUpWIndow_Sample\bin\Debug\ErrorManager.dll
+C:\Users\OK\source\repos\ExcelFindExtention\WakeUpWIndow_Sample\bin\Debug\ErrorManager.pdb
+C:\Users\OK\source\repos\ExcelFindExtention\WakeUpWIndow_Sample\bin\Debug\ErrorManager.dll.config
+C:\Users\OK\source\repos\ExcelFindExtention\WakeUpWIndow_Sample\obj\Debug\WakeUpWIndow_Sample.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\ExcelFindExtention\WakeUpWIndow_Sample\obj\Debug\WakeUpWIndow_Sample.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\ExcelFindExtention\WakeUpWIndow_Sample\obj\Debug\WakeUpWIndow_Sample.csproj.CopyComplete
+C:\Users\OK\source\repos\ExcelFindExtention\WakeUpWIndow_Sample\obj\Debug\WakeUpWIndow_Sample.exe
+C:\Users\OK\source\repos\ExcelFindExtention\WakeUpWIndow_Sample\obj\Debug\WakeUpWIndow_Sample.pdb

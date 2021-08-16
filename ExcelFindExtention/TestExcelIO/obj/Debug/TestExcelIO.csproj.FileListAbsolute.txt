@@ -1,0 +1,15 @@
+C:\Users\OK\source\repos\ExcelFindExtention\TestExcelIO\obj\Debug\TestExcelIO.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\ExcelFindExtention\TestExcelIO\obj\Debug\TestExcelIO.Form1.resources
+C:\Users\OK\source\repos\ExcelFindExtention\TestExcelIO\obj\Debug\TestExcelIO.Properties.Resources.resources
+C:\Users\OK\source\repos\ExcelFindExtention\TestExcelIO\obj\Debug\TestExcelIO.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\ExcelFindExtention\TestExcelIO\obj\Debug\TestExcelIO.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\ExcelFindExtention\TestExcelIO\bin\Debug\TestExcelIO.exe.config
+C:\Users\OK\source\repos\ExcelFindExtention\TestExcelIO\bin\Debug\TestExcelIO.exe
+C:\Users\OK\source\repos\ExcelFindExtention\TestExcelIO\bin\Debug\TestExcelIO.pdb
+C:\Users\OK\source\repos\ExcelFindExtention\TestExcelIO\bin\Debug\ErrorManager.dll
+C:\Users\OK\source\repos\ExcelFindExtention\TestExcelIO\bin\Debug\ExcelFindExtention.exe
+C:\Users\OK\source\repos\ExcelFindExtention\TestExcelIO\bin\Debug\ExcelFindExtention.pdb
+C:\Users\OK\source\repos\ExcelFindExtention\TestExcelIO\bin\Debug\ExcelFindExtention.exe.config
+C:\Users\OK\source\repos\ExcelFindExtention\TestExcelIO\obj\Debug\TestExcelIO.csproj.CopyComplete
+C:\Users\OK\source\repos\ExcelFindExtention\TestExcelIO\obj\Debug\TestExcelIO.exe
+C:\Users\OK\source\repos\ExcelFindExtention\TestExcelIO\obj\Debug\TestExcelIO.pdb

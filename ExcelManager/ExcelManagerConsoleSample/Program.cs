@@ -14,11 +14,36 @@ namespace ExcelManagerConsoleSample
         {
             try
             {
-                Test_Update();
+                Test_WindowOnly();
             } finally
             {
                 Console.WriteLine("Program Done. Any Press Key.");
                 Console.ReadKey();
+            }
+        }
+        static void Test_WindowOnly()
+        {
+            ErrorManager.ErrorManager err = null;
+            ExcelUtility.ExcelManager excelManager = null;
+            string method = "Program.Test_Update";
+            try
+            {
+                err = new ErrorManager.ErrorManager(1);
+                excelManager = new ExcelUtility.ExcelManager(err);
+                err.AddLog(method + " Start");
+                //-----------------
+                excelManager.UpdateOpendExcelApplication();
+                //-----------------
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception:\n" + ex.Message);
+            }
+            finally
+            {
+                if (excelManager != null) { excelManager.Close(); }
+                if (err.hasError) { Console.WriteLine("ErrorManager:\n" + err.GetUserMessageOnlyAsString()); }
+                else { Console.WriteLine(method + " Success!"); }
             }
         }
 
