@@ -290,6 +290,22 @@ namespace ExcelIO
             }
         }
 
+        public void CheckExcelAppsList()
+        {
+            try
+            {
+                _Error.AddLog(this, "CheckExcelAppsList");
+                if (!this.AppsListIsValid()) { _Error.AddLog("  AppsListIsValid=false"); return; }
+                foreach(ExcelApps apps in _ExcelAppsList)
+                {
+                    apps.UpdateThisInfo();
+                }
+            } catch (Exception ex)
+            {
+                _Error.AddException(ex, this, "CheckExcelAppsList");
+            }
+        }
+
         // 開いている Excel の Workbook をすべて取得する
         public void UpdateOpendExcelApplication()
         {
@@ -299,6 +315,8 @@ namespace ExcelIO
                 _Error.ReleaseErrorState();
                 _Error.ClearError();
                 List<ExcelApps> appsList = _ExcelAppsList;
+
+                CheckExcelAppsList();
 
                 // GetActiveObject から Excel.Application を取得する
                 // System.Runtime.InteropServices.Marshal.GetActiveObject("Excel.Application")
@@ -954,6 +972,15 @@ namespace ExcelIO
                 }
                 if (isRemove)
                 {
+
+                    if (KeepRunApplicationOneOrMore)
+                    {
+                        if (_ExcelAppsList.Count == 1)
+                        {
+                            _Error.AddLogCaution("  KeepRunApplicationOneOrMore=true,_ExcelAppsList.Count == 1 return");
+                            return;
+                        }
+                    }
                     _Error.AddLog("RemoveAppsAfterCloseProcess Excute Again");
                     RemoveAppsAfterCloseProcess(pid);
                     if (_Error.hasAlert) { throw new Exception("RemoveAppsAfterCloseProcess Again Failed"); }

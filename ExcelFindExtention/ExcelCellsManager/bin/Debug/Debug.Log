@@ -6523,3 +6523,1161 @@ _WindowUtil.WakeupWindow Failed
 2021/08/17 5:33:58 [NORMAL_][LOG]   MakeNewFileNameNotLock=Error.Log
 2021/08/17 5:33:58 [NORMAL_][LOG] ExcelCellsManagerForm_FormClosed.WriteErrorLog Success [C:\Users\OK\source\repos\Repository2\ExcelFindExtention\ExcelCellsManager\bin\Debug\Error.Log]
 
+2021/08/17 5:41:14 [NORMAL_][LOG] ExcelCellsManagerForm.ExcelCellsManagerForm Constracta BeginLogRecording
+2021/08/17 5:41:14 [NORMAL_][LOG] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar.Initialize
+2021/08/17 5:41:14 [NORMAL_][LOG] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar._statusLabel_VisibleChanged
+2021/08/17 5:41:15 [NORMAL_][LOG] MouseCaptureInScreenEdgeManager Constracta: new MouseCaptureInScreenEdgeFormEvents Form.Text=Excel Cells Manager2
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:41:15 [NORMAL_][LOG] IniManager.IniManager.SetPathAndCreateFileIfPathNotExists
+2021/08/17 5:41:15 [NORMAL_][LOG] IniManager.IniManager.SetPath path=C:\Users\OK\source\repos\Repository2\ExcelFindExtention\ExcelCellsManager\bin\Debug\settings.ini
+2021/08/17 5:41:15 [NORMAL_][LOG] IniManager.IniReader.ReadSettingsFile
+2021/08/17 5:41:15 [NORMAL_][LOG] IniManager.IniManager.SetSectionFromPath
+2021/08/17 5:41:15 [NORMAL_][LOG] IniManager.IniReader.SetSectionListByAnalyze
+2021/08/17 5:41:15 [NORMAL_][LOG]   SetParameterListByAnalyze Success
+2021/08/17 5:41:15 [NORMAL_][LOG] ExcelCellsManager.Settings.ExcelCellsManagerSettingsValue.SettingsValueToThisMember
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsValueToThisMember: Name=IsActivateWorkbookWindowAfterRegistAddress
+2021/08/17 5:41:15 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:41:15 [NORMAL_][LOG]   section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=
+2021/08/17 5:41:15 [NORMAL_][LOG]   GetParameterValueFromLine: value=IsActivateWorkbookWindowAfterRegistAddress=True
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsValueToThisMember: Name=IsOpenLastFileWhenRunApplication
+2021/08/17 5:41:15 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:41:15 [NORMAL_][LOG]   section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=
+2021/08/17 5:41:15 [NORMAL_][LOG]   GetParameterValueFromLine: value=IsOpenLastFileWhenRunApplication=True
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsValueToThisMember: Name=LastOpendFilePath
+2021/08/17 5:41:15 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:41:15 [NORMAL_][LOG]   section=application ,parameter=LastOpendFilePath ,value=
+2021/08/17 5:41:15 [NORMAL_][LOG]   GetParameterValueFromLine: value=LastOpendFilePath=C:\Users\OK\Desktop\NewFile.tsv
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsValueToThisMember: Name=IsActivateFormWhenMoveMouseScreenEdge
+2021/08/17 5:41:15 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:41:15 [NORMAL_][LOG]   section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=
+2021/08/17 5:41:15 [NORMAL_][LOG]   GetParameterValueFromLine: value=IsActivateFormWhenMoveMouseScreenEdge=False
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsValueToThisMember: Name=IsSaveColumnWidthOfDataList
+2021/08/17 5:41:15 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:41:15 [NORMAL_][LOG]   section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=
+2021/08/17 5:41:15 [NORMAL_][LOG]   GetParameterValueFromLine: value=IsSaveColumnWidthOfDataList=True
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsValueToThisMember: Name=ColumnWidthOfDataList
+2021/08/17 5:41:15 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:41:15 [NORMAL_][LOG]   section=dataList ,parameter=ColumnWidthOfDataList ,value=
+2021/08/17 5:41:15 [NORMAL_][LOG]   GetParameterValueFromLine: value=ColumnWidthOfDataList=152,100,100,98,115,100
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsValueToThisMember: Name=MouseCaptureSettingLeft
+2021/08/17 5:41:15 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:41:15 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingLeft ,value=
+2021/08/17 5:41:15 [NORMAL_][LOG]   GetParameterValueFromLine: value=MouseCaptureSettingLeft=1,110,111,1
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsValueToThisMember: Name=MouseCaptureSettingTop
+2021/08/17 5:41:15 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:41:15 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingTop ,value=
+2021/08/17 5:41:15 [NORMAL_][LOG]   GetParameterValueFromLine: value=MouseCaptureSettingTop=1,280,300,1
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsValueToThisMember: Name=MouseCaptureSettingRight
+2021/08/17 5:41:15 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:41:15 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingRight ,value=
+2021/08/17 5:41:15 [NORMAL_][LOG]   GetParameterValueFromLine: value=MouseCaptureSettingRight=0,200,300,1
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsValueToThisMember: Name=MouseCaptureSettingBottom
+2021/08/17 5:41:15 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:41:15 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingBottom ,value=
+2021/08/17 5:41:15 [NORMAL_][LOG]   GetParameterValueFromLine: value=MouseCaptureSettingBottom=0,200,300,1
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsValueToThisMember: Name=IsUpdateListWhenWorkbookOpendAndClosed
+2021/08/17 5:41:15 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:41:15 [NORMAL_][LOG]   section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=
+2021/08/17 5:41:15 [NORMAL_][LOG]   GetParameterValueFromLine: value=IsUpdateListWhenWorkbookOpendAndClosed=True
+2021/08/17 5:41:15 [NORMAL_][LOG] ExcelCellsManager.Settings.ExcelCellsManagerSettingsValue.SettingsValueToThisMemberMain
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.String
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/08/17 5:41:15 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/08/17 5:41:15 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.Initialize
+2021/08/17 5:41:15 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewUtility.Initialize
+2021/08/17 5:41:15 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewUtility.SetColumnWidth
+2021/08/17 5:41:15 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewFormEventCellsManager._dataGridView_ColumnWidthChanged 
+2021/08/17 5:41:15 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewFormEventCellsManager._dataGridView_ColumnWidthChanged 
+2021/08/17 5:41:15 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewFormEventCellsManager._dataGridView_ColumnWidthChanged 
+2021/08/17 5:41:15 [NORMAL_][LOG] Augument settings is null.app Use Already Prepared SetttingsValueClassObject
+2021/08/17 5:41:15 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.InitializeForms
+2021/08/17 5:41:15 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 5:41:15 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 5:41:15 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 5:41:15 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 5:41:15 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.SetSettingValueToCaptureForm
+2021/08/17 5:41:15 [NORMAL_][LOG] MouseCaptureSettingLeft = 110,111
+2021/08/17 5:41:15 [NORMAL_][LOG] MouseCaptureSettingTop = 280,300
+2021/08/17 5:41:15 [NORMAL_][LOG] MouseCaptureSettingRight = 200,300
+2021/08/17 5:41:15 [NORMAL_][LOG] MouseCaptureSettingBottom = 200,300
+2021/08/17 5:41:15 [NORMAL_][LOG] screenNumbers = 1,1,1,1
+2021/08/17 5:41:15 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 5:41:15 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 5:41:15 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 5:41:15 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 5:41:15 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeFormEvents.SetValidRangeValue
+2021/08/17 5:41:15 [NORMAL_][LOG]   [110 , 111] [280 , 300] [200 , 300] [200 , 200] 
+2021/08/17 5:41:15 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.SettingsForm.EcmSettingsFormManager.PlaceControlSettingsListToForm
+2021/08/17 5:41:15 [NORMAL_][LOG]   Panel Height = 282
+2021/08/17 5:41:15 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.OpenFile : C:\Users\OK\Desktop\NewFile.tsv
+2021/08/17 5:41:15 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.ConformWhenDataEdited
+2021/08/17 5:41:15 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.ResetEdited
+2021/08/17 5:41:15 [NORMAL_][LOG] ExcelCellsManagerForm.DataList_Edited
+2021/08/17 5:41:15 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2021/08/17 5:41:15 [NORMAL_][LOG] CurrentThread = 1
+2021/08/17 5:41:15 [NORMAL_][LOG] ExcelIO.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2021/08/17 5:41:15 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 5:41:15 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 5:41:16 [NORMAL_][LOG] ExcelIO.ExcelApps.SetApplicationFromFilePath
+2021/08/17 5:41:16 [NORMAL_][LOG] ** Pid = 15340
+2021/08/17 5:41:16 [NORMAL_][LOG] ExcelIO.ExcelApps.ReSetFileListFromApplication path=
+2021/08/17 5:41:16 [NORMAL_][LOG] ExcelIO.ExcelApps.SetWorkbookEvent : Microsoft Excel:A_PRG.xlsb
+2021/08/17 5:41:16 [NORMAL_][LOG] SetActivateFlag
+2021/08/17 5:41:16 [NORMAL_][LOG] ExcelIO.ExcelApps.GetActiveWorkbookName
+2021/08/17 5:41:16 [NORMAL_][LOG]   GetWorkbookNameListAndGhostProcessNameList Success.
+2021/08/17 5:41:16 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtility.UpdateItemListAfterClearList
+2021/08/17 5:41:16 [NORMAL_][LOG] UpdateList Success.
+2021/08/17 5:41:16 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.SetActiveCell
+2021/08/17 5:41:16 [NORMAL_][LOG] ExcelIO.ExcelManager.GetActiveExcelApps
+2021/08/17 5:41:16 [NORMAL_][LOG]  GetActiveExcelApps Success.
+2021/08/17 5:41:16 [NORMAL_][LOG] ExcelIO.ExcelApps.GetActiveWorkbookName
+2021/08/17 5:41:16 [NORMAL_][LOG] ExcelIO.ExcelApps.GetActiveSheetName
+2021/08/17 5:41:16 [NORMAL_][LOG] ExcelIO.ExcelApps.GetActiveSheetName : sheetName=アイデア
+2021/08/17 5:41:16 [NORMAL_][LOG] ExcelIO.ExcelApps.GetActiveCellsAddress
+2021/08/17 5:41:16 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G317
+2021/08/17 5:41:16 [NORMAL_][LOG] ExcelIO.ExcelManager.ChangeActiveCell
+2021/08/17 5:41:16 [NORMAL_][LOG] ******************** Initialize End ********************
+2021/08/17 5:41:16 [NORMAL_][LOG] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar._statusLabel_VisibleChanged
+2021/08/17 5:41:16 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerForm.ShowErrorMessageEvent
+2021/08/17 5:41:17 [NORMAL_][LOG] _statusStrip_Paint
+2021/08/17 5:41:17 [NORMAL_][LOG] _statusStrip.Height = 22
+2021/08/17 5:41:18 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxEvent.CheckedListBox_MouseClick
+2021/08/17 5:41:19 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMainCloseSave
+2021/08/17 5:41:19 [NORMAL_][LOG] ExcelIO.ExcelManager.CloseWorkbookByPidAndBookName
+2021/08/17 5:41:19 [NORMAL_][LOG] 15340/A_PRG.xlsb/0/isSave=True/isConform=False/saveAsName=/saveFilePath=
+2021/08/17 5:41:19 [NORMAL_][LOG] ExcelIO.ExcelManager.CloseWorkbook
+2021/08/17 5:41:19 [NORMAL_][LOG] ExcelIO.ExcelApps.ExcelApps_ApplicationWorkbookBeoreClose ExcelApps
+2021/08/17 5:41:19 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WorkbookBeforeClose : CellManager : 
+2021/08/17 5:41:19 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookBeforeCloseAddEvent
+2021/08/17 5:41:19 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookBeforeCloseAddEvent : Finally
+2021/08/17 5:41:19 [NORMAL_][LOG] ExcelIO.ExcelApps.AppsWindowDeactivate
+2021/08/17 5:41:19 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G317
+2021/08/17 5:41:19 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WindowDeactivate : CellManager : G317 < アイデア < A_PRG.xlsb
+2021/08/17 5:41:19 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookDeactivateAddEvent
+2021/08/17 5:41:19 [NORMAL_][LOG] ExcelIO.ExcelApps.Workbook_WindowDeactivate
+2021/08/17 5:41:19 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Workbook_WindowDeactivate : CellManager
+2021/08/17 5:41:19 [NORMAL_][LOG]   CloseWorkbookMain Task End.
+2021/08/17 5:41:19 [NORMAL_][LOG] ExcelIO.ExcelManager.RemoveAppsAfterCloseProcess : pid = 15340
+2021/08/17 5:41:19 [CAUTION][LOG]   KeepRunApplicationOneOrMore=true,_ExcelAppsList.Count == 1 return
+2021/08/17 5:41:19 [CAUTION][LOG]   KeepRunApplicationOneOrMore=true,_ExcelAppsList.Count == 1 return
+2021/08/17 5:41:19 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2021/08/17 5:41:19 [NORMAL_][LOG] CurrentThread = 1
+2021/08/17 5:41:19 [NORMAL_][LOG] ExcelIO.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2021/08/17 5:41:19 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 5:41:19 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 5:41:20 [CAUTION][LOG] Set IsGhost=true , pid=15340
+2021/08/17 5:41:20 [NORMAL_][LOG]   GetWorkbookNameListAndGhostProcessNameList Success.
+2021/08/17 5:41:20 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtility.UpdateItemListAfterClearList
+2021/08/17 5:41:20 [NORMAL_][LOG] addList.Count < 1
+2021/08/17 5:41:20 [NORMAL_][LOG] UpdateList Success.
+2021/08/17 5:41:20 [NORMAL_][LOG] _statusStrip_Paint
+2021/08/17 5:41:21 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2021/08/17 5:41:21 [NORMAL_][LOG] CurrentThread = 1
+2021/08/17 5:41:21 [NORMAL_][LOG] ExcelIO.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2021/08/17 5:41:21 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 5:41:21 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 5:41:21 [CAUTION][LOG] Set IsGhost=true , pid=15340
+2021/08/17 5:41:21 [NORMAL_][LOG]   GetWorkbookNameListAndGhostProcessNameList Success.
+2021/08/17 5:41:21 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtility.UpdateItemListAfterClearList
+2021/08/17 5:41:21 [NORMAL_][LOG] addList.Count < 1
+2021/08/17 5:41:21 [NORMAL_][LOG] UpdateList Success.
+2021/08/17 5:41:27 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.ConformWhenDataEdited
+2021/08/17 5:41:27 [NORMAL_][LOG] ******************** ExcelCellsManagerForm_FormClosed Begin ********************
+2021/08/17 5:41:27 [NORMAL_][LOG] SettingsManager.SettingsManager.SetValue
+2021/08/17 5:41:27 [NORMAL_][LOG] settingName=application ,settingsName=LastOpendFilePath ,value=C:\Users\OK\Desktop\NewFile.tsv
+2021/08/17 5:41:27 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 5:41:27 [NORMAL_][LOG]   section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=True
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=True
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 5:41:27 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 5:41:27 [NORMAL_][LOG]   section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=True
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=True
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 5:41:27 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 5:41:27 [NORMAL_][LOG]   section=application ,parameter=LastOpendFilePath ,value=C:\Users\OK\Desktop\NewFile.tsv
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=LastOpendFilePath ,value=C:\Users\OK\Desktop\NewFile.tsv
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 5:41:27 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 5:41:27 [NORMAL_][LOG]   section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=False
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=False
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 5:41:27 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 5:41:27 [NORMAL_][LOG]   section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=True
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue: section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=True
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 5:41:27 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+
+2021/08/17 5:41:27 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 5:41:27 [NORMAL_][LOG]   section=dataList ,parameter=ColumnWidthOfDataList ,value=152,100,100,98,115,100
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue: section=dataList ,parameter=ColumnWidthOfDataList ,value=152,100,100,98,115,100
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 5:41:27 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 5:41:27 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingLeft ,value=1,110,111,1
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=MouseCaptureSettingLeft ,value=1,110,111,1
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 5:41:27 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 5:41:27 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingTop ,value=1,280,300,1
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=MouseCaptureSettingTop ,value=1,280,300,1
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 5:41:27 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 5:41:27 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingRight ,value=0,200,300,1
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=MouseCaptureSettingRight ,value=0,200,300,1
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 5:41:27 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 5:41:27 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingBottom ,value=0,200,300,1
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=MouseCaptureSettingBottom ,value=0,200,300,1
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 5:41:27 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 5:41:27 [NORMAL_][LOG]   section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=True
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=True
+2021/08/17 5:41:27 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 5:41:27 [NORMAL_][LOG] IniManager.IniManager.WriteAllData
+2021/08/17 5:41:27 [NORMAL_][LOG] IniManager.IniManager.ConvertSectionDataToListString
+2021/08/17 5:41:27 [NORMAL_][LOG]   [application]
+2021/08/17 5:41:27 [NORMAL_][LOG]   IsActivateWorkbookWindowAfterRegistAddress=True
+2021/08/17 5:41:27 [NORMAL_][LOG]   LastOpendFilePath=C:\Users\OK\Desktop\NewFile.tsv
+2021/08/17 5:41:27 [NORMAL_][LOG]   IsActivateFormWhenMoveMouseScreenEdge=False
+2021/08/17 5:41:27 [NORMAL_][LOG]   MouseCaptureSettingLeft=1,110,111,1
+2021/08/17 5:41:27 [NORMAL_][LOG]   MouseCaptureSettingTop=1,280,300,1
+2021/08/17 5:41:27 [NORMAL_][LOG]   MouseCaptureSettingRight=0,200,300,1
+2021/08/17 5:41:27 [NORMAL_][LOG]   MouseCaptureSettingBottom=0,200,300,1
+2021/08/17 5:41:27 [NORMAL_][LOG]   IsUpdateListWhenWorkbookOpendAndClosed=True
+2021/08/17 5:41:27 [NORMAL_][LOG]   IsOpenLastFileWhenRunApplication=True
+2021/08/17 5:41:27 [NORMAL_][LOG]   [dataList]
+2021/08/17 5:41:27 [NORMAL_][LOG]   IsSaveColumnWidthOfDataList=True
+2021/08/17 5:41:27 [NORMAL_][LOG]   ColumnWidthOfDataList=152,100,100,98,115,100
+2021/08/17 5:41:27 [NORMAL_][LOG] IniManager.IniWriter.WriteData
+2021/08/17 5:41:27 [NORMAL_][LOG] IniManager.IniReader.ReadSettingsFile
+2021/08/17 5:41:27 [NORMAL_][LOG] IniManager.IniWriter.SetValueForWrite
+2021/08/17 5:41:27 [NORMAL_][LOG] ExcuteOverWrite Success. Path= C:\Users\OK\source\repos\Repository2\ExcelFindExtention\ExcelCellsManager\bin\Debug\settings.ini
+2021/08/17 5:41:27 [NORMAL_][LOG] ExcelCellsManagerForm.ExcelCellsManagerForm_FormClosed Button Close
+2021/08/17 5:41:27 [NORMAL_][LOG] ErrorManagerUtility.FileUtility.MakeNewFileNameNotLock : path=C:\Users\OK\source\repos\Repository2\ExcelFindExtention\ExcelCellsManager\bin\Debug\Error.Log
+2021/08/17 5:41:27 [NORMAL_][LOG]   MakeNewFileNameNotLock=Error.Log
+2021/08/17 5:41:27 [NORMAL_][LOG] ExcelCellsManagerForm_FormClosed.WriteErrorLog Success [C:\Users\OK\source\repos\Repository2\ExcelFindExtention\ExcelCellsManager\bin\Debug\Error.Log]
+
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManagerForm.ExcelCellsManagerForm Constracta BeginLogRecording
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar.Initialize
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar._statusLabel_VisibleChanged
+2021/08/17 5:49:07 [NORMAL_][LOG] MouseCaptureInScreenEdgeManager Constracta: new MouseCaptureInScreenEdgeFormEvents Form.Text=Excel Cells Manager2
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 5:49:07 [NORMAL_][LOG] IniManager.IniManager.SetPathAndCreateFileIfPathNotExists
+2021/08/17 5:49:07 [NORMAL_][LOG] IniManager.IniManager.SetPath path=C:\Users\OK\source\repos\Repository2\ExcelFindExtention\ExcelCellsManager\bin\Debug\settings.ini
+2021/08/17 5:49:07 [NORMAL_][LOG] IniManager.IniReader.ReadSettingsFile
+2021/08/17 5:49:07 [NORMAL_][LOG] IniManager.IniManager.SetSectionFromPath
+2021/08/17 5:49:07 [NORMAL_][LOG] IniManager.IniReader.SetSectionListByAnalyze
+2021/08/17 5:49:07 [NORMAL_][LOG]   SetParameterListByAnalyze Success
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManager.Settings.ExcelCellsManagerSettingsValue.SettingsValueToThisMember
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsValueToThisMember: Name=IsActivateWorkbookWindowAfterRegistAddress
+2021/08/17 5:49:07 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:49:07 [NORMAL_][LOG]   section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=
+2021/08/17 5:49:07 [NORMAL_][LOG]   GetParameterValueFromLine: value=IsActivateWorkbookWindowAfterRegistAddress=True
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsValueToThisMember: Name=IsOpenLastFileWhenRunApplication
+2021/08/17 5:49:07 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:49:07 [NORMAL_][LOG]   section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=
+2021/08/17 5:49:07 [NORMAL_][LOG]   GetParameterValueFromLine: value=IsOpenLastFileWhenRunApplication=True
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsValueToThisMember: Name=LastOpendFilePath
+2021/08/17 5:49:07 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:49:07 [NORMAL_][LOG]   section=application ,parameter=LastOpendFilePath ,value=
+2021/08/17 5:49:07 [NORMAL_][LOG]   GetParameterValueFromLine: value=LastOpendFilePath=C:\Users\OK\Desktop\NewFile.tsv
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsValueToThisMember: Name=IsActivateFormWhenMoveMouseScreenEdge
+2021/08/17 5:49:07 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:49:07 [NORMAL_][LOG]   section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=
+2021/08/17 5:49:07 [NORMAL_][LOG]   GetParameterValueFromLine: value=IsActivateFormWhenMoveMouseScreenEdge=False
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsValueToThisMember: Name=IsSaveColumnWidthOfDataList
+2021/08/17 5:49:07 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:49:07 [NORMAL_][LOG]   section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=
+2021/08/17 5:49:07 [NORMAL_][LOG]   GetParameterValueFromLine: value=IsSaveColumnWidthOfDataList=True
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsValueToThisMember: Name=ColumnWidthOfDataList
+2021/08/17 5:49:07 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:49:07 [NORMAL_][LOG]   section=dataList ,parameter=ColumnWidthOfDataList ,value=
+2021/08/17 5:49:07 [NORMAL_][LOG]   GetParameterValueFromLine: value=ColumnWidthOfDataList=152,100,100,98,115,100
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsValueToThisMember: Name=MouseCaptureSettingLeft
+2021/08/17 5:49:07 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:49:07 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingLeft ,value=
+2021/08/17 5:49:07 [NORMAL_][LOG]   GetParameterValueFromLine: value=MouseCaptureSettingLeft=1,110,111,1
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsValueToThisMember: Name=MouseCaptureSettingTop
+2021/08/17 5:49:07 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:49:07 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingTop ,value=
+2021/08/17 5:49:07 [NORMAL_][LOG]   GetParameterValueFromLine: value=MouseCaptureSettingTop=1,280,300,1
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsValueToThisMember: Name=MouseCaptureSettingRight
+2021/08/17 5:49:07 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:49:07 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingRight ,value=
+2021/08/17 5:49:07 [NORMAL_][LOG]   GetParameterValueFromLine: value=MouseCaptureSettingRight=0,200,300,1
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsValueToThisMember: Name=MouseCaptureSettingBottom
+2021/08/17 5:49:07 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:49:07 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingBottom ,value=
+2021/08/17 5:49:07 [NORMAL_][LOG]   GetParameterValueFromLine: value=MouseCaptureSettingBottom=0,200,300,1
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsValueToThisMember: Name=IsUpdateListWhenWorkbookOpendAndClosed
+2021/08/17 5:49:07 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 5:49:07 [NORMAL_][LOG]   section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=
+2021/08/17 5:49:07 [NORMAL_][LOG]   GetParameterValueFromLine: value=IsUpdateListWhenWorkbookOpendAndClosed=True
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManager.Settings.ExcelCellsManagerSettingsValue.SettingsValueToThisMemberMain
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.String
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/08/17 5:49:07 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.Initialize
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewUtility.Initialize
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewUtility.SetColumnWidth
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewFormEventCellsManager._dataGridView_ColumnWidthChanged 
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewFormEventCellsManager._dataGridView_ColumnWidthChanged 
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewFormEventCellsManager._dataGridView_ColumnWidthChanged 
+2021/08/17 5:49:07 [NORMAL_][LOG] Augument settings is null.app Use Already Prepared SetttingsValueClassObject
+2021/08/17 5:49:07 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.InitializeForms
+2021/08/17 5:49:07 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 5:49:07 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 5:49:07 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 5:49:07 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.SetSettingValueToCaptureForm
+2021/08/17 5:49:07 [NORMAL_][LOG] MouseCaptureSettingLeft = 110,111
+2021/08/17 5:49:07 [NORMAL_][LOG] MouseCaptureSettingTop = 280,300
+2021/08/17 5:49:07 [NORMAL_][LOG] MouseCaptureSettingRight = 200,300
+2021/08/17 5:49:07 [NORMAL_][LOG] MouseCaptureSettingBottom = 200,300
+2021/08/17 5:49:07 [NORMAL_][LOG] screenNumbers = 1,1,1,1
+2021/08/17 5:49:07 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 5:49:07 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 5:49:07 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 5:49:07 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 5:49:07 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeFormEvents.SetValidRangeValue
+2021/08/17 5:49:07 [NORMAL_][LOG]   [110 , 111] [280 , 300] [200 , 300] [200 , 200] 
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.SettingsForm.EcmSettingsFormManager.PlaceControlSettingsListToForm
+2021/08/17 5:49:07 [NORMAL_][LOG]   Panel Height = 282
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.OpenFile : C:\Users\OK\Desktop\NewFile.tsv
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.ConformWhenDataEdited
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.ResetEdited
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManagerForm.DataList_Edited
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2021/08/17 5:49:07 [NORMAL_][LOG] CurrentThread = 1
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelIO.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2021/08/17 5:49:07 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 5:49:07 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 5:49:08 [CAUTION][LOG] Set IsGhost=true , pid=15340
+2021/08/17 5:49:08 [NORMAL_][LOG] SetActivateFlag
+2021/08/17 5:49:08 [NORMAL_][LOG]   GetWorkbookNameListAndGhostProcessNameList Success.
+2021/08/17 5:49:08 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtility.UpdateItemListAfterClearList
+2021/08/17 5:49:08 [NORMAL_][LOG] UpdateList Success.
+2021/08/17 5:49:08 [NORMAL_][LOG] ******************** Initialize End ********************
+2021/08/17 5:49:08 [NORMAL_][LOG] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar._statusLabel_VisibleChanged
+2021/08/17 5:49:08 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerForm.ShowErrorMessageEvent
+2021/08/17 5:49:08 [NORMAL_][LOG] _statusStrip_Paint
+2021/08/17 5:49:08 [NORMAL_][LOG] _statusStrip.Height = 22
+2021/08/17 5:49:10 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxEvent.CheckedListBox_MouseClick
+2021/08/17 5:49:12 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewMouseEventForCellsManager._dataGridView_RowHeaderMouseDoubleClick
+2021/08/17 5:49:12 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.SelectCells
+2021/08/17 5:49:12 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtilityGetIndexForExcelAppsFromCheckedListBox
+2021/08/17 5:49:12 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMainGetPidFromCheckdListValues
+2021/08/17 5:49:12 [NORMAL_][LOG] Workbook Not Opend.  * Workbook.ProcessID = 0 [A_PRG.xlsb]
+2021/08/17 5:49:12 [NORMAL_][LOG] ExcelIO.ExcelManagerOpenFile : C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 5:49:12 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 5:49:12 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 5:49:12 [CAUTION][LOG] Set IsGhost=true , pid=15340
+2021/08/17 5:49:12 [NORMAL_][LOG]   openApps.IsOpendFile = false: filePath=C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 5:49:12 [NORMAL_][LOG] ExcelIO.ExcelApps.OpenFileAByApplication
+2021/08/17 5:49:12 [NORMAL_][LOG]  IsGhost true => false
+2021/08/17 5:49:12 [NORMAL_][LOG] ExcelIO.ExcelApps.SetApplicationFromFilePath
+2021/08/17 5:49:12 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 5:49:12 [NORMAL_][LOG] ** Pid = 15340
+2021/08/17 5:49:12 [NORMAL_][LOG] ExcelIO.ExcelApps.ReSetFileListFromApplication path=
+2021/08/17 5:49:12 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 5:49:12 [NORMAL_][LOG]  IsGhost=>true
+2021/08/17 5:49:12 [NORMAL_][LOG] ExcelIO.ExcelManager.GetDataFromAppsInfo
+2021/08/17 5:49:12 [NORMAL_][LOG] A_PRG.xlsb Is Nothing [0]
+2021/08/17 5:49:12 [NORMAL_][LOG] ExcelIO.ExcelManagerOpenFile : C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 5:49:12 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 5:49:12 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 5:49:13 [NORMAL_][LOG] ExcelIO.ExcelApps.SetApplicationFromFilePath
+2021/08/17 5:49:13 [NORMAL_][LOG]   openApps.IsOpendFile = true: filePath=C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 5:49:13 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtilityGetIndexForExcelAppsFromCheckedListBox
+2021/08/17 5:49:13 [NORMAL_][LOG] ExcelIO.ExcelManager.GetDataFromAppsInfo
+2021/08/17 5:49:13 [ALERT__][EXP] ExcelCellsManager.ExcelCellsManagerMain.SelectCells(
+File Object Is Nothing [A_PRG.xlsb]
+   場所 ExcelCellsManager.ExcelCellsManagerMain.SelectCells() 場所 C:\Users\OK\source\repos\Repository2\ExcelFindExtention\ExcelCellsManager\ExcelCellsManagerMain.cs:行 693)
+2021/08/17 5:49:13 [NORMAL_][LOG] ErrorManager.ErrorManager.ClearAllDebugDataList : ClearDataCount=1
+2021/08/17 5:49:13 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.ActivateWorkbookWindowActivate
+2021/08/17 5:49:13 [NORMAL_][LOG] ExcelIO.ExcelManagerWindowActivate Excute
+2021/08/17 5:49:13 [NORMAL_][LOG] ExcelIO.ExcelManager.GetActiveExcelApps
+2021/08/17 5:49:13 [WARNING][LOG]   ActiveExcelApps is Nothing
+2021/08/17 5:49:13 [WARNING][LOG] ExcelApps.ExcelApps Is Null
+2021/08/17 5:49:13 [NORMAL_][LOG] ExcelIO.ExcelApps.GetActiveWorkbookName
+2021/08/17 5:49:13 [WARNING][LOG] ExcelIO.ExcelApps.GetActiveWorkbookName IsGhost=true
+2021/08/17 5:49:13 [NORMAL_][LOG] ExcelIO.ExcelApps.ActivateWorkbook
+2021/08/17 5:49:13 [NORMAL_][LOG] _statusStrip_Paint
+2021/08/17 5:49:13 [WARNING][LOG] ActivateWorkbook Workbook is nothing. bookName=
+2021/08/17 5:49:35 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxEvent.CheckedListBox_MouseClick
+2021/08/17 5:49:43 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2021/08/17 5:49:43 [NORMAL_][LOG] CurrentThread = 1
+2021/08/17 5:49:43 [NORMAL_][LOG] ExcelIO.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2021/08/17 5:49:43 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 5:49:43 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 5:49:43 [CAUTION][LOG] Set IsGhost=true , pid=15340
+2021/08/17 5:49:43 [NORMAL_][LOG]   GetWorkbookNameListAndGhostProcessNameList Success.
+2021/08/17 5:49:43 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtility.UpdateItemListAfterClearList
+2021/08/17 5:49:43 [NORMAL_][LOG] UpdateList Success.
+2021/08/17 5:49:43 [NORMAL_][LOG] _statusStrip_Paint
+2021/08/17 5:49:46 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewMouseEventForCellsManager._dataGridView_RowHeaderMouseDoubleClick
+2021/08/17 5:49:46 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.SelectCells
+2021/08/17 5:49:46 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtilityGetIndexForExcelAppsFromCheckedListBox
+2021/08/17 5:49:46 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMainGetPidFromCheckdListValues
+2021/08/17 5:49:46 [NORMAL_][LOG] Workbook Not Opend.  * Workbook.ProcessID = 0 [A_PRG.xlsb]
+2021/08/17 5:49:46 [NORMAL_][LOG] ExcelIO.ExcelManagerOpenFile : C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 5:49:46 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 5:49:46 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 5:49:46 [CAUTION][LOG] Set IsGhost=true , pid=15340
+2021/08/17 5:49:46 [NORMAL_][LOG]   openApps.IsOpendFile = false: filePath=C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 5:49:46 [NORMAL_][LOG] ExcelIO.ExcelApps.OpenFileAByApplication
+2021/08/17 5:49:46 [NORMAL_][LOG]  IsGhost true => false
+2021/08/17 5:49:46 [NORMAL_][LOG] ExcelIO.ExcelApps.SetApplicationFromFilePath
+2021/08/17 5:49:46 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 5:49:46 [NORMAL_][LOG] ** Pid = 15340
+2021/08/17 5:49:46 [NORMAL_][LOG] ExcelIO.ExcelApps.ReSetFileListFromApplication path=
+2021/08/17 5:49:46 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 5:49:57 [NORMAL_][LOG]  IsGhost=>true
+2021/08/17 5:50:00 [NORMAL_][LOG] ExcelIO.ExcelManager.GetDataFromAppsInfo
+2021/08/17 5:50:00 [NORMAL_][LOG] A_PRG.xlsb Is Nothing [0]
+2021/08/17 5:50:00 [NORMAL_][LOG] ExcelIO.ExcelManagerOpenFile : C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 5:50:00 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 5:50:00 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 5:50:00 [NORMAL_][LOG] ExcelIO.ExcelApps.SetApplicationFromFilePath
+2021/08/17 5:50:00 [NORMAL_][LOG]   openApps.IsOpendFile = true: filePath=C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 5:50:00 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtilityGetIndexForExcelAppsFromCheckedListBox
+2021/08/17 5:50:00 [NORMAL_][LOG] ExcelIO.ExcelManager.GetDataFromAppsInfo
+
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManagerForm.ExcelCellsManagerForm Constracta BeginLogRecording
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar.Initialize
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar._statusLabel_VisibleChanged
+2021/08/17 6:08:08 [NORMAL_][LOG] MouseCaptureInScreenEdgeManager Constracta: new MouseCaptureInScreenEdgeFormEvents Form.Text=Excel Cells Manager2
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsObject.SetControlEvent
+2021/08/17 6:08:08 [NORMAL_][LOG] IniManager.IniManager.SetPathAndCreateFileIfPathNotExists
+2021/08/17 6:08:08 [NORMAL_][LOG] IniManager.IniManager.SetPath path=C:\Users\OK\source\repos\Repository2\ExcelFindExtention\ExcelCellsManager\bin\Debug\settings.ini
+2021/08/17 6:08:08 [NORMAL_][LOG] IniManager.IniReader.ReadSettingsFile
+2021/08/17 6:08:08 [NORMAL_][LOG] IniManager.IniManager.SetSectionFromPath
+2021/08/17 6:08:08 [NORMAL_][LOG] IniManager.IniReader.SetSectionListByAnalyze
+2021/08/17 6:08:08 [NORMAL_][LOG]   SetParameterListByAnalyze Success
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManager.Settings.ExcelCellsManagerSettingsValue.SettingsValueToThisMember
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsValueToThisMember: Name=IsActivateWorkbookWindowAfterRegistAddress
+2021/08/17 6:08:08 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 6:08:08 [NORMAL_][LOG]   section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=
+2021/08/17 6:08:08 [NORMAL_][LOG]   GetParameterValueFromLine: value=IsActivateWorkbookWindowAfterRegistAddress=True
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsValueToThisMember: Name=IsOpenLastFileWhenRunApplication
+2021/08/17 6:08:08 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 6:08:08 [NORMAL_][LOG]   section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=
+2021/08/17 6:08:08 [NORMAL_][LOG]   GetParameterValueFromLine: value=IsOpenLastFileWhenRunApplication=True
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsValueToThisMember: Name=LastOpendFilePath
+2021/08/17 6:08:08 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 6:08:08 [NORMAL_][LOG]   section=application ,parameter=LastOpendFilePath ,value=
+2021/08/17 6:08:08 [NORMAL_][LOG]   GetParameterValueFromLine: value=LastOpendFilePath=C:\Users\OK\Desktop\NewFile.tsv
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsValueToThisMember: Name=IsActivateFormWhenMoveMouseScreenEdge
+2021/08/17 6:08:08 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 6:08:08 [NORMAL_][LOG]   section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=
+2021/08/17 6:08:08 [NORMAL_][LOG]   GetParameterValueFromLine: value=IsActivateFormWhenMoveMouseScreenEdge=False
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsValueToThisMember: Name=IsSaveColumnWidthOfDataList
+2021/08/17 6:08:08 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 6:08:08 [NORMAL_][LOG]   section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=
+2021/08/17 6:08:08 [NORMAL_][LOG]   GetParameterValueFromLine: value=IsSaveColumnWidthOfDataList=True
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsValueToThisMember: Name=ColumnWidthOfDataList
+2021/08/17 6:08:08 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 6:08:08 [NORMAL_][LOG]   section=dataList ,parameter=ColumnWidthOfDataList ,value=
+2021/08/17 6:08:08 [NORMAL_][LOG]   GetParameterValueFromLine: value=ColumnWidthOfDataList=152,100,100,98,115,100
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsValueToThisMember: Name=MouseCaptureSettingLeft
+2021/08/17 6:08:08 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 6:08:08 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingLeft ,value=
+2021/08/17 6:08:08 [NORMAL_][LOG]   GetParameterValueFromLine: value=MouseCaptureSettingLeft=1,110,111,1
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsValueToThisMember: Name=MouseCaptureSettingTop
+2021/08/17 6:08:08 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 6:08:08 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingTop ,value=
+2021/08/17 6:08:08 [NORMAL_][LOG]   GetParameterValueFromLine: value=MouseCaptureSettingTop=1,280,300,1
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsValueToThisMember: Name=MouseCaptureSettingRight
+2021/08/17 6:08:08 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 6:08:08 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingRight ,value=
+2021/08/17 6:08:08 [NORMAL_][LOG]   GetParameterValueFromLine: value=MouseCaptureSettingRight=0,200,300,1
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsValueToThisMember: Name=MouseCaptureSettingBottom
+2021/08/17 6:08:08 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 6:08:08 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingBottom ,value=
+2021/08/17 6:08:08 [NORMAL_][LOG]   GetParameterValueFromLine: value=MouseCaptureSettingBottom=0,200,300,1
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsValueToThisMember: Name=IsUpdateListWhenWorkbookOpendAndClosed
+2021/08/17 6:08:08 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/08/17 6:08:08 [NORMAL_][LOG]   section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=
+2021/08/17 6:08:08 [NORMAL_][LOG]   GetParameterValueFromLine: value=IsUpdateListWhenWorkbookOpendAndClosed=True
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManager.Settings.ExcelCellsManagerSettingsValue.SettingsValueToThisMemberMain
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.String
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/08/17 6:08:08 [NORMAL_][LOG] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.Initialize
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewUtility.Initialize
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewUtility.SetColumnWidth
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewFormEventCellsManager._dataGridView_ColumnWidthChanged 
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewFormEventCellsManager._dataGridView_ColumnWidthChanged 
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewFormEventCellsManager._dataGridView_ColumnWidthChanged 
+2021/08/17 6:08:08 [NORMAL_][LOG] Augument settings is null.app Use Already Prepared SetttingsValueClassObject
+2021/08/17 6:08:08 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.InitializeForms
+2021/08/17 6:08:08 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 6:08:08 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 6:08:08 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 6:08:08 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.SetSettingValueToCaptureForm
+2021/08/17 6:08:08 [NORMAL_][LOG] MouseCaptureSettingLeft = 110,111
+2021/08/17 6:08:08 [NORMAL_][LOG] MouseCaptureSettingTop = 280,300
+2021/08/17 6:08:08 [NORMAL_][LOG] MouseCaptureSettingRight = 200,300
+2021/08/17 6:08:08 [NORMAL_][LOG] MouseCaptureSettingBottom = 200,300
+2021/08/17 6:08:08 [NORMAL_][LOG] screenNumbers = 1,1,1,1
+2021/08/17 6:08:08 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 6:08:08 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 6:08:08 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 6:08:08 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeManager.GetScreen
+2021/08/17 6:08:08 [NORMAL_][LOG] MousePointCapture.MouseCaptureInScreenEdgeFormEvents.SetValidRangeValue
+2021/08/17 6:08:08 [NORMAL_][LOG]   [110 , 111] [280 , 300] [200 , 300] [200 , 200] 
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.SettingsForm.EcmSettingsFormManager.PlaceControlSettingsListToForm
+2021/08/17 6:08:08 [NORMAL_][LOG]   Panel Height = 282
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.OpenFile : C:\Users\OK\Desktop\NewFile.tsv
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.ConformWhenDataEdited
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.ResetEdited
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManagerForm.DataList_Edited
+2021/08/17 6:08:08 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2021/08/17 6:08:08 [NORMAL_][LOG] CurrentThread = 1
+2021/08/17 6:08:10 [NORMAL_][LOG] ExcelIO.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2021/08/17 6:08:10 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 6:08:10 [NORMAL_][LOG] ExcelIO.ExcelManager.CheckExcelAppsList
+2021/08/17 6:08:10 [NORMAL_][LOG]   AppsListIsValid=false
+2021/08/17 6:08:10 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 6:08:11 [CAUTION][LOG] Set IsGhost=true , pid=15340
+2021/08/17 6:08:11 [NORMAL_][LOG] SetActivateFlag
+2021/08/17 6:08:11 [NORMAL_][LOG]   GetWorkbookNameListAndGhostProcessNameList Success.
+2021/08/17 6:08:11 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtility.UpdateItemListAfterClearList
+2021/08/17 6:08:11 [NORMAL_][LOG] UpdateList Success.
+2021/08/17 6:08:11 [NORMAL_][LOG] ******************** Initialize End ********************
+2021/08/17 6:08:12 [NORMAL_][LOG] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar._statusLabel_VisibleChanged
+2021/08/17 6:08:12 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerForm.ShowErrorMessageEvent
+2021/08/17 6:08:12 [NORMAL_][LOG] _statusStrip_Paint
+2021/08/17 6:08:12 [NORMAL_][LOG] _statusStrip.Height = 22
+2021/08/17 6:08:14 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewMouseEventForCellsManager._dataGridView_RowHeaderMouseDoubleClick
+2021/08/17 6:08:14 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.SelectCells
+2021/08/17 6:08:14 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtilityGetIndexForExcelAppsFromCheckedListBox
+2021/08/17 6:08:14 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMainGetPidFromCheckdListValues
+2021/08/17 6:08:14 [NORMAL_][LOG] Workbook Not Opend.  * Workbook.ProcessID = 0 [A_PRG.xlsb]
+2021/08/17 6:08:14 [NORMAL_][LOG] ExcelIO.ExcelManagerOpenFile : C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 6:08:14 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 6:08:14 [NORMAL_][LOG] ExcelIO.ExcelManager.CheckExcelAppsList
+2021/08/17 6:08:14 [NORMAL_][LOG] ExcelIO.ExcelApps.UpdateThisInfo
+2021/08/17 6:08:14 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 6:08:14 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 6:08:14 [CAUTION][LOG] Set IsGhost=true , pid=15340
+2021/08/17 6:08:15 [NORMAL_][LOG]   openApps.IsOpendFile = false: filePath=C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 6:08:15 [NORMAL_][LOG] ExcelIO.ExcelApps.OpenFileAByApplication
+2021/08/17 6:08:15 [NORMAL_][LOG]  IsGhost true => false
+2021/08/17 6:08:15 [NORMAL_][LOG] ExcelIO.ExcelApps.SetApplicationFromFilePath
+2021/08/17 6:08:15 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 6:08:15 [NORMAL_][LOG] ** Pid = 15340
+2021/08/17 6:08:15 [NORMAL_][LOG] ExcelIO.ExcelApps.ReSetFileListFromApplication path=
+2021/08/17 6:08:15 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 6:08:15 [NORMAL_][LOG] ExcelIO.ExcelApps.SetWorkbookEvent : Microsoft Excel:A_PRG.xlsb
+2021/08/17 6:08:15 [NORMAL_][LOG] ExcelIO.ExcelManager.GetDataFromAppsInfo
+2021/08/17 6:08:15 [NORMAL_][LOG] A_PRG.xlsb Is Nothing [0]
+2021/08/17 6:08:15 [NORMAL_][LOG] ExcelIO.ExcelManagerOpenFile : C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 6:08:15 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 6:08:15 [NORMAL_][LOG] ExcelIO.ExcelManager.CheckExcelAppsList
+2021/08/17 6:08:15 [NORMAL_][LOG] ExcelIO.ExcelApps.UpdateThisInfo
+2021/08/17 6:08:15 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 6:08:15 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 6:08:15 [NORMAL_][LOG] ExcelIO.ExcelApps.SetApplicationFromFilePath
+2021/08/17 6:08:15 [NORMAL_][LOG]   openApps.IsOpendFile = true: filePath=C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 6:08:15 [NORMAL_][LOG] ** Pid = 15340
+2021/08/17 6:08:15 [NORMAL_][LOG] ExcelIO.ExcelApps.ReSetFileListFromApplication path=
+2021/08/17 6:08:15 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 6:08:15 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtilityGetIndexForExcelAppsFromCheckedListBox
+2021/08/17 6:08:15 [NORMAL_][LOG] ExcelIO.ExcelManager.GetDataFromAppsInfo
+2021/08/17 6:08:15 [NORMAL_][LOG] ExcelIO.ExcelApps.SelectAddress : A_PRG.xlsb
+2021/08/17 6:08:16 [NORMAL_][LOG] ExcelIO.ExcelCells.GetValueCornerAddress
+2021/08/17 6:08:16 [NORMAL_][LOG] ExcelIO.ExcelCells.GetValue : A_PRG.xlsb > アイデア > $G$248 > → CloseWorkbook メソッドで発生しているエラーをほかの場所で拾っていた
+2021/08/17 6:08:16 [NORMAL_][LOG]  GetValue.Type : System.String
+2021/08/17 6:08:16 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$248
+2021/08/17 6:08:16 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:08:16 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G248
+2021/08/17 6:08:16 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2021/08/17 6:08:16 [NORMAL_][LOG] CurrentThread = 1
+2021/08/17 6:08:17 [NORMAL_][LOG] ExcelIO.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2021/08/17 6:08:18 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 6:08:18 [NORMAL_][LOG] ExcelIO.ExcelManager.CheckExcelAppsList
+2021/08/17 6:08:18 [NORMAL_][LOG] ExcelIO.ExcelApps.UpdateThisInfo
+2021/08/17 6:08:18 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 6:08:18 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 6:08:18 [NORMAL_][LOG] ExcelIO.ExcelApps.SetApplicationFromFilePath
+2021/08/17 6:08:18 [NORMAL_][LOG]   GetWorkbookNameListAndGhostProcessNameList Success.
+2021/08/17 6:08:18 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtility.UpdateItemListAfterClearList
+2021/08/17 6:08:18 [NORMAL_][LOG] UpdateList Success.
+2021/08/17 6:08:18 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.ActivateWorkbookWindowActivate
+2021/08/17 6:08:18 [NORMAL_][LOG] ExcelIO.ExcelManagerWindowActivate Excute
+2021/08/17 6:08:18 [NORMAL_][LOG] ExcelIO.ExcelManager.GetActiveExcelApps
+2021/08/17 6:08:18 [NORMAL_][LOG] ExcelIO.ExcelApps.GetActiveWorkbookName
+2021/08/17 6:08:18 [NORMAL_][LOG] ExcelIO.ExcelApps.ActivateWorkbook
+2021/08/17 6:08:18 [NORMAL_][LOG] _statusStrip_Paint
+2021/08/17 6:08:18 [WARNING][LOG] ActivateWorkbook Workbook is nothing. bookName=A_PRG.xlsb
+2021/08/17 6:08:23 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxEvent.CheckedListBox_MouseClick
+2021/08/17 6:08:25 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMainCloseSave
+2021/08/17 6:08:25 [NORMAL_][LOG] ExcelIO.ExcelManager.CloseWorkbookByPidAndBookName
+2021/08/17 6:08:25 [NORMAL_][LOG] 15340/A_PRG.xlsb/0/isSave=True/isConform=False/saveAsName=/saveFilePath=
+2021/08/17 6:08:25 [NORMAL_][LOG] ExcelIO.ExcelManager.CloseWorkbook
+2021/08/17 6:08:25 [NORMAL_][LOG] ExcelIO.ExcelApps.ExcelApps_ApplicationWorkbookBeoreClose ExcelApps
+2021/08/17 6:08:25 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WorkbookBeforeClose : CellManager : 
+2021/08/17 6:08:25 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookBeforeCloseAddEvent
+2021/08/17 6:08:25 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookBeforeCloseAddEvent : Finally
+2021/08/17 6:08:25 [NORMAL_][LOG] ExcelIO.ExcelApps.AppsWindowDeactivate
+2021/08/17 6:08:25 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G248
+2021/08/17 6:08:25 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WindowDeactivate : CellManager : G248 < アイデア < A_PRG.xlsb
+2021/08/17 6:08:25 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookDeactivateAddEvent
+2021/08/17 6:08:25 [NORMAL_][LOG] ExcelIO.ExcelApps.Workbook_WindowDeactivate
+
+2021/08/17 6:08:25 [NORMAL_][LOG] ExcelIO.ExcelApps.Workbook_WindowDeactivate
+2021/08/17 6:08:25 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Workbook_WindowDeactivate : CellManager
+2021/08/17 6:08:25 [NORMAL_][LOG]   CloseWorkbookMain Task End.
+2021/08/17 6:08:25 [NORMAL_][LOG] ExcelIO.ExcelManager.RemoveAppsAfterCloseProcess : pid = 15340
+2021/08/17 6:08:25 [CAUTION][LOG]   KeepRunApplicationOneOrMore=true,_ExcelAppsList.Count == 1 return
+2021/08/17 6:08:28 [CAUTION][LOG]   KeepRunApplicationOneOrMore=true,_ExcelAppsList.Count == 1 return
+2021/08/17 6:08:28 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2021/08/17 6:08:28 [NORMAL_][LOG] CurrentThread = 1
+2021/08/17 6:08:31 [NORMAL_][LOG] ExcelIO.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2021/08/17 6:08:35 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 6:08:35 [NORMAL_][LOG] ExcelIO.ExcelManager.CheckExcelAppsList
+2021/08/17 6:08:35 [NORMAL_][LOG] ExcelIO.ExcelApps.UpdateThisInfo
+2021/08/17 6:08:35 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 6:08:35 [NORMAL_][LOG]  IsGhost=>true
+2021/08/17 6:08:35 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 6:08:35 [CAUTION][LOG] Set IsGhost=true , pid=15340
+2021/08/17 6:08:35 [NORMAL_][LOG]   GetWorkbookNameListAndGhostProcessNameList Success.
+2021/08/17 6:08:35 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtility.UpdateItemListAfterClearList
+2021/08/17 6:08:35 [NORMAL_][LOG] UpdateList Success.
+2021/08/17 6:08:35 [NORMAL_][LOG] _statusStrip_Paint
+2021/08/17 6:08:41 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewMouseEventForCellsManager._dataGridView_RowHeaderMouseDoubleClick
+2021/08/17 6:08:41 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.SelectCells
+2021/08/17 6:08:41 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtilityGetIndexForExcelAppsFromCheckedListBox
+2021/08/17 6:08:41 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMainGetPidFromCheckdListValues
+2021/08/17 6:08:41 [NORMAL_][LOG] Workbook Not Opend.  * Workbook.ProcessID = 0 [A_PRG.xlsb]
+2021/08/17 6:08:41 [NORMAL_][LOG] ExcelIO.ExcelManagerOpenFile : C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 6:08:41 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 6:08:41 [NORMAL_][LOG] ExcelIO.ExcelManager.CheckExcelAppsList
+2021/08/17 6:08:41 [NORMAL_][LOG] ExcelIO.ExcelApps.UpdateThisInfo
+2021/08/17 6:08:41 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 6:08:41 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 6:08:42 [CAUTION][LOG] Set IsGhost=true , pid=15340
+2021/08/17 6:08:42 [NORMAL_][LOG]   openApps.IsOpendFile = false: filePath=C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelApps.OpenFileAByApplication
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelApps.ExcelApps_ApplicationWokbookOpen ExcelApps
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WorkbookOpen : CellManager : 
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookOpenAfterEvent
+2021/08/17 6:08:42 [NORMAL_][LOG] CurrentThread = 8
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelApps.Appliction_WindowActivate ExcelApps : 
+2021/08/17 6:08:42 [NORMAL_][LOG]   A_PRG.xlsb > アイデア > $I$336
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Appliction_WindowActivate : CellManager : 
+2021/08/17 6:08:42 [NORMAL_][LOG]   IsWorkbookBeforeClose=true
+2021/08/17 6:08:42 [NORMAL_][LOG]  IsGhost true => false
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelApps.SetApplicationFromFilePath
+2021/08/17 6:08:42 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 6:08:42 [NORMAL_][LOG] ** Pid = 15340
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelApps.ReSetFileListFromApplication path=
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelApps.SetWorkbookEvent : Microsoft Excel:A_PRG.xlsb
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelManager.GetDataFromAppsInfo
+2021/08/17 6:08:42 [NORMAL_][LOG] A_PRG.xlsb Is Nothing [0]
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelManagerOpenFile : C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelManager.CheckExcelAppsList
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelApps.UpdateThisInfo
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 6:08:42 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelApps.SetApplicationFromFilePath
+2021/08/17 6:08:42 [NORMAL_][LOG]   openApps.IsOpendFile = true: filePath=C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 6:08:42 [NORMAL_][LOG] ** Pid = 15340
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelApps.ReSetFileListFromApplication path=
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtilityGetIndexForExcelAppsFromCheckedListBox
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelManager.GetDataFromAppsInfo
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelApps.SelectAddress : A_PRG.xlsb
+2021/08/17 6:08:42 [NORMAL_][LOG] ExcelIO.ExcelCells.GetValueCornerAddress
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelIO.ExcelCells.GetValue : A_PRG.xlsb > アイデア > $G$266 > ※ワークブック消したとき、リストゼロでエラーとなる
+2021/08/17 6:08:43 [NORMAL_][LOG]  GetValue.Type : System.String
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$266
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:08:43 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G266
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$266
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:08:43 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G266
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2021/08/17 6:08:43 [NORMAL_][LOG] CurrentThread = 1
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelIO.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelIO.ExcelManager.CheckExcelAppsList
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelIO.ExcelApps.UpdateThisInfo
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 6:08:43 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelIO.ExcelApps.SetApplicationFromFilePath
+2021/08/17 6:08:43 [NORMAL_][LOG]   GetWorkbookNameListAndGhostProcessNameList Success.
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtility.UpdateItemListAfterClearList
+2021/08/17 6:08:43 [NORMAL_][LOG] UpdateList Success.
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.ActivateWorkbookWindowActivate
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelIO.ExcelManagerWindowActivate Excute
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelIO.ExcelManager.GetActiveExcelApps
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelIO.ExcelApps.GetActiveWorkbookName
+2021/08/17 6:08:43 [NORMAL_][LOG] ExcelIO.ExcelApps.ActivateWorkbook
+2021/08/17 6:08:43 [NORMAL_][LOG] _statusStrip_Paint
+2021/08/17 6:08:43 [WARNING][LOG] ActivateWorkbook Workbook is nothing. bookName=A_PRG.xlsb
+2021/08/17 6:08:45 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxEvent.CheckedListBox_MouseClick
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMainCloseSave
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelIO.ExcelManager.CloseWorkbookByPidAndBookName
+2021/08/17 6:08:46 [NORMAL_][LOG] 15340/A_PRG.xlsb/0/isSave=True/isConform=False/saveAsName=/saveFilePath=
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelIO.ExcelManager.CloseWorkbook
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelIO.ExcelApps.ExcelApps_ApplicationWorkbookBeoreClose ExcelApps
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WorkbookBeforeClose : CellManager : 
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookBeforeCloseAddEvent
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookBeforeCloseAddEvent : Finally
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelIO.ExcelApps.ExcelApps_ApplicationWorkbookBeoreClose ExcelApps
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WorkbookBeforeClose : CellManager : 
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookBeforeCloseAddEvent
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookBeforeCloseAddEvent : Finally
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelIO.ExcelApps.AppsWindowDeactivate
+2021/08/17 6:08:46 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G266
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WindowDeactivate : CellManager : G266 < アイデア < A_PRG.xlsb
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookDeactivateAddEvent
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelIO.ExcelApps.AppsWindowDeactivate
+2021/08/17 6:08:46 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G266
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WindowDeactivate : CellManager : G266 < アイデア < A_PRG.xlsb
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookDeactivateAddEvent
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelIO.ExcelApps.Workbook_WindowDeactivate
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Workbook_WindowDeactivate : CellManager
+2021/08/17 6:08:46 [NORMAL_][LOG]   CloseWorkbookMain Task End.
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelIO.ExcelManager.RemoveAppsAfterCloseProcess : pid = 15340
+2021/08/17 6:08:46 [CAUTION][LOG]   KeepRunApplicationOneOrMore=true,_ExcelAppsList.Count == 1 return
+2021/08/17 6:08:46 [CAUTION][LOG]   KeepRunApplicationOneOrMore=true,_ExcelAppsList.Count == 1 return
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2021/08/17 6:08:46 [NORMAL_][LOG] CurrentThread = 1
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelIO.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelIO.ExcelManager.CheckExcelAppsList
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelIO.ExcelApps.UpdateThisInfo
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 6:08:46 [NORMAL_][LOG]  IsGhost=>true
+2021/08/17 6:08:46 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 6:08:46 [CAUTION][LOG] Set IsGhost=true , pid=15340
+2021/08/17 6:08:46 [NORMAL_][LOG]   GetWorkbookNameListAndGhostProcessNameList Success.
+2021/08/17 6:08:46 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtility.UpdateItemListAfterClearList
+2021/08/17 6:08:46 [NORMAL_][LOG] UpdateList Success.
+2021/08/17 6:08:46 [NORMAL_][LOG] _statusStrip_Paint
+2021/08/17 6:08:56 [NORMAL_][LOG] ExcelIO.ExcelApps.ExcelApps_ApplicationWokbookOpen ExcelApps
+2021/08/17 6:08:56 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WorkbookOpen : CellManager : 
+2021/08/17 6:08:56 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookOpenAfterEvent
+2021/08/17 6:08:56 [NORMAL_][LOG] CurrentThread = 9
+2021/08/17 6:08:56 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2021/08/17 6:08:56 [NORMAL_][LOG] CurrentThread = 1
+2021/08/17 6:08:56 [NORMAL_][LOG] ExcelIO.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2021/08/17 6:08:56 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 6:08:56 [NORMAL_][LOG] ExcelIO.ExcelManager.CheckExcelAppsList
+2021/08/17 6:08:56 [NORMAL_][LOG] ExcelIO.ExcelApps.UpdateThisInfo
+2021/08/17 6:08:56 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 6:08:56 [NORMAL_][LOG]  IsGhost=>false
+2021/08/17 6:08:56 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 6:08:57 [NORMAL_][LOG] ExcelIO.ExcelApps.SetApplicationFromFilePath
+2021/08/17 6:08:57 [NORMAL_][LOG]   GetWorkbookNameListAndGhostProcessNameList Success.
+2021/08/17 6:08:57 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtility.UpdateItemListAfterClearList
+2021/08/17 6:08:57 [NORMAL_][LOG] UpdateList Success.
+2021/08/17 6:08:57 [NORMAL_][LOG] ExcelIO.ExcelApps.ExcelApps_ApplicationWokbookOpen ExcelApps
+2021/08/17 6:08:57 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WorkbookOpen : CellManager : 
+2021/08/17 6:08:57 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookOpenAfterEvent
+2021/08/17 6:08:57 [NORMAL_][LOG] CurrentThread = 9
+2021/08/17 6:08:57 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2021/08/17 6:08:57 [NORMAL_][LOG] CurrentThread = 1
+2021/08/17 6:08:57 [NORMAL_][LOG] ExcelIO.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2021/08/17 6:08:57 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 6:08:57 [NORMAL_][LOG] ExcelIO.ExcelManager.CheckExcelAppsList
+2021/08/17 6:08:57 [NORMAL_][LOG] ExcelIO.ExcelApps.UpdateThisInfo
+2021/08/17 6:08:57 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 6:08:57 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 6:08:57 [NORMAL_][LOG] ExcelIO.ExcelApps.SetApplicationFromFilePath
+2021/08/17 6:08:57 [NORMAL_][LOG]   GetWorkbookNameListAndGhostProcessNameList Success.
+2021/08/17 6:08:57 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtility.UpdateItemListAfterClearList
+2021/08/17 6:08:57 [NORMAL_][LOG] UpdateList Success.
+2021/08/17 6:08:57 [NORMAL_][LOG] ExcelIO.ExcelApps.Appliction_WindowActivate ExcelApps : 
+2021/08/17 6:08:57 [NORMAL_][LOG]   A_PRG.xlsb > アイデア > $I$336
+2021/08/17 6:08:57 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Appliction_WindowActivate : CellManager : 
+2021/08/17 6:08:57 [NORMAL_][LOG]   IsWorkbookBeforeClose=true
+2021/08/17 6:08:57 [NORMAL_][LOG] ExcelIO.ExcelApps.Appliction_WindowActivate ExcelApps : 
+2021/08/17 6:08:57 [NORMAL_][LOG]   A_PRG.xlsb > アイデア > $I$336
+2021/08/17 6:08:57 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Appliction_WindowActivate : CellManager : 
+2021/08/17 6:08:57 [NORMAL_][LOG]   IsWorkbookBeforeClose=true
+2021/08/17 6:09:04 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$293
+2021/08/17 6:09:04 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:04 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G293
+2021/08/17 6:09:04 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$293
+2021/08/17 6:09:04 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:04 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G293
+2021/08/17 6:09:10 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$294
+2021/08/17 6:09:10 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:10 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G294
+2021/08/17 6:09:10 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$294
+2021/08/17 6:09:10 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:10 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G294
+2021/08/17 6:09:11 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$295
+2021/08/17 6:09:11 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:11 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G295
+2021/08/17 6:09:11 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$295
+2021/08/17 6:09:11 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:11 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G295
+2021/08/17 6:09:12 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$296
+2021/08/17 6:09:12 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:12 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G296
+2021/08/17 6:09:12 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$296
+2021/08/17 6:09:12 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:12 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G296
+2021/08/17 6:09:30 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$297
+2021/08/17 6:09:30 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+
+2021/08/17 6:09:30 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:30 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G297
+2021/08/17 6:09:30 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$297
+2021/08/17 6:09:30 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:30 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G297
+2021/08/17 6:09:33 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$298
+2021/08/17 6:09:33 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:33 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G298
+2021/08/17 6:09:33 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$298
+2021/08/17 6:09:33 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:33 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G298
+2021/08/17 6:09:34 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$297
+2021/08/17 6:09:34 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:34 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G297
+2021/08/17 6:09:34 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$297
+2021/08/17 6:09:34 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:34 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G297
+2021/08/17 6:09:41 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$298
+2021/08/17 6:09:41 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:41 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G298
+2021/08/17 6:09:41 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$298
+2021/08/17 6:09:41 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:41 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G298
+2021/08/17 6:09:45 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$287:$G$290
+2021/08/17 6:09:45 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:45 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G287:G290
+2021/08/17 6:09:45 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$287:$G$290
+2021/08/17 6:09:45 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:45 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G287:G290
+2021/08/17 6:09:46 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$276:$G$279
+2021/08/17 6:09:47 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:47 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G276:G279
+2021/08/17 6:09:47 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$276:$G$279
+2021/08/17 6:09:47 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:47 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G276:G279
+2021/08/17 6:09:48 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$292:$G$293
+2021/08/17 6:09:48 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:48 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G292:G293
+2021/08/17 6:09:48 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$292:$G$293
+2021/08/17 6:09:48 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:48 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G292:G293
+2021/08/17 6:09:49 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$280:$G$281
+2021/08/17 6:09:49 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:49 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G280:G281
+2021/08/17 6:09:49 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$280:$G$281
+2021/08/17 6:09:49 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:49 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G280:G281
+2021/08/17 6:09:50 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$295:$G$297
+2021/08/17 6:09:50 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:50 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G295:G297
+2021/08/17 6:09:50 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$295:$G$297
+2021/08/17 6:09:50 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:50 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G295:G297
+2021/08/17 6:09:52 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$282:$G$284
+2021/08/17 6:09:52 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:52 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G282:G284
+2021/08/17 6:09:52 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$282:$G$284
+2021/08/17 6:09:52 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:52 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G282:G284
+2021/08/17 6:09:53 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$276
+2021/08/17 6:09:53 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:53 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G276
+2021/08/17 6:09:53 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$276
+2021/08/17 6:09:53 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:53 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G276
+2021/08/17 6:09:55 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$277
+2021/08/17 6:09:55 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:55 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G277
+2021/08/17 6:09:55 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$277
+2021/08/17 6:09:55 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:55 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G277
+2021/08/17 6:09:58 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $I$336
+2021/08/17 6:09:58 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:58 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > I336
+2021/08/17 6:09:58 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $I$336
+2021/08/17 6:09:58 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:58 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > I336
+2021/08/17 6:09:59 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$319
+2021/08/17 6:09:59 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:59 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G319
+2021/08/17 6:09:59 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$319
+2021/08/17 6:09:59 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:09:59 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G319
+2021/08/17 6:10:13 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$320
+2021/08/17 6:10:13 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:10:13 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G320
+2021/08/17 6:10:13 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$320
+2021/08/17 6:10:13 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:10:13 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G320
+2021/08/17 6:10:18 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$302:$G$319
+2021/08/17 6:10:18 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:10:18 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G302:G319
+2021/08/17 6:10:18 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$302:$G$319
+2021/08/17 6:10:18 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:10:18 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G302:G319
+2021/08/17 6:10:19 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$301
+2021/08/17 6:10:19 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:10:19 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G301
+2021/08/17 6:10:19 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$301
+2021/08/17 6:10:19 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:10:19 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G301
+2021/08/17 6:10:20 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$303:$G$306
+2021/08/17 6:10:20 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:10:20 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G303:G306
+2021/08/17 6:10:20 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$303:$G$306
+2021/08/17 6:10:20 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:10:20 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G303:G306
+2021/08/17 6:10:21 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $E$301
+2021/08/17 6:10:21 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:10:21 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > E301
+2021/08/17 6:10:21 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $E$301
+2021/08/17 6:10:21 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 6:10:21 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > E301
+2021/08/17 6:10:27 [NORMAL_][LOG] ExcelIO.ExcelApps.ExcelApps_ApplicationWorkbookBeoreClose ExcelApps
+2021/08/17 6:10:27 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WorkbookBeforeClose : CellManager : 
+2021/08/17 6:10:27 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookBeforeCloseAddEvent
+2021/08/17 6:10:27 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookBeforeCloseAddEvent : Finally
+2021/08/17 6:10:27 [NORMAL_][LOG] ExcelIO.ExcelApps.ExcelApps_ApplicationWorkbookBeoreClose ExcelApps
+2021/08/17 6:10:27 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WorkbookBeforeClose : CellManager : 
+2021/08/17 6:10:27 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookBeforeCloseAddEvent
+2021/08/17 6:10:27 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookBeforeCloseAddEvent : Finally
+2021/08/17 6:10:27 [NORMAL_][LOG] ExcelIO.ExcelApps.AppsWindowDeactivate
+2021/08/17 6:10:27 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > E301
+2021/08/17 6:10:27 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WindowDeactivate : CellManager : E301 < アイデア < A_PRG.xlsb
+2021/08/17 6:10:27 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookDeactivateAddEvent
+2021/08/17 6:10:27 [NORMAL_][LOG] ExcelIO.ExcelApps.AppsWindowDeactivate
+2021/08/17 6:10:27 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > E301
+2021/08/17 6:10:27 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WindowDeactivate : CellManager : E301 < アイデア < A_PRG.xlsb
+2021/08/17 6:10:27 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookDeactivateAddEvent
+2021/08/17 6:10:30 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2021/08/17 6:10:30 [NORMAL_][LOG] CurrentThread = 1
+2021/08/17 6:10:30 [NORMAL_][LOG] ExcelIO.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2021/08/17 6:10:30 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 6:10:30 [NORMAL_][LOG] ExcelIO.ExcelManager.CheckExcelAppsList
+2021/08/17 6:10:30 [NORMAL_][LOG] ExcelIO.ExcelApps.UpdateThisInfo
+2021/08/17 6:10:30 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 6:10:30 [NORMAL_][LOG]  IsGhost=>true
+2021/08/17 6:10:30 [NORMAL_][LOG]   Application.Visible=False
+2021/08/17 6:10:30 [CAUTION][LOG] Set IsGhost=true , pid=15340
+2021/08/17 6:10:30 [NORMAL_][LOG]   GetWorkbookNameListAndGhostProcessNameList Success.
+2021/08/17 6:10:30 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtility.UpdateItemListAfterClearList
+2021/08/17 6:10:30 [NORMAL_][LOG] UpdateList Success.
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewMouseEventForCellsManager._dataGridView_RowHeaderMouseDoubleClick
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.SelectCells
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtilityGetIndexForExcelAppsFromCheckedListBox
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMainGetPidFromCheckdListValues
+2021/08/17 7:16:23 [NORMAL_][LOG] Workbook Not Opend.  * Workbook.ProcessID = 0 [A_PRG.xlsb]
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelIO.ExcelManagerOpenFile : C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelIO.ExcelManager.CheckExcelAppsList
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelIO.ExcelApps.UpdateThisInfo
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 7:16:23 [NORMAL_][LOG]   Application.Visible=False
+2021/08/17 7:16:23 [CAUTION][LOG] Set IsGhost=true , pid=15340
+2021/08/17 7:16:23 [NORMAL_][LOG]   openApps.IsOpendFile = false: filePath=C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelIO.ExcelApps.OpenFileAByApplication
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelIO.ExcelApps.ExcelApps_ApplicationWokbookOpen ExcelApps
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WorkbookOpen : CellManager : 
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookOpenAfterEvent
+2021/08/17 7:16:23 [NORMAL_][LOG] CurrentThread = 12
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelIO.ExcelApps.ExcelApps_ApplicationWokbookOpen ExcelApps
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WorkbookOpen : CellManager : 
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelCellsManagerForm.Application_WorkbookOpenAfterEvent
+2021/08/17 7:16:23 [NORMAL_][LOG] CurrentThread = 12
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelIO.ExcelApps.Appliction_WindowActivate ExcelApps : 
+2021/08/17 7:16:23 [NORMAL_][LOG]   A_PRG.xlsb > アイデア > $G$320
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Appliction_WindowActivate : CellManager : 
+2021/08/17 7:16:23 [NORMAL_][LOG]   IsWorkbookBeforeClose=true
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelIO.ExcelApps.Appliction_WindowActivate ExcelApps : 
+2021/08/17 7:16:23 [NORMAL_][LOG]   A_PRG.xlsb > アイデア > $G$320
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Appliction_WindowActivate : CellManager : 
+2021/08/17 7:16:23 [NORMAL_][LOG]   IsWorkbookBeforeClose=true
+2021/08/17 7:16:23 [NORMAL_][LOG]  IsGhost true => false
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelIO.ExcelApps.SetApplicationFromFilePath
+2021/08/17 7:16:23 [NORMAL_][LOG]   Application.Visible=False
+2021/08/17 7:16:23 [NORMAL_][LOG] ** Pid = 15340
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelIO.ExcelApps.ReSetFileListFromApplication path=
+2021/08/17 7:16:23 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelApps.SetWorkbookEvent : Microsoft Excel:A_PRG.xlsb
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelManager.GetDataFromAppsInfo
+2021/08/17 7:16:24 [NORMAL_][LOG] A_PRG.xlsb Is Nothing [0]
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelManagerOpenFile : C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelManager.CheckExcelAppsList
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelApps.UpdateThisInfo
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 7:16:24 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelApps.SetApplicationFromFilePath
+2021/08/17 7:16:24 [NORMAL_][LOG]   openApps.IsOpendFile = true: filePath=C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/08/17 7:16:24 [NORMAL_][LOG] ** Pid = 15340
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelApps.ReSetFileListFromApplication path=
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtilityGetIndexForExcelAppsFromCheckedListBox
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelManager.GetDataFromAppsInfo
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelApps.SelectAddress : A_PRG.xlsb
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelCells.GetValueCornerAddress
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelCells.GetValue : A_PRG.xlsb > アイデア > $G$266 > ※ワークブック消したとき、リストゼロでエラーとなる
+2021/08/17 7:16:24 [NORMAL_][LOG]  GetValue.Type : System.String
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$266
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 7:16:24 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G266
+
+2021/08/17 7:16:24 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G266
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$266
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 7:16:24 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G266
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $G$266
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2021/08/17 7:16:24 [NORMAL_][LOG]  A_PRG.xlsb > アイデア > G266
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2021/08/17 7:16:24 [NORMAL_][LOG] CurrentThread = 1
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelManager.UpdateOpendExcelApplication
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelManager.CheckExcelAppsList
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelApps.UpdateThisInfo
+2021/08/17 7:16:24 [NORMAL_][LOG] ExcelIO.ExcelApps.SetIsGhost
+2021/08/17 7:16:24 [NORMAL_][LOG]   Application.Visible=True
+2021/08/17 7:16:25 [NORMAL_][LOG] ExcelIO.ExcelApps.SetApplicationFromFilePath
+2021/08/17 7:16:25 [NORMAL_][LOG]   GetWorkbookNameListAndGhostProcessNameList Success.
+2021/08/17 7:16:25 [NORMAL_][LOG] ExcelCellsManager.ExcelWorkbookList.CheckedListBoxUtility.UpdateItemListAfterClearList
+2021/08/17 7:16:25 [NORMAL_][LOG] UpdateList Success.
+2021/08/17 7:16:25 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.ActivateWorkbookWindowActivate
+2021/08/17 7:16:25 [NORMAL_][LOG] ExcelIO.ExcelManagerWindowActivate Excute
+2021/08/17 7:16:25 [NORMAL_][LOG] ExcelIO.ExcelManager.GetActiveExcelApps
+2021/08/17 7:16:25 [NORMAL_][LOG] ExcelIO.ExcelApps.GetActiveWorkbookName
+2021/08/17 7:16:25 [NORMAL_][LOG] ExcelIO.ExcelApps.ActivateWorkbook
+2021/08/17 7:16:25 [NORMAL_][LOG] _statusStrip_Paint
+2021/08/17 7:16:25 [WARNING][LOG] ActivateWorkbook Workbook is nothing. bookName=A_PRG.xlsb
+2021/08/17 7:16:43 [NORMAL_][LOG] ExcelCellsManager.ExcelCellsManagerMain.ConformWhenDataEdited
+2021/08/17 7:16:43 [NORMAL_][LOG] ******************** ExcelCellsManagerForm_FormClosed Begin ********************
+2021/08/17 7:16:43 [NORMAL_][LOG] SettingsManager.SettingsManager.SetValue
+2021/08/17 7:16:43 [NORMAL_][LOG] settingName=application ,settingsName=LastOpendFilePath ,value=C:\Users\OK\Desktop\NewFile.tsv
+2021/08/17 7:16:43 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 7:16:43 [NORMAL_][LOG]   section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=True
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=True
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 7:16:43 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 7:16:43 [NORMAL_][LOG]   section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=True
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=True
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 7:16:43 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 7:16:43 [NORMAL_][LOG]   section=application ,parameter=LastOpendFilePath ,value=C:\Users\OK\Desktop\NewFile.tsv
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=LastOpendFilePath ,value=C:\Users\OK\Desktop\NewFile.tsv
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 7:16:43 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 7:16:43 [NORMAL_][LOG]   section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=False
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=False
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 7:16:43 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 7:16:43 [NORMAL_][LOG]   section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=True
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue: section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=True
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 7:16:43 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 7:16:43 [NORMAL_][LOG]   section=dataList ,parameter=ColumnWidthOfDataList ,value=152,100,100,98,115,100
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue: section=dataList ,parameter=ColumnWidthOfDataList ,value=152,100,100,98,115,100
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 7:16:43 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 7:16:43 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingLeft ,value=1,110,111,1
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=MouseCaptureSettingLeft ,value=1,110,111,1
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 7:16:43 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 7:16:43 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingTop ,value=1,280,300,1
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=MouseCaptureSettingTop ,value=1,280,300,1
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 7:16:43 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 7:16:43 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingRight ,value=0,200,300,1
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=MouseCaptureSettingRight ,value=0,200,300,1
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 7:16:43 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 7:16:43 [NORMAL_][LOG]   section=application ,parameter=MouseCaptureSettingBottom ,value=0,200,300,1
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=MouseCaptureSettingBottom ,value=0,200,300,1
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 7:16:43 [NORMAL_][LOG] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/08/17 7:16:43 [NORMAL_][LOG]   section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=True
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue: section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=True
+2021/08/17 7:16:43 [NORMAL_][LOG]   SetParameterValue Success.
+2021/08/17 7:16:43 [NORMAL_][LOG] IniManager.IniManager.WriteAllData
+2021/08/17 7:16:43 [NORMAL_][LOG] IniManager.IniManager.ConvertSectionDataToListString
+2021/08/17 7:16:43 [NORMAL_][LOG]   [application]
+2021/08/17 7:16:43 [NORMAL_][LOG]   IsActivateWorkbookWindowAfterRegistAddress=True
+2021/08/17 7:16:43 [NORMAL_][LOG]   LastOpendFilePath=C:\Users\OK\Desktop\NewFile.tsv
+2021/08/17 7:16:43 [NORMAL_][LOG]   IsActivateFormWhenMoveMouseScreenEdge=False
+2021/08/17 7:16:43 [NORMAL_][LOG]   MouseCaptureSettingLeft=1,110,111,1
+2021/08/17 7:16:43 [NORMAL_][LOG]   MouseCaptureSettingTop=1,280,300,1
+2021/08/17 7:16:43 [NORMAL_][LOG]   MouseCaptureSettingRight=0,200,300,1
+2021/08/17 7:16:43 [NORMAL_][LOG]   MouseCaptureSettingBottom=0,200,300,1
+2021/08/17 7:16:43 [NORMAL_][LOG]   IsUpdateListWhenWorkbookOpendAndClosed=True
+2021/08/17 7:16:43 [NORMAL_][LOG]   IsOpenLastFileWhenRunApplication=True
+2021/08/17 7:16:43 [NORMAL_][LOG]   [dataList]
+2021/08/17 7:16:43 [NORMAL_][LOG]   IsSaveColumnWidthOfDataList=True
+2021/08/17 7:16:43 [NORMAL_][LOG]   ColumnWidthOfDataList=152,100,100,98,115,100
+2021/08/17 7:16:43 [NORMAL_][LOG] IniManager.IniWriter.WriteData
+2021/08/17 7:16:43 [NORMAL_][LOG] IniManager.IniReader.ReadSettingsFile
+2021/08/17 7:16:43 [NORMAL_][LOG] IniManager.IniWriter.SetValueForWrite
+2021/08/17 7:16:43 [NORMAL_][LOG] ExcuteOverWrite Success. Path= C:\Users\OK\source\repos\Repository2\ExcelFindExtention\ExcelCellsManager\bin\Debug\settings.ini
+2021/08/17 7:16:43 [NORMAL_][LOG] ExcelCellsManagerForm.ExcelCellsManagerForm_FormClosed Button Close
+2021/08/17 7:16:43 [NORMAL_][LOG] ErrorManagerUtility.FileUtility.MakeNewFileNameNotLock : path=C:\Users\OK\source\repos\Repository2\ExcelFindExtention\ExcelCellsManager\bin\Debug\Error.Log
+2021/08/17 7:16:43 [NORMAL_][LOG]   MakeNewFileNameNotLock=Error.Log
+2021/08/17 7:16:43 [NORMAL_][LOG] ExcelCellsManagerForm_FormClosed.WriteErrorLog Success [C:\Users\OK\source\repos\Repository2\ExcelFindExtention\ExcelCellsManager\bin\Debug\Error.Log]
+
