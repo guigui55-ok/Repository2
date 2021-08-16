@@ -716,10 +716,49 @@ namespace ExcelIO
                         _Error.AddLog(this.ToString() + ".ReSetFileListFromApplication path=", bufPath);
                     }
                 }
+                SetIsGhost();
             } catch (Exception ex)
             {
                 _Error.AddException(ex, this.ToString() + ".SetFileListFromApplication");
                 return;
+            }
+        }
+
+        public void UpdateThisInfo()
+        {
+            try
+            {
+                _Error.AddLog(this, "UpdateThisInfo");
+                SetIsGhost();
+            } catch (Exception ex)
+            {
+                _Error.AddException(ex, this, "UpdateThisInfo");
+            }
+        }
+
+        private void SetIsGhost()
+        {
+            try
+            {
+                _Error.AddLog(this, "SetIsGhost");
+                if(this.Application == null) { return; }
+                if(this.Application.Workbooks.Count < 1) {
+                    // count < 1 true
+                    if (!IsGhost)
+                    {
+                        IsGhost = true; _Error.AddLog(" IsGhost=>true");
+                    }
+                }                    
+                else {
+                    // count >= 1 false
+                    if (IsGhost)
+                    {
+                        IsGhost = false; _Error.AddLog(" IsGhost=>false");
+                    }
+                }
+            } catch (Exception ex)
+            {
+                _Error.AddException(ex, this, "SetIsGhost");
             }
         }
 
