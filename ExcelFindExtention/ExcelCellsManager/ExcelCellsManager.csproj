@@ -56,13 +56,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\iniManager2.dll</HintPath>
     </Reference>
-    <Reference Include="MethodProcessSuspender, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\MethodProcessSuspender.dll</HintPath>
-    </Reference>
     <Reference Include="MousePointCaptureForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\MousePointCaptureForms.dll</HintPath>
+    </Reference>
+    <Reference Include="ProgressDialogManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ProgressDialogManager.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -120,6 +120,7 @@
     <Compile Include="ErrorMessage\ErrorMessangerMessageBox.cs" />
     <Compile Include="ErrorMessage\ErrorMessengerStatusBar.cs" />
     <Compile Include="ExcelCellsManager\ExcelCellsManagerConstants.cs" />
+    <Compile Include="ExcelCellsManager\ExcelCopyCellsValue.cs" />
     <Compile Include="ExcelCellsManager\SettingsForm\EcmSettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +188,7 @@
     <Compile Include="Utility\TypeUtility.cs" />
     <EmbeddedResource Include="ExcelCellsManagerForm.resx">
       <DependentUpon>ExcelCellsManagerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ExcelCellsManager\SettingsForm\EcmSettingsForm.resx">
       <DependentUpon>EcmSettingsForm.cs</DependentUpon>

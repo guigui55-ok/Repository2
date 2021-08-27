@@ -75,6 +75,40 @@ namespace ExcelCellsManager.ErrorMessage
             }
         }
 
+        public void ShowMessageAddToExistingString(FontStyle style, Color color, string msg, string title = "")
+        {
+            ShowMessageAddToExistingString(style, color, msg,true, '\n', "");
+        }
+
+        public void ShowMessageAddToExistingStringToBehind(FontStyle style, Color color, string msg, char delimiter = '\n', string title = "")
+        {
+            ShowMessageAddToExistingString(style, color, msg, false, delimiter, title);
+        }
+
+
+        public void ShowMessageAddToExistingString(FontStyle style,Color color, string msg, bool isBehind = true,char delimiter = '\n',string title = "")
+        {
+            try
+            {
+                string buf = _statusLabel.Text;
+                if(buf.Length >= 1)
+                {
+                    if (isBehind)
+                    {
+                        buf += delimiter + msg;
+                    }
+                    else
+                    {
+                        buf = msg + delimiter + buf;
+                    }
+                }
+                ShowMessage(buf,  style,color); 
+            } catch (Exception ex)
+            {
+                _error.AddException(ex, this, "ShowMessageAddToExistingString");
+            }
+        }
+
         /// <summary>
         /// ErrorManager.HasException=true のときに、その内容を表示する
         /// </summary>
@@ -108,6 +142,12 @@ namespace ExcelCellsManager.ErrorMessage
             }
         }
 
+        public void ChangeFont(FontStyle style, Color color)
+        {
+            Font font = new Font(_statusLabel.Font, style);
+            _statusLabel.ForeColor = color;
+            _statusLabel.Font = font;
+        }
         public void test()
         {
             _statusLabel.ForeColor = Color.Red;
@@ -144,16 +184,42 @@ namespace ExcelCellsManager.ErrorMessage
             }
         }
 
-        public void ShowUserMessageOnly(string title = "",bool OrderIsRev = true)
+
+
+        public void ShowUserMessageOnly(string title = "",bool OrderIsRev = true,bool isAddExceptionMessage = false)
         {
             if (IsSuppressErrorShow)
             { _error.AddLog("*IsSuppressErrorShow = true ,GetUserMessage Not Excute, KEEP_ERROR_STATE");return; }
-            string msg = _error.GetUserMessageOnlyAsString();
+            string msg = _error.GetUserMessageOnlyAsString(OrderIsRev, isAddExceptionMessage);
             if (msg == "")
             {
-                msg = _error.GetLastErrorMessagesAsString();
+                msg = _error.GetLastErrorMessagesAsString(3, isAddExceptionMessage);
             }
             ShowAlertMessage(msg, title);
+        }
+
+
+
+        public void ShowErrorMessageseAddToExisting()
+        {
+            try
+            {
+                string msg = "";
+                if(_statusLabel.Text != "")
+                {
+                    msg = _statusLabel.Text;
+                }
+                string msg2 = _error.GetLastErrorMessagesAsString();
+                if (msg2 != "")
+                {
+                    msg += "\n" + msg2;
+                }
+                ShowAlertMessage(msg);
+
+            } catch (Exception ex)
+            {
+                _error.AddException(ex, this, "ShowErrorMessageseAddToExisting");
+            }
         }
 
         public void ShowAlertMessages(string title = "")
@@ -162,7 +228,7 @@ namespace ExcelCellsManager.ErrorMessage
             {
                 if (IsSuppressErrorShow)
                 { _error.AddLog("*IsSuppressErrorShow = true ,GetLastAlertMessages Not Excute, KEEP_ERROR_STATE"); return; }
-                string msg = _error.GetLastAlertMessages();
+                string msg = _error.GetLastAlertMessages(true);
                 ShowAlertMessage(msg, title);
             } catch (Exception ex)
             {
@@ -170,6 +236,7 @@ namespace ExcelCellsManager.ErrorMessage
             }
         }
 
+       
         public void ShowResultSuccessMessage(string msg,string title = "")
         {
             ShowMessage(msg, FontStyle.Bold, Color.Green);
@@ -195,6 +262,7 @@ namespace ExcelCellsManager.ErrorMessage
                 { _error.AddLog("*IsSuppressErrorShow = true , KEEP_ERROR_STATE"); return; }
                 Font font = new Font(_statusLabel.Font,style);
                 _statusLabel.ForeColor = color;
+                _statusLabel.Font = font;
                 ShowMessage(msg);
             } catch (Exception ex)
             {
@@ -324,5 +392,55 @@ namespace ExcelCellsManager.ErrorMessage
             }
         }
 
+        public void ShowResultSuccessMessageAddToExisting(string msg, string title = "")
+        {
+            try
+            {
+                ChangeFont(_statusLabel.Font.Style, Color.Green);
+                ShowMessageAddToExistingString(_statusLabel.Font.Style, Color.Green,msg, title);
+            }catch  (Exception ex)
+            {
+                _error.AddException(ex, this, "ShowResultSuccessMessageAddToExisting");
+            }
+        }
+
+        public void ShowWarningMessageMessageAddToExisting(string msg, string title = "")
+        {
+            try
+            {
+                ChangeFont(_statusLabel.Font.Style, Color.Yellow);
+                ShowMessageAddToExistingString(_statusLabel.Font.Style, Color.Yellow,msg, title);
+            }
+            catch (Exception ex)
+            {
+                _error.AddException(ex, this, "ShowResultSuccessMessageAddToExisting");
+            }
+        }
+
+        public void ShowAlertMessageMessageAddToExisting(string msg, string title = "")
+        {
+            try
+            {
+                ChangeFont(_statusLabel.Font.Style | FontStyle.Bold, Color.Red);
+                ShowMessageAddToExistingString(_statusLabel.Font.Style | FontStyle.Bold, Color.Red,msg, title);
+            }
+            catch (Exception ex)
+            {
+                _error.AddException(ex, this, "ShowResultSuccessMessageAddToExisting");
+            }
+        }
+
+        public void ShowUserMessageOnlyAddToExisting(string msg,string title = "", bool OrderIsRev = true)
+        {
+            try
+            {
+                ChangeFont(_statusLabel.Font.Style, Color.Black);
+                ShowMessageAddToExistingString(_statusLabel.Font.Style, Color.Black,msg, title);
+            }
+            catch (Exception ex)
+            {
+                _error.AddException(ex, this, "ShowResultSuccessMessageAddToExisting");
+            }
+        }
     }
 }

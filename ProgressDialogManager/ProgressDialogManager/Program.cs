@@ -1,5 +1,5 @@
 ﻿using ProgressDialog.FormWindow;
-using ProgressDialog.Test;
+using ProgressDialog.DoWork;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,6 +31,7 @@ namespace ProgressDialog
                 Console.WriteLine("ThreadId = " + Thread.CurrentThread.ManagedThreadId);
                 Console.WriteLine("\n -----\n");
                 ProgressDialogManager dialog = new ProgressDialogManager(_err,null);
+
                 // DoWork 実行クラス
                 ProgressDialogDoWork doWork = new ProgressDialogDoWork(_err);
                 // DoWorkEvent が実行メソッド
@@ -51,7 +52,7 @@ namespace ProgressDialog
                 // DoWork に Action を紐づける
                 doWork.DoWorkAction = doWork.DoWorkAction_SampleHeavyMethod;
                 //doWork.DoWorkEvent -= doWork.ProgressDialog_DoWork; // 以前のDoWorkEventがある場合は注意する
-                doWork.DoWorkEvent = doWork.ProgressDialog_DoWorkFromAction;
+                doWork.DoWorkEvent = doWork.ProgressDialog_DoWorkWithExcuteActionEvent;
                 // BackgroundWorker を紐づける
                 doWork.BackgroundWorker = dialog._processingDialog.BackgroundWorker;
 

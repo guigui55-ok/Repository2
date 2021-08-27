@@ -30,6 +30,7 @@ namespace ExcelCellsManager
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Button_CopyRangeValue = new System.Windows.Forms.Button();
             this.Button_Down_CheckedListBoxItem = new System.Windows.Forms.Button();
             this.Button_GetActiveCell = new System.Windows.Forms.Button();
             this.Button_Up_CheckedListBoxItem = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@ namespace ExcelCellsManager
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusStrip2 = new System.Windows.Forms.StatusStrip();
-            this.Button_CopyRangeValue = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +67,17 @@ namespace ExcelCellsManager
             this.panel1.Size = new System.Drawing.Size(787, 398);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            // 
+            // Button_CopyRangeValue
+            // 
+            this.Button_CopyRangeValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Button_CopyRangeValue.Location = new System.Drawing.Point(401, 367);
+            this.Button_CopyRangeValue.Name = "Button_CopyRangeValue";
+            this.Button_CopyRangeValue.Size = new System.Drawing.Size(125, 23);
+            this.Button_CopyRangeValue.TabIndex = 6;
+            this.Button_CopyRangeValue.Text = "コピー";
+            this.Button_CopyRangeValue.UseVisualStyleBackColor = true;
+            this.Button_CopyRangeValue.Click += new System.EventHandler(this.Button_CopyRangeValue_Click);
             // 
             // Button_Down_CheckedListBoxItem
             // 
@@ -199,16 +210,6 @@ namespace ExcelCellsManager
             this.statusStrip2.Text = "statusStrip2";
             this.statusStrip2.Visible = false;
             this.statusStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip2_ItemClicked);
-            // 
-            // Button_CopyRangeValue
-            // 
-            this.Button_CopyRangeValue.Location = new System.Drawing.Point(401, 367);
-            this.Button_CopyRangeValue.Name = "Button_CopyRangeValue";
-            this.Button_CopyRangeValue.Size = new System.Drawing.Size(125, 23);
-            this.Button_CopyRangeValue.TabIndex = 6;
-            this.Button_CopyRangeValue.Text = "コピー";
-            this.Button_CopyRangeValue.UseVisualStyleBackColor = true;
-            this.Button_CopyRangeValue.Click += new System.EventHandler(this.Button_CopyRangeValue_Click);
             // 
             // ExcelCellsManagerForm
             // 

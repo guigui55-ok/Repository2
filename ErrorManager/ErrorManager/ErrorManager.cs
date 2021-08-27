@@ -329,12 +329,12 @@ namespace ErrorManager
             }
         }
 
-        public string GetLastAlertMessages()
+        public string GetLastAlertMessages(bool isAddExceptionMessage = false)
         {
             try
             {
                 string ret="";
-                string[] msgs = GetLastErrorMessagesAsArray();
+                string[] msgs = GetLastErrorMessagesAsArray(4, isAddExceptionMessage);
                 if((msgs != null)&&(msgs.Length > 0))
                 {
                     foreach(string val in msgs)
@@ -478,11 +478,11 @@ namespace ErrorManager
             }
         }
 
-        public string GetLastErrorMessagesAsString(int moreThanThisType = 3)
+        public string GetLastErrorMessagesAsString(int moreThanThisType = 3,bool isAddExceptionMessage = false)
         {
             try
             {
-                string[] msgs = GetLastErrorMessagesAsArray(moreThanThisType);
+                string[] msgs = GetLastErrorMessagesAsArray(moreThanThisType, isAddExceptionMessage);
                 string ret = "";
                 if((msgs != null)||(msgs.Length < 1))
                 {
@@ -505,12 +505,12 @@ namespace ErrorManager
         /// </summary>
         /// <param name="moreThanThisType"></param>
         /// <returns></returns>
-        public string[] GetLastErrorMessagesAsArray(int moreThanThisType = 4)
+        public string[] GetLastErrorMessagesAsArray(int moreThanThisType = 4,bool isAddExceptionMessage = false)
         {
             try
             {
                 
-                List<string> list = GetLastErrorMessagesAsArray(new int[] { moreThanThisType });
+                List<string> list = GetLastErrorMessagesList(new int[] { moreThanThisType }, isAddExceptionMessage);
                 ClearError();
                 return list.ToArray();
             } catch (Exception ex)
@@ -528,12 +528,13 @@ namespace ErrorManager
         /// <returns></returns>
         public string[] GetLastErrorMessageAboveWarning()
         {
-            List<string> list = GetLastErrorMessagesAsArray(new int[] { Constants.TYPE_WARNING, Constants.TYPE_ALERT });
+            List<string> list = GetLastErrorMessagesList(new int[] { Constants.TYPE_WARNING, Constants.TYPE_ALERT });
             ClearError();
             return list.ToArray();
         }
 
-        public List<string> GetLastErrorMessagesAsArray(int[] errorTypes)
+
+        public List<string> GetLastErrorMessagesList(int[] errorTypes,bool isAddExceptionMessage=false)
         {
             List<string> retList = new List<string>();
             try
@@ -552,7 +553,15 @@ namespace ErrorManager
                             //Console.WriteLine("type ="+type + " ,data.type="+data.DataType);
                             if(type <= data.DataType)
                             {
-                                retList.Add(GetErrorMessgefromDebugDataList(data));
+                                string buf = GetErrorMessgefromDebugDataList(data);
+                                if (isAddExceptionMessage)
+                                {
+                                    if (data.Exception != null)
+                                    {
+                                        buf += ":" + data.Exception.Message;
+                                    }
+                                }
+                                retList.Add(buf);
                             }
                         }
                         data.IsAccecced = true;
@@ -585,11 +594,11 @@ namespace ErrorManager
         //    }
         //}
 
-        public string GetUserMessageOnlyAsString(bool orderRev = true)
+        public string GetUserMessageOnlyAsString(bool orderRev = true,bool isAddExceptionMessage = false)
         {
             try
             {
-                List<string> list = GetUserMessageOnly(orderRev);
+                List<string> list = GetUserMessageOnly(orderRev,isAddExceptionMessage);
                 if (list.Count < 1) { return ""; }
                 string ret="";
                 foreach(string val in list)
@@ -605,7 +614,7 @@ namespace ErrorManager
             }
         }
 
-        public List<string> GetUserMessageOnly(bool orderRev = true)
+        public List<string> GetUserMessageOnly(bool orderRev = true,bool isAddExceptionMessage = false)
         {
             List<string> retList = new List<string>();
             try
@@ -622,7 +631,12 @@ namespace ErrorManager
                         {
                             if (data.MessageForUser != "")
                             {
-                                retList.Add(data.MessageForUser);
+                                string buf = data.MessageForUser;
+                                if (data.Exception != null)
+                                {
+                                    buf += data.Exception.Message;
+                                }
+                                retList.Add(buf);
                             }
                             data.IsAccecced = true;
                         }

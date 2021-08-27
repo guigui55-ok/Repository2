@@ -18,8 +18,15 @@ namespace ErrorManager
         void ShowAlertMessage(string msg, string title = "");
         void ShowAlertLastErrorWhenHasException(string title = "");
         void ShowAlertMessages(string title = "");
-        void ShowUserMessageOnly(string title = "", bool OrderIsRev = true);
-
+        void ShowUserMessageOnly(string title = "", bool OrderIsRev = true,bool isAddExceptionMessage=false);
+        //Add to an existing string 既存の文字列に追加
+        void ShowMessageAddToExistingString(FontStyle style, Color color, string msg, string title = "");
+        void ShowResultSuccessMessageAddToExisting(string msg, string title = "");
+        void ShowWarningMessageMessageAddToExisting(string msg, string title = "");
+        void ShowAlertMessageMessageAddToExisting(string msg, string title = "");
+        void ShowUserMessageOnlyAddToExisting(string msg,string title = "", bool OrderIsRev = true);
+        void ShowErrorMessageseAddToExisting();
+        void ChangeFont(FontStyle style, Color color);
         void test();
     }
 }

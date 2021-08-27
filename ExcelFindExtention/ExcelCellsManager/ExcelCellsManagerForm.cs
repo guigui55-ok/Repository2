@@ -208,6 +208,7 @@ namespace ExcelCellsManager
                 _excelCellsManagerMain.StatusBarChangeTextEvent += ExcelCellsManagerForm__statusBarChangeTextEvent;
                 _error.AddLog("******************** Initialize End ********************");
                 //_excelCellsManagerMain.AppsState.IsInitialize = false;
+                _error.Messenger.ShowMessage(Constants.StatusBarTextInitialize);
             }
             catch (Exception ex)
             {
@@ -287,6 +288,8 @@ namespace ExcelCellsManager
                     _panelSize = panel1.Size;
                     Console.WriteLine("panel.Size.Height = "+_panelSize.Height);
                     int n = (int)sender;
+                    if(sender == null) { Console.WriteLine("  *** Sender is Null"); }
+                    if (this == null) { Console.WriteLine("  *** this is Null"); }
                     this.Height += (int)sender;
                     statusStrip2.Location = new Point(statusStrip2.Location.X, statusStrip2.Location.Y - n);
                     if (n > 0)

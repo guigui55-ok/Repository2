@@ -1,6 +1,6 @@
 ﻿using ErrorManager;
 using ProgressDialog.FormWindow;
-using ProgressDialog.Test;
+using ProgressDialog.DoWork;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -78,12 +78,25 @@ namespace ProgressDialog
         private void Button3_Click(object sender, EventArgs e)
         {
             // 実行する
-            // ActionMethod を使用せずにクラス内で実装するパターン
+            // ActionMethod を使用するパターン
+            // BackGroundWorker を ActionMethod ないで更新・通知しているパターン
             //_doWork.DoWorkAction = _doWork.DoWorkAction_SampleHeavyMethod;
             //_doWork.DoWorkEvent = _doWork.ProgressDialog_DoWorkFromAction;
             //_progressDialog.ExcuteProcess(_doWork.ProgressDialog_DoWorkFromAction);
             _progressDialog.ExcuteProcess(_doWork.DoWorkAction_SampleHeavyMethod, ref _doWork.BackgroundWorker, 0,3000);
             //_progressDialog.RunProcess(3000);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // ActionMethod を使用する
+            // BackGroundWorker は使用しないパターン
+
+            // doWork.DoWorkAction = _doWork.DoWorkAction_SampleHeavyMethodNotHasBackGroundWorker
+            // this.backgroundWorker1.DoWork += _doWork.DoWorkAction_SampleHeavyMethodNotHasBackGroundWorker;
+            _doWork.DoWorkEvent = _doWork.ProgressDialog_DoWorkWithExcuteActionForNotHasBackGroundWorkerEvent;
+            _progressDialog.ExcuteProcessForActionForNotHasBackGroundWorker(
+                _doWork.DoWorkAction_SampleHeavyMethodNotHasBackGroundWorker, ref _doWork.BackgroundWorker, 0, 3000);
         }
     }
 }
