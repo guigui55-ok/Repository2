@@ -49,8 +49,14 @@ namespace ExcelIO
                     application.Workbooks[workbookName].Activate();
                     application.Workbooks[workbookName].Worksheets[worksheetName].activate();
                     ((Worksheet)application.Workbooks[workbookName].Worksheets[worksheetName]).Range[address].Activate();
-                } catch
+                } catch (System.Runtime.InteropServices.COMException ex)
                 {
+                    _Error.AddLogAlert(this.ToString(), "ChangeActiveCell Failed",
+                        "Excel のアプリケーションダイアログを開いているなどセルが操作できない状態の可能性があります。", ex);
+                }                
+                catch(Exception ex)
+                {
+                    _Error.AddLogAlert(this.ToString(), "ChangeActiveCell Failed",ex);
                     throw new Exception( this.ToString() + ".ChangeActiveCell");
                 }
             }

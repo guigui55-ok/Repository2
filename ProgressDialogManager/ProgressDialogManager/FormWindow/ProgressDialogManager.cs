@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProgressDialog.DoWork;
+using System;
 using System.ComponentModel;
 using System.Threading;
 using System.Windows.Forms;
@@ -12,6 +13,7 @@ namespace ProgressDialog.FormWindow
         public Form ParentForm;
         public Form ProcessingDialog { get => _processingDialog; set => _processingDialog = (ProgressDialogForm)value; }
         public string FormText = "Now Processing...";
+        public string WindowTitle = "ProgressDialog";
         public ProgressDialogManager(ErrorManager.ErrorManager err,Form parentForm)
         {
             _err = err;
@@ -29,6 +31,7 @@ namespace ProgressDialog.FormWindow
             try
             {
                 _processingDialog = new ProgressDialogForm(_err, doWorkEventHandler,timeout,false);
+                _processingDialog.Text = WindowTitle;
                 _processingDialog.SizeChanged += _processingDialog_SizeChanged;
                 if(this.ParentForm != null)
                 {
@@ -44,6 +47,19 @@ namespace ProgressDialog.FormWindow
         {
             try
             {
+                if (_processingDialog == null)
+                {
+                    _err.AddLogAlert(this, "ParentForm_SizeChanged _processingDialog == null");
+                    //throw new Exception("ParentForm_SizeChanged _processingDialog == null");
+                    return;
+                }
+                if (_processingDialog.Visible)
+                {
+                } else
+                {
+                    _err.AddLogWarning(this, "ParentForm_SizeChanged _processingDialog.Visible=false");
+                    return;
+                }
                 if (ParentForm.WindowState == FormWindowState.Normal)
                 {
                     _processingDialog.WindowState = FormWindowState.Normal;
@@ -74,16 +90,25 @@ namespace ProgressDialog.FormWindow
             }
         }
 
-        public DialogResult ExcuteProcess(Action action,ref BackgroundWorker backgroundWorker,int timeout=30 * 1000,int showDialogTime = 3000)
+        public DialogResult ExcuteProcessForActionForNotHasBackGroundWorker(
+            Action action, ref BackgroundWorker backgroundWorker, 
+            int timeout = 30 * 1000, int showDialogTime = 3000,
+            string windowTitle="ProgressDialog")
         {
-            Test.ProgressDialogDoWork doWork = null;
+            this.WindowTitle = windowTitle;
+            return ExcuteProcessForActionForNotHasBackGroundWorker(action, ref backgroundWorker, timeout, showDialogTime);
+        }
+
+        public DialogResult ExcuteProcessForActionForNotHasBackGroundWorker(Action action, ref BackgroundWorker backgroundWorker, int timeout = 30 * 1000, int showDialogTime = 3000)
+        {
+            ProgressDialogDoWork doWork = null;
             try
             {
                 // メイン処理を行うクラス
-                doWork = new Test.ProgressDialogDoWork(_err);
+                doWork = new ProgressDialogDoWork(_err);
                 doWork.DoWorkAction = action;
                 // Initialize
-                Initialize(doWork.ProgressDialog_DoWorkFromAction,timeout);
+                Initialize(doWork.ProgressDialog_DoWorkWithExcuteActionForNotHasBackGroundWorkerEvent, timeout);
                 if (_err.hasError) { _err.AddLogAlert("ExcuteProcess.Initialize Failed"); }
 
                 doWork.BackgroundWorker = this._processingDialog.BackgroundWorker;
@@ -94,7 +119,48 @@ namespace ProgressDialog.FormWindow
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "RunProcess(Action action)");
+                _err.AddException(ex, this, "ExcuteProcessForActionForNotHasBackGroundWorker");
+                return DialogResult.None;
+            }
+            finally
+            {
+                if (doWork != null) { doWork.Dispose(); }
+                if (_processingDialog != null)
+                {
+                    if (!_processingDialog.BackgroundWorker.CancellationPending)
+                    {
+                        _processingDialog.BackgroundWorker.CancelAsync();
+                    }
+                    this.ParentForm = null;
+                    _processingDialog.Parent = null;
+                    _processingDialog.Dispose();
+                    _processingDialog = null;
+                }
+                GC.Collect();
+            }
+        }
+
+        public DialogResult ExcuteProcess(Action action,ref BackgroundWorker backgroundWorker,int timeout=30 * 1000,int showDialogTime = 3000)
+        {
+            ProgressDialogDoWork doWork = null;
+            try
+            {
+                // メイン処理を行うクラス
+                doWork = new ProgressDialogDoWork(_err);
+                doWork.DoWorkAction = action;
+                // Initialize
+                Initialize(doWork.ProgressDialog_DoWorkWithExcuteActionEvent,timeout);
+                if (_err.hasError) { _err.AddLogAlert("ExcuteProcess.Initialize Failed"); }
+
+                doWork.BackgroundWorker = this._processingDialog.BackgroundWorker;
+                backgroundWorker = this._processingDialog.BackgroundWorker;
+
+                return RunProcess(showDialogTime);
+
+            }
+            catch (Exception ex)
+            {
+                _err.AddException(ex, this, "ExcuteProcess");
                 return DialogResult.None;
             }
             finally
@@ -154,6 +220,7 @@ namespace ProgressDialog.FormWindow
                 _err.AddLog(this, "ShowDialog ThreadId="+Thread.CurrentThread.ManagedThreadId);
                 if(_processingDialog == null) { _err.AddLogAlert("_processingDialog == null"); return DialogResult.None; }
 
+                
                 DialogResult result = _processingDialog.ShowDialog();
                 if(result == DialogResult.Abort)
                 {

@@ -51,8 +51,8 @@ namespace ProgressDialog
             }
             catch (ThreadAbortException ex)
             {
-                _err.AddLogWarning(this, "TestHeavyMethod ThreadAbortException : thread="+Thread.CurrentThread.ManagedThreadId);
-                _err.AddException(ex, this, " ThreadAbortException");
+                _err.AddLogWarning(this.ToString(), "TestHeavyMethod ThreadAbortException : thread=" + Thread.CurrentThread.ManagedThreadId,ex); ;
+                //_err.AddException(ex, this, " ThreadAbortException");
             }
             catch (Exception ex)
             {
@@ -87,8 +87,8 @@ namespace ProgressDialog
                     }
                     catch (ThreadAbortException ex)
                     {
-                        _err.AddLogWarning(this, method + ".Task ThreadAbortException : thread=" + Thread.CurrentThread.ManagedThreadId);
-                        _err.AddException(ex,this, " ThreadAbortException");
+                        _err.AddLogWarning(this.ToString(), method + ".Task ThreadAbortException : thread=" + Thread.CurrentThread.ManagedThreadId,ex);
+                        //_err.AddException(ex,this, " ThreadAbortException");
                     }
                     catch (Exception ex)
                     {
@@ -160,9 +160,9 @@ namespace ProgressDialog
                         Console.WriteLine("OperationCanceledException");
                         Console.WriteLine(ex.Message);
                     }
-                    catch (ThreadAbortException)
+                    catch (ThreadAbortException ex)
                     {
-                        _err.AddLogWarning(this, method + ".Task ThreadAbortException : thread=" + Thread.CurrentThread.ManagedThreadId);
+                        _err.AddLogWarning(this.ToString(), method + ".Task ThreadAbortException : thread=" + Thread.CurrentThread.ManagedThreadId,ex);
                     }
                     catch (Exception ex)
                     {

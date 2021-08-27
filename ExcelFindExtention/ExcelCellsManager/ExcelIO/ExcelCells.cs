@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Linq;
 using Microsoft.Office.Interop.Excel;
 
@@ -7,6 +8,9 @@ namespace ExcelIO
     public class ExcelCells
     {
         protected ErrorManager.ErrorManager _error;
+
+        public BackgroundWorker BackgroundWorker;
+        protected object _result;
         public ExcelCells(ErrorManager.ErrorManager error)
         {
             _error = error;
@@ -19,6 +23,27 @@ namespace ExcelIO
             DIRECTION_DOWN = 0x0008,
             DIRECTION_LEFT = 0x00010,
             DIRECTION_RIGHT = 0x00020
+        }
+        // BackGroundWorker クラスに進捗を報告する
+        public void SetBackGroundWorker_ReportProgress(int percentProgress, object userState)
+        {
+            try
+            {
+                if (this.BackgroundWorker == null)
+                {
+                    _error.AddLog(this, ".SetBackGroundWorker_ReportProgress:BackgroundWorker == null");
+                }
+                else
+                {
+                    //結果を設定する
+                    _result = percentProgress;
+                    this.BackgroundWorker.ReportProgress(percentProgress, userState);
+                }
+            }
+            catch (Exception ex)
+            {
+                _error.AddException(ex, this, "SetBackGroundWorker_ReportProgress");
+            }
         }
 
         public string GetValueCornerAddress(Application application, string bookname, string sheetname, string address)
@@ -97,6 +122,7 @@ namespace ExcelIO
                     if (_error.hasAlert) { throw new Exception("GetCornerAddressForAddress Failed"); }
                     object val=null;
                     string str = "";
+                    string dot = "";
                     for (int row=0; row < rows; row++)
                     {
                         for(int col=0; col <cols; col++)
@@ -118,6 +144,11 @@ namespace ExcelIO
                         {
                             ret += "\n";
                         }
+                        int n = (int)row / rows;
+                        //if(dot.Length >= 8) { dot = ""; } else { dot += "."; }
+                        // コントロールの表示を変更する
+                        // ※進捗を表示する処理を追加すること
+                        //SetBackGroundWorker_ReportProgress(n, "Processing" + dot);
                     }
                 }
                 return ret;
