@@ -77,16 +77,16 @@ namespace ExcelCellsManager.ErrorMessage
 
         public void ShowMessageAddToExistingString(FontStyle style, Color color, string msg, string title = "")
         {
-            ShowMessageAddToExistingString(style, color, msg,true, '\n', "");
+            ShowMessageAddToExistingString(style, color, msg,true, "\n", "");
         }
 
-        public void ShowMessageAddToExistingStringToBehind(FontStyle style, Color color, string msg, char delimiter = '\n', string title = "")
+        public void ShowMessageAddToExistingStringToBehind(FontStyle style, Color color, string msg, string delimiter = "\n", string title = "")
         {
             ShowMessageAddToExistingString(style, color, msg, false, delimiter, title);
         }
 
 
-        public void ShowMessageAddToExistingString(FontStyle style,Color color, string msg, bool isBehind = true,char delimiter = '\n',string title = "")
+        public void ShowMessageAddToExistingString(FontStyle style,Color color, string msg, bool isBehind = true,string delimiter = "\n",string title = "")
         {
             try
             {
@@ -101,6 +101,10 @@ namespace ExcelCellsManager.ErrorMessage
                     {
                         buf = msg + delimiter + buf;
                     }
+                }
+                else
+                {
+                    buf = msg;
                 }
                 ShowMessage(buf,  style,color); 
             } catch (Exception ex)
@@ -397,7 +401,7 @@ namespace ExcelCellsManager.ErrorMessage
             try
             {
                 ChangeFont(_statusLabel.Font.Style, Color.Green);
-                ShowMessageAddToExistingString(_statusLabel.Font.Style, Color.Green,msg, title);
+                ShowMessageAddToExistingStringToBehind(_statusLabel.Font.Style, Color.Green,msg, " < ",title);
             }catch  (Exception ex)
             {
                 _error.AddException(ex, this, "ShowResultSuccessMessageAddToExisting");

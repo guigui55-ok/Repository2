@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB5135C0-680E-48AD-824D-4D47C5E674D8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ImageViewer3</RootNamespace>
+    <AssemblyName>ImageViewer3</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IniManager">
+      <HintPath>Dlls\IniManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Convert.cs" />
+    <Compile Include="Common\FileIO.cs" />
+    <Compile Include="Common\Random.cs" />
+    <Compile Include="Common\ReadShotcut.cs" />
+    <Compile Include="ErroLog\ErrorLog.cs" />
+    <Compile Include="ErroLog\GlobalErrloLog.cs" />
+    <Compile Include="ErroLog\IErrorLog.cs" />
+    <Compile Include="ErroLog\NotException.cs" />
+    <Compile Include="Events\ClickNextPreviewEvents.cs" />
+    <Compile Include="Events\DragDropEvents.cs" />
+    <Compile Include="Events\KeyEvents.cs" />
+    <Compile Include="Events\MouseMethod.cs" />
+    <Compile Include="Events\MoveInnerControlEvents.cs" />
+    <Compile Include="Events\ViewImageControlEvents.cs" />
+    <Compile Include="Events\ViewImageMouseEventHandler.cs" />
+    <Compile Include="Functions\CommonFunctions.cs" />
+    <Compile Include="Functions\ContentsControlFunction.cs" />
+    <Compile Include="Functions\FileListFunction.cs" />
+    <Compile Include="Functions\InvokeFunctionViewImageObjects.cs" />
+    <Compile Include="Functions\MainFormFunction.cs" />
+    <Compile Include="Functions\ViewImageBasicFunction.cs" />
+    <Compile Include="Functions\ViewImageControlFunction.cs" />
+    <Compile Include="ImageViewerConstants.cs" />
+    <Compile Include="ImageViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageViewerForm.Designer.cs">
+      <DependentUpon>ImageViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageViewerMain.cs" />
+    <Compile Include="ParentForms\ContentsControl.cs" />
+    <Compile Include="ParentForms\MainFormManager.cs" />
+    <Compile Include="ParentForms\MainFormState.cs" />
+    <Compile Include="ParentForms\MenuStripEvents.cs" />
+    <Compile Include="ParentForms\MenuStripRegister.cs" />
+    <Compile Include="ParentForms\ToolStripLiistForRegist.cs" />
+    <Compile Include="Settings\IniManagerTransfer.cs" />
+    <Compile Include="Settings\ISettingsManager.cs" />
+    <Compile Include="Functions\SettingsFileFunction.cs" />
+    <Compile Include="ViewImageObjects\Controls\IViewFrameControl.cs" />
+    <Compile Include="ViewImageObjects\Controls\IViewInnerControl.cs" />
+    <Compile Include="ViewImageObjects\Controls\ViewFrameControl.cs" />
+    <Compile Include="ViewImageObjects\Controls\ViewInnerControl.cs" />
+    <Compile Include="ViewImageObjects\FileList\FileListReader.cs" />
+    <Compile Include="ViewImageObjects\FileList\FileListRegister.cs" />
+    <Compile Include="ImageViewerSettings.cs" />
+    <Compile Include="ViewImageObjects\Values\IViewControlState.cs" />
+    <Compile Include="ViewImageObjects\Controls\IViewImageControl.cs" />
+    <Compile Include="ViewImageObjects\Values\IViewImage.cs" />
+    <Compile Include="ViewImageObjects\Values\IViewImageSettings.cs" />
+    <Compile Include="ViewImageObjects\Controls\ViewImageControl.cs" />
+    <Compile Include="ViewImageObjects\Values\ViewImageState.cs" />
+    <Compile Include="ViewImageObjects\Values\ViewImageSettings.cs" />
+    <Compile Include="ViewImageObjects\Values\ViewImage.cs" />
+    <Compile Include="ViewImageObjects\ViewImageObjects.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewImageManager.cs" />
+    <EmbeddedResource Include="ImageViewerForm.resx">
+      <DependentUpon>ImageViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ParentContents\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SettingsFormat.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
