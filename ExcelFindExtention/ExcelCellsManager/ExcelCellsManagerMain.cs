@@ -522,7 +522,7 @@ namespace ExcelCellsManager
                 {
                     if (this.AppsState.IsNowUpdateExcelAppsList)
                     {
-                        // Update 中
+                        // Update 中は実行しない
                         _error.AddLogAlert(this, "UpdateList : Tried Excute Update During Update");
                         return;
                     }
@@ -534,7 +534,7 @@ namespace ExcelCellsManager
                     // 
                     // WorkbookNameListを取得する、取得した EXCEL.EXE (Application Object) に Workbook がない場合は
                     // GhostProcess として 文字列 "[PID] EXCEL.EXE" をリスト内に格納する
-                    // ※この中で Update している
+                    // ※このメソッドの中で Update している
                     List<string> excelList = ExcelManager.GetWorkbookNameListAndGhostProcessNameList();
                     if (_error.hasAlert)
                     {
@@ -565,6 +565,7 @@ namespace ExcelCellsManager
                 }
                 finally
                 {
+                    // Update 中の状態を解除する
                     this.AppsState.IsNowUpdateExcelAppsList = false;
                     if (showMsgBox)
                     {

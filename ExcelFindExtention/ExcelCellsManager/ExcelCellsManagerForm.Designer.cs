@@ -121,7 +121,7 @@ namespace ExcelCellsManager
             this.Button_CloseWorkbook.Name = "Button_CloseWorkbook";
             this.Button_CloseWorkbook.Size = new System.Drawing.Size(125, 23);
             this.Button_CloseWorkbook.TabIndex = 1;
-            this.Button_CloseWorkbook.Text = "閉じる";
+            this.Button_CloseWorkbook.Text = "ブックを閉じる";
             this.Button_CloseWorkbook.UseVisualStyleBackColor = true;
             this.Button_CloseWorkbook.Click += new System.EventHandler(this.Button_CloseWorkbook_Click);
             // 

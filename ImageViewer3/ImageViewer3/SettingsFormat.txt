@@ -1,0 +1,3 @@
+[settings]
+IsMenuBarVisibleAlways=0
+IsMenuBarVisibleOnStartUp=0

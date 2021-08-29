@@ -1,0 +1,14 @@
+C:\Users\OK\source\repos\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\ImageViewer3\ImageViewer3\obj\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\OK\source\repos\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.csproj.ResolveComReference.cache
+C:\Users\OK\source\repos\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.ImageViewerForm.resources
+C:\Users\OK\source\repos\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.Properties.Resources.resources
+C:\Users\OK\source\repos\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\ImageViewer3\ImageViewer3\bin\Debug\ImageViewer3.exe.config
+C:\Users\OK\source\repos\ImageViewer3\ImageViewer3\bin\Debug\ImageViewer3.exe
+C:\Users\OK\source\repos\ImageViewer3\ImageViewer3\bin\Debug\ImageViewer3.pdb
+C:\Users\OK\source\repos\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.exe
+C:\Users\OK\source\repos\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.pdb
+C:\Users\OK\source\repos\ImageViewer3\ImageViewer3\bin\Debug\IniManager.dll
+C:\Users\OK\source\repos\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.csproj.CopyComplete

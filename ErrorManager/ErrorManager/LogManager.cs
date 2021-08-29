@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Log
@@ -18,6 +19,7 @@ namespace Log
         public Exception ex = null;
         public DateTime DateTime = DateTime.Now;
         public bool IsAccessed = false;
+        public int ThreadId;
     }
     public class LogManager
     {
@@ -238,7 +240,7 @@ namespace Log
                     Console.Write("AddLog:");
                     Console.Write(GetPriorityToString(priority));
                     Console.Write(" " + GetTypeToString(logType) + " ");
-                    //Console.Write("LType=" + logType + ",");
+                    Console.Write("[" + Thread.CurrentThread.ManagedThreadId + "]");
                     
                     Console.Write("  " + value);
                     if (exception != null)
@@ -273,7 +275,8 @@ namespace Log
                     LogType = logType,
                     Value = value,
                     Notes = notes,
-                    MessageToUser = messateToUser
+                    MessageToUser = messateToUser,
+                    ThreadId = Thread.CurrentThread.ManagedThreadId
                 };
                 LogList.Add(nowLog);
 
@@ -432,6 +435,7 @@ namespace Log
                 buf = log.DateTime.ToString();
                 buf += " " + GetPriorityToString(log.Priority);
                 buf += GetTypeToString(log.LogType);
+                buf += "[" + log.ThreadId + "]";
                 buf += " " + log.Value;
                 if (log.MessageToUser != "")
                 {
