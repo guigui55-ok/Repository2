@@ -25,7 +25,7 @@ namespace ErrorManager
         void ShowWarningMessageMessageAddToExisting(string msg, string title = "");
         void ShowAlertMessageMessageAddToExisting(string msg, string title = "");
         void ShowUserMessageOnlyAddToExisting(string msg,string title = "", bool OrderIsRev = true);
-        void ShowErrorMessageseAddToExisting();
+        void ShowErrorMessageseAddToExisting(bool isBehind = true);
         void ChangeFont(FontStyle style, Color color);
         void test();
     }
