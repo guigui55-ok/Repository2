@@ -55,11 +55,11 @@
   <ItemGroup>
     <Reference Include="ErrorManager, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\guigui55-ok_Repos2\ExcelManager\ExcelManager\bin\Release\ErrorManager.dll</HintPath>
+      <HintPath>..\..\ErrorManager\ErrorManager\bin\Release\ErrorManager.dll</HintPath>
     </Reference>
     <Reference Include="ExcelManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\guigui55-ok_Repos2\ExcelManager\ExcelManager\bin\Release\ExcelManager.dll</HintPath>
+      <HintPath>..\..\ExcelManager\ExcelManager\bin\Release\ExcelManager.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
