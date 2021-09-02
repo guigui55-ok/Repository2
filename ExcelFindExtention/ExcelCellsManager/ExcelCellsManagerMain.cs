@@ -503,13 +503,15 @@ namespace ExcelCellsManager
             if (existing)
             {
                 // エラーがあれば表示する
-                if (_error.hasAboveWarning) { _error.Messenger.ShowAlertMessageMessageAddToExisting(_error.GetLastErrorMessagesAsString()); }
+                if (_error.hasAboveWarning) 
+                { _error.Messenger.ShowAlertMessageMessageAddToExisting(_error.GetLastErrorMessagesAsString(3,true)); }
                 else { _error.Messenger.ShowResultSuccessMessageAddToExisting(msg); }
             }
             else
             {
                 // エラーがあれば表示する
-                if (_error.hasAboveWarning) { _error.Messenger.ShowAlertMessages(); }
+                if (_error.hasAboveWarning) 
+                { _error.Messenger.ShowAlertMessageMessageAddToExisting(_error.GetLastErrorMessagesAsString(3,true)); }
                 else { _error.Messenger.ShowResultSuccessMessage(msg); }
             }
         }
@@ -530,7 +532,6 @@ namespace ExcelCellsManager
                     _error.ReleaseErrorState();
                     _error.ClearError();
                     _error.AddLog(this.ToString() + ".UpdateList");
-                    _error.AddLog("CurrentThread = " + Thread.CurrentThread.ManagedThreadId);
                     // 
                     // WorkbookNameListを取得する、取得した EXCEL.EXE (Application Object) に Workbook がない場合は
                     // GhostProcess として 文字列 "[PID] EXCEL.EXE" をリスト内に格納する
@@ -659,6 +660,7 @@ namespace ExcelCellsManager
             }
         }
 
+        // アドレスを登録する
         // DataList にデータ(アドレスなど)を追加する
         public void AddList(bool isShowMsg = true)
         {
@@ -710,11 +712,12 @@ namespace ExcelCellsManager
                 if (isShowMsg)
                 {
                     // エラーがあれば表示する
-                    if (_error.hasAboveWarning) { _error.Messenger.ShowAlertMessages(); }
-                    else
-                    {
-                        _error.Messenger.ShowResultSuccessMessage("Address added.");
-                    }
+                    //if (_error.hasAboveWarning) { _error.Messenger.ShowErrorMessageseAddToExisting(); }
+                    //else
+                    //{
+                    //    _error.Messenger.ShowResultSuccessMessage("Address added.");
+                    //}
+                    ShowMessageExistingWhenFlagTrue("Address added.",true);
                 }
                 else
                 {
@@ -816,16 +819,13 @@ namespace ExcelCellsManager
                 if (apps == null) { throw new Exception("File Object Is Nothing [" + cellsInfo.BookName + "]"); }
 
                 // Select する
+                // Window をアクティブにする
                 apps.SelectAddress(cellsInfo.BookName, cellsInfo.SheetName, cellsInfo.Address);
                 if (_error.hasAlert) { _error.AddLogAlert("ExcelApps.SelectAddress Failed"); }
 
-                // Window をアクティブにする
-                //this.ActivateWorkbookWindowActivate();
-                //if (_error.HasException())
-                //{ MessageBox.Show(_error.GetExceptionMessageAndStackTrace(), "Error"); return; }
                 if (isOpendExcelFile) { UpdateList(true,true); }
 
-                if (_error.hasError) { _error.Messenger.ShowUserMessageOnlyAddToExisting(_error.GetLastErrorMessagesAsString()); } 
+                if (_error.hasError) { ShowMessageExistingWhenFlagTrue("",true); }
                 else
                 {
                     _error.ClearError();
@@ -834,7 +834,7 @@ namespace ExcelCellsManager
             } catch (Exception ex)
             {
                 _error.AddException(ex, this.ToString() + ".SelectCells");
-                _error.Messenger.ShowUserMessageOnlyAddToExisting(_error.GetLastErrorMessagesAsString());
+                ShowMessageExistingWhenFlagTrue("",true);
             }
         }
 

@@ -204,7 +204,7 @@ namespace ExcelCellsManager.ErrorMessage
 
 
 
-        public void ShowErrorMessageseAddToExisting()
+        public void ShowErrorMessageseAddToExisting(bool isBehind = true)
         {
             try
             {
@@ -213,12 +213,14 @@ namespace ExcelCellsManager.ErrorMessage
                 {
                     msg = _statusLabel.Text;
                 }
+                msg = "ERROR! : " + msg;
                 string msg2 = _error.GetLastErrorMessagesAsString();
                 if (msg2 != "")
                 {
                     msg += "\n" + msg2;
                 }
-                ShowAlertMessage(msg);
+                ShowMessageAddToExistingString(_statusLabel.Font.Style|FontStyle.Bold, Color.Red, msg,isBehind);
+                //ShowAlertMessage(msg);
 
             } catch (Exception ex)
             {
@@ -417,7 +419,7 @@ namespace ExcelCellsManager.ErrorMessage
             }
             catch (Exception ex)
             {
-                _error.AddException(ex, this, "ShowResultSuccessMessageAddToExisting");
+                _error.AddException(ex, this, "ShowWarningMessageMessageAddToExisting");
             }
         }
 
@@ -430,7 +432,7 @@ namespace ExcelCellsManager.ErrorMessage
             }
             catch (Exception ex)
             {
-                _error.AddException(ex, this, "ShowResultSuccessMessageAddToExisting");
+                _error.AddException(ex, this, "ShowAlertMessageMessageAddToExisting");
             }
         }
 
