@@ -1,19 +1,20 @@
 ﻿using CommonUtility.CloseHandleUtil;
-using ErrorManager;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ExcelUtility
+namespace ExcelIO
 {
-    public class ExcelFilePathGetterFromPid
+    public class GetAcccessFilePathFromPid
     {
         protected ErrorManager.ErrorManager _Error;
-        protected List<string> _ExcelTypeList;
-        protected int count = 0;
-        public ExcelFilePathGetterFromPid(ErrorManager.ErrorManager error,List<string> ExcelTypeList)
+        protected List<string> _FileTypeList;
+        public GetAcccessFilePathFromPid(ErrorManager.ErrorManager error, List<string> ExcelTypeList)
         {
             _Error = error;
-            _ExcelTypeList = ExcelTypeList;
+            _FileTypeList = ExcelTypeList;
         }
 
         // ProcessId が保持している Handle の Type.Event と Type.File が保持している Name を
@@ -25,20 +26,16 @@ namespace ExcelUtility
             try
             {
                 List<string> pathList = GetListExcelFilePathFromPid_Main(pid);
-                if(pathList.Count < 1) { return pathList; }
+                if (pathList.Count < 1) { return pathList; }
                 pathList = RemoveSameValue(pathList);
                 pathList = RemoveElementIncludeValue(pathList, "~$");
                 return pathList;
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 _Error.AddException(ex, "GetListExcelFilePathFromPid Failed.");
                 return new List<string>();
             }
-        }
-
-        private void ConsoleWriteHandleInfo(HandleInfo handleInfo)
-        {
-
         }
 
         // ProcessId が保持している Handle の Type.Event と Type.File が保持している Name を
@@ -49,20 +46,13 @@ namespace ExcelUtility
             List<string> pathList = new List<string>();
             try
             {
-                if (_ExcelTypeList == null) { throw new Exception("ExcelTypeList Is Null"); }
-                if (_ExcelTypeList.Count < 0) { throw new Exception("ExcelTypeList.Count Is Zero"); }
+                if (_FileTypeList == null) { throw new Exception("ExcelTypeList Is Null"); }
+                if (_FileTypeList.Count < 0) { throw new Exception("ExcelTypeList.Count Is Zero"); }
 
-                IEnumerable<HandleInfo> enumInfo = Handles.EnumProcessHandles(pid);
-                if(enumInfo == null)
-                {
-                    Console.WriteLine("Handles.EnumProcessHandles [" + pid + "] Is Null" );
-                }
-                Console.WriteLine("");
-
-                foreach (HandleInfo hi in enumInfo)
+                foreach (HandleInfo hi in Handles.EnumProcessHandles(pid))
                 {
 
-                    foreach (string type in _ExcelTypeList)
+                    foreach (string type in _FileTypeList)
                     {
                         string buf = hi.Name;
                         if (buf != null)
@@ -72,14 +62,11 @@ namespace ExcelUtility
                                 pathList.Add(hi.Name);
                             }
                         }
-                        else
-                        {
-                            Console.WriteLine("hi.Name="hi.Name);
-                        }
                     }
                 }
                 return pathList;
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 _Error.AddException(ex, "GetListExcelFilePathFromPid Failed.");
                 return pathList;
@@ -120,7 +107,7 @@ namespace ExcelUtility
             }
             catch (Exception ex)
             {
-                _Error.AddException(ex,this.ToString()+ ".RemoveElementIncludeValue");
+                _Error.AddException(ex, this.ToString() + ".RemoveElementIncludeValue");
                 return retList;
             }
         }
@@ -167,7 +154,7 @@ namespace ExcelUtility
             }
             catch (Exception ex)
             {
-                _Error.AddException(ex,this.ToString()+ ".RemoveSameValue");
+                _Error.AddException(ex, this.ToString() + ".RemoveSameValue");
                 return retList;
             }
         }

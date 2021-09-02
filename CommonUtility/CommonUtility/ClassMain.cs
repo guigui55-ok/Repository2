@@ -14,7 +14,7 @@ namespace CommonUtility
             List<string> _TypeList = new List<string>() { ".xlsx"};
             try
             {
-                Handles
+                Handles handles = new Handles();
             }
             finally
             {
