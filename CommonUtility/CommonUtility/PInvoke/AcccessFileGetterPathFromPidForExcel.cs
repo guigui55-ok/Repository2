@@ -5,20 +5,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExcelIO
+namespace ExcelUtility
 {
-    public class GetAcccessFilePathFromPid
+    public class AcccessFileGetterPathFromPidForExcel
     {
         protected ErrorManager.ErrorManager _Error;
         protected List<string> _FileTypeList;
-        public GetAcccessFilePathFromPid(ErrorManager.ErrorManager error, List<string> ExcelTypeList)
+        public AcccessFileGetterPathFromPidForExcel(ErrorManager.ErrorManager error, List<string> fileTypeList)
         {
             _Error = error;
-            _FileTypeList = ExcelTypeList;
+            _FileTypeList = fileTypeList;
         }
 
         // ProcessId が保持している Handle の Type.Event と Type.File が保持している Name を
-        // 取得してその中から _ExcelTypeList が含まれるものを抜粋する
+        // 取得してその中から _FileTypeList が含まれるものを抜粋する
         // その後、List 内に同値がある場合は消去し、
         // エクセルの作業中の backup ファイルの文字列 ~$ を含むものも消去する
         public List<string> GetListExcelFilePathFromPid(int pid)

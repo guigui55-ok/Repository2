@@ -99,7 +99,7 @@ namespace CommonUtility.CloseHandleUtil
         {
             using (var proc = Process.GetProcessById(pid))
             {
-                Console.WriteLine("pid = ");
+                //Console.WriteLine("pid = " + pid);
                 IntPtr hProcess = OpenProcess(ProcessAccessFlags.DupHandle, false, pid);
                 foreach (var shi in EnumHandles(pid))
                 {
@@ -109,10 +109,10 @@ namespace CommonUtility.CloseHandleUtil
                     HandleInfo hi = null;
                     try
                     {
-                        if (shi.HandleValue.ToInt32() == 1104)
-                        {
-                            Debug.Print("Debug");
-                        }
+                        //if (shi.HandleValue.ToInt32() == 1104)
+                        //{
+                        //    //Debug.Print("Debug");
+                        //}
                         if (!NT_SUCCESS(NtDuplicateObject(hProcess,
                                          shi.HandleValue,
                                          Process.GetCurrentProcess().Handle,
@@ -192,27 +192,31 @@ namespace CommonUtility.CloseHandleUtil
                                 {
                                     Console.WriteLine("hObj == null");
                                 }
-                                if (ObjectInformationClass.ObjectNameInformation == null)
-                                {
-                                    Console.WriteLine("ObjectInformationClass.ObjectNameInformation == null");
-                                }
+                                // Handles.ObjectInfomationClass の値が型 Handles.ObjectInfomationClass? の null に等しくなることはないので、式の結果は常に false になります
+                                //if (ObjectInformationClass.ObjectNameInformation == null)
+                                //{
+                                //    Console.WriteLine("ObjectInformationClass.ObjectNameInformation == null");
+                                //}
                                 using (var nto2 = new NtObject(hObj, ObjectInformationClass.ObjectNameInformation, typeof(OBJECT_NAME_INFORMATION)))
                                 {
                                     try
                                     {
-                                        Console.WriteLine("ObjectNameInformationFromBuffer");
-                                        var oni = ObjectNameInformationFromBuffer(nto2.Buffer);
-                                        if (hType.Equals("File") || hType.Equals("Event"))
+                                        if((hObj != null)&&(shi.HandleValue != (IntPtr)0x0)&&(nto2.Buffer != (IntPtr)0x00))
                                         {
-                                            hName = GetRegularFileNameFromDevice(oni.Name.ToString());
-                                        }
-                                        else
-                                        {
-                                            Console.WriteLine("oni =" + oni.Name.ToString());
-                                            Console.WriteLine("nto2.Buffer =" + nto2.Buffer);
-                                            Console.WriteLine("hObj =" + hObj);
-                                            Console.WriteLine("nto2 =" + nto2);
-                                            hName = oni.Name.ToString();
+                                            //Console.WriteLine("ObjectNameInformationFromBuffer");
+                                            var oni = ObjectNameInformationFromBuffer(nto2.Buffer);
+                                            if (hType.Equals("File") || hType.Equals("Event"))
+                                            {
+                                                hName = GetRegularFileNameFromDevice(oni.Name.ToString());
+                                            }
+                                            else
+                                            {
+                                                //Console.WriteLine("oni =" + oni.Name.ToString());
+                                                //Console.WriteLine("nto2.Buffer =" + nto2.Buffer);
+                                                //Console.WriteLine("hObj =" + hObj);
+                                                //Console.WriteLine("nto2 =" + nto2);
+                                                hName = oni.Name.ToString();
+                                            }
                                         }
 
                                     }

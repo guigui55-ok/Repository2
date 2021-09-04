@@ -2,7 +2,7 @@
 
 ##### 最終更新日 2021.9.3
 
-## ExcelFindExtention > ExcelCellsManger  
+## ■ ExcelFindExtention > ExcelCellsManger  
 ### Summary  
 
 エクセルの任意のセルの位置(アドレス)を登録し、登録した位置を表示するアプリケーション  
@@ -29,22 +29,30 @@ Ctrl＋Shift＋O：設定ウィンドウを開く
 業務内で使用等が記載されたドキュメントとしてのエクセルを多量に開くことがあるため、本アプリケーションの作成に至った  
 
 #### 課題  
+* ツールバー作成
+* メニューバー作成
+* ユーザー向けエラーメッセージの表示
+  
+  
+## ■ CommonUtility
+## Summary  
+汎用的な機能をまとめたクラス  
+(作成中)
 
-
-## CommonUtility
-## ErrorManager
+## ■ ErrorManager
 ## Summary  
 
 開発アプリケーション内で発生する例外を管理する、開発時のログを管理する
 
-## ExcelFindExtention
+## ■ ExcelFindExtention
 
-## ExcelManager
+## ■ ExcelManager
 ### Summary  
 Comから提供されているExcel起動時のオブジェクト Excel.Aplication を管理する。  
 具体的な内容としては、Excel.Application のイベントを検知して開いているWorkbookを取得・保持する
 
-### ExcelWorkbookList
+
+### ■ ExcelWorkbookList
 ### Summary  
 ExcelCellsMangerTest 内で使用している、上記 ExcelManager で保持しているWorkbookを表示するもの
 ExcelCellsMangerTest のコード分割のため作成
