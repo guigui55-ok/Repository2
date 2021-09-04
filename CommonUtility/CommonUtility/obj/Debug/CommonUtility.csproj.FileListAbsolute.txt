@@ -8,3 +8,16 @@ C:\Users\OK\source\repos\CommonUtility\CommonUtility\obj\Debug\CommonUtility.csp
 C:\Users\OK\source\repos\CommonUtility\CommonUtility\obj\Debug\CommonUtility.csproj.CopyComplete
 C:\Users\OK\source\repos\CommonUtility\CommonUtility\obj\Debug\CommonUtility.dll
 C:\Users\OK\source\repos\CommonUtility\CommonUtility\obj\Debug\CommonUtility.pdb
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Debug\CommonUtility.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Debug\CommonUtility.pdb
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\bin\Debug\CommonUtility.exe.config
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\bin\Debug\CommonUtility.exe
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\bin\Debug\CommonUtility.pdb
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\bin\Debug\ErrorManager.dll
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\bin\Debug\ErrorManager.pdb
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\bin\Debug\ErrorManager.dll.config
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Debug\CommonUtility.csproj.CopyComplete
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Debug\CommonUtility.exe
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Debug\CommonUtility.csproj.ResolveComReference.cache
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Debug\CommonUtility.csprojAssemblyReference.cache

@@ -31,10 +31,6 @@ namespace CommonUtility
             {//ローカルコンピュータ上で実行されているすべてのプロセスを取得
                 System.Diagnostics.Process[] ps =
                     System.Diagnostics.Process.GetProcesses();
-                //"machinename"という名前のコンピュータで実行されている
-                //すべてのプロセスを取得するには次のようにする。
-                //System.Diagnostics.Process[] ps =
-                //    System.Diagnostics.Process.GetProcesses("machinename");
 
                 //配列から1つずつ取り出す
                 foreach (System.Diagnostics.Process p in ps)

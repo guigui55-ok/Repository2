@@ -1,0 +1,15 @@
+C:\Users\OK\source\repos\ImageViewer4\SelectSingleFileSample\obj\Debug\SelectSingleFileSample.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\ImageViewer4\SelectSingleFileSample\obj\Debug\SelectSingleFileSample.SelectSingleFileSample.resources
+C:\Users\OK\source\repos\ImageViewer4\SelectSingleFileSample\obj\Debug\SelectSingleFileSample.Properties.Resources.resources
+C:\Users\OK\source\repos\ImageViewer4\SelectSingleFileSample\obj\Debug\SelectSingleFileSample.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\ImageViewer4\SelectSingleFileSample\obj\Debug\SelectSingleFileSample.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\ImageViewer4\SelectSingleFileSample\bin\Debug\SelectSingleFileSample.exe.config
+C:\Users\OK\source\repos\ImageViewer4\SelectSingleFileSample\bin\Debug\SelectSingleFileSample.exe
+C:\Users\OK\source\repos\ImageViewer4\SelectSingleFileSample\bin\Debug\SelectSingleFileSample.pdb
+C:\Users\OK\source\repos\ImageViewer4\SelectSingleFileSample\bin\Debug\ErrorManager.dll
+C:\Users\OK\source\repos\ImageViewer4\SelectSingleFileSample\bin\Debug\SelectFileSample.exe
+C:\Users\OK\source\repos\ImageViewer4\SelectSingleFileSample\bin\Debug\SelectFileSample.pdb
+C:\Users\OK\source\repos\ImageViewer4\SelectSingleFileSample\bin\Debug\SelectFileSample.exe.config
+C:\Users\OK\source\repos\ImageViewer4\SelectSingleFileSample\obj\Debug\SelectSingleFileSample.csproj.CopyComplete
+C:\Users\OK\source\repos\ImageViewer4\SelectSingleFileSample\obj\Debug\SelectSingleFileSample.exe
+C:\Users\OK\source\repos\ImageViewer4\SelectSingleFileSample\obj\Debug\SelectSingleFileSample.pdb
