@@ -52,13 +52,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\MousePointCapture\MousePointCaptureOnScreenEdgeFormEvents.cs">
+    <Compile Include="..\MousePointCaptureOnScreenEdge\MousePointCaptureOnScreenEdgeFormEvents.cs">
       <Link>MousePointCaptureOnScreenEdgeFormEvents.cs</Link>
     </Compile>
-    <Compile Include="..\MousePointCapture\MousePointCaptureOnScreenEdgeManager.cs">
+    <Compile Include="..\MousePointCaptureOnScreenEdge\MousePointCaptureOnScreenEdgeManager.cs">
       <Link>MousePointCaptureOnScreenEdgeManager.cs</Link>
     </Compile>
-    <Compile Include="..\MousePointCapture\MousePointCaptureOnScreenEdgeSettings.cs">
+    <Compile Include="..\MousePointCaptureOnScreenEdge\MousePointCaptureOnScreenEdgeSettings.cs">
       <Link>MousePointCaptureOnScreenEdgeSettings.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

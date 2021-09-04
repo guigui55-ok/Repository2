@@ -9,6 +9,7 @@ using System.Threading;
 using CommonUtility;
 using CommonUtility.Pinvoke;
 using ExcelUtility.ExcelObject;
+using CommonUtility.Shortcut;
 
 namespace ExcelUtility
 {
@@ -606,7 +607,7 @@ namespace ExcelUtility
 
                 if (System.IO.Path.GetExtension(path) == ".lnk")
                 {
-                    ShortcutDynamic shortcut = new ShortcutDynamic();
+                    ShortcutUtility shortcut = new ShortcutUtility();
                     return shortcut.GetTargetPath(path);
                 }
                 else

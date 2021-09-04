@@ -19,4 +19,5 @@ C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Release\Com
 C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\bin\Release\CommonUtility.exe.config
 C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\bin\Release\CommonUtility.exe
 C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Release\CommonUtility.exe
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Release\CommonUtility.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Release\Interop.IWshRuntimeLibrary.dll
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Release\CommonUtility.csproj.ResolveComReference.cache

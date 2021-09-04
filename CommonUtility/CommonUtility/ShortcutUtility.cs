@@ -4,7 +4,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace CommonUtility
+namespace CommonUtility.Shortcut
 {
     public class ShortcutDynamic
     {
