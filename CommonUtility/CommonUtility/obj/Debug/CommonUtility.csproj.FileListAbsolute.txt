@@ -20,4 +20,3 @@ C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Debug\Commo
 C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Debug\CommonUtility.exe
 C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Debug\Interop.IWshRuntimeLibrary.dll
 C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Debug\CommonUtility.csproj.ResolveComReference.cache
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Debug\CommonUtility.csprojAssemblyReference.cache

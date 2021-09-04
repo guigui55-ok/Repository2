@@ -713,7 +713,7 @@ namespace ExcelUtility
                     if (IsFileLocked(bufPath))
                     {
                         FilePathList.Add(bufPath);
-                        _Error.AddLog(this.ToString() + ".ReSetFileListFromApplication path=", bufPath);
+                        _Error.AddLog(this.ToString() + ".ReSetFileListFromApplication path="+bufPath);
                     }
                 }
             } catch (Exception ex)

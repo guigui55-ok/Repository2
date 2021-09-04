@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CommonUtility.CloseHandleUtil;
-using ExcelUtility;
+using CommonUtility.Pinvoke;
+using CommonUtility.Shortcut;
 
 namespace CommonUtility
 {

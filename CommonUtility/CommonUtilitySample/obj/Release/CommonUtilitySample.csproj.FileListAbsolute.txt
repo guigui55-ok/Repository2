@@ -24,3 +24,5 @@ C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilitySample\obj\Relea
 C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilitySample\bin\Release\CommonUtility.exe
 C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilitySample\bin\Release\CommonUtility.pdb
 C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilitySample\bin\Release\CommonUtility.exe.config
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilitySample\obj\Release\Interop.IWshRuntimeLibrary.dll
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilitySample\obj\Release\CommonUtilitySample.csproj.ResolveComReference.cache
