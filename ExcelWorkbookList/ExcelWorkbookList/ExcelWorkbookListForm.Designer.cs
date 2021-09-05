@@ -71,7 +71,8 @@ namespace ExcelWorkbookList
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkedListBox1);
             this.Name = "ExcelWorkbookListForm";
-            this.Text = "Form1";
+            this.Text = "ExcelWorkbookListSample";
+            this.Load += new System.EventHandler(this.ExcelWorkbookListForm_Load);
             this.ResumeLayout(false);
 
         }

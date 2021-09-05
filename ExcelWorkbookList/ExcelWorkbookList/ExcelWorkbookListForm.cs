@@ -22,8 +22,21 @@ namespace ExcelWorkbookList
             InitializeComponent();
             _err = new ErrorManager.ErrorManager(1);
             _excelManager = new ExcelManager(_err);
+            _excelManager.IsAlwaysOpenExcelApplication = false;
             _workbookListControl = new WorkbookListCheckedListBox(_err,this.checkedListBox1);
             _excelWorkbookList = new ExcelWorkbookList(_err,_excelManager,_workbookListControl);
+            _excelManager.ExcelApplicationRunWhenNothing(true);
+            UpdateExcelAppsList();
+        }
+
+        private void UpdateExcelAppsList()
+        {
+            _excelManager.UpdateOpendExcelApplication();
+            if (_err.hasAlert)
+            {
+                _err.AddLogAlert("_excelManager.UpdateOpendExcelApplication Failed");
+                Console.WriteLine(_err.GetMesseges());
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,11 +44,7 @@ namespace ExcelWorkbookList
             _err.ClearError();
             _workbookListControl.ClearItems();
             if (_err.hasAlert) { _err.AddLogAlert("_workbookListControl.ClearItems Failed"); }
-            _excelManager.UpdateOpendExcelApplication();
-            if (_err.hasAlert) { 
-                _err.AddLogAlert("_excelManager.UpdateOpendExcelApplication Failed");
-                Console.WriteLine(_err.GetMesseges());
-            }            
+            UpdateExcelAppsList();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -46,6 +55,12 @@ namespace ExcelWorkbookList
                 _err.AddLogAlert("_workbookListControl.CloseWorkbookSelectedItems Failed");
                 Console.WriteLine(_err.GetMesseges());
             }
+            UpdateExcelAppsList();
+        }
+
+        private void ExcelWorkbookListForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

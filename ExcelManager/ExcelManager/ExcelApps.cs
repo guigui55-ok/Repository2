@@ -75,6 +75,11 @@ namespace ExcelUtility
         }
 
         
+        public bool ApplicationIsNull()
+        {
+            if (this.Application == null) { return true; }
+            else { return false; }
+        }
 
         private void SetActiveCellsInfo(string bookName,string sheetName,string address)
         {
@@ -300,10 +305,10 @@ namespace ExcelUtility
         {
             try
             {
-                _Error.AddLog("SetActivateFlag");
+                _Error.AddLog(this,"SetActivateFlag");
                 if(IsGhost) { return; }
                 string wbName = this.GetActiveWorkbookName();
-                if (_Error.hasAlert) { _Error.AddLogAlert("GetActiveWorkbookName Failed"); }
+                if (_Error.hasAlert) { _Error.AddLogAlert(" GetActiveWorkbookName Failed"); }
                 SetActivateFlag(wbName, true);
             } catch (Exception ex)
             {
@@ -348,15 +353,22 @@ namespace ExcelUtility
         {
             try
             {
-                if (IsGhost) { return; }
+                _Error.AddLog(this, "SetWorkbookEvent");
+                if (IsGhost) { _Error.AddLog(" IsGhost=true"); }
                 if (Application == null) { throw new Exception("Application Is Null"); }
-                // Excel.Application.Workbooks から FilePath を取得する
-                for (int i = 1; i < this.Application.Workbooks.Count + 1; i++)
+                if(Application.Workbooks.Count > 0)
                 {
-                    Application.Workbooks[i].WindowActivate += this.WindowActivate;
-                    Application.Workbooks[i].Deactivate += this.WorkbookDeactivate;
-                    Application.Workbooks[i].SheetActivate += this.SheetActivate;
-                    Application.Workbooks[i].Open += this.WokbookOpen;
+                    // Excel.Application.Workbooks から FilePath を取得する
+                    for (int i = 1; i < this.Application.Workbooks.Count + 1; i++)
+                    {
+                        Application.Workbooks[i].WindowActivate += this.WindowActivate;
+                        Application.Workbooks[i].Deactivate += this.WorkbookDeactivate;
+                        Application.Workbooks[i].SheetActivate += this.SheetActivate;
+                        Application.Workbooks[i].Open += this.WokbookOpen;
+                    }
+                } else
+                {
+                    _Error.AddLog(" Application.Workbooks.Count < 1");
                 }
                 Application.WindowActivate += AppsWindowActivate;
                 Application.WindowDeactivate += AppsDeactivate;
@@ -365,7 +377,8 @@ namespace ExcelUtility
                 this.Application.WorkbookBeforeClose += AppsWorkbookBeforeClose;
 
                 //Application.SheetSelectionChange -= new AppEvents_SheetSelectionChangeEventHandler(Application_SheetSelectionChange);
-                Application.SheetSelectionChange += new AppEvents_SheetSelectionChangeEventHandler(Application_SheetSelectionChange);
+                Application.SheetSelectionChange += 
+                    new AppEvents_SheetSelectionChangeEventHandler(Application_SheetSelectionChange);
 
                 if (_excelEventBridge != null)
                 {
@@ -392,6 +405,7 @@ namespace ExcelUtility
                     Application.WorkbookBeforeClose += _excelEventBridge.Application_WorkbookBeforeCloseEvent;
                     Application.SheetActivate += this._excelEventBridge.Application_SheetActivateEvent;
                 }
+                return;
             }
             catch (Exception ex)
             {
@@ -399,14 +413,19 @@ namespace ExcelUtility
                 return;
             }
         }
+
+        /// <summary>
+        /// 古いメソッド CreateNewApplication と同じ
+        /// </summary>
         public void CreateApplication()
         {
             try
             {
-                Application = new Microsoft.Office.Interop.Excel.Application
-                {
-                    Visible = true
-                };
+                CreateNewApplication(true);
+                //Application = new Microsoft.Office.Interop.Excel.Application
+                //{
+                //    Visible = true
+                //};
                 //IsFirstRunApplication = true;
             } catch (Exception ex)
             {
@@ -508,7 +527,7 @@ namespace ExcelUtility
             try
             {
                 if (IsGhost) { return retList; }
-                if (Application == null) { throw new Exception("Application Is Null"); }
+                if (Application == null) { throw new Exception("Application Is Null [pid="+ProcessId + "]"); }
                 // Excel.Application.Workbooks から FilePath を取得する
                 for (int i = 1; i <= this.Application.Workbooks.Count; i++)
                 {
@@ -534,8 +553,12 @@ namespace ExcelUtility
             int ret = 0;
             try
             {
-                if (IsGhost) { return 0; }
-                if(this.Application == null) { throw new Exception("Excel.Application Is Null."); }
+                _Error.AddLog(this, "GetProcessIdFromExcelApplicationHwnd");
+                if (this.Application == null) { throw new Exception("Excel.Application Is Null."); }
+                if (IsGhost) {
+                    _Error.AddLog(" IsGhost=true");
+                    //return 0; 
+                }
                 //Console.WriteLine("application window activewindow  : " + Application.ActiveWindow.ToString());
 
                 //if (Application.ActiveWindow == null)
@@ -547,6 +570,7 @@ namespace ExcelUtility
                 //}
                 _Error.AddLog("  Application.Visible=" + Application.Visible);
                 _ = GetWindowThreadProcessId((IntPtr)this.Application.Hwnd, out uint uintbuf);
+                _Error.AddLog(" pid="+uintbuf);
                 return (int)uintbuf;
             } catch (Exception ex)
             {
@@ -637,8 +661,9 @@ namespace ExcelUtility
         {
             try
             {
+                _Error.AddLog(this, "SetApplicationFromFilePath");
                 // プロセスのみがある Ghost Process のときは処理しない
-                if (IsGhost) { return; }
+                if (IsGhost) { _Error.AddLog("  IsGhost=true"); return; }
                 if (FilePathList == null) { throw new Exception("PathList Is Null"); }
                 if (FilePathList.Count < 1) { throw new Exception("PathList.Count Is Zero"); }
 
@@ -696,9 +721,10 @@ namespace ExcelUtility
         {
             try
             {
+                _Error.AddLog(this, "ReSetFileListFromApplication");
                 if (IsGhost) {
+                    _Error.AddLog("  IsGhost=true return");
                     return;
-                    //throw new Exception("ExcelApps Is Ghost Process");
                 }
                 if (Application == null) { throw new Exception("Application Is Null"); }
 
@@ -713,7 +739,7 @@ namespace ExcelUtility
                     if (IsFileLocked(bufPath))
                     {
                         FilePathList.Add(bufPath);
-                        _Error.AddLog(this.ToString() + ".ReSetFileListFromApplication path="+bufPath);
+                        _Error.AddLog(this,"ReSetFileListFromApplication path="+bufPath);
                     }
                 }
             } catch (Exception ex)
@@ -901,6 +927,20 @@ namespace ExcelUtility
             {
                 _Error.AddException(ex, this.ToString() + ".OpenFile");
                 return;
+            }
+        }
+        
+        public void CreateNewApplication(bool Visible=true)
+        {
+            try
+            {
+                _Error.AddLog(this, "CreateNewApplication");
+                if(this.Application != null) { _Error.AddLogWarning("  Already Exists Excel Application"); return; }
+                this.Application = new Microsoft.Office.Interop.Excel.Application();
+                this.Application.Visible = Visible;
+            } catch (Exception ex)
+            {
+                _Error.AddException(ex, this, "CreateNewApplication");
             }
         }
 

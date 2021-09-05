@@ -20,15 +20,24 @@ namespace ExcelUtility
         protected WindowControlUtility _WindowUtil;
         protected FileUtility _FileUtil;
         protected List<ExcelApps> _ExcelAppsList = new List<ExcelApps>();
-
+        // Excel のプロセス名
         protected string _ExcelProcName = "EXCEL";
         protected string _ExcelExeFileName = "EXCEL.EXE";
+        // 外部へ紐づけ用 Event
         public IExcelAppsEventBridgeInterface ExcelEventBridge;
+        // Workbook を開いているか(状態管理)
         public bool IsWorkbookOpening;
+        // 初回起動時用のフラグ
         public bool IsFirstRunApplication = false;
+        // ExcelAppsListを更新中(状態管理)
         public bool IsUpdating = false;
-
+        // Close 後に ExcelAppsList を更新する
+        public bool IsDoUpdateWhenCloseWorkbook = true;
+        // 外部へ紐づけ用 Event
         public EventHandler UpdateExcelAppsListAfterEvent;
+        // 常に Excel.Application を開いておく
+        public bool IsAlwaysOpenExcelApplication = true;
+
         public class ExcelFileType
         {
             public readonly string[] Types =
@@ -308,39 +317,66 @@ namespace ExcelUtility
         {
             try
             {
-                _Error.AddLog(this.ToString()+".UpdateOpendExcelApplication");
+                _Error.AddLog(this,"UpdateOpendExcelApplication");
                 if (IsUpdating) { _Error.AddLogWarning("  IsUpdatting = true"); return; }
                 _Error.ReleaseErrorState();
                 _Error.ClearError();
+
+
                 List<ExcelApps> appsList = _ExcelAppsList;
 
                 // GetActiveObject から Excel.Application を取得する
                 // System.Runtime.InteropServices.Marshal.GetActiveObject("Excel.Application")
                 ExcelApps newApps = new ExcelApps(_Error, ExcelEventBridge)
                 {
+                    // すでに Excel.Application があれば取得する
+                    // Application が無く Null でも例外扱いとしない、Log に格納する
                     Application = this.GetExcelApplicationFromGetActiveObject()
                 };
                 if (_Error.hasError) 
                 { 
-                    _Error.AddLogWarning(this.ToString()+".GetExcelApplicationFromGetActiveObject Failed");
-                    _Error.ClearError();
+                    _Error.AddLogWarning(this,"GetExcelApplicationFromGetActiveObject Failed");
                     return; 
-                    // ExcelApplication がない場合は作る？
                 }
                 if (newApps.Application == null)
-                { _Error.AddLogWarning(this.ToString() + ".GetExcelApplicationFromGetActiveObject Applicatoin is Null"); return; }
+                { 
+                    _Error.AddLogWarning(this, "GetExcelApplicationFromGetActiveObject Applicatoin is Null");
+
+                    // 常に Exce.Application を起動しておくフラグが True
+                    // ＆ Application がない場合は Create する
+                    if (IsAlwaysOpenExcelApplication)
+                    {
+                        // ExcelApplication がない場合は作る
+                        _Error.AddLog(this,"ExcelApplicationRunWhenNothing=true");
+                        _Error.AddLog(this, "**NewApplication=>ExcelAppsList.Add");
+                        ExcelApps apps = new ExcelApps(_Error);
+                        apps.CreateNewApplication(true);
+                        apps.IsGhost = true;
+                        // ProcessId をメンバ変数へセットする
+                        apps.SetProcessIdFromExcelApplication();
+                        if (_Error.hasError) { return; }
+                        // WorkbookActivate イベントハンドラをセットする
+                        apps.SetWorkbookEvent();
+                        newApps = apps;
+                    } else
+                    {
+                        _Error.AddLog(this, "ExcelApplicationRunWhenNothing=false");
+                    }
+
+                    //return; 
+                }
 
                 // ProcessId をメンバ変数へセットする
                 newApps.SetProcessIdFromExcelApplication();
                 if (_Error.hasError)
-                { _Error.AddLogAlert(this.ToString() + ".SetProcessIdFromExcelApplication Failed"); return; }
+                { _Error.AddLogAlert(this, "SetProcessIdFromExcelApplication Failed"); return; }
 
                 // プロセス ID から PathList を取得する
                 // PathList から Workbook を取得する
                 // Workbook から Application を取得する
                 GetExcelApplicationFromProcess(newApps, newApps.ProcessId);
                 if (_Error.hasError)
-                { _Error.AddLogAlert(this.ToString() + ".GetExcelApplicationFromProcess Failed"); return; }
+                { _Error.AddLogAlert(this, "GetExcelApplicationFromProcess Failed"); return; }
 
                 // 既存のものと ProcessId が合致しない場合は追加する
                 if (!IsExistsProcessId(newApps.ProcessId))
@@ -348,15 +384,15 @@ namespace ExcelUtility
                     // FileList をセットする
                     newApps.ReSetFileListFromApplication();
                     if (_Error.hasError)
-                    { _Error.AddLogAlert(this.ToString() + ".ReSetFileListFromApplication Failed"); return; }
+                    { _Error.AddLogAlert(this, "ReSetFileListFromApplication Failed"); return; }
                     // WorkbookActivate イベントハンドラをセットする
                     newApps.SetWorkbookEvent();
                     if (_Error.hasError)
-                    { _Error.AddLogAlert(this.ToString() + ".SetWorkbookEvent Failed"); return; }
+                    { _Error.AddLogAlert(this, "SetWorkbookEvent Failed"); return; }
                     // Activate フラグをセットする
                     newApps.SetActivateFlag();
                     if (_Error.hasError)
-                    { _Error.AddLogAlert(this.ToString() + ".SetActivateFlag Failed"); return; }
+                    { _Error.AddLogAlert(this, "SetActivateFlag Failed"); return; }
                     // リストに追加する
                     appsList.Add(newApps);
                 }
@@ -385,14 +421,14 @@ namespace ExcelUtility
                             // Workbook から Application を取得する
                             GetExcelApplicationFromProcess(newApps, bufProc.Id);
                             if (_Error.hasError)
-                            { _Error.AddLogAlert(this.ToString() + ".GetExcelApplicationFromProcess Failed"); continue; }
+                            { _Error.AddLogAlert(this, "GetExcelApplicationFromProcess Failed"); continue; }
 
                             // ProcessId をメンバ変数へセットする
                             // Application.Hwnd から 開いているファイルリストを作成する
                             // ファイルリストがなければ Ghost とする
                             newApps.SetProcessIdFromExcelApplication();
                             if (_Error.hasError)
-                            { _Error.AddLogAlert(this.ToString() + ".SetProcessIdFromExcelApplication Failed"); continue; }
+                            { _Error.AddLogAlert(this, "SetProcessIdFromExcelApplication Failed"); continue; }
 
                             // Ghost の場合は ProcessId を bufProc から取得する
                             if (newApps.IsGhost) { newApps.ProcessId = bufProc.Id; }
@@ -402,17 +438,17 @@ namespace ExcelUtility
                                 // FileList をセットする
                                 newApps.ReSetFileListFromApplication();
                                 if (_Error.hasError)
-                                { _Error.AddLogAlert(this.ToString() + ".ReSetFileListFromApplication Failed"); continue; }
+                                { _Error.AddLogAlert(this, "ReSetFileListFromApplication Failed"); continue; }
 
                                 // WorkbookActivate イベントハンドラをセットする
                                 newApps.SetWorkbookEvent();
                                 if (_Error.hasError)
-                                { _Error.AddLogAlert(this.ToString() + ".ReSetFileListFromApplication Failed"); return; }
+                                { _Error.AddLogAlert(this, "ReSetFileListFromApplication Failed"); return; }
 
                                 // Activate フラグをセットする
                                 newApps.SetActivateFlag();
                                 if (_Error.hasError)
-                                { _Error.AddLogAlert(this.ToString() + ".SetActivateFlag Failed"); return; }
+                                { _Error.AddLogAlert(this, "SetActivateFlag Failed"); return; }
 
                                 // リストに追加する
                                 appsList.Add(newApps);
@@ -420,7 +456,7 @@ namespace ExcelUtility
                         }
                     }
                 }
-                //
+                _Error.AddLog("  ExcelAppsList.Count="+_ExcelAppsList.Count);
                 IsUpdating = false;
                 return;
             } catch (Exception ex)
@@ -472,6 +508,7 @@ namespace ExcelUtility
             }
             catch (Exception ex)
             {
+                // Application が無く Null でも例外扱いとしない、Log に格納する
                 //_Error.AddException(ex, this.ToString() + ".GetExcelApplicationFromGetActiveObject");
                 _Error.AddLogAlert(this.ToString()+ ".GetExcelApplicationFromGetActiveObject","",ex);
                 return null;
@@ -513,6 +550,7 @@ namespace ExcelUtility
         {
             try
             {
+                _Error.AddLog(this, "GetExcelApplicationFromProcess");
                 ExcelFilePathGetterFromPid util = 
                     new ExcelFilePathGetterFromPid(_Error,new ExcelFileType().GetTypesList());
                 // ProcessId から開いているパスを取得する
@@ -523,7 +561,7 @@ namespace ExcelUtility
                 {
                     // ProcessId があるのに、ファイルパスが取得できていないのはゴーストプロセスとする
                     _Error.AddLog(_Error.LogConstants.PRIORITY_CAUTION,_Error.LogConstants.TYPE_LOG,
-                        "Set IsGhost=true , pid=" + pid.ToString());
+                        "  Set IsGhost=true , pid=" + pid.ToString());
                     newApps.IsGhost = true;
                     return;
                 }
@@ -644,6 +682,45 @@ namespace ExcelUtility
             {
                 _Error.AddException(ex, this.ToString() + ".IsExcelType");
                 return false;
+            }
+        }
+
+        public void ExcelApplicationRunWhenNothing(bool IsWindowVisible = true)
+        {
+            try
+            {
+                _Error.AddLog(this, "ExcelApplicationRunWhenNothing");
+                // Null、List.Count<1 かを判定する
+                if (AppsListIsValid()) { _Error.AddLog(" AppsListIsValid=true"); return; }
+                else { _Error.AddLog("  AppsListIsValid=false"); }
+                // ExcelAppsList がない状態なので Application を取得したうえ new して、AppsList に追加する
+                _ExcelAppsList = new List<ExcelApps>();
+                ExcelApps apps = new ExcelApps(_Error);
+                // 開いている Excel.Application があれば取得する
+                apps.Application = this.GetExcelApplicationFromGetActiveObject();
+                // Application がなければ new する
+                if(apps.Application == null) {
+                    // NewApplication
+                    _Error.AddLog(this, "**NewApplication=>ExcelAppsList.Add");
+                    apps.CreateNewApplication(true);
+                    apps.IsGhost = true;
+                    // ProcessId をメンバ変数へセットする
+                    apps.SetProcessIdFromExcelApplication();
+                    if (_Error.hasError) { return; }
+                    // WorkbookActivate イベントハンドラ
+                    // リストに追加する
+                    _ExcelAppsList.Add(new ExcelApps(_Error));
+                }
+                else { 
+                    _Error.AddLogWarning(" Already Exists Excel Application => return");
+                    //apps.Dispose();
+                    //apps.Close();
+                    apps = null;
+                    return; 
+                }
+            } catch (Exception ex)
+            {
+                _Error.AddException(ex, this, "ExcelApplicationRunWhenNothing");
             }
         }
 
@@ -977,14 +1054,24 @@ namespace ExcelUtility
                     if (apps.IsGhost)
                     {
                         // EXCEL.EXE
-                        if (bookName.Contains(_ExcelExeFileName))
+                        //if (bookName.Contains(_ExcelExeFileName))
+                        //{
+                        //    if (apps.ProcessId == pid)
+                        //    {
+                        //        CloseApplicationWithKillProcess(apps);
+                        //        if (_Error.hasError) { return; }
+                        //        isRemove = true;
+                        //    }
+                        //}
+                        if (apps.ProcessId == 0){
+                            isRemove = true;
+                            _Error.AddLog(this , " ProcessID=0");
+                        }
+                        if (apps.ProcessId == pid)
                         {
-                            if (apps.ProcessId == pid)
-                            {
-                                CloseApplicationWithKillProcess(apps);
-                                if (_Error.hasError) { return; }
-                                isRemove = true;
-                            }
+                            CloseApplicationWithKillProcess(apps);
+                            if (_Error.hasError) { return; }
+                            isRemove = true;
                         }
                         count++;
                     }
