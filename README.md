@@ -2,9 +2,10 @@
 ##### ÅIXV“ú 2021.9.6
 
 ## ¡ ExcelFindExtention > ExcelCellsManger  
-### Summary  
+### Description  
 
 ƒGƒNƒZƒ‹‚Ì”CˆÓ‚ÌƒZƒ‹‚ÌˆÊ’u(ƒAƒhƒŒƒX)‚ğ“o˜^‚µA“o˜^‚µ‚½ˆÊ’u‚ğ•\¦‚·‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Å‚·B  
+¦ƒvƒƒWƒFƒNƒgF ExcelCellsManagerTest.sln > ExcelCellsManagerTest.csproj   
 #### å‚È‹@”\
 
 * ƒGƒNƒZƒ‹‚Ì”CˆÓ‚ÌƒZƒ‹‚ÌˆÊ’u(ƒAƒhƒŒƒX)‚ğ“o˜^‚µ‚Ü‚·B  
@@ -91,3 +92,4 @@ WindowsForms ‚Ì”CˆÓ‚ÌƒtƒH[ƒ€‚ÌƒEƒBƒ“ƒhƒE‚ª”ñƒAƒNƒeƒBƒu‚ÌA‚©‚ÂAƒfƒXƒNƒgƒbƒv‚
 
 ### ¡ ì¬ŠÂ‹«  
 VisualStudio 2019
+Windows 10 ƒo[ƒWƒ‡ƒ“ 20H2
