@@ -14,14 +14,15 @@ namespace ExcelManagerConsoleSample
         {
             try
             {
-                Test_WindowOnly();
+                Test_Excute();
             } finally
             {
                 Console.WriteLine("Program Done. Any Press Key.");
                 Console.ReadKey();
             }
         }
-        static void Test_WindowOnly()
+
+        static void Test_Excute()
         {
             ErrorManager.ErrorManager err = null;
             ExcelUtility.ExcelManager excelManager = null;
@@ -32,7 +33,9 @@ namespace ExcelManagerConsoleSample
                 excelManager = new ExcelUtility.ExcelManager(err);
                 err.AddLog(method + " Start");
                 //-----------------
-                excelManager.UpdateOpendExcelApplication();
+                //Test_Open(err, excelManager);
+                Test_Update(err, excelManager);
+                //Test_WindowOnly(err, excelManager);
                 //-----------------
             }
             catch (Exception ex)
@@ -47,60 +50,36 @@ namespace ExcelManagerConsoleSample
             }
         }
 
-        static void Test_Update()
+        static void Test_WindowOnly(ErrorManager.ErrorManager _err, ExcelManager excelManager)
         {
-            ErrorManager.ErrorManager err = null;
-            ExcelUtility.ExcelManager excelManager = null;
-            string method = "Program.Test_Update";
-            try
+            _err.AddLog("Test_WindowOnly");
+            excelManager.ExcelApplicationRunWhenNothing();
+        }
+
+        static void Test_Update(ErrorManager.ErrorManager _err,ExcelManager excelManager)
+        {
+            _err.AddLog("Test_Update");
+            excelManager.UpdateOpendExcelApplication();
+            int count = 0;
+            foreach(ExcelApps apps in excelManager.GetExcelAppsList())
             {
-                err = new ErrorManager.ErrorManager(1);
-                excelManager = new ExcelUtility.ExcelManager(err);
-                err.AddLog(method + " Start");
-                //-----------------
-                excelManager.UpdateOpendExcelApplication();
-                //-----------------
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Exception:\n" + ex.Message);
-            }
-            finally
-            {
-                if (excelManager != null) { excelManager.Close(); }
-                if (err.hasError) { Console.WriteLine("ErrorManager:\n" + err.GetUserMessageOnlyAsString()); }
-                else { Console.WriteLine(method + " Success!"); }
+                Console.Write(count + " : pid=" + apps.ProcessId);
+                bool flag;
+                if(apps.ApplicationIsNull()) { flag = false; }
+                else { }
+                Console.WriteLine("  ,apps.ApplicationIsNull()="+ apps.ApplicationIsNull());
+                count++;
             }
         }
 
-        static void Test_Open()
+        static void Test_Open(ErrorManager.ErrorManager _err,ExcelManager excelManager)
         {
-            ErrorManager.ErrorManager err=null;
-            ExcelUtility.ExcelManager excelManager = null;
-            string method = "Program.Test_Open";
-            try
-            {
-                err = new ErrorManager.ErrorManager(1);
-                excelManager = new ExcelUtility.ExcelManager(err);
-                err.AddLog(method + " Start");
-                //-----------------
-                string directory = System.IO.Directory.GetCurrentDirectory();
-                string filename = "SampleFile1.xlsx";
-                string path = directory + "\\" + filename;
-                excelManager.OpenFile(path);
-                //-----------------
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Exception:\n"+ex.Message);
-            }
-            finally
-            {
-                if (excelManager != null) { excelManager.Close(); }
-                if (err.hasError) { Console.WriteLine("ErrorManager:\n"+err.GetUserMessageOnlyAsString()); }
-                else { Console.WriteLine(method+" Success!"); }
-            }
+            _err.AddLog("Test_Open");
+            string directory = System.IO.Directory.GetCurrentDirectory();
+            string filename = "SampleFile1.xlsx";
+            filename = "";
+            string path = directory + "\\" + filename;
+            excelManager.OpenFile(path);
         }
     }
 }

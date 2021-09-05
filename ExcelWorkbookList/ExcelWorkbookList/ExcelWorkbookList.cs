@@ -64,6 +64,8 @@ namespace ExcelWorkbookList
                 List<ExcelApps> appsList = _excelManager.GetExcelAppsList();
 
                 List<string> valueList = new List<string>();
+
+                _err.AddLog("  _excelManager.ExcelAppsList.Count=" +_excelManager.GetExcelAppsList().Count);
                 foreach (ExcelApps apps in appsList)
                 {
                     List<string> bufList = GetListValueForExcelApps(apps);
@@ -83,9 +85,27 @@ namespace ExcelWorkbookList
             List<string> retList = new List<string>();
             try
             {
-                _err.AddLog(this, "GetWorkbookListFromExcelApps");
-                if (apps.IsGhost) { _err.AddLog("  apps.IsGhost"); return retList; }
+                _err.AddLog(this, "GetListValueForExcelApps");
+                if (apps.IsGhost) { 
+                    _err.AddLog("  apps.IsGhost=true");
+                    BookInfo info = new BookInfo();
+                    info.ControlValue = "[" + apps.ProcessId + "] " + "EXCEL.EXE";
+                    info.ProcessId = apps.ProcessId;
+                    info.FileName = "";
+                    info.Index = 0;
+                    retList.Add(info.ControlValue);
+                    this.WorkbookList.Add(info);
+                    return retList; 
+                } else
+                {
+                    _err.AddLog("  apps.IsGhost=false");
+                    _err.AddLog("  apps.ApplicationIsNull=" + apps.ApplicationIsNull());
+                }
+
                 List<string> bookList = apps.GetWorkbookNameList();
+
+                if(bookList.Count < 1) { _err.AddLogWarning(" bookList.Count<1"); return retList; }
+                
                 List<BookInfo> bookInfoList = new List<BookInfo>();
                 for (int i = 0; i < bookList.Count; i++)
                 {
@@ -104,7 +124,7 @@ namespace ExcelWorkbookList
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "GetWorkbookListFromExcelApps");
+                _err.AddException(ex, this, "GetListValueForExcelApps");
                 return retList;
             }
         }

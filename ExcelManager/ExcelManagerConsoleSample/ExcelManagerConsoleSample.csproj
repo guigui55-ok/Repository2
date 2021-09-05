@@ -55,8 +55,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Repository2\ErrorManager\ErrorManager\bin\Release\ErrorManager.dll</HintPath>
     </Reference>
-    <Reference Include="ExcelManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="ExcelManager">
       <HintPath>..\ExcelManager\bin\Release\ExcelManager.dll</HintPath>
     </Reference>
     <Reference Include="System" />
