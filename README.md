@@ -47,6 +47,7 @@ Ctrl{Shift{OFÝ’èƒEƒBƒ“ƒhƒE‚ðŠJ‚­
 ### Description  
 Com‚©‚ç’ñ‹Ÿ‚³‚ê‚Ä‚¢‚éExcel‹N“®Žž‚ÌƒIƒuƒWƒFƒNƒg Excel.Aplication ‚ðŠÇ—‚µ‚Ü‚·B  
 ‹ï‘Ì“I‚È“à—e‚Æ‚µ‚Ä‚ÍAExcel.Application ‚ÌƒCƒxƒ“ƒg‚ðŒŸ’m‚µ‚ÄŠJ‚¢‚Ä‚¢‚éWorkbook‚ðŽæ“¾E•ÛŽ‚µ‚Ü‚·B  
+¦ŽQÆÝ’èFMicrosoft.Office.Interop.Excel(ƒo[ƒWƒ‡ƒ“F15.0.0.0Aƒ‰ƒ“ƒ^ƒCƒ€ ƒo[ƒWƒ‡ƒ“Fv2.0.50727)  
 ¦ƒTƒ“ƒvƒ‹ƒvƒƒWƒFƒNƒgF ExcelUtility.sln > ExcelManagerConsoleSample.csproj   
 ### ì¬ŒoˆÜ  
 Excel ‚Å‚Ìƒf[ƒ^ˆ—‚ðŽ©“®‰»‚µ‚æ‚¤‚ÆˆÈ‘O‚Í VBA ‚ðŽg—p‚µ‚Ä‚¢‚Ü‚µ‚½‚ªAƒR[ƒh‚Ìƒ{ƒŠƒ…[ƒ€‚ª‘å‚«‚­‚È‚èŠÇ—‚ª“ï‚µ‚­‚È‚Á‚½‚Ì‚ÅA‹@”\‚ª[ŽÀ‚µ‚½‘¼‚Ì IDE ‚Å“¯—l‚Ì‚à‚Ì‚ðì¬Žg—p‚ÆŽv‚Á‚½‚Ì‚ª‚«‚Á‚©‚¯‚Å‚·B  
@@ -69,7 +70,7 @@ Windows ƒtƒHƒg‚Ì“®ì‚ªd‚¢‚Æ‚«‚ª‚ ‚èAŒy—Ê‚Èƒrƒ…[ƒ‚ª—~‚µ‚¢‚ÆŽv‚Á‚½‚½‚ß‚Å‚·B
 
 ### ¡ iniManager2 (IniManagerSample)
 ### Description  
-Ý’èƒtƒ@ƒCƒ‹‚ð“Ç‚Ý‰º‹L‚·‚é‚½‚ß‚Ìƒ‚ƒWƒ…[ƒ‹‚Å‚·B
+Ý’èƒtƒ@ƒCƒ‹‚ð“Ç‚Ý‰º‹L‚·‚é‚½‚ß‚Ìƒ‚ƒWƒ…[ƒ‹‚Å‚·B  
 ¦ƒTƒ“ƒvƒ‹ƒvƒƒWƒFƒNƒgF IniManagerSample.sln > IniManagerSample.csproj  
 ### ‚»‚Ì‘¼
 ”½È“_Fì¬‚µ‚½Œã‚É‹C•t‚«‚Ü‚µ‚½‚ªAWin32 API‚ÌGetPrivateProfileStringŠÖ”AGetPrivateProfileIntŠÖ”‚ðŽg‚¦‚Î‚à‚Á‚ÆŠÈ’P‚ÉŽÀ‘•‚Å‚«‚Ü‚µ‚½BB  
@@ -78,7 +79,7 @@ Windows ƒtƒHƒg‚Ì“®ì‚ªd‚¢‚Æ‚«‚ª‚ ‚èAŒy—Ê‚Èƒrƒ…[ƒ‚ª—~‚µ‚¢‚ÆŽv‚Á‚½‚½‚ß‚Å‚·B
 ### Description  
 WindowsForms ‚Ì”CˆÓ‚ÌƒtƒH[ƒ€‚ÌƒEƒBƒ“ƒhƒE‚ª”ñƒAƒNƒeƒBƒu‚ÌŽžA‚©‚ÂAƒfƒXƒNƒgƒbƒv‚ÌƒXƒNƒŠ[ƒ“‚Ì•£‚Éƒ}ƒEƒXƒ|ƒCƒ“ƒ^‚ðˆÚ“®‚µ‚½Žž‚É
 ƒEƒBƒ“ƒhƒE‚ðƒAƒNƒeƒBƒu‚É‚·‚éƒ‚ƒWƒ…[ƒ‹‚Å‚·B  
-ƒfƒtƒHƒ‹ƒg‚ÅƒXƒNƒŠ[ƒ“‚Ì¶’[ã‚©‚ç 100`101 ƒ|ƒCƒ“ƒg‚ÌˆÊ’u‚ðÝ’è‚µ‚Ä‚ ‚è‚Ü‚·B
+ƒfƒtƒHƒ‹ƒg‚ÅƒXƒNƒŠ[ƒ“‚Ì¶‘¤‚Ì‚Ý‚ÅA¶ã’[‚©‚ç‚»‚Ì‰º‚Ì 100`101 ƒ|ƒCƒ“ƒg‚ÌˆÊ’u‚ðÝ’è‚µ‚Ä‚ ‚è‚Ü‚·B  
 ¦ƒTƒ“ƒvƒ‹ƒvƒƒWƒFƒNƒgF MousePointCaptureOnScreenEdge.sln > MousePointCaptureOnScreenEdge.csproj  
 
 ### ¡ ProgressDialogManager
@@ -87,3 +88,6 @@ WindowsForms ‚Ì”CˆÓ‚ÌƒtƒH[ƒ€‚ÌƒEƒBƒ“ƒhƒE‚ª”ñƒAƒNƒeƒBƒu‚ÌŽžA‚©‚ÂAƒfƒXƒNƒgƒbƒv‚
 ¦ƒTƒ“ƒvƒ‹ƒvƒƒWƒFƒNƒgFProgressDialogManager.sln > ProgressDialogSample.csproj  
 ### ‚»‚Ì‘¼
 –â‘è“_FProgressDialogManager ‚ð’Ê‚µ‚Äˆ—‚ðs‚¤‚ÆAŒy‚¢ˆ—‚Ìê‡A’P‚Éˆ—‚·‚é‚æ‚èŽžŠÔ‚ð—v‚µ‚Ä‚¢‚é‚æ‚¤‚ÉŒ©Žó‚¯‚ç‚ê‚é‚½‚ßA‰ü‘P‚ª•K—vB  
+
+### ¡ ì¬ŠÂ‹«  
+VisualStudio 2019
