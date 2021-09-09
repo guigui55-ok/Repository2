@@ -15,6 +15,12 @@ namespace Utility
             _error = error;
         }
 
+        /// <summary>
+        /// コントロールの値を取得する
+        /// </summary>
+        /// <param name="control"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
         public string GetValueFromControl(Control control,Type type)
         {
             try
@@ -42,6 +48,12 @@ namespace Utility
             }
         }
 
+        /// <summary>
+        /// コントロールに値を設定する
+        /// </summary>
+        /// <param name="control"></param>
+        /// <param name="type"></param>
+        /// <param name="value"></param>
         public void SetValueToControl(Control control,Type type,object value)
         {
             try
@@ -78,13 +90,6 @@ namespace Utility
         {
             try
             {
-                //if (type != control.GetType())
-                //{
-                //    //_error.AddLogAlert(this.ToString()+ ".IsMatchControlType : Type Is Invalid.");
-                //    _error.AddLogAlert(new Exception(this.ToString() + ".IsMatchControlType : Type Is Invalid."));
-                //    _error.AddLogAlert("control.GetType="+control.GetType().ToString() + " ,type="+type.ToString());
-                //    return false;
-                //}
                 if (type == typeof(CheckBox))
                 {
                     CheckBox chk = (CheckBox)control;
@@ -113,7 +118,6 @@ namespace Utility
             }
             catch 
             {
-                //_error.AddExceptionNormal(ex, this.ToString() + ".GetControlFromControl");
                 return false;
             }
         }

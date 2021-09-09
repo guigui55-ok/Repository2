@@ -1,0 +1,16 @@
+C:\Users\OK\source\repos\MenuStripSample\MenuStripSample\bin\Release\MenuStripSample.exe.config
+C:\Users\OK\source\repos\MenuStripSample\MenuStripSample\bin\Release\MenuStripSample.exe
+C:\Users\OK\source\repos\MenuStripSample\MenuStripSample\bin\Release\MenuStripSample.pdb
+C:\Users\OK\source\repos\MenuStripSample\MenuStripSample\bin\Release\CommonUtility.dll
+C:\Users\OK\source\repos\MenuStripSample\MenuStripSample\bin\Release\ErrorManager.dll
+C:\Users\OK\source\repos\MenuStripSample\MenuStripSample\bin\Release\CommonUtility.pdb
+C:\Users\OK\source\repos\MenuStripSample\MenuStripSample\bin\Release\CommonUtility.dll.config
+C:\Users\OK\source\repos\MenuStripSample\MenuStripSample\bin\Release\ErrorManager.pdb
+C:\Users\OK\source\repos\MenuStripSample\MenuStripSample\bin\Release\ErrorManager.dll.config
+C:\Users\OK\source\repos\MenuStripSample\MenuStripSample\obj\Release\MenuStripSample.MenuStripSampleForm.resources
+C:\Users\OK\source\repos\MenuStripSample\MenuStripSample\obj\Release\MenuStripSample.Properties.Resources.resources
+C:\Users\OK\source\repos\MenuStripSample\MenuStripSample\obj\Release\MenuStripSample.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\MenuStripSample\MenuStripSample\obj\Release\MenuStripSample.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\MenuStripSample\MenuStripSample\obj\Release\MenuStripSample.csproj.CopyComplete
+C:\Users\OK\source\repos\MenuStripSample\MenuStripSample\obj\Release\MenuStripSample.exe
+C:\Users\OK\source\repos\MenuStripSample\MenuStripSample\obj\Release\MenuStripSample.pdb

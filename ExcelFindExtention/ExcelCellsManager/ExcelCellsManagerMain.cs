@@ -24,10 +24,11 @@ namespace ExcelCellsManager
         public IWorkbookListControl CheckdListUtil;
         public IDataGridViewUtility DataGridUtil;
         public IDataGridViewItems DataGridViewItems;
-        
+        public MenuStripManager MenuStripManager;
         // Excel Relation
         public ExcelManager ExcelManager;
         protected ExcelCellsManager.ExcelCellsManager _excelCellsManager;
+        protected ExcelCellsManagerMainEvent _excelCellsManagerMainEvent;
         // ExcelEvent ToParentObjectEvent
         protected IExcelAppsEventBridgeInterface _excelEventBridge;
         public EventHandler ChangeActiveCell;
@@ -75,6 +76,8 @@ namespace ExcelCellsManager
             ProgressDialogManager = new ProgressDialog.FormWindow.ProgressDialogManager(_error, form);
             ProgresDialogDowork = new ProgressDialog.DoWork.ProgressDialogDoWork(_error);
             _mainForm = (ExcelCellsManagerForm)form;
+
+            _excelCellsManagerMainEvent = new ExcelCellsManagerMainEvent(_error, this);
         }
 
         public void SetStatusBarText(string msg)
@@ -284,6 +287,9 @@ namespace ExcelCellsManager
                 // 最後にエラーがあればまとめて出力するので、エラーを保持しておく
                 //if (_error.hasError) { _error.ReleaseErrorState(); ; }
 
+                InitializeMenuStrip();
+                if (_error.hasError) { _error.ReleaseErrorState(); }
+
             } catch (Exception ex)
             {
                 _error.AddException(ex, this.ToString() + ".Initialize");
@@ -304,6 +310,42 @@ namespace ExcelCellsManager
         //        temp.InitialValue = true;　//.......
 
         //}
+
+        public void InitializeMenuStrip()
+        {
+            try
+            {
+                _error.AddLog(this, "InitializeMenuStrip");
+                this.MenuStripManager = new MenuStripManager(_error);
+                MenuStripManager.Initialize(this._mainForm);
+                if (_error.hasError) { _error.ReleaseErrorState(); }
+                // MenuStrip の Event 紐づけ
+                string[] tempary;
+                ToolStripMenuItem item;
+                // ファイルを開く
+                tempary = new string[] { MenuStripManager.Constants.FILE_MENU, MenuStripManager.Constants.FILE_OPEN };
+                MenuStripManager.AddEventToMenu(tempary,_excelCellsManagerMainEvent.OpenFileDialogEvent);
+                // 上書き保存
+                tempary = new string[] { MenuStripManager.Constants.FILE_MENU, MenuStripManager.Constants.FILE_APPEND };
+                MenuStripManager.AddEventToMenu(tempary, _excelCellsManagerMainEvent.SaveDataOfGridViewDataEvent);
+                // 名前を付けて保存
+                tempary = new string[] { MenuStripManager.Constants.FILE_MENU, MenuStripManager.Constants.FILE_SAVEAS };
+                MenuStripManager.AddEventToMenu(tempary, _excelCellsManagerMainEvent.SaveAsDataOfGridViewDataEvent);
+                // 終了
+                tempary = new string[] { MenuStripManager.Constants.FILE_MENU, MenuStripManager.Constants.FILE_EXIT };
+                MenuStripManager.AddEventToMenu(tempary, _excelCellsManagerMainEvent.ExitApplicationEvent);
+                // 設定
+                tempary = new string[] { MenuStripManager.Constants.OPTION_MENU, MenuStripManager.Constants.OPTION_SETTINGS };
+                MenuStripManager.AddEventToMenu(tempary, _excelCellsManagerMainEvent.ShowSettingsWindowEvent);
+
+            }
+            catch (Exception ex)
+            {
+                _error.AddException(ex, this, "InitializeMenuStrip");
+            }
+        }
+
+
         private void InitializeOpenFilePath()
         {
             try
@@ -1396,6 +1438,7 @@ namespace ExcelCellsManager
                 _error.AddLog(this.ToString() + ".Close");
                 _error.WriteErrorLog();
                 _error.WriteLog();
+                _mainForm.Close();
             } catch (Exception ex)
             {
                 _error.AddException(ex, this.ToString() + ".Close");

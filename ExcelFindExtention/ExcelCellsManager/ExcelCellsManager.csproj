@@ -49,6 +49,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CommonUtilityForExcelManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CommonUtilityForExcelManager.dll</HintPath>
+    </Reference>
     <Reference Include="ErrorManager">
       <HintPath>..\..\ErrorManager\ErrorManager\bin\Release\ErrorManager.dll</HintPath>
     </Reference>
@@ -119,6 +123,8 @@
     <Compile Include="CellsValuesConrol\CellsValuesList\DataGridViewFormEventCellsManager.cs" />
     <Compile Include="ErrorMessage\ErrorMessangerMessageBox.cs" />
     <Compile Include="ErrorMessage\ErrorMessengerStatusBar.cs" />
+    <Compile Include="ExcelCellsManagerMainEvent.cs" />
+    <Compile Include="ExcelCellsManager\Event\MenuStripManager.cs" />
     <Compile Include="ExcelCellsManager\ExcelCellsManagerConstants.cs" />
     <Compile Include="ExcelCellsManager\ExcelCopyCellsValue.cs" />
     <Compile Include="ExcelCellsManager\SettingsForm\EcmSettingsForm.cs">
