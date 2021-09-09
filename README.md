@@ -1,5 +1,5 @@
 # Repository2
-##### 最終更新日 2021.9.6
+##### 最終更新日 2021.9.10
 
 ## ■ ExcelFindExtention > ExcelCellsManger  
 ### Description  

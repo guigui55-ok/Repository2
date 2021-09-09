@@ -26,7 +26,7 @@ namespace ExcelCellsManager.ExcelCellsManager.Event
                 {
                     case Keys.Control | Keys.S :
                         _error.AddLog("_form_KeyDown : Keys.Control | Keys.S");
-                        _excelCellsManagerMain.SaveDataGridViewData(false);                   
+                        _excelCellsManagerMain.SaveDataGridViewData(false);
                         break;
                     case Keys.Control | Keys.Shift | Keys.S:
                         _error.AddLog("_form_KeyDown : Keys.Control | Keys.Shift | Keys.S");
