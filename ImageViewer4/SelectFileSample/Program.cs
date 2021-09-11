@@ -17,11 +17,6 @@ namespace SelectFileSample
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new SelectFileSampleForm());
-            ForJumpSource();
-        }
-        static void ForJumpSource()
-        {
-            new SelectFileSampleForm().JumpSource();
         }
     }
 }

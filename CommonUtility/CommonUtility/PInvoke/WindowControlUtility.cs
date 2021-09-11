@@ -35,6 +35,10 @@ namespace CommonUtility.Pinvoke
         [DllImport("kernel32.dll", SetLastError = true)]
         private extern static bool Beep(uint dwFreq, uint dwDuration);
 
+        /// <summary>
+        /// メイン・ウィンドウが最小化されていれば元に戻す
+        /// </summary>
+        /// <param name="pid"></param>
         public void WakeupWindow(int pid)
         {
             Process prs = null;
@@ -44,7 +48,7 @@ namespace CommonUtility.Pinvoke
                 WakeupWindow(prs.MainWindowHandle);
             } catch(Exception ex)
             {
-                _Error.AddException(ex, this.ToString() + ".WakeupWindow pid");
+                _Error.AddException(ex, this.ToString() + ".WakeupWindow ,pid="+pid);
                 return;
             } finally
             {
@@ -52,18 +56,21 @@ namespace CommonUtility.Pinvoke
                 }
             }
         }
-
-        // メイン・ウィンドウが最小化されていれば元に戻す
+        /// <summary>
+        /// メイン・ウィンドウが最小化されていれば元に戻す
+        /// </summary>
+        /// <param name="hWnd"></param>
         public void WakeupWindow(IntPtr hWnd)
         {
             try
             {
+                _Error.AddLog("WakeupWindow");
                 // メイン・ウィンドウが最小化されていれば元に戻す
                 if (IsIconic(hWnd))
                 {
                     ShowWindowAsync(hWnd, SW_RESTORE);
+                    ConsoleWriteLineWhenRiseErrorWin32();
                 }
-                ConsoleWriteLineWhenRiseErrorWin32();
 
                 // メイン・ウィンドウを最前面に表示する
                 SetForegroundWindow(hWnd);
@@ -77,6 +84,44 @@ namespace CommonUtility.Pinvoke
             }
         }
 
+        /// <summary>
+        /// ウィンドウを最小化する
+        /// </summary>
+        /// <param name="hWnd"></param>
+        public void ShowWindowMinimize(int pid)
+        {
+            Process prs = null;
+            try
+            {
+                _Error.AddLog("ShowWindowMinimize");
+                prs = Process.GetProcessById(pid);
+
+                IntPtr hWnd = prs.MainWindowHandle;
+                // メイン・ウィンドウが最小化されていれば元に戻す
+                if (IsIconic(hWnd))
+                {
+                    _Error.AddLog(" pid="+pid+" is Minimize now.");
+                } else
+                {
+                    _Error.AddLog("ShowWindowAsync, hWnd=" + hWnd);
+                    ShowWindowAsync(hWnd, SW_MINIMIZE);
+                    ConsoleWriteLineWhenRiseErrorWin32();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _Error.AddException(ex, this,"ShowWindowMinimize ,pid="+pid);
+                return;
+            }
+            finally
+            {
+                if (prs != null)
+                {
+                    prs.Dispose();
+                }
+            }
+        }
         public void ConsoleWriteLineWhenRiseErrorWin32()
         {
             int errCode = GetLastError();
@@ -85,7 +130,7 @@ namespace CommonUtility.Pinvoke
                 //.WriteLine("Win32エラー・コード：" + String.Format("{0:X8}", errCode));
                 _Error.AddLog("Win32エラー・コード：" + String.Format("{0}", errCode));
                 Exception ex = new Exception("Win32エラー・コード：" + String.Format("{0}", errCode));
-                _Error.AddException(ex, this.ToString() + ".ConsoleWriteLineWhenRiseErrorWin32");
+                _Error.AddException(ex, this,  "ConsoleWriteLineWhenRiseErrorWin32");
             }
         }
 

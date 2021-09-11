@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommonUtility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -108,7 +109,7 @@ namespace Utility
             try
             {
                 if ((_filePath == "") || (_filePath == null) ||
-                    (new Utility.FileUtility(_error).GetFileNameTypeRemoved(_filePath) == "*"))
+                    (new FileUtility(_error).GetFileNameTypeRemoved(_filePath) == "*"))
                 {
                     // ファイル名がない(新規作成)のとき
                     // ファイルパスが空の時はダイアログから指定して保存する

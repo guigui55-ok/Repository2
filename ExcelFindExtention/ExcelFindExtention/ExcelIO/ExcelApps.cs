@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
+using CommonUtility.Pinvoke;
 using Microsoft.Office.Interop.Excel;
 
 namespace ExcelIO
@@ -9,7 +10,7 @@ namespace ExcelIO
     public class ExcelApps
     {
         protected ErrorManager.ErrorManager _Error;
-        protected Utility.WindowControlUtility _WindowUtil;
+        protected WindowControlUtility _WindowUtil;
         public Microsoft.Office.Interop.Excel.Application Application = null;
         public int ProcessId = 0;
         public List<string> FilePathList = new List<string>();
@@ -58,7 +59,7 @@ namespace ExcelIO
         public ExcelApps(ErrorManager.ErrorManager error)
         {
             _Error = error;
-            _WindowUtil = new Utility.WindowControlUtility(_Error);
+            _WindowUtil = new WindowControlUtility(_Error);
             SetEventClassForWorkbookAndApplication();
             _activeCellsInfo = new ActiveCellsInfo();
         }
@@ -66,7 +67,7 @@ namespace ExcelIO
         public ExcelApps(ErrorManager.ErrorManager error,IExcelAppsEventBridgeInterface excelEvent)
         {
             _Error = error;
-            _WindowUtil = new Utility.WindowControlUtility(_Error);
+            _WindowUtil = new WindowControlUtility(_Error);
             SetEventClassForWorkbookAndApplication();
             _excelEventBridge = excelEvent;
             _activeCellsInfo = new ActiveCellsInfo();

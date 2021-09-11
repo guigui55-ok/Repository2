@@ -14,6 +14,7 @@ using System.Threading;
 using ExcelCellsManager.ExcelCellsManager.SettingsForm;
 using MousePointCapture;
 using System.Drawing;
+using CommonUtility.Pinvoke;
 
 namespace ExcelCellsManager
 {
@@ -657,16 +658,22 @@ namespace ExcelCellsManager
                 {
                     _error.AddLogAlert(" GetWorkbookNameListAndGhostProcessNameList Failed");
                     _error.ReleaseErrorState();
-                    if (!showMsgBox) { _error.ReleaseErrorState(); }                    
+                    if (!showMsgBox) { _error.ReleaseErrorState(); }
                     //return;
                 }
+                _error.AddLog("  GetWorkbookNameListAndGhostProcessNameList Success.");
+
                 if (ExcelManager.GetExcelAppsList().Count < 1)
                 {
                     _error.AddLogWarning("  ExcelManager.GetExcelAppsList().Count < 1");
                     ExcelManager.CreateApplicationOnly();
+                    if (this.AppsState.IsInitialize) { 
+                        List<int> pidlist = new CommonUtility.ProcessUtility(_error).GetPidListContainsProcessNameInNow("EXCEL");
+                        new WindowControlUtility(_error).ShowWindowMinimize(pidlist[0]);
+                        this._mainForm.Activate(); 
+                    }
                     if (_error.hasError) { _error.ReleaseErrorState(); }
                 }
-                _error.AddLog("  GetWorkbookNameListAndGhostProcessNameList Success.");
 
                 // List を CheckedListBox に追加する
                 CheckdListUtil.UpdateItemListAfterClearList(excelList);

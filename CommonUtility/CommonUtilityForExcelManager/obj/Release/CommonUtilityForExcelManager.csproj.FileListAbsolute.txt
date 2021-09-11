@@ -9,4 +9,3 @@ C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\
 C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\obj\Release\CommonUtilityForExcelManager.csproj.CopyComplete
 C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\obj\Release\CommonUtilityForExcelManager.dll
 C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\obj\Release\CommonUtilityForExcelManager.pdb
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\obj\Release\CommonUtilityForExcelManager.csprojAssemblyReference.cache
