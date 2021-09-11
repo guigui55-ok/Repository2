@@ -7,15 +7,17 @@ using Microsoft.Office.Interop.Excel;
 using System.IO;
 using Utility;
 using System.Threading;
+using CommonUtility;
+using CommonUtility.Pinvoke;
 
 namespace ExcelIO
 {
     public class ExcelManager
     {
         protected ErrorManager.ErrorManager _Error;
-        protected ProcessUtility.ProcessUtility _ProcUtil;
-        protected Utility.WindowControlUtility _WindowUtil;
-        protected FileUtility _FileUtil;
+        protected ProcessUtility _ProcUtil;
+        protected WindowControlUtility _WindowUtil;
+        protected CommonUtility.FileUtility _FileUtil;
         protected List<ExcelApps> _ExcelAppsList = new List<ExcelApps>();
 
         protected string _ExcelProcName = "EXCEL";
@@ -86,8 +88,8 @@ namespace ExcelIO
         public ExcelManager(ErrorManager.ErrorManager error)
         {
             _Error = error;
-            _ProcUtil = new ProcessUtility.ProcessUtility(error);
-            _WindowUtil = new Utility.WindowControlUtility(error);
+            _ProcUtil = new ProcessUtility(error);
+            _WindowUtil = new WindowControlUtility(error);
             //_ExcelIoList = new List<ExcelIO>();
             //_ExcelIO = new ExcelIO(_Error);
         }

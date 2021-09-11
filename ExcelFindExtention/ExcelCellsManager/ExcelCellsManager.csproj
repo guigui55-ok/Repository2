@@ -108,17 +108,8 @@
     <Compile Include="..\ExcelFindExtention\ExcelIO\Handles.cs">
       <Link>Utility\Handles.cs</Link>
     </Compile>
-    <Compile Include="..\ExcelFindExtention\Utility\FileUtility.cs">
-      <Link>Utility\FileUtility.cs</Link>
-    </Compile>
-    <Compile Include="..\ExcelFindExtention\Utility\ProcessUtility.cs">
-      <Link>Utility\ProcessUtility.cs</Link>
-    </Compile>
     <Compile Include="..\ExcelFindExtention\Utility\ShortcutDynamic.cs">
       <Link>Utility\ShortcutDynamic.cs</Link>
-    </Compile>
-    <Compile Include="..\ExcelFindExtention\Utility\WindowControlUtility.cs">
-      <Link>Utility\WindowControlUtility.cs</Link>
     </Compile>
     <Compile Include="CellsValuesConrol\CellsValuesList\DataGridViewFormEventCellsManager.cs" />
     <Compile Include="ErrorMessage\ErrorMessangerMessageBox.cs" />

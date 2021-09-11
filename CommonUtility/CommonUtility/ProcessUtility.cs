@@ -23,7 +23,11 @@ namespace CommonUtility
             _Error = error;
         }
 
-        // プロセス名と合致した PID を取得する
+        /// <summary>
+        /// プロセス名と合致した PID を取得する
+        /// </summary>
+        /// <param name="processName"></param>
+        /// <returns></returns>
         public List<int> GetPidListContainsProcessNameInNow(string processName)
         {
             List<int> retList = new List<int>();
@@ -58,7 +62,12 @@ namespace CommonUtility
             }
         }
 
-        // プロセス名と合致した Process を取得する
+        /// <summary>
+        /// プロセス名と合致した Process を取得する
+        /// </summary>
+        /// <param name="processes"></param>
+        /// <param name="processName"></param>
+        /// <returns></returns>
         public List<Process> GetProcessListMatchToProcessName(System.Diagnostics.Process[] processes,string processName)
         {
             List<Process> retList = new List<Process>();
@@ -92,7 +101,12 @@ namespace CommonUtility
             }
         }
 
-        // プロセス名と合致した PID を取得する
+        /// <summary>
+        /// Process[] 内からプロセス名と合致した PID を取得する
+        /// </summary>
+        /// <param name="processes"></param>
+        /// <param name="processName"></param>
+        /// <returns></returns>
         public List<int> GetPidListContainsProcessNameInNow(Process[] processes,string processName)
         {
             List<int> retList = new List<int>();
@@ -134,6 +148,13 @@ namespace CommonUtility
             }
         }
 
+        /// <summary>
+        /// ウィンドウタイトルが合致したプロセスの Pid を取得する
+        /// </summary>
+        /// <param name="processes"></param>
+        /// <param name="WindowTitle"></param>
+        /// <param name="CompareParameter"></param>
+        /// <returns></returns>
         public int GetPidToMatchWindowTitle(Process[] processes,string WindowTitle,int CompareParameter = 0)
         {
             try
@@ -181,7 +202,11 @@ namespace CommonUtility
                 return 0;
             }
         }
-
+        /// <summary>
+        /// プロセスを Close する (Process クラス Close,Dispose を使用する)
+        /// </summary>
+        /// <param name="pid"></param>
+        /// <returns></returns>
         public bool ProcessClose(int pid)
         {
             try
@@ -203,7 +228,11 @@ namespace CommonUtility
                 return false;
             }
         }
-
+        /// <summary>
+        /// プロセスを終了する (Process クラス Kill メソッドを使用する)
+        /// </summary>
+        /// <param name="pid"></param>
+        /// <returns></returns>
         public bool KillProcess(int pid)
         {
             try

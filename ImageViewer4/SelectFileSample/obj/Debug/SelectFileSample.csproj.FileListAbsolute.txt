@@ -12,3 +12,12 @@ C:\Users\OK\source\repos\ImageViewer4\SelectFileSample\obj\Debug\SelectFileSampl
 C:\Users\OK\source\repos\ImageViewer4\SelectFileSample\obj\Debug\SelectFileSample.exe
 C:\Users\OK\source\repos\ImageViewer4\SelectFileSample\obj\Debug\SelectFileSample.pdb
 C:\Users\OK\source\repos\ImageViewer4\SelectFileSample\obj\Debug\SelectFileSample.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\Repository2\ImageViewer4\SelectFileSample\obj\Debug\SelectFileSample.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\Repository2\ImageViewer4\SelectFileSample\obj\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\OK\source\repos\Repository2\ImageViewer4\SelectFileSample\obj\Debug\SelectFileSample.csproj.ResolveComReference.cache
+C:\Users\OK\source\repos\Repository2\ImageViewer4\SelectFileSample\obj\Debug\SelectFileSample.SelectFileSampleForm.resources
+C:\Users\OK\source\repos\Repository2\ImageViewer4\SelectFileSample\obj\Debug\SelectFileSample.Properties.Resources.resources
+C:\Users\OK\source\repos\Repository2\ImageViewer4\SelectFileSample\obj\Debug\SelectFileSample.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\Repository2\ImageViewer4\SelectFileSample\obj\Debug\SelectFileSample.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository2\ImageViewer4\SelectFileSample\obj\Debug\SelectFileSample.exe
+C:\Users\OK\source\repos\Repository2\ImageViewer4\SelectFileSample\obj\Debug\SelectFileSample.pdb

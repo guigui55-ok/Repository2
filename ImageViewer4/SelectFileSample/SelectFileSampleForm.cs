@@ -16,7 +16,7 @@ namespace SelectFileSample
 {
     public partial class SelectFileSampleForm : Form
     {
-        ErrorManager.ErrorManager _err;
+        readonly ErrorManager.ErrorManager _err;
         Thread subThread;
         bool WriteToEditBox = false;
         object _sender;
@@ -169,9 +169,7 @@ namespace SelectFileSample
             }
         }
 
-        public void JumpSource() { }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             try
             {
