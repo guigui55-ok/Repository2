@@ -7,15 +7,15 @@ using Microsoft.Office.Interop.Excel;
 using System.IO;
 using Utility;
 using System.Threading;
-using CommonUtility;
 using CommonUtility.Pinvoke;
+using CommonUtility;
 
 namespace ExcelIO
 {
     public class ExcelManager
     {
         protected ErrorManager.ErrorManager _Error;
-        protected ProcessUtility _ProcUtil;
+        protected CommonUtility.ProcessUtility _ProcUtil;
         protected WindowControlUtility _WindowUtil;
         protected CommonUtility.FileUtility _FileUtil;
         protected List<ExcelApps> _ExcelAppsList = new List<ExcelApps>();
