@@ -78,6 +78,8 @@ namespace ImageViewer4
                 // PictureBox のクリックされた位置が Panel の右側半分か左側半分か判定する
                 JudgeClickRightOrLeftChild judgeClickRightOrLeftChild =
                     new JudgeClickRightOrLeftChild(_err, pictureBox1, panel1);
+                judgeClickRightOrLeftChild.ClickRight += PictureBox_ClickRightEvent;
+                judgeClickRightOrLeftChild.ClickLeft += PictureBox_ClickLeftEvent;
 
                 // Panel が MouseWheel を受けたとき、PictureBox の大きさを変更する
                 ChangeSizeByMouseWheel changeSizeByMouseWheel = new ChangeSizeByMouseWheel(_err, pictureBox1, panel1);
@@ -92,12 +94,22 @@ namespace ImageViewer4
                 MessageBox.Show(ex.Message,"Error");
             }
         }
+        public void PictureBox_ClickRightEvent(object sender,EventArgs e)
+        {
+            readFileByDragDrop.Files.MoveNext();
+            ReadFileEvent(null,EventArgs.Empty);
+        }
+        public void PictureBox_ClickLeftEvent(object sender,EventArgs e)
+        {
+            readFileByDragDrop.Files.MovePrevious();
+            ReadFileEvent(null, EventArgs.Empty);
+        }
         public void ReadFileEvent(object sender, EventArgs e)
         {
             try
             {
                 _err.AddLog(this, "ReadFileEvent");
-                viewImage.SetPath(readFileByDragDrop.files.GetCurrentValue());
+                viewImage.SetPath(readFileByDragDrop.Files.GetCurrentValue());
                 // 画像を表示する
                 ViewImageControl.SetImageWithDispose(viewImage.GetImage());
             }
