@@ -36,6 +36,9 @@
     <Reference Include="ErrorManager">
       <HintPath>..\Dlls\ErrorManager.dll</HintPath>
     </Reference>
+    <Reference Include="FileListManager">
+      <HintPath>..\Dlls\FileListManager.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,6 +54,8 @@
   <ItemGroup>
     <Compile Include="ControlUtility\ChangeSizeByMouseWheel.cs" />
     <Compile Include="ControlUtility\ControlDragger.cs" />
+    <Compile Include="ControlUtility\DragAndDropForFile.cs" />
+    <Compile Include="ControlUtility\DragAndDropOnControl.cs" />
     <Compile Include="ControlUtility\JudgeClickRightOrLeft.cs" />
     <Compile Include="ControlUtility\JudgeClickRightOrLeftChild.cs" />
     <Compile Include="ControlUtility\ReadFileByDragDrop.cs" />
@@ -95,12 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewImageObjects\FrameControls\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SelectFileSample\SelectFileSample.csproj">
-      <Project>{D8C09A43-C817-4F16-8BE1-AD04B7A58609}</Project>
-      <Name>SelectFileSample</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

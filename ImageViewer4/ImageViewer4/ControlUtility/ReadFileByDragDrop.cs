@@ -1,5 +1,4 @@
-﻿using ControlUtility.SelectFiles;
-using CotnrolUtility.SelectFiles;
+﻿using CommonUtility.FileListUtility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,22 +11,46 @@ namespace ControlUtility
     public class ReadFileByDragDrop
     {
         protected ErrorManager.ErrorManager _err;
-        public IFiles files;
-        public FileListManager fileListManager;
-        public SelectFileByDragDrop fileDragDrop;
-        public List<string> list;
+        public IFiles Files;
+        public FileListManager FileListManager;
+        protected DragAndDropOnControl _dragAndDropOnControl;
+        protected DragAndDropForFile _dragAndDropForFile;
+        public List<string> FileList;
+        //protected IFileListControl _fileListControl;
+        public EventHandler DragAndDropEventAfterEvent;
 
         public ReadFileByDragDrop(ErrorManager.ErrorManager err, Control control,EventHandler UpdateFileAfterEvent)
         {
             _err = err;
-            list = new List<string>();
-            files = new SelectFiles.SingleFile(_err, list);
-            fileListManager = new FileListManager(_err,files);
-            fileDragDrop = new SelectFileByDragDrop(_err, control);
+            FileList = new List<string>();
+            Files = new Files(_err, FileList);
+            FileListManager = new FileListManager(_err, Files);
+            _dragAndDropOnControl = new DragAndDropOnControl(_err, control);
+            _dragAndDropForFile = new DragAndDropForFile(_err, _dragAndDropOnControl);
             // ファイルリストを取得した後にコントロールなどに表示する場合、以下に紐づける
-            fileListManager.UpdateFileListAfterEvent += UpdateFileAfterEvent;
+            FileListManager.UpdateFileListAfterEvent += UpdateFileAfterEvent;
+            // ファイルを読み込んだ後のイベント
+            _dragAndDropForFile.DragAndDropEventAfterEventForFile += DragAndDropEventAfterEventForFile;
         }
 
+        private void DragAndDropEventAfterEventForFile(object sender, EventArgs e)
+        {
+            try
+            {
+                _err.AddLog(this, "DragAndDropEventAfterEventForFile");
+                if (_dragAndDropForFile.Files == null) { _err.AddLogWarning("Files == null"); return; }
+                if (_dragAndDropForFile.Files.Length < 1) { _err.AddLogWarning("Files.Length < 1"); return; }
+
+                _err.AddLog("  GetPath=" + _dragAndDropForFile.Files[0]);
+                FileListManager.SetFilesFromPath(_dragAndDropForFile.Files[0]);
+                DragAndDropEventAfterEvent?.Invoke(sender, e);
+            }
+            catch (Exception ex)
+            {
+                _err.AddException(ex, this, "DragAndDropEventAfterEventForFile");
+                _err.ClearError();
+            }
+        }
         public void AddMethodToEventHandler(Control[] controls)
         {
             try
@@ -38,8 +61,8 @@ namespace ControlUtility
                 {
                     control.AllowDrop = true;
                     // FileDragDrop イベントを紐づけする
-                    control.DragDrop += fileListManager.RegistFileByDragDrop;
-                    fileDragDrop.AddRecieveControl(control);
+                    control.DragDrop += FileListManager.ChangedFileListEvent;
+                    _dragAndDropOnControl.AddRecieveControl(control);
                 }
             } catch (Exception ex)
             {
@@ -54,23 +77,23 @@ namespace ControlUtility
                 _err = new ErrorManager.ErrorManager(1);
                 // DragDrop をするためのクラス
                 control.AllowDrop = true;
-                fileDragDrop = new SelectFileByDragDrop(_err, control);
+                _dragAndDropOnControl = new DragAndDropOnControl(_err, control);
                 // Control を追加する
-                fileDragDrop.AddRecieveControl(control);
+                _dragAndDropOnControl.AddRecieveControl(control);
                 // ファイルリストを扱うクラス
-                list = new List<string>();
-                files = new SingleFile(_err, list);
+                FileList = new List<string>();
+                Files = new Files(_err, FileList);
                 // ファイルリストを登録するクラス
-                fileListManager = new FileListManager(_err, files);
+                FileListManager = new FileListManager(_err, Files);
                 // FileDragDrop イベントを紐づけする
-                control.DragDrop += fileListManager.RegistFileByDragDrop;
+                control.DragDrop += FileListManager.ChangedFileListEvent;
                 // ファイルリストを取得した後にコントロールなどに表示する場合、以下に紐づける
-                fileListManager.UpdateFileListAfterEvent += UpdateFileAfterEvent;
+                FileListManager.UpdateFileListAfterEvent += UpdateFileAfterEvent;
 
                 // FileListManager settings
-                fileListManager.IsReadMatchFirstOnly = true;
-                fileListManager.IsReadSourceOfShotcut = false;
-                fileListManager.ReadFolderHierarchy = 0;
+                FileListManager.IsReadMatchFirstOnly = true;
+                FileListManager.IsReadSourceOfShotcut = false;
+                FileListManager.ReadFolderHierarchy = 0;
             } catch (Exception ex)
             {
                 _err.AddException(ex,this, "Initialize");
