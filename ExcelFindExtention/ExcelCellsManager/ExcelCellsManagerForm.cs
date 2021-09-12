@@ -181,15 +181,16 @@ namespace ExcelCellsManager
                 _excelCellsManagerMain.Initialize();
                 if (_error.HasAboveWorning()) { _error.AddLogAlert("_excelCellsManagerMain.Initialize"); }
                 // リストを更新する
+                // エクセルが一つも開いていないときは Excel.Application を開く
                 _excelCellsManagerMain.UpdateList(false);
                 if (_error.HasAboveWorning()) { _error.AddLogAlert("_excelCellsManagerMain.UpdateList"); }
                 
-                if(_excelCellsManagerMain.ExcelManager.GetExcelAppsList().Count < 1)
-                {
-                    // ExcelAppsList().Count < 1 エクセルが一つも開いていないときは、空の Workbook で Excel.Application をひらく
-                    _excelCellsManagerMain.ExcelManager.UpdateOpendExcelApplication(true);
-                    if (_error.HasAboveWorning()) { _error.AddLogAlert("UpdateOpendExcelApplication Failed"); }
-                }
+                //if(_excelCellsManagerMain.ExcelManager.GetExcelAppsList().Count < 1)
+                //{
+                //    // ExcelAppsList().Count < 1 エクセルが一つも開いていないときは、空の Workbook で Excel.Application をひらく
+                //    _excelCellsManagerMain.ExcelManager.UpdateOpendExcelApplication(true);
+                //    if (_error.HasAboveWorning()) { _error.AddLogAlert("UpdateOpendExcelApplication Failed"); }
+                //}
                 // 一つ以上の Workbook が開かれている
                 if (_excelCellsManagerMain.ExcelManager.IsOpendWorkbookOneOrMore())
                 {

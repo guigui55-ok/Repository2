@@ -41,6 +41,7 @@ namespace ImageViewer4
             try
             {
                 Console.WriteLine("TestViewImage");
+                this.Size = new Size(480, 680);
                 // panel
                 Panel panel1 = new Panel();
                 panel1.Parent = this;
@@ -96,12 +97,12 @@ namespace ImageViewer4
         }
         public void PictureBox_ClickRightEvent(object sender,EventArgs e)
         {
-            readFileByDragDrop.Files.MoveNext();
+            readFileByDragDrop.FileListManager.MoveNextFileWhenLastFileNextDirectory();
             ReadFileEvent(null,EventArgs.Empty);
         }
         public void PictureBox_ClickLeftEvent(object sender,EventArgs e)
         {
-            readFileByDragDrop.Files.MovePrevious();
+            readFileByDragDrop.FileListManager.MovePreviousDirectory();
             ReadFileEvent(null, EventArgs.Empty);
         }
         public void ReadFileEvent(object sender, EventArgs e)
