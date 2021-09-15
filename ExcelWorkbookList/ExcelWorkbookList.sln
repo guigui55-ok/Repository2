@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelWorkbookList", "ExcelWorkbookList\ExcelWorkbookList.csproj", "{A03A3F05-B725-430D-B98D-1197CDB6528E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkbookList", "WorkbookList\WorkbookList.csproj", "{3437E38C-AD36-480B-B13C-01D0C586557C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A03A3F05-B725-430D-B98D-1197CDB6528E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A03A3F05-B725-430D-B98D-1197CDB6528E}.Release|Any CPU.ActiveCfg = Release|x64
 		{A03A3F05-B725-430D-B98D-1197CDB6528E}.Release|Any CPU.Build.0 = Release|x64
+		{3437E38C-AD36-480B-B13C-01D0C586557C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3437E38C-AD36-480B-B13C-01D0C586557C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3437E38C-AD36-480B-B13C-01D0C586557C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3437E38C-AD36-480B-B13C-01D0C586557C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

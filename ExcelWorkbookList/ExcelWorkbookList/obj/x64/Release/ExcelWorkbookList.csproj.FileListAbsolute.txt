@@ -34,4 +34,3 @@ C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\bin\x64
 C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\bin\x64\Release\ExcelManager.dll
 C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\bin\x64\Release\CommonUtilityForExcelManager.dll
 C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\bin\x64\Release\CommonUtilityForExcelManager.pdb
-C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\obj\x64\Release\ExcelWorkbookList.csprojAssemblyReference.cache

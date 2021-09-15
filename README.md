@@ -1,7 +1,7 @@
 # Repository2
-##### 最終更新日 2021.9.10
+##### 最終更新日 2021.9.15
 
-## ■ ExcelFindExtention > ExcelCellsManger  
+## ■ ExcelCellsManager2  
 ### Description  
 
 エクセルの任意のセルの位置(アドレス)を登録し、登録した位置を表示するアプリケーションです。  

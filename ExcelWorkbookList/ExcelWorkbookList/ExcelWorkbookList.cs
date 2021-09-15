@@ -80,6 +80,21 @@ namespace ExcelWorkbookList
             }
         }
 
+        public AppsInfo GetAppsInfoFromWorkbookList(int index)
+        {
+            try
+            {
+                string value = _workbookListControl.GetItemValue(index);
+                AppsInfo info = _workbookListControl.ConvertToAppsInfoFromItemValue(value);
+                info.Index = index;
+                return info;
+            } catch (Exception ex)
+            {
+                _err.AddException(ex, this, "GetAppsInfoFromWorkbookList");
+                return null;
+            }
+        }
+
         public List<string> GetListValueForExcelApps(ExcelApps apps)
         {
             List<string> retList = new List<string>();

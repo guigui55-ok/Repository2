@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ExcelWorkbookList
 {
@@ -12,5 +8,9 @@ namespace ExcelWorkbookList
 
         List<int> GetIndexListSelectedItem();
         void ClearItems();
+        string GetItemValue(int index);
+        ExcelUtility.AppsInfo ConvertToAppsInfoFromItemValue(string value);
+        List<string> GetValueList();
+        string[] GetSelectedItems();
     }
 }

@@ -21,3 +21,4 @@ C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Release\Com
 C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Release\CommonUtility.csproj.CopyComplete
 C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Release\CommonUtility.dll
 C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Release\CommonUtility.pdb
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\obj\Release\CommonUtility.csprojAssemblyReference.cache
