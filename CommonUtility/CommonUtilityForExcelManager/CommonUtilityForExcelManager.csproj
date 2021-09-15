@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CommonUtility\FileIO.cs">
+      <Link>FileIO.cs</Link>
+    </Compile>
     <Compile Include="..\CommonUtility\FileUtility.cs">
       <Link>FileUtility.cs</Link>
     </Compile>
