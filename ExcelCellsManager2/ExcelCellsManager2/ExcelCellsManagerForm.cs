@@ -129,6 +129,7 @@ namespace ExcelCellsManager
                 _workbookList = new ExcelWorkbookList.ExcelWorkbookList(
                     _error, _excelCellsManagerMain.ExcelManager, _workbookListControl);
                 _excelCellsManagerMain.WorkbookListControl = _workbookListControl;
+                _excelCellsManagerMain.ExcelWorkbookList = _workbookList;
 
                 // StatusStrip 設定
                 StatusBarlabel1 = new ToolStripStatusLabel
