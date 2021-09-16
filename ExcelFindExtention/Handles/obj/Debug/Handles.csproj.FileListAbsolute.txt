@@ -1,7 +1,0 @@
-C:\Users\OK\source\repos\ExcelFindExtention\Handles\obj\Debug\Handles.csprojAssemblyReference.cache
-C:\Users\OK\source\repos\ExcelFindExtention\Handles\obj\Debug\Handles.csproj.CoreCompileInputs.cache
-C:\Users\OK\source\repos\ExcelFindExtention\Handles\bin\Debug\Handles.exe.config
-C:\Users\OK\source\repos\ExcelFindExtention\Handles\bin\Debug\Handles.exe
-C:\Users\OK\source\repos\ExcelFindExtention\Handles\bin\Debug\Handles.pdb
-C:\Users\OK\source\repos\ExcelFindExtention\Handles\obj\Debug\Handles.exe
-C:\Users\OK\source\repos\ExcelFindExtention\Handles\obj\Debug\Handles.pdb

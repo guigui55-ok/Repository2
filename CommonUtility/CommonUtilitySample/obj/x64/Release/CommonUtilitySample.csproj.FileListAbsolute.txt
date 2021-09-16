@@ -1,9 +1,0 @@
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilitySample\bin\x64\Release\CommonUtilitySample.exe.config
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilitySample\bin\x64\Release\CommonUtilitySample.exe
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilitySample\bin\x64\Release\CommonUtilitySample.pdb
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilitySample\obj\x64\Release\CommonUtilitySample.csprojAssemblyReference.cache
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilitySample\obj\x64\Release\CommonUtilitySample.Properties.Resources.resources
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilitySample\obj\x64\Release\CommonUtilitySample.csproj.GenerateResource.cache
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilitySample\obj\x64\Release\CommonUtilitySample.csproj.CoreCompileInputs.cache
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilitySample\obj\x64\Release\CommonUtilitySample.exe
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilitySample\obj\x64\Release\CommonUtilitySample.pdb

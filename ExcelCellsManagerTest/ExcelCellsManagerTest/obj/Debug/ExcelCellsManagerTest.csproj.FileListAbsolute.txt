@@ -1,9 +1,0 @@
-C:\Users\OK\source\repos\ExcelCellsManagerTest\ExcelCellsManagerTest\bin\Debug\ExcelCellsManagerTest.exe.config
-C:\Users\OK\source\repos\ExcelCellsManagerTest\ExcelCellsManagerTest\bin\Debug\ExcelCellsManagerTest.exe
-C:\Users\OK\source\repos\ExcelCellsManagerTest\ExcelCellsManagerTest\bin\Debug\ExcelCellsManagerTest.pdb
-C:\Users\OK\source\repos\ExcelCellsManagerTest\ExcelCellsManagerTest\obj\Debug\ExcelCellsManagerTest.Form1.resources
-C:\Users\OK\source\repos\ExcelCellsManagerTest\ExcelCellsManagerTest\obj\Debug\ExcelCellsManagerTest.Properties.Resources.resources
-C:\Users\OK\source\repos\ExcelCellsManagerTest\ExcelCellsManagerTest\obj\Debug\ExcelCellsManagerTest.csproj.GenerateResource.cache
-C:\Users\OK\source\repos\ExcelCellsManagerTest\ExcelCellsManagerTest\obj\Debug\ExcelCellsManagerTest.csproj.CoreCompileInputs.cache
-C:\Users\OK\source\repos\ExcelCellsManagerTest\ExcelCellsManagerTest\obj\Debug\ExcelCellsManagerTest.exe
-C:\Users\OK\source\repos\ExcelCellsManagerTest\ExcelCellsManagerTest\obj\Debug\ExcelCellsManagerTest.pdb
