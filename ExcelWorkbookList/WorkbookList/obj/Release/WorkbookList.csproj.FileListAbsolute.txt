@@ -1,4 +1,3 @@
-C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\WorkbookList\obj\Release\WorkbookList.csprojAssemblyReference.cache
 C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\WorkbookList\obj\Release\WorkbookList.csproj.CoreCompileInputs.cache
 C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\WorkbookList\bin\Release\WorkbookList.dll
 C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\WorkbookList\bin\Release\WorkbookList.pdb

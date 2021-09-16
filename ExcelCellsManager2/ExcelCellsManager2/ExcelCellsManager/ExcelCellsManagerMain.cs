@@ -15,6 +15,7 @@ using System.Drawing;
 using ExcelUtility;
 using ExcelWorkbookList;
 using CommonUtility;
+using ExcelCellsManager2.ExcelCellsManager.Utility;
 
 namespace ExcelCellsManager
 {
@@ -56,6 +57,7 @@ namespace ExcelCellsManager
         public ProgressDialog.DoWork.ProgressDialogDoWork ProgresDialogDowork;
         public bool IsWorkbookOpening;
         protected ExcelCellsManagerForm _mainForm;
+        public ExcelCellsManagerUtility  ExcelCellsManagerUtility;
         
         public ExcelCellsManagerMain(ErrorManager.ErrorManager error,Form form)
         {
@@ -77,6 +79,7 @@ namespace ExcelCellsManager
             ProgressDialogManager = new ProgressDialog.FormWindow.ProgressDialogManager(_error, form);
             ProgresDialogDowork = new ProgressDialog.DoWork.ProgressDialogDoWork(_error);
             _mainForm = (ExcelCellsManagerForm)form;
+            this.ExcelCellsManagerUtility = new ExcelCellsManagerUtility(_error);
         }
 
         public void SetStatusBarText(string msg)
@@ -524,16 +527,24 @@ namespace ExcelCellsManager
             {
                 try
                 {
+                    _error.AddLog(this, "UpdateList");
                     if (this.AppsState.IsNowUpdateExcelAppsList)
                     {
                         // Update 中は実行しない
-                        _error.AddLogAlert(this, "UpdateList : Tried Excute Update During Update");
+                        _error.AddLogAlert("  UpdateList : Tried Excute Update During Update");
                         return;
                     }
                     this.AppsState.IsNowUpdateExcelAppsList = true;
                     _error.ReleaseErrorState();
                     _error.ClearError();
-                    _error.AddLog(this.ToString() + ".UpdateList");
+
+                    this.ExcelManager.UpdateOpendExcelApplication();
+                    if (_error.hasAlert)
+                    {
+                        _error.AddLogAlert(" UpdateOpendExcelApplication Failed");
+                        _error.ReleaseErrorState();
+                    }
+                    if (true) { _error.AddLog("  UpdateList true return;"); return; }
                     // 
                     // WorkbookNameListを取得する、取得した EXCEL.EXE (Application Object) に Workbook がない場合は
                     // GhostProcess として 文字列 "[PID] EXCEL.EXE" をリスト内に格納する
@@ -593,7 +604,7 @@ namespace ExcelCellsManager
             }
         }
 
-        // ExcelWrokbookList を更新する
+        // ExcelWrokbookList を更新する ★
         public void UpdateList(bool showMsgBox = true)
         {
             try
@@ -1096,30 +1107,25 @@ namespace ExcelCellsManager
                 _error.ClearError();
                 _error.AddLog(this.ToString() + "CloseSave");
                 _error.Messenger.ShowResultSuccessMessage("Close(Save) Workbook Excuting.");
-                ///// 
-                // CheckedBoxList からチェックされている FileName、pid、index を取得する
-                //List<string[]> infoList2 = CheckdListUtil.GetAppsInfoListFromCheckdItemList();
-                //if (_error.hasError)
-                //{ throw new Exception("GetAppsInfoListFromCheckdItemList Failed."); }
-
-                //if (infoList2.Count < 1) {
-                //    errmsg = Constants.ErrorMessage.WORKBOOKLIST_IS_NOT_CHECKED;
-                //    throw new Exception("infoList2.Count < 1");
-                //    //MessageBox.Show(Constants.ErrorMessage.WORKBOOKLIST_IS_NOT_CHECKED, "Error"); return; 
-                //}
-                //// string[] から AppsInfo へ変換する
-                //List<AppsInfo> appsInfoList = ConvertToAppsInfo(infoList2);
-                // チェックされている Item を AppsInfo に変換した List<AppsInfo> を取得する
-                List<AppsInfo> appsInfoList = GetAppsInfoListFromCheckdItemList();
-                if (_error.hasAlert) { throw new Exception("GetAppsInfoListFromCheckdItemList"); }
-                if (appsInfoList.Count < 1) { throw new Exception("ConvertToAppsInfo -> appsInfoList.Count < 1"); }
-                /////////
-                foreach (AppsInfo info in appsInfoList)
+                if (true)
                 {
-                    // filename、pid、index で指定した Workbook を閉じる
-                    ExcelManager.CloseWorkbookByPidAndBookName(
-                        info.ProcessId, info.FileName, info.Index, true, false);
-                    if (_error.hasAlert) { throw new Exception("ExcelManager.CloseWorkbookByPidAndBookName Failed"); }
+                    // チェックされている Workbook を閉じる
+                    ExcelWorkbookList.CloseWorkbookSelectedItems();
+                    if (_error.hasAlert) { throw new Exception("CloseWorkbookSelectedItems Failed"); }
+                } else
+                {
+                    // チェックされている Item を AppsInfo に変換した List<AppsInfo> を取得する
+                    List<AppsInfo> appsInfoList = GetAppsInfoListFromCheckdItemList();
+                    if (_error.hasAlert) { throw new Exception("GetAppsInfoListFromCheckdItemList"); }
+                    if (appsInfoList.Count < 1) { throw new Exception("ConvertToAppsInfo -> appsInfoList.Count < 1"); }
+                    /////////
+                    foreach (AppsInfo info in appsInfoList)
+                    {
+                        // filename、pid、index で指定した Workbook を閉じる
+                        ExcelManager.CloseWorkbookByPidAndBookName(
+                            info.ProcessId, info.FileName, info.Index, true, false);
+                        if (_error.hasAlert) { throw new Exception("ExcelManager.CloseWorkbookByPidAndBookName Failed"); }
+                    }
                 }
                 // Update
                 UpdateList(true,true);

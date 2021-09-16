@@ -110,6 +110,7 @@
     <Compile Include="ExcelCellsManager\Settings\ISettingsRegister.cs" />
     <Compile Include="ExcelCellsManager\Settings\SettingsRegisterToIni.cs" />
     <Compile Include="ExcelCellsManager\Settings\SettingsRegisterToReg.cs" />
+    <Compile Include="ExcelCellsManager\Utility\ExcelCellsManagerUtility.cs" />
     <Compile Include="ExcelUtility\ExcelAddressChecker.cs" />
     <Compile Include="ExcelUtility\ExcelCells.cs" />
     <Compile Include="ExcelUtility\ExcelCellsController.cs" />
@@ -155,7 +156,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ExcelCellsManager\Utility\" />
     <Folder Include="WorkbookList\" />
   </ItemGroup>
   <ItemGroup>

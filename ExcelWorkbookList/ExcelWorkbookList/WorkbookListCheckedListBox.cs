@@ -64,10 +64,11 @@ namespace ExcelWorkbookList
             {
                 _err.AddLog(this, "SetWorkbookList");
                 ClearItems();
-                if (_err.hasAlert) { return; }
+                if (_err.hasAlert) { _err.AddLog("ClearItems Failed. return");  return; }
                 if (list == null) { _err.AddLogWarning(" list == null"); return; }
                 if(list.Count < 1) { _err.AddLogWarning(" list.Count < 1"); return; }
                 this.CheckedListBox.Items.AddRange(list.ToArray());
+                _err.AddLog(" CheckedListBox.Items.AddRange List.count="+list.Count);
             } catch(Exception ex)
             {
                 _err.AddException(ex,this, "SetWorkbookList");
