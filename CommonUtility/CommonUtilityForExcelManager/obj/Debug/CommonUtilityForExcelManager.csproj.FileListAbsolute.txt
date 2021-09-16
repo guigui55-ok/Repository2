@@ -1,9 +1,0 @@
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\obj\Debug\CommonUtilityForExcelManager.csproj.CoreCompileInputs.cache
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\bin\Debug\CommonUtilityForExcelManager.dll
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\bin\Debug\CommonUtilityForExcelManager.pdb
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\bin\Debug\ErrorManager.dll
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\bin\Debug\ErrorManager.pdb
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\bin\Debug\ErrorManager.dll.config
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\obj\Debug\CommonUtilityForExcelManager.csproj.CopyComplete
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\obj\Debug\CommonUtilityForExcelManager.dll
-C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\obj\Debug\CommonUtilityForExcelManager.pdb
