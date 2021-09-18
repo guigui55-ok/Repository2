@@ -13,6 +13,7 @@ namespace ExcelWorkbookList
         protected ExcelManager _excelManager;
         protected IWorkbookListControl _workbookListControl;
         public List<BookInfo> WorkbookList;
+        public bool IsSyncWhenExcelFileOpenAndClose = true;
 
         public class BookInfo
         {

@@ -1,0 +1,10 @@
+C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\obj\Release\ExcelManagerConsoleSample.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\bin\x64\Release\ExcelManagerConsoleSample.exe.config
+C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\bin\x64\Release\ExcelManagerConsoleSample.exe
+C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\bin\x64\Release\ExcelManagerConsoleSample.pdb
+C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\bin\x64\Release\ErrorManager.dll
+C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\bin\x64\Release\ExcelManager.dll
+C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\bin\x64\Release\CommonUtilityForExcelManager.dll
+C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\obj\Release\ExcelManagerConsoleSample.csproj.CopyComplete
+C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\obj\Release\ExcelManagerConsoleSample.exe
+C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\obj\Release\ExcelManagerConsoleSample.pdb

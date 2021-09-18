@@ -1,0 +1,6 @@
+C:\Users\OK\source\repos\Repository3\ManualBuild\TestBuild\TestBuild\bin\Release\TestBuild.exe.config
+C:\Users\OK\source\repos\Repository3\ManualBuild\TestBuild\TestBuild\bin\Release\TestBuild.exe
+C:\Users\OK\source\repos\Repository3\ManualBuild\TestBuild\TestBuild\bin\Release\TestBuild.pdb
+C:\Users\OK\source\repos\Repository3\ManualBuild\TestBuild\TestBuild\obj\Release\TestBuild.csprojResolveAssemblyReference.cache
+C:\Users\OK\source\repos\Repository3\ManualBuild\TestBuild\TestBuild\obj\Release\TestBuild.exe
+C:\Users\OK\source\repos\Repository3\ManualBuild\TestBuild\TestBuild\obj\Release\TestBuild.pdb
