@@ -20,11 +20,14 @@ namespace ExcelUtility
         protected WindowControlUtility _WindowUtil;
         protected FileUtility _FileUtil;
         protected List<ExcelApps> _ExcelAppsList = new List<ExcelApps>();
+        // ExcelAppsList.Count が 0 になったとき
+        public EventHandler ExcelAppsCountIsZeroEvent;
         // Excel のプロセス名
         protected string _ExcelProcName = "EXCEL";
         protected string _ExcelExeFileName = "EXCEL.EXE";
         // 外部へ紐づけ用 Event
         public IExcelAppsEventBridgeInterface ExcelEventBridge;
+        protected ExcelWorkbookSyncer _excelWorkbookSyncer;
         // Workbook を開いているか(状態管理)
         public bool IsWorkbookOpening;
         // 初回起動時用のフラグ
@@ -37,6 +40,37 @@ namespace ExcelUtility
         public EventHandler UpdateExcelAppsListAfterEvent;
         // 常に Excel.Application を開いておく
         public bool IsAlwaysOpenExcelApplication = true;
+        // エクセルをほかのプロセス(エクスプローラなど)から開いたときに同期する
+        // ExcelAppsList 内の Application のイベント(Open,Close,WindowActivate)がとらえられている場合同期する
+        public bool IsSyncExcelWorkbook
+        {
+            get
+            {
+                if (_excelWorkbookSyncer != null) { return _excelWorkbookSyncer.IsSyncExcelWorkbook; }
+                else { return false; }
+            }
+            set
+            {
+                if (_excelWorkbookSyncer != null) { _excelWorkbookSyncer.IsSyncExcelWorkbook = value; }
+                else { Console.WriteLine("IsSyncExcelWorkbook Property excelWorkbookSyncer == null"); }
+            }
+        }
+        public bool IsWorkbookOpened
+        {
+            get
+            {
+                if (_excelWorkbookSyncer != null) { return _excelWorkbookSyncer.IsWorkbookOpened; }
+                else { return false; }
+            }
+        }
+        public bool IsWorkbookClosed
+        {
+            get
+            {
+                if (_excelWorkbookSyncer != null) { return _excelWorkbookSyncer.IsWorkbookClosed; }
+                else { return false; }
+            }
+        }
 
         public class ExcelFileType
         {
@@ -47,6 +81,13 @@ namespace ExcelUtility
             {
                 return Types.ToList<string>();
             }
+        }
+        public ExcelManager(ErrorManager.ErrorManager error)
+        {
+            _Error = error;
+            _ProcUtil = new ProcessUtility(error);
+            _WindowUtil = new CommonUtility.Pinvoke.WindowControlUtility(error);
+            _excelWorkbookSyncer = new ExcelWorkbookSyncer(_Error, this);
         }
 
         public void ChangeActiveCell(in Application application ,string workbookName ,string worksheetName,string address)
@@ -91,12 +132,6 @@ namespace ExcelUtility
             }
         }
 
-        public ExcelManager(ErrorManager.ErrorManager error)
-        {
-            _Error = error;
-            _ProcUtil = new  ProcessUtility(error);
-            _WindowUtil = new CommonUtility.Pinvoke.WindowControlUtility(error);
-        }
 
         /// <summary>
         ///  ExcelApps のリストを取得する
@@ -268,11 +303,9 @@ namespace ExcelUtility
             try
             {
                 if (_ExcelAppsList == null) { 
-                    //_Error.AddLog(this, "AppsListIsValid _ExcelAppsList == null");  
                     return false; 
                 }
                 if (_ExcelAppsList.Count < 1) { 
-                    //_Error.AddLog(this, "AppsListIsValid _ExcelAppsList.Count < 1"); 
                     return false; 
                 }
                 return true;
@@ -315,10 +348,13 @@ namespace ExcelUtility
         /// </summary>
         public void UpdateOpendExcelApplication()
         {
+            int ret = 0;
+            bool isAddList = false;
             try
             {
                 _Error.AddLog(this,"UpdateOpendExcelApplication");
-                if (IsUpdating) { _Error.AddLogWarning("  IsUpdatting = true"); return; }
+                if (IsUpdating) { _Error.AddLogWarning("  IsUpdatting = true , return"); return; }
+                else { IsUpdating = true; }
                 _Error.ReleaseErrorState();
                 _Error.ClearError();
 
@@ -342,6 +378,9 @@ namespace ExcelUtility
                 { 
                     _Error.AddLogWarning(this, "GetExcelApplicationFromGetActiveObject Applicatoin is Null");
 
+                    // Application が Null の場合は追加する
+                    isAddList = true;
+
                     // 常に Exce.Application を起動しておくフラグが True
                     // ＆ Application がない場合は Create する
                     if (IsAlwaysOpenExcelApplication)
@@ -352,20 +391,32 @@ namespace ExcelUtility
                         ExcelApps apps = new ExcelApps(_Error);
                         apps.CreateNewApplication(true);
                         apps.IsGhost = true;
+                        _Error.AddLog(" set apps.IsGhost=true");
                         // ProcessId をメンバ変数へセットする
                         apps.SetProcessIdFromExcelApplication();
-                        if (_Error.hasError) { return; }
+                        if (_Error.hasError) { _Error.AddLogWarning("SetProcessIdFromExcelApplication failed"); _Error.ClearError(); }
                         // WorkbookActivate イベントハンドラをセットする
                         apps.SetWorkbookEvent();
+                        _excelWorkbookSyncer.SetEvent(apps.Application);
                         newApps = apps;
+
+                        // 常に起動する場合は追加する
+                        isAddList = true;
                     } else
                     {
                         _Error.AddLog(this, "ExcelApplicationRunWhenNothing=false");
                     }
 
                     //return; 
+                } else {
+                    if(_ExcelAppsList.Count < 1)
+                    {
+                        isAddList = true;
+                    }
                 }
 
+                
+                // Excel.Application 起動時は newApps.Application のみある状態
                 // ProcessId をメンバ変数へセットする
                 newApps.SetProcessIdFromExcelApplication();
                 if (_Error.hasError)
@@ -381,20 +432,22 @@ namespace ExcelUtility
                 // 既存のものと ProcessId が合致しない場合は追加する
                 if (!IsExistsProcessId(newApps.ProcessId))
                 {
+                    _Error.AddLog(" IsExistsProcessId=false ,pid="+newApps.ProcessId);
                     // FileList をセットする
-                    newApps.ReSetFileListFromApplication();
-                    if (_Error.hasError)
-                    { _Error.AddLogAlert(this, "ReSetFileListFromApplication Failed"); return; }
                     // WorkbookActivate イベントハンドラをセットする
-                    newApps.SetWorkbookEvent();
-                    if (_Error.hasError)
-                    { _Error.AddLogAlert(this, "SetWorkbookEvent Failed"); return; }
                     // Activate フラグをセットする
-                    newApps.SetActivateFlag();
-                    if (_Error.hasError)
-                    { _Error.AddLogAlert(this, "SetActivateFlag Failed"); return; }
-                    // リストに追加する
-                    appsList.Add(newApps);
+                    ret = UpdateExcelApps(newApps);
+                    if (ret < 1) { _Error.AddLogAlert(this, "UpdateExcelApps Failed"); }
+
+                    if (isAddList)
+                    {
+                        // リストに追加する
+                        appsList.Add(newApps);
+                        _Error.AddLog("  appsList.Add(newApps) 2");
+                    }
+                } else
+                {
+                    _Error.AddLog("  IsExistsProcessId=true , pid="+newApps.ProcessId);
                 }
 
                 // 複数のプロセス EXCEL.EXE があれば取得する
@@ -415,6 +468,7 @@ namespace ExcelUtility
                         //if (bufProc.Id != alreadyExcelId)
                         if(!IsExistsProcessId(bufProc.Id))
                         {
+                            _Error.AddLog("  IsExistsProcessId=false , pid=" + bufProc.Id);
                             newApps = new ExcelApps(_Error,ExcelEventBridge);
                             // プロセス ID から PathList を取得する
                             // PathList から Workbook を取得する
@@ -436,38 +490,113 @@ namespace ExcelUtility
                             if (!IsExistsProcessId(newApps.ProcessId))
                             {
                                 // FileList をセットする
-                                newApps.ReSetFileListFromApplication();
-                                if (_Error.hasError)
-                                { _Error.AddLogAlert(this, "ReSetFileListFromApplication Failed"); continue; }
-
                                 // WorkbookActivate イベントハンドラをセットする
-                                newApps.SetWorkbookEvent();
-                                if (_Error.hasError)
-                                { _Error.AddLogAlert(this, "ReSetFileListFromApplication Failed"); return; }
-
                                 // Activate フラグをセットする
-                                newApps.SetActivateFlag();
-                                if (_Error.hasError)
-                                { _Error.AddLogAlert(this, "SetActivateFlag Failed"); return; }
-
+                                ret = UpdateExcelApps(newApps);
+                                if (ret < 1) { _Error.AddLogAlert(this, "UpdateExcelApps Failed"); }
+                                
                                 // リストに追加する
                                 appsList.Add(newApps);
+                                _Error.AddLog("  appsList.Add(newApps) 3");
                             }
+                        } else
+                        {
+                            _Error.AddLog("  IsExistsProcessId=true , pid="+bufProc.Id);
+                            // WorkbookList が更新されている場合があるので更新する
+                            UpdateExcelApps(newApps);
+                            OverWriteExcelApps(newApps);
                         }
                     }
                 }
+                else
+                {
+                    _Error.AddLog("  [EXCEL] procList.Count > 0");
+                }
                 _Error.AddLog("  ExcelAppsList.Count="+_ExcelAppsList.Count);
-                IsUpdating = false;
+                if (IsUpdating) { _Error.AddLog(" IsUpdating,true=>false"); IsUpdating = false; }
                 return;
             } catch (Exception ex)
             {
                 _Error.AddException(ex, this.ToString() + ".UpdateOpendExcelApplication");
-                IsUpdating = false;
+                if (IsUpdating) { _Error.AddLog(" IsUpdating,true=>false"); IsUpdating = false; }
                 return;
             }
             finally
             {
+                if (IsWorkbookOpened) {
+                    _Error.AddLog("   IsWorkbookOpened,true=>false"); 
+                    _excelWorkbookSyncer.IsWorkbookOpened = false; 
+                }
+                if (IsWorkbookClosed) { 
+                    _Error.AddLog("   IsWorkbookClosed,true=>false");
+                    _excelWorkbookSyncer.IsWorkbookClosed = false;
+                }
+                if (IsUpdating) { _Error.AddLog(" IsUpdating,true=>false"); IsUpdating = false; }
                 UpdateExcelAppsListAfterEvent?.Invoke(null,EventArgs.Empty);
+            }
+        }
+
+        public int OverWriteExcelApps(ExcelApps apps)
+        {
+            try
+            {
+                _Error.AddLog(this,"OverWriteExcelApps");
+                if(_ExcelAppsList == null) { _Error.AddLog("  _ExcelAppsList == null"); return -1; }
+                if(_ExcelAppsList.Count < 1) { _Error.AddLog("  _ExcelAppsList.Count < 1"); return -2; }
+
+                for(int i=0; i<_ExcelAppsList.Count; i++)
+                {
+                    if(_ExcelAppsList[i].ProcessId == apps.ProcessId)
+                    {
+                        _ExcelAppsList[i] = apps;
+                        _Error.AddLog("  OverWriteList index="+i);
+                        return 1;
+                    }
+                }
+                _Error.AddLog("  OverWriteList failed");
+                return -3;
+            } catch (Exception ex)
+            {
+                _Error.AddException(ex, this,"OverWriteExcelApps");
+                return 0;
+            }
+        }
+
+        public int UpdateExcelApps(ExcelApps apps)
+        {
+            int ret = 0;
+            try
+            {
+                _Error.AddLog(this, "UpdateExcelApps");
+                // プロセス ID から PathList を取得する
+                // PathList から Workbook を取得する
+                // Workbook から Application を取得する
+                GetExcelApplicationFromProcess(apps, apps.ProcessId);
+                if (_Error.hasError)
+                { _Error.AddLogAlert(this, "GetExcelApplicationFromProcess Failed"); }
+
+                // FileList をセットする
+                apps.ReSetFileListFromApplication();
+                if (_Error.hasError)
+                { _Error.AddLogAlert(this, "ReSetFileListFromApplication Failed");  }
+
+                // WorkbookActivate イベントハンドラをセットする
+                apps.SetWorkbookEvent();
+                if (_Error.hasError)
+                { _Error.AddLogAlert(this, "SetWorkbookEvent Failed"); }
+                ret = _excelWorkbookSyncer.SetEvent(apps.Application);
+                if (ret < 1) { _Error.AddLogAlert(this, "_excelWorkbookSyncer.SetEvent Failed"); }
+
+                // Activate フラグをセットする
+                apps.SetActivateFlag();
+                if (_Error.hasError)
+                { _Error.AddLogAlert(this, "SetActivateFlag Failed");  }
+
+                return 1;
+            } catch (Exception ex)
+            {
+                _Error.AddException(ex, this.ToString() + ".UpdateExcelApps");
+                return 0;
             }
         }
 
@@ -481,12 +610,20 @@ namespace ExcelUtility
         {
             try
             {
-                if (_ExcelAppsList.Count < 1) { return false; }
+                if (_ExcelAppsList.Count < 1) { _Error.AddLog(this,"IsExistsProcessId list.Count<1"); return false; }
                 
                 foreach (ExcelApps apps in _ExcelAppsList)
                 {
-                    if ( apps.ProcessId == pid) { return true; }
+                    if ( apps.ProcessId == pid) { 
+                        _Error.AddLog(this,"IsExistsProcessId , true pid="+ pid); 
+                        return true;
+                    }
+                    else
+                    {
+                        _Error.AddLog(this, "IsExistsProcessId Loop pid =" + apps.ProcessId);
+                    }
                 }
+                _Error.AddLog(this, "IsExistsProcessId , false pid=" + pid);
                 return false;
             } catch (Exception ex)
             {
@@ -562,8 +699,12 @@ namespace ExcelUtility
                     // ProcessId があるのに、ファイルパスが取得できていないのはゴーストプロセスとする
                     _Error.AddLog(_Error.LogConstants.PRIORITY_CAUTION,_Error.LogConstants.TYPE_LOG,
                         "  Set IsGhost=true , pid=" + pid.ToString());
-                    newApps.IsGhost = true;
+                    newApps.IsGhost=true;
                     return;
+                } else
+                {
+                    newApps.IsGhost = false;
+                    _Error.AddLog("  set newApps.IsGhost=false");
                 }
                 // Path から Workbook を取得する
                 // Workbook から Application を取得する
@@ -704,12 +845,17 @@ namespace ExcelUtility
                     _Error.AddLog(this, "**NewApplication=>ExcelAppsList.Add");
                     apps.CreateNewApplication(true);
                     apps.IsGhost = true;
+                    _Error.AddLog("  apps.IsGhost=true");
                     // ProcessId をメンバ変数へセットする
                     apps.SetProcessIdFromExcelApplication();
+                    _Error.AddLog("  apps.ProcessId = " + apps.ProcessId);
                     if (_Error.hasError) { return; }
                     // WorkbookActivate イベントハンドラ
+                    UpdateExcelApps(apps);
+                    _excelWorkbookSyncer.SetEvent(apps.Application);
                     // リストに追加する
-                    _ExcelAppsList.Add(new ExcelApps(_Error));
+                    _ExcelAppsList.Add(apps);
+                    _Error.AddLog("  _ExcelAppsList.Add(new ExcelApps(_Error)) 4");
                 }
                 else { 
                     _Error.AddLogWarning(" Already Exists Excel Application => return");
@@ -783,6 +929,7 @@ namespace ExcelUtility
                     // もし、Application List がない場合は作る
                     openApps = new ExcelApps(_Error, ExcelEventBridge);
                     _ExcelAppsList.Add(openApps);
+                    _Error.AddLog("  _ExcelAppsList.Add(openApps) 5");
                 }
                 // もし、Nullとなった場合
                 if (openApps == null)
@@ -839,6 +986,7 @@ namespace ExcelUtility
                     if (_Error.hasError) { return; }
                     // WorkbookActivate イベントハンドラをセットする
                     openApps.SetWorkbookEvent();
+                    _excelWorkbookSyncer.SetEvent(openApps.Application);
                     if (_Error.hasError) { return; }
                     // Workbook をアクティブにする
                     openApps.ActivateWrokbook(filePath);
@@ -929,9 +1077,6 @@ namespace ExcelUtility
             try
             {
                 _Error.AddLog(this, "GetAppsInfoListAndGhostProcessNameList");
-                //UpdateOpendExcelApplication();
-                //if (_Error.hasError) { throw new Exception("UpdateOpendExcelApplication Failed"); }
-
                 if (_ExcelAppsList.Count < 1)
                 {
                     _Error.AddLogAlert("  _ExcelAppsList.Count < 1 return"); return retList;
@@ -1027,6 +1172,7 @@ namespace ExcelUtility
         /// Workbook を閉じる
         /// Pid,Book名,index (Book名が同じ場合があるので)から Workbook を判別する
         /// GhostProcess にも使用できる
+        /// Close の実行関数
         /// </summary>
         /// <param name="pid"></param>
         /// <param name="bookName"></param>
@@ -1041,7 +1187,7 @@ namespace ExcelUtility
             try
             {
                 _Error.AddLog(this.ToString()+ ".CloseWorkbookByPidAndBookName");
-                _Error.AddLog(pid + "/"+bookName+"/"+index+"/isSave="+isSave+"/"+"isConform="+isConform+
+                _Error.AddLog(pid + "/"+bookName+ "/ExcelAppsList.index=" + index+"/isSave="+isSave+"/"+"isConform="+isConform+
                     "/saveAsName="+SaveAsName+ "/"+"saveFilePath="+saveFilePath);
                 if (_ExcelAppsList.Count < 1){ throw new Exception("ExcelAppsList.Count Is Null"); }
                 int count = 0;
@@ -1269,8 +1415,7 @@ namespace ExcelUtility
         {
             try
             {
-                _Error.AddLog(this.ToString()+".RemoveAppsAfterCloseProcess : pid = "+ pid);
-                //if (_ExcelAppsList.Count < 1) { throw new Exception("ExcelAppsList.Count Is Zero"); }
+                _Error.AddLog(this,"RemoveAppsAfterCloseProcess : pid = "+ pid);
                 if (_ExcelAppsList.Count < 1) { _Error.AddLogWarning("ExcelAppsList.Count Is Zero"); return; }
 
                 int count = -1;
@@ -1290,7 +1435,7 @@ namespace ExcelUtility
                 if (count >= 0)
                 {
                     CloseApplicationWithKillProcess(_ExcelAppsList[count]);
-                    _ExcelAppsList.RemoveAt(count);
+                    RemoveExcelAppsList(count);
                     // 削除したときは処理の順番が変わる
                     _Error.AddLog("_ExcelAppsList.RemoveAt Success count="+count);
                 }
@@ -1298,6 +1443,30 @@ namespace ExcelUtility
             {
                 _Error.AddException(ex, this.ToString() + ".RemoveAppsAfterCloseProcess");
                 return;
+            }
+        }
+        private int RemoveExcelAppsList(int index)
+        {
+            try
+            {
+                _ExcelAppsList.RemoveAt(index);
+
+                if(_ExcelAppsList.Count < 1)
+                {
+                    _Error.AddLog(this, "RemoveExcelAppsList : ExcelAppsList.Count<1");
+
+                    if (IsAlwaysOpenExcelApplication)
+                    {
+                        _Error.AddLog("  IsAlwaysOpenExcelApplication=true");
+                        ExcelApplicationRunWhenNothing(false);
+                    }
+                    ExcelAppsCountIsZeroEvent?.Invoke(null,EventArgs.Empty);
+                }
+                return 1;
+            } catch (Exception ex)
+            {
+                _Error.AddException(ex, this,"RemoveExcelAppsList");
+                return 0;
             }
         }
         /// <summary>

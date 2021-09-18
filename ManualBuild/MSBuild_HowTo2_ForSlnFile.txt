@@ -1,0 +1,27 @@
+
+【VisualStudio】ビルドをバッチで行う
+https://qiita.com/tera1707/items/018e8390207c5b2212b2
+
+rem MSBuildでビルドする(C#)
+cd %~dp0
+MSBuild %slnファイルのパス% /t:clean;rebuild /p:Configuration=Release;Platform="Any CPU"
+if %ERRORLEVEL% neq 0 (
+    echo ErrorLevel:%ERRORLEVEL%
+    echo ビルド失敗
+)
+
+# SolutionFilePath
+C:\Users\OK\source\repos\Repository3\ManualBuild\TestBuild
+
+# SolutionFileName
+TestBuild.sln
+
+# SolutionFilePath
+C:\Users\OK\source\repos\Repository3\ManualBuild\TestBuild\TestBuild.sln
+
+# MSBuild.exe FilePath
+c:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe
+
+# Command
+cd C:\Users\OK\source\repos\Repository3\ManualBuild\TestBuild
+c:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe C:\Users\OK\source\repos\Repository3\ManualBuild\TestBuild\TestBuild.sln /t:clean;rebuild /p:Configuration=Release;Platform="Any CPU"

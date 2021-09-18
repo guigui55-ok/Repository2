@@ -1,0 +1,37 @@
+チュートリアル: MSBuild の使用
+https://docs.microsoft.com/ja-jp/visualstudio/msbuild/walkthrough-using-msbuild?view=vs-2019
+
+チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成
+https://docs.microsoft.com/ja-jp/visualstudio/msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch?view=vs-2019
+
+・c#コンパイラを探す
+dir /b /s | findstr MSBuild.exe$
+
+・MSBuild.exe 場所
+c:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe
+
+・プロジェクトファイル作成
+HelloSample.csproj
+-----------------
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Include="Hello.cs" />
+  </ItemGroup>
+  <Target Name="Build">
+    <Csc Sources="@(Compile)"/>  
+  </Target>
+</Project>
+-----------------
+・アプリケーションのビルド
+
+path:
+C:\Users\OK\source\repos\ManualBuild\HelloSample
+
+command
+msbuild HelloSample.csproj -t:Build
+
+cd C:\Users\OK\source\repos\ManualBuild\HelloSample
+c:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe HelloSample.csproj -t:Build
+
+
+

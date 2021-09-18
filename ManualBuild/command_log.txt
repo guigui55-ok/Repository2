@@ -1,0 +1,157 @@
+Microsoft Windows [Version 10.0.19042.1165]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\OK>
+C:\Users\OK>
+C:\Users\OK>C:\Windows> dir /b /s | findstr csc.exe$
+'C:\Windows' は、内部コマンドまたは外部コマンド、
+操作可能なプログラムまたはバッチ ファイルとして認識されていません。
+
+C:\Users\OK>dir /b /s | findstr csc.exe$
+C:\Users\OK\.vscode\extensions\ms-dotnettools.csharp-1.23.11\.omnisharp\1.37.8\.msbuild\Current\Bin\Roslyn\csc.exe
+
+C:\Users\OK>cd c:\windows
+
+c:\Windows>dir /b /s | findstr csc.exe$
+c:\Windows\Microsoft.NET\Framework\v2.0.50727\csc.exe
+c:\Windows\Microsoft.NET\Framework\v3.5\csc.exe
+c:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe
+c:\Windows\Microsoft.NET\Framework64\v2.0.50727\csc.exe
+c:\Windows\Microsoft.NET\Framework64\v3.5\csc.exe
+c:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+c:\Windows\WinSxS\amd64_netfx-csharp_compiler_csc_b03f5f7f11d50a3a_10.0.19041.1_none_77b40a18a99e4f02\csc.exe
+c:\Windows\WinSxS\amd64_netfx35linq-csharp_31bf3856ad364e35_10.0.19041.1_none_cd1cbc8db3875f47\csc.exe
+c:\Windows\WinSxS\amd64_netfx4-csc_exe_b03f5f7f11d50a3a_4.0.15805.0_none_76eb13d6387f99ed\csc.exe
+c:\Windows\WinSxS\x86_netfx-csharp_compiler_csc_b03f5f7f11d50a3a_10.0.19041.1_none_bf6140efbe1a7808\csc.exe
+c:\Windows\WinSxS\x86_netfx35linq-csharp_31bf3856ad364e35_10.0.19041.1_none_70fe2109fb29ee11\csc.exe
+c:\Windows\WinSxS\x86_netfx4-csc_exe_b03f5f7f11d50a3a_4.0.15805.0_none_be984aad4cfbc2f3\csc.exe
+
+c:\Windows>cd C:\Users\OK\source\repos\ManualBuild\HelloSample
+
+C:\Users\OK\source\repos\ManualBuild\HelloSample>C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe C:\Users\OK\source\repos\ManualBuild\HelloSample\Hello.cs
+Microsoft (R) Visual C# Compiler version 4.8.4084.0
+for C# 5
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+This compiler is provided as part of the Microsoft (R) .NET Framework, but only supports language versions up to C# 5, which is no longer the latest version. For compilers that support newer versions of the C# programming language, see http://go.microsoft.com/fwlink/?LinkID=533240
+
+
+C:\Users\OK\source\repos\ManualBuild\HelloSample>C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe C:\Users\OK\source\repos\ManualBuild\HelloSample\Hello.cs
+Microsoft (R) Visual C# Compiler version 4.8.4084.0
+for C# 5
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+This compiler is provided as part of the Microsoft (R) .NET Framework, but only supports language versions up to C# 5, which is no longer the latest version. For compilers that support newer versions of the C# programming language, see http://go.microsoft.com/fwlink/?LinkID=533240
+
+
+C:\Users\OK\source\repos\ManualBuild\HelloSample>msbuild helloworld.csproj -t:Build
+'msbuild' は、内部コマンドまたは外部コマンド、
+操作可能なプログラムまたはバッチ ファイルとして認識されていません。
+
+C:\Users\OK\source\repos\ManualBuild\HelloSample>cd c:\windows
+
+c:\Windows>dir /b /s | findstr msbuild.exe$
+
+c:\Windows>dir /b /s | findstr MSBuild.exe$
+c:\Windows\assembly\GAC_32\MSBuild\3.5.0.0__b03f5f7f11d50a3a\MSBuild.exe
+c:\Windows\assembly\GAC_64\MSBuild\3.5.0.0__b03f5f7f11d50a3a\MSBuild.exe
+c:\Windows\Microsoft.NET\assembly\GAC_32\MSBuild\v4.0_4.0.0.0__b03f5f7f11d50a3a\MSBuild.exe
+c:\Windows\Microsoft.NET\assembly\GAC_64\MSBuild\v4.0_4.0.0.0__b03f5f7f11d50a3a\MSBuild.exe
+c:\Windows\Microsoft.NET\Framework\v2.0.50727\MSBuild.exe
+c:\Windows\Microsoft.NET\Framework\v3.5\MSBuild.exe
+c:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe
+c:\Windows\Microsoft.NET\Framework64\v2.0.50727\MSBuild.exe
+c:\Windows\Microsoft.NET\Framework64\v3.5\MSBuild.exe
+c:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe
+c:\Windows\WinSxS\amd64_msbuild_b03f5f7f11d50a3a_10.0.19041.1_none_fa6e7f402dbc0227\MSBuild.exe
+c:\Windows\WinSxS\amd64_msbuild_b03f5f7f11d50a3a_3.5.19041.1_none_82a6b3679b68b331\MSBuild.exe
+c:\Windows\WinSxS\amd64_msbuild_b03f5f7f11d50a3a_4.0.15805.0_none_dc3886319c616739\MSBuild.exe
+c:\Windows\WinSxS\wow64_msbuild_b03f5f7f11d50a3a_4.0.15805.0_none_0606cd4b5dabfc56\MSBuild.exe
+c:\Windows\WinSxS\x86_msbuild_b03f5f7f11d50a3a_10.0.19041.1_none_421bb61742382b2d\MSBuild.exe
+c:\Windows\WinSxS\x86_msbuild_b03f5f7f11d50a3a_3.5.19041.1_none_268817e3e30b41fb\MSBuild.exe
+
+c:\Windows>cd C:\Users\OK\source\repos\ManualBuild\HelloSample
+
+C:\Users\OK\source\repos\ManualBuild\HelloSample>c:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe HelloSample.csproj -t:Build
+Microsoft (R) Build Engine バージョン 4.8.4084.0
+[Microsoft .NET Framework、バージョン 4.0.30319.42000]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+2021/09/13 21:35:06 にビルドを開始しました。
+ノード 1 上のプロジェクト "C:\Users\OK\source\repos\ManualBuild\HelloSample\HelloSample.csproj" (Build ターゲット)。
+Build:
+  C:\Windows\Microsoft.NET\Framework64\v2.0.50727\Csc.exe /out:Hello.exe Hello.cs
+プロジェクト "C:\Users\OK\source\repos\ManualBuild\HelloSample\HelloSample.csproj" (Build ターゲット) のビルドが完了しました。
+
+
+ビルドに成功しました。
+    0 個の警告
+    0 エラー
+
+経過時間 00:00:00.98
+
+C:\Users\OK\source\repos\ManualBuild\HelloSample>c:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe HelloSample.csproj -t:Build
+Microsoft (R) Build Engine バージョン 4.8.4084.0
+[Microsoft .NET Framework、バージョン 4.0.30319.42000]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+2021/09/13 21:38:27 にビルドを開始しました。
+ノード 1 上のプロジェクト "C:\Users\OK\source\repos\ManualBuild\HelloSample\HelloSample.csproj" (Build ターゲット)。
+Build:
+  ディレクトリ "Bin\" を作成しています。
+  md "Bin\"
+  C:\Windows\Microsoft.NET\Framework64\v2.0.50727\Csc.exe /out:Bin\HelloSample.exe Hello.cs
+プロジェクト "C:\Users\OK\source\repos\ManualBuild\HelloSample\HelloSample.csproj" (Build ターゲット) のビルドが完了しました。
+
+
+ビルドに成功しました。
+    0 個の警告
+    0 エラー
+
+経過時間 00:00:00.69
+
+C:\Users\OK\source\repos\ManualBuild\HelloSample>c:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe HelloSample.csproj -t:Build
+Microsoft (R) Build Engine バージョン 4.8.4084.0
+[Microsoft .NET Framework、バージョン 4.0.30319.42000]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+2021/09/13 21:44:23 にビルドを開始しました。
+ノード 1 上のプロジェクト "C:\Users\OK\source\repos\ManualBuild\HelloSample\HelloSample.csproj" (Build ターゲット)。
+Build:
+  C:\Windows\Microsoft.NET\Framework64\v2.0.50727\Csc.exe /out:Bin\HelloSample.exe Hello.cs AssemblyInfo.cs
+CSC : error CS2001: ソース ファイル 'AssemblyInfo.cs' が見つかりませんでした。 [C:\Users\OK\source\repos\ManualBuild\HelloSample\HelloSamp
+le.csproj]
+プロジェクト "C:\Users\OK\source\repos\ManualBuild\HelloSample\HelloSample.csproj" (Build ターゲット) のビルドが終了しました -- 失敗。
+
+
+ビルドに失敗しました。
+
+"C:\Users\OK\source\repos\ManualBuild\HelloSample\HelloSample.csproj" (Build ターゲット) (1) ->
+(Build ターゲット) ->
+  CSC : error CS2001: ソース ファイル 'AssemblyInfo.cs' が見つかりませんでした。 [C:\Users\OK\source\repos\ManualBuild\HelloSample\HelloSa
+mple.csproj]
+
+    0 個の警告
+    1 エラー
+
+経過時間 00:00:00.59
+
+C:\Users\OK\source\repos\ManualBuild\HelloSample>c:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe HelloSample.csproj -t:Build
+Microsoft (R) Build Engine バージョン 4.8.4084.0
+[Microsoft .NET Framework、バージョン 4.0.30319.42000]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+2021/09/13 21:44:38 にビルドを開始しました。
+ノード 1 上のプロジェクト "C:\Users\OK\source\repos\ManualBuild\HelloSample\HelloSample.csproj" (Build ターゲット)。
+Build:
+  C:\Windows\Microsoft.NET\Framework64\v2.0.50727\Csc.exe /out:Bin\HelloSample.exe Hello.cs TestClass.cs
+プロジェクト "C:\Users\OK\source\repos\ManualBuild\HelloSample\HelloSample.csproj" (Build ターゲット) のビルドが完了しました。
+
+
+ビルドに成功しました。
+    0 個の警告
+    0 エラー
+
+経過時間 00:00:00.68
+
+C:\Users\OK\source\repos\ManualBuild\HelloSample>

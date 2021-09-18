@@ -53,13 +53,16 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CommonUtilityForExcelManager">
+      <HintPath>..\dlls\CommonUtilityForExcelManager.dll</HintPath>
+    </Reference>
     <Reference Include="ErrorManager, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ErrorManager\ErrorManager\bin\Release\ErrorManager.dll</HintPath>
+      <HintPath>..\dlls\ErrorManager.dll</HintPath>
     </Reference>
     <Reference Include="ExcelManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ExcelManager\ExcelManager\bin\Release\ExcelManager.dll</HintPath>
+      <HintPath>..\dlls\ExcelManager.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -84,6 +87,7 @@
     <Compile Include="IWorkbookListControl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateControlAsync.cs" />
     <Compile Include="WorkbookListCheckedListBox.cs" />
     <EmbeddedResource Include="ExcelWorkbookListForm.resx">
       <DependentUpon>ExcelWorkbookListForm.cs</DependentUpon>

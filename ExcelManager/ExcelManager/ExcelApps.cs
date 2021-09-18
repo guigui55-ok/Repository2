@@ -349,13 +349,14 @@ namespace ExcelUtility
                 return;
             }
         }
+
         public void SetWorkbookEvent()
         {
             try
             {
                 _Error.AddLog(this, "SetWorkbookEvent");
-                if (IsGhost) { _Error.AddLog(" IsGhost=true"); }
                 if (Application == null) { throw new Exception("Application Is Null"); }
+                if (IsGhost) { _Error.AddLog(" IsGhost=true , continue SetEvent"); }
                 if(Application.Workbooks.Count > 0)
                 {
                     // Excel.Application.Workbooks から FilePath を取得する
@@ -370,6 +371,7 @@ namespace ExcelUtility
                 {
                     _Error.AddLog(" Application.Workbooks.Count < 1");
                 }
+                
                 Application.WindowActivate += AppsWindowActivate;
                 Application.WindowDeactivate += AppsDeactivate;
                 Application.WindowResize += this.Application_WindowResizeHandler;
@@ -533,6 +535,7 @@ namespace ExcelUtility
                 {
                     retList.Add(this.Application.Workbooks[i].Name);
                 }
+                _Error.AddLog(this, "GetWorkbookNameList.Count="+ this.Application.Workbooks.Count);
                 return retList;
             } catch (Exception ex)
             {

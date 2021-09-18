@@ -1,0 +1,14 @@
+C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\obj\x64\Release\ExcelWorkbookList.ExcelWorkbookListForm.resources
+C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\obj\x64\Release\ExcelWorkbookList.Properties.Resources.resources
+C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\obj\x64\Release\ExcelWorkbookList.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\obj\x64\Release\ExcelWorkbookList.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\bin\x64\Release\ExcelWorkbookList.exe.config
+C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\bin\x64\Release\ExcelWorkbookList.exe
+C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\bin\x64\Release\ExcelWorkbookList.pdb
+C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\bin\x64\Release\ErrorManager.dll
+C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\bin\x64\Release\ExcelManager.dll
+C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\obj\x64\Release\ExcelWorkbookList.csproj.CopyComplete
+C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\obj\x64\Release\ExcelWorkbookList.exe
+C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\obj\x64\Release\ExcelWorkbookList.pdb
+C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\bin\x64\Release\CommonUtilityForExcelManager.dll
+C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\obj\x64\Release\ExcelWorkbookList.csprojAssemblyReference.cache

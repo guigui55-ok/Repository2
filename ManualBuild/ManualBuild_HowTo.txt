@@ -1,0 +1,41 @@
+https://www.sejuku.net/blog/104421
+
+Visual Studio が無い Windows 環境で c# コードをコンパイルする
+https://qiita.com/asterisk9101/items/4f0e8da6d1e2e9df8e14
+
+・c#コンパイラを探す
+dir /b /s | findstr csc.exe$
+
+c:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+
+
+・ソース
+C#入門①　C#とは〜Hello world
+https://qiita.com/chihiro/items/3add1d18407751eb38c8
+MyApp.cs
+using System;
+
+public class Hello{
+  public static void Main(){
+    Console.WriteLine("hello world!");
+    Console.ReadKey();
+  }
+}
+
+・ソースパス
+C:\Users\OK\source\repos\ManualBuild\HelloSample\Hello.cs
+
+
+・コンパイル
+cd C:\Users\OK\source\repos\ManualBuild\HelloSample
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe C:\Users\OK\source\repos\ManualBuild\HelloSample\Hello.cs
+・実行結果
+Microsoft (R) Visual C# Compiler version 4.8.4084.0
+for C# 5
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+This compiler is provided as part of the Microsoft (R) .NET Framework, but only supports language versions up to C# 5, which is no longer the latest version. For compilers that support newer versions of the C# programming language, see http://go.microsoft.com/fwlink/?LinkID=533240
+
+
+
+
