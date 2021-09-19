@@ -11,7 +11,7 @@ namespace ProgressDialog.FormWindow
         protected ErrorManager.ErrorManager _err;
         public ProgressDialogForm _processingDialog;
         public Form ParentForm;
-        public Form ProcessingDialog { get => _processingDialog; set => _processingDialog = (ProgressDialogForm)value; }
+        public Form ProcessingDialog { get { return _processingDialog; } set { _processingDialog = (ProgressDialogForm)value; } }
         public string FormText = "Now Processing...";
         public string WindowTitle = "ProgressDialog";
         public ProgressDialogManager(ErrorManager.ErrorManager err,Form parentForm)
@@ -25,7 +25,7 @@ namespace ProgressDialog.FormWindow
             
         }
         protected int _timeout = 30 * 1000;
-        public int Timeout { get => _timeout; set => _timeout = value; }
+        public int Timeout { get { return _timeout; } set { _timeout = value; } }
         public void Initialize(DoWorkEventHandler doWorkEventHandler,int timeout = 30 * 1000)
         {
             try

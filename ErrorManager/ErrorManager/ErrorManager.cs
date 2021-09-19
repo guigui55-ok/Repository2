@@ -29,7 +29,7 @@ namespace ErrorManager
         protected DebugData _LastDebugData;
         protected List<DebugData> _DebugDataList = new List<DebugData>();
         protected Log.LogManager Log;
-        public int SetLogIndexLimit { get => Log.LimitIndex; set => Log.LimitIndex = value; }
+        public int SetLogIndexLimit { get { return Log.LimitIndex; } set { Log.LimitIndex = value; } }
         public bool hasAlert
         {
             get { return this.HasAlert(); }
@@ -226,7 +226,7 @@ namespace ErrorManager
         ///  最後に発生した例外の Message を取得する
         /// </summary>
         public string GetExceptionMessage() { 
-            if (LastException is null) { return ""; }
+            if (LastException == null) { return ""; }
             string ret = LastException.Message;
             LastException = null;
             return ret;
@@ -284,7 +284,7 @@ namespace ErrorManager
         /// </summary>
         public string GetExceptionMessageAndStackTrace()
         {
-            if (LastException is null) { return ""; }
+            if (LastException == null) { return ""; }
             string buf = LastException.Message + "\n--- StacTrace ---\n" + LastException.StackTrace;
             LastException = null;
             return buf;
@@ -715,7 +715,7 @@ namespace ErrorManager
                 //    _DebugDataList.Add(NowDebugData);
                 //    return;
                 //}
-                //if (!(exceptoin is null))
+                //if (!(exceptoin == null))
                 // ex==null かどうか関係なく管理する
                 {
                     _LastDebugData = new DebugData
@@ -837,7 +837,7 @@ namespace ErrorManager
         public void AddException(Exception ex,string msg,string msgToUser)
         {
             this.AddException(ex, msg, msgToUser, Constants.TYPE_ALERT, 0);
-            //if (!(ex is null))
+            //if (!(ex == null))
             //{
             //    _LastDebugData = new DebugData
             //    {
@@ -883,7 +883,7 @@ namespace ErrorManager
             if (DebugMode == 1)
             {
                 Debug.WriteLine(msg);
-                if (!(ex is null)) { Debug.WriteLine(ex.Message); }
+                if (!(ex == null)) { Debug.WriteLine(ex.Message); }
             }
         }
 

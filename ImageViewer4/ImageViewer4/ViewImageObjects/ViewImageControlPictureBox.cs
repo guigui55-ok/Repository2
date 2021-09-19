@@ -59,13 +59,13 @@ namespace ViewImageObjects
         {
             try {
                 //if (Object.ReferenceEquals(form.GetType(), new Form().GetType()))
-                if (!( panel is Panel panel1))
+                if (!( panel.GetType().Equals(typeof(Panel))))
                 {
                     return -1;
                 }
                 else
                 {
-                    _parentControl = panel1;
+                    _parentControl = (Panel)panel;
                 }
                 return 1;
             }
@@ -324,13 +324,13 @@ namespace ViewImageObjects
 
         public void SuspenLayout()
         {
-            if (_pictureBox is null) { return; }
+            if (_pictureBox == null) { return; }
             _pictureBox.SuspendLayout();
         }
 
         public void ResumeLayout()
         {
-            if (_pictureBox is null) { return; }
+            if (_pictureBox == null) { return; }
             _pictureBox.ResumeLayout();
         }
     }

@@ -70,7 +70,7 @@ namespace ControlUtility
             {
                 _err.AddLog(this, "Control_DragDrop");
                 // 受け取った EventArgs はほかのクラスで処理する
-                DragAndDropAfterEvent?.Invoke(sender, e);
+                if (DragAndDropAfterEvent != null) { DragAndDropAfterEvent.Invoke(sender, e); }
             }
             catch (Exception ex)
             {

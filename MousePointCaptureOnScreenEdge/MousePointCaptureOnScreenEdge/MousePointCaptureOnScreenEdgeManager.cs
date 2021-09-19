@@ -354,22 +354,22 @@ namespace MousePointCapture
         private void LeftForm_MouseEnter(object sender,EventArgs e)
         {
             //_error.AddLog("LeftForm_MouseEnter");
-            LeftForm_MouseEnterEvent?.Invoke(sender, e);
+            if (LeftForm_MouseEnterEvent != null) { LeftForm_MouseEnterEvent.Invoke(sender, e); }
         }
         private void TopForm_MouseEnter(object sender,EventArgs e)
         {
             //_error.AddLog("TopForm_MouseEnter");
-            TopForm_MouseEnterEvent?.Invoke(sender,e);
+            if (TopForm_MouseEnterEvent != null) { TopForm_MouseEnterEvent.Invoke(sender, e); }
         }
         private void RightForm_MouseEnter(object sender,EventArgs e)
         {
             //_error.AddLog("RightForm_MouseEnter");
-            RightForm_MouseEnterEvent?.Invoke(sender,e);
+            if (RightForm_MouseEnterEvent != null) { RightForm_MouseEnterEvent.Invoke(sender, e); }
         }
         private void BottomForm_MouseEnter(object sender,EventArgs e)
         {
             //_error.AddLog("BottomForm_MouseEnter");
-            BottomForm_MouseEnterEvent?.Invoke(sender, e);
+            if (BottomForm_MouseEnterEvent != null) { BottomForm_MouseEnterEvent.Invoke(sender, e); }
         }
         private void LeftForm_MouseMove(object sender,MouseEventArgs e)
         {
@@ -380,7 +380,7 @@ namespace MousePointCapture
                     if (e.X != (_minFormSize.Width - 1)) { _error.AddLog("LeftForm_MouseMove [e.X != (_minFormSize.Width -1)] x=" + e.X); }
                     else
                     {
-                        LeftForm_MouseMoveEvent?.Invoke(sender, e);
+                        if (LeftForm_MouseMoveEvent != null) { LeftForm_MouseMoveEvent.Invoke(sender, e); }
                     }
                 }
             } catch (Exception ex) { _error.AddException(ex, this.ToString() + ".LeftForm_MouseMove"); }
@@ -394,7 +394,7 @@ namespace MousePointCapture
                     if (e.Y != (_minFormSize.Height - 1)) { _error.AddLog("TopForm_MouseMove [e.Y != (_minFormSize.Height -1)] y= " + e.Y); }
                     else
                     {
-                        TopForm_MouseMoveEvent?.Invoke(sender, e);
+                        if (TopForm_MouseMoveEvent != null) { TopForm_MouseMoveEvent.Invoke(sender, e); }
                     }
                 }
             } catch (Exception ex) { _error.AddException(ex, this.ToString() + ".TopForm_MouseMove"); }
@@ -408,7 +408,7 @@ namespace MousePointCapture
                     if (e.X != 0) { _error.AddLog("RightForm_MouseMove [e.X != 0] x= " + e.X); }
                     else
                     {
-                        RightForm_MouseMoveEvent?.Invoke(sender, e);
+                        if (RightForm_MouseMoveEvent != null) { RightForm_MouseMoveEvent.Invoke(sender, e); }
                     }
                 }
             }
@@ -423,7 +423,7 @@ namespace MousePointCapture
                     if (e.Y != 0) { _error.AddLog("BottomForm_MouseMove [e.Y != 0] y= " + e.Y); }
                     else
                     {
-                        BottomForm_MouseMoveEvent?.Invoke(sender, e);
+                        if (BottomForm_MouseMoveEvent != null) { BottomForm_MouseMoveEvent.Invoke(sender, e); }
                     }
                 }
             }

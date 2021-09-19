@@ -47,13 +47,13 @@ namespace ControlUtility
                 if (po.X > (control.Width / 2))
                 {
                     _err.AddLog(this, " ClickRight");
-                    this.ClickRight?.Invoke(sender, e);
+                    if (ClickRight != null) { ClickRight.Invoke(sender, e); }
                     return 1;
                 }
                 else
                 {
                     _err.AddLog(this, " ClickLeft");
-                    this.ClickRight?.Invoke(sender, e);
+                    if (ClickRight != null) { ClickRight.Invoke(sender, e); }
                     return 2;
                 }
                 // update flag

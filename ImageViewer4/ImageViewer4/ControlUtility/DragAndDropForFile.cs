@@ -33,7 +33,7 @@ namespace ControlUtility
                 _err.AddException(ex, this, "DragAndDropAfterEvent");
             } finally
             {
-                DragAndDropEventAfterEventForFile?.Invoke(sender, e);
+                if (DragAndDropEventAfterEventForFile != null) { DragAndDropEventAfterEventForFile.Invoke(sender, e); }
             }
         }
 
