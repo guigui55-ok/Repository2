@@ -48,8 +48,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ErrorManager">
+      <HintPath>..\dlls\ErrorManager.dll</HintPath>
+    </Reference>
     <Reference Include="IniManager">
-      <HintPath>..\..\IniManager\IniManager\bin\Release\IniManager.dll</HintPath>
+      <HintPath>..\dlls\IniManager.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

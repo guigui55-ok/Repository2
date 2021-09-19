@@ -1,0 +1,10 @@
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\obj\Debug\IniManagerSample.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\obj\Debug\IniManagerSample.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\bin\Debug\IniManagerSample.exe.config
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\bin\Debug\IniManagerSample.exe
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\bin\Debug\IniManagerSample.pdb
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\bin\Debug\ErrorManager.dll
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\bin\Debug\IniManager.dll
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\obj\Debug\IniManagerSample.csproj.CopyComplete
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\obj\Debug\IniManagerSample.exe
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\obj\Debug\IniManagerSample.pdb

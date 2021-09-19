@@ -3,7 +3,6 @@
 
 ## ■ ExcelCellsManager2  
 ### Description  
-
 エクセルの任意のセルの位置(アドレス)を登録し、登録した位置を表示するアプリケーションです。  
 ※プロジェクト： ExcelCellsManager2.sln > ExcelCellsManager2.csproj   
 #### 主な機能
@@ -25,7 +24,7 @@ Ctrl＋Shift＋O：設定ウィンドウを開く
 
 * DataGridView の RowHeader ダブルクリックで登録した位置を表示します。  
 * 動作時のログ保存、出力をします。  
-* 表示されているワークブックを閉じます。  
+* CheckedListBox で選択されているワークブックを閉じます。  
 * アプリケーション設定をファイル(iniファイル)に保存します。  
 
 #### 経緯  
@@ -38,20 +37,19 @@ Ctrl＋Shift＋O：設定ウィンドウを開く
 * ツールバー作成
 
 #### 更新履歴
-// 3.1.0.0
-// 2021/09/20
-// メニューバーを追加
-// 2.1.0.0
-// 2021/09/19
-// ExcelManager.dll,WorkbookList.dll を修正
-// 1.0.0.0
-// ExcelCellsManagerTest から ExcelCellsManager2 にソリューション、プロジェクトを変更
-// ExcelManager.dll,WorkbookList.dll を追加
+// 3.1.0.0  
+// 2021/09/20  
+// メニューバーを追加  
+// 2.1.0.0  
+// 2021/09/19  
+// ExcelManager.dll,WorkbookList.dll を修正  
+// 1.0.0.0  
+// ExcelCellsManagerTest から ExcelCellsManager2 にソリューション、プロジェクトを変更  
+// ExcelManager.dll,WorkbookList.dll を追加  
   
 ## ■ CommonUtility
-## Summary  
+## Description  
 いろいろなクラスで使用する汎用的な機能をまとめたクラスです。  
-(作成中)
 
 ## ■ ErrorManager (LogManager)
 ## Description  

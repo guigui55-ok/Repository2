@@ -1,0 +1,12 @@
+C:\Users\OK\source\repos\Repository2\MousePointCaptureOnScreenEdge\MousePointCaptureOnScreenEdge\bin\Release\MousePointCapture.exe.config
+C:\Users\OK\source\repos\Repository2\MousePointCaptureOnScreenEdge\MousePointCaptureOnScreenEdge\bin\Release\MousePointCapture.exe
+C:\Users\OK\source\repos\Repository2\MousePointCaptureOnScreenEdge\MousePointCaptureOnScreenEdge\bin\Release\MousePointCapture.pdb
+C:\Users\OK\source\repos\Repository2\MousePointCaptureOnScreenEdge\MousePointCaptureOnScreenEdge\bin\Release\ErrorManager.dll
+C:\Users\OK\source\repos\Repository2\MousePointCaptureOnScreenEdge\MousePointCaptureOnScreenEdge\obj\Release\MousePointCaptureOnScreenEdge.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\Repository2\MousePointCaptureOnScreenEdge\MousePointCaptureOnScreenEdge\obj\Release\MousePointCapture.MousePointCaptureOnScreenEdgeForm.resources
+C:\Users\OK\source\repos\Repository2\MousePointCaptureOnScreenEdge\MousePointCaptureOnScreenEdge\obj\Release\MousePointCapture.Properties.Resources.resources
+C:\Users\OK\source\repos\Repository2\MousePointCaptureOnScreenEdge\MousePointCaptureOnScreenEdge\obj\Release\MousePointCaptureOnScreenEdge.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\Repository2\MousePointCaptureOnScreenEdge\MousePointCaptureOnScreenEdge\obj\Release\MousePointCaptureOnScreenEdge.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository2\MousePointCaptureOnScreenEdge\MousePointCaptureOnScreenEdge\obj\Release\MousePointCaptureOnScreenEdge.csproj.CopyComplete
+C:\Users\OK\source\repos\Repository2\MousePointCaptureOnScreenEdge\MousePointCaptureOnScreenEdge\obj\Release\MousePointCapture.exe
+C:\Users\OK\source\repos\Repository2\MousePointCaptureOnScreenEdge\MousePointCaptureOnScreenEdge\obj\Release\MousePointCapture.pdb

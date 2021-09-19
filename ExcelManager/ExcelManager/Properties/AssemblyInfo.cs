@@ -37,13 +37,16 @@ using System.Runtime.InteropServices;
 
 // 4.0.0.0
 //2021/9/19
-// クラス追加 ExcuteAfterWaitForExit
+// クラス追加 ExcuteAfterWaitForExit (最後のワークブックを閉じるときに ExcelAppsList を更新するクラス)
 // *Update 時の処理見直し
 // Excel.Application が無く、エクセルファイルを起動したときの処理を修正
-//  (Application を補足できなかったり、ExcelAppsList.Count=2 となっていたりした)
+//  (Application を補足できなかったり、ExcelAppsList が重複して Add されていた)
 // Excel.Application.Workbooks.Count =1 のときに WorkbookClose したときの処理を修正
 // ExcelManager.ExcelAppsList<0 && ExcelWorkbookSyncer.IsSyncExcelWorkbook = true &&
-// workbookClose 後に ListUpdate する処理を追加 (ExcelWorkbookSyncer)
+// workbookClose 後に ListUpdate する処理を追加 (ExcelWorkbookSyncer クラスを追加)
+// *IExcelAppsActivationEventBridge に以下メソッドを追加(イベントが2重登録されないための処理を追加した)
+// int SetEventForApplication(in Application application);
+// int SetEventForWorkbook(in Application application, string bookName);
 
 // 3.0.0.0
 //2021/9/18
