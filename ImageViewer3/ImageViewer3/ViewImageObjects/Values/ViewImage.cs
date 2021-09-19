@@ -10,9 +10,9 @@ namespace ImageViewer.Values
         String _path;
         private ErrorLog.IErrorLog _errorLog;
 
-        public ViewImage()
+        public ViewImage(ErrorLog.IErrorLog error)
         {
-            _errorLog = GlobalErrloLog.ErrorLog;
+            _errorLog = error;
         }
         public void SetErrorLog(ErrorLog.IErrorLog errorLog)
         {

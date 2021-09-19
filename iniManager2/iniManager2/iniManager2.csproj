@@ -37,7 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ErrorManager">
-      <HintPath>..\..\ErrorManager\ErrorManager\bin\Release\ErrorManager.dll</HintPath>
+      <HintPath>..\dlls\ErrorManager.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

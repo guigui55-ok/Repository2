@@ -35,7 +35,7 @@ namespace ImageViewer
                 // FileList
                 FileList = new FileList.FileListReader(_errorLog,new List<string>());
                 FileRegister = new FileList.FileListRegister(_errorLog);
-                ViewImage = new ViewImage();
+                ViewImage = new ViewImage(_errorLog);
                 // controls initialize
                 frameControl.Name = "FrameControl" + Number;
                 frameControl.Size = ImageViewerConstants.CONTROL_NEW_SIZE();
