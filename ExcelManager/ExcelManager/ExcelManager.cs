@@ -502,9 +502,18 @@ namespace ExcelUtility
                         } else
                         {
                             _Error.AddLog("  IsExistsProcessId=true , pid="+bufProc.Id);
-                            // WorkbookList が更新されている場合があるので更新する
-                            UpdateExcelApps(newApps);
-                            OverWriteExcelApps(newApps);
+                            if(!(newApps.ProcessId == bufProc.Id))
+                            {
+                                // pid が異なる場合は更新する
+                                newApps = GetExcelAppsFromProcessId(bufProc.Id);
+                                // WorkbookList が更新されている場合があるので更新する
+                                UpdateExcelApps(newApps);
+                                OverWriteExcelApps(newApps);
+                            }
+                            else
+                            {
+
+                            }
                         }
                     }
                 }
@@ -521,8 +530,7 @@ namespace ExcelUtility
                 if (IsUpdating) { _Error.AddLog(" IsUpdating,true=>false"); IsUpdating = false; }
                 return;
             }
-            finally
-            {
+            finally            {
                 if (IsWorkbookOpened) {
                     _Error.AddLog("   IsWorkbookOpened,true=>false"); 
                     _excelWorkbookSyncer.IsWorkbookOpened = false; 
@@ -879,9 +887,9 @@ namespace ExcelUtility
         {
             try
             {
+                _Error.AddLog(this, "OpenFile : path="+filePath);
                 IsWorkbookOpening = true;
                 _Error.ClearError();
-                _Error.AddLog(this.ToString()+ "OpenFile : "+filePath);
                 if (_ExcelAppsList.Count > 0)
                 {
                     // 現在開いている Excel をすべて取得する、メンバ変数 _ExcelAppsList に保存する
@@ -936,7 +944,7 @@ namespace ExcelUtility
                 {
                     throw new Exception("GetExcelAppsWhenOpendFile Value Is Null");
                 }
-
+                // ファイルを開く用の ExcelApps を取得した状態
                 // ファイルを開いているか判定する
                 if (openApps.IsOpendFile(filePath))
                 {
@@ -988,9 +996,13 @@ namespace ExcelUtility
                     openApps.SetWorkbookEvent();
                     _excelWorkbookSyncer.SetEvent(openApps.Application);
                     if (_Error.hasError) { return; }
+                    // Open した Workbook のイベントハンドラをセットする
+                    openApps.SetWorkbookEvent(filePath, System.IO.Path.GetFileName(filePath));
+                    if (_Error.hasError) { return; }
                     // Workbook をアクティブにする
                     openApps.ActivateWrokbook(filePath);
                     if (_Error.hasError) { return; }
+                    OverWriteExcelApps(openApps);
                 }
 
                 Task task = Task.Run(() =>
@@ -1596,6 +1608,7 @@ namespace ExcelUtility
         /// <summary>
         /// Pid、WorkbookName に合致したとき、パスまたは ExcelApps オブジェクトを取得する
         /// 戻り値が object 型なので値取得後にキャストなどの処理が必要
+        /// [Mode によって戻り値の型が変わるため注意 ,1:ExcelApps,2:string]
         /// </summary>
         /// <param name="pid">ProcessID</param>
         /// <param name="bookName">Workbook Name</param>

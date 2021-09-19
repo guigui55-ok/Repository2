@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CommonUtility.ControlUtility;
+using System;
 using System.Windows.Forms;
 
 namespace ExcelCellsManager.ExcelCellsManager.Event
@@ -23,7 +20,7 @@ namespace ExcelCellsManager.ExcelCellsManager.Event
         protected Form _parentForm;
         protected MenuStrip _menuStrip;
         public MenuStripConstants Constants = new MenuStripConstants();
-        CommonUtility.ControlUtility.MenuStripUtility Utility;
+        MenuStripUtility Utility;
 
         public MenuStripManager(ErrorManager.ErrorManager err)
         {

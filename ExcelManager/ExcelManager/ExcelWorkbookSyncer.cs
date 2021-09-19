@@ -32,9 +32,13 @@ namespace ExcelUtility
             {
                 _err.AddLog(this, "SetEvent");
                 if(application == null) { _err.AddLogAlert(" application == null)");  return -1; }
+                application.WorkbookOpen -= Application_WorkbookOpen;
                 application.WorkbookOpen += Application_WorkbookOpen;
+                application.WorkbookBeforeClose -= Application_WorkbookBeforeClose;
                 application.WorkbookBeforeClose += Application_WorkbookBeforeClose;
+                application.WindowActivate -= Application_WindowActivate;
                 application.WindowActivate += Application_WindowActivate;
+                application.WindowDeactivate -= Application_WindowDeactivate;
                 application.WindowDeactivate += Application_WindowDeactivate;
                 return 1;
             } catch (Exception ex)
@@ -51,6 +55,8 @@ namespace ExcelUtility
                 _err.AddLog(this, "UpdateAfterClose");
                 if (_excelManager.IsDoUpdateWhenCloseWorkbook)
                 {
+                    // ExcelApplication が終了してから、Update しなければ
+                    // リストが変わらない、処理が停滞するため、非同期で終了を待ってから更新する
                     _excuteAfterWaitForExit.ExcuteActionAfterWaitForExit = _excelManager.UpdateOpendExcelApplication;
                     _excuteAfterWaitForExit.AsyncWaitForClose(
                         _excelManager.GetExcelAppsList()[0].Application,_excuteAfterWaitForExit.FileName);
@@ -79,12 +85,31 @@ namespace ExcelUtility
         {
             try
             {
-                if (_excelManager.GetWorkbookNameListAndGhostProcessNameList().Count <= 1)
+                _err.AddLog(this, "Application_WindowDeactivate");
+
+                if(IsWorkbookClosed)
                 {
-                    _err.AddLog("Application_WindowDeactivate , workbooks.Count<=1");
-                    _excuteAfterWaitForExit.Path = Wb.Path + "\\" + Wb.Name;
-                    _excuteAfterWaitForExit.FileName = Wb.Name;
-                    _err.AddLog("   _excuteAfterWaitForExit.Path=" + _excuteAfterWaitForExit.Path);
+                    IsWorkbookClosed = true;
+                    // 最後の Workbook を閉じたときは ファイル名とパスを保存する する
+                    if ((_excelManager.GetExcelAppsList().Count <= 1)
+                        && (_excelManager.GetExcelAppsList()[0].GetWorkBooksCount() <= 1))
+                    {
+                        _err.AddLog("Application_WindowDeactivate , workbooks.Count<=1");
+                        _excuteAfterWaitForExit.Path = Wb.Path + "\\" + Wb.Name;
+                        _excuteAfterWaitForExit.FileName = Wb.Name;
+                        _err.AddLog("   _excuteAfterWaitForExit.Path=" + _excuteAfterWaitForExit.Path);
+                        UpdateAfterClose();
+
+                        // Close 後の Activate で更新しているが、最後の時は Application イベントが補足できないので
+                        // 別途ここで Update する
+                    }
+                    else
+                    {
+                        if (_excelManager.IsDoUpdateWhenCloseWorkbook)
+                        {
+                            _excelManager.UpdateOpendExcelApplication();
+                        }
+                    }
                 }
             }
             catch (Exception ex)
@@ -93,7 +118,7 @@ namespace ExcelUtility
             }
             finally
             {
-                UpdateAfterClose();
+                _err.AddLog(this, "Application_WindowDeactivate Finally");
             }
         }
 

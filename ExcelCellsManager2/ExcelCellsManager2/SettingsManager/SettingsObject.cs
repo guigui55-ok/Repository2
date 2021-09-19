@@ -2,7 +2,6 @@
 using CommonUtility.FormUtility;
 using System;
 using System.Windows.Forms;
-using Utility;
 
 namespace SettingsManager
 {

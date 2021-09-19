@@ -44,7 +44,7 @@ namespace ExcelCellsManager
         // etc
         protected ExcelCellsManagerConstants Constants;
         // EdgeForm
-        protected MousePointCapture.MouseCaptureInScreenEdgeManager _mouseCapture;
+        protected MousePointCapture.MousePointCaptureOnScreenEdgeManager _mouseCapture;
         protected string _className = "ExcelCellsManagerForm";
         protected string _thisClassName = "ExcelCellsManagerForm";
         //protected string _ApplicationTitle = "Excel Cells Manager2";

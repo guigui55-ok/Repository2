@@ -87,6 +87,7 @@
     <Compile Include="ExcelCellsManager\DataList\ExcelCellsInfo2.cs" />
     <Compile Include="ExcelCellsManager\DataList\IDataGridViewItems.cs" />
     <Compile Include="ExcelCellsManager\Event\DragDropEvent.cs" />
+    <Compile Include="ExcelCellsManager\Event\ExcelCellsManagerMainEvent.cs" />
     <Compile Include="ExcelCellsManager\Event\ExcellCellsManagerFormKeyEvent.cs" />
     <Compile Include="ExcelCellsManager\Event\ExcelPublicEventHandlerForCellManager.cs" />
     <Compile Include="ExcelCellsManager\Event\MouseEvent.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="ExcelCellsManager\ExcelCellsManagerConstants.cs" />
     <Compile Include="ExcelCellsManager\ExcelCellsManagerErrorMessage.cs" />
     <Compile Include="ExcelCellsManager\ExcelCellsManagerMain.cs" />
+    <Compile Include="ExcelCellsManager\Menu\MenuStripManager.cs" />
     <Compile Include="ExcelCellsManager\SettingsForm\EcmSettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +113,7 @@
     <Compile Include="ExcelCellsManager\Settings\SettingsRegisterToIni.cs" />
     <Compile Include="ExcelCellsManager\Settings\SettingsRegisterToReg.cs" />
     <Compile Include="ExcelCellsManager\Utility\ExcelCellsManagerUtility.cs" />
+    <Compile Include="ExcelUtility\ExcelActiveCellsNotifer.cs" />
     <Compile Include="ExcelUtility\ExcelAddressChecker.cs" />
     <Compile Include="ExcelUtility\ExcelCells.cs" />
     <Compile Include="ExcelUtility\ExcelCellsController.cs" />

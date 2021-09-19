@@ -35,8 +35,8 @@ namespace ExcelCellsManager
         public EventHandler ChangeActiveCell;
         public EventHandler DataGridView_EditEvnet;
         // MouseCapture Edge
-        protected MousePointCapture.MouseCaptureInScreenEdgeManager _mouseCapture;
-        protected MouseCaptureInScreenEdgeFormEvents _mouseCaptureEdgeFormEvents;
+        protected MousePointCapture.MousePointCaptureOnScreenEdgeManager _mouseCapture;
+        protected MousePointCapture.MousePointCaptureOnScreenEdgeFormEvents _mouseCaptureEdgeFormEvents;
         // Etc
         public OpenedFile OpenedFile;
         protected string _fileType = ".tsv";
@@ -67,7 +67,7 @@ namespace ExcelCellsManager
             _saveAsDefaultFileName += _fileType;
             // MouseCapture
             // capture <= EdgeForm
-            _mouseCapture = new MousePointCapture.MouseCaptureInScreenEdgeManager(_error,form);
+            _mouseCapture = new MousePointCapture.MousePointCaptureOnScreenEdgeManager(_error,form);
             _mouseCaptureEdgeFormEvents = _mouseCapture.EdgeFormEvents;
             // SettingsForm
             AppsSettingsFormManager = new EcmSettingsFormManager(_error, form);

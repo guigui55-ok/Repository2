@@ -1,6 +1,7 @@
 ﻿using ExcelUtility;
 using Microsoft.Office.Interop.Excel;
 using System;
+using System.Collections.Generic;
 
 namespace ExcelCellsManager.ExcelCellsManager.Event
 {
@@ -26,6 +27,8 @@ namespace ExcelCellsManager.ExcelCellsManager.Event
         private event EventHandler MApplication_WorkbookBeforeCloseAddEvent;
         protected bool IsWorkbookBeforeClose = false;
 
+        protected List<string> _workbookPathList = new List<string>();
+        protected bool IsSetApplicationEvent = false;
 
         public int Number { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public WorkbookEvents_WindowActivateEventHandler Workbook_WindowActivateEvent 
@@ -252,7 +255,98 @@ namespace ExcelCellsManager.ExcelCellsManager.Event
             }
         }
 
+        public int SetEventForApplication(in Application application)
+        {
+            try
+            {
+                _error.AddLog(this, "SetEventForApplication");
+                if (IsSetApplicationEvent) { _error.AddLog("  Already Set Event , return"); return 1; }
+                if(application == null) { _error.AddLog("  application == null , return"); return -1; }
 
+                application.WindowActivate += this.Application_WindowActivateEvent;
+                application.WindowDeactivate += this.Application_DeactivateEvent;
+                application.SheetSelectionChange += this.Application_SheetSelectionChangeEvent;
+                application.WorkbookOpen += this.Application_WorkbookOpenEvent;
+                application.WorkbookBeforeClose += this.Application_WorkbookBeforeCloseEvent;
+                application.SheetActivate += this.Application_SheetActivateEvent;
+                return 1;
+            } catch (Exception ex)
+            {
+                _error.AddException(ex, this, "SetEventForApplication");
+                return 0;
+            }
+        }
 
+        public int SetEventForWorkbook(in Application application, string bookName)
+        {
+            try
+            {
+                _error.AddLog(this, "SetWorkbookEvent(string)");
+                if (application == null) { _error.AddLogWarning("Application == null"); return -1; }
+                if (application.Workbooks.Count < 1) { _error.AddLogWarning("Application.Workbooks.Count < 1"); return -2; }
+
+                bool IsSetEvent = true;
+                bool filePathCheck = true;
+                bool IsFirst = true;
+
+                if (_workbookPathList == null) { 
+                    _error.AddLogWarning("FilePathList.Count == null"); 
+                    filePathCheck = false;
+                    IsFirst = true;
+                } else
+                {
+                    if (_workbookPathList.Count < 1)
+                    {
+                        _error.AddLogWarning("FilePathList.Count < 1");
+                        filePathCheck = false;
+                        IsFirst = true;
+                    }
+                }
+                if (IsFirst)
+                {
+                    for(int i = 1; i<=application.Workbooks.Count; i++)
+                    {
+                        string buf = application.Workbooks[i].Path + "\\" + application.Workbooks[i].Name;
+                        _workbookPathList.Add(buf);
+                    }
+                    if(_workbookPathList.Count < 1) { filePathCheck = false; }
+                }
+
+                if (filePathCheck)
+                {
+                    foreach (string value in _workbookPathList)
+                    {
+                        if (value.Equals(_workbookPathList))
+                        {
+                            // 同じものがあったら登録しない
+                            IsSetEvent = false;
+                        }
+                    }
+                }
+                if (IsSetEvent)
+                {
+                    for (int i = 1; i < application.Workbooks.Count; i++)
+                    {
+                        if (bookName.Equals(application.Workbooks[i].Name))
+                        {
+                            application.Workbooks[i].WindowActivate += this.Workbook_WindowActivateEvent;
+                            application.Workbooks[i].Deactivate += this.Workbook_DeactivateEvent;
+                            application.Workbooks[i].SheetActivate += this.WorkSheet_ActivateEvent;
+                        }
+                    }
+                    _error.AddLog("  SetEvent");
+                }
+                else
+                {
+                    _error.AddLog("  IsSetEvent=false");
+                }
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                _error.AddException(ex, this, "SetEventForWorkbook");
+                return 0;
+            }
+        }
     }
 }

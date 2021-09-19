@@ -125,7 +125,7 @@ namespace ExcelCellsManager
                     _excelCellsManagerMain.AppsSettings.SettingsManager.SettingsList;
 
                 // WorkbookList
-                _workbookListControl = new ExcelWorkbookList.WorkbookListCheckedListBox(_error, this.checkedListBox1);
+                _workbookListControl = new ExcelWorkbookList.WorkbookListCheckedListBox(_error,this, this.checkedListBox1);
                 _workbookList = new ExcelWorkbookList.ExcelWorkbookList(
                     _error, _excelCellsManagerMain.ExcelManager, _workbookListControl);
                 _excelCellsManagerMain.WorkbookListControl = _workbookListControl;

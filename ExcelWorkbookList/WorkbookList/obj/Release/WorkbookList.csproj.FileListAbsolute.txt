@@ -7,3 +7,4 @@ C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\WorkbookList\obj\Release\
 C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\WorkbookList\obj\Release\WorkbookList.csproj.CopyComplete
 C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\WorkbookList\obj\Release\WorkbookList.dll
 C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\WorkbookList\obj\Release\WorkbookList.pdb
+C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\WorkbookList\obj\Release\WorkbookList.csprojAssemblyReference.cache

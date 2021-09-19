@@ -7,3 +7,4 @@ C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManager\obj\Release\Excel
 C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManager\obj\Release\ExcelManager.csproj.CopyComplete
 C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManager\obj\Release\ExcelManager.dll
 C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManager\obj\Release\ExcelManager.pdb
+C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManager\obj\Release\ExcelManager.csprojAssemblyReference.cache

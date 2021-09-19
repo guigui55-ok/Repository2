@@ -49,24 +49,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommonUtilityForExcelManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\CommonUtilityForExcelManager.dll</HintPath>
+    <Reference Include="CommonUtilityForExcelManager">
+      <HintPath>..\dlls\CommonUtilityForExcelManager.dll</HintPath>
     </Reference>
     <Reference Include="ErrorManager">
-      <HintPath>..\..\ErrorManager\ErrorManager\bin\Release\ErrorManager.dll</HintPath>
+      <HintPath>..\dlls\ErrorManager.dll</HintPath>
     </Reference>
-    <Reference Include="iniManager2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\iniManager2.dll</HintPath>
+    <Reference Include="iniManager2">
+      <HintPath>..\dlls\iniManager2.dll</HintPath>
     </Reference>
-    <Reference Include="MousePointCaptureForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\MousePointCaptureForms.dll</HintPath>
+    <Reference Include="MousePointCaptureForms">
+      <HintPath>..\dlls\MousePointCaptureForms.dll</HintPath>
     </Reference>
-    <Reference Include="ProgressDialogManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\ProgressDialogManager.dll</HintPath>
+    <Reference Include="ProgressDialogManager">
+      <HintPath>..\dlls\ProgressDialogManager.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
