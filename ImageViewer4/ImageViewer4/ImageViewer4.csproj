@@ -67,8 +67,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ControlUtility\xx\IDragControl.cs" />
-    <Compile Include="ControlUtility\xx\ViewInnerDragControl.cs" />
     <Compile Include="ViewImageObjects\IViewImage.cs" />
     <Compile Include="ViewImageObjects\IViewImageControl.cs" />
     <Compile Include="ViewImageObjects\ViewImage.cs" />

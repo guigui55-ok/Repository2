@@ -41,7 +41,7 @@ namespace ControlUtility
         {
             try
             {
-                MouseWheelBegin?.Invoke(sender, e);
+                if (MouseWheelBegin != null) { MouseWheelBegin.Invoke(sender, e); }
                 // 描画を止める
                 _innerControl.SuspendLayout();
                 _parentControl.SuspendLayout();
@@ -67,7 +67,7 @@ namespace ControlUtility
             }
             finally
             {
-                MouseWheelEnd?.Invoke(sender, e);
+                if (MouseWheelEnd != null) { MouseWheelEnd.Invoke(sender, e); }
             }
         }
         public void ControlPausePaint(bool flag)

@@ -11,7 +11,7 @@ namespace ExcelWorkbookList
         public UpdateControlAsync _updateControlAsync;
         public EventHandler DoubleClickedEvent;
         protected List<string> _ListforAdd;
-        public Control Control { get => (Control)CheckedListBox; }
+        public Control Control { get { return (Control)CheckedListBox; } }
         public WorkbookListCheckedListBox (ErrorManager.ErrorManager err,Form form,CheckedListBox checkedListBox)
         {
             _err = err;

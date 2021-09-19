@@ -43,7 +43,7 @@ namespace ControlUtility
 
                 _err.AddLog("  GetPath=" + _dragAndDropForFile.Files[0]);
                 FileListManager.SetFilesFromPath(_dragAndDropForFile.Files[0]);
-                DragAndDropEventAfterEvent?.Invoke(sender, e);
+                if (DragAndDropEventAfterEvent != null) { DragAndDropEventAfterEvent.Invoke(sender, e); }
             }
             catch (Exception ex)
             {
