@@ -54,6 +54,9 @@
     <Compile Include="..\ExcelWorkbookList\IWorkbookListControl.cs">
       <Link>IWorkbookListControl.cs</Link>
     </Compile>
+    <Compile Include="..\ExcelWorkbookList\UpdateControlAsync.cs">
+      <Link>UpdateControlAsync.cs</Link>
+    </Compile>
     <Compile Include="..\ExcelWorkbookList\WorkbookListCheckedListBox.cs">
       <Link>WorkbookListCheckedListBox.cs</Link>
     </Compile>

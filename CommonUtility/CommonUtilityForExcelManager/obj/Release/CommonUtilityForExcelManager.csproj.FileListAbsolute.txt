@@ -1,0 +1,9 @@
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\bin\Release\CommonUtilityForExcelManager.dll
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\bin\Release\CommonUtilityForExcelManager.pdb
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\bin\Release\ErrorManager.dll
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\obj\Release\Interop.IWshRuntimeLibrary.dll
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\obj\Release\CommonUtilityForExcelManager.csproj.ResolveComReference.cache
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\obj\Release\CommonUtilityForExcelManager.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\obj\Release\CommonUtilityForExcelManager.csproj.CopyComplete
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\obj\Release\CommonUtilityForExcelManager.dll
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtilityForExcelManager\obj\Release\CommonUtilityForExcelManager.pdb

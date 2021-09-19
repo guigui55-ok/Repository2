@@ -25,5 +25,8 @@ namespace ExcelUtility
         EventHandler Application_SheetActivateAfterEvent { get; set; }
         EventHandler Application_WorkbookOpenAfterEvent { get; set; }
         EventHandler Application_WorkbokBeforeCloseAddEvent { get; set; }
+
+        int SetEventForApplication(in Application application);
+        int SetEventForWorkbook(in Application application,string bookName);
     }
 }

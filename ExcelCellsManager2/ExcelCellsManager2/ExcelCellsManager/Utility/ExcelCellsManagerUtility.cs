@@ -8,7 +8,7 @@ namespace ExcelCellsManager2.ExcelCellsManager.Utility
 {
     public class ExcelCellsManagerUtility
     {
-        ErrorManager.ErrorManager _err;
+        protected ErrorManager.ErrorManager _err;
         public ExcelCellsManagerUtility(ErrorManager.ErrorManager err)
         {
             _err = err;

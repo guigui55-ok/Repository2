@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Utility;
 //using static Utility.ClassInfo;
 
 namespace ExcelCellsManager.ExcelCellsManager.Settings

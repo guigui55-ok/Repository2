@@ -34,3 +34,7 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("2.0.0.0")]
 [assembly: AssemblyFileVersion("2.0.0.0")]
+
+//"2.0.0.0"
+//2021/9/19
+//コンストラクタの引数にFormを追加、非同期アクセスするため

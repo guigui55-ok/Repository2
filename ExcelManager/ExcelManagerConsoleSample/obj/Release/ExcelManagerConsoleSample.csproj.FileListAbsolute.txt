@@ -8,3 +8,4 @@ C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\bin\
 C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\obj\Release\ExcelManagerConsoleSample.csproj.CopyComplete
 C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\obj\Release\ExcelManagerConsoleSample.exe
 C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\obj\Release\ExcelManagerConsoleSample.pdb
+C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\obj\Release\ExcelManagerConsoleSample.csprojAssemblyReference.cache

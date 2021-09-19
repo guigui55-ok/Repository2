@@ -3,7 +3,6 @@ using ExcelCellsManager.CellsValuesConrol.CellsValuesList;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Utility;
 using ExcelCellsManager.ExcelCellsManager;
 using ExcelCellsManager.Settings;
 using ExcelCellsManager.ExcelCellsManager.Event;
@@ -26,10 +25,12 @@ namespace ExcelCellsManager
         public IWorkbookListControl WorkbookListControl;
         public IDataGridViewUtility DataGridUtil;
         public IDataGridViewItems DataGridViewItems;
-        
+        public MenuStripManager MenuStripManager;
+
         // Excel Relation
         public ExcelManager ExcelManager;
         protected ExcelCellsManager.ExcelCellsManager _excelCellsManager;
+        protected ExcelCellsManagerMainEvent _excelCellsManagerMainEvent;
         // ExcelEvent ToParentObjectEvent
         protected IExcelAppsEventBridgeInterface _excelEventBridge;
         public EventHandler ChangeActiveCell;
@@ -63,6 +64,7 @@ namespace ExcelCellsManager
         {
             _error = error;
             ExcelManager = new ExcelManager(_error);
+            ExcelManager.IsAlwaysOpenExcelApplication = true;
             _excelCellsManager = new ExcelCellsManager.ExcelCellsManager(_error, 1);
             _excelEventBridge = new ExcelPublicEventHandlerBredgeForCellManager(_error);
             ExcelManager.ExcelEventBridge =  _excelEventBridge;
@@ -80,6 +82,7 @@ namespace ExcelCellsManager
             ProgresDialogDowork = new ProgressDialog.DoWork.ProgressDialogDoWork(_error);
             _mainForm = (ExcelCellsManagerForm)form;
             this.ExcelCellsManagerUtility = new ExcelCellsManagerUtility(_error);
+            _excelCellsManagerMainEvent = new ExcelCellsManagerMainEvent(_error, this);
         }
 
         public void SetStatusBarText(string msg)
@@ -95,7 +98,18 @@ namespace ExcelCellsManager
 
         public void Test()
         {
-            _error.Messenger.ShowAlertMessage("ShowErrorMessage test message\n2line");
+            try
+            {
+                _error.AddLogAlert(this,"Test Error","Test Error Failed",new Exception("Test Exception"));
+                throw new Exception("Test Error");
+                //_error.Messenger.ShowAlertMessage("ShowErrorMessage test message\n2line");
+            } catch (Exception ex)
+            {
+                _error.AddException(ex,this, "Test Method");
+            } finally
+            {
+                ShowMessageExistingWhenFlagTrue("Test Method Failed", true);
+            }
         }
         // Event
         private void SettingsForm_ButtonApplyClick(object sender,EventArgs e)
@@ -289,6 +303,9 @@ namespace ExcelCellsManager
                 // 最後にエラーがあればまとめて出力するので、エラーを保持しておく
                 //if (_error.hasError) { _error.ReleaseErrorState(); ; }
 
+                InitializeMenuStrip();
+                if (_error.hasError) { _error.ReleaseErrorState(); }
+
             } catch (Exception ex)
             {
                 _error.AddException(ex, this.ToString() + ".Initialize");
@@ -309,6 +326,42 @@ namespace ExcelCellsManager
         //        temp.InitialValue = true;　//.......
 
         //}
+
+
+        public void InitializeMenuStrip()
+        {
+            try
+            {
+                _error.AddLog(this, "InitializeMenuStrip");
+                this.MenuStripManager = new MenuStripManager(_error);
+                MenuStripManager.Initialize(this._mainForm);
+                if (_error.hasError) { _error.ReleaseErrorState(); }
+                // MenuStrip の Event 紐づけ
+                string[] tempary;
+                ToolStripMenuItem item;
+                // ファイルを開く
+                tempary = new string[] { MenuStripManager.Constants.FILE_MENU, MenuStripManager.Constants.FILE_OPEN };
+                MenuStripManager.AddEventToMenu(tempary, _excelCellsManagerMainEvent.OpenFileDialogEvent);
+                // 上書き保存
+                tempary = new string[] { MenuStripManager.Constants.FILE_MENU, MenuStripManager.Constants.FILE_APPEND };
+                MenuStripManager.AddEventToMenu(tempary, _excelCellsManagerMainEvent.SaveDataOfGridViewDataEvent);
+                // 名前を付けて保存
+                tempary = new string[] { MenuStripManager.Constants.FILE_MENU, MenuStripManager.Constants.FILE_SAVEAS };
+                MenuStripManager.AddEventToMenu(tempary, _excelCellsManagerMainEvent.SaveAsDataOfGridViewDataEvent);
+                // 終了
+                tempary = new string[] { MenuStripManager.Constants.FILE_MENU, MenuStripManager.Constants.FILE_EXIT };
+                MenuStripManager.AddEventToMenu(tempary, _excelCellsManagerMainEvent.ExitApplicationEvent);
+                // 設定
+                tempary = new string[] { MenuStripManager.Constants.OPTION_MENU, MenuStripManager.Constants.OPTION_SETTINGS };
+                MenuStripManager.AddEventToMenu(tempary, _excelCellsManagerMainEvent.ShowSettingsWindowEvent);
+
+            }
+            catch (Exception ex)
+            {
+                _error.AddException(ex, this, "InitializeMenuStrip");
+            }
+        }
+
         private void InitializeOpenFilePath()
         {
             try
@@ -748,6 +801,8 @@ namespace ExcelCellsManager
         {
             try
             {
+                _error.AddLog(this, "GetAppsWithOpenWorkbook");
+                ExcelApps apps = null;
                 if (appsInfo.ProcessId <= 0)
                 {
                     // WorkbookList にはない Workbook → 開いていない → 開く
@@ -755,17 +810,20 @@ namespace ExcelCellsManager
                     ExcelManager.OpenFile(cellsInfo.Path + "\\" + cellsInfo.BookName);
                     if (_error.hasAlert) { throw new Exception("ExcelManager.OpenFile Failed"); }
                     isOpendExcelFile = true;
-                    //_error.Messenger.ShowResultSuccessMessageAddToExisting("Open File [" + appsInfo.FileName + "]");
-                    //this.OpenFile(cellsInfo.Path + "\\" + cellsInfo.BookName);
+                    apps = ExcelManager.GetExcelAppsFromWorkbookName(appsInfo.FileName);
+                    if (_error.hasAlert) { throw new Exception("ExcelManager.GetExcelAppsFromWorkbookName Failed"); }
                 }
                 else
                 {
-
+                    // 開いているか
+                    // 開いている場合 ExcelApps を取得する
+                    apps = ExcelManager.GetExcelAppsFromAppsInfo(appsInfo);
+                    if (_error.hasAlert) { throw new Exception("ExcelManager.GetExcelAppsFromAppsInfo Failed"); }
                 }
-                // 開いているか
-                // 開いている場合 ExcelApps を取得する
-                ExcelApps apps = ExcelManager.GetExcelAppsFromAppsInfo(appsInfo);
-                if (_error.hasAlert) { throw new Exception("ExcelManager.GetExcelAppsFromAppsInfo Failed"); }
+                if (appsInfo.ProcessId == 0)
+                {
+                    _error.AddLog("  appsInfo.ProcessId == 0");
+                }
                 // 閉じた場合 Null となる
                 if (apps == null)
                 {
@@ -821,8 +879,9 @@ namespace ExcelCellsManager
                 {
                     ProcessId = 0,
                     FileName = cellsInfo.BookName,
-                    //Index = CheckdListUtil.GetIndexForExcelAppsFromCheckedListBox(cellsInfo.BookName)
+                    //Index = WorkbookListControl. .GetIndexForExcelAppsFromCheckedListBox(cellsInfo.BookName)
                 };
+                appsInfo.Index = -1;
 
                 // pid を WorkBookList から取得する
                 List<string> checkdListValueList = WorkbookListControl.GetValueList();
@@ -831,6 +890,7 @@ namespace ExcelCellsManager
                         _error.AddLogWarning("GetPidFromCheckdListValues Failed");
                         _error.ClearError();
                 }
+
 
                 ExcelApps apps = GetAppsWithOpenWorkbook(ref cellsInfo,ref appsInfo,ref isOpendExcelFile);
                 if (apps == null) { throw new Exception("File Object Is Nothing [" + cellsInfo.BookName + "]"); }

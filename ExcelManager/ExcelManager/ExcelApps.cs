@@ -39,6 +39,8 @@ namespace ExcelUtility
         //protected ExcelCellsController CellsControl = null;
         //public bool IsFirstRunApplication = true;
 
+        protected bool IsSetEvent = false;
+
         public ExcelAppsConstants Constants = new ExcelAppsConstants();
 
         public class ExcelAppsConstants
@@ -251,6 +253,10 @@ namespace ExcelUtility
                 _Error.ClearError();
                 return;
             }
+            finally
+            {
+                _Error.AddLog(this, "AppsWindowDeactivate Finally");
+            }
         }
 
         private void Workbook_WindowDeactivate()
@@ -320,6 +326,7 @@ namespace ExcelUtility
         {
             try
             {
+                _Error.AddLog(this, "SetActivateFlag");
                 if (GetWorkBooksCount() > 0)
                 {
                     for(int i = 1; i<=Application.Workbooks.Count; i++)
@@ -350,6 +357,55 @@ namespace ExcelUtility
             }
         }
 
+        public int SetWorkbookEvent(string filePath, string bookName)
+        {
+            try
+            {
+                _Error.AddLog(this, "SetWorkbookEvent(string)");
+                if(this.Application == null) { throw new Exception("Application == null"); }
+                if(this.Application.Workbooks.Count < 1) { _Error.AddLogWarning("Application.Workbooks.Count < 1"); return -1; }
+
+                bool IsSetEvent = true;
+                bool filePathCheck = true;
+                if (FilePathList == null) { _Error.AddLogWarning("FilePathList.Count == null"); filePathCheck = false; }
+                if (FilePathList.Count < 1) { _Error.AddLogWarning("FilePathList.Count < 1"); filePathCheck = false; }
+                if (filePathCheck)
+                {
+                    foreach(string value in FilePathList)
+                    {
+                        if (value.Equals(filePath))
+                        {
+                            // 同じものがあったら登録しない
+                            IsSetEvent = false;
+                        }
+                    }
+                }
+                if (IsSetEvent)
+                {
+                    for (int i = 1; i < Application.Workbooks.Count; i++)
+                    {
+                        if (bookName.Equals(Application.Workbooks[i].Name))
+                        {
+                            Application.Workbooks[i].WindowActivate += this.WindowActivate;
+                            Application.Workbooks[i].Deactivate += this.WorkbookDeactivate;
+                            Application.Workbooks[i].SheetActivate += this.SheetActivate;
+                            Application.Workbooks[i].Open += this.WokbookOpen;
+                        }
+                    }
+                    _Error.AddLog("  SetEvent");
+                }
+                else
+                {
+                    _Error.AddLog("  IsSetEvent=false");
+                }
+                return 1;
+            } catch (Exception ex)
+            {
+                _Error.AddException(ex, this, "SetWorkbookEvent");
+                return 0;
+            }
+        }
+
         public void SetWorkbookEvent()
         {
             try
@@ -357,21 +413,30 @@ namespace ExcelUtility
                 _Error.AddLog(this, "SetWorkbookEvent");
                 if (Application == null) { throw new Exception("Application Is Null"); }
                 if (IsGhost) { _Error.AddLog(" IsGhost=true , continue SetEvent"); }
-                if(Application.Workbooks.Count > 0)
+
+                if (IsSetEvent)
+                {
+                    _Error.AddLog("  IsSetEvent=true -> return"); return;
+                }
+
+                if (Application.Workbooks.Count > 0)
                 {
                     // Excel.Application.Workbooks から FilePath を取得する
                     for (int i = 1; i < this.Application.Workbooks.Count + 1; i++)
                     {
-                        Application.Workbooks[i].WindowActivate += this.WindowActivate;
-                        Application.Workbooks[i].Deactivate += this.WorkbookDeactivate;
-                        Application.Workbooks[i].SheetActivate += this.SheetActivate;
-                        Application.Workbooks[i].Open += this.WokbookOpen;
+                        //Application.Workbooks[i].WindowActivate += this.WindowActivate;
+                        //Application.Workbooks[i].Deactivate += this.WorkbookDeactivate;
+                        //Application.Workbooks[i].SheetActivate += this.SheetActivate;
+                        //Application.Workbooks[i].Open += this.WokbookOpen;
+                        SetWorkbookEvent(
+                            Application.Workbooks[i].Path + "\\" + Application.Workbooks[i].Name,
+                            Application.Workbooks[i].Name);
                     }
                 } else
                 {
                     _Error.AddLog(" Application.Workbooks.Count < 1");
                 }
-                
+
                 Application.WindowActivate += AppsWindowActivate;
                 Application.WindowDeactivate += AppsDeactivate;
                 Application.WindowResize += this.Application_WindowResizeHandler;
@@ -383,30 +448,26 @@ namespace ExcelUtility
                     new AppEvents_SheetSelectionChangeEventHandler(Application_SheetSelectionChange);
 
                 if (_excelEventBridge != null)
-                {
+                {                    
                     // Excel.Application.Workbooks にイベントを付与する
                     for (int i = 1; i < this.Application.Workbooks.Count + 1; i++)
                     {
                         _Error.AddLog(this.ToString()+".SetWorkbookEvent : " + Application.Name + ":" + Application.Workbooks[i].Name);
-                        //Application.Workbooks[i].WindowActivate -= this._excelEventBridge.Workbook_WindowActivateEvent;
-                        Application.Workbooks[i].WindowActivate += this._excelEventBridge.Workbook_WindowActivateEvent;
-                        //Application.Workbooks[i].Deactivate -= this._excelEventBridge.Workbook_DeactivateEvent;
-                        Application.Workbooks[i].Deactivate += this._excelEventBridge.Workbook_DeactivateEvent;
-                        //Application.Workbooks[i].SheetActivate += this.Worksheet_Activate;
-                        //System.Threading.Thread.Sleep(5);
-                        //Application.Workbooks[i].SheetActivate -= this._excelEventBridge.WorkSheet_ActivateEvent;
-                        Application.Workbooks[i].SheetActivate += this._excelEventBridge.WorkSheet_ActivateEvent;
+
+                        _excelEventBridge.SetEventForWorkbook(Application,Application.Workbooks[i].Name);
+                        //Application.Workbooks[i].WindowActivate += this._excelEventBridge.Workbook_WindowActivateEvent;
+                        //Application.Workbooks[i].Deactivate += this._excelEventBridge.Workbook_DeactivateEvent;
+                        //Application.Workbooks[i].SheetActivate += this._excelEventBridge.WorkSheet_ActivateEvent;
                     }
-                    //Application.WindowActivate -= _excelEventBridge.Application_WindowActivateEvent;
-                    Application.WindowActivate += _excelEventBridge.Application_WindowActivateEvent;
-                    //Application.WindowDeactivate -= _excelEventBridge.Application_DeactivateEvent;
-                    Application.WindowDeactivate += _excelEventBridge.Application_DeactivateEvent;
-                    //Application.SheetSelectionChange -= _excelEventBridge.Application_SheetSelectionChangeEvent;
-                    Application.SheetSelectionChange += _excelEventBridge.Application_SheetSelectionChangeEvent;
-                    Application.WorkbookOpen += _excelEventBridge.Application_WorkbookOpenEvent;
-                    Application.WorkbookBeforeClose += _excelEventBridge.Application_WorkbookBeforeCloseEvent;
-                    Application.SheetActivate += this._excelEventBridge.Application_SheetActivateEvent;
+                    _excelEventBridge.SetEventForApplication(this.Application);
+                    //Application.WindowActivate += _excelEventBridge.Application_WindowActivateEvent;
+                    //Application.WindowDeactivate += _excelEventBridge.Application_DeactivateEvent;
+                    //Application.SheetSelectionChange += _excelEventBridge.Application_SheetSelectionChangeEvent;
+                    //Application.WorkbookOpen += _excelEventBridge.Application_WorkbookOpenEvent;
+                    //Application.WorkbookBeforeClose += _excelEventBridge.Application_WorkbookBeforeCloseEvent;
+                    //Application.SheetActivate += this._excelEventBridge.Application_SheetActivateEvent;
                 }
+                IsSetEvent = true;
                 return;
             }
             catch (Exception ex)
@@ -485,6 +546,7 @@ namespace ExcelUtility
             {
                 _Error.AddLog(this, "GetActiveSheetName");
                 if (IsGhost) { _Error.AddLog("  GetActiveSheetName IsGhost=true"); return ""; }
+                if (Application == null) { _Error.AddLog("  Application == null"); return ""; }
                 string sheetName = _activeCellsInfo.WorksheetName;
                 if ((sheetName != null)||(sheetName != ""))
                 {
@@ -725,11 +787,21 @@ namespace ExcelUtility
             try
             {
                 _Error.AddLog(this, "ReSetFileListFromApplication");
-                if (IsGhost) {
-                    _Error.AddLog("  IsGhost=true return");
-                    return;
-                }
+
                 if (Application == null) { throw new Exception("Application Is Null"); }
+                if (Application.Workbooks.Count > 0)
+                {
+                    if (IsGhost)
+                    {
+                        _Error.AddLog("  IsGhost=true -> false");
+                        IsGhost = false;
+                    }
+                }
+
+                if (IsGhost)
+                {
+                    _Error.AddLog("  IsGhost=true , return"); return;
+                }
 
                 _Error.AddLog("** Pid = "+this.ProcessId);
 

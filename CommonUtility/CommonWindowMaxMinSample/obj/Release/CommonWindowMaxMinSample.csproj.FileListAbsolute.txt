@@ -1,0 +1,15 @@
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonWindowMaxMinSample\obj\Release\CommonWindowMaxMinSample.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonWindowMaxMinSample\obj\Release\CommonWindowMaxMinSample.Form1.resources
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonWindowMaxMinSample\obj\Release\CommonWindowMaxMinSample.Properties.Resources.resources
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonWindowMaxMinSample\obj\Release\CommonWindowMaxMinSample.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonWindowMaxMinSample\obj\Release\CommonWindowMaxMinSample.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonWindowMaxMinSample\bin\Release\CommonWindowMaxMinSample.exe.config
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonWindowMaxMinSample\bin\Release\CommonWindowMaxMinSample.exe
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonWindowMaxMinSample\bin\Release\CommonWindowMaxMinSample.pdb
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonWindowMaxMinSample\bin\Release\CommonUtility.dll
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonWindowMaxMinSample\bin\Release\ErrorManager.dll
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonWindowMaxMinSample\bin\Release\CommonUtility.pdb
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonWindowMaxMinSample\bin\Release\CommonUtility.dll.config
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonWindowMaxMinSample\obj\Release\CommonWindowMaxMinSample.csproj.CopyComplete
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonWindowMaxMinSample\obj\Release\CommonWindowMaxMinSample.exe
+C:\Users\OK\source\repos\Repository2\CommonUtility\CommonWindowMaxMinSample\obj\Release\CommonWindowMaxMinSample.pdb
