@@ -1,11 +1,11 @@
 # Repository2
-##### 最終更新日 2021.9.15
+##### 最終更新日 2021.9.20
 
 ## ■ ExcelCellsManager2  
 ### Description  
 
 エクセルの任意のセルの位置(アドレス)を登録し、登録した位置を表示するアプリケーションです。  
-※プロジェクト： ExcelCellsManagerTest.sln > ExcelCellsManagerTest.csproj   
+※プロジェクト： ExcelCellsManager2.sln > ExcelCellsManager2.csproj   
 #### 主な機能
 
 * エクセルの任意のセルの位置(アドレス)を登録します。  
@@ -23,22 +23,30 @@ Ctrl＋Shift＋S：名前を付けて保存
 Ctrl＋Shift＋S：名前を付けて保存  
 Ctrl＋Shift＋O：設定ウィンドウを開く  
 
-* DataGridView の RowHeader+ ダブルクリックで登録した位置を表示します。  
+* DataGridView の RowHeader ダブルクリックで登録した位置を表示します。  
 * 動作時のログ保存、出力をします。  
 * 表示されているワークブックを閉じます。  
-* アプリケーション設定の保存(iniファイル)します。  
-
+* アプリケーション設定をファイル(iniファイル)に保存します。  
 
 #### 経緯  
 業務内でキュメントとしてのエクセルを多量に開くことがあるため、本アプリケーションの作成に至りました。  
 
 #### 課題  
-* ツールバー作成
-* メニューバー作成
 * ユーザー向けエラーメッセージの表示(実装方法を考え中)
 * リファクタリング(機能など追加していくうちに、ソースが煩雑になってしまったため)
 * ヘルプ作成
-  
+* ツールバー作成
+
+#### 更新履歴
+// 3.1.0.0
+// 2021/09/20
+// メニューバーを追加
+// 2.1.0.0
+// 2021/09/19
+// ExcelManager.dll,WorkbookList.dll を修正
+// 1.0.0.0
+// ExcelCellsManagerTest から ExcelCellsManager2 にソリューション、プロジェクトを変更
+// ExcelManager.dll,WorkbookList.dll を追加
   
 ## ■ CommonUtility
 ## Summary  
@@ -66,10 +74,10 @@ ExcelManager は Excel 内のいろいろな値やオブジェクトを扱うための前段階の処理を行
 
 ### ■ ExcelWorkbookList
 ### Description  
-ExcelCellsMangerTest 内で使用している、上記 ExcelManager で保持しているWorkbookを表示します。  
+ExcelCellsMangerTest 内で使用している、上記 ExcelManager で保持しているWorkbookを表示します。   
+※サンプルプロジェクト： ExcelWorkbookList.sln > ExcelWorkbookList.csproj   
 ### 作成経緯  
 ExcelCellsMangerTest のコード分割のため後発的に作成しました。
-(作成中)
 
 ### ■ ImageViewer4
 ### Description  

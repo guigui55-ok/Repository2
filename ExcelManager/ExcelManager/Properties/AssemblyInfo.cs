@@ -35,11 +35,15 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("4.0.0.0")]
 [assembly: AssemblyFileVersion("4.0.0.0")]
 
-// 2.0.0.0
-// ExcelWorkbookSyncer クラスをプロジェクト内に追加・作成
-// ExcelManager に protected ExcelWorkbookSyncer を追加
-// ExcelManger に public IsSyncWorkbook フラグを追加
-// ExcelWorkbookSyncer.IsSyncWorkbook=true で、Workbook を開く・閉じる時、ExcelManager.ExcelAppsList を更新する
+// 4.0.0.0
+//2021/9/19
+// クラス追加 ExcuteAfterWaitForExit
+// *Update 時の処理見直し
+// Excel.Application が無く、エクセルファイルを起動したときの処理を修正
+//  (Application を補足できなかったり、ExcelAppsList.Count=2 となっていたりした)
+// Excel.Application.Workbooks.Count =1 のときに WorkbookClose したときの処理を修正
+// ExcelManager.ExcelAppsList<0 && ExcelWorkbookSyncer.IsSyncExcelWorkbook = true &&
+// workbookClose 後に ListUpdate する処理を追加 (ExcelWorkbookSyncer)
 
 // 3.0.0.0
 //2021/9/18
@@ -51,12 +55,8 @@ using System.Runtime.InteropServices;
 // ログ出力個所を追加
 // GetExcelApplicationFromProcess メソッド内 IsGhost=false 処理を追加、再読み込み時 IsGhost=true のままのことがあったため
 
-// 4.0.0.0
-//2021/9/19
-// クラス追加 ExcuteAfterWaitForExit
-// *Update 時の処理見直し
-// Excel.Application が無く、エクセルファイルを起動したときの処理を修正
-//  (Application を補足できなかったり、ExcelAppsList.Count=2 となっていたりした)
-// Excel.Application.Workbooks.Count =1 のときに WorkbookClose したときの処理を修正
-// ExcelManager.ExcelAppsList<0 && ExcelWorkbookSyncer.IsSyncExcelWorkbook = true &&
-// workbookClose 後に ListUpdate する処理を追加 (ExcelWorkbookSyncer)
+// 2.0.0.0
+// ExcelWorkbookSyncer クラスをプロジェクト内に追加・作成
+// ExcelManager に protected ExcelWorkbookSyncer を追加
+// ExcelManger に public IsSyncWorkbook フラグを追加
+// ExcelWorkbookSyncer.IsSyncWorkbook=true で、Workbook を開く・閉じる時、ExcelManager.ExcelAppsList を更新する
