@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ErrorManagerUtility;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -349,7 +350,7 @@ namespace Log
             {
                 if (Directory.Exists(Directory.GetDirectoryRoot(path)))
                 {
-                    string writePath = new CommonUtility.FileUtility(_err).MakeNewFileNameNotLock(
+                    string writePath = new FileUtility(_err).MakeNewFileNameNotLock(
                         System.IO.Path.GetFileName(path), System.IO.Path.GetDirectoryName(path));
                     if (!writePath.Equals(path))
                     {

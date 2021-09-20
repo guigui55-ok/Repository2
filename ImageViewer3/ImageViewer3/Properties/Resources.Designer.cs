@@ -61,7 +61,10 @@ namespace ImageViewer3.Properties {
         }
         
         /// <summary>
-        ///   [settings] に類似しているローカライズされた文字列を検索します。
+        ///   [settings]
+        ///IsMenuBarVisibleAlways=0
+        ///IsMenuBarVisibleOnStartUp=0
+        /// に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsFormat {
             get {

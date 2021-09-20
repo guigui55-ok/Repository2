@@ -568,7 +568,7 @@ namespace ExcelCellsManager
                             // .lnk ファイルの場合
                             if (System.IO.Path.GetExtension(filePath).Equals(".lnk"))
                             {
-                                ShortcutUtility shutil = new ShortcutUtility();
+                                ShortcutUtility shutil = new ShortcutUtility(_error);
                                 //ShortcutDynamic shutil = new ShortcutDynamic();
                                 string newpath = shutil.GetTargetPath(filePath); 
                                 if (_excelCellsManagerMain.ExcelManager.IsExcelType(newpath))

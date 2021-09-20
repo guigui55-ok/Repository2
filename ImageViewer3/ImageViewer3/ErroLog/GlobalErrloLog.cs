@@ -17,13 +17,13 @@ using ErrorLog;
             ErrorLog = new ErrorLog();
         }
 
-        static public int SetErrorLog(Object errorLog)
+        static public int SetErrorLog(object errorLog)
         {
             try
             {
-                if (errorLog is IErrorLog log)
+                if (errorLog.GetType().Equals(typeof(IErrorLog )))
                 {
-                    ErrorLog = log;
+                    ErrorLog = (IErrorLog)errorLog;
                 }
                 else
                 {

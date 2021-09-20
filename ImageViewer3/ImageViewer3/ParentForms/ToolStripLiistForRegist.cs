@@ -100,7 +100,7 @@ namespace ImageViewer.ParentForms
             try
             {
                 Value = value;
-                if (value is null) { Debug.Print(keys.ToString()); }
+                if (value == null) { Debug.Print(keys.ToString()); }
                 if (Keys.None == Keys)
                 {
                     this.IsShortCutKeys = false;

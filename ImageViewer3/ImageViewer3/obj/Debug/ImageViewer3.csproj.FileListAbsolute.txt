@@ -12,3 +12,14 @@ C:\Users\OK\source\repos\Repository2\ImageViewer3\ImageViewer3\obj\Debug\ImageVi
 C:\Users\OK\source\repos\Repository2\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.csproj.CopyComplete
 C:\Users\OK\source\repos\Repository2\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.exe
 C:\Users\OK\source\repos\Repository2\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.pdb
+F:\ZDOWNLOAD\Repository2-main\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.ImageViewerForm.resources
+F:\ZDOWNLOAD\Repository2-main\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.Properties.Resources.resources
+F:\ZDOWNLOAD\Repository2-main\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.csproj.GenerateResource.cache
+F:\ZDOWNLOAD\Repository2-main\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.csproj.CoreCompileInputs.cache
+F:\ZDOWNLOAD\Repository2-main\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.exe
+F:\ZDOWNLOAD\Repository2-main\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.pdb
+F:\ZDOWNLOAD\Repository2-main\ImageViewer3\ImageViewer3\bin\Debug\ImageViewer3.exe.config
+F:\ZDOWNLOAD\Repository2-main\ImageViewer3\ImageViewer3\bin\Debug\ImageViewer3.exe
+F:\ZDOWNLOAD\Repository2-main\ImageViewer3\ImageViewer3\bin\Debug\ImageViewer3.pdb
+F:\ZDOWNLOAD\Repository2-main\ImageViewer3\ImageViewer3\bin\Debug\IniManager.dll
+F:\ZDOWNLOAD\Repository2-main\ImageViewer3\ImageViewer3\obj\Debug\ImageViewer3.csproj.CopyComplete

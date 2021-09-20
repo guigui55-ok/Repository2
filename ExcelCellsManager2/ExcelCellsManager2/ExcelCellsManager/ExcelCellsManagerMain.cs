@@ -338,7 +338,7 @@ namespace ExcelCellsManager
                 if (_error.hasError) { _error.ReleaseErrorState(); }
                 // MenuStrip の Event 紐づけ
                 string[] tempary;
-                ToolStripMenuItem item;
+                //ToolStripMenuItem item;
                 // ファイルを開く
                 tempary = new string[] { MenuStripManager.Constants.FILE_MENU, MenuStripManager.Constants.FILE_OPEN };
                 MenuStripManager.AddEventToMenu(tempary, _excelCellsManagerMainEvent.OpenFileDialogEvent);

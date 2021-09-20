@@ -12,15 +12,21 @@ namespace Common
     {
         public string GetSourceFromPath(string path)
         {
+
+            dynamic shell = null;   // IWshRuntimeLibrary.WshShell
+            dynamic lnk = null;     // IWshRuntimeLibrary.IWshShortcut
             try
             {
+                var type = Type.GetTypeFromProgID("WScript.Shell");
+                shell = Activator.CreateInstance(type);
+                lnk = shell.CreateShortcut(path);
                 // windows host script object model
-                IWshRuntimeLibrary.WshShell shell = new IWshRuntimeLibrary.WshShell();
+                //IWshRuntimeLibrary.WshShell shell = new IWshRuntimeLibrary.WshShell();
                 // ショートカットオブジェクトの取得
-                IWshRuntimeLibrary.IWshShortcut shortcut = (IWshRuntimeLibrary.IWshShortcut)shell.CreateShortcut(path);
+                //IWshRuntimeLibrary.IWshShortcut shortcut = (IWshRuntimeLibrary.IWshShortcut)shell.CreateShortcut(path);
 
                 // ショートカットのリンク先の取得
-                string targetPath = shortcut.TargetPath.ToString();
+                string targetPath = lnk.TargetPath.ToString();
 
                 return targetPath;
             } catch (Exception ex)

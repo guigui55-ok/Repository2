@@ -24,8 +24,8 @@ namespace ImageViewer.Values
         protected double _ratioLocationFrameFromContentsY;
 
         private bool _isActiveControl;
-        public bool IsActiveControl { get => _isActiveControl; set => _isActiveControl = value; }
-        public bool IsMouseHover { get => _isMoseHover; set => _isMoseHover = value; }
+        public bool IsActiveControl { get { return _isActiveControl; } set { _isActiveControl = value; } }
+        public bool IsMouseHover { get { return _isMoseHover; } set { _isMoseHover = value; } }
         public ViewControlState()
         {
             _isActiveControl = true;
@@ -49,18 +49,18 @@ namespace ImageViewer.Values
             }
         }
         
-        bool IViewControlState.NowSizeUpdate { get => _nowSizeUpdate; set => _nowSizeUpdate = value; }
-        bool IViewControlState.IsPausePaint { get => _isPausePaint; set => _isPausePaint = value; }
-        public Point DifferenceSizeInnerFromFrame { get => _differenceSizeInnerFromFrame; set => _differenceSizeInnerFromFrame = value; }
-        public Point DifferencePositionInnerInFrame { get => _differencePositionInnerInFrame; set => _differencePositionInnerInFrame = value; }
-        public PointF RatioSizeInnerFromFrame { get => _ratioSizeInnerFromFrame; set => _ratioSizeInnerFromFrame = value; }
-        //public PointF RatioLocationInnerFromFrame { get => _ratioLocationInnerFromFrame; set => _ratioLocationInnerFromFrame = value; }
-        public double RatioLocationInnerFromFrameX { get => _ratioLocationInnerFromFrameX; set => _ratioLocationInnerFromFrameX = value; }
-        public double RatioLocationInnerFromFrameY { get => _ratioLocationInnerFromFrameY; set => _ratioLocationInnerFromFrameY = value; }
-        public bool IsFrameSizeChanging { get => _isFrameChanging; set => _isFrameChanging = value; }
-        public bool IsInitializeControl { get => _isInitialize; set => _isInitialize = value; }
-        public PointF RaitoSizeFrameFromContents { get => _ratioSizeFrameFromContents; set => _ratioSizeFrameFromContents = value; }
-        public double RaitoLocationFrameFromContentsX { get => _ratioLocationFrameFromContentsX; set => _ratioLocationFrameFromContentsX = value; }
-        public double RaitoLocationFrameFromContentsY { get => _ratioLocationFrameFromContentsY; set => _ratioLocationFrameFromContentsY = value; }
+        bool IViewControlState.NowSizeUpdate { get { return _nowSizeUpdate; } set { _nowSizeUpdate = value; } }
+        bool IViewControlState.IsPausePaint { get { return _isPausePaint; } set { _isPausePaint = value; } }
+        public Point DifferenceSizeInnerFromFrame { get { return _differenceSizeInnerFromFrame; } set { _differenceSizeInnerFromFrame = value; } }
+        public Point DifferencePositionInnerInFrame { get { return _differencePositionInnerInFrame; } set { _differencePositionInnerInFrame = value; } }
+        public PointF RatioSizeInnerFromFrame { get { return _ratioSizeInnerFromFrame; } set { _ratioSizeInnerFromFrame = value; } }
+        //public PointF RatioLocationInnerFromFrame { get {return _ratioLocationInnerFromFrame;} set { _ratioLocationInnerFromFrame = value; }}
+        public double RatioLocationInnerFromFrameX { get { return _ratioLocationInnerFromFrameX; } set { _ratioLocationInnerFromFrameX = value; } }
+        public double RatioLocationInnerFromFrameY { get { return _ratioLocationInnerFromFrameY; } set { _ratioLocationInnerFromFrameY = value; } }
+        public bool IsFrameSizeChanging { get { return _isFrameChanging; } set { _isFrameChanging = value; } }
+        public bool IsInitializeControl { get { return _isInitialize; } set { _isInitialize = value; } }
+        public PointF RaitoSizeFrameFromContents { get { return _ratioSizeFrameFromContents; } set { _ratioSizeFrameFromContents = value; } }
+        public double RaitoLocationFrameFromContentsX { get { return _ratioLocationFrameFromContentsX; } set { _ratioLocationFrameFromContentsX = value; } }
+        public double RaitoLocationFrameFromContentsY { get { return _ratioLocationFrameFromContentsY; } set { _ratioLocationFrameFromContentsY = value; } }
     }
 }

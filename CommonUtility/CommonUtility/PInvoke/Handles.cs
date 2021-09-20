@@ -374,7 +374,8 @@ namespace CommonUtility.CloseHandleUtil
             IntPtr buffer = Marshal.AllocCoTaskMem(size);
             try
             {
-                while (NtQuerySystemInformation(SystemExtendedHandleInformation, buffer, size, out int required) == NT_STATUS.INFO_LENGTH_MISMATCH)
+                int required = 0;
+                while (NtQuerySystemInformation(SystemExtendedHandleInformation, buffer, size, out required) == NT_STATUS.INFO_LENGTH_MISMATCH)
                 {
                     size = required;
                     buffer = Marshal.ReAllocCoTaskMem(buffer, size);

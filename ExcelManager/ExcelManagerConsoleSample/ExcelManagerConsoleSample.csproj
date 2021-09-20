@@ -54,9 +54,6 @@
     <Reference Include="ErrorManager">
       <HintPath>..\dlls\ErrorManager.dll</HintPath>
     </Reference>
-    <Reference Include="ExcelManager">
-      <HintPath>..\dlls\ExcelManager.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -72,6 +69,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExcelManager\ExcelManager.csproj">
+      <Project>{BC570AB8-550E-43A8-BB30-12A5BA49876D}</Project>
+      <Name>ExcelManager</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

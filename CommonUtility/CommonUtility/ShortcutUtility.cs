@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommonUtility.ComUtility;
+using System;
 using System.Dynamic;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -22,7 +23,12 @@ namespace CommonUtility.Shortcut
     public class ShortcutUtility
     {
         ShortcutDynamic _result=null;
+        protected ErrorManager.ErrorManager _err;
 
+        public ShortcutUtility(ErrorManager.ErrorManager err)
+        {
+            _err = err;
+        }
         public string GetFullName(string fullPath)
         {
 
@@ -38,59 +44,82 @@ namespace CommonUtility.Shortcut
             return _result.TargetPath;
         }
 
-        public ShortcutDynamic Get(string fullPath,bool flag)
+        public ShortcutDynamic Get(string path, bool isConvUrl = true)
         {
+            ComWindowsScriptHostObjectModel com = null;
             try
             {
-                if ((!System.IO.File.Exists(fullPath))&&(!System.IO.Directory.Exists(fullPath))){
+                if ((!System.IO.File.Exists(path)) && (!System.IO.Directory.Exists(path)))
+                {
                     return null;
                 }
 
                 // ファイルの拡張子を取得
-                string extension = Path.GetExtension(fullPath);
+                string extension = Path.GetExtension(path);
                 // ファイルへのショートカットは拡張子".lnk"
                 if (".lnk" == extension)
                 {
-                    IWshRuntimeLibrary.WshShell shell = new IWshRuntimeLibrary.WshShell();
-                    // ショートカットオブジェクトの取得
-                    IWshRuntimeLibrary.IWshShortcut shortcut 
-                        = (IWshRuntimeLibrary.IWshShortcut)shell.CreateShortcut(fullPath);
+                    //IWshRuntimeLibrary.WshShell shell = new IWshRuntimeLibrary.WshShell();
 
+                    // ショートカットオブジェクトの取得
+                    //IWshRuntimeLibrary.IWshShortcut shortcut
+                    //    = (IWshRuntimeLibrary.IWshShortcut)shell.CreateShortcut(fullPath);
+                    com = new ComWindowsScriptHostObjectModel(_err);
+                    com.CreateInstance();
+
+                    // ショートカットのリンク先の取得
+                    //string targetPath = shortcut.TargetPath.ToString();
+                    dynamic shortcut = com.ComInstance.CreateShortcut(path);
                     // ショートカットのリンク先の取得
                     string targetPath = shortcut.TargetPath.ToString();
 
 
                     _result = new ShortcutDynamic();
-                    _result.FullName = fullPath;
+                    _result.FullName = path;
                     _result.TargetPath = targetPath;
-                } else if (".url" == extension)
+                }
+                else if (".url" == extension)
                 {
-                    using (var sr = new StreamReader(fullPath, Encoding.GetEncoding("Shift_JIS")))
+                    if (isConvUrl)
                     {
-
-                        int count = 0;
-                        while (sr.Peek() != -1)
+                        using (var sr = new StreamReader(path, Encoding.GetEncoding("Shift_JIS")))
                         {
-                            if (count == 1)
+
+                            int count = 0;
+                            while (sr.Peek() != -1)
                             {
-                                _result = new ShortcutDynamic();
-                                _result.FullName = fullPath;
-                                string buf = sr.ReadLine();
-                                _result.TargetPath = buf.Substring(4, buf.Length-4);
-                                return _result;
-                            } else
-                            {
-                                sr.ReadLine();
+                                if (count == 1)
+                                {
+                                    _result = new ShortcutDynamic();
+                                    _result.FullName = path;
+                                    string buf = sr.ReadLine();
+                                    _result.TargetPath = buf.Substring(4, buf.Length - 4);
+                                    return _result;
+                                }
+                                else
+                                {
+                                    sr.ReadLine();
+                                }
+                                count++;
                             }
-                            count++;
                         }
+                    }
+                    else
+                    {
+                        _result.FullName = System.IO.Path.GetFileName(path);
+                        _result.TargetPath = path;
                     }
                 }
                 return _result;
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine("ShortcutDynamic.Get:" + ex.Message);
                 return null;
+            }
+            finally
+            {
+                if (com != null) { com.Dispose(); com = null; }
             }
         }
 
@@ -98,7 +127,7 @@ namespace CommonUtility.Shortcut
         {
             dynamic shell = null;   // IWshRuntimeLibrary.WshShell
             dynamic lnk = null;     // IWshRuntimeLibrary.IWshShortcut
-            ExpandoObject lnkEx = null;
+            //ExpandoObject lnkEx = null;
             try
             {
                 var type = Type.GetTypeFromProgID("WScript.Shell");

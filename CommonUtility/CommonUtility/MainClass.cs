@@ -25,7 +25,8 @@ namespace CommonUtility
         {
             try
             {
-                ShortcutUtility shortcutUtility = new ShortcutUtility();
+                ErrorManager.ErrorManager _err = new ErrorManager.ErrorManager(1);
+                ShortcutUtility shortcutUtility = new ShortcutUtility(_err);
                 string path = @"C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\TestFiles\Microsoft Edge ShortCut.lnk";
                 // ショートカットのフルパスを取得する
                 string buf = shortcutUtility.GetFullName(path);

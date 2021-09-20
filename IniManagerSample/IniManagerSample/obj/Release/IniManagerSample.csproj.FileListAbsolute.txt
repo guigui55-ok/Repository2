@@ -1,0 +1,8 @@
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\obj\Release\IniManagerSample.csprojResolveAssemblyReference.cache
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\bin\Release\IniManagerSample.exe.config
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\bin\Release\IniManagerSample.exe
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\bin\Release\IniManagerSample.pdb
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\bin\Release\ErrorManager.dll
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\bin\Release\IniManager.dll
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\obj\Release\IniManagerSample.exe
+C:\Users\OK\source\repos\Repository2\IniManagerSample\IniManagerSample\obj\Release\IniManagerSample.pdb

@@ -59,7 +59,7 @@ namespace CommonUtilitySample
                 //Console.WriteLine(string.Join(", ", files)); 
                 if (files.Length < 0) { OutputData("files.Length < 0"); }
 
-                ShortcutUtility shortcutUtility = new ShortcutUtility();
+                ShortcutUtility shortcutUtility = new ShortcutUtility(_err);
                 foreach (string value in files)
                 {
                     string buf = shortcutUtility.GetFullName(value);

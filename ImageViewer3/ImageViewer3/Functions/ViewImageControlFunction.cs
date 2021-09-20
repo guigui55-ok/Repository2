@@ -81,7 +81,7 @@ namespace ImageViewer.Functions
             try
             {
                 // 初期化時はnull
-                if (ViewImageObjects is null) { return; }
+                if (ViewImageObjects == null) { return; }
                 Debug.WriteLine("MaintainSizeAndPositionRatio ContentsAndFrame");
                 // 今の ContentsSize サイズ
                 Size nowOuterSize = ContentsSize;
@@ -205,7 +205,7 @@ namespace ImageViewer.Functions
         {
             Debug.WriteLine("SaveRatioFromContentscControl");
             // 初期化時はnull
-            if (ViewImageObjects is null) { return; }
+            if (ViewImageObjects == null) { return; }
             // 意図的に FrameSize を変えたときには保存する
             // 外枠 ContentsControl での Location と FrameControl.Size を保存
             // FrameControlが変化した際に保存するが、ContensControlがともに変化しているときは保存しない
