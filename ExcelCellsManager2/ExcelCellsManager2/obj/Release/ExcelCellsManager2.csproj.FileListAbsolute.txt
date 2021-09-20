@@ -1,1 +1,5 @@
 F:\ZDOWNLOAD\Repository2-main\ExcelCellsManager2\ExcelCellsManager2\obj\Release\ExcelCellsManager2.csprojResolveAssemblyReference.cache
+F:\ZDOWNLOAD\Repository2-main\ExcelCellsManager2\ExcelCellsManager2\obj\Release\ExcelCellsManager.ExcelCellsManagerForm.resources
+F:\ZDOWNLOAD\Repository2-main\ExcelCellsManager2\ExcelCellsManager2\obj\Release\ExcelCellsManager.ExcelCellsManager.SettingsForm.EcmSettingsForm.resources
+F:\ZDOWNLOAD\Repository2-main\ExcelCellsManager2\ExcelCellsManager2\obj\Release\ExcelCellsManager2.Properties.Resources.resources
+F:\ZDOWNLOAD\Repository2-main\ExcelCellsManager2\ExcelCellsManager2\obj\Release\ExcelCellsManager2.csproj.GenerateResource.Cache

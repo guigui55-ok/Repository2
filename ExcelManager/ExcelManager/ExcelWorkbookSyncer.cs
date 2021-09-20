@@ -26,7 +26,7 @@ namespace ExcelUtility
             _excuteAfterWaitForExit = new ExcuteAfterWaitForExit(_err);
         }
 
-        public int SetEvent(in Application application)
+        public int SetEvent(ref Application application)
         {
             try
             {

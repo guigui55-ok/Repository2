@@ -428,7 +428,7 @@ namespace ExcelCellsManager
             {
                 //if (_excelCellsManagerMain.AppsSettings.IsUpdateListWhenWorkbookOpendAndClosed)
                 //{
-                //    _ = Invoke(new WorkbooksListUpdateDelegate(updateWorkbooksList));
+                //    Invoke(new WorkbooksListUpdateDelegate(updateWorkbooksList));
                 //}
                 _error.AddLog(_thisClassName + ".Application_WorkbookBeforeCloseAddEvent : Finally");
             }
@@ -461,7 +461,7 @@ namespace ExcelCellsManager
                     // アプリから開いている時は、Update 中なのでループするので実行しない
                     if (!_excelCellsManagerMain.ExcelManager.IsWorkbookOpening)
                     {
-                        _ = Invoke(new WorkbooksListUpdateDelegate(updateWorkbooksList));
+                        Invoke(new WorkbooksListUpdateDelegate(updateWorkbooksList));
                     }
                 }
             }
@@ -514,7 +514,7 @@ namespace ExcelCellsManager
                     // Workbook を閉じた後に WorkbookList を更新する
                     if (_excelCellsManagerMain.AppsSettings.IsUpdateListWhenWorkbookOpendAndClosed)
                     {
-                        _ = Invoke(new WorkbooksListUpdateDelegate(updateWorkbooksList));
+                        Invoke(new WorkbooksListUpdateDelegate(updateWorkbooksList));
                     }
                 }
                 if (sender.GetType() == typeof(string[]))
@@ -715,7 +715,7 @@ namespace ExcelCellsManager
         private void Button1_Click(object sender, EventArgs e)
         {
             // GetActiveCell
-            _ = _excelCellsManagerMain.ExcelManager.GetActivateCell();
+            _excelCellsManagerMain.ExcelManager.GetActivateCell();
             if (_error.hasAlert) { _error.Messenger.ShowAlertMessages(); }
             else { _error.Messenger.ShowResultSuccessMessage("ActiveCell Selected."); }
         }

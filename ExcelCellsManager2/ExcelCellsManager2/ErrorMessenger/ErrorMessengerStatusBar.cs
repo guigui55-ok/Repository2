@@ -20,8 +20,8 @@ namespace ExcelCellsManager.ErrorMessage
         protected bool isSuppressErrorShow = false;
         protected Timer msgTimer;
         public int MessageUnvisibleInterval = 5000;
-        public EventHandler ShowErrorMessageEvent { get => _showErrorEvent; set => _showErrorEvent = value; }
-        public bool IsSuppressErrorShow { get => isSuppressErrorShow; set => isSuppressErrorShow = value; }
+        public EventHandler ShowErrorMessageEvent { get { return _showErrorEvent; } set { _showErrorEvent = value; } }
+        public bool IsSuppressErrorShow { get { return isSuppressErrorShow; } set { isSuppressErrorShow = value; } }
 
         public ErrorMessengerStatusBar(ErrorManager.ErrorManager error, Form parentForm, StatusStrip statusStrip,int MsgInterval)
         {

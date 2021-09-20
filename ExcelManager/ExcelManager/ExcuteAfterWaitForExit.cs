@@ -13,7 +13,7 @@ namespace ExcelUtility
         public string Path = "";
         public string FileName = "";
         public System.Action ExcuteActionAfterWaitForExit;
-        public EventHandler WaitForExitAfterEvent;
+        public EventHandler WaitForExitAfterEvent = null;
         public ExcuteAfterWaitForExit(ErrorManager.ErrorManager err)
         {
             _err = err;
@@ -29,9 +29,9 @@ namespace ExcelUtility
                     try
                     {
                         _err.AddLog(this, "AsyncWaitForClose Task.Run");
-                        WaitForClose(application, workbookName);
+                        WaitForClose(ref application, workbookName);
                         if (ExcuteActionAfterWaitForExit != null) { ExcuteActionAfterWaitForExit(); }
-                        WaitForExitAfterEvent?.Invoke(null, EventArgs.Empty);
+                        if (WaitForExitAfterEvent != null) { WaitForExitAfterEvent.Invoke(null, EventArgs.Empty); }
                     } catch (Exception ex)
                     {
                         _err.AddException(ex,this, "AsyncWaitForClose Task.Run");
@@ -53,7 +53,7 @@ namespace ExcelUtility
             }
         }
 
-        public int WaitForClose(in Application application, string workbookName)
+        public int WaitForClose(ref Application application, string workbookName)
         {
             try
             {
@@ -84,7 +84,7 @@ namespace ExcelUtility
                     System.Diagnostics.Process.Start(path);
 
                 if (ExcuteActionAfterWaitForExit != null) { ExcuteActionAfterWaitForExit(); }
-                WaitForExitAfterEvent?.Invoke(null, EventArgs.Empty);
+                if (WaitForExitAfterEvent != null) { WaitForExitAfterEvent.Invoke(null, EventArgs.Empty); }
                 return 1;
             } catch (Exception ex)
             {

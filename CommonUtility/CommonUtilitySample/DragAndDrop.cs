@@ -73,7 +73,7 @@ namespace CommonUtilitySample
                 this.Sender = sender;
                 this.DragEventArgs = e;
                 // ほかのメソッドで受け取るときはこのイベントを介する
-                DragDropAfterEvent?.Invoke(sender, e);
+                if (DragDropAfterEvent != null) { DragDropAfterEvent.Invoke(sender, e); }
             }
             catch (Exception ex)
             {

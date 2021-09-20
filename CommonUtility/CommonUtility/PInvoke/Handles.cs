@@ -192,7 +192,7 @@ namespace CommonUtility.CloseHandleUtil
                                 {
                                     Console.WriteLine("hObj == null");
                                 }
-                                // Handles.ObjectInfomationClass の値が型 Handles.ObjectInfomationClass? の null に等しくなることはないので、式の結果は常に false になります
+                                // Handles.ObjectInfomationClass の値が型 Handles.ObjectInfomationClass の null に等しくなることはないので、式の結果は常に false になります
                                 //if (ObjectInformationClass.ObjectNameInformation == null)
                                 //{
                                 //    Console.WriteLine("ObjectInformationClass.ObjectNameInformation == null");
@@ -337,7 +337,8 @@ namespace CommonUtility.CloseHandleUtil
                 IntPtr buf = Marshal.AllocCoTaskMem(size);
                 while (true)
                 {
-                    var ret = NtQueryObject(hObj, infoClass, buf, size, out int retsize);
+                    int retsize = 0;
+                    var ret = NtQueryObject(hObj, infoClass, buf, size, out retsize);
                     if (NT_SUCCESS(ret))
                     {
                         return buf;

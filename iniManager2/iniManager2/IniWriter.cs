@@ -120,7 +120,7 @@ namespace IniManager
                 _error.AddLog(this.ToString()+ ".SetValueForWrite");
                 List<string> lines = reader.GetReadLinesAll();
 
-                if (lines is null)
+                if (lines == null)
                 {
                     //throw new Exception("lines is null."); 
                     _error.AddLog(" lines is null. => Make New List<string>");
@@ -132,7 +132,7 @@ namespace IniManager
                     _error.AddLog(" lines count is 0.");
                 }
 
-                if (writelists is null)
+                if (writelists == null)
                 {
                     //throw new Exception("writelists is null."); 
                     _error.AddLog("writelists is null.  Stop Writing"); return -1;
@@ -166,7 +166,7 @@ namespace IniManager
                     {
 
                         // 空文字ならそのまま残す
-                        if (writeValue is null) { newData = writeValue;  break; }
+                        if (writeValue == null) { newData = writeValue;  break; }
                         if (writeFlag)
                         {
                             sectionFlag = false;

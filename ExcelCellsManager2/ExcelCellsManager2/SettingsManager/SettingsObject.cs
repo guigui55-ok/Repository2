@@ -20,26 +20,26 @@ namespace SettingsManager
         protected object _initialValue;
         protected Keys _shortCutKeys;
 
-        public Keys ShortCutKeys { get => _shortCutKeys; set => _shortCutKeys = value; }
-        public object InitialValue { get => _initialValue; set => _initialValue = value; }
-        public string SettingsTypeName { get => _settingsTypeName; set => _settingsTypeName = value; }
-        string ISettingsObject.Name { get => _name; set => _name = value; }
-        string ISettingsObject.Description { get => _description; set => _description = value; }
-        Type ISettingsObject.ValueType { get => _valueType; set => _valueType = value; }
+        public Keys ShortCutKeys { get { return _shortCutKeys; } set { _shortCutKeys = value; } }
+        public object InitialValue { get { return _initialValue; } set { _initialValue = value; } }
+        public string SettingsTypeName { get { return _settingsTypeName; } set { _settingsTypeName = value; } }
+        string ISettingsObject.Name { get { return _name; } set { _name = value; } }
+        string ISettingsObject.Description { get { return _description; } set { _description = value; } }
+        Type ISettingsObject.ValueType { get { return _valueType; } set { _valueType = value; } }
         object ISettingsObject.Value {
-            get => _value;
+            get { return _value; }
             set {
                 _value = value;
             }
         }
         object ISettingsObject.Control {
-            get => _control;
+            get { return _control; }
             set {
                 _control = value;
                 SetControlEvent();
             }
         }
-        string ISettingsObject.RegKey { get => _regKey; set => _regKey = value; }
+        string ISettingsObject.RegKey { get { return _regKey; } set { _regKey = value; } }
 
         private Control saveValueControl;
         private Type saveValueControlType;

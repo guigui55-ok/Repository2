@@ -1,9 +1,7 @@
-C:\Users\OK\source\repos\Repository2\iniManager2\iniManager2\obj\Release\iniManager2.csprojAssemblyReference.cache
-C:\Users\OK\source\repos\Repository2\iniManager2\iniManager2\obj\Release\iniManager2.csproj.CoreCompileInputs.cache
-C:\Users\OK\source\repos\Repository2\iniManager2\iniManager2\bin\Release\iniManager2.dll.config
-C:\Users\OK\source\repos\Repository2\iniManager2\iniManager2\bin\Release\iniManager2.dll
-C:\Users\OK\source\repos\Repository2\iniManager2\iniManager2\bin\Release\iniManager2.pdb
-C:\Users\OK\source\repos\Repository2\iniManager2\iniManager2\bin\Release\ErrorManager.dll
-C:\Users\OK\source\repos\Repository2\iniManager2\iniManager2\obj\Release\iniManager2.csproj.CopyComplete
-C:\Users\OK\source\repos\Repository2\iniManager2\iniManager2\obj\Release\iniManager2.dll
-C:\Users\OK\source\repos\Repository2\iniManager2\iniManager2\obj\Release\iniManager2.pdb
+F:\ZDOWNLOAD\Repository2-main\iniManager2\iniManager2\bin\Release\iniManager2.dll.config
+F:\ZDOWNLOAD\Repository2-main\iniManager2\iniManager2\bin\Release\iniManager2.dll
+F:\ZDOWNLOAD\Repository2-main\iniManager2\iniManager2\bin\Release\iniManager2.pdb
+F:\ZDOWNLOAD\Repository2-main\iniManager2\iniManager2\bin\Release\ErrorManager.dll
+F:\ZDOWNLOAD\Repository2-main\iniManager2\iniManager2\obj\Release\iniManager2.dll
+F:\ZDOWNLOAD\Repository2-main\iniManager2\iniManager2\obj\Release\iniManager2.pdb
+F:\ZDOWNLOAD\Repository2-main\iniManager2\iniManager2\obj\Release\iniManager2.csprojResolveAssemblyReference.cache

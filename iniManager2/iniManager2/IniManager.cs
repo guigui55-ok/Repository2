@@ -282,13 +282,13 @@ namespace IniManager
                 string buf;
                 foreach(var iniSection in sectionList)
                 {                    
-                    if ((!(iniSection is null)))
+                    if ((!(iniSection == null)))
                     {
                         buf = "[" + iniSection.GetSectionName() + "]";
                         _error.AddLog("  " + buf);
                         writeList.Add(buf);
                         readList = iniSection.GetParametersList();
-                        if ((!(readList is null))&&(!(readList.Count < 1))) 
+                        if ((!(readList == null))&&(!(readList.Count < 1))) 
                         { 
                             foreach(var value in readList)
                             {

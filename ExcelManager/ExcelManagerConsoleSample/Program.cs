@@ -65,7 +65,7 @@ namespace ExcelManagerConsoleSample
             {
                 Console.Write(count + " : pid=" + apps.ProcessId);
                 bool flag;
-                if(apps.ApplicationIsNull()) { flag = false; }
+                if (apps.ApplicationIsNull()) { flag = false; }
                 else { }
                 Console.WriteLine("  ,apps.ApplicationIsNull()="+ apps.ApplicationIsNull());
                 count++;

@@ -397,7 +397,7 @@ namespace ExcelUtility
                         if (_Error.hasError) { _Error.AddLogWarning("SetProcessIdFromExcelApplication failed"); _Error.ClearError(); }
                         // WorkbookActivate イベントハンドラをセットする
                         apps.SetWorkbookEvent();
-                        _excelWorkbookSyncer.SetEvent(apps.Application);
+                        _excelWorkbookSyncer.SetEvent(ref apps.Application);
                         newApps = apps;
 
                         // 常に起動する場合は追加する
@@ -540,7 +540,7 @@ namespace ExcelUtility
                     _excelWorkbookSyncer.IsWorkbookClosed = false;
                 }
                 if (IsUpdating) { _Error.AddLog(" IsUpdating,true=>false"); IsUpdating = false; }
-                UpdateExcelAppsListAfterEvent?.Invoke(null,EventArgs.Empty);
+                if (UpdateExcelAppsListAfterEvent != null) { UpdateExcelAppsListAfterEvent.Invoke(null, EventArgs.Empty); }
             }
         }
 
@@ -592,7 +592,7 @@ namespace ExcelUtility
                 apps.SetWorkbookEvent();
                 if (_Error.hasError)
                 { _Error.AddLogAlert(this, "SetWorkbookEvent Failed"); }
-                ret = _excelWorkbookSyncer.SetEvent(apps.Application);
+                ret = _excelWorkbookSyncer.SetEvent(ref apps.Application);
                 if (ret < 1) { _Error.AddLogAlert(this, "_excelWorkbookSyncer.SetEvent Failed"); }
 
                 // Activate フラグをセットする
@@ -860,7 +860,7 @@ namespace ExcelUtility
                     if (_Error.hasError) { return; }
                     // WorkbookActivate イベントハンドラ
                     UpdateExcelApps(apps);
-                    _excelWorkbookSyncer.SetEvent(apps.Application);
+                    _excelWorkbookSyncer.SetEvent(ref apps.Application);
                     // リストに追加する
                     _ExcelAppsList.Add(apps);
                     _Error.AddLog("  _ExcelAppsList.Add(new ExcelApps(_Error)) 4");
@@ -994,7 +994,7 @@ namespace ExcelUtility
                     if (_Error.hasError) { return; }
                     // WorkbookActivate イベントハンドラをセットする
                     openApps.SetWorkbookEvent();
-                    _excelWorkbookSyncer.SetEvent(openApps.Application);
+                    _excelWorkbookSyncer.SetEvent(ref openApps.Application);
                     if (_Error.hasError) { return; }
                     // Open した Workbook のイベントハンドラをセットする
                     openApps.SetWorkbookEvent(filePath, System.IO.Path.GetFileName(filePath));
@@ -1472,7 +1472,7 @@ namespace ExcelUtility
                         _Error.AddLog("  IsAlwaysOpenExcelApplication=true");
                         ExcelApplicationRunWhenNothing(false);
                     }
-                    ExcelAppsCountIsZeroEvent?.Invoke(null,EventArgs.Empty);
+                    if (ExcelAppsCountIsZeroEvent != null) { ExcelAppsCountIsZeroEvent.Invoke(null, EventArgs.Empty); }
                 }
                 return 1;
             } catch (Exception ex)
