@@ -23,7 +23,7 @@ namespace IniManager
         ///  最後に発生した例外の Message を取得する
         /// </summary>
         public string GetExceptionMessage() { 
-            if (LastException is null) { return ""; }
+            if (LastException == null) { return ""; }
             return LastException.Message;  
         }
 
@@ -43,7 +43,7 @@ namespace IniManager
         /// </summary>
         public void AddException(Exception ex,string msg)
         {
-            if (!(ex is null))
+            if (!(ex == null))
             {
                 LastExceptionMessage += "\n" +ex.Message;
             }

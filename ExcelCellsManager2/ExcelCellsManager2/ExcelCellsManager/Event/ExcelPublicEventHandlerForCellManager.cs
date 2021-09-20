@@ -29,42 +29,65 @@ namespace ExcelCellsManager.ExcelCellsManager.Event
 
         protected List<string> _workbookPathList = new List<string>();
         protected bool IsSetApplicationEvent = false;
+        protected int _number=0;
 
-        public int Number { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public WorkbookEvents_WindowActivateEventHandler Workbook_WindowActivateEvent 
-        { get => MWorkbook_WindowActivateEvent; set => MWorkbook_WindowActivateEvent = value; }
+        public int Number { get { return _number; } set { _number = value; } }
+        public WorkbookEvents_WindowActivateEventHandler Workbook_WindowActivateEvent
+        { get { return MWorkbook_WindowActivateEvent; } set { MWorkbook_WindowActivateEvent = value; } }
         public AppEvents_WindowActivateEventHandler Application_WindowActivateEvent
-        { get => MApplication_WindowActivateEvent; set => MApplication_WindowActivateEvent = value; }
+        { get { return MApplication_WindowActivateEvent; } set { MApplication_WindowActivateEvent = value; } }
         public WorkbookEvents_DeactivateEventHandler Workbook_DeactivateEvent
-        { get => MWorkbook_DeactivateEvent; set => MWorkbook_DeactivateEvent = value; }
+        { get { return MWorkbook_DeactivateEvent; } set { MWorkbook_DeactivateEvent = value; } }
         public AppEvents_WindowDeactivateEventHandler Application_DeactivateEvent
-        { get => MApplication_DeactivateEvent; set => MApplication_DeactivateEvent = value; }
+        { get { return MApplication_DeactivateEvent; } set { MApplication_DeactivateEvent = value; } }
         public WorkbookEvents_SheetActivateEventHandler WorkSheet_ActivateEvent
-        { get => MWorkSheet_ActivateEvent; set => MWorkSheet_ActivateEvent = value; }
+        { get { return MWorkSheet_ActivateEvent; } set { MWorkSheet_ActivateEvent = value; } }
         public AppEvents_SheetSelectionChangeEventHandler Application_SheetSelectionChangeEvent
-        { get => MApplication_SheetSelectionChangeEvent; set => MApplication_SheetSelectionChangeEvent = value; }
-        public AppEvents_SheetActivateEventHandler Application_SheetActivateEvent {
-            get => MApplication_SheetActivteEventt; set => MApplication_SheetActivteEventt = value; }
+        { get { return MApplication_SheetSelectionChangeEvent; } set { MApplication_SheetSelectionChangeEvent = value; } }
+        public AppEvents_SheetActivateEventHandler Application_SheetActivateEvent
+        {
+            get { return MApplication_SheetActivteEventt; }
+            set { MApplication_SheetActivteEventt = value; }
+        }
         // EventHandler
-        public EventHandler Application_SheetSelectionChangeAfterEvent {
-            get => MApplication_SheetSelectionChangeAfterEvent; set => MApplication_SheetSelectionChangeAfterEvent = value; }
+        public EventHandler Application_SheetSelectionChangeAfterEvent
+        {
+            get { return MApplication_SheetSelectionChangeAfterEvent; }
+            set { MApplication_SheetSelectionChangeAfterEvent = value; }
+        }
         public EventHandler Application_WindowActivateAfterEvent {
-            get => MApplication_WindowActivateAfterEvent; set => MApplication_WindowActivateAfterEvent = value;
+            get { return MApplication_WindowActivateAfterEvent; } set { MApplication_WindowActivateAfterEvent = value; }
         }
         public EventHandler Application_DeactivateAddEvent
-        {get => MApplication_WorkbookDeactivateEvent; set => MApplication_WorkbookDeactivateEvent = value;}
-        public EventHandler WorkSheet_ActivateAfterEvent {
-            get => MWorkSheet_ActivateAfterEvent; set => MWorkSheet_ActivateAfterEvent = value; }
+        { get { return MApplication_WorkbookDeactivateEvent; } set { MApplication_WorkbookDeactivateEvent = value; } }
+        public EventHandler WorkSheet_ActivateAfterEvent
+        {
+            get { return MWorkSheet_ActivateAfterEvent; }
+            set { MWorkSheet_ActivateAfterEvent = value; }
+        }
         public EventHandler Application_SheetActivateAfterEvent {
-            get => MApplication_SheetActivateEventAfterHandler; set => MApplication_SheetActivateEventAfterHandler = value; }
-        public AppEvents_WorkbookOpenEventHandler Application_WorkbookOpenEvent { 
-            get => MApplication_WorkbookOpenEvent; set => MApplication_WorkbookOpenEvent = value; }
-        public EventHandler Application_WorkbookOpenAfterEvent { 
-            get => MApplication_WorkbookOpenAfterEvent; set => MApplication_WorkbookOpenAfterEvent = value; }
-        public AppEvents_WorkbookBeforeCloseEventHandler Application_WorkbookBeforeCloseEvent { 
-            get => MApplication_WorkbookBeforeCloseEvent; set => MApplication_WorkbookBeforeCloseEvent = value; }
-        public EventHandler Application_WorkbokBeforeCloseAddEvent { 
-            get => MApplication_WorkbookBeforeCloseAddEvent; set => MApplication_WorkbookBeforeCloseAddEvent = value; }
+            get { return MApplication_SheetActivateEventAfterHandler; }
+            set { MApplication_SheetActivateEventAfterHandler = value; } }
+        public AppEvents_WorkbookOpenEventHandler Application_WorkbookOpenEvent
+        {
+            get { return MApplication_WorkbookOpenEvent; }
+            set { MApplication_WorkbookOpenEvent = value; }
+        }
+        public EventHandler Application_WorkbookOpenAfterEvent
+        {
+            get { return MApplication_WorkbookOpenAfterEvent; }
+            set { MApplication_WorkbookOpenAfterEvent = value; }
+        }
+        public AppEvents_WorkbookBeforeCloseEventHandler Application_WorkbookBeforeCloseEvent
+        {
+            get { return MApplication_WorkbookBeforeCloseEvent; }
+            set { MApplication_WorkbookBeforeCloseEvent = value; }
+        }
+        public EventHandler Application_WorkbokBeforeCloseAddEvent
+        {
+            get { return MApplication_WorkbookBeforeCloseAddEvent; }
+            set { MApplication_WorkbookBeforeCloseAddEvent = value; }
+        }
 
         public ExcelPublicEventHandlerBredgeForCellManager(ErrorManager.ErrorManager error)
         {
@@ -255,7 +278,7 @@ namespace ExcelCellsManager.ExcelCellsManager.Event
             }
         }
 
-        public int SetEventForApplication(in Application application)
+        public int SetEventForApplication(ref Application application)
         {
             try
             {
@@ -277,7 +300,7 @@ namespace ExcelCellsManager.ExcelCellsManager.Event
             }
         }
 
-        public int SetEventForWorkbook(in Application application, string bookName)
+        public int SetEventForWorkbook(ref Application application, string bookName)
         {
             try
             {

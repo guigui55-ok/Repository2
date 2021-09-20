@@ -23,14 +23,26 @@ namespace ExcelCellsManager.CellsValuesConrol.CellsValuesList
 
         public IDataGridViewValueConverter DataGridViewValueConverter => _dataGridViewValueConverter;
 
-        EventHandler IDataGridViewUtility.DataGridView_InsertRow { 
-            get => _dataGridView_InsertRow; set => _dataGridView_InsertRow = value; }
-        EventHandler IDataGridViewUtility.DataGridView_DeleteRow { 
-            get => _dataGridView_DeleteRow; set => _dataGridView_DeleteRow = value; }
-        EventHandler IDataGridViewUtility.DataGridView_AddRow { 
-            get => _dataGridView_AddRow; set => _dataGridView_AddRow = value; }
-        EventHandler IDataGridViewUtility.DataGridView_ChangeValue {    
-            get => _dataGridView_ChangeValue; set => _dataGridView_ChangeValue = value; }
+        EventHandler IDataGridViewUtility.DataGridView_InsertRow
+        {
+            get { return _dataGridView_InsertRow; }
+            set { _dataGridView_InsertRow = value; }
+        }
+        EventHandler IDataGridViewUtility.DataGridView_DeleteRow
+        {
+            get { return _dataGridView_DeleteRow; }
+            set { _dataGridView_DeleteRow = value; }
+        }
+        EventHandler IDataGridViewUtility.DataGridView_AddRow
+        {
+            get { return _dataGridView_AddRow; }
+            set { _dataGridView_AddRow = value; }
+        }
+        EventHandler IDataGridViewUtility.DataGridView_ChangeValue
+        {
+            get { return _dataGridView_ChangeValue; }
+            set { _dataGridView_ChangeValue = value; }
+        }
 
         public DataGridViewUtility(ErrorManager.ErrorManager error,DataGridView dataGridView,IDataGridViewItems dataGridViewItems)
         {
@@ -282,7 +294,7 @@ namespace ExcelCellsManager.CellsValuesConrol.CellsValuesList
         //{
         //    try
         //    {
-        //        if (values is null) { _error.AddLog("values is null");  return; }
+        //        if (values == null) { _error.AddLog("values is null");  return; }
         //        if (values.Count < 1) { _error.AddLog("values.Count < 1"); return; }
         //        // DataSouce が null のとき
         //        if (_dataGridView.DataSource == null) { _wrapper = new BindingSource(); }

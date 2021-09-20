@@ -38,7 +38,7 @@ namespace ExcelUtility.ExcelObject
                 else
                 {
                     beginAddress = GetCornerAddressForAddress(
-                        (Worksheet)(application.Workbooks[bookname].Worksheets[sheetname]),
+                        (Worksheet)application.Workbooks[bookname].Worksheets[sheetname],
                         address,
                         XlSearchOrder.xlByRows,
                         ExcelFinderAddressConstants.DIRECTION_UP | ExcelFinderAddressConstants.DIRECTION_LEFT);
@@ -156,7 +156,7 @@ namespace ExcelUtility.ExcelObject
         /// <param name="worksheet"></param>
         /// <param name="address"></param>
         /// <returns></returns>
-        public bool AddressIsSingleCell(in Worksheet worksheet, string address)
+        public bool AddressIsSingleCell(ref Worksheet worksheet, string address)
         {
             try
             {
@@ -176,7 +176,7 @@ namespace ExcelUtility.ExcelObject
 
         // コンマを含むアドレス(複数アドレス)形式のアドレスから、最初 (左上) のアドレスを取得する
         // Row,Column の優先は order で決定する
-        public string GetFirstAddressFromRange(in Worksheet worksheet, string address, XlSearchOrder order,bool IsCheckAddress)
+        public string GetFirstAddressFromRange(ref Worksheet worksheet, string address, XlSearchOrder order,bool IsCheckAddress)
         {
             try
             {
@@ -185,7 +185,7 @@ namespace ExcelUtility.ExcelObject
                 if (IsCheckAddress)
                 {
                     //アドレスが有効か判定する
-                    if (!ValueIsAddressAndExceptionThrowWhenValueIsInvalid(worksheet, address))
+                    if (!ValueIsAddressAndExceptionThrowWhenValueIsInvalid(ref worksheet, address))
                     {
                         throw new Exception("Address Is Invalid");
                     }
@@ -212,7 +212,7 @@ namespace ExcelUtility.ExcelObject
         /// <param name="direction"></param>
         /// <returns></returns>
         public string GetCornerAddressForAddress(
-            in Worksheet worksheet, string address,XlSearchOrder order, ExcelFinderAddressConstants direction)
+           Worksheet worksheet, string address,XlSearchOrder order, ExcelFinderAddressConstants direction)
         {
             try
             {
@@ -224,7 +224,7 @@ namespace ExcelUtility.ExcelObject
                 if (AddressArray.Length < 1) { _error.AddLog("address.Split.Count < 1"); return ""; }
 
                 // AddressArray すべてを含むアドレスの左上を返す
-                string retAddress = GetCornerAddressFromRangeAddress(worksheet, AddressArray, order, direction);
+                string retAddress = GetCornerAddressFromRangeAddress(ref worksheet, AddressArray, order, direction);
 
                 return retAddress;
             } catch (Exception ex)
@@ -241,7 +241,7 @@ namespace ExcelUtility.ExcelObject
         // 対象形式は $A$1 , $A$1:$B$2 , $A$1,$B$2,$C$3 ... 
         // Direction 指定Ver
         public string GetCornerAddressFromRangeAddress(
-            in Worksheet worksheet, string address, ExcelFinderAddressConstants direction)
+            ref Worksheet worksheet, string address, ExcelFinderAddressConstants direction)
         {
             try
             {
@@ -310,7 +310,7 @@ namespace ExcelUtility.ExcelObject
         // コンマで Split した Address の配列が対象
         // それぞれの左上を取得し、さらにそれを比較して、左上を取得する
         private string GetCornerAddressFromRangeAddress(
-            in Worksheet worksheet, string[] addressArray,
+            ref Worksheet worksheet, string[] addressArray,
             XlSearchOrder prioritySearchOrder, ExcelFinderAddressConstants direction)
         {
             try
@@ -336,7 +336,7 @@ namespace ExcelUtility.ExcelObject
                 {
                     string buf = addressArray[i];
                     // 要素の corner のアドレスを取得する
-                    tempadd = GetCornerAddressFromRangeAddress(worksheet, buf, direction);
+                    tempadd = GetCornerAddressFromRangeAddress(ref worksheet, buf, direction);
                     if (_error.HasException()) { return ""; }
                     if (i == 0)
                     {
@@ -414,7 +414,7 @@ namespace ExcelUtility.ExcelObject
         // これはアドレスで値が無効時は例外が発生する
         // This is an address and an exception is thrown when the value is invalid
         public bool ValueIsAddressAndExceptionThrowWhenValueIsInvalid(
-            in Worksheet worksheet, string address, int errMode = 1)
+            ref Worksheet worksheet, string address, int errMode = 1)
         {
             try
             {

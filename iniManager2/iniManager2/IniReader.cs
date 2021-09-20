@@ -70,7 +70,7 @@ namespace IniManager
             {
                 _error.AddLog(_clName + ".GetParameterValue:sectionName="+sectionName + " ,parameterName="+parameterNme);
                 IniSection iniSection= GetIniSection(sectionName);
-                if (iniSection is null) { throw new Exception("sectionName Not Exists.("+sectionName+")"); }
+                if (iniSection == null) { throw new Exception("sectionName Not Exists.("+sectionName+")"); }
                 string buf = iniSection.GetParameterValue(parameterNme);
                 return buf;
             } catch (Exception ex)
@@ -132,7 +132,7 @@ namespace IniManager
                 _error.AddLog(this.ToString() + ".SetParameterValue:sectionName=" + sectionName 
                     + " ,parameterName=" + parameterName + " ,value="+value);
                 IniSection iniSection = GetIniSection(sectionName);
-                if (iniSection is null)
+                if (iniSection == null)
                 {
                     throw new Exception("sectionName Not Exists.(" + sectionName + ")");
                     //return 1;
@@ -153,7 +153,7 @@ namespace IniManager
             try
             {
                 List<IniSection> list = this.IniSectionList;
-                if (list is null) {　throw new Exception("IniSectionList Is Null."); }
+                if (list == null) {　throw new Exception("IniSectionList Is Null."); }
                 if (list.Count < 1) { throw new Exception("IniSectionList Count 0."); }
 
                 foreach (IniSection iniSection in list)
@@ -181,7 +181,7 @@ namespace IniManager
             {
                 _error.AddLog(this.ToString()+".GetParametersList");
                 List<IniSection> list = this.IniSectionList;
-                if (list is null) { _error.AddLog(" list is null. sectionName="+sectionName);  return null; }
+                if (list == null) { _error.AddLog(" list is null. sectionName="+sectionName);  return null; }
                 if (list.Count < 1) { _error.AddLog(" list.Count<1. sectionName=" + sectionName); return null; }
                 foreach (IniSection iniSection in list)
                 {

@@ -16,7 +16,7 @@ namespace ExcelCellsManager.DataGridStruct
             _error = error;
         }
 
-        public int DataSourceListCount { get => _ListForDataSource.Count;  }
+        public int DataSourceListCount { get { return _ListForDataSource.Count; } }
 
         public object GetItem(int index)
         {
@@ -119,7 +119,7 @@ namespace ExcelCellsManager.DataGridStruct
         {
             try
             {
-                if (_ListForDataSource is null) { return; }
+                if (_ListForDataSource == null) { return; }
                 if (_ListForDataSource.Count < 1) { return; }
 
                 while(_ListForDataSource.Count >= 1)
@@ -128,7 +128,7 @@ namespace ExcelCellsManager.DataGridStruct
                 }
                 _dataSourceOriginal = _ListForDataSource.ToArray();
 
-                if (_dataSource is null) { return; }
+                if (_dataSource == null) { return; }
                 if (_dataSource.Length < 1) { return; }
                 while (_dataSource.Length >= 1)
                 {

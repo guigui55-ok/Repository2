@@ -454,12 +454,12 @@ namespace ExcelUtility
                     {
                         _Error.AddLog(this.ToString()+".SetWorkbookEvent : " + Application.Name + ":" + Application.Workbooks[i].Name);
 
-                        _excelEventBridge.SetEventForWorkbook(Application,Application.Workbooks[i].Name);
+                        _excelEventBridge.SetEventForWorkbook(ref Application,Application.Workbooks[i].Name);
                         //Application.Workbooks[i].WindowActivate += this._excelEventBridge.Workbook_WindowActivateEvent;
                         //Application.Workbooks[i].Deactivate += this._excelEventBridge.Workbook_DeactivateEvent;
                         //Application.Workbooks[i].SheetActivate += this._excelEventBridge.WorkSheet_ActivateEvent;
                     }
-                    _excelEventBridge.SetEventForApplication(this.Application);
+                    _excelEventBridge.SetEventForApplication(ref this.Application);
                     //Application.WindowActivate += _excelEventBridge.Application_WindowActivateEvent;
                     //Application.WindowDeactivate += _excelEventBridge.Application_DeactivateEvent;
                     //Application.SheetSelectionChange += _excelEventBridge.Application_SheetSelectionChangeEvent;
@@ -634,7 +634,7 @@ namespace ExcelUtility
                 //    //Console.WriteLine("application window visible : " + Application.Visible);
                 //}
                 _Error.AddLog("  Application.Visible=" + Application.Visible);
-                _ = GetWindowThreadProcessId((IntPtr)this.Application.Hwnd, out uint uintbuf);
+                GetWindowThreadProcessId((IntPtr)this.Application.Hwnd, out uint uintbuf);
                 _Error.AddLog(" pid="+uintbuf);
                 return (int)uintbuf;
             } catch (Exception ex)

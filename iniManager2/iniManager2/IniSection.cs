@@ -24,7 +24,7 @@ namespace IniManager
         public void AddParameter(string value)
         {
             //if (value == "") { return; }
-            //if (value is null) { return; }
+            //if (value == null) { return; }
             if ((value == "")||(value == null))
             {
                 _error.AddLog(this.ToString()+ ".AddParameter: ((value == '')||(value == null)");
@@ -38,7 +38,7 @@ namespace IniManager
         /// </summary>
         public int GetParametersCount()
         {
-            if (_parameterList is null) { 
+            if (_parameterList == null) { 
                 _error.AddLog(this.ToString() + ".GetParametersCount: parameterList is null"); 
                 return -1;
             }
@@ -56,7 +56,7 @@ namespace IniManager
         public bool IsExistsValues()
         {
             if (_sectionName == "") { return false; }
-            if (_sectionName is null) { return false; }
+            if (_sectionName == null) { return false; }
             return true;
         }
 
@@ -70,7 +70,7 @@ namespace IniManager
             try
             {
                 int count = 0;
-                if (_parameterList is null) { throw new Exception("ParamList Is Null"); }
+                if (_parameterList == null) { throw new Exception("ParamList Is Null"); }
                 if (_parameterList.Count < 1) { throw new Exception("ParamList Count 0"); }
 
                 string buf;
@@ -100,7 +100,7 @@ namespace IniManager
             {
 
                 List<string> list = _parameterList;
-                if (list is null) { throw new Exception("ParamList Is Null");}
+                if (list == null) { throw new Exception("ParamList Is Null");}
                 if (list.Count < 1) { throw new Exception("ParamList Count 0");}
 
                 _error.AddLog("  SetParameterValue: section=" + _sectionName + " ,parameter=" + parameterName + " ,value=" + value);
@@ -143,7 +143,7 @@ namespace IniManager
             try {
 
                 List<string> list = _parameterList;
-                if (list is null) { _error.AddLog("GetParameterValue:ParamList Is Null"); return ""; }
+                if (list == null) { _error.AddLog("GetParameterValue:ParamList Is Null"); return ""; }
                 if (list.Count < 1) { _error.AddLog("GetParameterValue:ParamList Count 0");  return ""; }
 
                 foreach (string value in list)
@@ -173,7 +173,7 @@ namespace IniManager
             try
             {
                 if (value == "") { _error.AddLog("GetParameterValueFromLine:value is blank"); return ""; }
-                if (value is null) { _error.AddLog("GetParameterValueFromLine:value is null"); return ""; }
+                if (value == null) { _error.AddLog("GetParameterValueFromLine:value is null"); return ""; }
                 int pos = value.IndexOf('=');
                 if (pos > 0)
                 {
@@ -196,7 +196,7 @@ namespace IniManager
             try
             {
                 if (value == "") { _error.AddLog("GetParameterValueFromLine:value is blank"); return ""; }
-                if (value is null) { _error.AddLog("GetParameterValueFromLine:value is null"); return ""; }
+                if (value == null) { _error.AddLog("GetParameterValueFromLine:value is null"); return ""; }
                 int pos = value.IndexOf('=');
                 if (pos > 0)
                 {
