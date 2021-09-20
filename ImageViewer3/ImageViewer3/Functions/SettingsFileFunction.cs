@@ -14,7 +14,7 @@ namespace ImageViewer.Settings
         {
             _errorLog = errorLog;
             _mainformManager = mainFormManager;
-            _ = SetSettingsFileKind(mode);
+            SetSettingsFileKind(mode);
         }
 
         public int SetSettingsFileKind(int mode)

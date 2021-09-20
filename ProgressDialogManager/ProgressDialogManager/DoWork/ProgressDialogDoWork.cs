@@ -205,7 +205,7 @@ namespace ProgressDialog.DoWork
 
                 Stopwatch sw = new Stopwatch();
                 sw.Start();
-                bool IsCancelled = false;
+                bool TaskIsCancelled = false;
                 int n = 0;
                 string dot = "";
                 bool isPass3sec = false;
@@ -216,7 +216,7 @@ namespace ProgressDialog.DoWork
                     //キャンセルされたか調べる
                     if (bw.CancellationPending)
                     {
-                        IsCancelled = true;
+                        TaskIsCancelled = true;
                         break;
                     }
                     if (Timeout > 0)
@@ -225,7 +225,7 @@ namespace ProgressDialog.DoWork
                         if (sw.ElapsedMilliseconds == (Timeout))
                         {
                             _err.AddLog(this, method + ".Task Timeout");
-                            IsCancelled = true;
+                            TaskIsCancelled = true;
                             break;
                         }
                     }
@@ -256,11 +256,11 @@ namespace ProgressDialog.DoWork
                 e.Result = sw.ElapsedMilliseconds;
 
                 sw.Stop();
-                if (IsCancelled)
+                if (TaskIsCancelled)
                 {
                     //キャンセルされたとき
                     e.Cancel = true;
-                    IsCancelled = true;
+                    TaskIsCancelled = true;
                 }
                 // Task が終了した
                 if (task.IsCompleted)

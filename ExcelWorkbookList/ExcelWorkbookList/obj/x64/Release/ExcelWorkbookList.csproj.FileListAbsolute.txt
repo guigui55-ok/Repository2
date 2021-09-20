@@ -12,4 +12,3 @@ C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\obj\x64
 C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\obj\x64\Release\ExcelWorkbookList.pdb
 C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\bin\x64\Release\CommonUtilityForExcelManager.dll
 C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\obj\x64\Release\ExcelWorkbookList.csprojAssemblyReference.cache
-C:\Users\OK\source\repos\Repository2\ExcelWorkbookList\ExcelWorkbookList\obj\x64\Release\ExcelWorkbookList.csprojResolveAssemblyReference.cache

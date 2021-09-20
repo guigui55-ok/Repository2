@@ -18,8 +18,8 @@ namespace ImageViewer.Controls
         protected IViewImageSettings _settings;
         private PointF bufPointF = new PointF();
 
-        public IViewControlState State { get => _state; set => _state = value; }
-        public IViewInnerControl ViewInnerControl { get => _viewInnerControl; set => _viewInnerControl=value; }
+        public IViewControlState State { get { return _state; } set { _state = value; } }
+        public IViewInnerControl ViewInnerControl { get { return _viewInnerControl; } set { _viewInnerControl = value; } }
 
         public ViewFrameControl(ErrorLog.IErrorLog errorlog,
             Panel parentControl, Panel framePanel,IViewImageSettings settings,IViewControlState state) 
@@ -97,7 +97,7 @@ namespace ImageViewer.Controls
 
         public void SetVisible(bool flag)
         {
-            if (_framePanel is null) { _errorLog.AddErrorNotException("setVisible"); }
+            if (_framePanel == null) { _errorLog.AddErrorNotException("setVisible"); }
             _framePanel.Visible = flag;
         }
 

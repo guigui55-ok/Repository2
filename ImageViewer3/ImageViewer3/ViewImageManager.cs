@@ -52,7 +52,7 @@ namespace ImageViewer
             MainControls.MainForm = mainForm;
             MainControls.MainFormManger = new MainFormManager(errorlog,mainForm,settings,this);
             MainControls.ContentsControl = new ContentsControl(errorlog, contentsControl, mainForm, MainControls.MainFormManger);
-            _ = MainControls.MainFormManger.Initialize();
+            MainControls.MainFormManger.Initialize();
 
             MainControls.ContentsFunction = new ContentsControlFunction(errorlog, mainForm, MainControls.ContentsControl, this);
 
@@ -79,7 +79,7 @@ namespace ImageViewer
                 // 設定ファイルからオブジェクトへ
                 SetSettingsFromFile();
                 // 
-                _ = ApplySettings();
+                ApplySettings();
                 return 1;
             } catch (Exception ex)
             {
@@ -144,7 +144,7 @@ namespace ImageViewer
             {
                 int n = 0;
                 // 番号で管理するため、Newするときはこれで作る
-                if (ViewImageObjectList is null)
+                if (ViewImageObjectList == null)
                 {
                     ViewImageObjectList = new List<ViewImageObjects>();
                     return new ViewImageObjects(_errorLog, 0, this,mainForm, contentsPanel, new Panel(), new Panel(), new PictureBox());
@@ -192,7 +192,7 @@ namespace ImageViewer
             try
             {
                 List<ViewImageObjects> retlist = new List<ViewImageObjects>();
-                if (ViewImageObjectList is null)
+                if (ViewImageObjectList == null)
                 { _errorLog.AddErrorNotException(this.ToString(), "getActiveControl list is null"); return null; }
                 if (ViewImageObjectList.Count < 1)
                 { _errorLog.AddErrorNotException(this.ToString(), "getActiveControl list count 0"); return null; }
@@ -219,7 +219,7 @@ namespace ImageViewer
             {
                 List<ViewImageObjects> list = this.ViewImageObjectList;
                 // Listがnullまたはない
-                if (((list is null) | (list.Count < 1)))
+                if (((list == null) | (list.Count < 1)))
                 { _errorLog.AddErrorNotException(this.ToString(), "DoFunctionAll List is Nothing"); return; }
                 // 実行
                 foreach (var viewImageObject in list)
@@ -239,7 +239,7 @@ namespace ImageViewer
             try
             {
                 List<ViewImageObjects> list = this.GetActiveControl();
-                if (!((list is null) | (list.Count < 1)))
+                if (!((list == null) | (list.Count < 1)))
                 {
                     foreach (ViewImageObjects value in list)
                     {

@@ -9,3 +9,5 @@ C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\obj\
 C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\obj\Release\ExcelManagerConsoleSample.exe
 C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\obj\Release\ExcelManagerConsoleSample.pdb
 C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\obj\Release\ExcelManagerConsoleSample.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\bin\x64\Release\ExcelManager.pdb
+C:\Users\OK\source\repos\Repository2\ExcelManager\ExcelManagerConsoleSample\bin\x64\Release\ExcelManager.dll.config

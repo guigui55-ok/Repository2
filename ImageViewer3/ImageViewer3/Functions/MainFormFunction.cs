@@ -112,9 +112,9 @@ namespace ImageViewer.Functions
             {
                 foreach(Control item in _mainForm.Controls)
                 {
-                    if (item is MenuStrip strip)
+                    if (item.GetType().Equals(typeof( MenuStrip )))
                     {
-                        return strip;
+                        return (MenuStrip)item;
                     }
                 }
                 return null;

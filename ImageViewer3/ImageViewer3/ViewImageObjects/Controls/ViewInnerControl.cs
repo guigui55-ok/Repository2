@@ -19,9 +19,9 @@ namespace ImageViewer.Controls
 
         //protected Point bufPoint;
         private PointF bufPointF;
-        public IViewImageControl ViewImageControl { get => _viewImageControl; set => _viewImageControl = value; }
-        public IViewImageSettings Settings { get => _settings; set => _settings = value; }
-        public IViewControlState State { get => _state; set => _state = value; }
+        public IViewImageControl ViewImageControl { get { return _viewImageControl; } set { _viewImageControl = value; } }
+        public IViewImageSettings Settings { get { return _settings; } set { _settings = value; } }
+        public IViewControlState State { get { return _state; } set { _state = value; } }
         
 
         public ViewInnerControl(IErrorLog erorlog,
@@ -41,7 +41,7 @@ namespace ImageViewer.Controls
         {
             try
             {
-                if (!(viewImageControl is null))
+                if (!(viewImageControl == null))
                 {
                     _viewImageControl = viewImageControl;
                     _state = _viewImageControl.State;
@@ -162,7 +162,7 @@ namespace ImageViewer.Controls
 
         public void SetVisible(bool flag)
         {
-            if (_innerControl is null) { return; }
+            if (_innerControl == null) { return; }
             _innerControl.Visible = flag;
             _viewImageControl.SetVisible(flag);
         }

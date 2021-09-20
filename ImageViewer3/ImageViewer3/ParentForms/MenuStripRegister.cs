@@ -22,7 +22,7 @@ namespace ImageViewer.ParentForms
         {
             try
             {
-                if (lists is null)
+                if (lists == null)
                 { _errorLog.AddErrorNotException(this.ToString(), "registMenuToMenuStripFromToolStripLiistForRegistList lists is null"); return -1; }
                 if (lists.Count < 1)
                 { _errorLog.AddErrorNotException(this.ToString(), "registMenuToMenuStripFromToolStripLiistForRegistList lists count < 1"); return -2; }
@@ -50,7 +50,7 @@ namespace ImageViewer.ParentForms
         {
             try
             {
-                if (list is null)
+                if (list == null)
                 { _errorLog.AddErrorNotException(this.ToString(), "registMenuToMenuStripFromToolStripLiistForRegistList lists is null"); return -1; }
                 if (list.Count < 1)
                 { _errorLog.AddErrorNotException(this.ToString(), "registMenuToMenuStripFromToolStripLiistForRegistList lists count < 1"); return -2; }
@@ -166,7 +166,7 @@ namespace ImageViewer.ParentForms
                     {
                         // child search 
                         retItem = GetToolStripMenuItemInToolStripMenuItemFromArray(item, 0, ary);
-                        if (!(retItem is null))
+                        if (!(retItem == null))
                         {
                             // アイテムが見つかったら終了
                             break;
@@ -256,10 +256,10 @@ namespace ImageViewer.ParentForms
                 MenuStrip tmenu; // 設定用
                 foreach (var item in form.Controls)
                 {
-                    if(item is MenuStrip strip)
+                    if(item.GetType().Equals(typeof( MenuStrip )))
                     {
                         flag = true;
-                        tmenu = strip;
+                        tmenu = (MenuStrip)item;
                         tmenu = _menuStrip;
                         form.Controls.Add(_menuStrip);
                         form.MainMenuStrip = _menuStrip;
@@ -295,10 +295,10 @@ namespace ImageViewer.ParentForms
                 MenuStrip tmenu; // 設定用
                 foreach (var item in form.Controls)
                 {
-                    if (item is MenuStrip strip)
+                    if (item.GetType().Equals(typeof( MenuStrip )))
                     {
                         flag = true;
-                        tmenu = strip;
+                        tmenu = (MenuStrip)item;
                         Debug.WriteLine(" *** MenuItemList ***");
                         foreach (ToolStripMenuItem menuitem in tmenu.Items)
                         {

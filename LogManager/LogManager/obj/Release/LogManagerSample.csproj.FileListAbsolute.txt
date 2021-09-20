@@ -1,0 +1,10 @@
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\obj\Release\LogManagerSample.csprojResolveAssemblyReference.cache
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\obj\Release\Log.LogTest.resources
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\obj\Release\Log.Properties.Resources.resources
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\obj\Release\LogManagerSample.csproj.GenerateResource.Cache
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\bin\Release\Log.exe.config
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\bin\Release\Log.exe
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\bin\Release\Log.pdb
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\bin\Release\ErrorManager.dll
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\obj\Release\Log.exe
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\obj\Release\Log.pdb

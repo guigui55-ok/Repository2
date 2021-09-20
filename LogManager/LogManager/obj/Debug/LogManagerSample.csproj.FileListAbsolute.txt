@@ -1,0 +1,12 @@
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\obj\Debug\LogManagerSample.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\obj\Debug\Log.LogTest.resources
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\obj\Debug\Log.Properties.Resources.resources
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\obj\Debug\LogManagerSample.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\obj\Debug\LogManagerSample.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\bin\Debug\Log.exe.config
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\bin\Debug\Log.exe
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\bin\Debug\Log.pdb
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\bin\Debug\ErrorManager.dll
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\obj\Debug\LogManagerSample.csproj.CopyComplete
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\obj\Debug\Log.exe
+C:\Users\OK\source\repos\Repository2\LogManager\LogManager\obj\Debug\Log.pdb

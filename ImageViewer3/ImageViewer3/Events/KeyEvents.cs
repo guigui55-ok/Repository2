@@ -30,7 +30,7 @@ namespace ImageViewer.Events
         {
             try
             {
-                if (control is null)
+                if (control == null)
                 { _errorLog.AddErrorNotException(this.ToString(), "initialize control is null"); return -1; }
                 _recieveEventControl = control;
                 return 1;
@@ -45,7 +45,7 @@ namespace ImageViewer.Events
         {
             try
             {
-                if (_contentsControl is null)
+                if (_contentsControl == null)
                 { _errorLog.AddErrorNotException(this.ToString(), "initialize control is null"); return -1; }
 
                 _contentsControl.KeyDown += FrameControl_KeyDown;

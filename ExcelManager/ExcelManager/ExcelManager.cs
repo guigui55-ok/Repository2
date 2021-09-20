@@ -794,7 +794,7 @@ namespace ExcelUtility
 
                 if (System.IO.Path.GetExtension(path) == ".lnk")
                 {
-                    ShortcutUtility shortcut = new ShortcutUtility();
+                    ShortcutUtility shortcut = new ShortcutUtility(_Error);
                     return shortcut.GetTargetPath(path);
                 }
                 else

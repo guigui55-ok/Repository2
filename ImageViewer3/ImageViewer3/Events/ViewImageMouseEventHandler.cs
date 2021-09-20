@@ -18,18 +18,24 @@ namespace ImageViewer.Events
         public event EventHandler<MouseEventArgs> OnMouseDown;
         public event EventHandler<MouseEventArgs> OnMouseUp;
 
-        public void MouseUp(object sender, MouseEventArgs e) { OnMouseUp?.Invoke(sender, e); }
-        public void MouseDown(object sender, MouseEventArgs e) { OnMouseDown?.Invoke(sender, e); }
-        public void MouseMove(object sender, MouseEventArgs e) { OnMouseMove?.Invoke(sender, e); }
+        public void MouseUp(object sender, MouseEventArgs e) {
+            if (OnMouseUp != null) { OnMouseUp.Invoke(sender, e); }
+        }
+        public void MouseDown(object sender, MouseEventArgs e) {
+            if (OnMouseDown != null) { OnMouseDown.Invoke(sender, e); }
+        }
+        public void MouseMove(object sender, MouseEventArgs e) {
+            if (OnMouseMove != null) { OnMouseMove.Invoke(sender, e); }
+        }
         public void MouseWheel(object sender,MouseEventArgs e)
         {
-            OnMouseWheel?.Invoke(sender,e);
+            if (OnMouseWheel != null) { OnMouseWheel.Invoke(sender, e); }
         }
         public void RightClick(object sender, MouseEventArgs e)
         {
             try
             {
-                OnRightClick?.Invoke("1", e);
+                if (OnRightClick != null) { OnRightClick.Invoke("1", e); }
             }
             catch (Exception ex)
             {
@@ -41,7 +47,7 @@ namespace ImageViewer.Events
         {
             try
             {
-                OnLeftClick?.Invoke("2", e);
+                if (OnLeftClick != null) { OnLeftClick.Invoke("2", e); }
             }
             catch (Exception ex)
             {
@@ -53,7 +59,7 @@ namespace ImageViewer.Events
         {
             try
             {
-                OnDragDrop?.Invoke(sender, e);
+                if (OnDragDrop != null) { OnDragDrop.Invoke(sender, e); }
             }
             catch (Exception ex)
             {
@@ -64,7 +70,7 @@ namespace ImageViewer.Events
         public void Dispose()
         {
             //④Dispose()実行
-            OnDragDrop?.Invoke(0,null);
+            if (OnDragDrop != null) { OnDragDrop.Invoke(0, null); }
         }
     }
 }

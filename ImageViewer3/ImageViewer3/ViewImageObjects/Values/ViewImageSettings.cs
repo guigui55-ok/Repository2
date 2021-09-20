@@ -4,6 +4,6 @@
     {
         public bool _isViewAlwaysCenter = true;
 
-        bool IViewImageSettings.IsViewAlwaysCenter { get => _isViewAlwaysCenter; set => _isViewAlwaysCenter = value;}
+        bool IViewImageSettings.IsViewAlwaysCenter { get { return _isViewAlwaysCenter; } set { _isViewAlwaysCenter = value; } }
     }
 }

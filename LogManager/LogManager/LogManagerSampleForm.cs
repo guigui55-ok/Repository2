@@ -23,11 +23,12 @@ namespace Log
             string folderPath = System.IO.Directory.GetCurrentDirectory();
             string filePath = "Log.Log";
             string path = folderPath + "\\" + filePath;
-            logManager = new LogManager(1, path);
+            ErrorManager.ErrorManager _err = new ErrorManager.ErrorManager(1);
+            logManager = new LogManager(_err,1, path);
 
             logManager.Add("log value 1","log notes");
             logManager.Add("log value 2", "");
-            logManager.Add(1, 2, "log value 3", "");
+            logManager.Add(1, 2, "log value 3", "", "", new Exception("new Exception")); ;
 
             Console.WriteLine("-----------\n"+logManager.GetLogDataListAtString());
         }

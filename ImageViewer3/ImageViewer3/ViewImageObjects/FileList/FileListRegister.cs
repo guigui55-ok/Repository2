@@ -50,7 +50,7 @@ namespace FileList
             _errorLog = errorLog;
 
             // エラー抑制
-            if (_errorLog is null) { DebugPrintList(this.GetList()); }
+            if (_errorLog == null) { DebugPrintList(this.GetList()); }
         }
 
         //public int SetErrorLog(ErrorLog.IErrorLog errorLog)
@@ -398,7 +398,7 @@ namespace FileList
         //{
         //    try
         //    {
-        //        if (type is null) { }
+        //        if (type == null) { }
         //        // 拡張子チェック
         //        bool ret = IsIncludeFileType(path);
         //        if (!ret) { return false; }

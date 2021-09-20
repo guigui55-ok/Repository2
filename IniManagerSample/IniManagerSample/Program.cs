@@ -22,7 +22,7 @@ namespace TestIniManager
             string iniFormatString = new Common().ExcuteRead(FormatPath);
 
             // Path をセットする、なければ作る
-            _ = manager.SetPathAndCreateFileIfPathNotExists(iniPath, iniFormatString);
+            manager.SetPathAndCreateFileIfPathNotExists(iniPath, iniFormatString);
             //if (ret < 1) { manager.ShowErrorMessages(); return; }
             if (manager.Error.HasException()) { manager.ShowErrorMessages(); manager.Error.ClearError(); }
 

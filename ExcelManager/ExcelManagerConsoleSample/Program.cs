@@ -25,12 +25,12 @@ namespace ExcelManagerConsoleSample
         static void Test_Excute()
         {
             ErrorManager.ErrorManager err = null;
-            ExcelUtility.ExcelManager excelManager = null;
+            ExcelManager excelManager = null;
             string method = "Program.Test_Update";
             try
             {
                 err = new ErrorManager.ErrorManager(1);
-                excelManager = new ExcelUtility.ExcelManager(err);
+                excelManager = new ExcelManager(err);
                 err.AddLog(method + " Start");
                 //-----------------
                 //Test_Open(err, excelManager);

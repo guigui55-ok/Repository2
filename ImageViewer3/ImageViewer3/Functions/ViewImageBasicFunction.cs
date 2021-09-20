@@ -67,7 +67,7 @@ namespace ImageViewer.Functions
             try
             {
                 List<ViewImageObjects> list = ViewImageManager.GetActiveControl();
-                if (!((list is null) | (list.Count < 1)))
+                if (!((list == null) | (list.Count < 1)))
                 {
                     foreach (ViewImageObjects value in list)
                     {
