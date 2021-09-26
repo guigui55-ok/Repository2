@@ -20,6 +20,8 @@ namespace ExcelCellsManager.ErrorMessage
         protected bool isSuppressErrorShow = false;
         protected Timer msgTimer;
         public int MessageUnvisibleInterval = 5000;
+        public string InitializeValue = "InitializeValue";
+        public bool IsInitializeValue = true;
         public EventHandler ShowErrorMessageEvent { get { return _showErrorEvent; } set { _showErrorEvent = value; } }
         public bool IsSuppressErrorShow { get { return isSuppressErrorShow; } set { isSuppressErrorShow = value; } }
 
@@ -56,6 +58,13 @@ namespace ExcelCellsManager.ErrorMessage
 
         }
 
+        public void SetInitializeValue(string value)
+        {
+            this.InitializeValue = value;
+            IsInitializeValue = true;
+            if(_statusLabel != null) { _statusLabel.Text = InitializeValue; }
+        }
+
         private void MsgTimer_Tick(object sender, EventArgs e)
         {
             try
@@ -86,16 +95,22 @@ namespace ExcelCellsManager.ErrorMessage
         }
 
 
-        public void ShowMessageAddToExistingString(FontStyle style,Color color, string msg, bool isBehind = true,string delimiter = "\n",string title = "")
+        public void ShowMessageAddToExistingString(
+            FontStyle style,Color color, string msg, bool isBehind = true,string delimiter = "\n",string title = "")
         {
             try
             {
                 string buf = _statusLabel.Text;
+                if (IsInitializeValue)
+                {
+                    buf = "";
+                    IsInitializeValue = false;
+                }
                 if(buf.Length >= 1)
                 {
                     if (isBehind)
                     {
-                        buf += delimiter + msg;
+                        buf += delimiter +  msg;
                     }
                     else
                     {
@@ -297,16 +312,20 @@ namespace ExcelCellsManager.ErrorMessage
             }
         }
 
-        public void Initialize()
+        public void Initialize(string initializeTextValue = "")
         {
             try
             {
                 _error.AddLog(this.ToString()+ ".Initialize");
+
+                if (initializeTextValue == ""){ initializeTextValue = "StatusBarLabel1.Text";  }
+                SetInitializeValue(initializeTextValue);
+
                 _parentForm.Controls.Add(_statusStrip);
                 _statusStrip.Parent = _parentForm;
                 _statusLabel = new ToolStripStatusLabel
                 {
-                    Text = "StatusBarLabel1.Text 2",
+                    Text = this.InitializeValue,
                     TextAlign = ContentAlignment.MiddleLeft,
                     Spring = true
                 };
@@ -398,7 +417,7 @@ namespace ExcelCellsManager.ErrorMessage
             }
         }
 
-        public void ShowResultSuccessMessageAddToExisting(string msg, string title = "")
+        public void ShowResultSuccessMessageAddToExisting(string msg,bool isBehind = true, string title = "")
         {
             try
             {
@@ -410,12 +429,12 @@ namespace ExcelCellsManager.ErrorMessage
             }
         }
 
-        public void ShowWarningMessageMessageAddToExisting(string msg, string title = "")
+        public void ShowWarningMessageMessageAddToExisting(string msg,bool isBeHind = true, string title = "")
         {
             try
             {
                 ChangeFont(_statusLabel.Font.Style, Color.Yellow);
-                ShowMessageAddToExistingString(_statusLabel.Font.Style, Color.Yellow,msg, title);
+                ShowMessageAddToExistingString(_statusLabel.Font.Style, Color.Yellow,msg,isBeHind,"\n", title);
             }
             catch (Exception ex)
             {
@@ -423,12 +442,12 @@ namespace ExcelCellsManager.ErrorMessage
             }
         }
 
-        public void ShowAlertMessageMessageAddToExisting(string msg, string title = "")
+        public void ShowAlertMessageMessageAddToExisting(string msg, bool isBehind = true, string title = "")
         {
             try
             {
                 ChangeFont(_statusLabel.Font.Style | FontStyle.Bold, Color.Red);
-                ShowMessageAddToExistingString(_statusLabel.Font.Style | FontStyle.Bold, Color.Red,msg, title);
+                ShowMessageAddToExistingString(_statusLabel.Font.Style | FontStyle.Bold, Color.Red,msg, isBehind,"\n",title);
             }
             catch (Exception ex)
             {

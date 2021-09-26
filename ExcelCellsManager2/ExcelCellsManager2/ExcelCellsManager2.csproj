@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -85,7 +85,7 @@
       <DependentUpon>ExcelCellsManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ExcelCellsManager\DataList\DataGridViewItems.cs" />
-    <Compile Include="ExcelCellsManager\DataList\ExcelCellsInfo2.cs" />
+    <Compile Include="ExcelUtility\ExcelCellsInfo2.cs" />
     <Compile Include="ExcelCellsManager\DataList\IDataGridViewItems.cs" />
     <Compile Include="ExcelCellsManager\Event\DragDropEvent.cs" />
     <Compile Include="ExcelCellsManager\Event\ExcelCellsManagerMainEvent.cs" />
@@ -95,7 +95,7 @@
     <Compile Include="ExcelCellsManager\Event\StatusStripEvent.cs" />
     <Compile Include="ExcelCellsManager\ExcelCellsManager.cs" />
     <Compile Include="ExcelCellsManager\ExcelCellsManagerConstants.cs" />
-    <Compile Include="ExcelCellsManager\ExcelCellsManagerErrorMessage.cs" />
+    <Compile Include="ExcelCellsManager\ExcelCellsManagerErrorMessages.cs" />
     <Compile Include="ExcelCellsManager\ExcelCellsManagerMain.cs" />
     <Compile Include="ExcelCellsManager\Menu\MenuStripManager.cs" />
     <Compile Include="ExcelCellsManager\SettingsForm\EcmSettingsForm.cs">

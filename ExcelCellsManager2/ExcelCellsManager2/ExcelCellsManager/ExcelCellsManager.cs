@@ -11,10 +11,12 @@ namespace ExcelCellsManager.ExcelCellsManager
         protected int _debugMode;
         public List<ExcelCellsInfo> CellsInfoList;
         public ExcelApps.ActiveCellsInfo ActiveCellsInfo;
-        public ExcelCellsManager(ErrorManager.ErrorManager error,int DebugMode)
+        public ExcelCellsManagerConstants Constants;
+        public ExcelCellsManager(ErrorManager.ErrorManager error,int DebugMode,ExcelCellsManagerConstants constants)
         {
             _error = error;
             _debugMode = DebugMode;
+            Constants = constants;
             CellsInfoList = new List<ExcelCellsInfo>();
         }
 
@@ -96,7 +98,19 @@ namespace ExcelCellsManager.ExcelCellsManager
                     //this.CellsInfoList.Add(info);
                 }
                 return info;
-            } catch (Exception ex)
+            } catch (System.Runtime.InteropServices.COMException ex)
+            {
+                if (ex.Message.IndexOf(ExcelCellsManagerErrorCodes.RPC_E_CALL_REJECTED.ToString()) > 0)
+                {
+                    string msg = Constants.GetErrorMessage(ExcelCellsManagerErrorCodes.RPC_E_CALL_REJECTED);
+                    _error.AddException(ex, this, "MakeAddValue Failed(System.Runtime.InteropServices.COMException)",msg);
+                } else
+                {
+                    _error.AddException(ex, this.ToString() + ".MakeAddValue");
+                }
+                return null;
+            }
+            catch (Exception ex)
             {
                 _error.AddException(ex, this.ToString() + ".MakeAddValue");
                 return null;

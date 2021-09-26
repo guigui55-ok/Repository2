@@ -21,9 +21,9 @@ namespace ErrorManager
         void ShowUserMessageOnly(string title = "", bool OrderIsRev = true,bool isAddExceptionMessage=false);
         //Add to an existing string 既存の文字列に追加
         void ShowMessageAddToExistingString(FontStyle style, Color color, string msg, string title = "");
-        void ShowResultSuccessMessageAddToExisting(string msg, string title = "");
-        void ShowWarningMessageMessageAddToExisting(string msg, string title = "");
-        void ShowAlertMessageMessageAddToExisting(string msg, string title = "");
+        void ShowResultSuccessMessageAddToExisting(string msg, bool isBehind = true, string title = "");
+        void ShowWarningMessageMessageAddToExisting(string msg, bool isBeHind = true, string title = "");
+        void ShowAlertMessageMessageAddToExisting(string msg, bool isBehind = true, string title = "");
         void ShowUserMessageOnlyAddToExisting(string msg,string title = "", bool OrderIsRev = true);
         void ShowErrorMessageseAddToExisting(bool isBehind = true);
         void ChangeFont(FontStyle style, Color color);

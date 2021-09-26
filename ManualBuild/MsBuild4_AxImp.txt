@@ -1,0 +1,87 @@
+AxImp.exe
+
+・探す
+cd c:\windows
+dir /b /s | findstr AxImp.exe$
+
+c:\>dir /b /s | findstr AxImp.exe$
+c:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\AxImp.exe
+c:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\AxImp.exe
+
+
+MSBuild AxImp Error(解決)
+https://tokotoko-walk.net/2019-02-16_223
+
+AxImp.exe の入手方法：以下のいずれかをインストール。
+・MSBuild (14)
+https://www.microsoft.com/ja-JP/download/details.aspx?id=48159
+・Windows SDK
+https://developer.microsoft.com/ja-jp/windows/downloads/windows-10-sdk
+
+1. レジストリエディタを起動
+2. レジストリにキーを追加
+HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Microsoft SDKs\NETFXSDK\4.6\WinSDK-NetFx40Tools-x86
+「新規」→「文字列値」→InstallationFolder
+上記文字列値「 InstallationFolder 」に「AxImp.exe」のあるフォルダパスを保存→（例）C:\Program Files (x86)\MSBuild\14.0\Bin
+
+1. レジストリエディタを起動
+2. レジストリにキーを追加
+HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Microsoft SDKs\NETFXSDK\4.6\WinSDK-NetFx40Tools-x86
+「新規」→「文字列値」→InstallationFolder
+上記文字列値「 InstallationFolder 」に「AxImp.exe」のあるフォルダパスを保存→（例）C:\Program Files (x86)\MSBuild\14.0\Bin
+
+
+------------------
+C:\WINDOWS\system32>c:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe F:\ZDOWNLOAD\Repository2-main\ExcelCellsManager2\ExcelCellsManager2\ExcelCellsManager2.sln /t:build /p:Configuration=Release;Platform="Any CPU"
+Microsoft (R) Build Engine バージョン 4.8.4084.0
+[Microsoft .NET Framework、バージョン 4.0.30319.42000]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+MSBUILD : error MSB1009: プロジェクト ファイルが存在しません。
+スイッチ:F:\ZDOWNLOAD\Repository2-main\ExcelCellsManager2\ExcelCellsManager2\ExcelCellsManager2.sln
+
+C:\WINDOWS\system32>c:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe F:\ZDOWNLOAD\Repository2-main\ExcelCellsManager2\ExcelCellsManager2.sln /t:build /p:Configuration=Release;Platform="Any CPU"
+Microsoft (R) Build Engine バージョン 4.8.4084.0
+[Microsoft .NET Framework、バージョン 4.0.30319.42000]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+このソリューション内のプロジェクトを 1 度に 1 つずつビルドします。並行ビルドを有効にするには、"/m" スイッチを追加してく ださい。
+2021/09/20 13:35:25 にビルドを開始しました。
+ノード 1 上のプロジェクト "F:\ZDOWNLOAD\Repository2-main\ExcelCellsManager2\ExcelCellsManager2.sln" (build ターゲット)。
+ValidateSolutionConfiguration:
+  ソリューション構成 "Release|Any CPU" をビルドしています。
+プロジェクト "F:\ZDOWNLOAD\Repository2-main\ExcelCellsManager2\ExcelCellsManager2.sln" (1) は、ノード 1 上に "F:\ZDOWNLOAD\Repositor
+y2-main\ExcelCellsManager2\ExcelCellsManager2\ExcelCellsManager2.csproj" (2) をビルドしています (既定のターゲット)。
+プロジェクト ファイルに ToolsVersion="15.0" が含まれています。このツールセットが不明であるか、存在しない可能性があります。その場合は、適切なバージョンの MSBuild をインストールして解決するか、ビルドがポリシー
+上の理由により特定の ToolsVersion を使用するよう強制されている可能性があります。プロジェクトを ToolsVersion="4.0" として扱います。詳細については、http://go.microsoft.com/fwlin
+k/?LinkId=291333 を参照してください。
+PrepareForBuild:
+  ディレクトリ "bin\Release\" を作成しています。
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Microsoft.Common.targets(2015,5): error MSB3091: "AxImp.exe" が見つから なかったた
+め、または正しい Microsoft Windows SDK がインストールされていないため、タスクが失敗しました。タスクは、レジストリ キー HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft
+ SDKs\Windows\v8.0A\WinSDK-NetFx40Tools-x86 の値 InstallationFolder で指定された場所の下にある "bin" サブディレクトリで "AxImp.exe" を探しています。次のい
+ずれかを行うことによって問題を解決できる可能性があります。  1) Microsoft Windows SDK をインストールする。  2) Visual Studio 2010 をインストールする。  3) 上記のレジストリ キーを正し
+い場所に手動で設定する。  4) 正しい場所をタスクの "ToolPath" パラメーターに渡す。 [F:\ZDOWNLOAD\Repository2-main\ExcelCellsManager2\ExcelCellsManager2\
+ExcelCellsManager2.csproj]
+プロジェクト "F:\ZDOWNLOAD\Repository2-main\ExcelCellsManager2\ExcelCellsManager2\ExcelCellsManager2.csproj" (既定のターゲット) のビルドが
+終了しました -- 失敗。
+
+プロジェクト "F:\ZDOWNLOAD\Repository2-main\ExcelCellsManager2\ExcelCellsManager2.sln" (build ターゲット) のビルドが終了しました -- 失敗。
+
+
+ビルドに失敗しました。
+
+"F:\ZDOWNLOAD\Repository2-main\ExcelCellsManager2\ExcelCellsManager2.sln" (build ターゲット) (1) ->
+"F:\ZDOWNLOAD\Repository2-main\ExcelCellsManager2\ExcelCellsManager2\ExcelCellsManager2.csproj" (既定のターゲット) (2) ->
+(ResolveComReferences ターゲット) ->
+  C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Microsoft.Common.targets(2015,5): error MSB3091: "AxImp.exe" が見つか らなかっ
+たため、または正しい Microsoft Windows SDK がインストールされていないため、タスクが失敗しました。タスクは、レジストリ キー HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microso
+ft SDKs\Windows\v8.0A\WinSDK-NetFx40Tools-x86 の値 InstallationFolder で指定された場所の下にある "bin" サブディレクトリ で "AxImp.exe" を探しています。次
+のいずれかを行うことによって問題を解決できる可能性があります。  1) Microsoft Windows SDK をインストールする。  2) Visual Studio 2010 をインストールする。  3) 上記のレジストリ キーを
+正しい場所に手動で設定する。  4) 正しい場所をタスクの "ToolPath" パラメーターに渡す。 [F:\ZDOWNLOAD\Repository2-main\ExcelCellsManager2\ExcelCellsManager
+2\ExcelCellsManager2.csproj]
+
+    0 個の警告
+    1 エラー
+
+経過時間 00:00:00.21

@@ -60,12 +60,13 @@ namespace ExcelCellsManager
         protected ExcelCellsManagerForm _mainForm;
         public ExcelCellsManagerUtility  ExcelCellsManagerUtility;
         
-        public ExcelCellsManagerMain(ErrorManager.ErrorManager error,Form form)
+        public ExcelCellsManagerMain(ErrorManager.ErrorManager error,Form form,ExcelCellsManagerConstants constants)
         {
             _error = error;
             ExcelManager = new ExcelManager(_error);
             ExcelManager.IsAlwaysOpenExcelApplication = true;
-            _excelCellsManager = new ExcelCellsManager.ExcelCellsManager(_error, 1);
+            _excelCellsManager = new ExcelCellsManager.ExcelCellsManager(_error, 1, constants);
+            this.Constants = constants;
             _excelEventBridge = new ExcelPublicEventHandlerBredgeForCellManager(_error);
             ExcelManager.ExcelEventBridge =  _excelEventBridge;
             _saveAsDefaultFileName += _fileType;
@@ -101,11 +102,15 @@ namespace ExcelCellsManager
             try
             {
                 _error.AddLogAlert(this,"Test Error","Test Error Failed",new Exception("Test Exception"));
-                throw new Exception("Test Error");
                 //_error.Messenger.ShowAlertMessage("ShowErrorMessage test message\n2line");
+                int errorCode = -1;
+                if(errorCode < 1)
+                {
+                    throw new Exception("Test Error");
+                }
             } catch (Exception ex)
             {
-                _error.AddException(ex,this, "Test Method");
+                _error.AddException(ex,this, "Test Method",Constants.GetErrorMessage(ExcelCellsManagerErrorCodes.TEST_ERROR));
             } finally
             {
                 ShowMessageExistingWhenFlagTrue("Test Method Failed", true);
@@ -562,16 +567,22 @@ namespace ExcelCellsManager
             {
                 // エラーがあれば表示する
                 if (_error.hasAboveWarning) 
-                { _error.Messenger.ShowAlertMessageMessageAddToExisting(_error.GetLastErrorMessagesAsString(3,true)); }
+                { _error.Messenger.ShowAlertMessageMessageAddToExisting(
+                    "ERROR : " + _error.GetLastErrorMessagesAsString(3,false,false),false); 
+                }
                 else { _error.Messenger.ShowResultSuccessMessageAddToExisting(msg); }
             }
             else
             {
                 // エラーがあれば表示する
                 if (_error.hasAboveWarning) 
-                { _error.Messenger.ShowAlertMessageMessageAddToExisting(_error.GetLastErrorMessagesAsString(3,true)); }
+                { 
+                    _error.Messenger.ShowAlertMessageMessageAddToExisting(
+                        "ERROR : " + _error.GetLastErrorMessagesAsString(3,false,true),false); 
+                }
                 else { _error.Messenger.ShowResultSuccessMessage(msg); }
             }
+            _error.ClearError();
         }
 
         public void UpdateList(bool isCallingThisMethodByOtherMethod, bool showMsgBox = true)
@@ -597,35 +608,36 @@ namespace ExcelCellsManager
                         _error.AddLogAlert(" UpdateOpendExcelApplication Failed");
                         _error.ReleaseErrorState();
                     }
-                    if (true) { _error.AddLog("  UpdateList true return;"); return; }
+                    _error.AddLog("  UpdateList true return;"); 
+                    return;
                     // 
                     // WorkbookNameListを取得する、取得した EXCEL.EXE (Application Object) に Workbook がない場合は
                     // GhostProcess として 文字列 "[PID] EXCEL.EXE" をリスト内に格納する
                     // ※このメソッドの中で Update している
-                    List<string> excelList = ExcelManager.GetWorkbookNameListAndGhostProcessNameList();
-                    if (_error.hasAlert)
-                    {
-                        _error.AddLogAlert(" GetWorkbookNameListAndGhostProcessNameList Failed");
-                        _error.ReleaseErrorState();
-                        if (!showMsgBox) { _error.ReleaseErrorState(); }
-                        //return;
-                    }
-                    if (ExcelManager.GetExcelAppsList().Count < 1)
-                    {
-                        _error.AddLogWarning("  ExcelManager.GetExcelAppsList().Count < 1");
-                        // Excel.Application がないときは起動して AppsList へ追加する
-                        ExcelManager.ExcelApplicationRunWhenNothing();
-                        if (_error.hasError) { _error.ReleaseErrorState(); }
-                    }
-                    _error.AddLog("  GetWorkbookNameListAndGhostProcessNameList Success.");
+                    //List<string> excelList = ExcelManager.GetWorkbookNameListAndGhostProcessNameList();
+                    //if (_error.hasAlert)
+                    //{
+                    //    _error.AddLogAlert(" GetWorkbookNameListAndGhostProcessNameList Failed");
+                    //    _error.ReleaseErrorState();
+                    //    if (!showMsgBox) { _error.ReleaseErrorState(); }
+                    //    //return;
+                    //}
+                    //if (ExcelManager.GetExcelAppsList().Count < 1)
+                    //{
+                    //    _error.AddLogWarning("  ExcelManager.GetExcelAppsList().Count < 1");
+                    //    // Excel.Application がないときは起動して AppsList へ追加する
+                    //    ExcelManager.ExcelApplicationRunWhenNothing();
+                    //    if (_error.hasError) { _error.ReleaseErrorState(); }
+                    //}
+                    //_error.AddLog("  GetWorkbookNameListAndGhostProcessNameList Success.");
 
-                    // List を CheckedListBox に追加する
-                    //CheckdListUtil.UpdateItemListAfterClearList(excelList);
-                    if (_error.hasAlert) { throw new Exception("UpdateItemListAfterClearList Failed"); }
-                    else
-                    {
-                        _error.AddLog("UpdateList Success.");
-                    }
+                    //// List を CheckedListBox に追加する
+                    ////CheckdListUtil.UpdateItemListAfterClearList(excelList);
+                    //if (_error.hasAlert) { throw new Exception("UpdateItemListAfterClearList Failed"); }
+                    //else
+                    //{
+                    //    _error.AddLog("UpdateList Success.");
+                    //}
                 }
                 catch (Exception ex)
                 {
@@ -749,7 +761,8 @@ namespace ExcelCellsManager
                 // infolist へ格納する
                 ExcelCellsInfo2 info;
                 info = _excelCellsManager.MakeAddValue(apps.Application, apps.GetActiveWorkbookName(), apps.ProcessId, "");
-                if (_error.hasAlert) { throw new Exception("MakeAddValue Failed"); }
+                //if (_error.hasAlert) { throw new Exception("MakeAddValue Failed"); }
+                if (_error.hasAlert) { _error.AddLogAlert("MakeAddValue Failed"); return; }
                 // List,DataGridView へAddする
                 if (!DataGridUtil.IsInitialize)
                 {
@@ -937,7 +950,8 @@ namespace ExcelCellsManager
             }
         }
 
-        // 選択している DataGridView の Row から ExcelApps を取得する。Wrokbook が開いていなければ開いてから取得する
+        // 選択している DataGridView の Row のデータから ExcelApps を取得する。
+        // Wrokbook が開いていなければ開いてから ExcelApps を取得する
         ///
         public ExcelApps GetExcelAppsSelectedRowInDataGridViewAfterOpenWorkbookWhenNotOpened(ExcelCellsInfo2 cellsInfo)
         {
@@ -1052,7 +1066,8 @@ namespace ExcelCellsManager
                 CopyCellsValue.Excute();
                 if (_error.hasAlert)
                 {
-                    _error.Messenger.ShowAlertMessageMessageAddToExisting("Copied Cells Values Failed.");
+                    //_error.Messenger.ShowAlertMessageMessageAddToExisting("Copied Cells Values Failed.");
+                    if (isShowError) { ShowMessageExistingWhenFlagTrue("Copied Cells Values Failed.", true); }
                 }
                 else
                 {
@@ -1084,10 +1099,10 @@ namespace ExcelCellsManager
             }finally
             {
                 // ファイルをオープンしたときは UpdateList する
-                if (AppsState.IsNotUpdateExcelAppsListAfterOpenWorkbook) { this.UpdateList(true,true); }
+                //if (AppsState.IsNotUpdateExcelAppsListAfterOpenWorkbook) { this.UpdateList(true, true); }
                 // エラーがあれば表示する
-                if (isShowError) { if (_error.hasError) { _error.Messenger.ShowErrorMessageseAddToExisting(); } }
-                else { _error.ClearError(); }
+                //if (isShowError) { if (_error.hasError) { _error.Messenger.ShowErrorMessageseAddToExisting(); } }
+                //else { _error.ClearError(); }
             }
         }
 
@@ -1167,30 +1182,26 @@ namespace ExcelCellsManager
                 _error.ClearError();
                 _error.AddLog(this.ToString() + "CloseSave");
                 _error.Messenger.ShowResultSuccessMessage("Close(Save) Workbook Excuting.");
-                if (true)
-                {
-                    // チェックされている Workbook を閉じる
-                    ExcelWorkbookList.CloseWorkbookSelectedItems();
-                    if (_error.hasAlert) { throw new Exception("CloseWorkbookSelectedItems Failed"); }
-                } else
-                {
-                    // チェックされている Item を AppsInfo に変換した List<AppsInfo> を取得する
-                    List<AppsInfo> appsInfoList = GetAppsInfoListFromCheckdItemList();
-                    if (_error.hasAlert) { throw new Exception("GetAppsInfoListFromCheckdItemList"); }
-                    if (appsInfoList.Count < 1) { throw new Exception("ConvertToAppsInfo -> appsInfoList.Count < 1"); }
-                    /////////
-                    foreach (AppsInfo info in appsInfoList)
-                    {
-                        // filename、pid、index で指定した Workbook を閉じる
-                        ExcelManager.CloseWorkbookByPidAndBookName(
-                            info.ProcessId, info.FileName, info.Index, true, false);
-                        if (_error.hasAlert) { throw new Exception("ExcelManager.CloseWorkbookByPidAndBookName Failed"); }
-                    }
-                }
-                // Update
-                UpdateList(true,true);
+                // チェックされている Workbook を閉じる
+                ExcelWorkbookList.CloseWorkbookSelectedItems();
+                if (_error.hasAlert) { throw new Exception("CloseWorkbookSelectedItems Failed"); }
 
-                
+                //{
+                //    // チェックされている Item を AppsInfo に変換した List<AppsInfo> を取得する
+                //    List<AppsInfo> appsInfoList = GetAppsInfoListFromCheckdItemList();
+                //    if (_error.hasAlert) { throw new Exception("GetAppsInfoListFromCheckdItemList"); }
+                //    if (appsInfoList.Count < 1) { throw new Exception("ConvertToAppsInfo -> appsInfoList.Count < 1"); }
+                //    /////////
+                //    foreach (AppsInfo info in appsInfoList)
+                //    {
+                //        // filename、pid、index で指定した Workbook を閉じる
+                //        ExcelManager.CloseWorkbookByPidAndBookName(
+                //            info.ProcessId, info.FileName, info.Index, true, false);
+                //        if (_error.hasAlert) { throw new Exception("ExcelManager.CloseWorkbookByPidAndBookName Failed"); }
+                //    }
+                //}
+                // Update
+                UpdateList(true,true);                
             }
             catch (Exception ex)
             {
@@ -1391,7 +1402,7 @@ namespace ExcelCellsManager
 
             } catch (Exception ex)
             {
-                _error.AddException(ex, this.ToString() + ".OpenFile",Constants.ErrorMessage.FILE_OPEN_ERROR);
+                _error.AddException(ex, this, "OpenFile", Constants.GetErrorMessage(ExcelCellsManagerErrorCodes.FILE_OPEN_ERROR));
             }
             finally
             {

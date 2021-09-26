@@ -17,11 +17,11 @@ namespace ExcelCellsManager.ExcelCellsManager
         public string SaveAsDefaultFileName;
         public string StatusBarTextInitialize;
 
-        public ExcelCellsManagerErrorMessage ErrorMessage;
+        public ExcelCellsManagerErrorMessages ErrorMessage;
         public ExcelCellsManagerConstants(ErrorManager.ErrorManager error)
         {
             _error = error;
-            this.ErrorMessage = new ExcelCellsManagerErrorMessage();
+            this.ErrorMessage = new ExcelCellsManagerErrorMessages(this.ToString());
             ApplicationTitle = "Excel Cells Manager2";
             DefalutNewFileName = "*";
             DefaultFileType = ".tsv";
@@ -31,6 +31,10 @@ namespace ExcelCellsManager.ExcelCellsManager
             DebugLogFileName = "Debug.Log";
             SaveAsDefaultFileName = "NewFile";
             StatusBarTextInitialize = "Application Started.";
+        }
+        public string GetErrorMessage(ExcelCellsManagerErrorCodes code)
+        {
+            return ErrorMessage.GetMessage(code);
         }
     }
 }
