@@ -79,6 +79,7 @@ namespace ExcelCellsManager
                 // StatusStrip ErrorMessenger
                 _errorMessenger = new ErrorMessengerStatusBar(_error, this, statusStrip2,0);
                 if (_error.HasAboveWorning()) { _error.AddLogAlert("ErrorMessengerStatusBar.Constracta"); _error.ReleaseErrorState(); }
+                ((ErrorMessengerStatusBar)_errorMessenger).SetInitializeValue(Constants.StatusBarTextInitialize);
                 _error.Messenger = _errorMessenger;
 
                 // Form 内コンポーネント操作用 Utility
@@ -93,7 +94,7 @@ namespace ExcelCellsManager
                 _appsSettings = new ExcelCellsManagerSettingsValue(_error,0);
                 if (_error.HasAboveWorning()) { _error.AddLogAlert("ExcelCellsManagerSettingsValue.Constracta"); _error.ReleaseErrorState(); }
                 // 初期化
-                _excelCellsManagerMain = new ExcelCellsManagerMain(_error, this)
+                _excelCellsManagerMain = new ExcelCellsManagerMain(_error, this,Constants)
                 {
                     ExcelWorkbookList = _workbookList,
                     //CheckdListUtil = this._checkedListUtil,
@@ -222,14 +223,14 @@ namespace ExcelCellsManager
                 _excelCellsManagerMain.StatusBarChangeTextEvent += ExcelCellsManagerForm__statusBarChangeTextEvent;
                 _error.AddLog("******************** Initialize End ********************");
                 //_excelCellsManagerMain.AppsState.IsInitialize = false;
-                _error.Messenger.ShowMessage(Constants.StatusBarTextInitialize);
+                //_error.Messenger.ShowMessage(Constants.StatusBarTextInitialize);
             }
             catch (Exception ex)
             {
-                string msg = Constants.ErrorMessage.APPLICATION_INITIALIZE;
+                string msg = Constants.GetErrorMessage(ExcelCellsManagerErrorCodes.APPLICATION_INITIALIZE);
                 _error.AddException(ex,this.ToString()+ ".ExcelCellsManagerForm.Constracta", msg);
                 _error.Messenger.ShowAlertMessages();
-                MessageBox.Show(msg, "Error! - ExcelCellsManagerForm.Constracta Failed");
+                MessageBox.Show(msg, "Error! - ExcelCellsManagerForm Failed");
             }
         }
 
@@ -437,7 +438,7 @@ namespace ExcelCellsManager
         // Event
         delegate void WorkbooksListUpdateDelegate();
 
-        void updateWorkbooksList()
+        void UpdateWorkbooksList()
         {
             _excelCellsManagerMain.UpdateList(false);
         }
@@ -461,7 +462,7 @@ namespace ExcelCellsManager
                     // アプリから開いている時は、Update 中なのでループするので実行しない
                     if (!_excelCellsManagerMain.ExcelManager.IsWorkbookOpening)
                     {
-                        Invoke(new WorkbooksListUpdateDelegate(updateWorkbooksList));
+                        Invoke(new WorkbooksListUpdateDelegate(UpdateWorkbooksList));
                     }
                 }
             }
@@ -514,7 +515,7 @@ namespace ExcelCellsManager
                     // Workbook を閉じた後に WorkbookList を更新する
                     if (_excelCellsManagerMain.AppsSettings.IsUpdateListWhenWorkbookOpendAndClosed)
                     {
-                        Invoke(new WorkbooksListUpdateDelegate(updateWorkbooksList));
+                        Invoke(new WorkbooksListUpdateDelegate(UpdateWorkbooksList));
                     }
                 }
                 if (sender.GetType() == typeof(string[]))
@@ -756,7 +757,7 @@ namespace ExcelCellsManager
             }
         }
 
-        private void statusStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void StatusStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

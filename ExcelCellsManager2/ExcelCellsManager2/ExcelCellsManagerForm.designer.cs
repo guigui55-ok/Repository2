@@ -209,7 +209,7 @@ namespace ExcelCellsManager
             this.statusStrip2.TabIndex = 2;
             this.statusStrip2.Text = "statusStrip2";
             this.statusStrip2.Visible = false;
-            this.statusStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip2_ItemClicked);
+            this.statusStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.StatusStrip2_ItemClicked);
             // 
             // ExcelCellsManagerForm
             // 

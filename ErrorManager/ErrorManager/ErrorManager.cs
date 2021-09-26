@@ -329,12 +329,12 @@ namespace ErrorManager
             }
         }
 
-        public string GetLastAlertMessages(bool isAddExceptionMessage = false)
+        public string GetLastAlertMessages(bool orderIsRev = false, bool isAddExceptionMessage = false)
         {
             try
             {
                 string ret="";
-                string[] msgs = GetLastErrorMessagesAsArray(4, isAddExceptionMessage);
+                string[] msgs = GetLastErrorMessagesAsArray(4, orderIsRev, isAddExceptionMessage);
                 if((msgs != null)&&(msgs.Length > 0))
                 {
                     foreach(string val in msgs)
@@ -361,7 +361,6 @@ namespace ErrorManager
         }
         public bool HasAlert(){
             bool errorHasAlert = HasErrorType(Constants.TYPE_ALERT);
-            //bool logHasAlert = Log.HasAlert();
             return errorHasAlert;
         }
 
@@ -369,7 +368,6 @@ namespace ErrorManager
         {
             bool hasAlert = HasAlert();
             bool errorHasWarning = HasErrorType(Constants.TYPE_WARNING);
-            //bool logHasWarning = Log.HasWarning();
             return hasAlert || errorHasWarning;
         }
         //public bool HasWarningAndAlert() { 
@@ -477,12 +475,19 @@ namespace ErrorManager
                 return "";
             }
         }
-
-        public string GetLastErrorMessagesAsString(int moreThanThisType = 3,bool isAddExceptionMessage = false)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="moreThanThisType"></param>
+        /// <param name="orderIsRev"></param>
+        /// <param name="isAddExceptionMessage"></param>
+        /// <returns></returns>
+        public string GetLastErrorMessagesAsString(
+            int moreThanThisType = 3,bool orderIsRev = false ,bool isAddExceptionMessage = false)
         {
             try
             {
-                string[] msgs = GetLastErrorMessagesAsArray(moreThanThisType, isAddExceptionMessage);
+                string[] msgs = GetLastErrorMessagesAsArray(moreThanThisType, orderIsRev, isAddExceptionMessage);
                 string ret = "";
                 if((msgs != null)||(msgs.Length < 1))
                 {
@@ -505,12 +510,12 @@ namespace ErrorManager
         /// </summary>
         /// <param name="moreThanThisType"></param>
         /// <returns></returns>
-        public string[] GetLastErrorMessagesAsArray(int moreThanThisType = 4,bool isAddExceptionMessage = false)
+        public string[] GetLastErrorMessagesAsArray(int moreThanThisType = 4, bool orderIsRev = false, bool isAddExceptionMessage = false)
         {
             try
             {
                 
-                List<string> list = GetLastErrorMessagesList(new int[] { moreThanThisType }, isAddExceptionMessage);
+                List<string> list = GetLastErrorMessagesList(new int[] { moreThanThisType },orderIsRev, isAddExceptionMessage);
                 ClearError();
                 return list.ToArray();
             } catch (Exception ex)
@@ -534,11 +539,12 @@ namespace ErrorManager
         }
 
 
-        public List<string> GetLastErrorMessagesList(int[] errorTypes,bool isAddExceptionMessage=false)
+        public List<string> GetLastErrorMessagesList(int[] errorTypes, bool orderRev = true, bool isAddExceptionMessage=false)
         {
             List<string> retList = new List<string>();
             try
             {
+                if (orderRev) { }
                 if (_DebugDataList == null) { Debug.WriteLine("GetLastErrorMessages DebugDtaList Is Null"); return retList; }
                 if (_DebugDataList.Count < 1) { Debug.WriteLine("GetLastErrorMessages DebugDtaList.Count < 1"); return retList; }
                 if (errorTypes == null) { Debug.WriteLine("GetLastErrorMessages errorTypes Is Null"); return retList; }
@@ -546,27 +552,8 @@ namespace ErrorManager
 
                 foreach (DebugData data in _DebugDataList)
                 {
-                    if (!data.IsAccecced)
-                    {
-                        foreach(int type in errorTypes)
-                        {
-                            //Console.WriteLine("type ="+type + " ,data.type="+data.DataType);
-                            if(type <= data.DataType)
-                            {
-                                string buf = GetErrorMessgefromDebugDataList(data);
-                                if (isAddExceptionMessage)
-                                {
-                                    if (data.Exception != null)
-                                    {
-                                        buf += ":" + data.Exception.Message;
-                                    }
-                                }
-                                retList.Add(buf);
-                            }
-                        }
-                        data.IsAccecced = true;
-                    }
-                    // IsAccessed=true の時は何もしない
+
+                    GetDataForDebugList(data, ref retList, errorTypes, isAddExceptionMessage);
                 }
                 //ClearError();
                 return retList;
@@ -577,6 +564,63 @@ namespace ErrorManager
                 this.AddLog(Log.Constants.PRIORITY_ALERT, Log.Constants.TYPE_EXCEPTION,
                     this.ToString() + ".GetLastErrorMessages", "ErrorLog Process Error", ex);
                 return retList;
+            }
+        }
+
+        private List<string> GetLastErrorMessagesListOrderRev(int[] targetErrorTypes, bool orderRev = true, bool isAddExceptionMessage = false)
+        {
+            List<string> retList = new List<string>();
+            try
+            {
+                if (_DebugDataList == null) { Debug.WriteLine("GetLastErrorMessages DebugDtaList Is Null"); return retList; }
+                if (_DebugDataList.Count < 1) { Debug.WriteLine("GetLastErrorMessages DebugDtaList.Count < 1"); return retList; }
+                if (targetErrorTypes == null) { Debug.WriteLine("GetLastErrorMessages errorTypes Is Null"); return retList; }
+                if (targetErrorTypes.Length < 1) { Debug.WriteLine("GetLastErrorMessages errorTypes.length < 1"); return retList; }
+
+                for(int i= _DebugDataList.Count-1; i>=0; i--)
+                {
+                    GetDataForDebugList(_DebugDataList[i],ref retList, targetErrorTypes, isAddExceptionMessage);
+                }
+                return retList;
+            } catch (Exception ex)
+            {
+                this.AddLog(Log.Constants.PRIORITY_ALERT, Log.Constants.TYPE_EXCEPTION,
+                    this.ToString() + ".GetLastErrorMessagesListOrderRev", "ErrorLog Process Error", ex);
+                return retList;
+            }
+        }
+
+        private void GetDataForDebugList(
+            DebugData data,ref List<string> list, int[] targetErrorTypes,bool isAddExceptionMessage)
+        {
+            try
+            {
+                if (!data.IsAccecced)
+                {
+                    foreach (int type in targetErrorTypes)
+                    {
+                        //Console.WriteLine("type ="+type + " ,data.type="+data.DataType);
+                        if (type <= data.DataType)
+                        {
+                            string buf = GetErrorMessgefromDebugDataList(data);
+                            if (isAddExceptionMessage)
+                            {
+                                if (data.Exception != null)
+                                {
+                                    buf += ":" + data.Exception.Message;
+                                }
+                            }
+                            list.Add(buf);
+                        }
+                    }
+                    data.IsAccecced = true;
+                }
+                // IsAccessed=true の時は何もしない
+            }
+            catch (Exception ex)
+            {
+                this.AddLog(Log.Constants.PRIORITY_ALERT, Log.Constants.TYPE_EXCEPTION,
+                    this.ToString() + ".GetDataForDebugList", "ErrorLog Process Error", ex);
             }
         }
 

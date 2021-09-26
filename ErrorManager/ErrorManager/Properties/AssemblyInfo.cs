@@ -32,5 +32,27 @@ using System.Runtime.InteropServices;
 // すべての値を指定するか、次を使用してビルド番号とリビジョン番号を既定に設定できます
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.0.0.0")]
-[assembly: AssemblyFileVersion("2.0.0.0")]
+[assembly: AssemblyVersion("2.1.0.0")]
+[assembly: AssemblyFileVersion("2.1.0.0")]
+
+//2.1.0.0
+//メソッド引数変更
+//ErrorManager.cs
+//string[] GetLastErrorMessagesAsArray(int moreThanThisType = 4, bool orderIsRev = false, bool isAddExceptionMessage = false)
+//string GetLastErrorMessagesAsString(
+//            int moreThanThisType = 3, bool orderIsRev = false, bool isAddExceptionMessage = false)
+//public string GetLastErrorMessagesAsString(
+//            int moreThanThisType = 3, bool orderIsRev = false, bool isAddExceptionMessage = false)
+//string[] GetLastErrorMessagesAsArray(int moreThanThisType = 4, bool orderIsRev = false, bool isAddExceptionMessage = false)
+//List<string> GetLastErrorMessagesList(int[] errorTypes, bool orderRev = true, bool isAddExceptionMessage = false)
+
+//privateメソッド追加
+//private List<string> GetLastErrorMessagesListOrderRev(int[] targetErrorTypes, bool orderRev = true, bool isAddExceptionMessage = false)
+//private void GetDataForDebugList(
+//            DebugData data, ref List<string> list, int[] targetErrorTypes, bool isAddExceptionMessage)
+
+//IErrorMessenger.cs
+//メソッド引数変更
+//void ShowResultSuccessMessageAddToExisting(string msg,bool isBehind = true, string title = "")
+//void ShowWarningMessageMessageAddToExisting(string msg, bool isBeHind = true, string title = "")
+//void ShowAlertMessageMessageAddToExisting(string msg, bool isBehind = true, string title = "")

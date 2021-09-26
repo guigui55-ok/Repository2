@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelManagerSample", "ExcelManagerSample\ExcelManagerSample.csproj", "{74B28721-BC60-4675-ADA8-00067E199DB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelManager", "ExcelManager\ExcelManager.csproj", "{B96ECBE2-B1E1-4883-8762-750CD9811876}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{425CA7FD-12F1-4ABB-8C50-BE1BE40AC151}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkbookList", "WorkbookList\WorkbookList.csproj", "{BF9CBFF1-D26E-47BC-B667-3A68F375B605}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74B28721-BC60-4675-ADA8-00067E199DB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74B28721-BC60-4675-ADA8-00067E199DB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74B28721-BC60-4675-ADA8-00067E199DB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74B28721-BC60-4675-ADA8-00067E199DB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B96ECBE2-B1E1-4883-8762-750CD9811876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B96ECBE2-B1E1-4883-8762-750CD9811876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B96ECBE2-B1E1-4883-8762-750CD9811876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B96ECBE2-B1E1-4883-8762-750CD9811876}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF9CBFF1-D26E-47BC-B667-3A68F375B605}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{BF9CBFF1-D26E-47BC-B667-3A68F375B605}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{BF9CBFF1-D26E-47BC-B667-3A68F375B605}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF9CBFF1-D26E-47BC-B667-3A68F375B605}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D6C2C9C-19B0-42FF-B733-82C51A70AF89}
+	EndGlobalSection
+EndGlobal
