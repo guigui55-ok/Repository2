@@ -37,20 +37,23 @@ Ctrl{Shift{OFİ’èƒEƒBƒ“ƒhƒE‚ğŠJ‚­
 * ƒc[ƒ‹ƒo[ì¬
 
 #### XV—š—ğ  
-//ExcelCellsManager2  
-// 2021/09/27  
-//3.2.0.0  
-//ExcelCellsManager.MakeAddValue ƒƒ\ƒbƒh  
-//System.Runtime.InteropServices.COMException —áŠO‚ÌƒGƒ‰[ƒƒbƒZ[ƒW’Ç‰Á  
-// 3.1.0.0  
-// 2021/09/20  
-// ƒƒjƒ…[ƒo[‚ğ’Ç‰Á  
-// 2.1.0.0  
-// 2021/09/19  
-// ExcelManager.dll,WorkbookList.dll ‚ğC³  
-// 1.0.0.0  
-// ExcelCellsManagerTest ‚©‚ç ExcelCellsManager2 ‚Éƒ\ƒŠƒ…[ƒVƒ‡ƒ“AƒvƒƒWƒFƒNƒg‚ğ•ÏX  
-// ExcelManager.dll,WorkbookList.dll ‚ğ’Ç‰Á  
+ExcelCellsManager2    
+3.4.0.0 - 2021/10/02    
+ ExcelCellsManagerMain > public void CopyCellsValue(bool isShowError = true) ƒƒ\ƒbƒh  
+ System.Runtime.InteropServices.COMException —áŠO‚Ìˆ—C³  
+3.3.0.0 - 2021/09/30  
+ Class ExcelCellsManagerForm , private void Button1_Click(object sender, EventArgs e)  
+—áŠO”­¶‚Ìˆ—‚ğ•ÏX  
+ 3.2.0.0 - 2021/09/27  
+  ExcelCellsManager.MakeAddValue ƒƒ\ƒbƒh  
+ System.Runtime.InteropServices.COMException —áŠO‚ÌƒGƒ‰[ƒƒbƒZ[ƒW’Ç‰Á  
+3.1.0.0 - 2021/09/20  
+ ƒƒjƒ…[ƒo[‚ğ’Ç‰Á  
+2.1.0.0 - 2021/09/19  
+ ExcelManager.dll,WorkbookList.dll ‚ğC³  
+1.0.0.0  
+ ExcelCellsManagerTest ‚©‚ç ExcelCellsManager2 ‚Éƒ\ƒŠƒ…[ƒVƒ‡ƒ“AƒvƒƒWƒFƒNƒg‚ğ•ÏX  
+ ExcelManager.dll,WorkbookList.dll ‚ğ’Ç‰Á  
   
 ## ¡ CommonUtility
 ## Description  
@@ -75,8 +78,10 @@ Excel ‚Å‚Ìƒf[ƒ^ˆ—‚ğ©“®‰»‚µ‚æ‚¤‚ÆˆÈ‘O‚Í VBA ‚ğg—p‚µ‚Ä‚¢‚Ü‚µ‚½‚ªAƒR[ƒh‚Ìƒ{ƒ
 Java ‚Å Excel ‚ğˆµ‚¤‚Ì‚Í­‚µ–â‘è‚ª‚ ‚é‚Æ‚í‚©‚Á‚½‚½‚ßAC# ‚ğ‘I‘ğ‚µ‚Ü‚µ‚½B
 ExcelManager ‚Í Excel “à‚Ì‚¢‚ë‚¢‚ë‚È’l‚âƒIƒuƒWƒFƒNƒg‚ğˆµ‚¤‚½‚ß‚Ì‘O’iŠK‚Ìˆ—‚ğs‚¤‚à‚Ì‚Æ‚µ‚Äì¬‚µ‚Ü‚µ‚½B
 
-#### XV—š—ğ  
-//2021/9/27 - 2.2.0.0 - ExcelManagerConst ƒNƒ‰ƒX’Ç‰Á,enum ExcelManagerErrorCodes ’Ç‰ÁA—áŠO”­¶‚Ìˆ—C³
+#### XV—š—ğ  //2021/10/02  
+2.4.0.0 - 2021/10/02 - ƒNƒ‰ƒX’Ç‰ÁAƒƒ\ƒbƒhC³(Class ExcelUtilityStaticMethodAClass ExcelApps)
+2.3.0.0 - 2021/09/30 - ƒGƒ‰[ƒR[ƒh‚ğ’Ç‰ÁAƒƒ\ƒbƒh–ß‚è’l‚ğ•ÏX(Class ExcelAppsAClass ExcelManagerErrorCodesAClass ExcelManager)
+2.2.0.0 - 2021/9/27 - ExcelManagerConst ƒNƒ‰ƒX’Ç‰Á,enum ExcelManagerErrorCodes ’Ç‰ÁA—áŠO”­¶‚Ìˆ—C³
 
 ### ¡ ExcelWorkbookList
 ### Description  
