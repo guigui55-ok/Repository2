@@ -978,7 +978,10 @@ namespace ExcelCellsManager
                     // WorkbookList にはない Workbook → 開いていない →開く
                     _error.AddLog("Workbook Not Opend.  * Workbook.ProcessID = 0 [" + appsInfo.FileName + "]");
                     ExcelManager.OpenFile(cellsInfo.Path + "\\" + cellsInfo.BookName);
-                    if (_error.hasAlert) { throw new Exception("ExcelManager.OpenFile Failed"); }
+                    if (_error.hasAlert) {
+                        //throw new Exception("ExcelManager.OpenFile Failed");
+                        return null;
+                    }
                     // Workbook を開いたがまだ UpdateList していない
                     AppsState.IsNotUpdateExcelAppsListAfterOpenWorkbook = true;
                     _error.Messenger.ShowResultSuccessMessageAddToExisting("Open Excel File.");
@@ -986,14 +989,19 @@ namespace ExcelCellsManager
                 // 開いているか
                 // 開いている場合 ExcelApps を取得する
                 ExcelApps apps = ExcelManager.GetExcelAppsFromAppsInfo(appsInfo);
-                if (_error.hasAlert) { throw new Exception("ExcelManager.GetExcelAppsFromAppsInfo Failed"); }
+                if (_error.hasAlert) { 
+                    throw new Exception("ExcelManager.GetExcelAppsFromAppsInfo Failed"); 
+                }
                 // 閉じた場合 Null となる
                 if (apps == null)
                 {
                     _error.AddLog(appsInfo.FileName + " Is Nothing [" + appsInfo.ProcessId + "]");
                     // ファイルを開く
                     ExcelManager.OpenFile(cellsInfo.Path + "\\" + cellsInfo.BookName);
-                    if (_error.hasAlert) { throw new Exception("ExcelManager.OpenFile Failed"); }
+                    if (_error.hasAlert) {
+                        //throw new Exception("ExcelManager.OpenFile Failed");
+                        return null;
+                    }
                     // Index をセットする
                     appsInfo.Index = GetIndexIncludeBookNameInCheckedListBox(cellsInfo.BookName);
                     if (_error.hasAlert)
@@ -1059,7 +1067,10 @@ namespace ExcelCellsManager
 
                 // 選択している DataGridView の Row から ExcelApps を取得する。Wrokbook が開いていなければ開いてから取得する
                 ExcelApps apps = GetExcelAppsSelectedRowInDataGridViewAfterOpenWorkbookWhenNotOpened(cellsInfo);
-                if (_error.hasAlert) { throw new Exception("GetExcelAppsSelectedRowInDataGridViewAfterOpenWorkbookWhenNotOpened Failed"); }
+                if (_error.hasAlert) {
+                    return;
+                    //throw new Exception("GetExcelAppsSelectedRowInDataGridViewAfterOpenWorkbookWhenNotOpened Failed");
+                }
 
                 // コピー用オブジェクト作成
                 ExcelCopyCellsValue CopyCellsValue = new ExcelCopyCellsValue(_error, cellsInfo, apps);
@@ -1103,13 +1114,14 @@ namespace ExcelCellsManager
                 // エラーがあれば表示する
                 //if (isShowError) { if (_error.hasError) { _error.Messenger.ShowErrorMessageseAddToExisting(); } }
                 //else { _error.ClearError(); }
+                if (isShowError) { ShowMessageExistingWhenFlagTrue("Copied Cells Value", true); }
             }
         }
 
 
 
         // WrokbookList の選択されている Workbook を Activate する
-        public void ActivateWorkbookSelectedCheckedListBox()
+        public void ActivateWorkbookSelectedCheckedListBox(bool isShowError=true)
         {
             try
             {
@@ -1126,15 +1138,16 @@ namespace ExcelCellsManager
                 // workbook を Activate する
                 // Window を Active にする
                 ExcelManager.ActivateWorkbook(info);
-                if (_error.hasAlert) { throw new Exception("ExcelManager.ActivateWorkbook Failed"); }
+                if (_error.hasAlert) { 
+                    throw new Exception("ExcelManager.ActivateWorkbook Failed"); 
+                }
             } catch(Exception ex)
             {
                 _error.AddException(ex, this.ToString() + ".ActivateWorkbookSelectedCheckedListBox");
             }
             finally
             {
-                if (_error.hasError) { _error.Messenger.ShowAlertMessages(); }
-                else { _error.ClearError(); }
+                if (isShowError) { ShowMessageExistingWhenFlagTrue("ActivateWorkbookSelectedCheckedListBox Failed.", true); }
             }
         }
         // WorkbookList から チェックされているものの、ProcessID を取得する

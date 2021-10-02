@@ -84,7 +84,7 @@ namespace ExcelUtility
         }
         public ExcelManager(ErrorManager.ErrorManager error)
         {
-            _Error = error;
+            _Error=error;
             _ProcUtil = new ProcessUtility(error);
             _WindowUtil = new CommonUtility.Pinvoke.WindowControlUtility(error);
             _excelWorkbookSyncer = new ExcelWorkbookSyncer(_Error, this);
@@ -218,14 +218,16 @@ namespace ExcelUtility
         /// <summary>
         /// ExcelApps のオブジェクトがあるとき、Window を最前面に表示する
         /// </summary>
-        public void WindowActivate()
+        public int WindowActivate()
         {
+            int ret = 0;
             try
             {
                 _Error.AddLog(this.ToString()+ "WindowActivate");
                 ExcelApps apps = this.GetActiveExcelApps();
-                if (_Error.hasAlert) { throw new Exception("GetActiveExcelApps Failed"); }
-
+                if (_Error.hasAlert) { 
+                    throw new Exception("GetActiveExcelApps Failed"); 
+                }
 
                 if (apps == null) {
                     _Error.AddLogWarning("ExcelApps.ExcelApps Is Null");
@@ -234,18 +236,25 @@ namespace ExcelUtility
                 if (apps == null) { throw new Exception("ExcelApps.ExcelApps Is Null (After GetFirstObject)"); }
 
                 // ウィンドウを最前面へ、最小化時は元に戻す
-                _WindowUtil.WakeupWindow(apps.ProcessId);
-                if (_Error.hasAlert) { throw new Exception("_WindowUtil.WakeupWindow Failed"); }
+                ret = _WindowUtil.WakeupWindowR(apps.ProcessId);
+                if (ret < 1) { _Error.AddLogAlert("_WindowUtil.WakeupWindowR Failed ret="+ret); return ret; }
+                if (_Error.hasAlert) {  throw new Exception("_WindowUtil.WakeupWindow Failed. ret="+ret);  }
                 //
                 string FileName = apps.GetActiveWorkbookName();
                 if (_Error.hasAlert) { throw new Exception("GetActiveWorkbookName Failed"); }
 
-                apps.ActivateWorkbook(FileName);
+                ret = apps.ActivateWorkbook(FileName);
+                if (ret < 0)
+                { _Error.AddLogAlert("apps.ActivateWorkbook Failed"); return ret; }
                 if (_Error.hasAlert) { throw new Exception("apps.ActivateWorkbook Failed"); }
+
+                return (int)ExcelManagerConstants.RESULT_SUCCESS;
             }
             catch (Exception ex)
             {
-                _Error.AddException(ex, this.ToString() + ".WindowActivate");
+                _Error.AddException(ex, this,"WindowActivate",
+                    ExcelManagerConst.GetErrorMessage(ExcelManagerErrorCodes.UNEXPECTED_ERROR_M));
+                return -(int)ExcelManagerErrorCodes.UNEXPECTED_ERROR_M;
             }
         }
         /// <summary>
@@ -254,6 +263,7 @@ namespace ExcelUtility
         /// <returns></returns>
         public string GetActivateCell()
         {
+            int ret = 0;
             try
             {
                 if (_ExcelAppsList.Count < 1)
@@ -268,10 +278,24 @@ namespace ExcelUtility
                 buf += workbookName + " > " + sheetName + " > " + activeCell;
                 _Error.AddLog(buf);
 
-                WindowActivate();
+                ret = WindowActivate();
+                if(ret < 1) { _Error.AddLogAlert(" WindowActivate Failed"); return ""; }
                 if (_Error.hasAlert) { throw new Exception("WindowActivate Failed"); }
                 if (apps.IsGhost) { return""; }
                 return apps.Application.ActiveCell.Address;
+            }
+            catch (System.Runtime.InteropServices.COMException ex)
+            {
+                if (ex.Message.IndexOf(ExcelManagerErrorCodes.RPC_E_CALL_REJECTED.ToString()) > 0)
+                {
+                    string msg = ExcelManagerConst.GetErrorMessage(ExcelManagerErrorCodes.RPC_E_CALL_REJECTED);
+                    _Error.AddException(ex, this, "GetActivateCell Failed(System.Runtime.InteropServices.COMException)", msg);
+                }
+                else
+                {
+                    _Error.AddException(ex, this.ToString() + ".GetActivateCell COMException");
+                }
+                return "";
             }
             catch (Exception ex)
             {

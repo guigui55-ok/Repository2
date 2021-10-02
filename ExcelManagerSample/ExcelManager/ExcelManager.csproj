@@ -68,6 +68,9 @@
     <Compile Include="..\ExcelManagerSample\ExcelUtility\ExcelObject\ExcelWorkbook.cs">
       <Link>ExcelUtility\ExcelObject\ExcelWorkbook.cs</Link>
     </Compile>
+    <Compile Include="..\ExcelManagerSample\ExcelUtility\ExcelUtilityStaticMethod.cs">
+      <Link>ExcelUtility\ExcelUtilityStaticMethod.cs</Link>
+    </Compile>
     <Compile Include="..\ExcelManagerSample\ExcelUtility\ExcelWorkbookSyncer.cs">
       <Link>ExcelUtility\ExcelWorkbookSyncer.cs</Link>
     </Compile>
