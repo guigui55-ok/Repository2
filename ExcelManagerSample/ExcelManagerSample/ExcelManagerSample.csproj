@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExcelUtility\ExcelUtilityStaticMethod.cs" />
     <Compile Include="ExcelUtility\ExcelApps.cs" />
     <Compile Include="ExcelUtility\ExcelAppsInfo.cs" />
     <Compile Include="ExcelUtility\ExcelFilePathGetterFromPid.cs" />

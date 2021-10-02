@@ -631,7 +631,14 @@ namespace ExcelCellsManager
         private void Button_SelectCells_Click(object sender, EventArgs e)
         {
             _excelCellsManagerMain.SelectCells();
-            _excelCellsManagerMain.ActivateWorkbookWindowActivate();
+            if (_error.hasAlert)
+            {
+                _error.ClearError();
+                _error.AddLogAlert("Button_SelectCells_Click - _excelCellsManagerMain.SelectCells Failed");
+            } else
+            {
+                _excelCellsManagerMain.ActivateWorkbookWindowActivate();
+            }
         }
         // Button Workbook を閉じる
         private void Button_CloseWorkbook_Click(object sender, EventArgs e)
@@ -717,8 +724,9 @@ namespace ExcelCellsManager
         {
             // GetActiveCell
             _excelCellsManagerMain.ExcelManager.GetActivateCell();
-            if (_error.hasAlert) { _error.Messenger.ShowAlertMessages(); }
-            else { _error.Messenger.ShowResultSuccessMessage("ActiveCell Selected."); }
+            //if (_error.hasAlert) { _error.Messenger.ShowAlertMessages(); }
+            //else { _error.Messenger.ShowResultSuccessMessage("ActiveCell Selected."); }
+            { _excelCellsManagerMain.ShowMessageExistingWhenFlagTrue("ActiveCell Selected.", true); }
         }
 
         // DataList の Item を一つ上に移動する

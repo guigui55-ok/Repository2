@@ -32,17 +32,36 @@ using System.Runtime.InteropServices;
 // すべての値を指定するか、次を使用してビルド番号とリビジョン番号を既定に設定できます
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.2.0.0")]
-[assembly: AssemblyFileVersion("2.2.0.0")]
+[assembly: AssemblyVersion("2.4.0.0")]
+[assembly: AssemblyFileVersion("2.4.0.0")]
 
 //ErrorManager
+//2021/10/02  
+//2.4.0.0
+//ExcelUtilityStaticMethod クラス追加
+//  ystem.Runtime.InteropServices.COMException 例外発生時の Exception の処理をするメソッドを追加
+//OpenFileAddToList メソッド修正、メソッド例外内の処理を変更
+//System.Runtime.InteropServices.COMException 例外時のエラーメッセージ追加
+
+//2021/09/30
+//2.3.0.0
+//エラーコードを追加
+//メソッド戻り値を変更
+//Class ExcelApps
+//public int ActivateWorkbook(string workBookName)
+//Class ExcelManagerErrorCodes
+//エラーコードを追加
+
+//メソッド戻り値を変更
+//Class ExcelManager
+//public int WindowActivate()
+
 //2021/9/27  
 ////2.2.0.0
 //ExcelManagerConst クラス追加
 //enum ExcelManagerErrorCodes 追加
 //ExcelApps.SelectAddress メソッド修正
 //System.Runtime.InteropServices.COMException 例外時のエラーメッセージ追加
-
 
 //ErrorManager
 ////2.1.0.0

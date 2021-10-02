@@ -1023,13 +1023,15 @@ namespace ExcelUtility
         {
             try
             {
+                _Error.AddLog(this, "OpenFileAddToList");
                 //this.FilePathList.Add(filePath);
                 this._TempWorkbook = this.Application.Workbooks.Open(filePath);
                 //this._TempWorkbook = Marshal.BindToMoniker(filePath) as Microsoft.Office.Interop.Excel.Workbook;
 
             } catch (Exception ex)
             {
-                _Error.AddException(ex, this.ToString() + ".OpenFileAddToList");
+                //_Error.AddException(ex, this.ToString() + ".OpenFileAddToList");
+                ExcelUtilityStaticMethod.AddExceptionForCOMException(_Error, ex, this, "OpenFileAddToList");
                 return;
             }
         }
@@ -1055,7 +1057,14 @@ namespace ExcelUtility
             }
         }
 
-        public void ActivateWorkbook(string workBookName)
+        /// <summary>
+        /// 指定したワークブックをアクティブにする
+        /// 成功時は Application.Workbooks の位置(要素番号)を返す
+        /// 失敗時は、-1 以下を返す
+        /// </summary>
+        /// <param name="workBookName"></param>
+        /// <returns></returns>
+        public int ActivateWorkbook(string workBookName)
         {
             try
             {
@@ -1066,12 +1075,37 @@ namespace ExcelUtility
                     {
                         Application.Workbooks[i].Activate();
                         IsActivate = i;
+                        return i;
                     }
                 }
+                string msg = ExcelManagerConst.GetErrorMessage(ExcelManagerErrorCodes.WORKBOOK_IS_NOTHING);
+                _Error.AddAlert(this.ToString() + ".ActivateWorkbook Workbook Nothing", msg);
                 _Error.AddLogWarning("ActivateWorkbook Workbook is nothing. bookName="+workBookName);
-            } catch (Exception ex)
+                return -(int)ExcelManagerErrorCodes.WORKBOOK_IS_NOTHING;
+            }
+            catch (System.Runtime.InteropServices.COMException ex)
+            {
+                if (ex.Message.IndexOf(ExcelManagerErrorCodes.RPC_E_CALL_REJECTED.ToString()) >= 0)
+                {
+                    string msg = ExcelManagerConst.GetErrorMessage(ExcelManagerErrorCodes.RPC_E_CALL_REJECTED);
+                    _Error.AddException(ex, this, "ActivateWorkbook Failed(System.Runtime.InteropServices.COMException)", msg);
+                    return -(int)ExcelManagerErrorCodes.RPC_E_CALL_REJECTED;
+                } else if(ex.Message.IndexOf(ExcelManagerConst.ACCESS_DENIED_0X800AC472) >= 0)
+                {
+                    string msg = ExcelManagerConst.GetErrorMessage(ExcelManagerErrorCodes.ACCESS_DENIED_0X800AC472);
+                    _Error.AddException(ex, this, "ActivateWorkbook Failed(System.Runtime.InteropServices.COMException)", msg);
+                    return -(int)ExcelManagerErrorCodes.ACCESS_DENIED_0X800AC472;
+                }
+                else
+                {
+                    _Error.AddException(ex, this.ToString() + ".ActivateWorkbook COMException");
+                    return -(int)ExcelManagerErrorCodes.INTEROP_SERVICES_COM_EXCEPTION;
+                }
+            }
+            catch (Exception ex)
             {
                 _Error.AddException(ex, this.ToString() + ".ActivateWrokbook workBookName");
+                return -(int)ExcelManagerErrorCodes.UNEXPECTED_ERROR_M;
             }
         }
         public bool IsExistsWorkbookInApplication(string WorkbookName)
@@ -1178,22 +1212,23 @@ namespace ExcelUtility
                 object obj = ((Worksheet)Application.Workbooks[WorkbookName].Sheets[worksheetName]).Range[address].Select();
                 
             }
-            catch (System.Runtime.InteropServices.COMException ex)
-            {
-                if (ex.Message.IndexOf(ExcelManagerErrorCodes.RPC_E_CALL_REJECTED.ToString()) > 0)
-                {
-                    string msg = ExcelManagerConst.GetErrorMessage(ExcelManagerErrorCodes.RPC_E_CALL_REJECTED);
-                    _Error.AddException(ex, this, "SelectAddress Failed(System.Runtime.InteropServices.COMException)", msg);
-                }
-                else
-                {
-                    _Error.AddException(ex, this.ToString() + ".SelectAddress COMException");
-                }
-                return;
-            }
+            //catch (System.Runtime.InteropServices.COMException ex)
+            //{
+            //    if (ex.Message.IndexOf(ExcelManagerErrorCodes.RPC_E_CALL_REJECTED.ToString()) > 0)
+            //    {
+            //        string msg = ExcelManagerConst.GetErrorMessage(ExcelManagerErrorCodes.RPC_E_CALL_REJECTED);
+            //        _Error.AddException(ex, this, "SelectAddress Failed(System.Runtime.InteropServices.COMException)", msg);
+            //    }
+            //    else
+            //    {
+            //        _Error.AddException(ex, this.ToString() + ".SelectAddress COMException");
+            //    }
+            //    return;
+            //}
             catch (Exception ex)
             {
-                _Error.AddException(ex, this.ToString() + ".SelectAddress");
+                ExcelUtilityStaticMethod.AddExceptionForCOMException(_Error, ex, this, "SelectAddress");
+                //_Error.AddException(ex, this.ToString() + ".SelectAddress");
                 return;
             }
         }

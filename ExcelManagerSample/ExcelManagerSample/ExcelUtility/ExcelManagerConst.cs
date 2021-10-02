@@ -7,27 +7,45 @@ using System.Threading.Tasks;
 
 namespace ExcelUtility
 {
+    public enum ExcelManagerConstants :int
+    {
+        RESULT_NONE,
+        RESULT_SUCCESS
+    }
     public enum ExcelManagerErrorCodes : int
     {
-        TEST_ERROR,
-        RPC_E_CALL_REJECTED
+        UNEXPECTED_ERROR,
+        UNEXPECTED_ERROR_M,
+        UNDEFINED_ERROR,
+        RPC_E_CALL_REJECTED,
+        INTEROP_SERVICES_COM_EXCEPTION,
+        WORKBOOK_IS_NOTHING,
+        ACCESS_DENIED,
+        ACCESS_DENIED_0X800AC472
     }
     public static class ExcelManagerConst
     {
-        public static readonly string TEST_ERROR_MSG = "テストエラー";
+        public static readonly string UNEXPECTED_ERROR = "不明なエラーです。(Unexpected Error)";
         public static readonly string RPC_E_CALL_REJECTED_MSG =
             "アクセスが拒否されました。Excelの設定ダイアログなどが開いている可能性があります。";
+        public static readonly string ACCESS_DENIED_0X800AC472 = "HRESULT からの例外:0x800AC472";
 
-        static string[] ErrorMessages = new string[]{
-            "テストエラー",
-            "アクセスが拒否されました。Excelの設定ダイアログなどが開いている可能性があります。"
+        static readonly string[] ErrorMessages = new string[]{
+            "不明なエラーです。(Unexpected Error)",
+            "不明なエラーです。(Unexpected Error[-1])",
+            "未定義のエラーです。(Undefined Error)",
+            "アクセスが拒否されました。Excelの設定ダイアログなどが開いている可能性があります。",
+            "不明なエラーです。(InteropServieces.COM Exception)",
+            "対象のワークブックが見つかりません。",
+            "アクセスが拒否されました。",
+            "アクセスが拒否されました。(0x800AC472)"
         };
 
-        static public string GetErrorMessage(ExcelManagerErrorCodes code)
+        public static string GetErrorMessage(ExcelManagerErrorCodes code)
         {
             return GetErrorMessageInExcelManager(code);
         }
-        static public string GetErrorMessageInExcelManager(ExcelManagerErrorCodes code)
+        public static string GetErrorMessageInExcelManager(ExcelManagerErrorCodes code)
         {
             Console.WriteLine("ExcelManagerConst.GetErrorMessageInExcelManager");
             Console.WriteLine("code="+(int)code + " / lenth="+ ExcelManagerConst.ErrorMessages.Length);

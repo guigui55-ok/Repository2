@@ -58,6 +58,32 @@ namespace CommonUtility.Pinvoke
         }
         /// <summary>
         /// メイン・ウィンドウが最小化されていれば元に戻す
+        /// 戻り値：成功時は1、失敗時は1以外のエラーコードを返す、エラーコードが取得できない場合は0を返す
+        /// </summary>
+        /// <param name="pid"></param>
+        public int WakeupWindowR(int pid)
+        {
+            Process prs = null;
+            try
+            {
+                prs = Process.GetProcessById(pid);
+                return WakeupWindowR(prs.MainWindowHandle);
+            }
+            catch (Exception ex)
+            {
+                _Error.AddException(ex, this, "WakeupWindowR ,pid=" + pid);
+                return 0;
+            }
+            finally
+            {
+                if (prs != null)
+                {
+                    prs.Dispose();
+                }
+            }
+        }
+        /// <summary>
+        /// メイン・ウィンドウが最小化されていれば元に戻す
         /// </summary>
         /// <param name="hWnd"></param>
         public void WakeupWindow(IntPtr hWnd)
@@ -81,6 +107,41 @@ namespace CommonUtility.Pinvoke
             {
                 _Error.AddException(ex, this.ToString() + ".WakeupWindow");
                 return;
+            }
+        }
+
+        /// <summary>
+        /// メイン・ウィンドウが最小化されていれば元に戻す
+        /// 戻り値：成功時は1、失敗時は1以外のエラーコードを返す、エラーコードが取得できない場合は0を返す
+        /// </summary>
+        /// <param name="hWnd"></param>
+        public int WakeupWindowR(IntPtr hWnd)
+        {
+            bool ret;
+            int errCode = 0;
+            try
+            {
+                _Error.AddLog("WakeupWindowR");
+                // メイン・ウィンドウが最小化されていれば元に戻す
+                if (IsIconic(hWnd))
+                {
+                    ret = ShowWindowAsync(hWnd, SW_RESTORE);
+                    if (!ret) {
+                        errCode = ConsoleWriteLineWhenRiseErrorWin32();
+                        return errCode;
+                    }
+                }
+
+                // メイン・ウィンドウを最前面に表示する
+                ret = SetForegroundWindow(hWnd);
+                if (!ret) { return ConsoleWriteLineWhenRiseErrorWin32(); }
+
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                _Error.AddException(ex, this, "WakeupWindowR");
+                return 0;
             }
         }
 
@@ -122,7 +183,7 @@ namespace CommonUtility.Pinvoke
                 }
             }
         }
-        public void ConsoleWriteLineWhenRiseErrorWin32()
+        public int ConsoleWriteLineWhenRiseErrorWin32()
         {
             int errCode = GetLastError();
             if (errCode != 0)
@@ -131,6 +192,11 @@ namespace CommonUtility.Pinvoke
                 _Error.AddLog("Win32エラー・コード：" + String.Format("{0}", errCode));
                 Exception ex = new Exception("Win32エラー・コード：" + String.Format("{0}", errCode));
                 _Error.AddException(ex, this,  "ConsoleWriteLineWhenRiseErrorWin32");
+                return errCode;
+            }
+            else
+            {
+                return 0;
             }
         }
 
