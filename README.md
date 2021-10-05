@@ -1,5 +1,5 @@
 # Repository2
-##### ÅIXV“ú 2021.9.27
+##### ÅIXV“ú 2021.10.05
 
 ## ¡ ExcelCellsManager2  
 ### Description  
@@ -28,16 +28,16 @@ Ctrl{Shift{OFİ’èƒEƒBƒ“ƒhƒE‚ğŠJ‚­
 * ƒAƒvƒŠƒP[ƒVƒ‡ƒ“İ’è‚ğƒtƒ@ƒCƒ‹(iniƒtƒ@ƒCƒ‹)‚É•Û‘¶‚µ‚Ü‚·B  
 
 #### ŒoˆÜ  
-‹Æ–±“à‚ÅƒLƒ…ƒƒ“ƒg‚Æ‚µ‚Ä‚ÌƒGƒNƒZƒ‹‚ğ‘½—Ê‚ÉŠJ‚­‚±‚Æ‚ª‚ ‚é‚½‚ßA–{ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Ìì¬‚ÉŠ‚è‚Ü‚µ‚½B  
+ƒhƒLƒ…ƒƒ“ƒg‚Æ‚µ‚Ä‚ÌƒGƒNƒZƒ‹‚ğ‘½—Ê‚ÉŠJ‚­‚±‚Æ‚ª‚ ‚é‚½‚ßA–{ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Ìì¬‚ÉŠ‚è‚Ü‚µ‚½B  
 
 #### ‰Û‘è  
-* ƒ†[ƒU[Œü‚¯ƒGƒ‰[ƒƒbƒZ[ƒW‚Ì•\¦(À‘•’†)*9/27XV  
-* ƒŠƒtƒ@ƒNƒ^ƒŠƒ“ƒO(‹@”\‚È‚Ç’Ç‰Á‚µ‚Ä‚¢‚­‚¤‚¿‚ÉAƒ\[ƒX‚ª”ÏG‚É‚È‚Á‚Ä‚µ‚Ü‚Á‚½‚½‚ß)
-* ƒwƒ‹ƒvì¬
-* ƒc[ƒ‹ƒo[ì¬
+* ƒ†[ƒU[Œü‚¯ƒGƒ‰[ƒƒbƒZ[ƒW‚Ì•\¦(À‘•’†) 
+* ƒŠƒtƒ@ƒNƒ^ƒŠƒ“ƒO(‹@”\‚È‚Ç’Ç‰Á‚µ‚Ä‚¢‚­‚¤‚¿‚ÉAƒ\[ƒX‚ª”ÏG‚É‚È‚Á‚Ä‚µ‚Ü‚Á‚½‚½‚ß)(lˆÄ’†)
+* ƒwƒ‹ƒvì¬(chmƒtƒ@ƒCƒ‹ì¬’†)
 
 #### XV—š—ğ  
 ExcelCellsManager2  
+3.5.0.0 - 2021/10/05 - SettingsFrom •\¦‚Ì MouseCapture ‚Ì“®ì‚ğC³Aƒc[ƒ‹ƒo[‚ğì¬‚·‚é—\’è‚Å‚µ‚½‚ª‹@”\‚ª­‚È‚¢‚½‚ß•Û—¯‚µ‚Ü‚·  
 3.4.0.0 - 2021/10/02  
  ExcelCellsManagerMain > public void CopyCellsValue(bool isShowError = true) ƒƒ\ƒbƒh  
  System.Runtime.InteropServices.COMException —áŠO‚Ìˆ—C³  
@@ -62,6 +62,8 @@ ExcelCellsManager2
 ## ¡ ErrorManager (LogManager)
 ## Description  
 ŠJ”­ƒAƒvƒŠƒP[ƒVƒ‡ƒ““à‚Å”­¶‚·‚é—áŠOŠÇ—‚µ‚Ü‚·B‚Ü‚½AŠJ”­‚Ì(”CˆÓ‚Ì)ƒƒO‚ğŠÇ—‚µ‚Ü‚·B
+#### XV—š—ğ  
+// 2.2.0.0 - 2021/10/04 - class DebugData ƒƒ“ƒo•Ï”’Ç‰Á public Type ExceptionType
 
 ## ¡ ExcelFindExtention
 ### Description  
@@ -96,6 +98,10 @@ ExcelCellsMangerTest ‚ÌƒR[ƒh•ªŠ„‚Ì‚½‚ßŒã”­“I‚Éì¬‚µ‚Ü‚µ‚½B
 (ì¬’†)
 ### ì¬ŒoˆÜ  
 Windows ƒtƒHƒg‚Ì“®ì‚ªd‚¢‚Æ‚«‚ª‚ ‚èAŒy—Ê‚Èƒrƒ…[ƒ‚ª—~‚µ‚¢‚Æv‚Á‚½‚½‚ß‚Å‚·B
+#### XV—š—ğ   
+// 0.2.0.0 - 21/10/04 - ‹@”\•ÏXFD&D ‚ªƒVƒ‡[ƒgƒJƒbƒg‚Ì‚ÍƒVƒ‡[ƒgƒJƒbƒgæ‚Ì Directory ‚ğ“Ç‚İ‚Ş‚æ‚¤‚ÉC³  
+// 0.1.0.0 - 21/10/02 - ‹@”\’Ç‰ÁF“Ç‚İ‚İƒZƒ“ƒ^[‚É•\¦‚·‚éA“Ç‚İ‚İAControl ‚ÉƒTƒCƒY‡‚í‚¹‚é  
+// 0.0.0.0 - 21/08/27 - Create Solution  
 
 ### ¡ iniManager2 (IniManagerSample)
 ### Description  
@@ -117,6 +123,14 @@ WindowsForms ‚Ì”CˆÓ‚ÌƒtƒH[ƒ€‚ÌƒEƒBƒ“ƒhƒE‚ª”ñƒAƒNƒeƒBƒu‚ÌA‚©‚ÂAƒfƒXƒNƒgƒbƒv‚
 ¦ƒTƒ“ƒvƒ‹ƒvƒƒWƒFƒNƒgFProgressDialogManager.sln > ProgressDialogSample.csproj  
 ### ‚»‚Ì‘¼
 –â‘è“_FProgressDialogManager ‚ğ’Ê‚µ‚Äˆ—‚ğs‚¤‚ÆAŒy‚¢ˆ—‚Ìê‡A’P‚Éˆ—‚·‚é‚æ‚èŠÔ‚ğ—v‚µ‚Ä‚¢‚é‚æ‚¤‚ÉŒ©ó‚¯‚ç‚ê‚é‚½‚ßA‰ü‘P‚ª•K—vB  
+
+### ¡ DragAndDropSample
+### Description
+DragAndDrop ‚Å ƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş‚½‚ß‚ÌƒTƒ“ƒvƒ‹‚Å‚·B  
+¦ƒTƒ“ƒvƒ‹ƒvƒƒWƒFƒNƒgFDragAndDropSample.sln > DragAndDropSample.csproj  
+#### XV—š—ğ   
+1.0.0.0 - 2021/10/05 - Create Solution
+
 
 ### ¡ ì¬ŠÂ‹«  
 VisualStudio 2019
