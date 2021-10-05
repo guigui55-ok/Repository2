@@ -7,7 +7,7 @@
 ※プロジェクト： ExcelCellsManager2.sln > ExcelCellsManager2.csproj   
 
 ### BinayPath
-https://github.com/guigui55-ok/Repository2_Binary  
+https://github.com/guigui55-ok/Repository2_Binary/blob/master/ExcelCellsManager2_3.5.7z  
 FileName : ExcelCellsManager2_3.5.zip  
 
 #### 主な機能
@@ -107,7 +107,7 @@ ExcelCellsMangerTest のコード分割のため後発的に作成しました。
 (作成中)
 
 ### BinayPath  
-https://github.com/guigui55-ok/Repository2_Binary  
+https://github.com/guigui55-ok/Repository2_Binary/blob/master/ImageViewer4_0.2.7z  
 FileName : ImageViewer4_0.2.zip 
 
 ### 作成経緯  
