@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonUtilityForExcelManage
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonWindowMaxMinSample", "CommonWindowMaxMinSample\CommonWindowMaxMinSample.csproj", "{7CDD3178-E52D-429F-9A21-88E340A09C84}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlUtility", "ControlUtility\ControlUtility.csproj", "{A21DD68E-0C96-432A-8C95-C900E2634AA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlUtlitySample", "ControlUtlitySample\ControlUtlitySample.csproj", "{F31E17E8-0AA1-4773-AEF1-078BAAA3BED7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,22 @@ Global
 		{7CDD3178-E52D-429F-9A21-88E340A09C84}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7CDD3178-E52D-429F-9A21-88E340A09C84}.Release|x64.ActiveCfg = Release|Any CPU
 		{7CDD3178-E52D-429F-9A21-88E340A09C84}.Release|x64.Build.0 = Release|Any CPU
+		{A21DD68E-0C96-432A-8C95-C900E2634AA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A21DD68E-0C96-432A-8C95-C900E2634AA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A21DD68E-0C96-432A-8C95-C900E2634AA4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A21DD68E-0C96-432A-8C95-C900E2634AA4}.Debug|x64.Build.0 = Debug|Any CPU
+		{A21DD68E-0C96-432A-8C95-C900E2634AA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A21DD68E-0C96-432A-8C95-C900E2634AA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A21DD68E-0C96-432A-8C95-C900E2634AA4}.Release|x64.ActiveCfg = Release|Any CPU
+		{A21DD68E-0C96-432A-8C95-C900E2634AA4}.Release|x64.Build.0 = Release|Any CPU
+		{F31E17E8-0AA1-4773-AEF1-078BAAA3BED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F31E17E8-0AA1-4773-AEF1-078BAAA3BED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F31E17E8-0AA1-4773-AEF1-078BAAA3BED7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F31E17E8-0AA1-4773-AEF1-078BAAA3BED7}.Debug|x64.Build.0 = Debug|Any CPU
+		{F31E17E8-0AA1-4773-AEF1-078BAAA3BED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F31E17E8-0AA1-4773-AEF1-078BAAA3BED7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F31E17E8-0AA1-4773-AEF1-078BAAA3BED7}.Release|x64.ActiveCfg = Release|Any CPU
+		{F31E17E8-0AA1-4773-AEF1-078BAAA3BED7}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

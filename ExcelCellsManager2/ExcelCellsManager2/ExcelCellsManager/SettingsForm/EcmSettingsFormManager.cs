@@ -82,10 +82,13 @@ namespace ExcelCellsManager.ExcelCellsManager.SettingsForm
                         SetValueToControlFromSettingsObjectMember();
                         if (IsFirstShow)
                         {
-                            SettingsForm.ShowDialog(_parentForm);
+                            _error.AddLog(this, "ShowForm IsFirstShow=true");
+                            //SettingsForm.ShowDialog(_parentForm);
+                            SettingsForm.Show();
                             IsFirstShow = false;
                         } else
                         {
+                            _error.AddLog(this, "ShowForm IsFirstShow=false => SettingsForm.Visible=true");
                             SettingsForm.Visible = visible;
                         }
                     }

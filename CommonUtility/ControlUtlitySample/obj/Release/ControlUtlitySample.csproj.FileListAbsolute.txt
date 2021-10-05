@@ -1,0 +1,13 @@
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtlitySample\obj\Release\ControlUtlitySample.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtlitySample\obj\Release\ControlUtlitySample.ControlUtilitySampleForm.resources
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtlitySample\obj\Release\ControlUtlitySample.ControlUtilitySampleModalForm.resources
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtlitySample\obj\Release\ControlUtlitySample.Properties.Resources.resources
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtlitySample\obj\Release\ControlUtlitySample.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtlitySample\obj\Release\ControlUtlitySample.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtlitySample\bin\Release\ControlUtlitySample.exe.config
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtlitySample\bin\Release\ControlUtlitySample.exe
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtlitySample\bin\Release\ControlUtlitySample.pdb
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtlitySample\bin\Release\ErrorManager.dll
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtlitySample\obj\Release\ControlUtlitySample.csproj.CopyComplete
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtlitySample\obj\Release\ControlUtlitySample.exe
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtlitySample\obj\Release\ControlUtlitySample.pdb

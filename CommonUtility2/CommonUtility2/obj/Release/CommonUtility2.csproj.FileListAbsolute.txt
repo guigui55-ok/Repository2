@@ -1,0 +1,6 @@
+C:\Users\OK\source\repos\CommonUtility2\CommonUtility2\bin\Release\CommonUtility2.pdb
+C:\Users\OK\source\repos\CommonUtility2\CommonUtility2\obj\Release\CommonUtility2.csprojResolveAssemblyReference.cache
+C:\Users\OK\source\repos\CommonUtility2\CommonUtility2\obj\Release\CommonUtility2.pdb
+C:\Users\OK\source\repos\CommonUtility2\CommonUtility2\bin\Release\ErrorManager.dll
+C:\Users\OK\source\repos\CommonUtility2\CommonUtility2\bin\Release\CommonUtility2.exe
+C:\Users\OK\source\repos\CommonUtility2\CommonUtility2\obj\Release\CommonUtility2.exe

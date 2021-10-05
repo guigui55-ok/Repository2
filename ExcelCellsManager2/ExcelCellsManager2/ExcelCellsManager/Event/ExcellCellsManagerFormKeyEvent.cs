@@ -43,7 +43,7 @@ namespace ExcelCellsManager.ExcelCellsManager.Event
                         break;
                     case Keys.Control | Keys.Shift | Keys.O:
                         _error.AddLog("_form_KeyDown : Keys.Control | Keys.Shift | Keys.O");
-                        _excelCellsManagerMain.AppsSettingsFormManager.ShowForm(true);
+                        _excelCellsManagerMain.ShowSettingsForm();
                         break;
                     case Keys.Control | Keys.A:
                         _excelCellsManagerMain.Test();

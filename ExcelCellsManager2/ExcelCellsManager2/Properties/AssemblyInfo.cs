@@ -32,10 +32,12 @@ using System.Runtime.InteropServices;
 // すべての値を指定するか、次を使用してビルド番号とリビジョン番号を既定に設定できます
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("3.4.0.0")]
-[assembly: AssemblyFileVersion("3.4.0.0")]
+[assembly: AssemblyVersion("3.5.0.0")]
+[assembly: AssemblyFileVersion("3.5.0.0")]
 
 //ExcelCellsManager2
+// 3.5.0.0 - 2021/10/05 - SettingsFrom 表示時の MouseCapture の動作を修正
+
 //3.4.0.0
 //2021/10/02
 // ExcelCellsManagerMain > public void CopyCellsValue(bool isShowError = true) メソッド

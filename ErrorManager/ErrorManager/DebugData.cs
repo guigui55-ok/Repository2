@@ -11,6 +11,7 @@ namespace ErrorManager
         public int DataType = 0;
         public long ErrorCode = 0;
         public Exception Exception = null;
+        public Type ExceptionType = null;
         public string MessageForDebug = null;
         public string MessageForUser = null;
         public DateTime DateTime;

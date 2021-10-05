@@ -78,10 +78,13 @@ namespace ExcelCellsManager
             AppsSettingsFormManager = new EcmSettingsFormManager(_error, form);
             AppsSettingsFormManager.SettingsForm.VisibleChanged += SettingsForm_VisibleChanged;
             AppsSettingsFormManager.ButtonApply_ClickEvent += SettingsForm_ButtonApplyClick;
+            AppsSettingsFormManager.SettingsForm.Activated += _mouseCapture.SaveFormActivateEvent;
+
+            _mainForm = (ExcelCellsManagerForm)form;
+            _mainForm.Activated += _mouseCapture.SaveFormActivateEvent;
 
             ProgressDialogManager = new ProgressDialog.FormWindow.ProgressDialogManager(_error, form);
             ProgresDialogDowork = new ProgressDialog.DoWork.ProgressDialogDoWork(_error);
-            _mainForm = (ExcelCellsManagerForm)form;
             this.ExcelCellsManagerUtility = new ExcelCellsManagerUtility(_error);
             _excelCellsManagerMainEvent = new ExcelCellsManagerMainEvent(_error, this);
         }
@@ -394,6 +397,7 @@ namespace ExcelCellsManager
                 _error.AddException(ex, this.ToString() + ".InitializeOpenFilePath");
             }
         }
+        public Form GetMainForm() { return _mainForm; }
 
         private void InitializeMouseCaptureClass()
         {
@@ -1463,7 +1467,17 @@ namespace ExcelCellsManager
                 return -3;
             }
         }
-            
+        
+        public void ShowSettingsForm()
+        {
+            try
+            {
+                AppsSettingsFormManager.ShowForm(true);
+            } catch (Exception ex)
+            {
+                _error.AddException(ex, this, "ShowSettingsForm");
+            }
+        }
 
         // 新しいファイルを開く(新規作成)
         public void NewFile()

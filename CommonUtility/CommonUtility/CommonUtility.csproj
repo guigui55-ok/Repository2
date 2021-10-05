@@ -72,8 +72,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\ControlUtlitySample\ControlUtility.cs">
+      <Link>ControlUtility\ControlUtility.cs</Link>
+    </Compile>
     <Compile Include="Com\ComWindowsScriptHostObjectModel.cs" />
-    <Compile Include="ControlUtility\ControlUtility.cs" />
     <Compile Include="ControlUtility\MenuStripUtility.cs" />
     <Compile Include="FileIO.cs" />
     <Compile Include="MainClass.cs" />

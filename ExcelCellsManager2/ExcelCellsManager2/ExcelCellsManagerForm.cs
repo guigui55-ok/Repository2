@@ -183,12 +183,6 @@ namespace ExcelCellsManager
                 _excelCellsManagerMain.ExcelManager.ExcelEventBridge.Application_WorkbookOpenAfterEvent += Application_WorkbookOpenAfterEvent;
                 _excelCellsManagerMain.ExcelManager.ExcelEventBridge.Application_WorkbokBeforeCloseAddEvent += Application_WorkbookBeforeCloseAddEvent;
                 _excelCellsManagerMain.ExcelManager.ExcelEventBridge.Application_DeactivateAddEvent += Application_WorkbookDeactivateAddEvent;
-                // checkedListBoxEvent
-                //_workbookList = new WorkbookList(_error, checkedListBox1, _checkedListUtil,_excelCellsManagerMain);
-                //if (_error.HasAboveWorning()) { _error.AddLogAlert("WorkbookList.Constracta"); }
-                //_checkedListBoxEvent = new CheckedListBoxEvent(_error, checkedListBox1);
-                //_workbookListEvent = new WorkbookListEvent(_error);
-                //_checkedListBoxEvent.ItemRightDoubleClickedAfter = _workbookListEvent.CheckedListBoxItemMouseRightDoubleClickAfterEvent;
 
                 // Initialize ExcelCellsManagerMain
                 // DataGiidView の初期化
@@ -233,6 +227,7 @@ namespace ExcelCellsManager
                 MessageBox.Show(msg, "Error! - ExcelCellsManagerForm Failed");
             }
         }
+
 
         private void DataGridView1_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
@@ -427,10 +422,6 @@ namespace ExcelCellsManager
                 _error.Messenger.ShowAlertMessages();
             } finally
             {
-                //if (_excelCellsManagerMain.AppsSettings.IsUpdateListWhenWorkbookOpendAndClosed)
-                //{
-                //    Invoke(new WorkbooksListUpdateDelegate(updateWorkbooksList));
-                //}
                 _error.AddLog(_thisClassName + ".Application_WorkbookBeforeCloseAddEvent : Finally");
             }
         }
@@ -724,8 +715,6 @@ namespace ExcelCellsManager
         {
             // GetActiveCell
             _excelCellsManagerMain.ExcelManager.GetActivateCell();
-            //if (_error.hasAlert) { _error.Messenger.ShowAlertMessages(); }
-            //else { _error.Messenger.ShowResultSuccessMessage("ActiveCell Selected."); }
             { _excelCellsManagerMain.ShowMessageExistingWhenFlagTrue("ActiveCell Selected.", true); }
         }
 
@@ -770,6 +759,7 @@ namespace ExcelCellsManager
 
         }
 
+        // Cell をコピーする
         private void Button_CopyRangeValue_Click(object sender, EventArgs e)
         {
             _excelCellsManagerMain.CopyCellsValue(true);
