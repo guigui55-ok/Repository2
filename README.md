@@ -5,6 +5,10 @@
 ### Description  
 エクセルの任意のセルの位置(アドレス)を登録し、登録した位置を表示するアプリケーションです。  
 ※プロジェクト： ExcelCellsManager2.sln > ExcelCellsManager2.csproj   
+
+### BinayPath  
+https://github.com/guigui55-ok/Repository2_Binary/ExcelCellsManager2_3.5.zip  
+
 #### 主な機能
 
 * エクセルの任意のセルの位置(アドレス)を登録します。  
@@ -14,7 +18,15 @@
 
 * アプリケーションが前面にないとき、表示しているスクリーン淵の設定された位置へマウスポインタを移動することで、アプリケーションを前面に表示します。  
 * 保存・読込：登録アドレスリストをtsvファイルとして保存、保存したtsvファイルを読み込み表示します。  
-
+    アプリケーションフォーム上にドラッグ＆ドロップすることでファイルを読み込みます。 
+    
+* 実行されているエクセルのプロセス(EXCEL.EXE)および開いているワークブックを取得し、その一覧を表示します。  
+  また、アプリケーション実行中は、ワークブックの実行・終了を検知し、自動的に更新します。  
+* DataGridView の RowHeader ダブルクリックで登録した位置を表示します。  
+* 動作時のログ保存、出力をします。  
+* CheckedListBox で選択されているワークブックを閉じます。  
+* アプリケーション設定をファイル(iniファイル)に保存します。  
+  
 * ショートカットキー  
 Ctrl＋O：開く  
 Ctrl＋S：ファイルを保存(上書き保存、ファイル名が設定されていないときは名前を付けて保存)  
@@ -22,28 +34,24 @@ Ctrl＋Shift＋S：名前を付けて保存
 Ctrl＋Shift＋S：名前を付けて保存  
 Ctrl＋Shift＋O：設定ウィンドウを開く  
 
-* DataGridView の RowHeader ダブルクリックで登録した位置を表示します。  
-* 動作時のログ保存、出力をします。  
-* CheckedListBox で選択されているワークブックを閉じます。  
-* アプリケーション設定をファイル(iniファイル)に保存します。  
-
 #### 経緯  
-ドキュメントとしてのエクセルを多量に開くことがあるため、本アプリケーションの作成に至りました。  
+ドキュメントとしてのエクセルを多量に開くことがあり、ワークブックやシート内の複数のセルの位置を頻繁に切り替えて使うことが多く、
+その往来に時間を要することがあったため、本アプリケーションの作成に至りました。  
 
 #### 課題  
+* ヘルプ作成(chmファイル作成中)
 * ユーザー向けエラーメッセージの表示(実装中) 
 * リファクタリング(機能など追加していくうちに、ソースが煩雑になってしまったため)(考案中)
-* ヘルプ作成(chmファイル作成中)
 
 #### 更新履歴  
 ExcelCellsManager2  
-3.5.0.0 - 2021/10/05 - SettingsFrom 表示時の MouseCapture の動作を修正、ツールバーを作成する予定でしたが機能が少ないため保留します  
+3.5.0.0 - 2021/10/05 - SettingsFrom 表示時の MouseCapture の動作を修正、ツールバーを作成する予定でしたが機能が少ないため保留  
 3.4.0.0 - 2021/10/02  
  ExcelCellsManagerMain > public void CopyCellsValue(bool isShowError = true) メソッド  
- System.Runtime.InteropServices.COMException 例外時の処理修正  
+ System.Runtime.InteropServices.COMException 例外時の処理修正(表示するエラーについて修正)  
 3.3.0.0 - 2021/09/30  
  Class ExcelCellsManagerForm , private void Button1_Click(object sender, EventArgs e)  
-例外発生時の処理を変更  
+例外発生時の処理を変更(表示するエラーについて修正)   
  3.2.0.0 - 2021/09/27  
   ExcelCellsManager.MakeAddValue メソッド  
  System.Runtime.InteropServices.COMException 例外時のエラーメッセージ追加  
@@ -96,6 +104,10 @@ ExcelCellsMangerTest のコード分割のため後発的に作成しました。
 ### Description  
 簡易的に画像を表示します。
 (作成中)
+
+### BinayPath  
+https://github.com/guigui55-ok/Repository2_Binary/ImageViewer4_0.2.zip 
+
 ### 作成経緯  
 Windows フォトの動作が重いときがあり、軽量なビューワが欲しいと思ったためです。
 #### 更新履歴   
