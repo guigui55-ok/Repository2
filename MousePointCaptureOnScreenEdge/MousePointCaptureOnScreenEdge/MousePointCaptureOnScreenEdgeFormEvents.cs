@@ -27,6 +27,7 @@ namespace MousePointCapture
             _form = form;
         }
 
+
         public void SetValidRangeValue(int[,] value)
         {
             try
@@ -87,13 +88,17 @@ namespace MousePointCapture
                             string buf = _validRangeMinMax[0, 0].ToString() + "," + _validRangeMinMax[0, 1].ToString();
                             buf += " / e = " + e.X + "," + e.Y;
                             _error.AddLog("LeftForm_MouseMoveEvent FormActivate : " + buf);
-                            _form.Activate();
+                            ActivateForm();
                         }
                     }
                     else if (_form.WindowState == FormWindowState.Minimized)
                     {
                         _error.AddLog("LeftForm_MouseMoveEvent ChangeStateToNormal");
                         _form.WindowState = FormWindowState.Normal;
+                    }
+                    else
+                    {
+                        ActivateForm();
                     }
                 }
             } catch (Exception ex)
@@ -116,13 +121,17 @@ namespace MousePointCapture
                             string buf = _validRangeMinMax[1, 0].ToString() + "," + _validRangeMinMax[1, 1].ToString();
                             buf += " / e = " + e.X + "," + e.Y;
                             _error.AddLog("TopForm_MouseMoveEvent FormActivate : " + buf);
-                            _form.Activate();
+                            ActivateForm();
                         }
                     }
                     else if (_form.WindowState == FormWindowState.Minimized)
                     {
                         _error.AddLog("TopForm_MouseMoveEvent ChangeStateToNormal");
                         _form.WindowState = FormWindowState.Normal;
+                    }
+                    else
+                    {
+                        ActivateForm();
                     }
                 }
             }
@@ -146,13 +155,17 @@ namespace MousePointCapture
                             string buf = _validRangeMinMax[2, 0].ToString() + "," + _validRangeMinMax[2, 1].ToString();
                             buf += " / e = " + e.X + "," + e.Y;
                             _error.AddLog("RightForm_MouseMoveEvent FormActivate : " + buf);
-                            _form.Activate();
+                            ActivateForm();
                         }
                     }
                     else if (_form.WindowState == FormWindowState.Minimized)
                     {
                         _error.AddLog("RightForm_MouseMoveEvent ChangeStateToNormal");
                         _form.WindowState = FormWindowState.Normal;
+                    }
+                    else
+                    {
+                        ActivateForm();
                     }
                 }
             }
@@ -176,7 +189,7 @@ namespace MousePointCapture
                             string buf = _validRangeMinMax[3, 0].ToString() + "," + _validRangeMinMax[3, 1].ToString();
                             buf += " / e = " + e.X + "," + e.Y;
                             _error.AddLog("BottomForm_MouseMoveEvent FormActivate : " + buf);
-                            _form.Activate();
+                            ActivateForm();
                         }
                     }
                     else if (_form.WindowState == FormWindowState.Minimized)
@@ -184,11 +197,53 @@ namespace MousePointCapture
                         _error.AddLog("BottomForm_MouseMoveEvent ChangeStateToNormal");
                         _form.WindowState = FormWindowState.Normal;
                     }
+                    else
+                    {
+                        ActivateForm();
+                    }
                 }
             }
             catch (Exception ex)
             {
                 _error.AddException(ex, this.ToString() + "._captureFormManager_BottomForm_MouseMoveEvent");
+            }
+        }
+
+        private void ActivateForm()
+        {
+            try
+            {
+                //_error.AddLog(this, "ActivateForm");
+
+
+                if (_form != null)
+                {
+                    if(Form.ActiveForm != null)
+                    {
+                        if ((Form.ActiveForm.Name == _form.Name) || (Form.ActiveForm.Name == _captureFormManager.LastActivateForm.Name))
+                        {
+                            //_error.AddLog(this,"Activated Already");
+                            return;
+                        }
+                    }
+
+                    if (_captureFormManager.LastActivateForm != null)
+                    {
+                        _captureFormManager.LastActivateForm.Activate();
+                        _error.AddLog(this, "ActivateForm LastActivateForm");
+                        return;
+                    }
+                    if (!_form.Modal)
+                    {
+                        _form.Activate();
+                    } else
+                    {
+                        _error.AddLog("  Form.Modal=true");
+                    }
+                }
+            } catch (Exception ex)
+            {
+                _error.AddException(ex, this.ToString() + ".ActivateForm");
             }
         }
     }

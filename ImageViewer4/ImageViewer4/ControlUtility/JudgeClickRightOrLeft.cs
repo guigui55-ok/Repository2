@@ -9,21 +9,49 @@ namespace ControlUtility
         protected Control _control;
         public EventHandler ClickRight;
         public EventHandler ClickLeft;
+        protected bool IsMove = false;
+        protected bool IsDrag = false;
+        protected bool IsDown = false;
         public JudgeClickRightOrLeft(ErrorManager.ErrorManager err,Control control)
         {
             _err = err;
             _control = control;
             _control.MouseClick += Control_MouseClick;
+            _control.MouseDown += Control_MouseDown;
+            _control.MouseUp += Control_MouseUp;
+            _control.MouseMove += Control_MouseMove;
         }
+
         public JudgeClickRightOrLeft(ErrorManager.ErrorManager err, Control control
-            ,EventHandler clickRight,EventHandler clickLeft)
+            , EventHandler clickRight, EventHandler clickLeft)
         {
             _err = err;
             _control = control;
             ClickRight = clickRight;
             ClickLeft = clickLeft;
             _control.MouseClick += Control_MouseClick;
+            _control.MouseDown += Control_MouseDown;
+            _control.MouseUp += Control_MouseUp;
+            _control.MouseMove += Control_MouseMove;
         }
+        private void Control_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (IsDown) { IsDrag = true; }
+        }
+
+        private void Control_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (IsDown) { IsDown = false; }
+            if (IsDrag) { 
+                IsDrag = false; _err.AddLog(this, "Control_MouseUp IsDrag true => false"); 
+            }
+        }
+
+        private void Control_MouseDown(object sender, MouseEventArgs e)
+        {
+            IsDown = true;
+        }
+
 
         private void Control_MouseClick(object sender, MouseEventArgs e)
         {
@@ -39,6 +67,7 @@ namespace ControlUtility
         {
             try
             {
+                if (IsDrag) { _err.AddLog(this, "ControlClicked , IsDrag=true , return"); return -1; }
                 if (e.X > (control.Width / 2))
                 {
                     _err.AddLog(this," ClickRight");
@@ -53,30 +82,10 @@ namespace ControlUtility
                 // update flag
             } catch (Exception ex)
             {
-                _err.AddException(ex, this.ToString(), "ClickPointIsRightSideOnControl");
+                _err.AddException(ex, this, "ClickPointIsRightSideOnControl");
                 return 0;
             }
         }
 
-        public string[] GetFilesByDragAndDrop(DragEventArgs e)
-        {
-            try
-            {
-                if (e.Data.GetDataPresent(DataFormats.FileDrop))
-                {
-                    // ドラッグ中のファイルやディレクトリの取得
-                    string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-                    return files;
-                } else
-                {
-                    _err.AddLogAlert(this, "GetFilesByDragAndDrop GetDataPresent Else");
-                    return null;
-                }
-            } catch (Exception ex)
-            {
-                _err.AddException(ex, this.ToString(), "ClickPointIsRightSideOnControl");
-                return null;
-            }
-        }
     }
 }

@@ -766,6 +766,7 @@ namespace ErrorManager
                     {
                         MessageForDebug = msgForDebug,
                         Exception = exceptoin,
+                        ExceptionType = exceptoin.GetType(),
                         DateTime = DateTime.Now,
                         DataType = type,
                         MessageForUser = msgToUser,
@@ -834,7 +835,7 @@ namespace ErrorManager
         private void ErrorLogWriteToConsole(DebugData data)
         {
             Console.WriteLine("------");
-            Console.WriteLine("**** AddException : " + data.MessageForDebug);
+            Console.WriteLine("**** AddException : (" + data.ExceptionType.ToString() + ") " + data.MessageForDebug);
             Console.WriteLine(data.ErrorCode+ " / "+ data.MessageForUser);
             Console.WriteLine(data.Exception.Message);
             Console.WriteLine(data.Exception.StackTrace);

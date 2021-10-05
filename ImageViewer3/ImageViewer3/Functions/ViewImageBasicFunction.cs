@@ -220,7 +220,6 @@ namespace ImageViewer.Functions
                 } else
                 {
                     // PictureBox 非固定
-
                 }
                 // Default は00
                 //Point location = new Point(0, 0);

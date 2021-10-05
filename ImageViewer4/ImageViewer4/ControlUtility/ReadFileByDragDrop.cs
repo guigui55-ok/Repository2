@@ -1,9 +1,6 @@
 ﻿using CommonUtility.FileListUtility;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ControlUtility
@@ -27,6 +24,7 @@ namespace ControlUtility
             FileListManager = new FileListManager(_err, Files);
             _dragAndDropOnControl = new DragAndDropOnControl(_err, control);
             _dragAndDropForFile = new DragAndDropForFile(_err, _dragAndDropOnControl);
+            FileListManager.IsReadSourceOfShotcut = true;
             // ファイルリストを取得した後にコントロールなどに表示する場合、以下に紐づける
             FileListManager.UpdateFileListAfterEvent += UpdateFileAfterEvent;
             // ファイルを読み込んだ後のイベント
@@ -41,8 +39,9 @@ namespace ControlUtility
                 if (_dragAndDropForFile.Files == null) { _err.AddLogWarning("Files == null"); return; }
                 if (_dragAndDropForFile.Files.Length < 1) { _err.AddLogWarning("Files.Length < 1"); return; }
 
-                _err.AddLog("  GetPath=" + _dragAndDropForFile.Files[0]);
-                FileListManager.SetFilesFromPath(_dragAndDropForFile.Files[0]);
+                string path = FileListManager.GetFilePathFromShortcut(_dragAndDropForFile.Files[0]);
+                _err.AddLog("  GetPath=" + path);
+                FileListManager.SetFilesFromPath(path);
                 if (DragAndDropEventAfterEvent != null) { DragAndDropEventAfterEvent.Invoke(sender, e); }
             }
             catch (Exception ex)

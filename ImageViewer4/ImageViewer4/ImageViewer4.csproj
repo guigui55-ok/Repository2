@@ -67,10 +67,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewImageObjects\IViewImage.cs" />
-    <Compile Include="ViewImageObjects\IViewImageControl.cs" />
-    <Compile Include="ViewImageObjects\ViewImage.cs" />
-    <Compile Include="ViewImageObjects\ViewImageControlPictureBox.cs" />
+    <Compile Include="ViewImageObjects\Control\ViewImageFrameControlForm.cs" />
+    <Compile Include="ViewImageObjects\Function\ViewImageFunction.cs" />
+    <Compile Include="ViewImageObjects\InterFace\IViewImage.cs" />
+    <Compile Include="ViewImageObjects\InterFace\IViewImageControl.cs" />
+    <Compile Include="ViewImageObjects\Control\ViewImage.cs" />
+    <Compile Include="ViewImageObjects\Control\ViewImageControlPictureBox.cs" />
+    <Compile Include="ViewImageObjects\Function\ViewImageFunction_FitInnerToFrame.cs" />
+    <Compile Include="ViewImageObjects\ViewImageObjectsErrorCodes.cs" />
+    <Compile Include="ViewImageObjects\ViewImageObjectsSettings.cs" />
+    <Compile Include="ViewImageObjects\IViewImageFrameControl.cs" />
     <EmbeddedResource Include="ImageViewerTestForm.resx">
       <DependentUpon>ImageViewerTestForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,8 +102,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewImageObjects\FrameControls\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

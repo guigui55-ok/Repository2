@@ -28,6 +28,8 @@ namespace MousePointCapture
         public event MouseEventHandler BottomForm_MouseMoveEvent;
 
         public MousePointCaptureOnScreenEdgeFormEvents EdgeFormEvents;
+        //public EventHandler SaveFormActivateEvent;
+        public Form LastActivateForm;
         public MousePointCaptureOnScreenEdgeManager(ErrorManager.ErrorManager error)
         {
             ConstractaProcess(error);
@@ -44,6 +46,31 @@ namespace MousePointCapture
                 this.EdgeFormEvents = new MousePointCaptureOnScreenEdgeFormEvents(_error,this, form);
             }
         }
+
+        public void SaveFormActivateEvent(object sender, EventArgs e)
+        {
+            try
+            {
+                //if (sender.GetType().Equals(typeof(Form)))
+                //{
+                //}
+                LastActivateForm = Form.ActiveForm;
+                if(LastActivateForm != null)
+                {
+                    _error.AddLog(this, "SaveFormActivateEvent LastActivateForm=" + LastActivateForm.Name);
+                }
+                else
+                {
+                    _error.AddLog(this, "SaveFormActivateEvent LastActivateForm= NULL");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _error.AddLogAlert(this, "SaveFormActivateEvent Failed", "SaveFormActivateEvent Failed", ex);
+            }
+        }
+
         private void ConstractaProcess(ErrorManager.ErrorManager error)
         {
             _error = error;

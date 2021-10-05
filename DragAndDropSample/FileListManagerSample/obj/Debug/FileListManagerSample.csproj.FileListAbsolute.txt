@@ -1,0 +1,15 @@
+C:\Users\OK\source\repos\Repository3\DragAndDropSample\FileListManagerSample\bin\Debug\FileListManagerSample.exe.config
+C:\Users\OK\source\repos\Repository3\DragAndDropSample\FileListManagerSample\bin\Debug\FileListManagerSample.exe
+C:\Users\OK\source\repos\Repository3\DragAndDropSample\FileListManagerSample\bin\Debug\FileListManagerSample.pdb
+C:\Users\OK\source\repos\Repository3\DragAndDropSample\FileListManagerSample\bin\Debug\ErrorManager.dll
+C:\Users\OK\source\repos\Repository3\DragAndDropSample\FileListManagerSample\bin\Debug\ErrorManager.pdb
+C:\Users\OK\source\repos\Repository3\DragAndDropSample\FileListManagerSample\bin\Debug\ErrorManager.dll.config
+C:\Users\OK\source\repos\Repository3\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.FileListManagerSampleForm.resources
+C:\Users\OK\source\repos\Repository3\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.Properties.Resources.resources
+C:\Users\OK\source\repos\Repository3\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\Repository3\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository3\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.csproj.CopyComplete
+C:\Users\OK\source\repos\Repository3\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.exe
+C:\Users\OK\source\repos\Repository3\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.pdb
+C:\Users\OK\source\repos\Repository3\DragAndDropSample\FileListManagerSample\obj\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\OK\source\repos\Repository3\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.csproj.ResolveComReference.cache

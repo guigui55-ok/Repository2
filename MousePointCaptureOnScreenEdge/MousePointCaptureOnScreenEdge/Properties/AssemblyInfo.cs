@@ -32,5 +32,22 @@ using System.Runtime.InteropServices;
 // すべての値を指定するか、次を使用してビルド番号とリビジョン番号を既定に設定できます
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.2.0.0")]
+[assembly: AssemblyFileVersion("1.2.0.0")]
+// 1.2.0.0 - 2021/10/02
+//MousePointCaptureOnScreenEdgeFormEvents Add Method private void ActivateForm()
+//MousePointCaptureOnScreenEdgeManager
+//Add Member public Form LastActivateForm;
+//Add Method public void SaveFormActivateEvent(object sender, EventArgs e)
+// _form がアクティブでないときに ～EdgeManager.LastActivateForm をアクティブにするように修正
+
+// 1.1.0.0
+// 2021/10/02
+// Class MousePointCaptureOnScreenEdgeFormEvents
+// メソッド追加
+// private void ActivateForm()
+// 実装変更・動作変更
+// モーダルウィンドウ表示時に、メインウィンドウをアクティブにすると子ウィンドウがモーダルウィンドウの動作ではなくなるので
+// モーダルウィンドウ表示時にはメインウィンドウをアクティブにしないように修正
+
+// 1.0.0.0

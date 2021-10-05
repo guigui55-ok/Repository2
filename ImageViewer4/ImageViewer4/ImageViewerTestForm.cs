@@ -33,9 +33,11 @@ namespace ImageViewer4
             }
         }
 
-        IViewImage viewImage;
-        IViewImageControl ViewImageControl;
+        IViewImage _viewImage;
+        IViewImageControl _viewImageControl;
+        IViewImageFrameControl _viewImageFrameControl;
         ReadFileByDragDrop readFileByDragDrop;
+        ViewImageFunction ViewImageFunction;
         public void TestViewImage()
         {
             try
@@ -58,16 +60,23 @@ namespace ImageViewer4
                 pictureBox1.Anchor = AnchorStyles.None;
 
                 // setPath
-                string dir = @"C:\Users\OK\source\repos\ImageViewer4\TestData\test_jpg";
+                string dir = @"C:\Users\OK\source\repos\Repository2\ImageViewer4\TestData\test_jpg";
                 string filename = "01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg";
                 string path = dir + "\\" + filename;
 
+                // 画像をコントロールするクラス
+                _viewImage = new ViewImage(_err);
+                _viewImageControl = new ViewImageControlPictureBox(_err, panel1, pictureBox1);
+                _viewImageFrameControl = new ViewImageFrameControlForm(_err, this);
+                ViewImageFunction = new ViewImageFunction(_err, _viewImage,_viewImageFrameControl, _viewImageControl);
+
                 // viewImageObject 画像をコントロールに表示する
-                viewImage = new ViewImage(_err);
-                viewImage.SetPath(path);
-                ViewImageControl = new ViewImageControlPictureBox(_err, panel1, pictureBox1);
+                //_viewImage = new ViewImage(_err);
+                _viewImage.SetPath(path);
+                //_viewImageControl = new ViewImageControlPictureBox(_err, panel1, pictureBox1);
                 // 画像を表示する
-                ViewImageControl.SetImageWithDispose(viewImage.GetImage());
+                _viewImageControl.SetImageWithDispose(_viewImage.GetImage());
+                ViewImageFunction.ViewImageDefault();
                 //ViewImageControl.SetImageNotDispose(viewImage.GetImage());
 
                 // PictureBox をドラッグする
@@ -90,6 +99,7 @@ namespace ImageViewer4
                 // Control をイベントに追加
                 Control[] controls = new Control[] { this, pictureBox1, panel1 };
                 readFileByDragDrop.AddMethodToEventHandler(controls);
+
             } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message,"Error");
@@ -110,9 +120,10 @@ namespace ImageViewer4
             try
             {
                 _err.AddLog(this, "ReadFileEvent");
-                viewImage.SetPath(readFileByDragDrop.Files.GetCurrentValue());
+                _viewImage.SetPath(readFileByDragDrop.Files.GetCurrentValue());
                 // 画像を表示する
-                ViewImageControl.SetImageWithDispose(viewImage.GetImage());
+                //_viewImageControl.SetImageWithDispose(_viewImage.GetImage());
+                ViewImageFunction.ViewImageDefault();
             }
             catch (Exception ex)
             {

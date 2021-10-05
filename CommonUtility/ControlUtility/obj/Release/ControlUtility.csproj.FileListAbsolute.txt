@@ -1,0 +1,7 @@
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtility\obj\Release\ControlUtility.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtility\bin\Release\ControlUtility.dll
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtility\bin\Release\ControlUtility.pdb
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtility\bin\Release\ErrorManager.dll
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtility\obj\Release\ControlUtility.csproj.CopyComplete
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtility\obj\Release\ControlUtility.dll
+C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtility\obj\Release\ControlUtility.pdb

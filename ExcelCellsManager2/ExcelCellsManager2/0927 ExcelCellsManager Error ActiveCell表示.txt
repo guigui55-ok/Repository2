@@ -1,0 +1,455 @@
+'ExcelCellsManager2.exe' (CLR v4.0.30319: DefaultDomain): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll' が読み込まれました。
+'ExcelCellsManager2.exe' (CLR v4.0.30319: DefaultDomain): 'C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\ExcelCellsManager2.exe' が読み込まれました。シンボルが読み込まれました。
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll' が読み込まれました。
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll' が読み込まれました。
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll' が読み込まれました。
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\ErrorManager.dll' が読み込まれました。シンボルが読み込まれました。
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\WorkbookList.dll' が読み込まれました。シンボルが読み込まれました。
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\ExcelManager.dll' が読み込まれました。シンボルが読み込まれました。
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll' が読み込まれました。
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll' が読み込まれました。
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll' が読み込まれました。
+CurrentThread = 1
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms.resources\v4.0_4.0.0.0_ja_b77a5c561934e089\System.Windows.Forms.resources.dll' が読み込まれました。モジュールがシンボルなしでビルドされました。
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManagerForm.ExcelCellsManagerForm Constracta BeginLogRecording
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar.Initialize
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar._statusLabel_VisibleChanged
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\iniManager2.dll' が読み込まれました。シンボルが読み込まれました。
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\MousePointCaptureForms.dll' が読み込まれました。
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\ProgressDialogManager.dll' が読み込まれました。
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\CommonUtilityForExcelManager.dll' が読み込まれました。シンボルが読み込まれました。
+AddLog:[NORMAL_] [LOG] [1]  MouseCaptureInScreenEdgeManager Constracta: new MouseCaptureInScreenEdgeFormEvents Form.Text=Excel Cells Manager2
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsObject.SetControlEvent
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsObject.SetControlEvent
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsObject.SetControlEvent
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\mscorlib.resources\v4.0_4.0.0.0_ja_b77a5c561934e089\mscorlib.resources.dll' が読み込まれました。モジュールがシンボルなしでビルドされました。
+例外がスローされました: 'System.InvalidCastException' (ExcelCellsManager2.exe の中)
+例外がスローされました: 'System.InvalidCastException' (ExcelCellsManager2.exe の中)
+例外がスローされました: 'System.InvalidCastException' (ExcelCellsManager2.exe の中)
+例外がスローされました: 'System.InvalidCastException' (ExcelCellsManager2.exe の中)
+例外がスローされました: 'System.InvalidCastException' (ExcelCellsManager2.exe の中)
+例外がスローされました: 'System.InvalidCastException' (ExcelCellsManager2.exe の中)
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsObject.SetControlEvent
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsObject.SetControlEvent
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsObject.SetControlEvent
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsObject.SetControlEvent
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsObject.SetControlEvent
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsObject.SetControlEvent
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsObject.SetControlEvent
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsObject.SetControlEvent
+AddLog:[NORMAL_] [LOG] [1]  IniManager.IniManager.SetPathAndCreateFileIfPathNotExists
+AddLog:[NORMAL_] [LOG] [1]  IniManager.IniManager.SetPath path=C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\settings.ini
+AddLog:[NORMAL_] [LOG] [1]  IniManager.IniReader.ReadSettingsFile
+AddLog:[NORMAL_] [LOG] [1]  IniManager.IniManager.SetSectionFromPath
+AddLog:[NORMAL_] [LOG] [1]  IniManager.IniReader.SetSectionListByAnalyze
+AddLog:[NORMAL_] [LOG] [1]    SetParameterListByAnalyze Success
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.Settings.ExcelCellsManagerSettingsValue.SettingsValueToThisMember
+AddLog:[NORMAL_] [LOG] [1]  SettingsValueToThisMember: Name=IsActivateWorkbookWindowAfterRegistAddress
+AddLog:[NORMAL_] [LOG] [1]  IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+AddLog:[NORMAL_] [LOG] [1]    section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=
+AddLog:[NORMAL_] [LOG] [1]    GetParameterValueFromLine: value=IsActivateWorkbookWindowAfterRegistAddress=True
+AddLog:[NORMAL_] [LOG] [1]  SettingsValueToThisMember: Name=IsOpenLastFileWhenRunApplication
+AddLog:[NORMAL_] [LOG] [1]  IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+AddLog:[NORMAL_] [LOG] [1]    section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=
+AddLog:[NORMAL_] [LOG] [1]    GetParameterValueFromLine: value=IsOpenLastFileWhenRunApplication=True
+AddLog:[NORMAL_] [LOG] [1]  SettingsValueToThisMember: Name=LastOpendFilePath
+AddLog:[NORMAL_] [LOG] [1]  IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+AddLog:[NORMAL_] [LOG] [1]    section=application ,parameter=LastOpendFilePath ,value=
+AddLog:[NORMAL_] [LOG] [1]    GetParameterValueFromLine: value=LastOpendFilePath=C:\Users\OK\Desktop\NewFile.tsv
+AddLog:[NORMAL_] [LOG] [1]  SettingsValueToThisMember: Name=IsActivateFormWhenMoveMouseScreenEdge
+AddLog:[NORMAL_] [LOG] [1]  IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+AddLog:[NORMAL_] [LOG] [1]    section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=
+AddLog:[NORMAL_] [LOG] [1]    GetParameterValueFromLine: value=IsActivateFormWhenMoveMouseScreenEdge=False
+AddLog:[NORMAL_] [LOG] [1]  SettingsValueToThisMember: Name=IsSaveColumnWidthOfDataList
+AddLog:[NORMAL_] [LOG] [1]  IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+AddLog:[NORMAL_] [LOG] [1]    section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=
+AddLog:[NORMAL_] [LOG] [1]    GetParameterValueFromLine: value=IsSaveColumnWidthOfDataList=True
+AddLog:[NORMAL_] [LOG] [1]  SettingsValueToThisMember: Name=ColumnWidthOfDataList
+AddLog:[NORMAL_] [LOG] [1]  IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+AddLog:[NORMAL_] [LOG] [1]    section=dataList ,parameter=ColumnWidthOfDataList ,value=
+AddLog:[NORMAL_] [LOG] [1]    GetParameterValueFromLine: value=ColumnWidthOfDataList=100,100,100,100,100,100
+AddLog:[NORMAL_] [LOG] [1]  SettingsValueToThisMember: Name=MouseCaptureSettingLeft
+AddLog:[NORMAL_] [LOG] [1]  IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+AddLog:[NORMAL_] [LOG] [1]    section=application ,parameter=MouseCaptureSettingLeft ,value=
+AddLog:[NORMAL_] [LOG] [1]    GetParameterValueFromLine: value=MouseCaptureSettingLeft=1,200,300,1
+AddLog:[NORMAL_] [LOG] [1]  SettingsValueToThisMember: Name=MouseCaptureSettingTop
+AddLog:[NORMAL_] [LOG] [1]  IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+AddLog:[NORMAL_] [LOG] [1]    section=application ,parameter=MouseCaptureSettingTop ,value=
+AddLog:[NORMAL_] [LOG] [1]    GetParameterValueFromLine: value=MouseCaptureSettingTop=1,200,300,1
+AddLog:[NORMAL_] [LOG] [1]  SettingsValueToThisMember: Name=MouseCaptureSettingRight
+AddLog:[NORMAL_] [LOG] [1]  IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+AddLog:[NORMAL_] [LOG] [1]    section=application ,parameter=MouseCaptureSettingRight ,value=
+AddLog:[NORMAL_] [LOG] [1]    GetParameterValueFromLine: value=MouseCaptureSettingRight=0,200,300,1
+AddLog:[NORMAL_] [LOG] [1]  SettingsValueToThisMember: Name=MouseCaptureSettingBottom
+AddLog:[NORMAL_] [LOG] [1]  IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+AddLog:[NORMAL_] [LOG] [1]    section=application ,parameter=MouseCaptureSettingBottom ,value=
+AddLog:[NORMAL_] [LOG] [1]    GetParameterValueFromLine: value=MouseCaptureSettingBottom=0,200,300,1
+AddLog:[NORMAL_] [LOG] [1]  SettingsValueToThisMember: Name=IsUpdateListWhenWorkbookOpendAndClosed
+AddLog:[NORMAL_] [LOG] [1]  IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+AddLog:[NORMAL_] [LOG] [1]    section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=
+AddLog:[NORMAL_] [LOG] [1]    GetParameterValueFromLine: value=IsUpdateListWhenWorkbookOpendAndClosed=True
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.Settings.ExcelCellsManagerSettingsValue.SettingsValueToThisMemberMain
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.String
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+AddLog:[NORMAL_] [LOG] [1]  SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ExcelCellsManagerMain.Initialize
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewUtility.Initialize
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewUtility.SetColumnWidth
+AddLog:[NORMAL_] [LOG] [1]  Augument settings is null.app Use Already Prepared SetttingsValueClassObject
+AddLog:[NORMAL_] [LOG] [1]  MousePointCapture.MousePointCaptureOnScreenEdgeManager.InitializeForms
+AddLog:[NORMAL_] [LOG] [1]  MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+AddLog:[NORMAL_] [LOG] [1]  MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+AddLog:[NORMAL_] [LOG] [1]  MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+AddLog:[NORMAL_] [LOG] [1]  MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ExcelCellsManagerMain.SetSettingValueToCaptureForm
+AddLog:[NORMAL_] [LOG] [1]  MouseCaptureSettingLeft = 200,300
+AddLog:[NORMAL_] [LOG] [1]  MouseCaptureSettingTop = 200,300
+AddLog:[NORMAL_] [LOG] [1]  MouseCaptureSettingRight = 200,300
+AddLog:[NORMAL_] [LOG] [1]  MouseCaptureSettingBottom = 200,300
+AddLog:[NORMAL_] [LOG] [1]  screenNumbers = 1,1,1,1
+AddLog:[NORMAL_] [LOG] [1]  MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+AddLog:[NORMAL_] [LOG] [1]  MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+AddLog:[NORMAL_] [LOG] [1]  MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+AddLog:[NORMAL_] [LOG] [1]  MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+AddLog:[NORMAL_] [LOG] [1]  MousePointCapture.MousePointCaptureOnScreenEdgeFormEvents.SetValidRangeValue
+AddLog:[NORMAL_] [LOG] [1]    [200 , 300] [200 , 300] [200 , 300] [200 , 200] 
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ExcelCellsManager.SettingsForm.EcmSettingsFormManager.PlaceControlSettingsListToForm
+AddLog:[NORMAL_] [LOG] [1]    Panel Height = 282
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ExcelCellsManagerMain.OpenFile : C:\Users\OK\Desktop\NewFile.tsv
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ExcelCellsManagerMain.ConformWhenDataEdited
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ExcelCellsManagerMain.ResetEdited
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManagerForm.DataList_Edited
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ExcelCellsManagerMain.InitializeMenuStrip
+AddLog:[NORMAL_] [LOG] [1]  CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+AddLog:[NORMAL_] [LOG] [1]  CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+AddLog:[NORMAL_] [LOG] [1]   Match:ファイル(&F)
+AddLog:[NORMAL_] [LOG] [1]  CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+AddLog:[NORMAL_] [LOG] [1]   Match:開く(&O)...
+AddLog:[NORMAL_] [LOG] [1]    AddEvent Click:ファイル(&F), 開く(&O)...
+AddLog:[NORMAL_] [LOG] [1]  CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+AddLog:[NORMAL_] [LOG] [1]  CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+AddLog:[NORMAL_] [LOG] [1]   Match:ファイル(&F)
+AddLog:[NORMAL_] [LOG] [1]  CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+AddLog:[NORMAL_] [LOG] [1]   Match:上書き保存(&S)
+AddLog:[NORMAL_] [LOG] [1]    AddEvent Click:ファイル(&F), 上書き保存(&S)
+AddLog:[NORMAL_] [LOG] [1]  CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+AddLog:[NORMAL_] [LOG] [1]  CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+AddLog:[NORMAL_] [LOG] [1]   Match:ファイル(&F)
+AddLog:[NORMAL_] [LOG] [1]  CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+AddLog:[NORMAL_] [LOG] [1]   Match:名前を付けて保存(&A)...
+AddLog:[NORMAL_] [LOG] [1]    AddEvent Click:ファイル(&F), 名前を付けて保存(&A)...
+AddLog:[NORMAL_] [LOG] [1]  CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+AddLog:[NORMAL_] [LOG] [1]  CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+AddLog:[NORMAL_] [LOG] [1]   Match:ファイル(&F)
+AddLog:[NORMAL_] [LOG] [1]  CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+AddLog:[NORMAL_] [LOG] [1]   Match:終了(&X)
+AddLog:[NORMAL_] [LOG] [1]    AddEvent Click:ファイル(&F), 終了(&X)
+AddLog:[NORMAL_] [LOG] [1]  CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+AddLog:[NORMAL_] [LOG] [1]  CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+AddLog:[NORMAL_] [LOG] [1]   Match:オプション(&O)
+AddLog:[NORMAL_] [LOG] [1]  CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+AddLog:[NORMAL_] [LOG] [1]   Match:設定(&S)
+AddLog:[NORMAL_] [LOG] [1]    AddEvent Click:オプション(&O), 設定(&S)
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+AddLog:[NORMAL_] [LOG] [1]  CurrentThread = 1
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelManager.UpdateOpendExcelApplication
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.GetProcessIdFromExcelApplicationHwnd
+AddLog:[NORMAL_] [LOG] [1]    Application.Visible=True
+AddLog:[NORMAL_] [LOG] [1]   pid=4512
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelManager.GetExcelApplicationFromProcess
+
+AddLog:[NORMAL_] [LOG] [1]    set newApps.IsGhost=false
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.SetApplicationFromFilePath
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelManager.IsExistsProcessId list.Count<1
+AddLog:[NORMAL_] [LOG] [1]   IsExistsProcessId=false ,pid=4512
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelManager.UpdateExcelApps
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelManager.GetExcelApplicationFromProcess
+
+AddLog:[NORMAL_] [LOG] [1]    set newApps.IsGhost=false
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.SetApplicationFromFilePath
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.ReSetFileListFromApplication
+AddLog:[NORMAL_] [LOG] [1]  ** Pid = 4512
+例外がスローされました: 'System.IO.IOException' (mscorlib.dll の中)
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.ReSetFileListFromApplication path=C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.SetWorkbookEvent
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.SetWorkbookEvent(string)
+AddLog:[NORMAL_] [LOG] [1]    IsSetEvent=false
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.SetWorkbookEvent : Microsoft Excel:A_PRG.xlsb
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.SetWorkbookEvent(string)
+AddLog:[WARNING] [LOG] [1]  FilePathList.Count < 1
+AddLog:[NORMAL_] [LOG] [1]    SetEvent
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.SetEventForApplication
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelWorkbookSyncer.SetEvent
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.SetActivateFlag
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.GetActiveWorkbookName
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.SetActivateFlag
+AddLog:[NORMAL_] [LOG] [1]    appsList.Add(newApps) 2
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelManager.IsExistsProcessId , true pid=4512
+AddLog:[NORMAL_] [LOG] [1]    IsExistsProcessId=true , pid=4512
+AddLog:[NORMAL_] [LOG] [1]    ExcelAppsList.Count=1
+AddLog:[NORMAL_] [LOG] [1]   IsUpdating,true=>false
+AddLog:[NORMAL_] [LOG] [1]  ExcelWorkbookList.ExcelWorkbookList.ExcelManger_UpdateWorkbookListAfterEvent
+AddLog:[NORMAL_] [LOG] [1]  ExcelWorkbookList.ExcelWorkbookList.SetWorkbookListFromExcelManager
+AddLog:[NORMAL_] [LOG] [1]    _excelManager.ExcelAppsList.Count=1
+AddLog:[NORMAL_] [LOG] [1]  ExcelWorkbookList.ExcelWorkbookList.GetListValueForExcelApps
+AddLog:[NORMAL_] [LOG] [1]    apps.IsGhost=false
+AddLog:[NORMAL_] [LOG] [1]    apps.ApplicationIsNull=False
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.GetWorkbookNameList.Count=1
+AddLog:[NORMAL_] [LOG] [1]  ExcelWorkbookList.WorkbookListCheckedListBox.SetWorkbookList
+AddLog:[NORMAL_] [LOG] [1]  ExcelWorkbookList.UpdateControlAsync.ExcuteUpdateControlBySubThread
+AddLog:[NORMAL_] [LOG] [1]  ExcelWorkbookList.UpdateControlAsync.UpdateControlBySubThreadMain
+AddLog:[NORMAL_] [LOG] [1]  InvokeRequired=false
+AddLog:[NORMAL_] [LOG] [1]  ExcelWorkbookList.WorkbookListCheckedListBox.AddItemToCheckdListBoxItems
+AddLog:[NORMAL_] [LOG] [1]  ExcelWorkbookList.WorkbookListCheckedListBox.ClearItems
+AddLog:[WARNING] [LOG] [1]   CheckedListBox.Items.Count < 1)
+AddLog:[NORMAL_] [LOG] [1]   CheckedListBox.Items.AddRange List.count=1
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.GetWorkbookNameList.Count=1
+AddLog:[NORMAL_] [LOG] [1]    GetWorkbookNameListAndGhostProcessNameList Success.
+AddLog:[NORMAL_] [LOG] [1]  UpdateList Success.
+AddLog:[NORMAL_] [LOG] [1]  ******************** Initialize End ********************
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar._statusLabel_VisibleChanged
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ExcelCellsManagerForm.ShowErrorMessageEvent
+panel.Size.Height = 352
+AddLog:[NORMAL_] [LOG] [1]  _statusStrip_Paint
+AddLog:[NORMAL_] [LOG] [1]  _statusStrip.Height = 22
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ExcelCellsManagerMain.SelectCells
+AddLog:[NORMAL_] [LOG] [1]  ExcelWorkbookList.WorkbookListCheckedListBox.GetValueList
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ExcelCellsManagerMainGetPidFromCheckdListValues
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ExcelCellsManagerMain.GetAppsWithOpenWorkbook
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelManager.GetDataFromAppsInfo
+AddLog:[NORMAL_] [LOG] [1]  _statusStrip_Paint
+Log.LogManagerWriteLogWhenIndexIsLimit
+Log.LogManager.Add IsWritingWhenIndexLimit=true
+Log.LogManager.Add IsWritingWhenIndexLimit=true
+** ref FilePath Change pat=C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\Debug.Log
+Log.LogManager.RemoveAll
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\Microsoft.CSharp\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.CSharp.dll' が読み込まれました。
+AddLog:[NORMAL_] [LOG] [1]  _statusStrip_Paint
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.SelectAddress : A_PRG.xlsb
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Dynamic\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Dynamic.dll' が読み込まれました。
+'ExcelCellsManager2.exe' (CLR v4.0.30319: ExcelCellsManager2.exe): 'Anonymously Hosted DynamicMethods Assembly' が読み込まれました。
+例外がスローされました: 'System.Runtime.InteropServices.COMException' (System.Dynamic.dll の中)
+ExcelManagerConst.GetErrorMessageInExcelManager
+code=1 / lenth=2
+AddLog:[ALERT__] [EXP] [1]  ExcelUtility.ExcelApps.SelectAddress Failed(System.Runtime.InteropServices.COMException) , 
+呼び出し先が呼び出しを拒否しました。 (HRESULT からの例外:0x80010001 (RPC_E_CALL_REJECTED))
+   場所 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   場所 System.Dynamic.ComRuntimeHelpers.CheckIfMissingTypeInfoIsExpected(Int32 hresult, Boolean throwIfMissingExpectedTypeInfo)
+   場所 System.Dynamic.ComRuntimeHelpers.GetITypeInfoFromIDispatch(IDispatch dispatch, Boolean throwIfMissingExpectedTypeInfo)
+   場所 System.Dynamic.IDispatchComObject.EnsureScanDefinedMethods()
+   場所 System.Dynamic.IDispatchComObject.System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(Expression parameter)
+   場所 System.Dynamic.DynamicMetaObject.Create(Object value, Expression expression)
+   場所 System.Dynamic.DynamicMetaObjectBinder.Bind(Object[] args, ReadOnlyCollection`1 parameters, LabelTarget returnLabel)
+   場所 System.Runtime.CompilerServices.CallSiteBinder.BindCore[T](CallSite`1 site, Object[] args)
+   場所 System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   場所 CallSite.Target(Closure , CallSite , Object )
+   場所 System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   場所 ExcelUtility.ExcelApps.SelectAddress(String WorkbookName, String worksheetName, String address)
+messageToUser = アクセスが拒否されました。Excelの設定ダイアログなどが開いている可能性があります。
+System.Runtime.InteropServices.COMException (0x80010001): 呼び出し先が呼び出しを拒否しました。 (HRESULT からの例外:0x80010001 (RPC_E_CALL_REJECTED))
+   場所 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   場所 System.Dynamic.ComRuntimeHelpers.CheckIfMissingTypeInfoIsExpected(Int32 hresult, Boolean throwIfMissingExpectedTypeInfo)
+   場所 System.Dynamic.ComRuntimeHelpers.GetITypeInfoFromIDispatch(IDispatch dispatch, Boolean throwIfMissingExpectedTypeInfo)
+   場所 System.Dynamic.IDispatchComObject.EnsureScanDefinedMethods()
+   場所 System.Dynamic.IDispatchComObject.System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(Expression parameter)
+   場所 System.Dynamic.DynamicMetaObject.Create(Object value, Expression expression)
+   場所 System.Dynamic.DynamicMetaObjectBinder.Bind(Object[] args, ReadOnlyCollection`1 parameters, LabelTarget returnLabel)
+   場所 System.Runtime.CompilerServices.CallSiteBinder.BindCore[T](CallSite`1 site, Object[] args)
+   場所 System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   場所 CallSite.Target(Closure , CallSite , Object )
+   場所 System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   場所 ExcelUtility.ExcelApps.SelectAddress(String WorkbookName, String worksheetName, String address)
+   場所 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   場所 System.Dynamic.ComRuntimeHelpers.CheckIfMissingTypeInfoIsExpected(Int32 hresult, Boolean throwIfMissingExpectedTypeInfo)
+   場所 System.Dynamic.ComRuntimeHelpers.GetITypeInfoFromIDispatch(IDispatch dispatch, Boolean throwIfMissingExpectedTypeInfo)
+   場所 System.Dynamic.IDispatchComObject.EnsureScanDefinedMethods()
+   場所 System.Dynamic.IDispatchComObject.System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(Expression parameter)
+   場所 System.Dynamic.DynamicMetaObject.Create(Object value, Expression expression)
+   場所 System.Dynamic.DynamicMetaObjectBinder.Bind(Object[] args, ReadOnlyCollection`1 parameters, LabelTarget returnLabel)
+   場所 System.Runtime.CompilerServices.CallSiteBinder.BindCore[T](CallSite`1 site, Object[] args)
+   場所 System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   場所 CallSite.Target(Closure , CallSite , Object )
+   場・・System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   場所 ExcelUtility.ExcelApps.SelectAddress(String WorkbookName, String worksheetName, String address)
+------
+**** AddException : ExcelUtility.ExcelApps.SelectAddress Failed(System.Runtime.InteropServices.COMException)
+0 / アクセスが拒否されました。Excelの設定ダイアログなどが開いている可能性があります。
+呼び出し先が呼び出しを拒否しました。 (HRESULT からの例外:0x80010001 (RPC_E_CALL_REJECTED))
+   場所 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   場所 System.Dynamic.ComRuntimeHelpers.CheckIfMissingTypeInfoIsExpected(Int32 hresult, Boolean throwIfMissingExpectedTypeInfo)
+   場所 System.Dynamic.ComRuntimeHelpers.GetITypeInfoFromIDispatch(IDispatch dispatch, Boolean throwIfMissingExpectedTypeInfo)
+   場所 System.Dynamic.IDispatchComObject.EnsureScanDefinedMethods()
+   場所 System.Dynamic.IDispatchComObject.System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(Expression parameter)
+   場所 System.Dynamic.DynamicMetaObject.Create(Object value, Expression expression)
+   場所 System.Dynamic.DynamicMetaObjectBinder.Bind(Object[] args, ReadOnlyCollection`1 parameters, LabelTarget returnLabel)
+   場所 System.Runtime.CompilerServices.CallSiteBinder.BindCore[T](CallSite`1 site, Object[] args)
+   場所 System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   場所 CallSite.Target(Closure , CallSite , Object )
+   場・・System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   場所 ExcelUtility.ExcelApps.SelectAddress(String WorkbookName, String worksheetName, String address)
+------
+AddLog:[ALERT__] [LOG] [1]  ExcelApps.SelectAddress Failed
+AddLog:[NORMAL_] [LOG] [1]  ErrorManager.ErrorManager.ClearAllDebugDataList : ClearDataCount=1
+AddLog:[NORMAL_] [LOG] [1]  ExcelCellsManager.ExcelCellsManagerMain.ActivateWorkbookWindowActivate
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelManagerWindowActivate
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelManager.GetActiveExcelApps
+AddLog:[NORMAL_] [LOG] [1]  WakeupWindow
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.GetActiveWorkbookName
+AddLog:[NORMAL_] [LOG] [1]  _statusStrip_Paint
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.ActivateWorkbook
+例外がスローされました: 'System.Runtime.InteropServices.COMException' (ExcelManager.dll の中)
+AddLog:[ALERT__] [EXP] [1]  ExcelUtility.ExcelApps.ActivateWrokbook workBookName , 
+HRESULT からの例外:0x800AC472
+   場所 Microsoft.Office.Interop.Excel._Workbook.Activate()
+   場所 ExcelUtility.ExcelApps.ActivateWorkbook(String workBookName)
+System.Runtime.InteropServices.COMException (0x800AC472): HRESULT からの例外:0x800AC472
+   場所 Microsoft.Office.Interop.Excel._Workbook.Activate()
+   場所 ExcelUtility.ExcelApps.ActivateWorkbook(String workBookName)
+   場所 Microsoft.Office.Interop.Excel._Workbook.Activate()
+   場所 ExcelUtility.ExcelApps.ActivateWorkbook(String workBookName)
+------
+**** AddException : ExcelUtility.ExcelApps.ActivateWrokbook workBookName
+0 / 
+HRESULT からの例外:0x800AC472
+   場所 Microsoft.Office.Interop.Excel._Workbook.Activate()
+   場所 ExcelUtility.ExcelApps.ActivateWorkbook(String workBookName)
+------
+例外がスローされました: 'System.Exception' (ExcelManager.dll の中)
+AddLog:[ALERT__] [EXP] [1]  ExcelUtility.ExcelManager.WindowActivate , 
+apps.ActivateWorkbook Failed
+   場所 ExcelUtility.ExcelManager.WindowActivate()
+System.Exception: apps.ActivateWorkbook Failed
+   場所 ExcelUtility.ExcelManager.WindowActivate()
+   場所 ExcelUtility.ExcelManager.WindowActivate()
+------
+**** AddException : ExcelUtility.ExcelManager.WindowActivate
+0 / 
+apps.ActivateWorkbook Failed
+   場所 ExcelUtility.ExcelManager.WindowActivate()
+------
+AddLog:[ALERT__] [LOG] [1]    ExcelManager.WindowActivate failed
+AddLog:[CAUTION] [LOG] [1]  ReleaseErrorState : count=2
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.GetActiveWorkbookName
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.GetActiveSheetName
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.GetActiveSheetName : sheetName=アイデア
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.GetActiveCellsAddress
+AddLog:[NORMAL_] [LOG] [1]  * GetActivateCell : A_PRG.xlsb > アイデア > $E$320
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelManagerWindowActivate
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelManager.GetActiveExcelApps
+AddLog:[NORMAL_] [LOG] [1]  WakeupWindow
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.GetActiveWorkbookName
+AddLog:[NORMAL_] [LOG] [1]  ExcelUtility.ExcelApps.ActivateWorkbook
+例外がスローされました: 'System.Runtime.InteropServices.COMException' (ExcelManager.dll の中)
+AddLog:[ALERT__] [EXP] [1]  ExcelUtility.ExcelApps.ActivateWrokbook workBookName , 
+HRESULT からの例外:0x800AC472
+   場所 Microsoft.Office.Interop.Excel._Workbook.Activate()
+   場所 ExcelUtility.ExcelApps.ActivateWorkbook(String workBookName)
+System.Runtime.InteropServices.COMException (0x800AC472): HRESULT からの例外:0x800AC472
+   場所 Microsoft.Office.Interop.Excel._Workbook.Activate()
+   場所 ExcelUtility.ExcelApps.ActivateWorkbook(String workBookName)
+   場所 Microsoft.Office.Interop.Excel._Workbook.Activate()
+   場所 ExcelUtility.ExcelApps.ActivateWorkbook(String workBookName)
+------
+**** AddException : ExcelUtility.ExcelApps.ActivateWrokbook workBookName
+0 / 
+HRESULT からの例外:0x800AC472
+   場所 Microsoft.Office.Interop.Excel._Workbook.Activate()
+   場所 ExcelUtility.ExcelApps.ActivateWorkbook(String workBookName)
+------
+例外がスローされました: 'System.Exception' (ExcelManager.dll の中)
+AddLog:[ALERT__] [EXP] [1]  ExcelUtility.ExcelManager.WindowActivate , 
+apps.ActivateWorkbook Failed
+   場所 ExcelUtility.ExcelManager.WindowActivate()
+System.Exception: apps.ActivateWorkbook Failed
+   場所 ExcelUtility.ExcelManager.WindowActivate()
+   場所 ExcelUtility.ExcelManager.WindowActivate()
+------
+**** AddException : ExcelUtility.ExcelManager.WindowActivate
+0 / 
+apps.ActivateWorkbook Failed
+   場所 ExcelUtility.ExcelManager.WindowActivate()
+------
+例外がスローされました: 'System.Exception' (ExcelManager.dll の中)
+AddLog:[ALERT__] [EXP] [1]  ExcelUtility.ExcelManager.GetActivateCell , 
+WindowActivate Failed
+   場所 ExcelUtility.ExcelManager.GetActivateCell()
+System.Exception: WindowActivate Failed
+   場所 ExcelUtility.ExcelManager.GetActivateCell()
+   場所 ExcelUtility.ExcelManager.GetActivateCell()
+------
+**** AddException : ExcelUtility.ExcelManager.GetActivateCell
+0 / 
+WindowActivate Failed
+   場所 ExcelUtility.ExcelManager.GetActivateCell()
+------
+AddLog:[NORMAL_] [LOG] [1]  ErrorManager.ErrorManager.ClearAllDebugDataList : ClearDataCount=5
+AddLog:[NORMAL_] [LOG] [1]  _statusStrip_Paint
+AddLog:[NORMAL_] [LOG] [3]  ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $E$319
+AddLog:[NORMAL_] [LOG] [3]  ExcelUtility.ExcelApps.SetActivateFlag
+AddLog:[NORMAL_] [LOG] [3]  ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+AddLog:[NORMAL_] [LOG] [3]   A_PRG.xlsb > アイデア > E319
+AddLog:[NORMAL_] [LOG] [3]  ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $E$320:$E$324
+AddLog:[NORMAL_] [LOG] [3]  ExcelUtility.ExcelApps.SetActivateFlag
+AddLog:[NORMAL_] [LOG] [3]  ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+AddLog:[NORMAL_] [LOG] [3]   A_PRG.xlsb > アイデア > E320:E324
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $E$321:$E$325
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.SetActivateFlag
+AddLog:[NORMAL_] [LOG] [5]  ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+AddLog:[NORMAL_] [LOG] [5]   A_PRG.xlsb > アイデア > E321:E325
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $E$320
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.SetActivateFlag
+AddLog:[NORMAL_] [LOG] [5]  ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+AddLog:[NORMAL_] [LOG] [5]   A_PRG.xlsb > アイデア > E320
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $E$321
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.SetActivateFlag
+AddLog:[NORMAL_] [LOG] [5]  ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+AddLog:[NORMAL_] [LOG] [5]   A_PRG.xlsb > アイデア > E321
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $E$325
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.SetActivateFlag
+AddLog:[NORMAL_] [LOG] [5]  ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+AddLog:[NORMAL_] [LOG] [5]   A_PRG.xlsb > アイデア > E325
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $E$321
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.SetActivateFlag
+AddLog:[NORMAL_] [LOG] [5]  ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+AddLog:[NORMAL_] [LOG] [5]   A_PRG.xlsb > アイデア > E321
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $E$320
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.SetActivateFlag
+AddLog:[NORMAL_] [LOG] [5]  ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+AddLog:[NORMAL_] [LOG] [5]   A_PRG.xlsb > アイデア > E320
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $E$325
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.SetActivateFlag
+AddLog:[NORMAL_] [LOG] [5]  ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+AddLog:[NORMAL_] [LOG] [5]   A_PRG.xlsb > アイデア > E325
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $E$319
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.SetActivateFlag
+AddLog:[NORMAL_] [LOG] [5]  ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+AddLog:[NORMAL_] [LOG] [5]   A_PRG.xlsb > アイデア > E319
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $E$321
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.SetActivateFlag
+AddLog:[NORMAL_] [LOG] [5]  ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+AddLog:[NORMAL_] [LOG] [5]   A_PRG.xlsb > アイデア > E321
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $E$325
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.SetActivateFlag
+AddLog:[NORMAL_] [LOG] [5]  ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+AddLog:[NORMAL_] [LOG] [5]   A_PRG.xlsb > アイデア > E325
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $E$326
+AddLog:[NORMAL_] [LOG] [5]  ExcelUtility.ExcelApps.SetActivateFlag
+AddLog:[NORMAL_] [LOG] [5]  ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+AddLog:[NORMAL_] [LOG] [5]   A_PRG.xlsb > アイデア > E326
+AddLog:[NORMAL_] [LOG] [3]  ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $E$327
+AddLog:[NORMAL_] [LOG] [3]  ExcelUtility.ExcelApps.SetActivateFlag
+AddLog:[NORMAL_] [LOG] [3]  ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+AddLog:[NORMAL_] [LOG] [3]   A_PRG.xlsb > アイデア > E327
+AddLog:[NORMAL_] [LOG] [3]  ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : A_PRG.xlsb > アイデア > $E$326
+AddLog:[NORMAL_] [LOG] [3]  ExcelUtility.ExcelApps.SetActivateFlag
+AddLog:[NORMAL_] [LOG] [3]  ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+AddLog:[NORMAL_] [LOG] [3]   A_PRG.xlsb > アイデア > E326
