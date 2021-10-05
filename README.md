@@ -6,8 +6,9 @@
 エクセルの任意のセルの位置(アドレス)を登録し、登録した位置を表示するアプリケーションです。  
 ※プロジェクト： ExcelCellsManager2.sln > ExcelCellsManager2.csproj   
 
-### BinayPath  
-https://github.com/guigui55-ok/Repository2_Binary/ExcelCellsManager2_3.5.zip  
+### BinayPath
+https://github.com/guigui55-ok/Repository2_Binary  
+FileName : ExcelCellsManager2_3.5.zip  
 
 #### 主な機能
 
@@ -106,7 +107,8 @@ ExcelCellsMangerTest のコード分割のため後発的に作成しました。
 (作成中)
 
 ### BinayPath  
-https://github.com/guigui55-ok/Repository2_Binary/ImageViewer4_0.2.zip 
+https://github.com/guigui55-ok/Repository2_Binary  
+FileName : ImageViewer4_0.2.zip 
 
 ### 作成経緯  
 Windows フォトの動作が重いときがあり、軽量なビューワが欲しいと思ったためです。
