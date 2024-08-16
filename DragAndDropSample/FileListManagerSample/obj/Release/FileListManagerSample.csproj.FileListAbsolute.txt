@@ -29,3 +29,4 @@ C:\Users\OK\source\repos\Repository2\DragAndDropSample\FileListManagerSample\obj
 C:\Users\OK\source\repos\Repository2\DragAndDropSample\FileListManagerSample\obj\Release\FileListManagerSample.csproj.CopyComplete
 C:\Users\OK\source\repos\Repository2\DragAndDropSample\FileListManagerSample\obj\Release\FileListManagerSample.exe
 C:\Users\OK\source\repos\Repository2\DragAndDropSample\FileListManagerSample\obj\Release\FileListManagerSample.pdb
+C:\Users\OK\source\repos\Repository2\DragAndDropSample\FileListManagerSample\obj\Release\FileListManagerSample.csprojAssemblyReference.cache

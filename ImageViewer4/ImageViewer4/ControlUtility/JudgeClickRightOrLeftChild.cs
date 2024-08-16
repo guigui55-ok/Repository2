@@ -71,14 +71,14 @@ namespace ControlUtility
                 Point po = control.PointToClient(Cursor.Position);
                 if (po.X > (control.Width / 2))
                 {
-                    _err.AddLog(this, " ClickRight");
+                    _err.AddLog(this, "ClickRight");
                     if (ClickRight != null) { ClickRight.Invoke(sender, e); }
                     return 1;
                 }
                 else
                 {
-                    _err.AddLog(this, " ClickLeft");
-                    if (ClickRight != null) { ClickRight.Invoke(sender, e); }
+                    _err.AddLog(this, "ClickLeft");
+                    if (ClickLeft != null) { ClickLeft.Invoke(sender, e); }
                     return 2;
                 }
                 // update flag

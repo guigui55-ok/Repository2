@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ErrorUtility;
+using System;
 
 namespace ErrorManagerTest
 {
@@ -13,7 +14,7 @@ namespace ErrorManagerTest
             //string LogPath = folderPath + logFileName;
 
             //ErrorManager.ErrorManager error = new ErrorManager.ErrorManager(1);
-            ErrorManager.ErrorManager error = new ErrorManager.ErrorManager(1,folderPath, errorLogFileName,logFileName);
+            ErrorManager error = new ErrorManager(1,folderPath, errorLogFileName,logFileName);
 
             error.AddException(new Exception("TestException"), "TestString");
 

@@ -15,10 +15,12 @@ namespace ImageViewer4
     public partial class ImageViewerTestForm : Form
     {
         protected ErrorManager.ErrorManager _err;
-        public ImageViewerTestForm()
+        private ImageViewerArgments args;
+        public ImageViewerTestForm(string[] args)
         {
             InitializeComponent();
             _err = new ErrorManager.ErrorManager(1);
+            this.args = new ImageViewerArgments(_err,args);
         }
 
         private void ImageViewerTestForm_Load(object sender, EventArgs e)
@@ -63,6 +65,10 @@ namespace ImageViewer4
                 string dir = @"C:\Users\OK\source\repos\Repository2\ImageViewer4\TestData\test_jpg";
                 string filename = "01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg";
                 string path = dir + "\\" + filename;
+
+                // args
+                string argsPath = this.args.Path;
+                if ((argsPath != "") && (argsPath != null)) { path = argsPath; }
 
                 // 画像をコントロールするクラス
                 _viewImage = new ViewImage(_err);
@@ -112,7 +118,7 @@ namespace ImageViewer4
         }
         public void PictureBox_ClickLeftEvent(object sender,EventArgs e)
         {
-            readFileByDragDrop.FileListManager.MovePreviousDirectory();
+            readFileByDragDrop.FileListManager.MoveProviousFileWhenFirstFilePreviousDirectory();
             ReadFileEvent(null, EventArgs.Empty);
         }
         public void ReadFileEvent(object sender, EventArgs e)

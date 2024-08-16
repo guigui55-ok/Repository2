@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorManager", "ErrorManage
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorManagerTest", "ErrorManagerTest\ErrorManagerTest.csproj", "{93DD5A19-BF96-48EC-96BC-3431D3CBD9F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorManagerForFormSample", "ErrorManagerForFormSample\ErrorManagerForFormSample.csproj", "{4CB6D9FE-FFA8-48E7-B0FA-8097F81C586A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{93DD5A19-BF96-48EC-96BC-3431D3CBD9F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93DD5A19-BF96-48EC-96BC-3431D3CBD9F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93DD5A19-BF96-48EC-96BC-3431D3CBD9F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CB6D9FE-FFA8-48E7-B0FA-8097F81C586A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CB6D9FE-FFA8-48E7-B0FA-8097F81C586A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CB6D9FE-FFA8-48E7-B0FA-8097F81C586A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CB6D9FE-FFA8-48E7-B0FA-8097F81C586A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

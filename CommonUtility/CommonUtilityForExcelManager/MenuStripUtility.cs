@@ -1,13 +1,14 @@
-﻿using System;
+﻿using ErrorUtility;
+using System;
 using System.Windows.Forms;
 
 namespace CommonUtility.ControlUtility
 {
     public class MenuStripUtility
     {
-        ErrorManager.ErrorManager _err;
+        ErrorManager _err;
 
-        public MenuStripUtility(ErrorManager.ErrorManager err)
+        public MenuStripUtility(ErrorManager err)
         {
             _err = err;
         }

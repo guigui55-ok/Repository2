@@ -59,6 +59,7 @@
     <Compile Include="FileListManagerSampleForm.Designer.cs">
       <DependentUpon>FileListManagerSampleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FileListManager\FileListManagerConstants.cs" />
     <Compile Include="FileListManager\RandomListCreater.cs" />
     <Compile Include="FileListManager\FileListManager.cs" />
     <Compile Include="FileListManager\FileListRegister.cs" />

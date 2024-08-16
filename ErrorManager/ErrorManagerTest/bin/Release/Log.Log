@@ -1,0 +1,10 @@
+2021/10/10 8:33:00 [ALERT__][EXP][1] TestString
+2021/10/10 8:33:00 [ALERT__][EXP][1] TestString2
+2021/10/10 8:33:00 [ALERT__][EXP][1] TestString3[TestString3_UserMessage]
+2021/10/10 8:33:00 [NORMAL_][LOG][1] log value 1
+2021/10/10 8:33:00 [NORMAL_][LOG][1] log value 2
+2021/10/10 8:33:00 [ALERT__][EXP][1] log value 3[MessagetoUser]
+2021/10/10 8:33:00 [NORMAL_][LOG][1] ErrorUtility.ErrorManager.ClearAllDebugDataList : ClearDataCount=3
+2021/10/10 8:33:00 [NORMAL_][LOG][1] ErrorUtility.FileUtility.MakeNewFileNameNotLock : path=C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManagerTest\bin\Release\Error.Log
+2021/10/10 8:33:00 [NORMAL_][LOG][1]   MakeNewFileNameNotLock=Error.Log
+

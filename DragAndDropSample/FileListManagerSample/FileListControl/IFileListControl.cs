@@ -7,7 +7,7 @@ namespace CommonUtility.FileListUtility.FileListControl
     {
         IFiles Files { get; set; }
         void UpdateFileListAfterEvent(object sender, EventArgs e);
-
+        void SelectItem(object value);
         EventHandler SelectedItemEvent { get; set; }
     }
 }

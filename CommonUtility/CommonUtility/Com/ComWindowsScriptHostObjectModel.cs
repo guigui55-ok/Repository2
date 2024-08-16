@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using ErrorUtility;
+using System;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CommonUtility.ComUtility
 {
     public class ComWindowsScriptHostObjectModel
     {
-        protected ErrorManager.ErrorManager _err;
+        protected ErrorManager _err;
         protected dynamic _comInstance = null;   // COM インスタンス
-        public ComWindowsScriptHostObjectModel(ErrorManager.ErrorManager err)
+        public ComWindowsScriptHostObjectModel(ErrorManager err)
         {
             _err = err;
         }

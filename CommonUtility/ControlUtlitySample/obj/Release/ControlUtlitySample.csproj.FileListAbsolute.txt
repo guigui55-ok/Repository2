@@ -1,4 +1,3 @@
-C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtlitySample\obj\Release\ControlUtlitySample.csprojAssemblyReference.cache
 C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtlitySample\obj\Release\ControlUtlitySample.ControlUtilitySampleForm.resources
 C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtlitySample\obj\Release\ControlUtlitySample.ControlUtilitySampleModalForm.resources
 C:\Users\OK\source\repos\Repository2\CommonUtility\ControlUtlitySample\obj\Release\ControlUtlitySample.Properties.Resources.resources

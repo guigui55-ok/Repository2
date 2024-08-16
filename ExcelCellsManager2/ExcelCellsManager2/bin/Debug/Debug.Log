@@ -1,0 +1,1131 @@
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelCellsManagerForm.ExcelCellsManagerForm Constracta BeginLogRecording
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar.Initialize
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar._statusLabel_VisibleChanged
+2021/10/06 18:58:30 [NORMAL_][LOG][1] MouseCaptureInScreenEdgeManager Constracta: new MouseCaptureInScreenEdgeFormEvents Form.Text=Excel Cells Manager2
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.SetPathAndCreateFileIfPathNotExists
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.SetPath path=C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\settings.ini
+2021/10/06 18:58:30 [ALERT__][EXP][1] IniManager.IniManager.SetPath(
+Path Not Exists.
+Path = C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\settings.ini
+   場所 IniManager.IniManager.SetPath(String path))
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.ReadIni : SetPath Not Exitsts. Create New File. 
+IniPath = C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\settings.ini
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcuteWrite Success. iniPath=C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\settings.ini
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniReader.ReadSettingsFile
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.SetSectionFromPath
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniReader.SetSectionListByAnalyze
+2021/10/06 18:58:30 [NORMAL_][LOG][1] Readlines.Count < 1
+2021/10/06 18:58:30 [ALERT__][LOG][1] _appsSettings.Initialize
+2021/10/06 18:58:30 [CAUTION][LOG][1] ReleaseErrorState : count=1
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelCellsManager.Settings.ExcelCellsManagerSettingsValue.SettingsValueToThisMember
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=IsActivateWorkbookWindowAfterRegistAddress
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ErrorManager.ErrorManager.ClearAllDebugDataList : ClearDataCount=1
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniReader.IsExistsSection:IniSectionList.Count<1
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniReader.AddNewSection : section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress=
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=True
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=True
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=IsOpenLastFileWhenRunApplication
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=True
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=True
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=LastOpendFilePath
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=LastOpendFilePath ,value=
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=LastOpendFilePath ,value=*.tsv
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=LastOpendFilePath ,value=*.tsv
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=IsActivateFormWhenMoveMouseScreenEdge
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=False
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=False
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=IsSaveColumnWidthOfDataList
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniReader.AddNewSection : section=dataList ,parameter=IsSaveColumnWidthOfDataList=
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=True
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue: section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=True
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=ColumnWidthOfDataList
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=dataList ,parameter=ColumnWidthOfDataList ,value=
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=dataList ,parameter=ColumnWidthOfDataList ,value=100,100,100,100,100,100
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue: section=dataList ,parameter=ColumnWidthOfDataList ,value=100,100,100,100,100,100
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=MouseCaptureSettingLeft
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingLeft ,value=
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingLeft ,value=1,200,300,1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=MouseCaptureSettingLeft ,value=1,200,300,1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=MouseCaptureSettingTop
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingTop ,value=
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingTop ,value=1,200,300,1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=MouseCaptureSettingTop ,value=1,200,300,1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=MouseCaptureSettingRight
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingRight ,value=
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingRight ,value=0,200,300,1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=MouseCaptureSettingRight ,value=0,200,300,1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=MouseCaptureSettingBottom
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingBottom ,value=
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingBottom ,value=0,200,300,1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=MouseCaptureSettingBottom ,value=0,200,300,1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=IsUpdateListWhenWorkbookOpendAndClosed
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=
+2021/10/06 18:58:30 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=True
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=True
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelCellsManager.Settings.ExcelCellsManagerSettingsValue.SettingsValueToThisMemberMain
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.String
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2021/10/06 18:58:30 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.Initialize
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewUtility.Initialize
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewUtility.SetColumnWidth
+2021/10/06 18:58:30 [NORMAL_][LOG][1] Augument settings is null.app Use Already Prepared SetttingsValueClassObject
+2021/10/06 18:58:30 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.InitializeForms
+2021/10/06 18:58:30 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2021/10/06 18:58:30 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2021/10/06 18:58:30 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2021/10/06 18:58:30 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.SetSettingValueToCaptureForm
+2021/10/06 18:58:30 [NORMAL_][LOG][1] MouseCaptureSettingLeft = 200,300
+2021/10/06 18:58:30 [NORMAL_][LOG][1] MouseCaptureSettingTop = 200,300
+2021/10/06 18:58:30 [NORMAL_][LOG][1] MouseCaptureSettingRight = 200,300
+2021/10/06 18:58:30 [NORMAL_][LOG][1] MouseCaptureSettingBottom = 200,300
+2021/10/06 18:58:30 [NORMAL_][LOG][1] screenNumbers = 1,1,1,1
+2021/10/06 18:58:30 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2021/10/06 18:58:30 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2021/10/06 18:58:30 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2021/10/06 18:58:30 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2021/10/06 18:58:30 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeFormEvents.SetValidRangeValue
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   [200 , 300] [200 , 300] [200 , 300] [200 , 200] 
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManager.SettingsForm.EcmSettingsFormManager.PlaceControlSettingsListToForm
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   Panel Height = 282
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.InitializeMenuStrip
+2021/10/06 18:58:30 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+2021/10/06 18:58:30 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+2021/10/06 18:58:30 [NORMAL_][LOG][1]  Match:ファイル(&F)
+2021/10/06 18:58:30 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+2021/10/06 18:58:30 [NORMAL_][LOG][1]  Match:開く(&O)...
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   AddEvent Click:ファイル(&F), 開く(&O)...
+2021/10/06 18:58:30 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+2021/10/06 18:58:30 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+2021/10/06 18:58:30 [NORMAL_][LOG][1]  Match:ファイル(&F)
+2021/10/06 18:58:30 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+2021/10/06 18:58:30 [NORMAL_][LOG][1]  Match:上書き保存(&S)
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   AddEvent Click:ファイル(&F), 上書き保存(&S)
+2021/10/06 18:58:30 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+2021/10/06 18:58:30 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+2021/10/06 18:58:30 [NORMAL_][LOG][1]  Match:ファイル(&F)
+2021/10/06 18:58:30 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+2021/10/06 18:58:30 [NORMAL_][LOG][1]  Match:名前を付けて保存(&A)...
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   AddEvent Click:ファイル(&F), 名前を付けて保存(&A)...
+2021/10/06 18:58:30 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+2021/10/06 18:58:30 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+2021/10/06 18:58:30 [NORMAL_][LOG][1]  Match:ファイル(&F)
+2021/10/06 18:58:30 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+2021/10/06 18:58:30 [NORMAL_][LOG][1]  Match:終了(&X)
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   AddEvent Click:ファイル(&F), 終了(&X)
+2021/10/06 18:58:30 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+2021/10/06 18:58:30 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+2021/10/06 18:58:30 [NORMAL_][LOG][1]  Match:オプション(&O)
+2021/10/06 18:58:30 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+2021/10/06 18:58:30 [NORMAL_][LOG][1]  Match:設定(&S)
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   AddEvent Click:オプション(&O), 設定(&S)
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2021/10/06 18:58:30 [NORMAL_][LOG][1] CurrentThread = 1
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.UpdateOpendExcelApplication
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetProcessIdFromExcelApplicationHwnd
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   Application.Visible=True
+2021/10/06 18:58:30 [NORMAL_][LOG][1]  pid=8128
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetExcelApplicationFromProcess
+2021/10/06 18:58:30 [NORMAL_][LOG][1]   set newApps.IsGhost=false
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetApplicationFromFilePath
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.IsExistsProcessId list.Count<1
+2021/10/06 18:58:30 [NORMAL_][LOG][1]  IsExistsProcessId=false ,pid=8128
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.UpdateExcelApps
+2021/10/06 18:58:30 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetExcelApplicationFromProcess
+2021/10/06 18:58:31 [NORMAL_][LOG][1]   set newApps.IsGhost=false
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetApplicationFromFilePath
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.ReSetFileListFromApplication
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ** Pid = 8128
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.ReSetFileListFromApplication path=C:\ZMyFolder\newDoc\0ProgramingAll\アイデア\A_PRG.xlsb
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetWorkbookEvent
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetWorkbookEvent(string)
+2021/10/06 18:58:31 [NORMAL_][LOG][1]   IsSetEvent=false
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetWorkbookEvent : Microsoft Excel:A_PRG.xlsb
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.SetWorkbookEvent(string)
+2021/10/06 18:58:31 [WARNING][LOG][1] FilePathList.Count < 1
+2021/10/06 18:58:31 [NORMAL_][LOG][1]   SetEvent
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.SetEventForApplication
+
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.SetEventForApplication
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelUtility.ExcelWorkbookSyncer.SetEvent
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetActivateFlag
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetActiveWorkbookName
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetActivateFlag
+2021/10/06 18:58:31 [NORMAL_][LOG][1]   appsList.Add(newApps) 2
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.IsExistsProcessId , true pid=8128
+2021/10/06 18:58:31 [NORMAL_][LOG][1]   IsExistsProcessId=true , pid=8128
+2021/10/06 18:58:31 [NORMAL_][LOG][1]   ExcelAppsList.Count=1
+2021/10/06 18:58:31 [NORMAL_][LOG][1]  IsUpdating,true=>false
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelWorkbookList.ExcelWorkbookList.ExcelManger_UpdateWorkbookListAfterEvent
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelWorkbookList.ExcelWorkbookList.SetWorkbookListFromExcelManager
+2021/10/06 18:58:31 [NORMAL_][LOG][1]   _excelManager.ExcelAppsList.Count=1
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelWorkbookList.ExcelWorkbookList.GetListValueForExcelApps
+2021/10/06 18:58:31 [NORMAL_][LOG][1]   apps.IsGhost=false
+2021/10/06 18:58:31 [NORMAL_][LOG][1]   apps.ApplicationIsNull=False
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetWorkbookNameList.Count=1
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelWorkbookList.WorkbookListCheckedListBox.SetWorkbookList
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelWorkbookList.UpdateControlAsync.ExcuteUpdateControlBySubThread
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelWorkbookList.UpdateControlAsync.UpdateControlBySubThreadMain
+2021/10/06 18:58:31 [NORMAL_][LOG][1] InvokeRequired=false
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelWorkbookList.WorkbookListCheckedListBox.AddItemToCheckdListBoxItems
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelWorkbookList.WorkbookListCheckedListBox.ClearItems
+2021/10/06 18:58:31 [WARNING][LOG][1]  CheckedListBox.Items.Count < 1)
+2021/10/06 18:58:31 [NORMAL_][LOG][1]  CheckedListBox.Items.AddRange List.count=1
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetWorkbookNameList.Count=1
+2021/10/06 18:58:31 [NORMAL_][LOG][1]   GetWorkbookNameListAndGhostProcessNameList Success.
+2021/10/06 18:58:31 [NORMAL_][LOG][1] UpdateList Success.
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ******************** Initialize End ********************
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar._statusLabel_VisibleChanged
+2021/10/06 18:58:31 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerForm.ShowErrorMessageEvent
+2021/10/06 18:58:31 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2021/10/06 18:58:31 [NORMAL_][LOG][1] _statusStrip_Paint
+2021/10/06 18:58:31 [NORMAL_][LOG][1] _statusStrip.Height = 22
+2021/10/06 19:01:56 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2021/10/06 19:02:12 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2021/10/06 19:02:18 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2021/10/06 19:02:27 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2021/10/06 19:02:38 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2021/10/06 19:02:52 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2021/10/06 19:03:26 [NORMAL_][LOG][1] TopForm_MouseMoveEvent FormActivate : 200,300 / e = 275,38
+2021/10/06 19:03:26 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2021/10/06 19:03:26 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeFormEvents.ActivateForm LastActivateForm
+2021/10/06 19:03:48 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2021/10/06 19:03:55 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2021/10/06 19:04:16 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2021/10/06 19:04:16 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.ConformWhenDataEdited
+2021/10/06 19:04:16 [NORMAL_][LOG][1] ******************** ExcelCellsManagerForm_FormClosed Begin ********************
+2021/10/06 19:04:16 [NORMAL_][LOG][1] SettingsManager.SettingsManager.SetValue
+2021/10/06 19:04:16 [NORMAL_][LOG][1] settingName=application ,settingsName=LastOpendFilePath ,value=C:\Users\OK\Documents\*.tsv
+2021/10/06 19:04:16 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=True
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=True
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 19:04:16 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=True
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=True
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 19:04:16 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   section=application ,parameter=LastOpendFilePath ,value=C:\Users\OK\Documents\*.tsv
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=LastOpendFilePath ,value=C:\Users\OK\Documents\*.tsv
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 19:04:16 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=False
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=False
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 19:04:16 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=True
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue: section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=True
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 19:04:16 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   section=dataList ,parameter=ColumnWidthOfDataList ,value=100,100,100,100,100,100
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue: section=dataList ,parameter=ColumnWidthOfDataList ,value=100,100,100,100,100,100
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 19:04:16 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingLeft ,value=1,200,300,1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=MouseCaptureSettingLeft ,value=1,200,300,1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 19:04:16 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingTop ,value=1,200,300,1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=MouseCaptureSettingTop ,value=1,200,300,1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 19:04:16 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingRight ,value=0,200,300,1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=MouseCaptureSettingRight ,value=0,200,300,1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 19:04:16 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingBottom ,value=0,200,300,1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=MouseCaptureSettingBottom ,value=0,200,300,1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 19:04:16 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=True
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=True
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   SetParameterValue Success.
+2021/10/06 19:04:16 [NORMAL_][LOG][1] IniManager.IniManager.WriteAllData
+2021/10/06 19:04:16 [NORMAL_][LOG][1] IniManager.IniManager.ConvertSectionDataToListString
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   [application]
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   IsActivateWorkbookWindowAfterRegistAddress=True
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   IsOpenLastFileWhenRunApplication=True
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   LastOpendFilePath=C:\Users\OK\Documents\*.tsv
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   IsActivateFormWhenMoveMouseScreenEdge=False
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   MouseCaptureSettingLeft=1,200,300,1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   MouseCaptureSettingTop=1,200,300,1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   MouseCaptureSettingRight=0,200,300,1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   MouseCaptureSettingBottom=0,200,300,1
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   IsUpdateListWhenWorkbookOpendAndClosed=True
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   [dataList]
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   IsSaveColumnWidthOfDataList=True
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   ColumnWidthOfDataList=100,100,100,100,100,100
+2021/10/06 19:04:16 [NORMAL_][LOG][1] IniManager.IniWriter.WriteData
+2021/10/06 19:04:16 [NORMAL_][LOG][1] IniManager.IniReader.ReadSettingsFile
+2021/10/06 19:04:16 [NORMAL_][LOG][1] IniManager.IniWriter.SetValueForWrite
+2021/10/06 19:04:16 [NORMAL_][LOG][1]  lines count is 0.
+2021/10/06 19:04:16 [NORMAL_][LOG][1] ExcuteOverWrite Success. Path= C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\settings.ini
+2021/10/06 19:04:16 [NORMAL_][LOG][1] ExcelCellsManagerForm.ExcelCellsManagerForm_FormClosed Button Close
+2021/10/06 19:04:16 [NORMAL_][LOG][1] ErrorManagerUtility.FileUtility.MakeNewFileNameNotLock : path=C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\Error.Log
+2021/10/06 19:04:16 [NORMAL_][LOG][1]   MakeNewFileNameNotLock=Error.Log
+2021/10/06 19:04:16 [NORMAL_][LOG][1] ExcelCellsManagerForm_FormClosed.WriteErrorLog Success [C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\Error.Log]
+
+2022/05/13 6:36:41 [NORMAL_][LOG][1] ExcelCellsManagerForm.ExcelCellsManagerForm Constracta BeginLogRecording
+2022/05/13 6:36:41 [NORMAL_][LOG][1] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar.Initialize
+2022/05/13 6:36:41 [NORMAL_][LOG][1] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar._statusLabel_VisibleChanged
+2022/05/13 6:36:41 [NORMAL_][LOG][1] MouseCaptureInScreenEdgeManager Constracta: new MouseCaptureInScreenEdgeFormEvents Form.Text=Excel Cells Manager2
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:36:41 [NORMAL_][LOG][1] IniManager.IniManager.SetPathAndCreateFileIfPathNotExists
+2022/05/13 6:36:41 [NORMAL_][LOG][1] IniManager.IniManager.SetPath path=C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\settings.ini
+2022/05/13 6:36:41 [NORMAL_][LOG][1] IniManager.IniReader.ReadSettingsFile
+2022/05/13 6:36:41 [NORMAL_][LOG][1] IniManager.IniManager.SetSectionFromPath
+2022/05/13 6:36:41 [NORMAL_][LOG][1] IniManager.IniReader.SetSectionListByAnalyze
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   SetParameterListByAnalyze Success
+2022/05/13 6:36:41 [NORMAL_][LOG][1] ExcelCellsManager.Settings.ExcelCellsManagerSettingsValue.SettingsValueToThisMember
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=IsActivateWorkbookWindowAfterRegistAddress
+2022/05/13 6:36:41 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=IsActivateWorkbookWindowAfterRegistAddress=True
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=IsOpenLastFileWhenRunApplication
+2022/05/13 6:36:41 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=IsOpenLastFileWhenRunApplication=True
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=LastOpendFilePath
+2022/05/13 6:36:41 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   section=application ,parameter=LastOpendFilePath ,value=
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=LastOpendFilePath=C:\Users\OK\Documents\*.tsv
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=IsActivateFormWhenMoveMouseScreenEdge
+2022/05/13 6:36:41 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=IsActivateFormWhenMoveMouseScreenEdge=False
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=IsSaveColumnWidthOfDataList
+2022/05/13 6:36:41 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=IsSaveColumnWidthOfDataList=True
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=ColumnWidthOfDataList
+2022/05/13 6:36:41 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   section=dataList ,parameter=ColumnWidthOfDataList ,value=
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=ColumnWidthOfDataList=100,100,100,100,100,100
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=MouseCaptureSettingLeft
+2022/05/13 6:36:41 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingLeft ,value=
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=MouseCaptureSettingLeft=1,200,300,1
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=MouseCaptureSettingTop
+2022/05/13 6:36:41 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingTop ,value=
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=MouseCaptureSettingTop=1,200,300,1
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=MouseCaptureSettingRight
+2022/05/13 6:36:41 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingRight ,value=
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=MouseCaptureSettingRight=0,200,300,1
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=MouseCaptureSettingBottom
+2022/05/13 6:36:41 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingBottom ,value=
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=MouseCaptureSettingBottom=0,200,300,1
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=IsUpdateListWhenWorkbookOpendAndClosed
+2022/05/13 6:36:41 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=IsUpdateListWhenWorkbookOpendAndClosed=True
+2022/05/13 6:36:41 [NORMAL_][LOG][1] ExcelCellsManager.Settings.ExcelCellsManagerSettingsValue.SettingsValueToThisMemberMain
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.String
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2022/05/13 6:36:41 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2022/05/13 6:36:41 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.Initialize
+2022/05/13 6:36:41 [NORMAL_][LOG][1] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewUtility.Initialize
+2022/05/13 6:36:41 [NORMAL_][LOG][1] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewUtility.SetColumnWidth
+2022/05/13 6:36:41 [NORMAL_][LOG][1] Augument settings is null.app Use Already Prepared SetttingsValueClassObject
+2022/05/13 6:36:41 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.InitializeForms
+2022/05/13 6:36:41 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2022/05/13 6:36:41 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2022/05/13 6:36:41 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2022/05/13 6:36:41 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2022/05/13 6:36:41 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.SetSettingValueToCaptureForm
+2022/05/13 6:36:41 [NORMAL_][LOG][1] MouseCaptureSettingLeft = 200,300
+2022/05/13 6:36:41 [NORMAL_][LOG][1] MouseCaptureSettingTop = 200,300
+2022/05/13 6:36:41 [NORMAL_][LOG][1] MouseCaptureSettingRight = 200,300
+2022/05/13 6:36:41 [NORMAL_][LOG][1] MouseCaptureSettingBottom = 200,300
+2022/05/13 6:36:41 [NORMAL_][LOG][1] screenNumbers = 1,1,1,1
+2022/05/13 6:36:41 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2022/05/13 6:36:41 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2022/05/13 6:36:41 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2022/05/13 6:36:41 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2022/05/13 6:36:41 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeFormEvents.SetValidRangeValue
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   [200 , 300] [200 , 300] [200 , 300] [200 , 200] 
+2022/05/13 6:36:41 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManager.SettingsForm.EcmSettingsFormManager.PlaceControlSettingsListToForm
+2022/05/13 6:36:41 [NORMAL_][LOG][1]   Panel Height = 282
+2022/05/13 6:36:41 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.OpenFile : C:\Users\OK\Documents\*.tsv
+2022/05/13 6:36:41 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.ConformWhenDataEdited
+2022/05/13 6:36:42 [ALERT__][EXP][1] CommonUtility.FileIO.ReadFile : C:\Users\OK\Documents\*.tsv(
+FilePath Is Not Exists [C:\Users\OK\Documents\*.tsv]
+   場所 CommonUtility.FileIO.ReadFile(String filePath))
+2022/05/13 6:36:42 [ALERT__][LOG][1]  OpenedFile.GetListByOpenFile Failed: path=C:\Users\OK\Documents\*.tsv
+2022/05/13 6:36:42 [ALERT__][EXP][1] ExcelCellsManager.ExcelCellsManagerMain.OpenFile[ファイルオープンエラー](
+ExcelCellsManager.ExcelCellsManagerMain.OpenFile : File Open Error : path=C:\Users\OK\Documents\*.tsv
+   場所 ExcelCellsManager.ExcelCellsManagerMain.OpenFile(String filePath, Boolean showMsgBox) 場所 C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\ExcelCellsManager\ExcelCellsManagerMain.cs:行 1372)
+2022/05/13 6:36:42 [CAUTION][LOG][1] ReleaseErrorState : count=2
+2022/05/13 6:36:42 [CAUTION][LOG][1] ReleaseErrorState : count=0
+2022/05/13 6:36:42 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.InitializeMenuStrip
+2022/05/13 6:36:42 [CAUTION][LOG][1] ReleaseErrorState : count=0
+2022/05/13 6:36:42 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+2022/05/13 6:36:42 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+2022/05/13 6:36:42 [NORMAL_][LOG][1]  Match:ファイル(&F)
+2022/05/13 6:36:42 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+2022/05/13 6:36:42 [NORMAL_][LOG][1]  Match:開く(&O)...
+2022/05/13 6:36:42 [NORMAL_][LOG][1]   AddEvent Click:ファイル(&F), 開く(&O)...
+2022/05/13 6:36:42 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+2022/05/13 6:36:42 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+2022/05/13 6:36:42 [NORMAL_][LOG][1]  Match:ファイル(&F)
+2022/05/13 6:36:42 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+2022/05/13 6:36:42 [NORMAL_][LOG][1]  Match:上書き保存(&S)
+2022/05/13 6:36:42 [NORMAL_][LOG][1]   AddEvent Click:ファイル(&F), 上書き保存(&S)
+2022/05/13 6:36:42 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+2022/05/13 6:36:42 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+2022/05/13 6:36:42 [NORMAL_][LOG][1]  Match:ファイル(&F)
+2022/05/13 6:36:42 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+2022/05/13 6:36:42 [NORMAL_][LOG][1]  Match:名前を付けて保存(&A)...
+2022/05/13 6:36:42 [NORMAL_][LOG][1]   AddEvent Click:ファイル(&F), 名前を付けて保存(&A)...
+2022/05/13 6:36:42 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+2022/05/13 6:36:42 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+2022/05/13 6:36:42 [NORMAL_][LOG][1]  Match:ファイル(&F)
+2022/05/13 6:36:42 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+2022/05/13 6:36:42 [NORMAL_][LOG][1]  Match:終了(&X)
+2022/05/13 6:36:42 [NORMAL_][LOG][1]   AddEvent Click:ファイル(&F), 終了(&X)
+2022/05/13 6:36:42 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+2022/05/13 6:36:42 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+2022/05/13 6:36:42 [NORMAL_][LOG][1]  Match:オプション(&O)
+2022/05/13 6:36:42 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+2022/05/13 6:36:42 [NORMAL_][LOG][1]  Match:設定(&S)
+2022/05/13 6:36:42 [NORMAL_][LOG][1]   AddEvent Click:オプション(&O), 設定(&S)
+2022/05/13 6:36:42 [CAUTION][LOG][1] ReleaseErrorState : count=0
+2022/05/13 6:36:42 [CAUTION][LOG][1] ReleaseErrorState : count=0
+2022/05/13 6:36:42 [NORMAL_][LOG][1] ErrorManager.ErrorManager.ClearAllDebugDataList : ClearDataCount=2
+2022/05/13 6:36:42 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2022/05/13 6:36:42 [NORMAL_][LOG][1] CurrentThread = 1
+2022/05/13 6:36:42 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2022/05/13 6:36:42 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.UpdateOpendExcelApplication
+2022/05/13 6:36:42 [ALERT__][EXP][1] ExcelUtility.ExcelManager.GetExcelApplicationFromGetActiveObject(
+操作を利用できません (HRESULT からの例外:0x800401E3 (MK_E_UNAVAILABLE))
+   場所 System.Runtime.InteropServices.Marshal.GetActiveObject(Guid& rclsid, IntPtr reserved, Object& ppunk)
+   場所 System.Runtime.InteropServices.Marshal.GetActiveObject(String progID)
+   場所 ExcelUtility.ExcelManager.GetExcelApplicationFromGetActiveObject())
+2022/05/13 6:36:42 [WARNING][LOG][1] ExcelUtility.ExcelManager.GetExcelApplicationFromGetActiveObject Applicatoin is Null
+2022/05/13 6:36:42 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.ExcelApplicationRunWhenNothing=true
+2022/05/13 6:36:42 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.**NewApplication=>ExcelAppsList.Add
+2022/05/13 6:36:42 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.CreateNewApplication
+2022/05/13 6:36:42 [NORMAL_][LOG][1]  set apps.IsGhost=true
+2022/05/13 6:36:42 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetProcessIdFromExcelApplicationHwnd
+2022/05/13 6:36:42 [NORMAL_][LOG][1]  IsGhost=true
+2022/05/13 6:36:42 [NORMAL_][LOG][1]   Application.Visible=True
+2022/05/13 6:36:42 [NORMAL_][LOG][1]  pid=8116
+2022/05/13 6:36:42 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetWorkbookEvent
+2022/05/13 6:36:42 [NORMAL_][LOG][1]  IsGhost=true , continue SetEvent
+2022/05/13 6:36:42 [NORMAL_][LOG][1]  Application.Workbooks.Count < 1
+2022/05/13 6:36:42 [NORMAL_][LOG][1] ExcelUtility.ExcelWorkbookSyncer.SetEvent
+2022/05/13 6:36:42 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetProcessIdFromExcelApplicationHwnd
+2022/05/13 6:36:42 [NORMAL_][LOG][1]  IsGhost=true
+2022/05/13 6:36:42 [NORMAL_][LOG][1]   Application.Visible=True
+2022/05/13 6:36:42 [NORMAL_][LOG][1]  pid=8116
+2022/05/13 6:36:42 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetExcelApplicationFromProcess
+2022/05/13 6:36:43 [CAUTION][LOG][1]   Set IsGhost=true , pid=8116
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.IsExistsProcessId list.Count<1
+2022/05/13 6:36:43 [NORMAL_][LOG][1]  IsExistsProcessId=false ,pid=8116
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.UpdateExcelApps
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetExcelApplicationFromProcess
+2022/05/13 6:36:43 [CAUTION][LOG][1]   Set IsGhost=true , pid=8116
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.ReSetFileListFromApplication
+2022/05/13 6:36:43 [NORMAL_][LOG][1]   IsGhost=true , return
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetWorkbookEvent
+2022/05/13 6:36:43 [NORMAL_][LOG][1]  IsGhost=true , continue SetEvent
+2022/05/13 6:36:43 [NORMAL_][LOG][1]   IsSetEvent=true -> return
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelUtility.ExcelWorkbookSyncer.SetEvent
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:36:43 [NORMAL_][LOG][1]   appsList.Add(newApps) 2
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.IsExistsProcessId , true pid=8116
+2022/05/13 6:36:43 [NORMAL_][LOG][1]   IsExistsProcessId=true , pid=8116
+2022/05/13 6:36:43 [NORMAL_][LOG][1]   ExcelAppsList.Count=1
+2022/05/13 6:36:43 [NORMAL_][LOG][1]  IsUpdating,true=>false
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelWorkbookList.ExcelWorkbookList.ExcelManger_UpdateWorkbookListAfterEvent
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelWorkbookList.ExcelWorkbookList.SetWorkbookListFromExcelManager
+2022/05/13 6:36:43 [NORMAL_][LOG][1]   _excelManager.ExcelAppsList.Count=1
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelWorkbookList.ExcelWorkbookList.GetListValueForExcelApps
+2022/05/13 6:36:43 [NORMAL_][LOG][1]   apps.IsGhost=true
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelWorkbookList.WorkbookListCheckedListBox.SetWorkbookList
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelWorkbookList.UpdateControlAsync.ExcuteUpdateControlBySubThread
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelWorkbookList.UpdateControlAsync.UpdateControlBySubThreadMain
+2022/05/13 6:36:43 [NORMAL_][LOG][1] InvokeRequired=false
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelWorkbookList.WorkbookListCheckedListBox.AddItemToCheckdListBoxItems
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelWorkbookList.WorkbookListCheckedListBox.ClearItems
+2022/05/13 6:36:43 [WARNING][LOG][1]  CheckedListBox.Items.Count < 1)
+2022/05/13 6:36:43 [NORMAL_][LOG][1]  CheckedListBox.Items.AddRange List.count=1
+2022/05/13 6:36:43 [NORMAL_][LOG][1]   GetWorkbookNameListAndGhostProcessNameList Success.
+2022/05/13 6:36:43 [NORMAL_][LOG][1] UpdateList Success.
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ******************** Initialize End ********************
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar._statusLabel_VisibleChanged
+
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar._statusLabel_VisibleChanged
+2022/05/13 6:36:43 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerForm.ShowErrorMessageEvent
+2022/05/13 6:36:43 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm= NULL
+2022/05/13 6:36:43 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:36:43 [NORMAL_][LOG][1] _statusStrip.Height = 22
+2022/05/13 6:37:46 [NORMAL_][LOG][3] ExcelUtility.ExcelApps.ExcelApps_ApplicationWokbookOpen ExcelApps
+2022/05/13 6:37:46 [NORMAL_][LOG][3] ExcelUtility.ExcelWorkbookSyncer.Application_WorkbookOpen
+2022/05/13 6:37:47 [NORMAL_][LOG][3] ExcelUtility.ExcelApps.Appliction_WindowActivate ExcelApps : 
+2022/05/13 6:37:47 [NORMAL_][LOG][3]   ExcelCellsManager_ログ.xlsx > CellsManager > $E$122
+2022/05/13 6:37:47 [NORMAL_][LOG][3] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:37:51 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2022/05/13 6:37:52 [NORMAL_][LOG][1] CurrentThread = 1
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.UpdateOpendExcelApplication
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetProcessIdFromExcelApplicationHwnd
+2022/05/13 6:37:52 [NORMAL_][LOG][1]   Application.Visible=True
+2022/05/13 6:37:52 [NORMAL_][LOG][1]  pid=8116
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetExcelApplicationFromProcess
+2022/05/13 6:37:52 [NORMAL_][LOG][1]   set newApps.IsGhost=false
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetApplicationFromFilePath
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.IsExistsProcessId , true pid=8116
+2022/05/13 6:37:52 [NORMAL_][LOG][1]   IsExistsProcessId=true , pid=8116
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.UpdateExcelApps
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetExcelApplicationFromProcess
+2022/05/13 6:37:52 [NORMAL_][LOG][1]   set newApps.IsGhost=false
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetApplicationFromFilePath
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.ReSetFileListFromApplication
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ** Pid = 8116
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.ReSetFileListFromApplication path=C:\ZMyFolder\newDoc\0ProgramingAll\ExcellCellsManager関連\ExcelCellsManager_ログ.xlsx
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetWorkbookEvent
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetWorkbookEvent(string)
+2022/05/13 6:37:52 [NORMAL_][LOG][1]   IsSetEvent=false
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetWorkbookEvent : Microsoft Excel:ExcelCellsManager_ログ.xlsx
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.SetWorkbookEvent(string)
+2022/05/13 6:37:52 [WARNING][LOG][1] FilePathList.Count < 1
+2022/05/13 6:37:52 [NORMAL_][LOG][1]   SetEvent
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.SetEventForApplication
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelWorkbookSyncer.SetEvent
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetActiveWorkbookName
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.OverWriteExcelApps
+2022/05/13 6:37:52 [NORMAL_][LOG][1]   OverWriteList index=0
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.IsExistsProcessId , true pid=8116
+2022/05/13 6:37:52 [NORMAL_][LOG][1]   IsExistsProcessId=true , pid=8116
+2022/05/13 6:37:52 [NORMAL_][LOG][1]   ExcelAppsList.Count=1
+2022/05/13 6:37:52 [NORMAL_][LOG][1]  IsUpdating,true=>false
+2022/05/13 6:37:52 [NORMAL_][LOG][1]    IsWorkbookOpened,true=>false
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelWorkbookList.ExcelWorkbookList.ExcelManger_UpdateWorkbookListAfterEvent
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelWorkbookList.ExcelWorkbookList.SetWorkbookListFromExcelManager
+2022/05/13 6:37:52 [NORMAL_][LOG][1]   _excelManager.ExcelAppsList.Count=1
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelWorkbookList.ExcelWorkbookList.GetListValueForExcelApps
+2022/05/13 6:37:52 [NORMAL_][LOG][1]   apps.IsGhost=false
+2022/05/13 6:37:52 [NORMAL_][LOG][1]   apps.ApplicationIsNull=False
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetWorkbookNameList.Count=1
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelWorkbookList.WorkbookListCheckedListBox.SetWorkbookList
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelWorkbookList.UpdateControlAsync.ExcuteUpdateControlBySubThread
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelWorkbookList.UpdateControlAsync.UpdateControlBySubThreadMain
+2022/05/13 6:37:52 [NORMAL_][LOG][1] InvokeRequired=false
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelWorkbookList.WorkbookListCheckedListBox.AddItemToCheckdListBoxItems
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelWorkbookList.WorkbookListCheckedListBox.ClearItems
+2022/05/13 6:37:52 [NORMAL_][LOG][1]  CheckedListBox.Items.AddRange List.count=1
+2022/05/13 6:37:52 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetWorkbookNameList.Count=1
+2022/05/13 6:37:52 [NORMAL_][LOG][1]   GetWorkbookNameListAndGhostProcessNameList Success.
+2022/05/13 6:37:52 [NORMAL_][LOG][1] UpdateList Success.
+2022/05/13 6:37:52 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:38:04 [NORMAL_][LOG][3] ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : ExcelCellsManager_ログ.xlsx > CellsManager > $C$93
+2022/05/13 6:38:04 [NORMAL_][LOG][3] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:38:04 [NORMAL_][LOG][3] ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : ExcelCellsManager_ログ.xlsx > CellsManager > $C$93
+2022/05/13 6:38:04 [NORMAL_][LOG][3] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:38:04 [NORMAL_][LOG][3] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2022/05/13 6:38:04 [NORMAL_][LOG][3]  ExcelCellsManager_ログ.xlsx > CellsManager > C93
+2022/05/13 6:38:07 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2022/05/13 6:38:09 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.AddList
+2022/05/13 6:38:09 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetActiveExcelApps
+2022/05/13 6:38:09 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetActiveWorkbookName
+2022/05/13 6:38:09 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManager.ExcelCellsManager.ConvertValueToString
+2022/05/13 6:38:09 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManager.ExcelCellsManager.ConvertValueToString : range.Value.Type = System.String
+2022/05/13 6:38:09 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.DataGridView_EditRow
+2022/05/13 6:38:09 [NORMAL_][LOG][1] ExcelCellsManagerForm.DataList_Edited
+2022/05/13 6:38:09 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.ActivateWorkbookWindowActivate
+2022/05/13 6:38:09 [NORMAL_][LOG][1] ExcelUtility.ExcelManagerWindowActivate
+2022/05/13 6:38:09 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetActiveExcelApps
+2022/05/13 6:38:09 [NORMAL_][LOG][1] WakeupWindowR
+2022/05/13 6:38:09 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetActiveWorkbookName
+2022/05/13 6:38:09 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.ActivateWorkbook
+2022/05/13 6:38:09 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:38:09 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:38:12 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2022/05/13 6:38:17 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : ExcelCellsManager_ログ.xlsx > CellsManager > $M$3
+2022/05/13 6:38:17 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:38:17 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : ExcelCellsManager_ログ.xlsx > CellsManager > $M$3
+2022/05/13 6:38:17 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:38:17 [NORMAL_][LOG][5] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2022/05/13 6:38:17 [NORMAL_][LOG][5]  ExcelCellsManager_ログ.xlsx > CellsManager > M3
+2022/05/13 6:38:19 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2022/05/13 6:38:19 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.AddList
+2022/05/13 6:38:19 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetActiveExcelApps
+2022/05/13 6:38:19 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetActiveWorkbookName
+2022/05/13 6:38:19 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManager.ExcelCellsManager.ConvertValueToString
+2022/05/13 6:38:19 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManager.ExcelCellsManager.ConvertValueToString : range.Value.Type = System.String
+2022/05/13 6:38:20 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.DataGridView_EditRow
+2022/05/13 6:38:20 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.ActivateWorkbookWindowActivate
+2022/05/13 6:38:20 [NORMAL_][LOG][1] ExcelUtility.ExcelManagerWindowActivate
+2022/05/13 6:38:20 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetActiveExcelApps
+2022/05/13 6:38:20 [NORMAL_][LOG][1] WakeupWindowR
+2022/05/13 6:38:20 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetActiveWorkbookName
+2022/05/13 6:38:20 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.ActivateWorkbook
+2022/05/13 6:38:20 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:38:20 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:38:21 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2022/05/13 6:38:22 [NORMAL_][LOG][1] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewMouseEventForCellsManager._dataGridView_RowHeaderMouseDoubleClick
+2022/05/13 6:38:22 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.SelectCells
+2022/05/13 6:38:22 [NORMAL_][LOG][1] ExcelWorkbookList.WorkbookListCheckedListBox.GetValueList
+2022/05/13 6:38:22 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMainGetPidFromCheckdListValues
+2022/05/13 6:38:22 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.GetAppsWithOpenWorkbook
+2022/05/13 6:38:22 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetDataFromAppsInfo
+2022/05/13 6:38:22 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:38:22 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:38:22 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SelectAddress : ExcelCellsManager_ログ.xlsx
+2022/05/13 6:38:22 [NORMAL_][LOG][1] ExcelUtility.ExcelObject.ExcelCells.GetValueCornerAddress
+2022/05/13 6:38:22 [NORMAL_][LOG][1] ExcelUtility.ExcelObject.ExcelCells.GetValue : ExcelCellsManager_ログ.xlsx > CellsManager > $C$93 > ★　課題リスト2
+2022/05/13 6:38:22 [NORMAL_][LOG][1]  GetValue.Type : System.String
+2022/05/13 6:38:22 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : ExcelCellsManager_ログ.xlsx > CellsManager > $C$93
+2022/05/13 6:38:22 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:38:22 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : ExcelCellsManager_ログ.xlsx > CellsManager > $C$93
+2022/05/13 6:38:22 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:38:22 [NORMAL_][LOG][5] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2022/05/13 6:38:22 [NORMAL_][LOG][5]  ExcelCellsManager_ログ.xlsx > CellsManager > C93
+2022/05/13 6:38:22 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.ActivateWorkbookWindowActivate
+2022/05/13 6:38:22 [NORMAL_][LOG][1] ExcelUtility.ExcelManagerWindowActivate
+2022/05/13 6:38:22 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetActiveExcelApps
+2022/05/13 6:38:22 [NORMAL_][LOG][1] WakeupWindowR
+2022/05/13 6:38:22 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetActiveWorkbookName
+2022/05/13 6:38:22 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.ActivateWorkbook
+2022/05/13 6:38:22 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:38:24 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2022/05/13 6:38:24 [NORMAL_][LOG][1] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewMouseEventForCellsManager._dataGridView_RowHeaderMouseDoubleClick
+2022/05/13 6:38:24 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.SelectCells
+2022/05/13 6:38:24 [NORMAL_][LOG][1] ExcelWorkbookList.WorkbookListCheckedListBox.GetValueList
+2022/05/13 6:38:24 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMainGetPidFromCheckdListValues
+2022/05/13 6:38:24 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.GetAppsWithOpenWorkbook
+2022/05/13 6:38:24 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetDataFromAppsInfo
+2022/05/13 6:38:24 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:38:24 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:38:24 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SelectAddress : ExcelCellsManager_ログ.xlsx
+2022/05/13 6:38:24 [NORMAL_][LOG][1] ExcelUtility.ExcelObject.ExcelCells.GetValueCornerAddress
+2022/05/13 6:38:24 [NORMAL_][LOG][1] ExcelUtility.ExcelObject.ExcelCells.GetValue : ExcelCellsManager_ログ.xlsx > CellsManager > $M$3 > ★課題リスト
+2022/05/13 6:38:24 [NORMAL_][LOG][1]  GetValue.Type : System.String
+2022/05/13 6:38:24 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : ExcelCellsManager_ログ.xlsx > CellsManager > $M$3
+2022/05/13 6:38:24 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:38:24 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : ExcelCellsManager_ログ.xlsx > CellsManager > $M$3
+2022/05/13 6:38:24 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:38:24 [NORMAL_][LOG][5] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2022/05/13 6:38:24 [NORMAL_][LOG][5]  ExcelCellsManager_ログ.xlsx > CellsManager > M3
+2022/05/13 6:38:24 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.ActivateWorkbookWindowActivate
+2022/05/13 6:38:24 [NORMAL_][LOG][1] ExcelUtility.ExcelManagerWindowActivate
+2022/05/13 6:38:24 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetActiveExcelApps
+2022/05/13 6:38:24 [NORMAL_][LOG][1] WakeupWindowR
+2022/05/13 6:38:24 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetActiveWorkbookName
+2022/05/13 6:38:24 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.ActivateWorkbook
+2022/05/13 6:38:24 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:38:30 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2022/05/13 6:38:30 [NORMAL_][LOG][1] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewMouseEventForCellsManager._dataGridView_RowHeaderMouseDoubleClick
+2022/05/13 6:38:30 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.SelectCells
+2022/05/13 6:38:30 [NORMAL_][LOG][1] ExcelWorkbookList.WorkbookListCheckedListBox.GetValueList
+2022/05/13 6:38:30 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMainGetPidFromCheckdListValues
+2022/05/13 6:38:30 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.GetAppsWithOpenWorkbook
+2022/05/13 6:38:30 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetDataFromAppsInfo
+2022/05/13 6:38:30 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:38:30 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:38:30 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SelectAddress : ExcelCellsManager_ログ.xlsx
+2022/05/13 6:38:30 [NORMAL_][LOG][1] ExcelUtility.ExcelObject.ExcelCells.GetValueCornerAddress
+2022/05/13 6:38:30 [NORMAL_][LOG][1] ExcelUtility.ExcelObject.ExcelCells.GetValue : ExcelCellsManager_ログ.xlsx > CellsManager > $M$3 > ★課題リスト
+2022/05/13 6:38:30 [NORMAL_][LOG][1]  GetValue.Type : System.String
+2022/05/13 6:38:30 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.ActivateWorkbookWindowActivate
+2022/05/13 6:38:30 [NORMAL_][LOG][1] ExcelUtility.ExcelManagerWindowActivate
+2022/05/13 6:38:30 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetActiveExcelApps
+2022/05/13 6:38:30 [NORMAL_][LOG][1] WakeupWindowR
+2022/05/13 6:38:30 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetActiveWorkbookName
+2022/05/13 6:38:30 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.ActivateWorkbook
+2022/05/13 6:38:30 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:38:40 [NORMAL_][LOG][3] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetActivate : CellManager : 
+2022/05/13 6:38:40 [NORMAL_][LOG][3]  ExcelCellsManager_ログ.xlsx > Sheet1 > A1
+2022/05/13 6:38:40 [NORMAL_][LOG][3] ExcelCellsManagerForm.Application_SheetActivateAfterEvent
+2022/05/13 6:38:40 [NORMAL_][LOG][3] ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : ExcelCellsManager_ログ.xlsx > Sheet1 > $D$25
+2022/05/13 6:38:40 [NORMAL_][LOG][3] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:38:41 [NORMAL_][LOG][3] ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : ExcelCellsManager_ログ.xlsx > Sheet1 > $D$25
+2022/05/13 6:38:41 [NORMAL_][LOG][3] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:38:41 [NORMAL_][LOG][3] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2022/05/13 6:38:41 [NORMAL_][LOG][3]  ExcelCellsManager_ログ.xlsx > Sheet1 > D25
+2022/05/13 6:38:41 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2022/05/13 6:38:42 [NORMAL_][LOG][1] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewMouseEventForCellsManager._dataGridView_RowHeaderMouseDoubleClick
+2022/05/13 6:38:42 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.SelectCells
+2022/05/13 6:38:42 [NORMAL_][LOG][1] ExcelWorkbookList.WorkbookListCheckedListBox.GetValueList
+2022/05/13 6:38:42 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMainGetPidFromCheckdListValues
+2022/05/13 6:38:42 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.GetAppsWithOpenWorkbook
+2022/05/13 6:38:42 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetDataFromAppsInfo
+2022/05/13 6:38:42 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:38:42 [NORMAL_][LOG][1] _statusStrip_Paint
+
+2022/05/13 6:38:42 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:38:42 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SelectAddress : ExcelCellsManager_ログ.xlsx
+2022/05/13 6:38:42 [NORMAL_][LOG][1] ExcelUtility.ExcelObject.ExcelCells.GetValueCornerAddress
+2022/05/13 6:38:42 [NORMAL_][LOG][1] ExcelUtility.ExcelObject.ExcelCells.GetValue : ExcelCellsManager_ログ.xlsx > CellsManager > $C$93 > ★　課題リスト2
+2022/05/13 6:38:42 [NORMAL_][LOG][1]  GetValue.Type : System.String
+2022/05/13 6:38:42 [NORMAL_][LOG][5] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetActivate : CellManager : 
+2022/05/13 6:38:42 [NORMAL_][LOG][5]  ExcelCellsManager_ログ.xlsx > CellsManager > M3
+2022/05/13 6:38:42 [NORMAL_][LOG][5] ExcelCellsManagerForm.Application_SheetActivateAfterEvent
+2022/05/13 6:38:42 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : ExcelCellsManager_ログ.xlsx > CellsManager > $C$93
+2022/05/13 6:38:42 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:38:42 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.Application_SheetSelectionChange : ExcelApps : ExcelCellsManager_ログ.xlsx > CellsManager > $C$93
+2022/05/13 6:38:42 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:38:42 [NORMAL_][LOG][5] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_SheetSelectionChange : CellManager : 
+2022/05/13 6:38:42 [NORMAL_][LOG][5]  ExcelCellsManager_ログ.xlsx > CellsManager > C93
+2022/05/13 6:38:42 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.ActivateWorkbookWindowActivate
+2022/05/13 6:38:42 [NORMAL_][LOG][1] ExcelUtility.ExcelManagerWindowActivate
+2022/05/13 6:38:42 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetActiveExcelApps
+2022/05/13 6:38:42 [NORMAL_][LOG][1] WakeupWindowR
+2022/05/13 6:38:42 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetActiveWorkbookName
+2022/05/13 6:38:42 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.ActivateWorkbook
+2022/05/13 6:38:42 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:38:42 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm= NULL
+2022/05/13 6:39:15 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.ExcelApps_ApplicationWorkbookBeoreClose ExcelApps
+2022/05/13 6:39:15 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.ExcelApps_ApplicationWorkbookBeoreClose ExcelApps
+2022/05/13 6:39:15 [NORMAL_][LOG][5] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WorkbookBeforeClose : CellManager : 
+2022/05/13 6:39:15 [NORMAL_][LOG][5] ExcelCellsManagerForm.Application_WorkbookBeforeCloseAddEvent
+2022/05/13 6:39:15 [NORMAL_][LOG][5] ExcelCellsManagerForm.Application_WorkbookBeforeCloseAddEvent : Finally
+2022/05/13 6:39:17 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.AppsWindowDeactivate
+2022/05/13 6:39:17 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:39:17 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.AppsWindowDeactivate Finally
+2022/05/13 6:39:17 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.AppsWindowDeactivate
+2022/05/13 6:39:17 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:39:17 [NORMAL_][LOG][5] ExcelUtility.ExcelApps.AppsWindowDeactivate Finally
+2022/05/13 6:39:17 [NORMAL_][LOG][5] ExcelUtility.ExcelWorkbookSyncer.Application_WindowDeactivate
+2022/05/13 6:39:17 [NORMAL_][LOG][5] ExcelUtility.ExcelWorkbookSyncer.Application_WindowDeactivate Finally
+2022/05/13 6:39:17 [NORMAL_][LOG][5]  ExcelCellsManager_ログ.xlsx > CellsManager > C93
+2022/05/13 6:39:17 [NORMAL_][LOG][5] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.Application_WindowDeactivate : CellManager : C93 < CellsManager < ExcelCellsManager_ログ.xlsx
+2022/05/13 6:39:17 [NORMAL_][LOG][5] ExcelCellsManagerForm.Application_WorkbookDeactivateAddEvent
+2022/05/13 6:39:21 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.ConformWhenDataEdited
+2022/05/13 6:39:21 [NORMAL_][LOG][1] CommonUtility.OpenedFile.ConformSaveWhenFileEdited
+2022/05/13 6:39:24 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2022/05/13 6:39:24 [NORMAL_][LOG][1]  return 0 Result.No = NotSave
+2022/05/13 6:39:24 [NORMAL_][LOG][1] ******************** ExcelCellsManagerForm_FormClosed Begin ********************
+2022/05/13 6:39:24 [NORMAL_][LOG][1] SettingsManager.SettingsManager.SetValue
+2022/05/13 6:39:24 [NORMAL_][LOG][1] settingName=application ,settingsName=LastOpendFilePath ,value=C:\Users\OK\Documents\*.tsv
+2022/05/13 6:39:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=True
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=True
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:39:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=True
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=True
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:39:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   section=application ,parameter=LastOpendFilePath ,value=C:\Users\OK\Documents\*.tsv
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=LastOpendFilePath ,value=C:\Users\OK\Documents\*.tsv
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:39:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=False
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=False
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:39:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=True
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue: section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=True
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:39:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   section=dataList ,parameter=ColumnWidthOfDataList ,value=100,100,100,100,100,100
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue: section=dataList ,parameter=ColumnWidthOfDataList ,value=100,100,100,100,100,100
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:39:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingLeft ,value=1,200,300,1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=MouseCaptureSettingLeft ,value=1,200,300,1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:39:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingTop ,value=1,200,300,1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=MouseCaptureSettingTop ,value=1,200,300,1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:39:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingRight ,value=0,200,300,1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=MouseCaptureSettingRight ,value=0,200,300,1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:39:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingBottom ,value=0,200,300,1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=MouseCaptureSettingBottom ,value=0,200,300,1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:39:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=True
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=True
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:39:24 [NORMAL_][LOG][1] IniManager.IniManager.WriteAllData
+2022/05/13 6:39:24 [NORMAL_][LOG][1] IniManager.IniManager.ConvertSectionDataToListString
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   [application]
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   IsActivateWorkbookWindowAfterRegistAddress=True
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   IsOpenLastFileWhenRunApplication=True
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   LastOpendFilePath=C:\Users\OK\Documents\*.tsv
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   IsActivateFormWhenMoveMouseScreenEdge=False
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   MouseCaptureSettingLeft=1,200,300,1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   MouseCaptureSettingTop=1,200,300,1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   MouseCaptureSettingRight=0,200,300,1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   MouseCaptureSettingBottom=0,200,300,1
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   IsUpdateListWhenWorkbookOpendAndClosed=True
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   [dataList]
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   IsSaveColumnWidthOfDataList=True
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   ColumnWidthOfDataList=100,100,100,100,100,100
+2022/05/13 6:39:24 [NORMAL_][LOG][1] IniManager.IniWriter.WriteData
+2022/05/13 6:39:24 [NORMAL_][LOG][1] IniManager.IniReader.ReadSettingsFile
+2022/05/13 6:39:24 [NORMAL_][LOG][1] IniManager.IniWriter.SetValueForWrite
+2022/05/13 6:39:24 [NORMAL_][LOG][1] ExcuteOverWrite Success. Path= C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\settings.ini
+2022/05/13 6:39:24 [NORMAL_][LOG][1] ExcelCellsManagerForm.ExcelCellsManagerForm_FormClosed Button Close
+2022/05/13 6:39:24 [NORMAL_][LOG][1] ErrorManagerUtility.FileUtility.MakeNewFileNameNotLock : path=C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\Error.Log
+2022/05/13 6:39:24 [NORMAL_][LOG][1]   MakeNewFileNameNotLock=Error.Log
+2022/05/13 6:39:24 [NORMAL_][LOG][1] ExcelCellsManagerForm_FormClosed.WriteErrorLog Success [C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\Error.Log]
+
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelCellsManagerForm.ExcelCellsManagerForm Constracta BeginLogRecording
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar.Initialize
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar._statusLabel_VisibleChanged
+2022/05/13 6:47:22 [NORMAL_][LOG][1] MouseCaptureInScreenEdgeManager Constracta: new MouseCaptureInScreenEdgeFormEvents Form.Text=Excel Cells Manager2
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsObject.SetControlEvent
+2022/05/13 6:47:22 [NORMAL_][LOG][1] IniManager.IniManager.SetPathAndCreateFileIfPathNotExists
+2022/05/13 6:47:22 [NORMAL_][LOG][1] IniManager.IniManager.SetPath path=C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\settings.ini
+2022/05/13 6:47:22 [NORMAL_][LOG][1] IniManager.IniReader.ReadSettingsFile
+2022/05/13 6:47:22 [NORMAL_][LOG][1] IniManager.IniManager.SetSectionFromPath
+2022/05/13 6:47:22 [NORMAL_][LOG][1] IniManager.IniReader.SetSectionListByAnalyze
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   SetParameterListByAnalyze Success
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelCellsManager.Settings.ExcelCellsManagerSettingsValue.SettingsValueToThisMember
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=IsActivateWorkbookWindowAfterRegistAddress
+2022/05/13 6:47:22 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=IsActivateWorkbookWindowAfterRegistAddress=True
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=IsOpenLastFileWhenRunApplication
+2022/05/13 6:47:22 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=IsOpenLastFileWhenRunApplication=True
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=LastOpendFilePath
+2022/05/13 6:47:22 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   section=application ,parameter=LastOpendFilePath ,value=
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=LastOpendFilePath=C:\Users\OK\Documents\*.tsv
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=IsActivateFormWhenMoveMouseScreenEdge
+2022/05/13 6:47:22 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=IsActivateFormWhenMoveMouseScreenEdge=False
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=IsSaveColumnWidthOfDataList
+2022/05/13 6:47:22 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=IsSaveColumnWidthOfDataList=True
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=ColumnWidthOfDataList
+2022/05/13 6:47:22 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   section=dataList ,parameter=ColumnWidthOfDataList ,value=
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=ColumnWidthOfDataList=100,100,100,100,100,100
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=MouseCaptureSettingLeft
+2022/05/13 6:47:22 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingLeft ,value=
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=MouseCaptureSettingLeft=1,200,300,1
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=MouseCaptureSettingTop
+2022/05/13 6:47:22 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingTop ,value=
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=MouseCaptureSettingTop=1,200,300,1
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=MouseCaptureSettingRight
+2022/05/13 6:47:22 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingRight ,value=
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=MouseCaptureSettingRight=0,200,300,1
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=MouseCaptureSettingBottom
+2022/05/13 6:47:22 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingBottom ,value=
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=MouseCaptureSettingBottom=0,200,300,1
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsValueToThisMember: Name=IsUpdateListWhenWorkbookOpendAndClosed
+2022/05/13 6:47:22 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=0
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   GetParameterValueFromLine: value=IsUpdateListWhenWorkbookOpendAndClosed=True
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelCellsManager.Settings.ExcelCellsManagerSettingsValue.SettingsValueToThisMemberMain
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.String
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Int32[]
+2022/05/13 6:47:22 [NORMAL_][LOG][1] SettingsManager.SettingsManager.GetValue: setting.Value.GetType()=System.Boolean
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.Initialize
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewUtility.Initialize
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelCellsManager.CellsValuesConrol.CellsValuesList.DataGridViewUtility.SetColumnWidth
+2022/05/13 6:47:22 [NORMAL_][LOG][1] Augument settings is null.app Use Already Prepared SetttingsValueClassObject
+2022/05/13 6:47:22 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.InitializeForms
+2022/05/13 6:47:22 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2022/05/13 6:47:22 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2022/05/13 6:47:22 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2022/05/13 6:47:22 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.SetSettingValueToCaptureForm
+2022/05/13 6:47:22 [NORMAL_][LOG][1] MouseCaptureSettingLeft = 200,300
+2022/05/13 6:47:22 [NORMAL_][LOG][1] MouseCaptureSettingTop = 200,300
+2022/05/13 6:47:22 [NORMAL_][LOG][1] MouseCaptureSettingRight = 200,300
+2022/05/13 6:47:22 [NORMAL_][LOG][1] MouseCaptureSettingBottom = 200,300
+2022/05/13 6:47:22 [NORMAL_][LOG][1] screenNumbers = 1,1,1,1
+2022/05/13 6:47:22 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2022/05/13 6:47:22 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2022/05/13 6:47:22 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2022/05/13 6:47:22 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.GetScreen
+2022/05/13 6:47:22 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeFormEvents.SetValidRangeValue
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   [200 , 300] [200 , 300] [200 , 300] [200 , 200] 
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManager.SettingsForm.EcmSettingsFormManager.PlaceControlSettingsListToForm
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   Panel Height = 282
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.OpenFile : C:\Users\OK\Documents\*.tsv
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.ConformWhenDataEdited
+2022/05/13 6:47:22 [ALERT__][EXP][1] CommonUtility.FileIO.ReadFile : C:\Users\OK\Documents\*.tsv(
+FilePath Is Not Exists [C:\Users\OK\Documents\*.tsv]
+   場所 CommonUtility.FileIO.ReadFile(String filePath))
+2022/05/13 6:47:22 [ALERT__][LOG][1]  OpenedFile.GetListByOpenFile Failed: path=C:\Users\OK\Documents\*.tsv
+2022/05/13 6:47:22 [ALERT__][EXP][1] ExcelCellsManager.ExcelCellsManagerMain.OpenFile[ファイルオープンエラー](
+ExcelCellsManager.ExcelCellsManagerMain.OpenFile : File Open Error : path=C:\Users\OK\Documents\*.tsv
+   場所 ExcelCellsManager.ExcelCellsManagerMain.OpenFile(String filePath, Boolean showMsgBox) 場所 C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\ExcelCellsManager\ExcelCellsManagerMain.cs:行 1372)
+2022/05/13 6:47:22 [CAUTION][LOG][1] ReleaseErrorState : count=2
+2022/05/13 6:47:22 [CAUTION][LOG][1] ReleaseErrorState : count=0
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.InitializeMenuStrip
+2022/05/13 6:47:22 [CAUTION][LOG][1] ReleaseErrorState : count=0
+2022/05/13 6:47:22 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+2022/05/13 6:47:22 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+2022/05/13 6:47:22 [NORMAL_][LOG][1]  Match:ファイル(&F)
+2022/05/13 6:47:22 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+2022/05/13 6:47:22 [NORMAL_][LOG][1]  Match:開く(&O)...
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   AddEvent Click:ファイル(&F), 開く(&O)...
+2022/05/13 6:47:22 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+2022/05/13 6:47:22 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+2022/05/13 6:47:22 [NORMAL_][LOG][1]  Match:ファイル(&F)
+2022/05/13 6:47:22 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+2022/05/13 6:47:22 [NORMAL_][LOG][1]  Match:上書き保存(&S)
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   AddEvent Click:ファイル(&F), 上書き保存(&S)
+2022/05/13 6:47:22 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+2022/05/13 6:47:22 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+2022/05/13 6:47:22 [NORMAL_][LOG][1]  Match:ファイル(&F)
+2022/05/13 6:47:22 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+2022/05/13 6:47:22 [NORMAL_][LOG][1]  Match:名前を付けて保存(&A)...
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   AddEvent Click:ファイル(&F), 名前を付けて保存(&A)...
+2022/05/13 6:47:22 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+2022/05/13 6:47:22 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+2022/05/13 6:47:22 [NORMAL_][LOG][1]  Match:ファイル(&F)
+2022/05/13 6:47:22 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+2022/05/13 6:47:22 [NORMAL_][LOG][1]  Match:終了(&X)
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   AddEvent Click:ファイル(&F), 終了(&X)
+2022/05/13 6:47:22 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.AddEventToMenu
+2022/05/13 6:47:22 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies
+2022/05/13 6:47:22 [NORMAL_][LOG][1]  Match:オプション(&O)
+2022/05/13 6:47:22 [NORMAL_][LOG][1] CommonUtility.ControlUtility.MenuStripUtility.GetToolStripMenuItemMatchText
+2022/05/13 6:47:22 [NORMAL_][LOG][1]  Match:設定(&S)
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   AddEvent Click:オプション(&O), 設定(&S)
+2022/05/13 6:47:22 [CAUTION][LOG][1] ReleaseErrorState : count=0
+2022/05/13 6:47:22 [CAUTION][LOG][1] ReleaseErrorState : count=0
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ErrorManager.ErrorManager.ClearAllDebugDataList : ClearDataCount=2
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.UpdateList
+2022/05/13 6:47:22 [NORMAL_][LOG][1] CurrentThread = 1
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetWorkbookNameListAndGhostProcessNameList
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.UpdateOpendExcelApplication
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetProcessIdFromExcelApplicationHwnd
+2022/05/13 6:47:22 [NORMAL_][LOG][1]   Application.Visible=True
+2022/05/13 6:47:22 [NORMAL_][LOG][1]  pid=15624
+2022/05/13 6:47:22 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetExcelApplicationFromProcess
+2022/05/13 6:47:23 [NORMAL_][LOG][1]   set newApps.IsGhost=false
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetApplicationFromFilePath
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.IsExistsProcessId list.Count<1
+2022/05/13 6:47:23 [NORMAL_][LOG][1]  IsExistsProcessId=false ,pid=15624
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.UpdateExcelApps
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.GetExcelApplicationFromProcess
+2022/05/13 6:47:23 [NORMAL_][LOG][1]   set newApps.IsGhost=false
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetApplicationFromFilePath
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.ReSetFileListFromApplication
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ** Pid = 15624
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.ReSetFileListFromApplication path=C:\ZMyFolder\A Daily_A_3.xlsb
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetWorkbookEvent
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetWorkbookEvent(string)
+2022/05/13 6:47:23 [NORMAL_][LOG][1]   IsSetEvent=false
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetWorkbookEvent : Microsoft Excel:A Daily_A_3.xlsb
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.SetWorkbookEvent(string)
+2022/05/13 6:47:23 [WARNING][LOG][1] FilePathList.Count < 1
+2022/05/13 6:47:23 [NORMAL_][LOG][1]   SetEvent
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManager.Event.ExcelPublicEventHandlerBredgeForCellManager.SetEventForApplication
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelUtility.ExcelWorkbookSyncer.SetEvent
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetActiveWorkbookName
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.SetActivateFlag
+2022/05/13 6:47:23 [NORMAL_][LOG][1]   appsList.Add(newApps) 2
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelUtility.ExcelManager.IsExistsProcessId , true pid=15624
+2022/05/13 6:47:23 [NORMAL_][LOG][1]   IsExistsProcessId=true , pid=15624
+2022/05/13 6:47:23 [NORMAL_][LOG][1]   ExcelAppsList.Count=1
+2022/05/13 6:47:23 [NORMAL_][LOG][1]  IsUpdating,true=>false
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelWorkbookList.ExcelWorkbookList.ExcelManger_UpdateWorkbookListAfterEvent
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelWorkbookList.ExcelWorkbookList.SetWorkbookListFromExcelManager
+2022/05/13 6:47:23 [NORMAL_][LOG][1]   _excelManager.ExcelAppsList.Count=1
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelWorkbookList.ExcelWorkbookList.GetListValueForExcelApps
+2022/05/13 6:47:23 [NORMAL_][LOG][1]   apps.IsGhost=false
+2022/05/13 6:47:23 [NORMAL_][LOG][1]   apps.ApplicationIsNull=False
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetWorkbookNameList.Count=1
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelWorkbookList.WorkbookListCheckedListBox.SetWorkbookList
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelWorkbookList.UpdateControlAsync.ExcuteUpdateControlBySubThread
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelWorkbookList.UpdateControlAsync.UpdateControlBySubThreadMain
+2022/05/13 6:47:23 [NORMAL_][LOG][1] InvokeRequired=false
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelWorkbookList.WorkbookListCheckedListBox.AddItemToCheckdListBoxItems
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelWorkbookList.WorkbookListCheckedListBox.ClearItems
+2022/05/13 6:47:23 [WARNING][LOG][1]  CheckedListBox.Items.Count < 1)
+2022/05/13 6:47:23 [NORMAL_][LOG][1]  CheckedListBox.Items.AddRange List.count=1
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelUtility.ExcelApps.GetWorkbookNameList.Count=1
+2022/05/13 6:47:23 [NORMAL_][LOG][1]   GetWorkbookNameListAndGhostProcessNameList Success.
+2022/05/13 6:47:23 [NORMAL_][LOG][1] UpdateList Success.
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ******************** Initialize End ********************
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelCellsManager.ErrorMessage.ErrorMessengerStatusBar._statusLabel_VisibleChanged
+2022/05/13 6:47:23 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerForm.ShowErrorMessageEvent
+2022/05/13 6:47:23 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+
+2022/05/13 6:47:23 [NORMAL_][LOG][1] MousePointCapture.MousePointCaptureOnScreenEdgeManager.SaveFormActivateEvent LastActivateForm=ExcelCellsManagerForm
+2022/05/13 6:47:23 [NORMAL_][LOG][1] _statusStrip_Paint
+2022/05/13 6:47:23 [NORMAL_][LOG][1] _statusStrip.Height = 22
+2022/05/13 6:47:24 [NORMAL_][LOG][1] ExcelCellsManager.ExcelCellsManagerMain.ConformWhenDataEdited
+2022/05/13 6:47:24 [NORMAL_][LOG][1] ******************** ExcelCellsManagerForm_FormClosed Begin ********************
+2022/05/13 6:47:24 [NORMAL_][LOG][1] SettingsManager.SettingsManager.SetValue
+2022/05/13 6:47:24 [NORMAL_][LOG][1] settingName=application ,settingsName=LastOpendFilePath ,value=C:\Users\OK\Documents\*.tsv
+2022/05/13 6:47:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=True
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=IsActivateWorkbookWindowAfterRegistAddress ,value=True
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:47:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=True
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=IsOpenLastFileWhenRunApplication ,value=True
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:47:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   section=application ,parameter=LastOpendFilePath ,value=C:\Users\OK\Documents\*.tsv
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=LastOpendFilePath ,value=C:\Users\OK\Documents\*.tsv
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:47:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=False
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=IsActivateFormWhenMoveMouseScreenEdge ,value=False
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:47:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=True
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue: section=dataList ,parameter=IsSaveColumnWidthOfDataList ,value=True
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:47:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   section=dataList ,parameter=ColumnWidthOfDataList ,value=100,100,100,100,100,100
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue: section=dataList ,parameter=ColumnWidthOfDataList ,value=100,100,100,100,100,100
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:47:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingLeft ,value=1,200,300,1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=MouseCaptureSettingLeft ,value=1,200,300,1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:47:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingTop ,value=1,200,300,1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=MouseCaptureSettingTop ,value=1,200,300,1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:47:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingRight ,value=0,200,300,1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=MouseCaptureSettingRight ,value=0,200,300,1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:47:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   section=application ,parameter=MouseCaptureSettingBottom ,value=0,200,300,1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=MouseCaptureSettingBottom ,value=0,200,300,1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:47:24 [NORMAL_][LOG][1] IniManager.IniManager.GetOrSetParamterValueWhenAddValueIsNothing :Mode=1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=True
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue: section=application ,parameter=IsUpdateListWhenWorkbookOpendAndClosed ,value=True
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   SetParameterValue Success.
+2022/05/13 6:47:24 [NORMAL_][LOG][1] IniManager.IniManager.WriteAllData
+2022/05/13 6:47:24 [NORMAL_][LOG][1] IniManager.IniManager.ConvertSectionDataToListString
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   [application]
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   IsActivateWorkbookWindowAfterRegistAddress=True
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   IsOpenLastFileWhenRunApplication=True
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   LastOpendFilePath=C:\Users\OK\Documents\*.tsv
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   IsActivateFormWhenMoveMouseScreenEdge=False
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   MouseCaptureSettingLeft=1,200,300,1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   MouseCaptureSettingTop=1,200,300,1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   MouseCaptureSettingRight=0,200,300,1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   MouseCaptureSettingBottom=0,200,300,1
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   IsUpdateListWhenWorkbookOpendAndClosed=True
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   [dataList]
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   IsSaveColumnWidthOfDataList=True
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   ColumnWidthOfDataList=100,100,100,100,100,100
+2022/05/13 6:47:24 [NORMAL_][LOG][1] IniManager.IniWriter.WriteData
+2022/05/13 6:47:24 [NORMAL_][LOG][1] IniManager.IniReader.ReadSettingsFile
+2022/05/13 6:47:24 [NORMAL_][LOG][1] IniManager.IniWriter.SetValueForWrite
+2022/05/13 6:47:24 [NORMAL_][LOG][1] ExcuteOverWrite Success. Path= C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\settings.ini
+2022/05/13 6:47:24 [NORMAL_][LOG][1] ExcelCellsManagerForm.ExcelCellsManagerForm_FormClosed Button Close
+2022/05/13 6:47:24 [NORMAL_][LOG][1] ErrorManagerUtility.FileUtility.MakeNewFileNameNotLock : path=C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\Error.Log
+2022/05/13 6:47:24 [NORMAL_][LOG][1]   MakeNewFileNameNotLock=Error.Log
+2022/05/13 6:47:24 [NORMAL_][LOG][1] ExcelCellsManagerForm_FormClosed.WriteErrorLog Success [C:\Users\OK\source\repos\Repository2\ExcelCellsManager2\ExcelCellsManager2\bin\Debug\Error.Log]
+

@@ -1,9 +1,10 @@
-﻿using System;
+﻿using ErrorUtility.LogUtility;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
-namespace ErrorManager
+namespace ErrorUtility
 {
     public class ErrorManager
     {
@@ -15,8 +16,8 @@ namespace ErrorManager
         public string LastErrorMessageToUser = "";
 
         protected string ErrorLogFilePath = "";
-        public Constants Constants = new Constants();
-        public Log.LogConstants LogConstants;
+        //public Constants Constants = new Constants();
+        public LogUtility.Constants LogConstants;
         public IErrorMessenger Messenger;
         public bool IsSuppressErrorShow = false;
 
@@ -28,7 +29,7 @@ namespace ErrorManager
 
         protected DebugData _LastDebugData;
         protected List<DebugData> _DebugDataList = new List<DebugData>();
-        protected Log.LogManager Log;
+        protected LogManager Log;
         public int SetLogIndexLimit { get { return Log.LimitIndex; } set { Log.LimitIndex = value; } }
         public bool hasAlert
         {
@@ -50,7 +51,7 @@ namespace ErrorManager
         public ErrorManager(int debugMode)
         {
             DebugMode = debugMode;
-            Log = new Log.LogManager(this, debugMode, "");
+            Log = new LogManager(this, debugMode, "");
             LogConstants = Log.Constants;
         }
 
@@ -61,7 +62,7 @@ namespace ErrorManager
             {
                 AddException(new Exception("Directory Not Exists [" + logDirectory + "]"), "ErrorManager Constracta Failed");
             }
-            Log = new Log.LogManager(this, debugMode, logDirectory + "\\" + logFileName);
+            Log = new LogManager(this, debugMode, logDirectory + "\\" + logFileName);
             LogConstants = Log.Constants;
 
             ErrorLogFilePath = logDirectory + "\\" + errorLogFileName;
@@ -153,6 +154,18 @@ namespace ErrorManager
                 buf = exception.Message;
             }
             Log.AddAlert(buf, "","",exception);
+        }
+
+        public void AddLogAlert(Exception exception, object argObject, string logValue, string messageToUser = "")
+        {
+            AddLogAlert(argObject, exception, logValue, messageToUser);
+        }
+
+        public void AddLogAlert(object argObject, Exception exception, string logValue, string messageToUser = "")
+        {
+            string buf = "";
+            if (argObject != null) { buf = argObject.GetType().ToString() + "." + logValue; }
+            Log.AddAlert(buf, messageToUser, "", exception);
         }
 
         /// <summary>

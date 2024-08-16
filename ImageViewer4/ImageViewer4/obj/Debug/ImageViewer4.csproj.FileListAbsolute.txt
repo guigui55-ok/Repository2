@@ -3,7 +3,6 @@ C:\Users\OK\source\repos\Repository2\ImageViewer4\ImageViewer4\bin\Debug\ImageVi
 C:\Users\OK\source\repos\Repository2\ImageViewer4\ImageViewer4\bin\Debug\ImageViewer4.pdb
 C:\Users\OK\source\repos\Repository2\ImageViewer4\ImageViewer4\bin\Debug\ErrorManager.dll
 C:\Users\OK\source\repos\Repository2\ImageViewer4\ImageViewer4\bin\Debug\FileListManager.dll
-C:\Users\OK\source\repos\Repository2\ImageViewer4\ImageViewer4\obj\Debug\ImageViewer4.csprojAssemblyReference.cache
 C:\Users\OK\source\repos\Repository2\ImageViewer4\ImageViewer4\obj\Debug\ImageViewer4.ImageViewerTestForm.resources
 C:\Users\OK\source\repos\Repository2\ImageViewer4\ImageViewer4\obj\Debug\ImageViewer4.Properties.Resources.resources
 C:\Users\OK\source\repos\Repository2\ImageViewer4\ImageViewer4\obj\Debug\ImageViewer4.csproj.GenerateResource.cache

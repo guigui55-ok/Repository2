@@ -25,3 +25,4 @@ C:\Users\OK\source\repos\Repository2\DragAndDropSample\DragAndDropSample\obj\Rel
 C:\Users\OK\source\repos\Repository2\DragAndDropSample\DragAndDropSample\obj\Release\DragAndDropSample.csproj.CopyComplete
 C:\Users\OK\source\repos\Repository2\DragAndDropSample\DragAndDropSample\obj\Release\DragAndDropSample.exe
 C:\Users\OK\source\repos\Repository2\DragAndDropSample\DragAndDropSample\obj\Release\DragAndDropSample.pdb
+C:\Users\OK\source\repos\Repository2\DragAndDropSample\DragAndDropSample\obj\Release\DragAndDropSample.csprojAssemblyReference.cache

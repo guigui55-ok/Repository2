@@ -19,6 +19,12 @@ namespace CommonUtility.FileListUtility
             this.FileList = list;
         }
 
+        public int Count()
+        {
+            if (_fileList == null) { return 0; }
+            return _fileList.Count;
+        }
+
         public bool IsLastIndex()
         {
             if(_fileList == null) { return true; }
@@ -116,6 +122,7 @@ namespace CommonUtility.FileListUtility
             } else
             {
                 NowIndex++;
+                _err.AddLog(this, "MoveNext index=" + NowIndex);
             }
         }
         /// <summary>
@@ -130,6 +137,7 @@ namespace CommonUtility.FileListUtility
             } else
             {
                 NowIndex--;
+                _err.AddLog(this, "MovePrevious index=" + NowIndex);
             }
         }
         /// <summary>

@@ -1,0 +1,10 @@
+C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManagerForFormSample\obj\Release\ErrorManagerForFormSample.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManagerForFormSample\obj\Release\ErrorManagerForFormSample.ErrorManagerSampleForm.resources
+C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManagerForFormSample\obj\Release\ErrorManagerForFormSample.Properties.Resources.resources
+C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManagerForFormSample\obj\Release\ErrorManagerForFormSample.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManagerForFormSample\obj\Release\ErrorManagerForFormSample.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManagerForFormSample\bin\Release\ErrorManagerForFormSample.exe.config
+C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManagerForFormSample\bin\Release\ErrorManagerForFormSample.exe
+C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManagerForFormSample\bin\Release\ErrorManagerForFormSample.pdb
+C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManagerForFormSample\obj\Release\ErrorManagerForFormSample.exe
+C:\Users\OK\source\repos\Repository2\ErrorManager\ErrorManagerForFormSample\obj\Release\ErrorManagerForFormSample.pdb

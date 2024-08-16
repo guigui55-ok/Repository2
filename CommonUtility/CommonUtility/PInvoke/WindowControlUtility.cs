@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ErrorUtility;
+using System;
 using System.Diagnostics;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CommonUtility.Pinvoke
 {
     public class WindowControlUtility
     {
-        protected ErrorManager.ErrorManager _Error;
-        public WindowControlUtility(ErrorManager.ErrorManager error)
+        protected ErrorManager _Error;
+        public WindowControlUtility(ErrorManager error)
         {
             _Error = error;
         }

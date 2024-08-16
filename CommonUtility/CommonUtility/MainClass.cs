@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using CommonUtility.Pinvoke;
 using CommonUtility.Shortcut;
+using ErrorUtility;
 
 namespace CommonUtility
 {
@@ -25,7 +26,7 @@ namespace CommonUtility
         {
             try
             {
-                ErrorManager.ErrorManager _err = new ErrorManager.ErrorManager(1);
+                ErrorManager _err = new ErrorManager(1);
                 ShortcutUtility shortcutUtility = new ShortcutUtility(_err);
                 string path = @"C:\Users\OK\source\repos\Repository2\CommonUtility\CommonUtility\TestFiles\Microsoft Edge ShortCut.lnk";
                 // ショートカットのフルパスを取得する
@@ -45,7 +46,7 @@ namespace CommonUtility
         {
             try
             {
-                ErrorManager.ErrorManager _err = new ErrorManager.ErrorManager(1);
+                ErrorManager _err = new ErrorManager(1);
                 List<string> typeList = new List<string>() { ".xlsx", ".xlsb" };
 
                 // プロセス名 EXCEL の ProcessID を取得する

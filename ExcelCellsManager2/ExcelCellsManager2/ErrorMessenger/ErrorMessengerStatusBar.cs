@@ -89,7 +89,10 @@ namespace ExcelCellsManager.ErrorMessage
             ShowMessageAddToExistingString(style, color, msg,true, "\n", "");
         }
 
-        public void ShowMessageAddToExistingStringToBehind(FontStyle style, Color color, string msg, string delimiter = "\n", string title = "")
+
+        // ShowMessageAddToExistingStringToBehind(FontStyle,Color,string,string,string)
+        public void ShowMessageAddToExistingStringToBehind(
+            FontStyle style, Color color, string msg, string delimiter = "\n", string title = "")
         {
             ShowMessageAddToExistingString(style, color, msg, false, delimiter, title);
         }
@@ -124,12 +127,13 @@ namespace ExcelCellsManager.ErrorMessage
                 ShowMessage(buf,  style,color); 
             } catch (Exception ex)
             {
-                _error.AddException(ex, this, "ShowMessageAddToExistingString");
+                _error.AddException(ex, this, "ShowMessageAddToExistingString(FontStyle, Color, string, bool, string, string");
             }
         }
 
         /// <summary>
-        /// ErrorManager.HasException=true のときに、その内容を表示する
+        /// MessageBox で保持している例外の内容を表示する
+        /// ErrorManager.HasException=false でメッセージを表示しない
         /// </summary>
         /// <param name="msg"></param>
         public void ShowLastErrorByMessageBox(string MsgBoxTitle = "")
@@ -157,7 +161,7 @@ namespace ExcelCellsManager.ErrorMessage
                 } 
             } catch (Exception ex)
             {
-                _error.AddException(ex, this.ToString() + ".ShowException");
+                _error.AddException(ex, this.ToString() + ".ShowLastErrorByMessageBox");
             }
         }
 
@@ -204,7 +208,12 @@ namespace ExcelCellsManager.ErrorMessage
         }
 
 
-
+        /// <summary>
+        /// ShowUserMessageOnly(string,bool,bool)
+        /// </summary>
+        /// <param name="title"></param>
+        /// <param name="OrderIsRev"></param>
+        /// <param name="isAddExceptionMessage"></param>
         public void ShowUserMessageOnly(string title = "",bool OrderIsRev = true,bool isAddExceptionMessage = false)
         {
             if (IsSuppressErrorShow)
@@ -417,6 +426,7 @@ namespace ExcelCellsManager.ErrorMessage
             }
         }
 
+        // ShowResultSuccessMessageAddToExisting(string,bool,string)
         public void ShowResultSuccessMessageAddToExisting(string msg,bool isBehind = true, string title = "")
         {
             try
@@ -429,6 +439,7 @@ namespace ExcelCellsManager.ErrorMessage
             }
         }
 
+        // ShowWarningMessageMessageAddToExisting(string,bool,string)
         public void ShowWarningMessageMessageAddToExisting(string msg,bool isBeHind = true, string title = "")
         {
             try
@@ -455,6 +466,7 @@ namespace ExcelCellsManager.ErrorMessage
             }
         }
 
+        // ShowUserMessageOnlyAddToExisting(string,string,bool)
         public void ShowUserMessageOnlyAddToExisting(string msg,string title = "", bool OrderIsRev = true)
         {
             try

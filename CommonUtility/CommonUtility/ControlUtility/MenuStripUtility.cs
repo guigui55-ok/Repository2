@@ -1,17 +1,41 @@
-﻿using System;
+﻿using ErrorUtility;
+using System;
 using System.Windows.Forms;
 
 namespace CommonUtility.ControlUtility
 {
     public class MenuStripUtility
     {
-        ErrorManager.ErrorManager _err;
+        ErrorManager _err;
 
-        public MenuStripUtility(ErrorManager.ErrorManager err)
+        public MenuStripUtility(ErrorManager err)
         {
             _err = err;
         }
 
+
+        public void AddEventToMenu(MenuStrip menuStrip, string[] textArray, EventHandler menuClickEventHandler)
+        {
+            try
+            {
+                _err.AddLog(this, "AddEventToMenu");
+                ToolStripMenuItem item = this.GetToolStripMenuItemMatchTextFromMenuStripWithMultipleHierarchies(
+                    menuStrip, textArray);
+                if (item != null)
+                {
+                    item.Click += menuClickEventHandler;
+                    _err.AddLog("  AddEvent Click:" + string.Join(", ", textArray));
+                }
+                else
+                {
+                    _err.AddLogAlert("  AddEvent Click Failed:" + string.Join(", ", textArray));
+                }
+            }
+            catch (Exception ex)
+            {
+                _err.AddException(ex, this, "AddEventToMenu");
+            }
+        }
 
         public void AddMenu(
             ToolStripMenuItem parentMenuItem,

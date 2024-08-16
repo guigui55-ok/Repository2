@@ -49,6 +49,7 @@ namespace FileListManagerSample
                 AddLog("SetDirectoryPath=" + _dragAndDropForFile.Files[0]);
                 textBox1.Text = _dragAndDropForFile.Files[0];
                 _fileListManager.SetFilesFromPath(_dragAndDropForFile.Files[0]);
+                if (_dragAndDropForFile.Files.Length > 0) { _fileListControl.SelectItem(_files.GetCurrentValue()); }
             }
             catch (Exception ex)
             {
@@ -71,6 +72,7 @@ namespace FileListManagerSample
             _fileListManager.MoveNextDirectory();
             AddLog("SetDirectoryPath=" + _files.DirectoryPath);
             textBox1.Text = _dragAndDropForFile.Files[0];
+            if (_dragAndDropForFile.Files.Length > 0) { _fileListControl.SelectItem(0); }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -78,6 +80,23 @@ namespace FileListManagerSample
             _fileListManager.MovePreviousDirectory();
             AddLog("SetDirectoryPath=" + _files.DirectoryPath);
             textBox1.Text = _dragAndDropForFile.Files[0];
+            if (_dragAndDropForFile.Files.Length > 0) { _fileListControl.SelectItem(0); }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            _fileListManager.MoveProviousFileWhenFirstFilePreviousDirectory();
+            //AddLog("SetDirectoryPath=" + _files.DirectoryPath);
+            if(_dragAndDropForFile.Files == null) { _err.AddLog("_dragAndDropForFile.Files == null"); return; }
+            if (_dragAndDropForFile.Files.Length > 0) { _fileListControl.SelectItem(_files.GetCurrentValue()); }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            _fileListManager.MoveNextFileWhenLastFileNextDirectory();
+            //AddLog("SetDirectoryPath=" + _files.DirectoryPath);
+            if (_dragAndDropForFile.Files == null) { _err.AddLog("_dragAndDropForFile.Files == null"); return; }
+            if (_dragAndDropForFile.Files.Length > 0) { _fileListControl.SelectItem(_files.GetCurrentValue()); }
         }
     }
 }

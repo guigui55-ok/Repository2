@@ -1,6 +1,6 @@
 ﻿using CommonUtility;
 using CommonUtility.Shortcut;
-using ErrorManager;
+using ErrorUtility;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,12 +15,12 @@ namespace CommonUtilitySample
 {
     public partial class CommonUtilitySampleForm : Form
     {
-        ErrorManager.ErrorManager _err;
+        ErrorManager _err;
         DragAndDrop dragAndDrop;
         public CommonUtilitySampleForm()
         {
             InitializeComponent();
-            _err = new ErrorManager.ErrorManager(1);
+            _err = new ErrorManager(1);
             dragAndDrop = new DragAndDrop(_err, this);
             dragAndDrop.DragDropAfterEvent += DragAndDropAfterEvent;
             dragAndDrop.AddControlsDragEvent(new Control[]{ this.richTextBox1});

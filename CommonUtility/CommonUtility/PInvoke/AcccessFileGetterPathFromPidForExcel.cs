@@ -1,17 +1,15 @@
 ﻿using CommonUtility.CloseHandleUtil;
+using ErrorUtility;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CommonUtility.Pinvoke
 {
     public class AcccessFileGetterPathFromPidForExcel
     {
-        protected ErrorManager.ErrorManager _Error;
+        protected ErrorManager _Error;
         protected List<string> _FileTypeList;
-        public AcccessFileGetterPathFromPidForExcel(ErrorManager.ErrorManager error, List<string> fileTypeList)
+        public AcccessFileGetterPathFromPidForExcel(ErrorManager error, List<string> fileTypeList)
         {
             _Error = error;
             _FileTypeList = fileTypeList;
