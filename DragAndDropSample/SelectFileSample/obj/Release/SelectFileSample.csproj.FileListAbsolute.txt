@@ -29,3 +29,4 @@ C:\Users\OK\source\repos\Repository2\DragAndDropSample\SelectFileSample\obj\Rele
 C:\Users\OK\source\repos\Repository2\DragAndDropSample\SelectFileSample\obj\Release\SelectFileSample.csproj.CopyComplete
 C:\Users\OK\source\repos\Repository2\DragAndDropSample\SelectFileSample\obj\Release\SelectFileSample.exe
 C:\Users\OK\source\repos\Repository2\DragAndDropSample\SelectFileSample\obj\Release\SelectFileSample.pdb
+C:\Users\OK\source\repos\Repository2\DragAndDropSample\SelectFileSample\obj\Release\SelectFileSample.csprojAssemblyReference.cache

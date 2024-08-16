@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ErrorManagerUtility
+namespace ErrorUtility
 {
     class FileUtility
     {
-        protected ErrorManager.ErrorManager _error;
-        public FileUtility(ErrorManager.ErrorManager error)
+        protected ErrorManager _error;
+        public FileUtility(ErrorManager error)
         {
             _error = error;
         }

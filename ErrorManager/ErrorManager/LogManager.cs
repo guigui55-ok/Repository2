@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
-namespace Log
+namespace ErrorUtility.LogUtility
 {
     public class LogData
     {
@@ -26,12 +23,12 @@ namespace Log
         public int LogMode = 1;
         public string LogFilePath = "";
         public List<LogData> LogList;
-        public LogConstants Constants = new LogConstants();
+        public LogUtility.Constants Constants = new LogUtility.Constants();
         public int LimitIndex = 2000;
-        protected ErrorManager.ErrorManager _err;
+        protected ErrorManager _err;
         public bool IsWritingWhenIndexLimit = false;
 
-        public LogManager(ErrorManager.ErrorManager err, int mode,string filePath)
+        public LogManager(ErrorManager err, int mode,string filePath)
         {
             LogList = new List<LogData>();
             LogMode = mode;
@@ -354,7 +351,7 @@ namespace Log
                 if(path.Length < 4) { return false; }
                 if (Directory.Exists(Directory.GetDirectoryRoot(path)))
                 {
-                    string writePath = new ErrorManagerUtility.FileUtility(_err).MakeNewFileNameNotLock(
+                    string writePath = new ErrorUtility.FileUtility(_err).MakeNewFileNameNotLock(
                         System.IO.Path.GetFileName(path), System.IO.Path.GetDirectoryName(path));
                     if (!writePath.Equals(path))
                     {
@@ -497,7 +494,7 @@ namespace Log
             }
         }
     }
-    public class LogConstants
+    public class Constants
     {
         public readonly int TYPE_LOG = 1;
         public readonly int TYPE_EXCEPTION = 2;

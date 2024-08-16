@@ -1,16 +1,14 @@
-﻿using System;
+﻿using ErrorUtility;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CommonUtility.ControlUtility
 {
     public class ControlUtility
     {
-        ErrorManager.ErrorManager _err;
-        public ControlUtility(ErrorManager.ErrorManager err)
+        ErrorManager _err;
+        public ControlUtility(ErrorManager err)
         {
             _err = err;
         }

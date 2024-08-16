@@ -32,8 +32,13 @@ using System.Runtime.InteropServices;
 // すべての値を指定するか、次を使用してビルド番号とリビジョン番号を既定に設定できます
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.1.0.1")]
-[assembly: AssemblyFileVersion("2.1.0.1")]
+[assembly: AssemblyVersion("3.1.0.1")]
+[assembly: AssemblyFileVersion("3.1.0.1")]
+
+// 3.1.0.1 - 2021/10/10
+// ErrorManager 4.2.0.0 に置き換え
+// ErrorManager.ErrorManager -> ErrorUtility.ErrorManager に変更
+// 不要なusing削除
 
 //2.1.0.1
 // ComWindowsScriptHostObjectModel クラスを追加

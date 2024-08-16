@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ErrorUtility;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
@@ -10,7 +11,7 @@ namespace CommonUtility
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
 
-        protected ErrorManager.ErrorManager _Error;
+        protected ErrorManager _Error;
 
 
         public void _GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId)
@@ -18,7 +19,7 @@ namespace CommonUtility
             GetWindowThreadProcessId(hWnd,out lpdwProcessId);
         }
 
-        public ProcessUtility(ErrorManager.ErrorManager error)
+        public ProcessUtility(ErrorManager error)
         {
             _Error = error;
         }

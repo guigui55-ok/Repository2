@@ -2,7 +2,7 @@
 using System;
 using System.Drawing;
 
-namespace ErrorManager
+namespace ErrorUtility
 {
     public interface IErrorMessenger
     {
@@ -19,6 +19,7 @@ namespace ErrorManager
         void ShowAlertLastErrorWhenHasException(string title = "");
         void ShowAlertMessages(string title = "");
         void ShowUserMessageOnly(string title = "", bool OrderIsRev = true,bool isAddExceptionMessage=false);
+        void ShowMessageAddToExistingStringToBehind(FontStyle style, Color color, string msg, string delimiter = "\n", string title = "");
         //Add to an existing string 既存の文字列に追加
         void ShowMessageAddToExistingString(FontStyle style, Color color, string msg, string title = "");
         void ShowResultSuccessMessageAddToExisting(string msg, bool isBehind = true, string title = "");
@@ -26,6 +27,8 @@ namespace ErrorManager
         void ShowAlertMessageMessageAddToExisting(string msg, bool isBehind = true, string title = "");
         void ShowUserMessageOnlyAddToExisting(string msg,string title = "", bool OrderIsRev = true);
         void ShowErrorMessageseAddToExisting(bool isBehind = true);
+        void ShowMessageAddToExistingString(
+            FontStyle style, Color color, string msg, bool isBehind = true, string delimiter = "\n", string title = "");
         void ChangeFont(FontStyle style, Color color);
         void test();
     }

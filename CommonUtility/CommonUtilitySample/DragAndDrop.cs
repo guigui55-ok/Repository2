@@ -1,17 +1,18 @@
-﻿using System;
+﻿using ErrorUtility;
+using System;
 using System.Windows.Forms;
 
 namespace CommonUtilitySample
 {
     public class DragAndDrop
     {
-        protected ErrorManager.ErrorManager _err;
+        protected ErrorManager _err;
         protected Control _control;
         public object Sender;
         public DragEventArgs DragEventArgs;
         public object DragDropObject;
         public DragEventHandler DragDropAfterEvent;
-        public DragAndDrop(ErrorManager.ErrorManager err,Control control)
+        public DragAndDrop(ErrorManager err,Control control)
         {
             _err = err;
             _control = control;

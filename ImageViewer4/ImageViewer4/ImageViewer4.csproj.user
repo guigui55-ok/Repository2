@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>"F:\ZPICTURE\jpg ss new\jpg New\0jpg op base image double\7b9cd0cf.jpg"</StartArguments>
+  </PropertyGroup>
+</Project>

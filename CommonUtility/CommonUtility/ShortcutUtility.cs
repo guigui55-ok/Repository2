@@ -1,4 +1,5 @@
 ﻿using CommonUtility.ComUtility;
+using ErrorUtility;
 using System;
 using System.Dynamic;
 using System.IO;
@@ -23,9 +24,9 @@ namespace CommonUtility.Shortcut
     public class ShortcutUtility
     {
         ShortcutDynamic _result=null;
-        protected ErrorManager.ErrorManager _err;
+        protected ErrorManager _err;
 
-        public ShortcutUtility(ErrorManager.ErrorManager err)
+        public ShortcutUtility(ErrorManager err)
         {
             _err = err;
         }

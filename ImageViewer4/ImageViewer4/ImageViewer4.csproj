@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImageViewerArgments.cs" />
     <Compile Include="ControlUtility\ChangeSizeByMouseWheel.cs" />
     <Compile Include="ControlUtility\ControlDragger.cs" />
     <Compile Include="ControlUtility\DragAndDropForFile.cs" />

@@ -46,9 +46,7 @@ using System.Runtime.InteropServices;
 //3.2.0.0
 //ExcelCellsManager.MakeAddValue メソッド
 //System.Runtime.InteropServices.COMException 例外時のエラーメッセージ追加
-
-//ErrorManager
-////2.2.0.0
+//Update Module - ErrorManager - 2.2.0.0
 //ExcelManagerConst クラス追加
 //enum ExcelManagerErrorCodes 追加
 //ExcelApps.SelectAddress メソッド修正

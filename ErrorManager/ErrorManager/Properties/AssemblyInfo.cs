@@ -32,8 +32,23 @@ using System.Runtime.InteropServices;
 // すべての値を指定するか、次を使用してビルド番号とリビジョン番号を既定に設定できます
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.2.0.0")]
-[assembly: AssemblyFileVersion("2.2.0.0")]
+[assembly: AssemblyVersion("5.4.0.0")]
+[assembly: AssemblyFileVersion("5.4.0.0")]
+
+// 5.4.0.0 - 2021/10/10
+//Add Method : public void AddLogAlert(Exception exception, object argObject, string logValue, string messageToUser = "")
+
+// 5.3.0.0 - 2021/10/10
+// Cange Class static public class Constants
+// Add Method IErrorMessenger
+// void ShowMessageAddToExistingStringToBehind(FontStyle style, Color color, string msg, string delimiter = "\n", string title = "");
+// Add Project ErrorManagerSampleForm
+
+// 4.2.0.0 - 2021/10/10
+// change namespace 
+
+// 3.2.0.0 - 2021/10/10
+// class ErrorManager - Add Meghod : void AddLogAlert(object argObject, Exception exception, string logValue, string messageToUser = "")
 
 //2.2.0.0
 //2021/10/04

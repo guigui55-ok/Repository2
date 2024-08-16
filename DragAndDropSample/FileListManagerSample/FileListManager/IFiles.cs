@@ -16,6 +16,8 @@ namespace CommonUtility.FileListUtility
         string GetCurrentValue();
         List<string> GetList();
 
+        int Count();
+
         bool IsLastIndex();
         bool IsFirstIndex();
 

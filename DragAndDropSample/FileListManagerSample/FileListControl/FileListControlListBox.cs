@@ -58,6 +58,7 @@ namespace CommonUtility.FileListUtility.FileListControl
                 _err.AddLog(this, "UpdateFileListAfterEvent");
                 int ret = SetFilesToControl(_files);
                 if (_err.hasError) { _err.AddLog(" SetFilesToControl Failed"); _err.ClearError(); }
+                SelectItem(0);
             } catch (Exception ex)
             {
                 _err.AddException(ex, this, "UpdateFileListAfterEvent");
@@ -76,6 +77,66 @@ namespace CommonUtility.FileListUtility.FileListControl
         //    }
         //}
 
+        private bool MatchValueInListBox(object listboxItem, object value)
+        {
+            try
+            {
+                if (value.GetType().Equals(typeof(string)))
+                {
+
+                    if (((string)value).Equals(_listBox.Items))
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+                else if (value.GetType().Equals(typeof(string)))
+                {
+
+                }
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+                _err.AddLogAlert(this, "MatchValueInListBox Faile", "MatchValueInListBox Failed", ex);
+                return false;
+            }
+        }
+
+        public void SelectItem(object value)
+        {
+            try
+            {
+                _err.AddLog(this, "SelectItem");
+                if (_listBox == null) { _err.AddLog(" listBox1 == null , return"); return; }
+                if (_listBox.Items.Count < 1) { _err.AddLog(" listBox1.Items.Count < 1 , retrun"); return; }
+                for (int i = 0; i < _listBox.Items.Count; i++)
+                {
+                    string item = (string)_listBox.Items[i];
+                    //if (i == 0) { Console.WriteLine("listBox1.Items[i].GetType() = " + listBox1.Items[i].GetType()); }
+                    if (value.GetType().Equals(typeof(string)))
+                    {
+                        if (item.Equals(value))
+                        {
+                            _listBox.SetSelected(i,true);return;
+                        }
+                    }
+                    if (value.GetType().Equals(typeof(int)))
+                    {
+                        if (i == (int)value)
+                        {
+                            _listBox.SetSelected(i,true);return;
+                        }
+                    }
+                }
+                _err.AddLog("Item is Nothing");
+            }
+            catch (Exception ex)
+            {
+                _err.AddLogAlert(this, "SelectItem Faile", "SelectItem Failed", ex);
+            }
+        }
         public void ClearList()
         {
             try

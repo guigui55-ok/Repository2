@@ -1,4 +1,5 @@
 ﻿using CommonUtility.ControlUtility;
+using ErrorUtility;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +14,10 @@ namespace ControlUtlitySample
 {
     public partial class ControlUtilitySampleModalForm : Form
     {
-        ErrorManager.ErrorManager _err;
+        ErrorManager _err;
         ControlUtility _util;
         Form _parentForm;
-        public ControlUtilitySampleModalForm(ErrorManager.ErrorManager err,ControlUtility util,Form parentForm)
+        public ControlUtilitySampleModalForm(ErrorManager err,ControlUtility util,Form parentForm)
         {
             InitializeComponent();
             _err = err;

@@ -12,11 +12,11 @@ namespace ImageViewer4
         /// アプリケーションのメイン エントリ ポイントです。
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ImageViewerTestForm());
+            Application.Run(new ImageViewerTestForm(args));
         }
     }
 }

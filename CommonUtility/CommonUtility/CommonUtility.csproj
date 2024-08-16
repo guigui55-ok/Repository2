@@ -72,14 +72,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\OpenFileUtilitySample\OpenFileUtilitySample\OpenedFileUtility.cs">
+      <Link>File\OpenedFileUtility.cs</Link>
+    </Compile>
     <Compile Include="..\ControlUtlitySample\ControlUtility.cs">
       <Link>ControlUtility\ControlUtility.cs</Link>
     </Compile>
     <Compile Include="Com\ComWindowsScriptHostObjectModel.cs" />
     <Compile Include="ControlUtility\MenuStripUtility.cs" />
-    <Compile Include="FileIO.cs" />
+    <Compile Include="File\FileIO.cs" />
     <Compile Include="MainClass.cs" />
-    <Compile Include="FileUtility.cs" />
+    <Compile Include="File\PathUtility.cs" />
     <Compile Include="PInvoke\AcccessFileGetterPathFromPidForExcel.cs" />
     <Compile Include="PInvoke\Handles.cs" />
     <Compile Include="ProcessUtility.cs" />
