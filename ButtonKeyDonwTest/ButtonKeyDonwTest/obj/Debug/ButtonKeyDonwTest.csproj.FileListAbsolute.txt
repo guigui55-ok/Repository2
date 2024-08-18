@@ -1,0 +1,10 @@
+C:\Users\OK\source\repos\Repository2_CS\ButtonKeyDonwTest\ButtonKeyDonwTest\bin\Debug\ButtonKeyDonwTest.exe.config
+C:\Users\OK\source\repos\Repository2_CS\ButtonKeyDonwTest\ButtonKeyDonwTest\bin\Debug\ButtonKeyDonwTest.exe
+C:\Users\OK\source\repos\Repository2_CS\ButtonKeyDonwTest\ButtonKeyDonwTest\bin\Debug\ButtonKeyDonwTest.pdb
+C:\Users\OK\source\repos\Repository2_CS\ButtonKeyDonwTest\ButtonKeyDonwTest\obj\Debug\ButtonKeyDonwTest.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\Repository2_CS\ButtonKeyDonwTest\ButtonKeyDonwTest\obj\Debug\ButtonKeyDonwTest.Form1.resources
+C:\Users\OK\source\repos\Repository2_CS\ButtonKeyDonwTest\ButtonKeyDonwTest\obj\Debug\ButtonKeyDonwTest.Properties.Resources.resources
+C:\Users\OK\source\repos\Repository2_CS\ButtonKeyDonwTest\ButtonKeyDonwTest\obj\Debug\ButtonKeyDonwTest.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\Repository2_CS\ButtonKeyDonwTest\ButtonKeyDonwTest\obj\Debug\ButtonKeyDonwTest.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository2_CS\ButtonKeyDonwTest\ButtonKeyDonwTest\obj\Debug\ButtonKeyDonwTest.exe
+C:\Users\OK\source\repos\Repository2_CS\ButtonKeyDonwTest\ButtonKeyDonwTest\obj\Debug\ButtonKeyDonwTest.pdb
