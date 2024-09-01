@@ -14,8 +14,11 @@ namespace ImageViewer4
 {
     public partial class ImageViewerTestForm : Form
     {
+        //# 
+        // Member
         protected ErrorManager.ErrorManager _err;
         private ImageViewerArgments args;
+
         public ImageViewerTestForm(string[] args)
         {
             InitializeComponent();
@@ -34,7 +37,8 @@ namespace ImageViewer4
                 Console.WriteLine(ex.Message);
             }
         }
-
+        //# 
+        // Member
         IViewImage _viewImage;
         IViewImageControl _viewImageControl;
         IViewImageFrameControl _viewImageFrameControl;
@@ -64,6 +68,8 @@ namespace ImageViewer4
                 // setPath
                 string dir = @"C:\Users\OK\source\repos\Repository2\ImageViewer4\TestData\test_jpg";
                 string filename = "01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg";
+                dir = @"C:\Users\OK\source\repos\test_media_files\test_jpg";
+                filename = "01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg";
                 string path = dir + "\\" + filename;
 
                 // args
@@ -74,7 +80,7 @@ namespace ImageViewer4
                 _viewImage = new ViewImage(_err);
                 _viewImageControl = new ViewImageControlPictureBox(_err, panel1, pictureBox1);
                 _viewImageFrameControl = new ViewImageFrameControlForm(_err, this);
-                ViewImageFunction = new ViewImageFunction(_err, _viewImage,_viewImageFrameControl, _viewImageControl);
+                ViewImageFunction = new ViewImageFunction(_err, _viewImage, _viewImageFrameControl, _viewImageControl);
 
                 // viewImageObject 画像をコントロールに表示する
                 //_viewImage = new ViewImage(_err);

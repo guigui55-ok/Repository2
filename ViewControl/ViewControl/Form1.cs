@@ -16,5 +16,11 @@ namespace ViewControl
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // 240829
+            // 作成中
+        }
     }
 }

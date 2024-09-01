@@ -1,21 +1,22 @@
 ﻿using SelectFileSample.SelectFile;
 using System;
 using System.Collections.Generic;
+using AppLoggerModule;
 
 namespace ControlUtility.SelectFiles
 {
     // FileListMain
     public class SingleFile　: IFiles
     {
-        protected ErrorManager.ErrorManager _err;
+        public AppLogger _logger;
         protected string _filePath = "";
         public int CurrentIndex = 0;
         EventHandler _changeFiles;
         public EventHandler ChangedFileList { get => _changeFiles; set => _changeFiles = value; }
 
-        public SingleFile(ErrorManager.ErrorManager err, List<string> list)
+        public SingleFile(AppLogger logger, List<string> list)
         {
-            _err = err;
+            _logger = logger;
             Initialize();
             this.FileList = list;
         }
@@ -26,7 +27,7 @@ namespace ControlUtility.SelectFiles
             {
                 
             }
-            catch (Exception ex) { _err.AddException(ex, this, "initialize Failed"); return; }
+            catch (Exception ex) { _logger.AddException(ex, this, "initialize Failed"); return; }
         }
 
         /// <summary>
@@ -53,7 +54,7 @@ namespace ControlUtility.SelectFiles
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "GetCurrentValue Failed");
+                _logger.AddException(ex, this, "GetCurrentValue Failed");
                 return "";
             }
         }
@@ -67,27 +68,27 @@ namespace ControlUtility.SelectFiles
             {
                 try
                 {
-                    _err.AddLog(this, "FileList:PropertySet");
+                    _logger.AddLog(this, "FileList:PropertySet");
                     List<string> _fileList;
                     _fileList = value;
                     if ((_fileList != null) && (_fileList.Count > 0))
                     {
                         //int ret = ResetListOrder();
-                        //if (ret < 1) { _err.AddLogAlert(this, "FileList Property:resetListOrder"); return; }
+                        //if (ret < 1) { _logger.AddLogAlert(this, "FileList Property:resetListOrder"); return; }
                         _filePath = _fileList[0];
                         if(_fileList.Count >= 2)
                         {
-                            _err.AddLogWarning("  SetFileList.Count >= 2");
+                            _logger.AddLogWarning("  SetFileList.Count >= 2");
                         }
                     }
                     else
                     {
-                        _err.AddLogAlert("((_fileList != null) && (_fileList.Count > 0))==false");
+                        _logger.AddLogAlert("((_fileList != null) && (_fileList.Count > 0))==false");
                     }
                 }
                 catch (Exception ex)
                 {
-                    _err.AddException(ex, this, "FileList Property");
+                    _logger.AddException(ex, this, "FileList Property");
                 }
             }
         }
@@ -119,7 +120,7 @@ namespace ControlUtility.SelectFiles
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "GetList");
+                _logger.AddException(ex, this, "GetList");
                 return new List<string>();
             }
         }

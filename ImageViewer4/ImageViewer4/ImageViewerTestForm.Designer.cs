@@ -35,7 +35,7 @@ namespace ImageViewer4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 341);
+            this.ClientSize = new System.Drawing.Size(416, 450);
             this.Name = "ImageViewerTestForm";
             this.Text = "ImageViewerTest";
             this.Load += new System.EventHandler(this.ImageViewerTestForm_Load);

@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AppLoggerModule;
 
 namespace SelectFileSample.SelectFile
 {
     public class CreateRandomList
     {
-        protected ErrorManager.ErrorManager _err;
-        public CreateRandomList(ErrorManager.ErrorManager err)
+        public AppLogger _logger;
+        public CreateRandomList(AppLogger logger)
         {
-            _err = err;
+            _logger = logger;
         }
         /// <summary>
         /// リストをランダムにする
@@ -22,12 +23,12 @@ namespace SelectFileSample.SelectFile
             try
             {
                 List<int> indexList = CreateIndexList(valueList.Count);
-                indexList = new CommonUtility.MyRandom(_err).ListToRandom(indexList);
+                indexList = new CommonUtility.MyRandom(this._logger).ListToRandom(indexList);
                 return GetRandomListFromIndexList(valueList,indexList);
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "ListOrtderToRandom");
+                _logger.AddException(ex, this, "ListOrtderToRandom");
                 return new List<string>();
             }
         }
@@ -59,7 +60,7 @@ namespace SelectFileSample.SelectFile
                 return retList;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "GetRandomListFromIndexList");
+                _logger.AddException(ex, this, "GetRandomListFromIndexList");
                 return retList;
             }
         }
@@ -78,14 +79,14 @@ namespace SelectFileSample.SelectFile
         //        }
         //        if (_indexList.Count != _fileList.Count)
         //        {
-        //            _err.AddLogAlert(this, "List Count Is Difference");
+        //            _logger.AddLogAlert(this, "List Count Is Difference");
         //        }
         //        IsRandom = false;
         //        return 1;
         //    }
         //    catch (Exception ex)
         //    {
-        //        _err.AddException(ex, this, "makeIndexList");
+        //        _logger.AddException(ex, this, "makeIndexList");
         //        return 0;
         //    }
         //    finally

@@ -1,22 +1,90 @@
 ﻿using System;
 using System.Collections.Generic;
+using AppLoggerModule;
 
 namespace CommonUtility.FileListUtility
 {
     // FileListMain
     public class Files : IFiles
     {
-        protected ErrorManager.ErrorManager _err;
+        public AppLogger _logger;
         protected List<string> _fileList;
+        //public List<string> _supportedImageExtensionList;'外部で絞込処理をする為コメントアウトするが、クラス内部で必要になるかもしれない 240901
         protected string _directoryPath = "";
         public int NowIndex = 0;
         EventHandler _changeFilesEvent;
+        EventHandler _selectedFileEvent;
+        //外部からファイル変更されたときのフラグ（このクラス内で変更されたときと処理が競合するのを防止するためのフラグ）
+        public bool _isRecievedChangeFileFromOut = false;
+        //このクラスからファイルが変更されたときのフラグ
+        public bool _isChangeFileInThis = false;
         public EventHandler ChangedFileListEvent { get => _changeFilesEvent; set => _changeFilesEvent = value; }
+
+        //検討中
+        EventHandler IFiles.SelectedFileEvent { get => _selectedFileEvent; set => _selectedFileEvent= value; }
+
+        //List<string> IFiles.SupportedImageExtensionList { get => _supportedImageExtensionList; set => _supportedImageExtensionList = value; }
+
+        //List<string> SupportedImageExtensionList { get=> _supportedImageExtensionList; set => _supportedImageExtensionList=value; }
         public string DirectoryPath { get => _directoryPath; set => _directoryPath = value; }
-        public Files(ErrorManager.ErrorManager err, List<string> list)
+        public AppLogger Logger { get => this._logger; set => this._logger = value; }
+        public Files(AppLogger logger, List<string> list)
         {
-            _err = err;
+            this._logger = logger;
             this.FileList = list;
+        }
+
+        /// <summary>
+        /// 外部でfilesが変更されたときに、このクラスのindexも変更する
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void ChangeFileRecieve(object sender, EventArgs e)
+        {
+            _isRecievedChangeFileFromOut = true;
+            try
+            {
+                // senderはfiles.listのindexが送られる
+                if (sender.GetType().Equals(typeof(int)))
+                {
+                    this.Move((int)sender);
+                }
+                else
+                {
+                    _logger.AddLogWarning("sender type invalid");
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.AddLogAlert(this, "SelectedFile", ex);
+            }
+            finally
+            {
+                _isRecievedChangeFileFromOut = false;
+            }
+        }
+        public void SelectedFileEventInThis(object sender, EventArgs e)
+        {
+            _isRecievedChangeFileFromOut = true;
+            try
+            {
+                if (sender.GetType().Equals(typeof(int)))
+                {
+                    this.Move((int)sender);
+                }
+                else
+                {
+                    _logger.AddLogWarning("sender type invalid");
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.AddLogAlert(this, "SelectedFile", ex);
+            }
+            finally
+            {
+                _isRecievedChangeFileFromOut = false;
+            }
         }
 
         public int Count()
@@ -40,28 +108,12 @@ namespace CommonUtility.FileListUtility
             if (NowIndex <= 0) { return true; }
             else { return false; }
         }
-        public void SelectedFileEvent(object sender,EventArgs e)
-        {
-            try
-            {
-                if (sender.GetType().Equals(typeof(int)))
-                {
-                    this.Move((int)sender);
-                } else
-                {
-                    _err.AddLogWarning("sender type invalid");
-                }
-            } catch (Exception ex)
-            {
-                _err.AddLogAlert(this, "SelectedFile", "",ex);
-            }
-        }
 
         public void ResetList(bool withEvent = true)
         {
             try
             {
-                _err.AddLog(this, "ResetList");
+                _logger.AddLog(this, "ResetList");
                 _fileList = new List<string>();
                 DirectoryPath = "";
                 NowIndex = 0;
@@ -71,7 +123,7 @@ namespace CommonUtility.FileListUtility
                 }
             } catch (Exception ex)
             {
-                _err.AddException(ex,this, "ResetList");
+                _logger.AddException(ex,this, "ResetList");
             }
         }
 
@@ -79,21 +131,41 @@ namespace CommonUtility.FileListUtility
         {
             try
             {
-                if (_fileList == null) { _err.AddLog(this, "Move(string value) _fileList==null"); return; }
+                if (_fileList == null) { _logger.AddLog(this, "Move(string value) _fileList==null"); return; }
                 if ((value == null) || (value == "")) { return; }
-                for(int i=0; i<_fileList.Count; i++)
+                //for(int i=0; i<_fileList.Count; i++)
+                //{
+                //    if (_fileList[i].Equals(value))
+                //    {
+                //        Move(i);
+                //        return;
+                //    }
+                //}
+                //_logger.AddLog(this, "Move(string value) value is Nothing");
+                // 240830
+                // 処理を変更
+                int i = _fileList.IndexOf(value);
+                if (i < 0)
                 {
-                    if (_fileList[i].Equals(value))
-                    {
-                        Move(i);
-                        return;
-                    }
+                    string msg;
+                    msg = String.Format("Move(string Value) Value Is Nothing [{0}]", value);
+                    _logger.AddLog(this, msg);
+                    return;
                 }
-                _err.AddLog(this, "Move(string value) value is Nothing");
+                Move(i);
+                return;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "Move(string value)");
+                _logger.AddException(ex, this, "Move(string value)");
             }
+        }
+
+        private void RaiseSelectedFileEvent()
+        {
+            //if (_isRecievedChangeFileFromOut) { return; } //複数のイベントが紐づけられている可能性があり、この場合、一部のイベントが除外されるため、利用する側でイベントループを抑制する。
+            _isChangeFileInThis = true;
+            _selectedFileEvent?.Invoke(this.GetCurrentValue(), EventArgs.Empty);
+            _isChangeFileInThis = false;
         }
 
         public void Move(int index)
@@ -102,11 +174,12 @@ namespace CommonUtility.FileListUtility
             if ((index <= _fileList.Count - 1)&&(index >= 0))
             {
                 NowIndex = index;
-                _err.AddLog(this, "Move(int index) index=" + NowIndex);
+                _logger.AddLog(this, "Move(int index) index=" + NowIndex);
+                RaiseSelectedFileEvent();
             }
             else
             {
-                _err.AddLogWarning(this, "Move(int index) index is invalid");
+                _logger.AddLogWarning(this, "Move(int index) index is invalid");
             }
         }
 
@@ -122,8 +195,9 @@ namespace CommonUtility.FileListUtility
             } else
             {
                 NowIndex++;
-                _err.AddLog(this, "MoveNext index=" + NowIndex);
+                _logger.AddLog(this, "MoveNext index=" + NowIndex);
             }
+            RaiseSelectedFileEvent();
         }
         /// <summary>
         /// List の Index をひとつ前へ移動する。最小値を下回ったときは最後に移動する。
@@ -137,8 +211,9 @@ namespace CommonUtility.FileListUtility
             } else
             {
                 NowIndex--;
-                _err.AddLog(this, "MovePrevious index=" + NowIndex);
+                _logger.AddLog(this, "MovePrevious index=" + NowIndex);
             }
+            RaiseSelectedFileEvent();
         }
         /// <summary>
         /// CurrentIndex の値を取得する。
@@ -149,11 +224,11 @@ namespace CommonUtility.FileListUtility
             try
             {
                 if (_fileList == null) { return""; }
-                if (_fileList.Count < 1) { _err.AddLog(this,"GetCurrentValue : FileList.Count<1"); return ""; }
+                if (_fileList.Count < 1) { _logger.AddLog(this,"GetCurrentValue : FileList.Count<1"); return ""; }
                 return _fileList[NowIndex];
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "GetCurrentValue Failed");
+                _logger.AddException(ex, this, "GetCurrentValue Failed");
                 return "";
             }
         }
@@ -167,20 +242,30 @@ namespace CommonUtility.FileListUtility
             {
                 try
                 {
-                    _err.AddLog(this, "FileList:PropertySet");
+                    _logger.AddLog(this, "FileList:PropertySet");
                     _fileList = value;
                     if ((_fileList != null) && (_fileList.Count > 0)) {
                         //int ret = ResetListOrder();
-                        //if (ret < 1) { _err.AddLogAlert(this, "FileList Property:resetListOrder"); return; }
+                        //if (ret < 1) { _logger.AddLogAlert(this, "FileList Property:resetListOrder"); return; }
+                        //NowIndex = 0;
                     }
-                    NowIndex = 0;
+                    else
+                    {
+
+                    }
+                    //240830
+                    // 現状では、ファイルが空の時は SelectedItem が実行されないが
+                    // 実行されるようにするかは検討中
+                    Move(0);
+                    _changeFilesEvent?.Invoke(this.DirectoryPath, EventArgs.Empty);
 
                 } catch (Exception ex)
                 {
-                    _err.AddException(ex, this, "FileList Set Property");
+                    _logger.AddException(ex, this, "FileList Set Property");
                 }
             }
         }
+
         /// <summary>
         /// ファイルリストを取得する。
         /// </summary>
@@ -193,10 +278,14 @@ namespace CommonUtility.FileListUtility
                 return _fileList;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "GetList");
+                _logger.AddException(ex, this, "GetList");
                 return _fileList;
             }
         }
-        
+
+        public void UpdateFileList(List<string> list)
+        {
+            this.FileList = list;
+        }
     }
 }

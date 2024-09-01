@@ -2,6 +2,8 @@
 using CommonUtility.FileListUtility;
 using System;
 using System.Collections.Generic;
+using AppLoggerModule;
+using System.IO;
 
 namespace CommonUtility.FileListUtility
 {
@@ -12,14 +14,17 @@ namespace CommonUtility.FileListUtility
     }
     public class FileListManager
     {
-        protected ErrorManager.ErrorManager _err;
+        public AppLogger _logger;
         protected IFiles _files;
         protected List<string> _folderList;
-        protected FileListRegister _filesRegister;
+        public FileListRegister _filesRegister;
         protected RandomListCreater randomListCreater;
         protected DirectoryGetter _directoryGetter;
+        // CurrentFileが更新されたときのイベント
         public EventHandler UpdateFileListAfterEvent;
         public int ReadOption = 1;
+        //public List<string> _fileFilterConditionList = new List<string> { };
+        //public List<string> _fileIgnoreConditionList = new List<string> { };
 
         // ショートカットの元を読み取る
         public bool IsReadSourceOfShotcut { 
@@ -41,13 +46,16 @@ namespace CommonUtility.FileListUtility
 
         protected bool IsRandom = false;
         
-        public FileListManager(ErrorManager.ErrorManager err,IFiles files)
+        public FileListManager(AppLogger logger, IFiles files)
         {
-            _err = err;
+            this._logger = logger;
             _files = files;
-            _filesRegister = new FileListRegister(_err);
+            _filesRegister = new FileListRegister();
+            _filesRegister._logger = logger;
             _files.ChangedFileListEvent += ChangedFileListEvent;
-            _directoryGetter = new DirectoryGetter(_err);
+            _directoryGetter = new DirectoryGetter(_logger);
+            _directoryGetter._logger = logger;
+            this.randomListCreater = new RandomListCreater(this._logger);
         }
 
         // SetFileListFromFolderList
@@ -58,10 +66,10 @@ namespace CommonUtility.FileListUtility
         {
             try
             {
-                _err.AddLog(this, "ChangedFileList");
+                _logger.AddLog(this, "ChangedFileList");
             } catch (Exception ex)
             {
-                _err.AddException(ex, this.ToString(), "ChangedFileList");
+                _logger.AddException(ex, this.ToString(), "ChangedFileList");
             }
         }
 
@@ -70,22 +78,65 @@ namespace CommonUtility.FileListUtility
             return _filesRegister.GetFilePathFromShortcut(path);
         }
 
-        public void SetFilesFromPath(string path)
+
+        /// <param name="supportedImageExtentionList">
+        /// 対応する拡張子リスト。不要な場合はnullを渡す
+        /// nullの場合でも、_fileListManagerのメンバ変数 _supportedImageExtentionList に設定されていたらこれを使用する
+        /// 無効にするときは List string {} を渡す
+        /// </param>
+        public void SetFilesFromPath(
+            string path,
+            List<string> fileFilterConditionList = null,
+            List<string> fileIgnoreConditionList = null)
         {
             try
             {
-                _err.AddLog(this, "SetFilesFromPath");
-               int ret = _filesRegister.SetFileListFromPath(path);
-               if (_err.hasAlert) { _err.AddLogAlert("  SetFileListFromPath Failed"); }
+                //throw new Exception("supportedImageExtentionList の処理未実装");
+                // Nullの時、メンバを使用する。 絞り込み処理をRegisterでする？
+                _logger.AddLog(this, "SetFilesFromPath");
+                // ファイルフィルターリスト、除外リスト
+                if (fileFilterConditionList == null) { fileFilterConditionList = _filesRegister._fileFilterConditionList; }
+                if (fileFilterConditionList.Count < 1) { fileFilterConditionList = _filesRegister._fileFilterConditionList; }
+                if (fileIgnoreConditionList == null) { fileIgnoreConditionList = _filesRegister._fileIgnoreConditionList; }
+                if (fileIgnoreConditionList.Count < 1) { fileIgnoreConditionList = _filesRegister._fileIgnoreConditionList; }
+                //
+                string buf;
+                buf = String.Format("fileFilterConditionList = {0}", string.Join(",", fileFilterConditionList));
+                _logger.AddLog(buf);
+                buf = String.Format("fileIgnoreConditionList = {0}", string.Join(",", fileIgnoreConditionList));
+                _logger.AddLog(buf);
+                ////
+                // ファイルリスト取得
+                _filesRegister.SetConditionList(fileFilterConditionList, fileIgnoreConditionList);
+                int ret = _filesRegister.SetFileListFromPath(
+                   path, fileFilterConditionList, fileIgnoreConditionList);
+                ////
+               if (_logger.hasAlert()) { _logger.AddLogAlert("  SetFileListFromPath Failed"); }
                 _files.DirectoryPath = _filesRegister.DirectoryPath;
-                _err.AddLog("  SetDirecoryPath="+ _files.DirectoryPath);
+                _logger.AddLog("  SetDirecoryPath="+ _files.DirectoryPath);
+                // 
+                // Directory更新とFile更新のイベントがほぼ同時に走るので
+                // それぞれの後続の処理が干渉しあわないように注意
+                //
                 _files.FileList = _filesRegister.GetList();
-                _files.Move(_filesRegister.getFile(path, IsReadSourceOfShotcut));
+                string movePath = _filesRegister.getFile(path, IsReadSourceOfShotcut);
+                _logger.AddLog(string.Format("movePath = {0}", movePath));
+                if (Directory.Exists(path))
+                {
+                    // MoveDirectoryでこのmovePathが読み込みルートのディレクトリになる
+                    _files.Move(0);
+                }
+                else
+                {
+                    // ファイルの場合はそのまま選択する
+                    // 引数のpathがファイルがリストにない場合は（index0にする）　未対応 240901
+                    _files.Move(movePath);
+                }
                 UpdateFileListAfterEvent?.Invoke(_files.FileList.ToArray(), EventArgs.Empty);
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this.ToString(), "SetFilesFromPath");
+                _logger.AddException(ex, this.ToString(), "SetFilesFromPath");
             }
         }
 
@@ -97,9 +148,13 @@ namespace CommonUtility.FileListUtility
                 else { _files.MoveNext(); }                
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "MoveNextFileWhenLastFileNextDirectory");
+                _logger.AddException(ex, this, "MoveNextFileWhenLastFileNextDirectory");
             }
         }
+        /// <summary>
+        /// 現在のファイル位置がリストの最初なら、前のディレクトリに移動する
+        /// そうでなければ、1つ前のファイルに移動する
+        /// </summary>
         public void MoveProviousFileWhenFirstFilePreviousDirectory()
         {
             try
@@ -109,7 +164,7 @@ namespace CommonUtility.FileListUtility
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "MoveNextFileWhenLastFileNextDirectory");
+                _logger.AddException(ex, this, "MoveNextFileWhenLastFileNextDirectory");
             }
         }
 
@@ -117,26 +172,26 @@ namespace CommonUtility.FileListUtility
         {
             try
             {
-                _err.AddLog(this, "MoveNextDirectory");
+                _logger.AddLog(this, "MoveNextDirectory");
                 string dir = _directoryGetter.GetNextDirectory(_files.DirectoryPath);
                 SetFilesFromPath(dir);
-                if (_err.hasError) { _err.AddLogAlert(this, "MoveNextDirectory Failed"); _err.ClearError(); }
+                if (_logger.hasError()) { _logger.AddLogAlert(this, "MoveNextDirectory Failed"); _logger.ClearError(); }
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "MoveNextDirectory");
+                _logger.AddException(ex, this, "MoveNextDirectory");
             }
         }
         public void MovePreviousDirectory()
         {
             try
             {
-                _err.AddLog(this, "MovePreviousDirectory");
+                _logger.AddLog(this, "MovePreviousDirectory");
                 string dir = _directoryGetter.GetPreviousDirectory(_files.DirectoryPath);
                 SetFilesFromPath(dir);
-                if (_err.hasError) { _err.AddLogAlert(this, "MovePreviousDirectory Failed"); _err.ClearError(); }
+                if (_logger.hasError()) { _logger.AddLogAlert(this, "MovePreviousDirectory Failed"); _logger.ClearError(); }
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "MovePreviousDirectory");
+                _logger.AddException(ex, this, "MovePreviousDirectory");
             }
         }
 
@@ -149,10 +204,10 @@ namespace CommonUtility.FileListUtility
         //{
         //    try
         //    {
-        //        _err.AddLog(this, "RegistFileListByDragDrop");
+        //        _logger.AddLog(this, "RegistFileListByDragDrop");
         //        // DragDrop の e を配列へ
         //        string[] files = GetFilesByDragAndDrop(e);
-                
+
         //        // 配列→Listへ
         //        List<string> list = new List<string>(files);
 
@@ -162,29 +217,29 @@ namespace CommonUtility.FileListUtility
         //        int ret = this._filesRegister.SetFileList(list);
         //        if (ret < 1)
         //        {
-        //            _err.AddLogWarning("  Control_DragDrop.setFileList Failed");
+        //            _logger.AddLogWarning("  Control_DragDrop.setFileList Failed");
         //            return;
         //        }
-        //        _err.AddLog("  List.Count = " + _filesRegister.GetListCount());
+        //        _logger.AddLog("  List.Count = " + _filesRegister.GetListCount());
         //        // ファイルリストへ登録する
         //        _files.FileList = _filesRegister.GetList();
 
-        //        if (_err.hasAlert) { _err.AddLogAlert("  SetFileList Failed"); }
+        //        if (_logger.hasAlert()) { _logger.AddLogAlert("  SetFileList Failed"); }
         //        else
         //        {
-        //            _err.AddLog("  SetFileList Success!");
+        //            _logger.AddLog("  SetFileList Success!");
         //        }
         //        UpdateFileListAfterEvent?.Invoke(_files.FileList.ToArray(), EventArgs.Empty);
         //    }
         //    catch (Exception ex)
         //    {
-        //        _err.AddException(ex, this.ToString(), "RegistFileListByDragDrop");
+        //        _logger.AddException(ex, this.ToString(), "RegistFileListByDragDrop");
         //    }
         //    finally
         //    {
-        //        if (_err.hasError)
+        //        if (_logger.hasError())
         //        {
-        //            Debug.WriteLine(_err.GetLastErrorMessagesAsString(3,true));
+        //            Debug.WriteLine(_logger.GetLastErrorMessagesAsString(3,true));
         //        }
         //    }
         //}
@@ -205,13 +260,13 @@ namespace CommonUtility.FileListUtility
         //        }
         //        else
         //        {
-        //            _err.AddLogAlert(this, "e.Data.GetDataPresent(DataFormats.FileDrop)=false");
+        //            _logger.AddLogAlert(this, "e.Data.GetDataPresent(DataFormats.FileDrop)=false");
         //            return null;
         //        }
         //    }
         //    catch (Exception ex)
         //    {
-        //        _err.AddException(ex, this.ToString(), "GetFilesByDragAndDrop");
+        //        _logger.AddException(ex, this.ToString(), "GetFilesByDragAndDrop");
         //        return null;
         //    }
         //}
@@ -243,7 +298,7 @@ namespace CommonUtility.FileListUtility
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "switchOrderToRandomOrCorrect");
+                _logger.AddException(ex, this, "switchOrderToRandomOrCorrect");
                 return 0;
             }
         }

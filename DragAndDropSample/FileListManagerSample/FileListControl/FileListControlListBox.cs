@@ -1,37 +1,77 @@
 ﻿using CommonUtility.FileListUtility;
 using System;
 using System.Windows.Forms;
+using AppLoggerModule;
 
 namespace CommonUtility.FileListUtility.FileListControl
 {
     public class FileListControlListBox : IFileListControl
     {
-        protected ErrorManager.ErrorManager _err;
+        public AppLogger _logger;
         protected IFiles _files;
         protected ListBox _listBox;
         protected EventHandler _selectedItemEvent;
+        // リスト内のItemがクリックされて、変更されたときのフラグ
+        // filesの選択が変更されたときと、イベントがループしないように管理するためのフラグ
+        public bool _isClickedList = false;
+        // 外部でfilesの選択が変更されたときのフラグ
+        public bool _isRecievedChangeFile = false;
 
         public EventHandler SelectedItemEvent { get => _selectedItemEvent; set => _selectedItemEvent = value; }
         IFiles IFileListControl.Files { get => _files; set => _files = value; }
+        AppLogger IFileListControl.Logger { get => this._logger; set => this._logger = value; }
 
-        public FileListControlListBox(ErrorManager.ErrorManager err,ListBox listBox, IFiles files)
+        public FileListControlListBox(AppLogger logger, ListBox listBox, IFiles files)
         {
-            _err = err;
+            this._logger = logger;
             _listBox = listBox;
             _files = files;
             _listBox.Click += ListBox_Click;
         }
 
-        private void ListBox_Click(object sender, EventArgs e)
+        /// <summary>
+        /// _filesが直接変更されたとき、コントロールに反映させる
+        /// _files.SelectedItemから呼び出される（RecieveEvent用）
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void ChangedFileInFile(object sender, EventArgs e)
         {
+            if (_isClickedList) { return; }
+            _isRecievedChangeFile = true;
             try
             {
-                _err.AddLog(this,"_listBox_Click");
+                // senderはファイルパス
+                _logger.AddLog(this, "ChangedFileInFile");
+                string path = (string)sender;
+                SelectItem(path);
+            }
+            catch (Exception ex)
+            {
+                _logger.AddException(ex, this, "_listBox_Click");
+                _logger.ClearError();
+            }
+            finally
+            {
+                _isRecievedChangeFile = false;
+            }
+        }
+
+        private void ListBox_Click(object sender, EventArgs e)
+        {
+            _isClickedList = true;
+            try
+            {
+                _logger.AddLog(this,"_listBox_Click");
                 SelectedItemEvent?.Invoke(_listBox.SelectedIndex, EventArgs.Empty);
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "_listBox_Click");
-                _err.ClearError();
+                _logger.AddException(ex, this, "_listBox_Click");
+                _logger.ClearError();
+            }
+            finally
+            {
+                _isClickedList = false;
             }
         }
 
@@ -40,13 +80,13 @@ namespace CommonUtility.FileListUtility.FileListControl
             try
             {
                 ClearList();
-                if (files.FileList == null) { _err.AddLogWarning("files.FileList == null"); return -1; }
+                if (files.FileList == null) { _logger.AddLogWarning("files.FileList == null"); return -1; }
                 _listBox.Items.AddRange(files.FileList.ToArray());
                 return 1;
 
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "SetFilesToControl");
+                _logger.AddException(ex, this, "SetFilesToControl");
                 return 0;
             }
         }
@@ -55,14 +95,14 @@ namespace CommonUtility.FileListUtility.FileListControl
         {
             try
             {
-                _err.AddLog(this, "UpdateFileListAfterEvent");
+                _logger.AddLog(this, "UpdateFileListAfterEvent");
                 int ret = SetFilesToControl(_files);
-                if (_err.hasError) { _err.AddLog(" SetFilesToControl Failed"); _err.ClearError(); }
+                if (_logger.hasError()) { _logger.AddLog(" SetFilesToControl Failed"); _logger.ClearError(); }
                 SelectItem(0);
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "UpdateFileListAfterEvent");
-                _err.ClearError();
+                _logger.AddException(ex, this, "UpdateFileListAfterEvent");
+                _logger.ClearError();
             }
         }
 
@@ -99,7 +139,7 @@ namespace CommonUtility.FileListUtility.FileListControl
             }
             catch (Exception ex)
             {
-                _err.AddLogAlert(this, "MatchValueInListBox Faile", "MatchValueInListBox Failed", ex);
+                _logger.AddLogAlert(this, "MatchValueInListBox Failed", ex);
                 return false;
             }
         }
@@ -108,9 +148,9 @@ namespace CommonUtility.FileListUtility.FileListControl
         {
             try
             {
-                _err.AddLog(this, "SelectItem");
-                if (_listBox == null) { _err.AddLog(" listBox1 == null , return"); return; }
-                if (_listBox.Items.Count < 1) { _err.AddLog(" listBox1.Items.Count < 1 , retrun"); return; }
+                _logger.AddLogTrace(this, "SelectItem");
+                if (_listBox == null) { _logger.AddLog(" listBox1 == null , return"); return; }
+                if (_listBox.Items.Count < 1) { _logger.AddLog(" listBox1.Items.Count < 1 , retrun"); return; }
                 for (int i = 0; i < _listBox.Items.Count; i++)
                 {
                     string item = (string)_listBox.Items[i];
@@ -119,22 +159,24 @@ namespace CommonUtility.FileListUtility.FileListControl
                     {
                         if (item.Equals(value))
                         {
-                            _listBox.SetSelected(i,true);return;
+                            _listBox.SetSelected(i,true);
+                            return;
                         }
                     }
                     if (value.GetType().Equals(typeof(int)))
                     {
                         if (i == (int)value)
                         {
-                            _listBox.SetSelected(i,true);return;
+                            _listBox.SetSelected(i,true);
+                            return;
                         }
                     }
                 }
-                _err.AddLog("Item is Nothing");
+                _logger.AddLog("Item is Nothing");
             }
             catch (Exception ex)
             {
-                _err.AddLogAlert(this, "SelectItem Faile", "SelectItem Failed", ex);
+                _logger.AddLogAlert(this, "SelectItem Faile > " + "SelectItem Failed", ex);
             }
         }
         public void ClearList()
@@ -156,7 +198,7 @@ namespace CommonUtility.FileListUtility.FileListControl
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "ClearList");
+                _logger.AddException(ex, this, "ClearList");
             }
         }
 

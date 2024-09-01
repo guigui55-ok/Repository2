@@ -11,12 +11,13 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppLoggerModule;
 
 namespace SelectFileSample
 {
     public partial class SelectFileSampleForm : Form
     {
-        readonly ErrorManager.ErrorManager _err;
+        public AppLogger _logger;
         Thread subThread;
         bool WriteToEditBox = false;
         object _sender;
@@ -25,7 +26,8 @@ namespace SelectFileSample
         string ToRichtextValue = "";
         public SelectFileSampleForm()
         {
-            _err = new ErrorManager.ErrorManager(1);
+            this._logger = new AppLogger();
+            this._logger.SetDefaultValues();
             InitializeComponent();
             this.FormClosing += SelectFileSampleForm_FormClosing;
         }
@@ -45,15 +47,15 @@ namespace SelectFileSample
             {
                 // DragDrop をするためのクラス
                 this.AllowDrop = true;
-                fileDragDrop = new SelectFileByDragDrop(_err, this);
+                fileDragDrop = new SelectFileByDragDrop(this._logger, this);
                 // Control を追加する
                 this.richTextBox1.AllowDrop = true;
                 fileDragDrop.AddRecieveControl(this.richTextBox1);
                 // ファイルリストを扱うクラス
                 list = new List<string>();
-                files = new Files(_err,list);
+                files = new Files(this._logger, list);
                 // ファイルリストを登録するクラス
-                fileListManager = new FileListManager(_err, files);
+                fileListManager = new FileListManager(this._logger, files);
                 // FileDragDrop イベントを紐づけする
                 this.DragDrop += fileListManager.RegistFileByDragDrop;
                 this.richTextBox1.DragDrop += fileListManager.RegistFileByDragDrop;
@@ -67,7 +69,7 @@ namespace SelectFileSample
                 subThread.Start();
             } catch (Exception ex)
             {
-                _err.AddException(ex,this,"Form1_Load");
+                _logger.AddException(ex,this,"Form1_Load");
             }
         }
 
@@ -80,7 +82,7 @@ namespace SelectFileSample
                 WriteToEditBox = true;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "AddValueToControlFromUpdateList");
+                _logger.AddException(ex, this, "AddValueToControlFromUpdateList");
             }
         }
         //public delegate void AddValueToControlFromUpdateList_Del(object sender, EventArgs e);
@@ -132,7 +134,7 @@ namespace SelectFileSample
             } catch (Exception ex)
             {
                 Console.WriteLine("  Thread=" + Thread.CurrentThread.ManagedThreadId);
-                _err.AddException(ex, this, "DoLoopSubThread");
+                _logger.AddException(ex, this, "DoLoopSubThread");
             }
         }
 
@@ -140,8 +142,8 @@ namespace SelectFileSample
         {
             try
             {
-                _err.AddLog(this, "AddValueToControlFromUpdateList_Main");
-                _err.AddLog("  Thread="+Thread.CurrentThread.ManagedThreadId);
+                _logger.AddLog(this, "AddValueToControlFromUpdateList_Main");
+                _logger.AddLog("  Thread="+Thread.CurrentThread.ManagedThreadId);
                 // ファイルリストを更新した後に実行する
                 // コントロールにファイルリストを表示する
                 if (sender.GetType().Equals(typeof(string[])))
@@ -159,13 +161,13 @@ namespace SelectFileSample
                     ToRichtextValue = buf;
                 } else
                 {
-                    _err.AddLogAlert(this,"  sender is Invalid Type");
+                    _logger.AddLogAlert(this,"  sender is Invalid Type");
                 }
 
             } catch (Exception ex)
             {
                 Console.WriteLine("  Thread=" + Thread.CurrentThread.ManagedThreadId);
-                _err.AddException(ex, this, "AddValueToControlFromUpdateList_Main Failed");
+                _logger.AddException(ex, this, "AddValueToControlFromUpdateList_Main Failed");
             }
         }
 
@@ -176,7 +178,7 @@ namespace SelectFileSample
 
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "AddValueToControlFromUpdateList");
+                _logger.AddException(ex, this, "AddValueToControlFromUpdateList");
             }
         }
     }

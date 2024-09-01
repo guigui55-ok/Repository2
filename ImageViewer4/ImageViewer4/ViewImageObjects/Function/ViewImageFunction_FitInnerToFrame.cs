@@ -11,8 +11,11 @@ namespace ViewImageObjects
         protected IViewImageFrameControl _viewimageFrameControl;
         protected IViewImage _viewImage;
 
-        public ViewImageFunction_FitInnerToFrame(ErrorManager.ErrorManager err,
-            IViewImageFrameControl viewImageFrameControl, IViewImageControl viewImageControl,IViewImage viewImage)
+        public ViewImageFunction_FitInnerToFrame(
+            ErrorManager.ErrorManager err,
+            IViewImageFrameControl viewImageFrameControl,
+            IViewImageControl viewImageControl,
+            IViewImage viewImage)
         {
             _err = err;
             _viewImageControl = viewImageControl;

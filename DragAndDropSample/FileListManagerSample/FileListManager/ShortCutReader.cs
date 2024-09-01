@@ -1,14 +1,16 @@
-﻿using System;
+﻿using AppLoggerModule;
+using System;
 using System.IO;
+
 
 namespace CommonUtility.FileListUtility
 {
     public class ShortCutReader
     {
-        protected ErrorManager.ErrorManager _err;
-        public ShortCutReader(ErrorManager.ErrorManager err)
+        protected AppLogger _logger;
+        public ShortCutReader(AppLogger logger)
         {
-            _err = err;
+            _logger = logger;
         }
         public string GetSourceFromPath(string path)
         {
@@ -25,7 +27,7 @@ namespace CommonUtility.FileListUtility
                 return targetPath;
             } catch (Exception ex)
             {
-                _err.AddException(ex,this,"ReadShotcut.GetSourceFromPath Failed");
+                _logger.AddException(ex,this,"ReadShotcut.GetSourceFromPath Failed");
                 return "";
             }
         }
@@ -45,7 +47,7 @@ namespace CommonUtility.FileListUtility
                 return ret;
                 } catch (Exception ex)
             {
-                _err.AddException(ex,this,"ReadShotcut.GetSourceFromPathWithCheck Failed");
+                _logger.AddException(ex,this,"ReadShotcut.GetSourceFromPathWithCheck Failed");
                 return "";
             }
         }
