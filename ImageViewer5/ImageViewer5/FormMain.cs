@@ -131,19 +131,25 @@ namespace ImageViewer5
                 else if (e.KeyCode == Keys.A && e.Control)
                 {
                     _logger.PrintInfo("FormMain_KeyDown  Ctrl+A");
-                    // 必要なら、イベントを処理済みとしてマーク
                     e.Handled = true;
                 }
                 else if (e.KeyCode == Keys.Z && e.Control)
                 {
                     _logger.PrintInfo("FormMain_KeyDown  Ctrl+Z");
-                    // 必要なら、イベントを処理済みとしてマーク
                     e.Handled = true;
                 }
-            } catch (Exception ex)
+                else if (e.KeyCode == Keys.I && e.Control)
+                {
+                    _logger.PrintInfo("FormMain_KeyDown  Ctrl+I");
+                    e.Handled = true;
+                    _logger.PrintInfo(String.Format("FormMain.Size = {0}", this.Size));
+                }
+            }
+            catch (Exception ex)
             {
                 _logger.AddException(ex, this, "FormMain_KeyDown");
             }
+            
         }
     }
 }

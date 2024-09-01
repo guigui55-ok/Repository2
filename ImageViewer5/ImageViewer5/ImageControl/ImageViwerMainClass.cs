@@ -8,6 +8,7 @@ using AppLoggerModule;
 using System.Drawing;
 using ViewImageModule;
 using CommonControlUtilityModule;
+using ImageViewer5.CommonModules;
 
 namespace ImageViewer5.ImageControl
 {
@@ -58,6 +59,41 @@ namespace ImageViewer5.ImageControl
             }
         }
 
+        /// <summary>
+        /// クラス内の状態を初期化する
+        /// FormMain_Load（またはそのすぐあと）で実行される想定
+        /// 各種イベントメソッドとの紐づけを行っている
+        /// </summary>
+        /// <param name="initPath"></param>
+        public void InitializeValues(List<string> SupportedImageExtList)
+        {
+            _logger.PrintInfo("ImageViewerMainClass > InitializeValues");
+            //_viewImage.SetPath(initPath);
+            //_viewImageControl = new ViewImageControlPictureBox(_err, panel1, pictureBox1);
+            // 画像を表示する
+            //_viewImageControl.SetImageWithDispose(_viewImage.GetImage());
+            // 初期化が終わらないとfileListも初期化されず、パス設定の処理に一貫性がなくなる
+            //ViewImageFunction.ViewImageDefault();
+
+            // PictureBox をドラッグする
+            ControlDragger dragger = new ControlDragger(_logger, _pictureBox, _pictureBox);
+
+            // Panel のクリックされた位置が右側半分か左側半分か判定する
+            JudgeClickRightOrLeft judgeClickRightOrLeft = new JudgeClickRightOrLeft(_logger, _parentControl);
+
+            // PictureBox のクリックされた位置が Panel の右側半分か左側半分か判定する
+            JudgeClickRightOrLeftChild judgeClickRightOrLeftChild =
+                new JudgeClickRightOrLeftChild(_logger, _pictureBox, _parentControl);
+            judgeClickRightOrLeftChild.ClickRight += PictureBox_ClickRightEvent;
+            judgeClickRightOrLeftChild.ClickLeft += PictureBox_ClickLeftEvent;
+
+            // Panel が MouseWheel を受けたとき、PictureBox の大きさを変更する
+            ChangeSizeByMouseWheel changeSizeByMouseWheel = new ChangeSizeByMouseWheel(
+                _logger, _pictureBox, _parentControl);
+
+            _viewImageFunction.InitializeValue();
+        }
+
         public void ShowImageThisPath()
         {
             _logger.PrintInfo("ImageViewerMainClass > ShowImageThisPath");
@@ -89,39 +125,6 @@ namespace ImageViewer5.ImageControl
             //初期化が終わらないとfileListも初期化されず、パス設定の処理に一貫性がなくなる
             _viewImageFunction.ViewImageDefault();
         }
-
-        /// <summary>
-        /// クラス内の状態を初期化する
-        /// FormMain_Load（またはそのすぐあと）で実行される想定
-        /// </summary>
-        /// <param name="initPath"></param>
-        public void InitializeValues(List<string> SupportedImageExtList)
-        {
-            _logger.PrintInfo("ImageViewerMainClass > InitializeValues");
-            //_viewImage.SetPath(initPath);
-            //_viewImageControl = new ViewImageControlPictureBox(_err, panel1, pictureBox1);
-            // 画像を表示する
-            //_viewImageControl.SetImageWithDispose(_viewImage.GetImage());
-            // 初期化が終わらないとfileListも初期化されず、パス設定の処理に一貫性がなくなる
-            //ViewImageFunction.ViewImageDefault();
-
-            // PictureBox をドラッグする
-            ControlDragger dragger = new ControlDragger(_logger, _pictureBox, _pictureBox);
-
-            // Panel のクリックされた位置が右側半分か左側半分か判定する
-            JudgeClickRightOrLeft judgeClickRightOrLeft = new JudgeClickRightOrLeft(_logger, _parentControl);
-
-            // PictureBox のクリックされた位置が Panel の右側半分か左側半分か判定する
-            JudgeClickRightOrLeftChild judgeClickRightOrLeftChild =
-                new JudgeClickRightOrLeftChild(_logger, _pictureBox, _parentControl);
-            judgeClickRightOrLeftChild.ClickRight += PictureBox_ClickRightEvent;
-            judgeClickRightOrLeftChild.ClickLeft += PictureBox_ClickLeftEvent;
-
-            // Panel が MouseWheel を受けたとき、PictureBox の大きさを変更する
-            ChangeSizeByMouseWheel changeSizeByMouseWheel = new ChangeSizeByMouseWheel(
-                _logger, _pictureBox, _parentControl);
-        }
-
 
         public void PictureBox_ClickRightEvent(object sender, EventArgs e)
         {
@@ -182,7 +185,6 @@ namespace ImageViewer5.ImageControl
                     _pictureBox.Image.Dispose();
                 }
                 _pictureBox.Image = image;
-
             }
             catch (Exception ex)
             {
