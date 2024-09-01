@@ -4,17 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppLoggerModule;
 
 namespace DragAndDropSample
 {
     public class DragAndDropOnControl
     {
-        protected ErrorManager.ErrorManager _err;
+        public AppLogger _logger;
         protected Control _control;
         public EventHandler DragAndDropAfterEvent;
-        public DragAndDropOnControl(ErrorManager.ErrorManager err, Control recieveEventControl)
+        public DragAndDropOnControl(AppLogger logger, Control recieveEventControl)
         {
-            _err = err;
+            _logger = logger;
             _control = recieveEventControl;
             _control.DragDrop += Control_DragDrop;
             _control.DragEnter += Control_DragEnter;
@@ -24,9 +25,9 @@ namespace DragAndDropSample
         {
             try
             {
-                _err.AddLog(this, "AddRecieveControls");
-                if(controls == null) { _err.AddLogAlert("  controls == null"); return; }
-                if (controls.Length < 1) { _err.AddLogAlert("  controls.Length < 1"); return; }
+                _logger.AddLog(this, "AddRecieveControls");
+                if(controls == null) { _logger.AddLogAlert("  controls == null"); return; }
+                if (controls.Length < 1) { _logger.AddLogAlert("  controls.Length < 1"); return; }
 
                 foreach(Control con in controls)
                 {
@@ -37,7 +38,7 @@ namespace DragAndDropSample
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "AddRecieveControls");
+                _logger.AddException(ex, this, "AddRecieveControls");
             }
         }
 
@@ -45,20 +46,20 @@ namespace DragAndDropSample
         {
             try
             {
-                _err.AddLog(this, "AddRecieveControls");
+                _logger.AddLog(this, "AddRecieveControls");
                 control.AllowDrop = true;
                 control.DragEnter += Control_DragEnter;
                 control.DragDrop += Control_DragDrop;
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "AddRecieveControl");
+                _logger.AddException(ex, this, "AddRecieveControl");
             }
         }
 
         private void Control_DragEnter(object sender, DragEventArgs e)
         {
-            _err.AddLog(this, "Control_DragEnter");
+            _logger.AddLog(this, "Control_DragEnter");
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 e.Effect = DragDropEffects.Copy;
         }
@@ -67,17 +68,17 @@ namespace DragAndDropSample
         {
             try
             {
-                _err.AddLog(this, "Control_DragDrop");
+                _logger.AddLog(this, "Control_DragDrop");
                 // 受け取った EventArgs はほかのクラスで処理する
                 DragAndDropAfterEvent?.Invoke(sender, e);
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "Control_DragDrop");
+                _logger.AddException(ex, this, "Control_DragDrop");
             }
             finally
             {
-                _err.AddLog(this, "Control_DragDrop Finally");
+                _logger.AddLog(this, "Control_DragDrop Finally");
             }
         }
 

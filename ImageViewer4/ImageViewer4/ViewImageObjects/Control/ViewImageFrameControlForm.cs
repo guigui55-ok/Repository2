@@ -8,6 +8,10 @@ using System.Windows.Forms;
 
 namespace ViewImageObjects
 {
+    /// <summary>
+    /// ViewImage、ViewImageFrameの外のForm、FormMainの処理を扱う
+    /// 
+    /// </summary>
     public class ViewImageFrameControlForm : IViewImageFrameControl
     {
         ErrorManager.ErrorManager _err;

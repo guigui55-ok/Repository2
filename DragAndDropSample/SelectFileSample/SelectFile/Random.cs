@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using AppLoggerModule;
 
 namespace CommonUtility
 {
     public class MyRandom
     {
-        protected ErrorManager.ErrorManager _err;
-        public MyRandom(ErrorManager.ErrorManager err)
+        public AppLogger _logger;
+        public MyRandom(AppLogger logger)
         {
-            _err = err;
+            _logger = logger;
         }
         public List<int> ListToRandom(List<int> list)
         {
@@ -23,7 +24,7 @@ namespace CommonUtility
             }
             catch (Exception ex)
             {
-                _err.AddException(ex,this,"ListToRandom Failed");
+                _logger.AddException(ex,this,"ListToRandom Failed");
                 return list;
             }
         }

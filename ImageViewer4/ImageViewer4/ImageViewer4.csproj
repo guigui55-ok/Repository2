@@ -60,6 +60,7 @@
     <Compile Include="ControlUtility\JudgeClickRightOrLeft.cs" />
     <Compile Include="ControlUtility\JudgeClickRightOrLeftChild.cs" />
     <Compile Include="ControlUtility\ReadFileByDragDrop.cs" />
+    <Compile Include="ImageViewerConstants.cs" />
     <Compile Include="ImageViewerTestForm.cs">
       <SubType>Form</SubType>
     </Compile>

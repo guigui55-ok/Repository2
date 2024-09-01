@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using AppLoggerModule;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace CommonUtility.FileListUtility
 {
     public class FileListRegister
     {
-        protected ErrorManager.ErrorManager _err;
+        public AppLogger _logger;
         protected List<string> _fileList;
         protected List<string> _folderList;
         // ファイルリストは存在するが、すべてのファイルが条件に合わない場合true(すべてNotInclude、すべてIncludeと合わない場合)
@@ -24,7 +27,14 @@ namespace CommonUtility.FileListUtility
         public bool IsReadMatchFirstOnly = false;
         public EventHandler ChangedFileListEvent;
         public string DirectoryPath = "";
+        // ファイル絞り込み条件
+        public List<string> _fileFilterConditionList = new List<string> { };
+        public List<string> _fileIgnoreConditionList = new List<string> { };
 
+
+        //#
+        //以下の条件リストは使用していない 240901
+        //#
         /// <summary>
         /// ファイル読み込み時、IncludeFileTypeList に含まれる拡張子を指定する
         /// </summary>
@@ -56,14 +66,13 @@ namespace CommonUtility.FileListUtility
             get { return _notIncludeFileNameList; }
             set { _notIncludeFileNameList = value; }
         }
-        public FileListRegister(ErrorManager.ErrorManager err)
+        public FileListRegister()
         {
-            _err = err;
         }
 
-        public FileListRegister(ErrorManager.ErrorManager err,List<string> list)
+        public FileListRegister(AppLogger logger, List<string> list)
         {
-            _err = err;
+            this._logger = logger;
             _fileList = list;
         }
         /// <summary>
@@ -86,7 +95,7 @@ namespace CommonUtility.FileListUtility
                 return _fileList.Count;
             } catch (Exception ex)
             {
-                _err.AddException(ex,this, "getListCount Failed");
+                _logger.AddException(ex,this, "getListCount Failed");
                 return -1;
             }
         }
@@ -99,14 +108,14 @@ namespace CommonUtility.FileListUtility
                 // ショートカットの場合
                 if (Path.GetExtension(path).CompareTo(".lnk") == 0)
                 {
-                    return new ShortCutReader(_err).GetSourceFromPath(path);
+                    return new ShortCutReader(this._logger).GetSourceFromPath(path);
 
                 }
                 return path;
             }
             catch (Exception ex)
             {
-                _err.AddException(ex,this, "GetFilePathFromShortcut");
+                _logger.AddException(ex,this, "GetFilePathFromShortcut");
                 return "";
             }
         }
@@ -121,7 +130,7 @@ namespace CommonUtility.FileListUtility
                     // ショートカットの場合
                     if (Path.GetExtension(path).CompareTo(".lnk") == 0)
                     {
-                        ret = new ShortCutReader(_err).GetSourceFromPath(path);
+                        ret = new ShortCutReader(_logger).GetSourceFromPath(path);
 
                     }
                     else { /* ショートカットではない */ ret = path; }
@@ -142,23 +151,55 @@ namespace CommonUtility.FileListUtility
                 return ret;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "getFile Failed");
+                _logger.AddException(ex, this, "getFile Failed");
                 return "";
             }
         }
 
-        //
-        public int SetFileListFromPath(string path)
+        /// <summary>
+        /// 条件リストをセットする
+        /// SetFileListFromPathの初回実行前にセットする
+        /// 2回目以降はメンバのリストが使用される
+        /// </summary>
+        /// <param name="fileFilterConditionList"></param>
+        /// <param name="fileIgnoreConditionList"></param>
+        public void SetConditionList(
+            List<string> fileFilterConditionList = null,
+            List<string> fileIgnoreConditionList = null)
+        {
+            //_fileFilterConditionList = fileFilterConditionList;
+            //_fileIgnoreConditionList = fileIgnoreConditionList;
+            _fileFilterConditionList = new List<string>(fileFilterConditionList);
+            _fileIgnoreConditionList = new List<string>(fileIgnoreConditionList);
+        }
+
+        /// <summary>
+        /// パスを受け取りディレクトリパスを取得、そのファイルリスをを取得して
+        /// 条件で絞込、メンバへセットする（FileListRegister._fileList)
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public int SetFileListFromPath(
+            string path, 
+            List<string> fileFilterConditionList = null,
+            List<string> fileIgnoreConditionList = null)
         {
             try
             {
+                if ((fileFilterConditionList == null) || (fileFilterConditionList.Count<1)){
+                    fileFilterConditionList = _fileFilterConditionList;
+                }
+                else
+                if ((fileIgnoreConditionList == null) || (fileIgnoreConditionList.Count<1)){
+                    fileIgnoreConditionList = _fileIgnoreConditionList; 
+                }
                 _fileList = new List<string>();
                 _folderList = new List<string>();
                 DirectoryPath = "";
 
                 if (!((System.IO.File.Exists(path)) || (System.IO.Directory.Exists(path))))
                 {
-                    _err.AddLogWarning(" Path Not Exists. path="+path); return -1;
+                    _logger.AddLogWarning(" Path Not Exists. path="+path); return -1;
                 }
                 if (System.IO.File.Exists(path))
                 {
@@ -167,25 +208,102 @@ namespace CommonUtility.FileListUtility
                     path = path.Substring(0, pos);
                 }
                 this.DirectoryPath = path;
-                string[] ary = Directory.GetFiles(path);
-                List<string> list = new List<string>(ary);
-                return SetFileList(list);
+                string[] aryFilePath = Directory.GetFiles(path);
+                _logger.PrintInfo(String.Format("Dirctory.GetFiles.Length = {0}", aryFilePath.Length));
+                //List<string> list = new List<string>(ary);
+                List<string> retList = FilterAndExcludeFilesWithRegex(
+                    aryFilePath, fileFilterConditionList, fileIgnoreConditionList);
+                return SetFileList(retList);
                 
             } catch(System.UnauthorizedAccessException ex)
             {
-                //_err.AddException(ex, this, "SetFileListFromPath Failed");
-                _err.AddLogAlert(this, "System.UnauthorizedAccessException",ex.Message,ex);
+                //_logger.AddException(ex, this, "SetFileListFromPath Failed");
+                _logger.AddLogAlert(this, "System.UnauthorizedAccessException",ex);
                 return -2;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "SetFileListFromPath Failed");
+                _logger.AddException(ex, this, "SetFileListFromPath Failed");
                 return 0;
             }
+        }
+
+        public List<string> RemoveEmptyStrings(List<string> inputList)
+        {
+            // 空文字を除外する
+            return inputList.Where(str => !string.IsNullOrEmpty(str)).ToList();
+        }
+
+        private List<string> FilterAndExcludeFilesWithRegex(
+            string[] filePathList,
+            List<string> fileFilterConditionList,
+            List<string> fileIgnoreConditionList)
+        {
+
+            try
+            {
+                fileFilterConditionList = RemoveEmptyStrings(fileFilterConditionList);
+                fileIgnoreConditionList = RemoveEmptyStrings(fileIgnoreConditionList);
+                ////#
+                //int count = 0;
+                //foreach (string buf in fileIgnoreConditionList)
+                //{
+                //    count += 1;
+                //    Console.WriteLine(string.Format("[{0}] {1}", count, buf));
+                //}
+                ////#
+                // fileFilterConditionListに合致するファイルパスをリストに追加
+                List<string> filteredFiles = new List<string>();
+                foreach (string filePath in filePathList)
+                {
+                    bool matchesFilter = false;
+                    foreach (string condition in fileFilterConditionList)
+                    {
+                        if (Regex.IsMatch(filePath, condition))
+                        {
+                            matchesFilter = true;
+                            break;
+                        }
+                    }
+                    if (matchesFilter)
+                    {
+                        filteredFiles.Add(filePath);
+                    }
+                }
+
+                // fileIgnoreConditionListに合致するファイルパスをリストから除外
+                List<string> resultFiles = new List<string>();
+                foreach (string filePath in filteredFiles)
+                {
+                    bool shouldIgnore = false;
+                    foreach (string ignoreCondition in fileIgnoreConditionList)
+                    {
+                        if (Regex.IsMatch(filePath, ignoreCondition))
+                        {
+                            shouldIgnore = true;
+                            break;
+                        }
+                    }
+                    if (!shouldIgnore)
+                    {
+                        resultFiles.Add(filePath);
+                    }
+                }
+
+                return resultFiles;
+            }
+            catch (Exception ex)
+            {
+                _logger.AddException(ex, this, "FilterAndExcludeFilesWithRegex Failed");
+            }
+            return new List<string>(filePathList);
         }
 
         // DragAndDrop用
         /// <summary>
         /// ファイルリストを List<string> から取得する。DragDrop イベントで取得した後のリストを引数に渡す。
+        /// そして条件を絞り込み、その結果は
+        /// FileListRegister._fileList に格納される
+        /// リストがないときは ListStringをNewする
         /// </summary>
         /// <param name="list"></param>
         /// <returns></returns>
@@ -193,19 +311,19 @@ namespace CommonUtility.FileListUtility
         {
             try
             {
-                _err.AddLog(this, "SetFileList");
+                _logger.AddLog(this, "SetFileList");
                 // includeListの空要素を削除
                 int ret = RemoveBlankValueInIncludeList();
                 if (ret < 1)
                 {
-                    _err.AddLogAlert(this, "setFileList : RemoveBlankValueInIncludeList Failed");
+                    _logger.AddLogAlert(this, "setFileList : RemoveBlankValueInIncludeList Failed");
                 }
 
                 _fileList = new List<string>();
                 
                 // リストがない
-                if (list.Count < 1) { 
-                    _err.AddLogWarning("  list.Count < 1");
+                if (list.Count < 1) {
+                    _logger.AddLogWarning("  list.Count < 1");
                     _fileList = new List<string>();
                     return 2; 
                 }
@@ -213,18 +331,18 @@ namespace CommonUtility.FileListUtility
                 ret = MakeFileList(list,_fileList,0);
                 if(ret < 1)
                 {
-                    _err.AddLogAlert(this, "setFileList : MakeFileList Failed");
+                    _logger.AddLogAlert(this, "setFileList : MakeFileList Failed");
                 }
                 // 条件以外を除外
                 ret = SetFileListWithApplyConditions(_fileList);
                 if (ret < 1)
                 {
-                    _err.AddLogAlert(this, "setFileList : setFileListWithApplyConditions Failed");
+                    _logger.AddLogAlert(this, "setFileList : setFileListWithApplyConditions Failed");
                 }
                 return 1;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "setFileList");
+                _logger.AddException(ex, this, "setFileList");
                 return 0;
             }
         }
@@ -237,17 +355,17 @@ namespace CommonUtility.FileListUtility
             try
             {
                 int ret = RemoveBlankValueInList(_includeFileTypeList);
-                if (ret < 1) { _err.AddLogAlert(this, "RemoveBlankValueInList failed : _includeFileTypeList"); }
+                if (ret < 1) { _logger.AddLogAlert(this, "RemoveBlankValueInList failed : _includeFileTypeList"); }
                  ret = RemoveBlankValueInList(_notIncludeFileTypeList);
-                if (ret < 1) { _err.AddLogAlert(this, "RemoveBlankValueInList failed : _notIncludeFileTypeList"); }
+                if (ret < 1) { _logger.AddLogAlert(this, "RemoveBlankValueInList failed : _notIncludeFileTypeList"); }
                  ret = RemoveBlankValueInList(_includeFileNameList);
-                if (ret < 1) { _err.AddLogAlert(this, "RemoveBlankValueInList failed : _includeFileNameList"); }
+                if (ret < 1) { _logger.AddLogAlert(this, "RemoveBlankValueInList failed : _includeFileNameList"); }
                  ret = RemoveBlankValueInList(_notIncludeFileNameList);
-                if (ret < 1){ _err.AddLogAlert(this, "RemoveBlankValueInList failed : _notIncludeFileNameList"); }
+                if (ret < 1){ _logger.AddLogAlert(this, "RemoveBlankValueInList failed : _notIncludeFileNameList"); }
                 return 1;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "RemoveBlankValueInIncludeList");
+                _logger.AddException(ex, this, "RemoveBlankValueInIncludeList");
                 return 0;
             }
         }
@@ -279,7 +397,7 @@ namespace CommonUtility.FileListUtility
                 return 1;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "RemoveBlankValueInList");
+                _logger.AddException(ex, this, "RemoveBlankValueInList");
                 return 0;
             }
         }
@@ -295,8 +413,8 @@ namespace CommonUtility.FileListUtility
         {
             try
             {
-                _err.AddLog(this, "MakeFileList");
-                if (list == null) { _err.AddLogAlert(this,"list is null"); return -1; }
+                _logger.AddLog(this, "MakeFileList");
+                if (list == null) { _logger.AddLogAlert(this,"list is null"); return -1; }
 
                 List<string> folderList = new List<string>();
 
@@ -310,7 +428,7 @@ namespace CommonUtility.FileListUtility
                         // ショートカットの場合
                         if (Path.GetExtension(listValue).CompareTo(".lnk") == 0)
                         {
-                            tempPath = new ShortCutReader(_err).GetSourceFromPath(tempPath);
+                            tempPath = new ShortCutReader(_logger).GetSourceFromPath(tempPath);
 
                         } else { /* ショートカットではない */ tempPath = listValue; }
                     }
@@ -323,11 +441,11 @@ namespace CommonUtility.FileListUtility
                         if (IsMatchConditions(tempPath))
                         {
                             newList.Add(tempPath);
-                            _err.AddLog("  add path=" + tempPath);
+                            _logger.PrintTrace("  add path=" + tempPath);
                             if (IsReadMatchFirstOnly) { _fileList = newList;  return 1; }
                         } else
                         {
-                            _err.AddLog("  not add path=" + tempPath);
+                            _logger.AddLog("  not add path=" + tempPath);
                         }
                     }
                     else
@@ -342,7 +460,7 @@ namespace CommonUtility.FileListUtility
                         else
                         {
                             // ファイルでもフォルダでもない
-                            _err.AddLogAlert("File.Exists||Directory.Exists == False");
+                            _logger.AddLogAlert("File.Exists||Directory.Exists == False");
                         }
                     }
                     if (isSingleFile) { break; }
@@ -376,7 +494,7 @@ namespace CommonUtility.FileListUtility
                 return 1;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "MakeFileList");
+                _logger.AddException(ex, this, "MakeFileList");
                 return 0;
             }
         }
@@ -390,10 +508,10 @@ namespace CommonUtility.FileListUtility
         {
             try
             {
-                if (list == null) { _err.AddLogAlert(this, "setFileListWithApplyConditions failed. list is null"); return -1; }
+                if (list == null) { _logger.AddLogAlert(this, "setFileListWithApplyConditions failed. list is null"); return -1; }
                 if (list.Count < 1)
                 {
-                    _err.AddLogAlert(this, "setFileListWithApplyConditions : "+ "List Count Zero");
+                    _logger.AddLogAlert(this, "setFileListWithApplyConditions : "+ "List Count Zero");
                     return -1;
                 }
                 // ファイル名、拡張子を指定したもののみのListにする
@@ -405,7 +523,7 @@ namespace CommonUtility.FileListUtility
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "setFileList");
+                _logger.AddException(ex, this, "setFileList");
                 return 0;
             }
         }
@@ -460,7 +578,7 @@ namespace CommonUtility.FileListUtility
                 return list;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "setFileList");
+                _logger.AddException(ex, this, "setFileList");
                 return list;
             }
         }
@@ -537,7 +655,7 @@ namespace CommonUtility.FileListUtility
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "isIncludeFileType");
+                _logger.AddException(ex, this, "isIncludeFileType");
                 return false;
             }
         }
@@ -614,7 +732,7 @@ namespace CommonUtility.FileListUtility
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "isIncludeFileName");
+                _logger.AddException(ex, this, "isIncludeFileName");
                 return false;
             }
         }
@@ -642,7 +760,7 @@ namespace CommonUtility.FileListUtility
                 return false;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "ValueIsMatchInList");
+                _logger.AddException(ex, this, "ValueIsMatchInList");
                 return false;
             }
         }
@@ -672,7 +790,7 @@ namespace CommonUtility.FileListUtility
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "ValueIsIncludeInList");
+                _logger.AddException(ex, this, "ValueIsIncludeInList");
                 return false;
             }
         }
@@ -698,7 +816,7 @@ namespace CommonUtility.FileListUtility
                 return value.Substring(dotpos + 1);
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "getFileTypeFromFilePath");
+                _logger.AddException(ex, this, "getFileTypeFromFilePath");
                 return "";
             }
         }
@@ -724,7 +842,7 @@ namespace CommonUtility.FileListUtility
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "getFileNameFromFilePath");
+                _logger.AddException(ex, this, "getFileNameFromFilePath");
                 return "";
             }
         }

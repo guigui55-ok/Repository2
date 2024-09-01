@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using AppLoggerModule;
 
 namespace CommonUtility.FileListUtility
 {
     public class RandomListCreater
     {
-        protected ErrorManager.ErrorManager _err;
-        public RandomListCreater(ErrorManager.ErrorManager err)
+        public AppLogger _logger;
+        public RandomListCreater(AppLogger logger)
         {
-            _err = err;
+            this._logger = logger;
         }
         /// <summary>
         /// リストをランダムにする
@@ -19,12 +20,12 @@ namespace CommonUtility.FileListUtility
             try
             {
                 List<int> indexList = CreateIndexList(valueList.Count);
-                indexList = new RandomCreater(_err).ListToRandom(indexList);
+                indexList = new RandomCreater(this._logger).ListToRandom(indexList);
                 return GetRandomListFromIndexList(valueList,indexList);
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "ListOrtderToRandom");
+                _logger.AddException(ex, this, "ListOrtderToRandom");
                 return new List<string>();
             }
         }
@@ -56,7 +57,7 @@ namespace CommonUtility.FileListUtility
                 return retList;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "GetRandomListFromIndexList");
+                _logger.AddException(ex, this, "GetRandomListFromIndexList");
                 return retList;
             }
         }
@@ -75,14 +76,14 @@ namespace CommonUtility.FileListUtility
         //        }
         //        if (_indexList.Count != _fileList.Count)
         //        {
-        //            _err.AddLogAlert(this, "List Count Is Difference");
+        //            _logger.AddLogAlert(this, "List Count Is Difference");
         //        }
         //        IsRandom = false;
         //        return 1;
         //    }
         //    catch (Exception ex)
         //    {
-        //        _err.AddException(ex, this, "makeIndexList");
+        //        _logger.AddException(ex, this, "makeIndexList");
         //        return 0;
         //    }
         //    finally

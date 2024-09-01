@@ -5,18 +5,19 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppLoggerModule;
 
 namespace CotnrolUtility.SelectFiles
 {
     public class SelectFileByDragDrop
     {
-        protected ErrorManager.ErrorManager _err;
+        public AppLogger _logger;
         protected Control _control;
         public EventHandler RecieveFileAfterDragDropEvent;
         public bool IsNowProcessing = false;
-        public SelectFileByDragDrop(ErrorManager.ErrorManager err,Control recieveEventControl)
+        public SelectFileByDragDrop(AppLogger logger, Control recieveEventControl)
         {
-            _err = err;
+            this._logger = logger;
             _control = recieveEventControl;
             _control.DragDrop += Control_DragDrop;
             _control.DragEnter += Control_DragEnter;
@@ -30,13 +31,13 @@ namespace CotnrolUtility.SelectFiles
                 control.DragDrop += Control_DragDrop;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "AddRecieveControl");
+                _logger.AddException(ex, this, "AddRecieveControl");
             }
         }
 
         private void Control_DragEnter(object sender, DragEventArgs e)
         {
-            _err.AddLog(this, "Control_DragEnter");
+            _logger.AddLog(this, "Control_DragEnter");
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 e.Effect = DragDropEffects.Copy;
         }
@@ -45,8 +46,8 @@ namespace CotnrolUtility.SelectFiles
         {
             try
             {
-                _err.AddLog(this, "Control_DragDrop Begin , IsNowProcessing=true");
-                _err.AddLog("  Thread=" + Thread.CurrentThread.ManagedThreadId);
+                _logger.AddLog(this, "Control_DragDrop Begin , IsNowProcessing=true");
+                _logger.AddLog("  Thread=" + Thread.CurrentThread.ManagedThreadId);
                 IsNowProcessing = true;
                 // DragDrop の e を配列へ
                 string[] files = GetFilesByDragAndDrop(e);
@@ -58,12 +59,12 @@ namespace CotnrolUtility.SelectFiles
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "Control_DragDrop");
+                _logger.AddException(ex, this, "Control_DragDrop");
             }
             finally
             {
                 IsNowProcessing = false;
-                _err.AddLog(this, "Control_DragDrop Finally , IsNowProcessing=false");
+                _logger.AddLog(this, "Control_DragDrop Finally , IsNowProcessing=false");
             }
         }
 
@@ -79,13 +80,13 @@ namespace CotnrolUtility.SelectFiles
                 }
                 else
                 {
-                    _err.AddLogWarning(this, "GetDataPresent :e.Data.GetDataPresent(DataFormats.FileDrop)=false");
+                    _logger.AddLogWarning(this, "GetDataPresent :e.Data.GetDataPresent(DataFormats.FileDrop)=false");
                     return null;
                 }
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "GetFilesByDragAndDrop");
+                _logger.AddException(ex, this, "GetFilesByDragAndDrop");
                 return null;
             }
         }

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppLoggerModule;
 
 namespace ControlUtility.SelectFiles
 {
@@ -17,7 +18,7 @@ namespace ControlUtility.SelectFiles
     }
     public class FileListManager
     {
-        protected ErrorManager.ErrorManager _err;
+        public AppLogger _logger;
         protected IFiles _files;
         protected List<string> _folderList;
         protected FileListRegister _filesRegister;
@@ -45,12 +46,14 @@ namespace ControlUtility.SelectFiles
 
         protected bool IsRandom = false;
         
-        public FileListManager(ErrorManager.ErrorManager err,IFiles files)
+        public FileListManager(AppLogger logger, IFiles files)
         {
-            _err = err;
+            this._logger = logger;
             _files = files;
-            _filesRegister = new FileListRegister(_err);
+            _filesRegister = new FileListRegister(this._logger);
             _files.ChangedFileList += ChangedFileList;
+            this.createRandomList = new CreateRandomList(_logger);
+            this.createRandomList._logger = this._logger;
         }
 
         // SetFileListFromFolderList
@@ -61,10 +64,10 @@ namespace ControlUtility.SelectFiles
         {
             try
             {
-                _err.AddLog(this, "ChangedFileList");
+                _logger.AddLog(this, "ChangedFileList");
             } catch (Exception ex)
             {
-                _err.AddException(ex, this.ToString(), "ChangedFileList");
+                _logger.AddException(ex, this.ToString(), "ChangedFileList");
             }
         }
 
@@ -77,7 +80,7 @@ namespace ControlUtility.SelectFiles
         {
             try
             {
-                _err.AddLog(this, "RegistFileListByDragDrop");
+                _logger.AddLog(this, "RegistFileListByDragDrop");
                 // DragDrop の e を配列へ
                 string[] files = GetFilesByDragAndDrop(e);
                 
@@ -90,29 +93,29 @@ namespace ControlUtility.SelectFiles
                 int ret = this._filesRegister.SetFileList(list);
                 if (ret < 1)
                 {
-                    _err.AddLogWarning("  Control_DragDrop.setFileList Failed");
+                    _logger.AddLogWarning("  Control_DragDrop.setFileList Failed");
                     return;
                 }
-                _err.AddLog("  List.Count = " + _filesRegister.GetListCount());
+                _logger.AddLog("  List.Count = " + _filesRegister.GetListCount());
                 // ファイルリストへ登録する
                 _files.FileList = _filesRegister.GetList();
 
-                if (_err.hasAlert) { _err.AddLogAlert("  SetFileList Failed"); }
+                if (_logger.hasAlert()) { _logger.AddLogAlert("  SetFileList Failed"); }
                 else
                 {
-                    _err.AddLog("  SetFileList Success!");
+                    _logger.AddLog("  SetFileList Success!");
                 }
                 UpdateFileListAfterEvent?.Invoke(_files.FileList.ToArray(), EventArgs.Empty);
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this.ToString(), "RegistFileListByDragDrop");
+                _logger.AddException(ex, this.ToString(), "RegistFileListByDragDrop");
             }
             finally
             {
-                if (_err.hasError)
+                if (_logger.hasError())
                 {
-                    Debug.WriteLine(_err.GetLastErrorMessagesAsString(3,true));
+                    Debug.WriteLine(_logger.GetLastErrorMessagesAsString(3,true));
                 }
             }
         }
@@ -133,13 +136,13 @@ namespace ControlUtility.SelectFiles
                 }
                 else
                 {
-                    _err.AddLogAlert(this, "e.Data.GetDataPresent(DataFormats.FileDrop)=false");
+                    _logger.AddLogAlert(this, "e.Data.GetDataPresent(DataFormats.FileDrop)=false");
                     return null;
                 }
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this.ToString(), "GetFilesByDragAndDrop");
+                _logger.AddException(ex, this.ToString(), "GetFilesByDragAndDrop");
                 return null;
             }
         }
@@ -171,7 +174,7 @@ namespace ControlUtility.SelectFiles
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "switchOrderToRandomOrCorrect");
+                _logger.AddException(ex, this, "switchOrderToRandomOrCorrect");
                 return 0;
             }
         }

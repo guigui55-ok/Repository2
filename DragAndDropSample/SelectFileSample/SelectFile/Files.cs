@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using AppLoggerModule;
 
 namespace ControlUtility.SelectFiles
 {
     // FileListMain
     public class Files : IFiles
     {
-        protected ErrorManager.ErrorManager _err;
+        public AppLogger _logger;
         protected List<string> _fileList;
         public int NowIndex = 0;
         EventHandler _changeFiles;
         public EventHandler ChangedFileList { get => _changeFiles; set => _changeFiles = value; }
 
-        public Files(ErrorManager.ErrorManager err, List<string> list)
+        public Files(AppLogger logger, List<string> list)
         {
-            _err = err;
+            _logger = logger;
             Initialize();
             this.FileList = list;
         }
@@ -24,7 +25,7 @@ namespace ControlUtility.SelectFiles
             try
             {
             }
-            catch (Exception ex) { _err.AddException(ex, this, "initialize Failed"); return; }
+            catch (Exception ex) { _logger.AddException(ex, this, "initialize Failed"); return; }
         }
 
         /// <summary>
@@ -67,7 +68,7 @@ namespace ControlUtility.SelectFiles
                 return _fileList[NowIndex];
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "GetCurrentValue Failed");
+                _logger.AddException(ex, this, "GetCurrentValue Failed");
                 return "";
             }
         }
@@ -81,17 +82,17 @@ namespace ControlUtility.SelectFiles
             {
                 try
                 {
-                    _err.AddLog(this, "FileList:PropertySet");
+                    _logger.AddLog(this, "FileList:PropertySet");
                     _fileList = value;
                     if ((_fileList != null) && (_fileList.Count > 0)) {
                         //int ret = ResetListOrder();
-                        //if (ret < 1) { _err.AddLogAlert(this, "FileList Property:resetListOrder"); return; }
+                        //if (ret < 1) { _logger.AddLogAlert(this, "FileList Property:resetListOrder"); return; }
                     }
                     NowIndex = 0;
 
                 } catch (Exception ex)
                 {
-                    _err.AddException(ex, this, "FileList Set Property");
+                    _logger.AddException(ex, this, "FileList Set Property");
                 }
             }
         }
@@ -107,7 +108,7 @@ namespace ControlUtility.SelectFiles
                 return _fileList;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "GetList");
+                _logger.AddException(ex, this, "GetList");
                 return _fileList;
             }
         }

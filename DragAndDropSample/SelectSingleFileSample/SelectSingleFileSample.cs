@@ -1,6 +1,6 @@
-﻿using ControlUtility.SelectFiles;
+﻿using AppLoggerModule;
+using ControlUtility.SelectFiles;
 using CotnrolUtility.SelectFiles;
-using ErrorManager;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,32 +15,32 @@ namespace SelectSingleFileSample
 {
     public partial class SelectSingleFileSample : Form
     {
-        ErrorManager.ErrorManager _err = null;
+        public AppLogger _logger;
         IFiles files;
         FileListManager fileListManager;
         SelectFileByDragDrop fileDragDrop;
         List<string> list;
         public SelectSingleFileSample()
         {
-            _err = new ErrorManager.ErrorManager(1);
+            this._logger = new AppLogger();
+            this._logger.SetDefaultValues();
             InitializeComponent();
         }
 
         private void SelectSingleFileSample_Load(object sender, EventArgs e)
         {
 
-            _err = new ErrorManager.ErrorManager(1);
             // DragDrop をするためのクラス
             this.AllowDrop = true;
-            fileDragDrop = new SelectFileByDragDrop(_err, this);
+            fileDragDrop = new SelectFileByDragDrop(this._logger, this);
             // Control を追加する
             this.richTextBox1.AllowDrop = true;
             fileDragDrop.AddRecieveControl(this.richTextBox1);
             // ファイルリストを扱うクラス
             list = new List<string>();
-            files = new SingleFile(_err, list);
+            files = new SingleFile(this._logger, list);
             // ファイルリストを登録するクラス
-            fileListManager = new FileListManager(_err, files);
+            fileListManager = new FileListManager(this._logger, files);
             // FileDragDrop イベントを紐づけする
             this.DragDrop += fileListManager.RegistFileByDragDrop;
             this.richTextBox1.DragDrop += fileListManager.RegistFileByDragDrop;
@@ -56,7 +56,7 @@ namespace SelectSingleFileSample
         {
             try
             {
-                _err.AddLog(this, "AddValueToControlFromUpdateList_Main");
+                _logger.AddLog(this, "AddValueToControlFromUpdateList_Main");
                 // ファイルリストを更新した後に実行する
                 // コントロールにファイルリストを表示する
                 if (sender.GetType().Equals(typeof(string[])))
@@ -75,13 +75,13 @@ namespace SelectSingleFileSample
                 }
                 else
                 {
-                    _err.AddLogAlert(this, "  sender is Invalid Type");
+                    _logger.AddLogAlert(this, "  sender is Invalid Type");
                 }
 
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "AddValueToControlFromUpdateList_Main Failed");
+                _logger.AddException(ex, this, "AddValueToControlFromUpdateList_Main Failed");
             }
         }
         public void ForJumpSource() { }

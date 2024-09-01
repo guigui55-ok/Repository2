@@ -1,0 +1,10 @@
+C:\Users\OK\source\repos\Repository2_CS\ViewControl\ViewControl\bin\Debug\ViewControl.exe.config
+C:\Users\OK\source\repos\Repository2_CS\ViewControl\ViewControl\bin\Debug\ViewControl.exe
+C:\Users\OK\source\repos\Repository2_CS\ViewControl\ViewControl\bin\Debug\ViewControl.pdb
+C:\Users\OK\source\repos\Repository2_CS\ViewControl\ViewControl\obj\Debug\ViewControl.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\Repository2_CS\ViewControl\ViewControl\obj\Debug\ViewControl.Form1.resources
+C:\Users\OK\source\repos\Repository2_CS\ViewControl\ViewControl\obj\Debug\ViewControl.Properties.Resources.resources
+C:\Users\OK\source\repos\Repository2_CS\ViewControl\ViewControl\obj\Debug\ViewControl.csproj.GenerateResource.cache
+C:\Users\OK\source\repos\Repository2_CS\ViewControl\ViewControl\obj\Debug\ViewControl.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository2_CS\ViewControl\ViewControl\obj\Debug\ViewControl.exe
+C:\Users\OK\source\repos\Repository2_CS\ViewControl\ViewControl\obj\Debug\ViewControl.pdb

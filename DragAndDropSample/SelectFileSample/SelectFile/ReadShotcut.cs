@@ -5,15 +5,16 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AppLoggerModule;
 
 namespace ControlUtility
 {
     public class ReadShortCut
     {
-        protected ErrorManager.ErrorManager _err;
-        public ReadShortCut(ErrorManager.ErrorManager err)
+        public AppLogger _logger;
+        public ReadShortCut(AppLogger logger)
         {
-            _err = err;
+            _logger = logger;
         }
         public string GetSourceFromPath(string path)
         {
@@ -30,7 +31,7 @@ namespace ControlUtility
                 return targetPath;
             } catch (Exception ex)
             {
-                _err.AddException(ex,this,"ReadShotcut.GetSourceFromPath Failed");
+                _logger.AddException(ex,this,"ReadShotcut.GetSourceFromPath Failed");
                 return "";
             }
         }
@@ -50,7 +51,7 @@ namespace ControlUtility
                 return ret;
                 } catch (Exception ex)
             {
-                _err.AddException(ex,this,"ReadShotcut.GetSourceFromPathWithCheck Failed");
+                _logger.AddException(ex,this,"ReadShotcut.GetSourceFromPathWithCheck Failed");
                 return "";
             }
         }

@@ -4,22 +4,23 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AppLoggerModule;
 
 namespace CommonUtility.FileListUtility
 {
     public class DirectoryGetter
     {
-        protected ErrorManager.ErrorManager _err;
-        public DirectoryGetter(ErrorManager.ErrorManager err)
+        public AppLogger _logger;
+        public DirectoryGetter(AppLogger logger)
         {
-            _err = err;
+            _logger = logger;
         }
 
         public string GetDirectoryFormPath(string path)
         {
             try
             {
-                _err.AddLog(this, "GetDirectoryFormPath");
+                _logger.AddLog(this, "GetDirectoryFormPath");
                 if (System.IO.File.Exists(path))
                 {
                     // path がファイルの時は、DirectoryPath を取得する
@@ -28,12 +29,12 @@ namespace CommonUtility.FileListUtility
                 }
                 if (!System.IO.Directory.Exists(path))
                 {
-                    _err.AddLogAlert("  Directory Not Exists path=" + path); return "";
+                    _logger.AddLogAlert("  Directory Not Exists path=" + path); return "";
                 }
                 return path;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "GetDirectoryFormPath");
+                _logger.AddException(ex, this, "GetDirectoryFormPath");
                 return "";
             }
         }
@@ -54,13 +55,13 @@ namespace CommonUtility.FileListUtility
         {
             try
             {
-                _err.AddLog(this, "GetPreviousDirectory");
+                _logger.AddLog(this, "GetPreviousDirectory");
                 path = GetDirectoryFormPath(path);
-                if (path == "") { _err.AddLog("  path is invalid. path=" + path); return ""; }
+                if (path == "") { _logger.AddLog("  path is invalid. path=" + path); return ""; }
                 // ルートなら最後のフォルダを取得する
                 if (IsRoot(path))
                 {
-                    _err.AddLog("  path is root. path="+path);
+                    _logger.AddLog("  path is root. path="+path);
                     string ret = GetDeepestAndLastDirectory(path);
                     return ret;
                 }
@@ -69,7 +70,7 @@ namespace CommonUtility.FileListUtility
                 // そこから現在の名前と合致した一つ前を返す
                 DirectoryInfo info = System.IO.Directory.GetParent(path);
                 string[] dirs = System.IO.Directory.GetDirectories(info.FullName);
-                if (dirs.Length < 1) { _err.AddLog(" dirs.Length < 1"); return ""; }
+                if (dirs.Length < 1) { _logger.AddLog(" dirs.Length < 1"); return ""; }
                 string dir;
                 for (int i = dirs.Length-1; i >= 0; i--)
                 {
@@ -121,11 +122,11 @@ namespace CommonUtility.FileListUtility
                         }
                     }
                 }
-                _err.AddLogAlert(this, "GetPreviousDirectory : Unexpected Error");
+                _logger.AddLogAlert(this, "GetPreviousDirectory : Unexpected Error");
                 return "";
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "GetPreviousDirectory");
+                _logger.AddException(ex, this, "GetPreviousDirectory");
                 return "";
             }
         }
@@ -147,7 +148,7 @@ namespace CommonUtility.FileListUtility
                 }
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "IsLastDirectory");
+                _logger.AddException(ex, this, "IsLastDirectory");
                 return false;
             }
         }
@@ -168,7 +169,7 @@ namespace CommonUtility.FileListUtility
 
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "IsFirstDirectory");
+                _logger.AddException(ex, this, "IsFirstDirectory");
                 return false;
             }
         }
@@ -189,10 +190,10 @@ namespace CommonUtility.FileListUtility
         {
             try
             {
-                _err.AddLog(this, "GetDeepestAndLastDirectory");
+                _logger.AddLog(this, "GetDeepestAndLastDirectory");
                 string before = path;
                 string after = GetLastDirectory(before);
-                if(after == "") { _err.AddLog("  Child Directory Nothing");  return path; }
+                if(after == "") { _logger.AddLog("  Child Directory Nothing");  return path; }
                 while (!(after == ""))
                 {
                     before = after;
@@ -201,7 +202,7 @@ namespace CommonUtility.FileListUtility
                 return before;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "GetDeepestAndLastDirectory");
+                _logger.AddException(ex, this, "GetDeepestAndLastDirectory");
                 return "";
             }
         }
@@ -216,16 +217,16 @@ namespace CommonUtility.FileListUtility
         {
             try
             {
-                _err.AddLog(this, "GetLastDirectory");
+                _logger.AddLog(this, "GetLastDirectory");
                 path = GetDirectoryFormPath(path);
-                if (path == "") { _err.AddLog("  path is invalid. path=" + path); return ""; }
+                if (path == "") { _logger.AddLog("  path is invalid. path=" + path); return ""; }
                 // ディレクトリ一覧を取得する
                 string[] dirs = System.IO.Directory.GetDirectories(path);
-                if (dirs.Length < 1) { _err.AddLog(" dirs.Length < 1[Child Directory Nothing]"); return ""; }
+                if (dirs.Length < 1) { _logger.AddLog(" dirs.Length < 1[Child Directory Nothing]"); return ""; }
                 return dirs[dirs.Length - 1];
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "GetLastDirectory");
+                _logger.AddException(ex, this, "GetLastDirectory");
                 return "";
             }
         }
@@ -240,24 +241,24 @@ namespace CommonUtility.FileListUtility
         //{
         //    try
         //    {
-        //        _err.AddLog(this, "GetLastDirectoryOneLevelBelow");
+        //        _logger.AddLog(this, "GetLastDirectoryOneLevelBelow");
         //        string dir = GetLastDirectory(path);
-        //        if(dir == "") { _err.AddLog(" dir == \"\""); return path; }
+        //        if(dir == "") { _logger.AddLog(" dir == \"\""); return path; }
         //        // 再帰的に呼び出す
         //        dir = GetLastDirectory(dir);
         //        return dir;
         //    } catch (Exception ex)
         //    {
-        //        _err.AddException(ex, this, "GetLastDirectoryOneLevelBelow");
+        //        _logger.AddException(ex, this, "GetLastDirectoryOneLevelBelow");
         //        return "";
         //    }
         //}
         public string GetNextDirectory(string path)
         {
-            try { 
-                _err.AddLog(this, "GetNextDirectory");
+            try {
+                _logger.AddLog(this, "GetNextDirectory");
                 string newpath = GetDirectoryFormPath(path);
-                if(newpath == "") { _err.AddLog("  path is invalid. path="+path); return""; }
+                if(newpath == "") { _logger.AddLog("  path is invalid. path="+path); return""; }
 
                 string ret = NextDirectoryWhenNotAbleAccess(newpath);
                 //if (IsAbleAccess(newpath))
@@ -288,7 +289,7 @@ namespace CommonUtility.FileListUtility
 
             } catch (Exception ex)
             {
-                _err.AddException(ex,this, "GetNextDirectory");
+                _logger.AddException(ex,this, "GetNextDirectory");
                 return "";
             }
         }
@@ -297,7 +298,7 @@ namespace CommonUtility.FileListUtility
         {
             try
             {                
-                if (!IsAbleAccess(path)) { _err.AddLogAlert(this, "DirectorhHasChildDirectory IsAbleAccess=false, path="+path); return false; }
+                if (!IsAbleAccess(path)) { _logger.AddLogAlert(this, "DirectorhHasChildDirectory IsAbleAccess=false, path="+path); return false; }
 
                 string[] dirs = System.IO.Directory.GetDirectories(path);
                 if(dirs == null) { return false; }
@@ -305,7 +306,7 @@ namespace CommonUtility.FileListUtility
                 return true;
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "DirectorhHasChildDirectory");
+                _logger.AddException(ex, this, "DirectorhHasChildDirectory");
                 return false;
             }
         }
@@ -317,18 +318,18 @@ namespace CommonUtility.FileListUtility
             {
                 string[] dirs;
                 string targetPath = "";
-                _err.AddLog(this, "NextDirectoryWhenNotAbleAccess");
+                _logger.AddLog(this, "NextDirectoryWhenNotAbleAccess");
                 string parentdir = path;
                 bool isAbleAccess = true;
 
                 // ルートまで来たら、一番最後だったので、最初(Root)に戻る
-                if (IsRoot(path)) { _err.AddLog(" return directory to root."); return path; }
+                if (IsRoot(path)) { _logger.AddLog(" return directory to root."); return path; }
 
                 // アクセス不能な場合は次のディレクトリを対象とする
                 if (!IsAbleAccess(path))
                 {
                     isAbleAccess = false;
-                    _err.AddLogAlert("  IsAbleAccess , path="+path);
+                    _logger.AddLogAlert("  IsAbleAccess , path="+path);
                     // path ディレクトリがアクセス不可能なら、さらに親ディレクトリを取得する
                     //targetPath = System.IO.Directory.GetParent(path).FullName;
                     //targetPath = NextDirectoryWhenNotAbleAccess(targetPath);
@@ -357,7 +358,7 @@ namespace CommonUtility.FileListUtility
                 // path がアクセス可能で、子ディレクトリを持っていない状態
                 if (IsLastDirectory(targetPath))
                 {
-                    _err.AddLog("  IsLastDirectory=true , path=" + targetPath);
+                    _logger.AddLog("  IsLastDirectory=true , path=" + targetPath);
                     // 対象ディレクトリが最後なら、さらに親ディレクトリを取得する (子ディレクトリを対象としない)
                     targetPath = System.IO.Directory.GetParent(targetPath).FullName;
                     targetPath = NextDirectoryWhenNotAbleAccess(targetPath,false);
@@ -383,7 +384,7 @@ namespace CommonUtility.FileListUtility
 
                 if (dirs.Length < 1)
                 {
-                    _err.AddLog(" dirs.Length < 1 -> Child Directory Is Nothing : Unexpected State");
+                    _logger.AddLog(" dirs.Length < 1 -> Child Directory Is Nothing : Unexpected State");
                     return "";
                     // path が存在しているので Length<1 になることはない
                     // が、ほかのプロセスなどの Directory 操作のタイミングによってはありうるかもしれない
@@ -414,19 +415,19 @@ namespace CommonUtility.FileListUtility
                         {
                             // 親ディレクトリが最後なら、さらに親ディレクトリを取得する
                             ret = NextDirectoryWhenNotAbleAccess(targetPath);
-                            _err.AddLogAlert(this, "NextDirectoryWhenNotAbleAccess Unexpected State");
+                            _logger.AddLogAlert(this, "NextDirectoryWhenNotAbleAccess Unexpected State");
                             // このメソッドの前方で処理しているのでここには来ないはず
                             break;
                         }
                     }
                 }
                 // ret=="" の状態はないはず
-                if (ret == "") { _err.AddLogAlert(this, "Get Directory is Nothing :  Unexpected State"); }
+                if (ret == "") { _logger.AddLogAlert(this, "Get Directory is Nothing :  Unexpected State"); }
                 return ret;
 
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "NextDirectoryWhenNotAbleAccess");
+                _logger.AddException(ex, this, "NextDirectoryWhenNotAbleAccess");
                 return "";
             }
         }
@@ -436,11 +437,11 @@ namespace CommonUtility.FileListUtility
         {
             try
             {
-                _err.AddLog(this, "GetNextDirecotryNotChild");
-                if (IsRoot(path)) { _err.AddLog("  IsRoot=true -> Directory Is Root Only");  return path; } // Root しかない状態
+                _logger.AddLog(this, "GetNextDirecotryNotChild");
+                if (IsRoot(path)) { _logger.AddLog("  IsRoot=true -> Directory Is Root Only");  return path; } // Root しかない状態
                 DirectoryInfo info = System.IO.Directory.GetParent(path);
                 string[] dirs = System.IO.Directory.GetDirectories(info.FullName);
-                if(dirs.Length < 1) { _err.AddLog(" dirs.Length < 1"); return""; }
+                if(dirs.Length < 1) { _logger.AddLog(" dirs.Length < 1"); return""; }
                 string dir;
                 for (int i=0; i<dirs.Length; i++)
                 {
@@ -468,11 +469,11 @@ namespace CommonUtility.FileListUtility
                         }
                     }
                 }
-                _err.AddLogAlert(this, "GetNextDirecotryNotHasChild : Unexpected Error");
+                _logger.AddLogAlert(this, "GetNextDirecotryNotHasChild : Unexpected Error");
                 return "";
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "GetNextDirecotryNotChild");
+                _logger.AddException(ex, this, "GetNextDirecotryNotChild");
                 return "";
             }
         }
@@ -483,7 +484,7 @@ namespace CommonUtility.FileListUtility
             {
                 if (path.Length < 3)
                 {
-                    _err.AddLogWarning(this, "IsRoot : path.Length < 3"); return false;
+                    _logger.AddLogWarning(this, "IsRoot : path.Length < 3"); return false;
                 }
                 string root = path.Substring(0, 3);
                 if (path.Equals(System.IO.Path.GetPathRoot(path)))
@@ -494,7 +495,7 @@ namespace CommonUtility.FileListUtility
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "IsRoot");
+                _logger.AddException(ex, this, "IsRoot");
                 return false;
             }
         }

@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using AppLoggerModule;
 
 namespace CommonUtility.FileListUtility
 {
     public class RandomCreater
     {
-        protected ErrorManager.ErrorManager _err;
-        public RandomCreater(ErrorManager.ErrorManager err)
+        public AppLogger _logger;
+        public RandomCreater(AppLogger logger)
         {
-            _err = err;
+            _logger = logger;
         }
         public List<int> ListToRandom(List<int> list)
         {
@@ -22,7 +23,7 @@ namespace CommonUtility.FileListUtility
             }
             catch (Exception ex)
             {
-                _err.AddException(ex,this,"ListToRandom Failed");
+                _logger.AddException(ex,this,"ListToRandom Failed");
                 return list;
             }
         }

@@ -5,20 +5,21 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using AppLoggerModule;
 
 namespace CommonUtility.Async
 {
     public class DoMethodAsync
     {
-        protected ErrorManager.ErrorManager _err;
+        public AppLogger _logger;
         public int Timeout = 60 * 1000;
         public bool IsCancelled = false;
 
         public object sender;
         public EventArgs e;
-        public DoMethodAsync(ErrorManager.ErrorManager err)
+        public DoMethodAsync(AppLogger logger)
         {
-            _err = err;
+            _logger = logger;
         }
 
         //public void DoMethodAsyncExcute(Action<object,EventArgs> action)
@@ -35,10 +36,10 @@ namespace CommonUtility.Async
             bool waitEndThreadAlive = false;
             try
             {
-                _err.AddLog(this, method + " : threadId=" + Thread.CurrentThread.ManagedThreadId);
+                _logger.AddLog(this, method + " : threadId=" + Thread.CurrentThread.ManagedThreadId);
                 Action<object, EventArgs> ac = action;
                 if (ac == null) { throw new Exception(" DoWorkAction is Null"); }
-                _err.AddLog(this, "  this.Timeout =" + Timeout);
+                _logger.AddLog(this, "  this.Timeout =" + Timeout);
 
                 // 非同期処理をCancelするためのTokenを取得.
                 var tokenSource = new CancellationTokenSource();
@@ -49,7 +50,7 @@ namespace CommonUtility.Async
                     try
                     {
                         subThread = Thread.CurrentThread;
-                        _err.AddLog(this, method + ".Task ThreadId=" + Thread.CurrentThread.ManagedThreadId);
+                        _logger.AddLog(this, method + ".Task ThreadId=" + Thread.CurrentThread.ManagedThreadId);
                         // ※action はここで実行される
                         ac(this.sender,this.e);
                     }
@@ -60,12 +61,12 @@ namespace CommonUtility.Async
                     }
                     catch (ThreadAbortException ex)
                     {
-                        _err.AddLogWarning(this.ToString(), method + ".Task ThreadAbortException : thread=" + Thread.CurrentThread.ManagedThreadId, ex);
-                        //_err.AddException(ex, this, " ThreadAbortException");
+                        _logger.AddLogWarning(this, method + ".Task ThreadAbortException : thread=" + Thread.CurrentThread.ManagedThreadId, ex);
+                        //_logger.AddException(ex, this, " ThreadAbortException");
                     }
                     catch (Exception ex)
                     {
-                        _err.AddException(ex, this, method + ".Task.Run");
+                        _logger.AddException(ex, this, method + ".Task.Run");
                     }
                     finally
                     {
@@ -87,7 +88,7 @@ namespace CommonUtility.Async
                         // Timeout 経過でもキャンセルする
                         if (sw.ElapsedMilliseconds == (Timeout))
                         {
-                            _err.AddLog(this, method + ".Task Timeout");
+                            _logger.AddLog(this, method + ".Task Timeout");
                             IsCancelled = true;
                             break;
                         }
@@ -97,7 +98,7 @@ namespace CommonUtility.Async
                     {
                         if (!isPass3sec)
                         {
-                            _err.AddLog(this, method + ".Task Pass " + 3000 + " mSec");
+                            _logger.AddLog(this, method + ".Task Pass " + 3000 + " mSec");
                             isPass3sec = true;
                         }
                     }
@@ -126,12 +127,12 @@ namespace CommonUtility.Async
                 if (task.IsCompleted)
                 {
                     // Task が終了していたら OK
-                    _err.AddLog(this, method + ".Task End.");
+                    _logger.AddLog(this, method + ".Task End.");
                 }
                 else
                 {
                     // タスクをキャンセルする
-                    _err.AddLog(this, method + ".tokenSource.Cance. task.IsCompleted=" + task.IsCompleted);
+                    _logger.AddLog(this, method + ".tokenSource.Cance. task.IsCompleted=" + task.IsCompleted);
                     tokenSource.Cancel();
                 }
                 if (subThread != null)
@@ -140,17 +141,17 @@ namespace CommonUtility.Async
                     subThread.Abort();
                     if (waitEndThreadAlive)
                     {
-                        _err.AddLog(this, method + " Waiting SubThread Abort");
+                        _logger.AddLog(this, method + " Waiting SubThread Abort");
                         subThread.Join();
                         while (subThread.IsAlive) { }
                     }
                     subThread = null;
-                    _err.AddLog(this, method + " Task End. SubThread End");
+                    _logger.AddLog(this, method + " Task End. SubThread End");
                 }
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, method);
+                _logger.AddException(ex, this, method);
                 subThread = null;
             }
         }

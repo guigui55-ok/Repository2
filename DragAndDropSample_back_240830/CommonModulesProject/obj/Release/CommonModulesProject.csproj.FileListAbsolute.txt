@@ -1,0 +1,6 @@
+C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\CommonModulesProject\bin\Release\CommonModulesProject.dll
+C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\CommonModulesProject\bin\Release\CommonModulesProject.pdb
+C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\CommonModulesProject\obj\Release\CommonModulesProject.csprojAssemblyReference.cache
+C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\CommonModulesProject\obj\Release\CommonModulesProject.csproj.CoreCompileInputs.cache
+C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\CommonModulesProject\obj\Release\CommonModulesProject.dll
+C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\CommonModulesProject\obj\Release\CommonModulesProject.pdb

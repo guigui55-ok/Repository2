@@ -4,18 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppLoggerModule;
 
 namespace DragAndDropSample
 {
     public class DragAndDropForFile
     {
-        protected ErrorManager.ErrorManager _err;
+        public AppLogger _logger;
         public DragAndDropOnControl DragAndDropOnControl;
         public string[] Files;
         public EventHandler DragAndDropEventAfterEventForFile;
-        public DragAndDropForFile(ErrorManager.ErrorManager err,DragAndDropOnControl dragAndDropOnControl)
+        public DragAndDropForFile(AppLogger logger,DragAndDropOnControl dragAndDropOnControl)
         {
-            _err = err;
+            _logger = logger;
             this.DragAndDropOnControl = dragAndDropOnControl;
             this.DragAndDropOnControl.DragAndDropAfterEvent += DragAndDropAfterEvent;
         }
@@ -24,13 +25,13 @@ namespace DragAndDropSample
         {
             try
             {
-                _err.AddLog(this, "DragAndDropAfterEvent");
+                _logger.AddLog(this, "DragAndDropAfterEvent");
                 // DragDrop の e を配列へ
                 Files = GetFilesByDragAndDrop((DragEventArgs)e);
 
             } catch (Exception ex)
             {
-                _err.AddException(ex, this, "DragAndDropAfterEvent");
+                _logger.AddException(ex, this, "DragAndDropAfterEvent");
             } finally
             {
                 DragAndDropEventAfterEventForFile?.Invoke(sender, e);
@@ -41,7 +42,7 @@ namespace DragAndDropSample
         {
             try
             {
-                _err.AddLog(this, "GetFilesByDragAndDrop");
+                _logger.AddLog(this, "GetFilesByDragAndDrop");
                 if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 {
                     // ドラッグ中のファイルやディレクトリの取得
@@ -50,13 +51,13 @@ namespace DragAndDropSample
                 }
                 else
                 {
-                    _err.AddLogWarning(this, "GetDataPresent :e.Data.GetDataPresent(DataFormats.FileDrop)=false");
+                    _logger.AddLogWarning(this, "GetDataPresent :e.Data.GetDataPresent(DataFormats.FileDrop)=false");
                     return null;
                 }
             }
             catch (Exception ex)
             {
-                _err.AddException(ex, this, "GetFilesByDragAndDrop");
+                _logger.AddException(ex, this, "GetFilesByDragAndDrop");
                 return null;
             }
         }

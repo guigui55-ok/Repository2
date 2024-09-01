@@ -1,5 +1,6 @@
 ﻿using CommonUtility.FileListUtility;
 using System;
+using AppLoggerModule;
 
 namespace CommonUtility.FileListUtility.FileListControl
 {
@@ -9,5 +10,7 @@ namespace CommonUtility.FileListUtility.FileListControl
         void UpdateFileListAfterEvent(object sender, EventArgs e);
         void SelectItem(object value);
         EventHandler SelectedItemEvent { get; set; }
+        void ChangedFileInFile(object sender, EventArgs e);
+        AppLogger Logger { get; set; }
     }
 }

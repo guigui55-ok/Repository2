@@ -1,0 +1,64 @@
+
+
+
+UserControlをフォームにFitする（右クリック　and Ctrl＋Key）
+
+
+スペース＋マウスMoveでUserControlを移動
+
+*****
+240901
+ディレクトリD&Dでファイルフィルターによって0になる　jepg＞jpeg　＞済
+FileListDlgログの表示　　ドラッグアンドドロップ抑制によるもの＞済
+FileListDlsフォルダの場所を開く　保留
+FileListDlsディレクトリパスの表示
+ディレクトリ移動すると、ファイルフィルターによって0になる　リスト初期化処理の見直し＞済
+画像表示時、2回に1回エラー発生（ディレクトリなど画像と関係ないファイルのときに発生する）（保留）
+　　パスセット前にディレクトリは除外？
+リストクリックで、PctureBoxに表示
+右クリック、終了（FrameUserControlそれぞれが個別に表示する[いずれFrame設定内容にかかわる処理もするため]）
+文字列フィルタ
+ディレクトリ移動で、Move（SelectedItem）更新
+画像Fit、ダブルクリック（PictureBoxはダブルクリックはやめた方がいいかも（切替と競合する）
+**
+240831
+画像表示
+右クリック、左クリック
+拡大縮小
+PictureBoxマウスで移動
+Fileリストとリストコントロール連動
+**
+240829
+必要そうな既存のプロジェクト　済
+DragAndDropSample.sln
+----
+その他Memo
+ErrorManagerはAppLoggerに置き換え
+----
+ImageFrameにD&Dで別の、クラスにイベント紐づけ（依存性注意）
+***************
+
+
+-----
+実装
+Form
+　UserControl
+	PictureBox
+	　PictureBoxでのみDragDrop受付（処理はDragAndDroprecieverクラスで受け取り、イベントでPictureBoxにファイルパスを渡す）
+	　　　d&D複数ファイルときは最初のパスのみを採用
+	　　ファイルを受け取ったら
+	　　　　FileListManagerで読み込む
+	　　　　　FileListManagerはフォームを持つ、別スレッドで動作させる
+	　　　　　　このリストでCurrentPathを変更すると、PictureBoxのChangeFile>ShowImageを動作させる。
+	*DragAndDropSample.sln > FileListManager
+
+PictureBox、UserControlにFitさせない
+　　右クリックメニュー（ダブルクリックでフィットさせる）
+　　PictureBoxコントロールはマウスで移動可能にする
+　　マウススクロールで拡大縮小を可能にする
+　　右側クリックで、Nextイベント、左側クリックでPrevイベントを発火
+
+Controlで手のひらツール、UserControlを移動可能に
+
+---
+あとで、ファイル条件リスト、無視リストについて拡張子リストも必要なら用意する（現状では正規表現対応なので分かりにくいかも）
