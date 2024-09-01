@@ -53,6 +53,7 @@
     <Compile Include="CommonModules\DragAndDropReciever.cs" />
     <Compile Include="CommonModules\JudgeClickRightOrLeft.cs" />
     <Compile Include="CommonModules\JudgeClickRightOrLeftChild.cs" />
+    <Compile Include="CommonModules\LinkControlSize.cs" />
     <Compile Include="CommonModules\Temp\DragAndDropForFile.cs" />
     <Compile Include="CommonModules\Temp\DragAndDropOnControl.cs" />
     <Compile Include="CommonModules\Temp\ReadFileByDragDrop.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="ImageControl\ImageMainFrame.Designer.cs">
       <DependentUpon>ImageMainFrame.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImageControl\ImageMainFrameSetting.cs" />
     <Compile Include="ImageControl\ImageViwerMainClass.cs" />
     <Compile Include="ImageControl\Interface\IViewImageFrameControl.cs" />
     <Compile Include="ImageControl\Interface\IViewImage.cs" />

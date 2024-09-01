@@ -195,7 +195,16 @@ namespace FileListManagerSample
                     _fileListControl.SelectItem(_files.GetCurrentValue());
                 }
                 textBox_DirectoryPath.Text = _files.GetCurrentValue();
-                AddLog("PrevFIle:" + listBox_FileList.SelectedItem.ToString());
+                string path = "";
+                if (listBox_FileList.SelectedItem == null)
+                {
+                    path = "null";
+                }
+                else
+                {
+                    path = listBox_FileList.SelectedItem.ToString();
+                }
+                AddLog("PrevFIle:" + path);
             }
         }
 
@@ -215,7 +224,16 @@ namespace FileListManagerSample
                     _fileListControl.SelectItem(_files.GetCurrentValue());
                 }
                 textBox_DirectoryPath.Text = _files.GetCurrentValue();
-                AddLog("NextFIle:" + listBox_FileList.SelectedItem.ToString());
+                string path = "";
+                if (listBox_FileList.SelectedItem == null)
+                {
+                    path = "null";
+                }
+                else
+                {
+                    path = listBox_FileList.SelectedItem.ToString();
+                }
+                AddLog("NextFIle:" + path);
             }
         }
 

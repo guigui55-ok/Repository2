@@ -29,10 +29,16 @@ namespace ImageViewer5.ImageControl
         public ImageViwerMainClass _imageViewerMain;
         // ファイルリストを管理するクラス
         public FileListManagerSampleForm _formFileList = null;
+        // ImageMainFrame全体の設定（コントロールの振る舞いや、ファイルリストの振る舞いなどなど）
+        public ImageMainFrameSetting _imageMainFrameSetting;
         public ImageMainFrame()
         {
             Debugger.DebugPrint("ImageMainFrame New");
             InitializeComponent();
+
+            //#
+            // 設定ファイルを読み込み反映させる場合はここで行う（未対応） 240901
+            _imageMainFrameSetting = new ImageMainFrameSetting();
         }
 
         public void InitializeValues(List<string> SupportedImageExtList)
@@ -171,7 +177,7 @@ namespace ImageViewer5.ImageControl
                 {
                     // ドロップされたアイテムがファイルの場合
                     Debugger.DebugPrint($"Dropped file: {item}");
-                    //@@
+                    // ショートカットならその中のパスを取得する
                     string path = _formFileList._fileListManager._filesRegister.GetFilePathFromShortcut(item);
                     _formFileList.SetFilesFromPath(path, null, null);
                 }
