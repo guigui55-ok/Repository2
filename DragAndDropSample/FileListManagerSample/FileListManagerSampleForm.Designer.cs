@@ -39,6 +39,8 @@ namespace FileListManagerSample
             this.button_PreviousDirectory = new System.Windows.Forms.Button();
             this.button_MovePreviousFile = new System.Windows.Forms.Button();
             this.button_MoveNextFile = new System.Windows.Forms.Button();
+            this.buttonSetting = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // richTextBox_Log
@@ -96,7 +98,7 @@ namespace FileListManagerSample
             // 
             this.button_NextDirectory.Location = new System.Drawing.Point(472, 347);
             this.button_NextDirectory.Name = "button_NextDirectory";
-            this.button_NextDirectory.Size = new System.Drawing.Size(93, 23);
+            this.button_NextDirectory.Size = new System.Drawing.Size(108, 23);
             this.button_NextDirectory.TabIndex = 6;
             this.button_NextDirectory.Text = "Next Directory";
             this.button_NextDirectory.UseVisualStyleBackColor = true;
@@ -116,7 +118,7 @@ namespace FileListManagerSample
             // 
             this.button_MovePreviousFile.Location = new System.Drawing.Point(93, 347);
             this.button_MovePreviousFile.Name = "button_MovePreviousFile";
-            this.button_MovePreviousFile.Size = new System.Drawing.Size(124, 23);
+            this.button_MovePreviousFile.Size = new System.Drawing.Size(112, 23);
             this.button_MovePreviousFile.TabIndex = 8;
             this.button_MovePreviousFile.Text = "MovePreviousFile";
             this.button_MovePreviousFile.UseVisualStyleBackColor = true;
@@ -124,7 +126,7 @@ namespace FileListManagerSample
             // 
             // button_MoveNextFile
             // 
-            this.button_MoveNextFile.Location = new System.Drawing.Point(223, 347);
+            this.button_MoveNextFile.Location = new System.Drawing.Point(211, 347);
             this.button_MoveNextFile.Name = "button_MoveNextFile";
             this.button_MoveNextFile.Size = new System.Drawing.Size(112, 23);
             this.button_MoveNextFile.TabIndex = 9;
@@ -132,11 +134,33 @@ namespace FileListManagerSample
             this.button_MoveNextFile.UseVisualStyleBackColor = true;
             this.button_MoveNextFile.Click += new System.EventHandler(this.button4_Click);
             // 
+            // buttonSetting
+            // 
+            this.buttonSetting.Location = new System.Drawing.Point(12, 347);
+            this.buttonSetting.Name = "buttonSetting";
+            this.buttonSetting.Size = new System.Drawing.Size(60, 23);
+            this.buttonSetting.TabIndex = 10;
+            this.buttonSetting.Text = "Setting";
+            this.buttonSetting.UseVisualStyleBackColor = true;
+            this.buttonSetting.Click += new System.EventHandler(this.buttonSetting_Click);
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.Location = new System.Drawing.Point(634, 347);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(60, 23);
+            this.buttonClose.TabIndex = 11;
+            this.buttonClose.Text = "Close";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
             // FileListManagerSampleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(710, 385);
+            this.Controls.Add(this.buttonClose);
+            this.Controls.Add(this.buttonSetting);
             this.Controls.Add(this.button_MoveNextFile);
             this.Controls.Add(this.button_MovePreviousFile);
             this.Controls.Add(this.button_PreviousDirectory);
@@ -168,6 +192,8 @@ namespace FileListManagerSample
         private System.Windows.Forms.Button button_PreviousDirectory;
         private System.Windows.Forms.Button button_MovePreviousFile;
         private System.Windows.Forms.Button button_MoveNextFile;
+        private System.Windows.Forms.Button buttonSetting;
+        private System.Windows.Forms.Button buttonClose;
     }
 }
 

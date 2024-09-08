@@ -21,7 +21,7 @@ namespace CommonUtility.FileListUtility
             {
                 List<int> indexList = CreateIndexList(valueList.Count);
                 indexList = new RandomCreater(this._logger).ListToRandom(indexList);
-                return GetRandomListFromIndexList(valueList,indexList);
+                return GetRandomListFromIndexList(valueList, indexList);
             }
             catch (Exception ex)
             {
@@ -32,7 +32,7 @@ namespace CommonUtility.FileListUtility
         private List<int> CreateIndexList(int max)
         {
             List<int> list = new List<int>();
-            for(int i=1; i<=max; i++)
+            for(int i=0; i<=max-1; i++)
             {
                 list.Add(i);
             }

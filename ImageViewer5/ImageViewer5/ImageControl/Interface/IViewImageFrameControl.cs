@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace ViewImageModule
 {
@@ -9,5 +10,7 @@ namespace ViewImageModule
     public interface IViewImageFrameControl
     {
         Size GetSize();
+
+        Control GetControl();
     }
 }

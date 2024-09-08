@@ -23,6 +23,11 @@ namespace ViewImageModule
             _form = form;
         }
 
+        public Control GetControl()
+        {
+            return _form;
+        }
+
         public Size GetSize()
         {
             if(_form != null)

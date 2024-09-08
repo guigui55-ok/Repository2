@@ -15,7 +15,7 @@ namespace CommonUtility.FileListUtility
     public class FileListManager
     {
         public AppLogger _logger;
-        protected IFiles _files;
+        public IFiles _files;
         protected List<string> _folderList;
         public FileListRegister _filesRegister;
         protected RandomListCreater randomListCreater;
@@ -23,6 +23,8 @@ namespace CommonUtility.FileListUtility
         // CurrentFileが更新されたときのイベント
         public EventHandler UpdateFileListAfterEvent;
         public int ReadOption = 1;
+
+        public FileListManagerSetting _fileListManagerSetting;
         //public List<string> _fileFilterConditionList = new List<string> { };
         //public List<string> _fileIgnoreConditionList = new List<string> { };
 
@@ -44,7 +46,7 @@ namespace CommonUtility.FileListUtility
             set { _filesRegister.ReadFolderHierarchy = value; }
         }
 
-        protected bool IsRandom = false;
+        public bool IsRandom = false;
         
         public FileListManager(AppLogger logger, IFiles files)
         {
@@ -56,6 +58,8 @@ namespace CommonUtility.FileListUtility
             _directoryGetter = new DirectoryGetter(_logger);
             _directoryGetter._logger = logger;
             this.randomListCreater = new RandomListCreater(this._logger);
+            _fileListManagerSetting = new FileListManagerSetting(_logger, this);
+            IsRandom = _fileListManagerSetting._isListRandom;
         }
 
         // SetFileListFromFolderList
@@ -79,11 +83,15 @@ namespace CommonUtility.FileListUtility
         }
 
 
-        /// <param name="supportedImageExtentionList">
+        /// <summary>
+        /// フォルダ・ファイルリスト読み込み・ファイルリスト設定をお行うメインメソッド
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="fileFilterConditionList"></param>
         /// 対応する拡張子リスト。不要な場合はnullを渡す
         /// nullの場合でも、_fileListManagerのメンバ変数 _supportedImageExtentionList に設定されていたらこれを使用する
         /// 無効にするときは List string {} を渡す
-        /// </param>
+        /// <param name="fileIgnoreConditionList"></param>
         public void SetFilesFromPath(
             string path,
             List<string> fileFilterConditionList = null,
@@ -107,31 +115,56 @@ namespace CommonUtility.FileListUtility
                 _logger.AddLog(buf);
                 ////
                 // ファイルリスト取得
+                int ret = 0;
                 _filesRegister.SetConditionList(fileFilterConditionList, fileIgnoreConditionList);
-                int ret = _filesRegister.SetFileListFromPath(
-                   path, fileFilterConditionList, fileIgnoreConditionList);
+                //#
+                //通常時（ディレクトリのファイルのみ）
+                // サブフォルダ以下のすべてのファイルが対象
+                ret = _filesRegister.SetFileListFromPath(
+                   path,
+                   fileFilterConditionList,
+                   fileIgnoreConditionList,
+                   _fileListManagerSetting._isLoadEverythingUnderSubfoldersFiles);
                 ////
-               if (_logger.hasAlert()) { _logger.AddLogAlert("  SetFileListFromPath Failed"); }
+                if (_logger.hasAlert()) { _logger.AddLogAlert("  SetFileListFromPath Failed"); }
                 _files.DirectoryPath = _filesRegister.DirectoryPath;
                 _logger.AddLog("  SetDirecoryPath="+ _files.DirectoryPath);
+                //#
                 // 
                 // Directory更新とFile更新のイベントがほぼ同時に走るので
                 // それぞれの後続の処理が干渉しあわないように注意
                 //
-                _files.FileList = _filesRegister.GetList();
-                string movePath = _filesRegister.getFile(path, IsReadSourceOfShotcut);
-                _logger.AddLog(string.Format("movePath = {0}", movePath));
-                if (Directory.Exists(path))
+                // ファイルリストを最終決定＞セット
+                List<string> bufList = _filesRegister.GetList();
+                _files.FileList = bufList;
+                //ランダム適用
+                //_fileListManagerSetting._isListRandom = true;  //Debug用
+                int retRandom = SwitchOrderToRandomOrCorrectByFlag(_fileListManagerSetting._isListRandom);
+                //#
+                //最初のファイルを設定する
+                //string movePath = _filesRegister.getFile(path, IsReadSourceOfShotcut);
+                //_logger.AddLog(string.Format("movePath = {0}", movePath));
+                //if (Directory.Exists(path))
+                //{
+                //    // MoveDirectoryでこのmovePathが読み込みルートのディレクトリになる
+                //    _files.Move(0);
+                //}
+                //else
+                //{
+                //    // ファイルの場合はそのまま選択する
+                //    // 引数のpathがファイルがリストにない場合は（index0にする）　未対応 240901
+                //    _files.Move(movePath);
+                //}
+                if (retRandom == 2)
                 {
-                    // MoveDirectoryでこのmovePathが読み込みルートのディレクトリになる
                     _files.Move(0);
                 }
                 else
                 {
-                    // ファイルの場合はそのまま選択する
-                    // 引数のpathがファイルがリストにない場合は（index0にする）　未対応 240901
-                    _files.Move(movePath);
+                    _files.Move(0);
                 }
+                //string movePath = _filesRegister.getFile(path, IsReadSourceOfShotcut);
+                _logger.AddLog(string.Format("first Path = {0}", _files.GetCurrentValue()));
                 UpdateFileListAfterEvent?.Invoke(_files.FileList.ToArray(), EventArgs.Empty);
             }
             catch (Exception ex)
@@ -140,136 +173,105 @@ namespace CommonUtility.FileListUtility
             }
         }
 
-        public void MoveNextFileWhenLastFileNextDirectory()
+        /// <summary>
+        /// タイマーなどイベント設定用
+        /// MoveNextFileWhenLastFileNextDirectoryが呼ばれる
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void MoveNextFileWhenLastFileNextDirectoryEvent(object sender, EventArgs e)
+        {
+            bool isMove = MoveNextFileWhenLastFileNextDirectory();
+        }
+
+        public bool MoveNextFileWhenLastFileNextDirectory()
         {
             try
             {
-                if (_files.IsLastIndex()) { this.MoveNextDirectory(); }
-                else { _files.MoveNext(); }                
+                if (_files.IsLastIndex()) 
+                { 
+                    return this.MoveNextDirectory(); 
+                }
+                else {
+                    _files.MoveNext();
+                } 
             } catch (Exception ex)
             {
                 _logger.AddException(ex, this, "MoveNextFileWhenLastFileNextDirectory");
+                return false;
             }
+            return true;
         }
         /// <summary>
         /// 現在のファイル位置がリストの最初なら、前のディレクトリに移動する
         /// そうでなければ、1つ前のファイルに移動する
         /// </summary>
-        public void MoveProviousFileWhenFirstFilePreviousDirectory()
+        public bool MoveProviousFileWhenFirstFilePreviousDirectory()
         {
             try
             {
-                if (_files.IsFirstIndex()) { this.MovePreviousDirectory(); }
+                if (_files.IsFirstIndex()) {
+                   return this.MovePreviousDirectory();
+                }
                 else { _files.MovePrevious(); }
             }
             catch (Exception ex)
             {
                 _logger.AddException(ex, this, "MoveNextFileWhenLastFileNextDirectory");
+                return false;
             }
+            return true;
         }
 
-        public void MoveNextDirectory()
+        public bool MoveNextDirectory()
         {
             try
             {
                 _logger.AddLog(this, "MoveNextDirectory");
+                if (_fileListManagerSetting._isFixedDirectory)
+                {
+                    _logger.AddLog(this, "Setting._isFixedDirectory = true");
+                    return false;
+                }
                 string dir = _directoryGetter.GetNextDirectory(_files.DirectoryPath);
                 SetFilesFromPath(dir);
-                if (_logger.hasError()) { _logger.AddLogAlert(this, "MoveNextDirectory Failed"); _logger.ClearError(); }
+                if (_logger.hasError()) { 
+                    _logger.AddLogAlert(this, "MoveNextDirectory Failed"); 
+                    _logger.ClearError();
+                    return false;
+                }
             } catch (Exception ex)
             {
                 _logger.AddException(ex, this, "MoveNextDirectory");
+                return false;
             }
+            return true;
         }
-        public void MovePreviousDirectory()
+        public bool MovePreviousDirectory()
         {
             try
             {
                 _logger.AddLog(this, "MovePreviousDirectory");
+                if (_fileListManagerSetting._isFixedDirectory)
+                {
+                    _logger.AddLog(this, "Setting._isFixedDirectory = true");
+                    return false;
+                }
                 string dir = _directoryGetter.GetPreviousDirectory(_files.DirectoryPath);
                 SetFilesFromPath(dir);
-                if (_logger.hasError()) { _logger.AddLogAlert(this, "MovePreviousDirectory Failed"); _logger.ClearError(); }
+                if (_logger.hasError()) { 
+                    _logger.AddLogAlert(this, "MovePreviousDirectory Failed"); 
+                    _logger.ClearError();
+                    return false;
+                }
             } catch (Exception ex)
             {
                 _logger.AddException(ex, this, "MovePreviousDirectory");
+                return false;
             }
+            return true;
         }
 
-        ///// <summary>
-        ///// ファイルリストを DragDrop イベントから登録する
-        ///// </summary>
-        ///// <param name="sender"></param>
-        ///// <param name="e"></param>
-        //public void RegistFileByDragDrop(object sender, DragEventArgs e)
-        //{
-        //    try
-        //    {
-        //        _logger.AddLog(this, "RegistFileListByDragDrop");
-        //        // DragDrop の e を配列へ
-        //        string[] files = GetFilesByDragAndDrop(e);
-
-        //        // 配列→Listへ
-        //        List<string> list = new List<string>(files);
-
-
-        //        // リストからFileListへ登録
-        //        // 条件に合致したファイルリストを作成する
-        //        int ret = this._filesRegister.SetFileList(list);
-        //        if (ret < 1)
-        //        {
-        //            _logger.AddLogWarning("  Control_DragDrop.setFileList Failed");
-        //            return;
-        //        }
-        //        _logger.AddLog("  List.Count = " + _filesRegister.GetListCount());
-        //        // ファイルリストへ登録する
-        //        _files.FileList = _filesRegister.GetList();
-
-        //        if (_logger.hasAlert()) { _logger.AddLogAlert("  SetFileList Failed"); }
-        //        else
-        //        {
-        //            _logger.AddLog("  SetFileList Success!");
-        //        }
-        //        UpdateFileListAfterEvent?.Invoke(_files.FileList.ToArray(), EventArgs.Empty);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _logger.AddException(ex, this.ToString(), "RegistFileListByDragDrop");
-        //    }
-        //    finally
-        //    {
-        //        if (_logger.hasError())
-        //        {
-        //            Debug.WriteLine(_logger.GetLastErrorMessagesAsString(3,true));
-        //        }
-        //    }
-        //}
-        ///// <summary>
-        ///// ドラッグされたオブジェクト内のファイルやディレクトリのみ (DataFormats.FileDrop) を取得する
-        ///// </summary>
-        ///// <param name="e"></param>
-        ///// <returns></returns>
-        //private string[] GetFilesByDragAndDrop(DragEventArgs e)
-        //{
-        //    try
-        //    {
-        //        if (e.Data.GetDataPresent(DataFormats.FileDrop))
-        //        {
-        //            // ドラッグ中のファイルやディレクトリの取得
-        //            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-        //            return files;
-        //        }
-        //        else
-        //        {
-        //            _logger.AddLogAlert(this, "e.Data.GetDataPresent(DataFormats.FileDrop)=false");
-        //            return null;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _logger.AddException(ex, this.ToString(), "GetFilesByDragAndDrop");
-        //        return null;
-        //    }
-        //}
         /// <summary>
         /// リストの順番をランダムまたは通常へ切り替える。実行毎に OFF/ON を切り替える。
         /// </summary>
@@ -278,27 +280,75 @@ namespace CommonUtility.FileListUtility
         {
             try
             {
+                _logger.AddLog(this, "SwitchOrderToRandomOrCorrect");
                 int ret = 0;
                 List<string> list = _files.FileList;
                 if (IsRandom)
                 {
                     IsRandom = false;
+                    _fileListManagerSetting._isListRandom = IsRandom;
                     // 名前順にする
                     list.Sort();
                     _files.FileList = list;
-                    return 1;
+                    ret = 1;
                 }
                 else
                 {
                     // ランダム順位する
                     _files.FileList = randomListCreater.ListOrtderToRandom(list);
                     IsRandom = true;
+                    _fileListManagerSetting._isListRandom = IsRandom;
+                    ret = 2;
                 }
                 return ret;
             }
             catch (Exception ex)
             {
                 _logger.AddException(ex, this, "switchOrderToRandomOrCorrect");
+                return 0;
+            }
+        }
+        /// <summary>
+        /// リストの順番をランダムまたは通常へ切り替える。フラグで指定する。
+        /// メンバ変数 IsRandom , _setting^._isListRandom を更新する。
+        /// </summary>
+        /// <returns></returns>
+        public int SwitchOrderToRandomOrCorrectByFlag(bool argIsRandom)
+        {
+            try
+            {
+                _logger.AddLog(this, "SwitchOrderToRandomOrCorrectByFlag");
+                int ret = 0;
+                List<string> list = _files.FileList;
+                IsRandom = argIsRandom;
+                _fileListManagerSetting._isListRandom = IsRandom;
+                if (!argIsRandom)
+                {
+                    // 名前順にする
+                    list.Sort();
+                    ////#
+                    //List<string> bufList = new List<string> { };
+                    //foreach(string buf in list)
+                    //{
+                    //    bufList.Add(Path.GetFileName(buf));
+                    //}
+                    ////#
+                    //string bufJoin = String.Join(",", bufList);
+                    //_logger.PrintInfo("fileNameList = " + bufJoin);
+                    _files.FileList = list;
+                    ret = 1;
+                }
+                else
+                {
+                    // ランダム順位する
+                    _files.FileList = randomListCreater.ListOrtderToRandom(list);
+                    ret = 2;
+                }
+                return ret;
+            }
+            catch (Exception ex)
+            {
+                _logger.AddException(ex, this, "SwitchOrderToRandomOrCorrectByFlag");
                 return 0;
             }
         }

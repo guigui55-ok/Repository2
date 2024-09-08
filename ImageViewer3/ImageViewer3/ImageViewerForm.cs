@@ -26,6 +26,7 @@ namespace ImageViewer3
 
             // setPath
             string path = @"J:\ZMyFolder_2\jpgtest\test.jpeg";
+            path = @"J:\ZMyFolder_2\jpgbest\test.jpeg";
             //path = @"J:\ZMyFolder_2\jpgbest\gif_png_bmp\gif\160501001.gif";
 
             List<string> list = new List<string>

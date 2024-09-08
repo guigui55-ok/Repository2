@@ -11,14 +11,16 @@ namespace ImageViewer5.CommonModules
     public class LinkControlSize
     {
         protected AppLogger _logger;
+        protected Control _outerControl;
         protected Control _innerControl;
         protected Control _parentControl;
         public bool _isEnable;
-        public LinkControlSize(AppLogger logger, Control control, Form parentControl, bool isEnable)
+        public LinkControlSize(AppLogger logger, Control innerControl, Control outerControl, Form parentControl, bool isEnable)
         {
             _isEnable = isEnable;
             _logger = logger;
-            _innerControl = control;
+            _innerControl = innerControl;
+            _outerControl = outerControl;
             _parentControl = parentControl;
             _parentControl.ClientSizeChanged += LinkControlSize_ClientSizeChanged;
         }
@@ -27,7 +29,9 @@ namespace ImageViewer5.CommonModules
         {
             if (_isEnable)
             {
+                _outerControl.Size = _parentControl.ClientSize;
                 _innerControl.Size = _parentControl.ClientSize;
+                _innerControl.Location = new System.Drawing.Point(0, 0);
             }
         }
     }

@@ -2,3 +2,1719 @@
 2024/09/01 21:14:16 412084    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
 2024/09/01 21:32:12 766380    CommonUtility.FileListUtility.Files > FileList:PropertySet
 2024/09/01 21:32:12 769371    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 06:07:40 839786    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 06:07:40 842779    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 06:50:43 610670    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 06:50:43 617652    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 06:51:06 253413    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 06:51:06 255408    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 06:52:44 929634    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 06:52:44 931627    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 06:52:47 654880    SettingForm > buttonClose_Click
+2024/09/08 06:52:50 275839    SettingForm > buttonClose_Click
+2024/09/08 14:41:45 317288    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 14:41:45 319284    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 14:54:11 883276    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 14:54:11 886268    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 14:54:13 044331    SettingForm > FileListManagerSetting_Activated
+2024/09/08 14:54:18 300973    SettingForm > buttonClose_Click
+2024/09/08 14:59:24 362893    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 14:59:24 364888    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 14:59:40 982349    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 14:59:40 985342    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 14:59:42 102544    SettingForm > FileListManagerSetting_Activated
+2024/09/08 14:59:47 865713    SettingForm > buttonClose_Click
+2024/09/08 15:59:41 967646    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 15:59:41 970638    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 16:02:31 225058    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 16:02:31 228050    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 16:02:31 228050    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 16:02:35 011522    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 16:02:35 039759    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 16:02:35 431815    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 16:02:35 431815    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 16:02:35 432813    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 16:02:35 434835    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 16:02:35 434835      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 16:02:35 439823    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 16:02:35 439823    fileFilterConditionList = 
+2024/09/08 16:02:35 440791    fileIgnoreConditionList = 
+2024/09/08 16:02:35 441788    Dirctory.GetFiles.Length = 60
+2024/09/08 16:02:35 442787    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 16:02:35 443784      list.Count < 1
+2024/09/08 16:02:35 444781      SetDirecoryPath=C:\Users\OK\Desktop
+2024/09/08 16:02:35 444781    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 16:02:35 444781    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 16:02:35 445778    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 16:02:35 445778    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 16:02:35 448770    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 16:02:35 448770    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 16:02:35 448770    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 16:02:35 523381    movePath = J:\ZMyFolder_2\jpgbest
+2024/09/08 16:02:35 524379    CommonUtility.FileListUtility.Files > Move(string Value) Value Is Nothing [J:\ZMyFolder_2\jpgbest]
+2024/09/08 16:02:35 524379    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 16:02:35 526376     listBox1.Items.Count < 1 , retrun
+2024/09/08 16:02:35 527782    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/08 16:02:35 527782     listBox1.Items.Count < 1 , retrun
+2024/09/08 16:02:35 527782    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 16:02:40 644077    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 16:02:40 652061    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 16:02:40 912742    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 16:02:41 094794    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 16:02:41 169869    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 16:02:41 169869    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 16:02:41 170869    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 16:02:41 170869    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 16:02:41 171868      GetPath=C:\Users\OK\Desktop\240907 cs
+2024/09/08 16:02:41 173411    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 16:02:41 173411    fileFilterConditionList = 
+2024/09/08 16:02:41 173411    fileIgnoreConditionList = 
+2024/09/08 16:02:41 174411    Dirctory.GetFiles.Length = 23
+2024/09/08 16:02:41 174411    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 16:02:41 175408      list.Count < 1
+2024/09/08 16:02:41 175408      SetDirecoryPath=C:\Users\OK\Desktop\240907 cs
+2024/09/08 16:02:41 175408    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 16:02:41 176405    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 16:02:41 176405    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 16:02:41 176405    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 16:02:41 176405    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 16:02:41 177402    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 16:02:41 177402    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 16:02:41 177402    movePath = C:\Users\OK\Desktop\240907 cs
+2024/09/08 16:02:41 178400    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 16:02:41 178400    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 16:02:41 178400     listBox1.Items.Count < 1 , retrun
+2024/09/08 16:02:41 179396    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/08 16:02:41 179396     listBox1.Items.Count < 1 , retrun
+2024/09/08 16:02:41 179396    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 16:02:50 641980    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 16:02:50 665912    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 16:02:50 858414    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 16:02:50 858414    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 16:02:50 859036    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 16:02:50 860028    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 16:02:50 860028      GetPath=C:\Users\OK\Desktop\PixAI 学習 SDXL LoRAyuuki mikan(to-love-ru) SDXL4.38k019.url
+2024/09/08 16:02:50 871001    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 16:02:50 871001    fileFilterConditionList = 
+2024/09/08 16:02:50 872001    fileIgnoreConditionList = 
+2024/09/08 16:02:50 872001    Dirctory.GetFiles.Length = 60
+2024/09/08 16:02:50 872996    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 16:02:50 872996      list.Count < 1
+2024/09/08 16:02:50 872996      SetDirecoryPath=C:\Users\OK\Desktop
+2024/09/08 16:02:50 873994    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 16:02:50 873994    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 16:02:50 873994    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 16:02:50 874990    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 16:02:50 874990    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 16:02:50 874990    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 16:02:50 875987    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 16:02:50 875987    movePath = C:\Users\OK\Desktop\PixAI 学習 SDXL LoRAyuuki mikan(to-love-ru) SDXL4.38k019.url
+2024/09/08 16:02:50 875987    CommonUtility.FileListUtility.Files > Move(string Value) Value Is Nothing [C:\Users\OK\Desktop\PixAI 学習 SDXL LoRAyuuki mikan(to-love-ru) SDXL4.38k019.url]
+2024/09/08 16:02:50 876985    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 16:02:50 876985     listBox1.Items.Count < 1 , retrun
+2024/09/08 16:02:50 876985    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/08 16:02:50 877983     listBox1.Items.Count < 1 , retrun
+2024/09/08 16:02:50 877983    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 16:03:41 083448    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 16:03:43 106162    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 16:03:43 107163    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 16:04:16 010263    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 16:04:16 064596    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 16:04:16 380344    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 16:04:16 571674    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 16:04:16 572674    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 16:04:16 572674    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 16:04:18 099236    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 16:04:23 043141      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 16:04:46 541473    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 16:04:54 463104    fileFilterConditionList = 
+2024/09/08 16:04:55 353745    fileIgnoreConditionList = 
+2024/09/08 16:05:47 770609    Dirctory.GetFiles.Length = 60
+2024/09/08 16:05:47 772605    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 16:05:47 773600      list.Count < 1
+2024/09/08 16:05:47 773600      SetDirecoryPath=C:\Users\OK\Desktop
+2024/09/08 16:05:47 773600    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 16:05:47 774598    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 16:05:47 775596    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 16:05:47 775596    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 16:05:47 780582    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 16:05:47 780582    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 16:05:47 781579    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 16:05:47 864359    movePath = J:\ZMyFolder_2\jpgbest
+2024/09/08 16:05:47 865354    CommonUtility.FileListUtility.Files > Move(string Value) Value Is Nothing [J:\ZMyFolder_2\jpgbest]
+2024/09/08 16:05:47 866352    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 16:05:47 867350     listBox1.Items.Count < 1 , retrun
+2024/09/08 16:05:47 868346    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/08 16:05:47 869002     listBox1.Items.Count < 1 , retrun
+2024/09/08 16:05:47 869002    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 16:06:20 419833    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 16:06:20 421828    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 16:06:20 422825    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 16:06:22 645954    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 16:06:22 837190    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 16:06:23 750676    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 16:06:25 540382    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 16:06:25 687056    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 16:06:25 854098    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 16:06:25 979583    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 16:06:25 979583    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 16:06:25 980583    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 16:06:28 911170    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 16:06:29 601286      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 16:06:33 470502    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 16:06:37 829288    fileFilterConditionList = 
+2024/09/08 16:06:38 368363    fileIgnoreConditionList = 
+2024/09/08 16:06:53 210007    Dirctory.GetFiles.Length = 60
+2024/09/08 16:06:58 183065    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 16:07:01 348743      list.Count < 1
+2024/09/08 20:50:17 432930    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 20:50:17 435921    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 20:50:17 436919    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 20:50:20 259490    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 20:50:20 271458    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 20:50:20 274449    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 20:50:20 289409    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 20:50:21 452383    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 20:50:21 462355    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 20:50:21 479310    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 20:50:23 392868    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 20:50:23 467175    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 20:50:23 730876    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 20:50:23 731877    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 20:50:23 731877    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 20:50:25 689848    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 20:50:25 690846      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 20:50:25 695834    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 20:50:25 696828    fileFilterConditionList = 
+2024/09/08 20:50:25 696828    fileIgnoreConditionList = 
+2024/09/08 20:55:08 441168    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 20:55:08 443163    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 20:55:08 444160    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 20:55:10 513346    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 20:55:10 516538    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 20:55:10 851182    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 20:55:10 852178    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 20:55:10 852178    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 20:55:14 999209    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 20:55:14 999209      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 20:55:15 006192    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 20:55:15 007191    fileFilterConditionList = 
+2024/09/08 20:55:15 007191    fileIgnoreConditionList = 
+2024/09/08 20:55:16 850399    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 20:55:22 477395    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 20:55:26 156212    Dirctory.GetFiles.Length = 4
+2024/09/08 20:55:26 959679    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 20:55:26 960675      list.Count < 1
+2024/09/08 20:55:26 961672      SetDirecoryPath=J:\ZMyFolder_2
+2024/09/08 20:55:26 962670    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 20:55:26 963669    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 20:55:26 963669    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 20:55:26 963669    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 20:55:26 966687    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 20:55:26 966687    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 20:55:26 967656    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 20:55:26 968654    movePath = J:\ZMyFolder_2\jpgbest
+2024/09/08 20:55:26 969680    CommonUtility.FileListUtility.Files > Move(string Value) Value Is Nothing [J:\ZMyFolder_2\jpgbest]
+2024/09/08 20:55:26 969680    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 20:55:26 971646     listBox1.Items.Count < 1 , retrun
+2024/09/08 20:55:26 971646    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/08 20:55:26 971646     listBox1.Items.Count < 1 , retrun
+2024/09/08 20:55:26 972644    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 20:55:47 129368    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory
+2024/09/08 20:55:47 130365    CommonUtility.FileListUtility.DirectoryGetter > GetNextDirectory
+2024/09/08 20:55:47 131363    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/08 20:55:47 132361    CommonUtility.FileListUtility.DirectoryGetter > NextDirectoryWhenNotAbleAccess
+2024/09/08 20:55:47 133359    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 20:55:47 134357    fileFilterConditionList = 
+2024/09/08 20:55:47 135354    fileIgnoreConditionList = 
+2024/09/08 20:55:49 155890    Dirctory.GetFiles.Length = 11
+2024/09/08 20:55:49 802807    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 20:55:49 802807      list.Count < 1
+2024/09/08 20:55:49 803807      SetDirecoryPath=J:\ZMyFolder_2\00movie
+2024/09/08 20:55:49 803807    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 20:55:49 804804    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 20:55:49 804804    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 20:55:49 805800    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 20:55:49 805800    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 20:55:49 805800    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 20:55:49 806798    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 20:55:49 806798    movePath = J:\ZMyFolder_2\00movie
+2024/09/08 20:55:49 807797    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 20:55:49 807797    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 20:55:49 808793     listBox1.Items.Count < 1 , retrun
+2024/09/08 20:55:49 808793    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/08 20:55:49 809790     listBox1.Items.Count < 1 , retrun
+2024/09/08 20:56:02 283686    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 20:56:02 285680    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 20:56:02 285680    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 20:56:05 050118    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 20:56:05 257980    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 20:56:05 319148    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 20:56:05 432249    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 20:56:05 433247    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 20:56:05 433247    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 20:56:08 070329    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 20:56:08 070329      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 20:56:08 076315    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 20:56:08 077313    fileFilterConditionList = 
+2024/09/08 20:56:08 077313    fileIgnoreConditionList = 
+2024/09/08 20:56:10 124200    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 20:56:10 699426    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 20:56:18 322598    Dirctory.GetFiles.Length = 4
+2024/09/08 20:59:14 142957    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 20:59:14 144951    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 20:59:14 145949    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 20:59:16 152092    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 20:59:16 160071    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 20:59:16 429632    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 20:59:16 429632    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 20:59:16 430630    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 20:59:18 389525    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 20:59:18 390523      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 20:59:18 397504    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 20:59:18 398502    fileFilterConditionList = 
+2024/09/08 20:59:18 398502    fileIgnoreConditionList = 
+2024/09/08 20:59:19 722603    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 20:59:20 638483    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 20:59:25 413979    Dirctory.GetFiles.Length = 4
+2024/09/08 20:59:26 940477    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 20:59:26 941449      list.Count < 1
+2024/09/08 20:59:26 942447      SetDirecoryPath=J:\ZMyFolder_2
+2024/09/08 20:59:26 942447    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 20:59:26 943446    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 20:59:26 943446    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 20:59:26 944441    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 20:59:26 947434    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 20:59:26 948432    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 20:59:26 948432    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 20:59:26 951423    movePath = J:\ZMyFolder_2\jpgbest
+2024/09/08 20:59:26 952420    CommonUtility.FileListUtility.Files > Move(string Value) Value Is Nothing [J:\ZMyFolder_2\jpgbest]
+2024/09/08 20:59:26 953417    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 20:59:26 954414     listBox1.Items.Count < 1 , retrun
+2024/09/08 20:59:26 955413    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/08 20:59:26 955413     listBox1.Items.Count < 1 , retrun
+2024/09/08 20:59:26 956411    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 20:59:36 588175    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 20:59:36 591166    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 20:59:36 592164    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 20:59:38 367897    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 20:59:38 585353    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 20:59:38 586350    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 20:59:38 587347    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 20:59:40 025833    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 20:59:40 025833      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 20:59:40 032813    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 20:59:40 032813    fileFilterConditionList = 
+2024/09/08 20:59:40 032813    fileIgnoreConditionList = 
+2024/09/08 20:59:42 168200    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 20:59:42 252003    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 20:59:42 252975    Dirctory.GetFiles.Length = 4
+2024/09/08 21:00:33 074311    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:00:33 077306    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:00:33 077306    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:00:34 549321    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:00:34 553310    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:00:34 782493    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:00:34 783490    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:00:34 784488    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:00:36 375901    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:00:36 376897      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:00:36 383879    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:00:36 383879    fileFilterConditionList = 
+2024/09/08 21:00:36 384877    fileIgnoreConditionList = 
+2024/09/08 21:00:37 636896    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:00:37 705712    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:00:37 706709    Dirctory.GetFiles.Length = 4
+2024/09/08 21:00:40 072547    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:00:41 874988    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:00:45 818541      SetDirecoryPath=J:\ZMyFolder_2
+2024/09/08 21:00:45 819541    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:00:45 819541    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:00:45 820538    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:00:45 821535     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:00:45 821535    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:00:45 822533    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:00:45 843476    CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList
+2024/09/08 21:00:45 844474    インデックスが範囲を超えています。負でない値で、コレクションのサイズよりも小さくなければなりません。
+パラメーター名:index
+2024/09/08 21:00:45 848490       場所 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   場所 System.Collections.Generic.List`1.get_Item(Int32 index)
+   場所 CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList(List`1 valueList, List`1 indexList) 場所 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\FileListManager\RandomListCreater.cs:行 55
+2024/09/08 21:00:45 848490    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:00:45 849461    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:00:45 849461    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:00:45 850460     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:00:45 850460    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:00:45 852452    movePath = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:00:45 852452    CommonUtility.FileListUtility.Files > Move(string Value) Value Is Nothing [J:\ZMyFolder_2\jpgbest]
+2024/09/08 21:00:45 853450    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:00:45 854447     SetFilesToControl Failed
+2024/09/08 21:00:45 856443    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 21:00:58 501859    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:00:58 503854    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:00:58 503854    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:01:00 842483    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:01:00 856446    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:01:01 135182    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:01:01 136179    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:01:01 136179    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:01:08 065673    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:01:08 863599      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:01:11 175544    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:01:11 175544    fileFilterConditionList = 
+2024/09/08 21:01:11 176540    fileIgnoreConditionList = 
+2024/09/08 21:01:12 821366    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:01:14 193403    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:01:22 191111    Dirctory.GetFiles.Length = 4
+2024/09/08 21:01:26 082025    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:01:36 476551    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:02:24 511310    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:02:24 513303    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:02:24 514302    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:02:26 741899    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:02:27 056931    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:02:27 366777    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:02:27 367774    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:02:27 367774    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:02:29 013501    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:02:29 013501      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:02:29 021508    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:02:29 021508    fileFilterConditionList = 
+2024/09/08 21:02:29 022479    fileIgnoreConditionList = 
+2024/09/08 21:02:29 024473    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:02:29 094736    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:02:29 095708    Dirctory.GetFiles.Length = 4
+2024/09/08 21:02:32 163416    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:02:33 971853    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:03:55 536665    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:03:55 538660    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:03:55 539656    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:03:57 188628    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:03:57 495775    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:03:57 495775    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:03:57 496774    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:03:58 854067    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:03:58 855064      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:03:58 860140    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:03:58 861137    fileFilterConditionList = 
+2024/09/08 21:03:58 861137    fileIgnoreConditionList = 
+2024/09/08 21:04:00 189077    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:04:00 755809    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:04:15 092147    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:04:15 094141    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:04:15 094141    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:04:15 665036    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:04:15 669025    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:04:15 875473    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:04:16 046017    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:04:16 047014    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:04:16 048011    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:04:17 118785    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:04:17 118785      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:04:17 124794    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:04:17 125764    fileFilterConditionList = 
+2024/09/08 21:04:17 125764    fileIgnoreConditionList = 
+2024/09/08 21:04:18 732283    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:04:19 139585    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:04:21 342669    Dirctory.GetFiles.Length = 6
+2024/09/08 21:04:22 627349    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:04:23 283902    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:04:28 718990      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:04:28 719990    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:04:28 719990    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:28 720988    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:28 721985     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:04:28 721985    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:04:28 722982    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:04:28 744925    CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList
+2024/09/08 21:04:28 745920    インデックスが範囲を超えています。負でない値で、コレクションのサイズよりも小さくなければなりません。
+パラメーター名:index
+2024/09/08 21:04:28 748911       場所 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   場所 System.Collections.Generic.List`1.get_Item(Int32 index)
+   場所 CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList(List`1 valueList, List`1 indexList) 場所 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\FileListManager\RandomListCreater.cs:行 55
+2024/09/08 21:04:28 749910    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:04:28 749910    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:28 749910    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:28 750906     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:04:28 750906    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:04:28 752901    movePath = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:04:28 752901    CommonUtility.FileListUtility.Files > Move(string Value) Value Is Nothing [J:\ZMyFolder_2\jpgbest]
+2024/09/08 21:04:28 753900    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:04:28 754899     SetFilesToControl Failed
+2024/09/08 21:04:28 756918    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 21:04:32 187735    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > _listBox_Click
+2024/09/08 21:04:32 188736    CommonUtility.FileListUtility.Files > Move(int index) index=3
+2024/09/08 21:04:32 752088    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > _listBox_Click
+2024/09/08 21:04:32 752088    CommonUtility.FileListUtility.Files > Move(int index) index=4
+2024/09/08 21:04:34 662220    CommonUtility.FileListUtility.Files > MovePrevious index=3
+2024/09/08 21:04:34 663217    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:34 877650    CommonUtility.FileListUtility.Files > MovePrevious index=2
+2024/09/08 21:04:34 877650    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:35 095330    CommonUtility.FileListUtility.Files > MovePrevious index=1
+2024/09/08 21:04:35 096326    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:35 342614    CommonUtility.FileListUtility.Files > MovePrevious index=0
+2024/09/08 21:04:35 342614    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:35 683653    CommonUtility.FileListUtility.FileListManager > MovePreviousDirectory
+2024/09/08 21:04:35 684682    CommonUtility.FileListUtility.DirectoryGetter > GetPreviousDirectory
+2024/09/08 21:04:35 684682    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/08 21:04:35 685647    CommonUtility.FileListUtility.DirectoryGetter > GetDeepestAndLastDirectory
+2024/09/08 21:04:35 686645    CommonUtility.FileListUtility.DirectoryGetter > GetLastDirectory
+2024/09/08 21:04:35 686645    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/08 21:04:35 687642     dirs.Length < 1[Child Directory Nothing]
+2024/09/08 21:04:35 687642      Child Directory Nothing
+2024/09/08 21:04:35 687642    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:04:35 688639    fileFilterConditionList = 
+2024/09/08 21:04:35 688639    fileIgnoreConditionList = 
+2024/09/08 21:04:35 688639    Dirctory.GetFiles.Length = 14
+2024/09/08 21:04:38 378039    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:04:41 387578    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:04:41 394536      SetDirecoryPath=J:\ZMyFolder_2\0test file
+2024/09/08 21:04:41 394536    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:04:41 395531    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:41 396528    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:41 396528    Item is Nothing
+2024/09/08 21:04:41 397526    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:04:41 397526    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:04:41 412513    CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList
+2024/09/08 21:04:41 412513    インデックスが範囲を超えています。負でない値で、コレクションのサイズよりも小さくなければなりません。
+パラメーター名:index
+2024/09/08 21:04:41 413482       場所 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   場所 System.Collections.Generic.List`1.get_Item(Int32 index)
+   場所 CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList(List`1 valueList, List`1 indexList) 場所 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\FileListManager\RandomListCreater.cs:行 55
+2024/09/08 21:04:41 413482    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:04:41 414481    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:41 414481    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:41 414481    Item is Nothing
+2024/09/08 21:04:41 415477    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:04:41 415477    movePath = J:\ZMyFolder_2\0test file
+2024/09/08 21:04:41 416476    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:41 416476    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:41 417473    Item is Nothing
+2024/09/08 21:04:41 417473    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:04:41 420465     SetFilesToControl Failed
+2024/09/08 21:04:44 016748    CommonUtility.FileListUtility.Files > MoveNext index=1
+2024/09/08 21:04:44 016748    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:44 360388    CommonUtility.FileListUtility.Files > MoveNext index=2
+2024/09/08 21:04:44 360388    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:44 561691    CommonUtility.FileListUtility.Files > MoveNext index=3
+2024/09/08 21:04:44 561691    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:44 769913    CommonUtility.FileListUtility.Files > MoveNext index=4
+2024/09/08 21:04:44 769913    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:45 037559    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory
+2024/09/08 21:04:45 038556    CommonUtility.FileListUtility.DirectoryGetter > GetNextDirectory
+2024/09/08 21:04:45 038556    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/08 21:04:45 039552    CommonUtility.FileListUtility.DirectoryGetter > NextDirectoryWhenNotAbleAccess
+2024/09/08 21:04:45 040549    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:04:45 040549    fileFilterConditionList = 
+2024/09/08 21:04:45 041547    fileIgnoreConditionList = 
+2024/09/08 21:04:45 041547    Dirctory.GetFiles.Length = 6
+2024/09/08 21:04:45 041547    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:04:45 042546    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:04:45 042546      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:04:45 043541    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:04:45 043541    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:45 043541    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:45 044540    Item is Nothing
+2024/09/08 21:04:45 044540    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:04:45 045536    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:04:45 062577    CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList
+2024/09/08 21:04:45 062577    インデックスが範囲を超えています。負でない値で、コレクションのサイズよりも小さくなければなりません。
+パラメーター名:index
+2024/09/08 21:04:45 062577       場所 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   場所 System.Collections.Generic.List`1.get_Item(Int32 index)
+   場所 CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList(List`1 valueList, List`1 indexList) 場所 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\FileListManager\RandomListCreater.cs:行 55
+2024/09/08 21:04:45 063576    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:04:45 063576    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:45 063576    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:45 064574    Item is Nothing
+2024/09/08 21:04:45 064574    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:04:45 065571    movePath = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:04:45 065571    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:45 065571    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:45 066569    Item is Nothing
+2024/09/08 21:04:45 066569    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:04:45 067566     SetFilesToControl Failed
+2024/09/08 21:04:46 089159    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory
+2024/09/08 21:04:46 090155    CommonUtility.FileListUtility.DirectoryGetter > GetNextDirectory
+2024/09/08 21:04:46 090155    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/08 21:04:46 091154    CommonUtility.FileListUtility.DirectoryGetter > NextDirectoryWhenNotAbleAccess
+2024/09/08 21:04:46 092150    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:04:46 092150    fileFilterConditionList = 
+2024/09/08 21:04:46 093147    fileIgnoreConditionList = 
+2024/09/08 21:04:46 093147    Dirctory.GetFiles.Length = 13
+2024/09/08 21:04:46 094146    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:04:46 094146    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:04:46 095142      SetDirecoryPath=J:\ZMyFolder_2\jpgbest\Folder2
+2024/09/08 21:04:46 095142    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:04:46 095142    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:46 096138    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:46 096138    Item is Nothing
+2024/09/08 21:04:46 097136    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:04:46 097136    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:04:46 112096    CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList
+2024/09/08 21:04:46 113093    インデックスが範囲を超えています。負でない値で、コレクションのサイズよりも小さくなければなりません。
+パラメーター名:index
+2024/09/08 21:04:46 113093       場所 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   場所 System.Collections.Generic.List`1.get_Item(Int32 index)
+   場所 CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList(List`1 valueList, List`1 indexList) 場所 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\FileListManager\RandomListCreater.cs:行 55
+2024/09/08 21:04:46 114091    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:04:46 114091    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:46 114091    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:46 115088    Item is Nothing
+2024/09/08 21:04:46 115088    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:04:46 115088    movePath = J:\ZMyFolder_2\jpgbest\Folder2
+2024/09/08 21:04:46 116086    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:46 116086    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:46 117083    Item is Nothing
+2024/09/08 21:04:46 117083    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:04:46 118081     SetFilesToControl Failed
+2024/09/08 21:04:47 540427    CommonUtility.FileListUtility.FileListManager > MovePreviousDirectory
+2024/09/08 21:04:47 540427    CommonUtility.FileListUtility.DirectoryGetter > GetPreviousDirectory
+2024/09/08 21:04:47 541425    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/08 21:04:47 542422    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:04:47 542422    fileFilterConditionList = 
+2024/09/08 21:04:47 542422    fileIgnoreConditionList = 
+2024/09/08 21:04:47 543421    Dirctory.GetFiles.Length = 6
+2024/09/08 21:04:47 543421    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:04:47 544417    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:04:47 545415      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:04:47 545415    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:04:47 545415    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:47 546413    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:47 546413    Item is Nothing
+2024/09/08 21:04:47 547409    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:04:47 549405    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:04:47 564364    CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList
+2024/09/08 21:04:47 564364    インデックスが範囲を超えています。負でない値で、コレクションのサイズよりも小さくなければなりません。
+パラメーター名:index
+2024/09/08 21:04:47 566360       場所 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   場所 System.Collections.Generic.List`1.get_Item(Int32 index)
+   場所 CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList(List`1 valueList, List`1 indexList) 場所 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\FileListManager\RandomListCreater.cs:行 55
+2024/09/08 21:04:47 566360    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:04:47 567356    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:47 567356    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:47 568354    Item is Nothing
+2024/09/08 21:04:47 568354    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:04:47 569351    movePath = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:04:47 570348    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:47 570348    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:47 571345    Item is Nothing
+2024/09/08 21:04:47 571345    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:04:47 573340     SetFilesToControl Failed
+2024/09/08 21:04:47 967241    CommonUtility.FileListUtility.FileListManager > MovePreviousDirectory
+2024/09/08 21:04:47 967241    CommonUtility.FileListUtility.DirectoryGetter > GetPreviousDirectory
+2024/09/08 21:04:47 968239    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/08 21:04:47 969234    CommonUtility.FileListUtility.DirectoryGetter > GetDeepestAndLastDirectory
+2024/09/08 21:04:47 969234    CommonUtility.FileListUtility.DirectoryGetter > GetLastDirectory
+2024/09/08 21:04:47 969234    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/08 21:04:47 970232     dirs.Length < 1[Child Directory Nothing]
+2024/09/08 21:04:47 970232      Child Directory Nothing
+2024/09/08 21:04:47 971230    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:04:47 971230    fileFilterConditionList = 
+2024/09/08 21:04:47 971230    fileIgnoreConditionList = 
+2024/09/08 21:04:47 972228    Dirctory.GetFiles.Length = 14
+2024/09/08 21:04:47 972228    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:04:47 973225    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:04:47 973225      SetDirecoryPath=J:\ZMyFolder_2\0test file
+2024/09/08 21:04:47 973225    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:04:47 974220    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:47 974220    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:47 974220    Item is Nothing
+2024/09/08 21:04:47 975220    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:04:47 975220    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:04:47 990288    CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList
+2024/09/08 21:04:47 990288    インデックスが範囲を超えています。負でない値で、コレクションのサイズよりも小さくなければなりません。
+パラメーター名:index
+2024/09/08 21:04:47 990288       場所 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   場所 System.Collections.Generic.List`1.get_Item(Int32 index)
+   場所 CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList(List`1 valueList, List`1 indexList) 場所 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\FileListManager\RandomListCreater.cs:行 55
+2024/09/08 21:04:47 991288    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:04:47 991288    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:47 991288    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:47 992285    Item is Nothing
+2024/09/08 21:04:47 992285    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:04:47 992285    movePath = J:\ZMyFolder_2\0test file
+2024/09/08 21:04:47 993281    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:47 993281    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:47 994279    Item is Nothing
+2024/09/08 21:04:47 994279    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:04:47 995277     SetFilesToControl Failed
+2024/09/08 21:04:49 269346    CommonUtility.FileListUtility.Files > MoveNext index=1
+2024/09/08 21:04:49 269346    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:49 743304    CommonUtility.FileListUtility.Files > MoveNext index=2
+2024/09/08 21:04:49 743304    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:49 900571    CommonUtility.FileListUtility.Files > MoveNext index=3
+2024/09/08 21:04:49 900571    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:50 242688    CommonUtility.FileListUtility.Files > MoveNext index=4
+2024/09/08 21:04:50 242688    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:50 406771    CommonUtility.FileListUtility.Files > MoveNext index=5
+2024/09/08 21:04:50 406771    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:50 566545    CommonUtility.FileListUtility.Files > MoveNext index=6
+2024/09/08 21:04:50 566545    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:50 762566    CommonUtility.FileListUtility.Files > MoveNext index=7
+2024/09/08 21:04:50 762566    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:51 107223    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory
+2024/09/08 21:04:51 107223    CommonUtility.FileListUtility.DirectoryGetter > GetNextDirectory
+2024/09/08 21:04:51 108191    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/08 21:04:51 108191    CommonUtility.FileListUtility.DirectoryGetter > NextDirectoryWhenNotAbleAccess
+2024/09/08 21:04:51 109189    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:04:51 109189    fileFilterConditionList = 
+2024/09/08 21:04:51 110187    fileIgnoreConditionList = 
+2024/09/08 21:04:51 110187    Dirctory.GetFiles.Length = 6
+2024/09/08 21:04:51 111186    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:04:51 111186    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:04:51 112181      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:04:51 112181    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:04:51 112181    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:51 113180    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:51 113180    Item is Nothing
+2024/09/08 21:04:51 114176    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:04:51 114176    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:04:51 129449    CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList
+2024/09/08 21:04:51 129449    インデックスが範囲を超えています。負でない値で、コレクションのサイズよりも小さくなければなりません。
+パラメーター名:index
+2024/09/08 21:04:51 130419       場所 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   場所 System.Collections.Generic.List`1.get_Item(Int32 index)
+   場所 CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList(List`1 valueList, List`1 indexList) 場所 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\FileListManager\RandomListCreater.cs:行 55
+2024/09/08 21:04:51 130419    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:04:51 131417    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:51 132414    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:51 132414    Item is Nothing
+2024/09/08 21:04:51 133413    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:04:51 133413    movePath = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:04:51 134408    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:04:51 134408    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:04:51 134408    Item is Nothing
+2024/09/08 21:04:51 135408    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:04:51 136406     SetFilesToControl Failed
+2024/09/08 21:05:02 336152    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:05:02 339145    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:05:02 339145    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:05:04 969122    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:05:05 105979    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:05:05 152525    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:05:05 327274    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:05:05 327274    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:05:05 328272    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:05:08 286668    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:05:08 287665      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:05:08 293650    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:05:08 294690    fileFilterConditionList = 
+2024/09/08 21:05:08 294690    fileIgnoreConditionList = 
+2024/09/08 21:05:10 765005    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:05:10 849802    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:05:10 850776    Dirctory.GetFiles.Length = 6
+2024/09/08 21:05:10 851796    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:05:10 852769    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:05:10 853769      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:05:10 854790    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:05:10 854790    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:05:10 855763    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:05:10 856759     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:05:10 856759    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:05:10 857756    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:05:10 877705    CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList
+2024/09/08 21:05:10 877705    インデックスが範囲を超えています。負でない値で、コレクションのサイズよりも小さくなければなりません。
+パラメーター名:index
+2024/09/08 21:05:10 880720       場所 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   場所 System.Collections.Generic.List`1.get_Item(Int32 index)
+   場所 CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList(List`1 valueList, List`1 indexList) 場所 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\FileListManager\RandomListCreater.cs:行 55
+2024/09/08 21:05:10 881717    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:05:10 881717    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:05:10 881717    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:05:10 882689     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:05:10 882689    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:05:10 884686    movePath = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:05:10 884686    CommonUtility.FileListUtility.Files > Move(string Value) Value Is Nothing [J:\ZMyFolder_2\jpgbest]
+2024/09/08 21:05:10 885682    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:05:10 886705     SetFilesToControl Failed
+2024/09/08 21:05:10 887678    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 21:05:47 365790    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:05:47 367757    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:05:47 368754    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:05:48 142136    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:05:48 154105    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:05:48 390140    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:05:48 390140    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:05:48 391137    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:05:48 392135    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:05:48 393132      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:05:48 398119    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:05:48 398119    fileFilterConditionList = 
+2024/09/08 21:05:48 398119    fileIgnoreConditionList = 
+2024/09/08 21:05:48 400113    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:05:48 474916    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:05:48 475911    Dirctory.GetFiles.Length = 6
+2024/09/08 21:05:50 919458    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:05:52 857214    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:06:01 799769      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:06:01 799769    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:06:01 800763    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:06:01 801760    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:06:01 802759     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:06:01 802759    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:06:01 802759    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:06:01 824699    CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList
+2024/09/08 21:06:01 824699    インデックスが範囲を超えています。負でない値で、コレクションのサイズよりも小さくなければなりません。
+パラメーター名:index
+2024/09/08 21:06:01 828712       場所 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   場所 System.Collections.Generic.List`1.get_Item(Int32 index)
+   場所 CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList(List`1 valueList, List`1 indexList) 場所 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\FileListManager\RandomListCreater.cs:行 55
+2024/09/08 21:06:01 828712    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:06:01 829686    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:06:01 829686    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:06:01 830683     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:06:01 830683    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:06:01 832684    movePath = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:06:01 833674    CommonUtility.FileListUtility.Files > Move(string Value) Value Is Nothing [J:\ZMyFolder_2\jpgbest]
+2024/09/08 21:06:01 833674    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:06:01 834674     SetFilesToControl Failed
+2024/09/08 21:06:01 836669    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 21:06:51 497357    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:06:51 500349    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:06:51 500349    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:06:53 073076    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:06:53 115999    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:06:53 147349    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:06:53 225636    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:06:53 499010    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:06:53 499010    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:06:53 500009    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:06:53 501059    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:06:53 501059      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:06:53 507177    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:06:53 508173    fileFilterConditionList = 
+2024/09/08 21:06:53 508173    fileIgnoreConditionList = 
+2024/09/08 21:06:53 509171    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:06:53 579167    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:06:53 579167    Dirctory.GetFiles.Length = 6
+2024/09/08 21:06:57 459573    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:06:57 461565    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:07:06 365079      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:07:10 915840    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:07:10 915840    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:07:10 917826    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:07:10 919822     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:07:10 920818    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:07:13 082768    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:07:13 115457    CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList
+2024/09/08 21:07:13 116454    インデックスが範囲を超えています。負でない値で、コレクションのサイズよりも小さくなければなりません。
+パラメーター名:index
+2024/09/08 21:07:13 121324       場所 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   場所 System.Collections.Generic.List`1.get_Item(Int32 index)
+   場所 CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList(List`1 valueList, List`1 indexList) 場所 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\FileListManager\RandomListCreater.cs:行 55
+2024/09/08 21:07:13 121324    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:07:13 122322    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:07:13 123321    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:07:13 123321     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:07:13 124318    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:18:20 821610    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:18:20 823606    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:18:20 824603    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:18:23 522541    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:18:23 715670    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:18:23 878389    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:18:23 878389    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:18:23 879386    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:18:23 880382    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:18:23 880382      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:18:23 886366    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:18:23 887364    fileFilterConditionList = 
+2024/09/08 21:18:23 888361    fileIgnoreConditionList = 
+2024/09/08 21:18:23 890357    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:18:23 961167    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:18:23 962165    Dirctory.GetFiles.Length = 6
+2024/09/08 21:18:23 963161    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:18:23 964159    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:18:23 966153      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:18:23 966153    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:18:23 967150    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:18:23 968148    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:18:23 968148     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:18:23 969145    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:18:23 969145    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:18:23 995102    CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList
+2024/09/08 21:18:23 996072    インデックスが範囲を超えています。負でない値で、コレクションのサイズよりも小さくなければなりません。
+パラメーター名:index
+2024/09/08 21:18:23 999065       場所 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   場所 System.Collections.Generic.List`1.get_Item(Int32 index)
+   場所 CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList(List`1 valueList, List`1 indexList) 場所 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\FileListManager\RandomListCreater.cs:行 55
+2024/09/08 21:18:24 000062    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:18:24 000062    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:18:24 001059    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:18:24 001059     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:18:24 002058    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:18:24 003054    movePath = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:18:24 003054    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:18:24 004051    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:18:24 005051     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:18:24 005051    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:18:24 007044     SetFilesToControl Failed
+2024/09/08 21:18:24 009039    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 21:18:39 533869    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:18:39 536861    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:18:39 537859    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:18:40 298050    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:18:40 483552    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:18:40 484550    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:18:40 485547    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:18:40 487542    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:18:40 487542      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:18:40 492531    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:18:40 492531    fileFilterConditionList = 
+2024/09/08 21:18:40 493526    fileIgnoreConditionList = 
+2024/09/08 21:18:40 494538    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:18:40 564374    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:18:40 565341    Dirctory.GetFiles.Length = 6
+2024/09/08 21:18:40 566338    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:18:40 568332    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:18:40 570328      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:18:40 571324    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:18:40 571324    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:18:40 572322    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:18:40 573318     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:18:40 574317    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:18:40 575313    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:18:40 607118    CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList
+2024/09/08 21:18:40 607118    インデックスが範囲を超えています。負でない値で、コレクションのサイズよりも小さくなければなりません。
+パラメーター名:index
+2024/09/08 21:18:40 612105       場所 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   場所 System.Collections.Generic.List`1.get_Item(Int32 index)
+   場所 CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList(List`1 valueList, List`1 indexList) 場所 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\FileListManager\RandomListCreater.cs:行 55
+2024/09/08 21:18:40 613102    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:18:40 614100    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:18:40 615096    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:18:40 615096     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:18:40 616094    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:18:56 882164    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:18:56 885156    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:18:56 885156    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:18:57 779502    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:18:58 011636    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:18:58 012635    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:18:58 013630    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:18:58 014628    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:18:58 015625      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:18:58 021609    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:18:58 021609    fileFilterConditionList = 
+2024/09/08 21:18:58 022607    fileIgnoreConditionList = 
+2024/09/08 21:18:58 024604    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:18:58 099017    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:18:58 099991    Dirctory.GetFiles.Length = 6
+2024/09/08 21:18:58 102009    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:18:58 102983    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:18:58 105002      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:19:01 219256    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:19:01 220247    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:19:01 223232    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:19:01 226224     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:19:01 227228    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:19:04 216168    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:19:28 357761    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:19:28 360753    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:19:28 361750    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:19:30 248539    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:19:30 398002    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:19:30 583199    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:19:30 584184    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:19:30 584184    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:19:30 587148    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:19:30 587148      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:19:30 592433    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:19:30 593430    fileFilterConditionList = 
+2024/09/08 21:19:30 593430    fileIgnoreConditionList = 
+2024/09/08 21:19:30 594429    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:19:30 662231    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:19:30 663230    Dirctory.GetFiles.Length = 6
+2024/09/08 21:19:30 664250    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:19:30 665223    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:19:30 667219      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:19:32 153218    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:19:32 153218    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:19:32 154217    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:19:32 155214     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:19:32 155214    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:19:32 360686    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:19:32 361686    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:19:32 362681    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:19:32 363678    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:19:32 364674     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:19:32 364674    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:19:34 959605    movePath = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:19:34 959605    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:19:34 960601    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:19:34 961600     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:19:34 961600    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:19:34 964591    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 21:19:57 193070    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:19:57 196062    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:19:57 196062    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:19:59 142982    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:19:59 322316    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:19:59 323317    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:19:59 323317    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:19:59 324313    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:19:59 325353      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:19:59 330619    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:19:59 330619    fileFilterConditionList = 
+2024/09/08 21:19:59 331616    fileIgnoreConditionList = 
+2024/09/08 21:19:59 332613    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:19:59 401376    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:19:59 402348    Dirctory.GetFiles.Length = 6
+2024/09/08 21:19:59 404344    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:19:59 405342    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:19:59 407336      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:20:00 999865    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:20:00 999865    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:20:01 001858    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:20:01 003854     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:20:01 004852    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:20:03 207014    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:20:16 417180    CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList
+2024/09/08 21:20:16 418175    インデックスが範囲を超えています。負でない値で、コレクションのサイズよりも小さくなければなりません。
+パラメーター名:index
+2024/09/08 21:20:16 423162       場所 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   場所 System.Collections.Generic.List`1.get_Item(Int32 index)
+   場所 CommonUtility.FileListUtility.RandomListCreater.GetRandomListFromIndexList(List`1 valueList, List`1 indexList) 場所 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\FileListManager\RandomListCreater.cs:行 55
+2024/09/08 21:20:32 443042    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:20:32 446001    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:20:32 446999    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:20:34 642597    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:20:34 646587    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:20:34 791593    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:20:34 792553    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:20:34 792553    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:20:34 794548    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:20:34 794548      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:20:34 799237    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:20:34 800234    fileFilterConditionList = 
+2024/09/08 21:20:34 800234    fileIgnoreConditionList = 
+2024/09/08 21:20:34 801232    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:20:34 869757    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:20:34 869757    Dirctory.GetFiles.Length = 6
+2024/09/08 21:20:34 871719    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:20:34 873716    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:20:34 875735      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:20:37 905205    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:20:37 905205    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:20:37 906204    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:20:37 907202     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:20:37 908200    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:20:37 908200    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:21:37 687943    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:21:37 690933    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:21:37 691931    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:21:39 257244    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:21:39 449562    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:21:39 450559    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:21:39 450559    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:21:39 452583    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:21:39 452583      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:21:39 458633    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:21:39 459605    fileFilterConditionList = 
+2024/09/08 21:21:39 459605    fileIgnoreConditionList = 
+2024/09/08 21:21:39 460600    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:21:39 533434    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:21:39 534431    Dirctory.GetFiles.Length = 6
+2024/09/08 21:21:39 536426    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:21:39 537423    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:21:39 539444      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:21:39 539444    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:21:39 540415    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:21:39 541414    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:21:39 542410     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:21:39 543408    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:21:39 543408    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:21:41 383574    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:21:41 383574    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:21:41 384549    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:21:42 935102    movePath = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:21:42 935102    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:21:42 936101    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:21:42 937097     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:21:42 937097    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/08 21:21:42 938095     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:21:42 938095    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 21:21:50 646387    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:21:50 649350    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:21:50 650349    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:21:51 378045    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:21:51 406480    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:21:51 580474    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:21:51 581469    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:21:51 583466    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:21:51 585461    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:21:51 586457      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:21:51 592440    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:21:51 592440    fileFilterConditionList = 
+2024/09/08 21:21:51 593438    fileIgnoreConditionList = 
+2024/09/08 21:21:51 596430    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:21:51 694168    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:21:51 694168    Dirctory.GetFiles.Length = 6
+2024/09/08 21:21:51 697160    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:21:51 699155    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:21:51 701150      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:21:51 702147    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:21:51 702147    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:21:51 704143    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:21:51 705139     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:21:51 705139    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:21:51 706136    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:22:28 494964    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:22:28 497956    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:22:28 497956    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:22:32 505841    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:22:32 806618    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:22:32 807615    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:22:32 807615    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:22:32 809611    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:22:32 809611      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:22:32 815593    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:22:32 815593    fileFilterConditionList = 
+2024/09/08 21:22:32 816590    fileIgnoreConditionList = 
+2024/09/08 21:22:32 818585    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:22:32 887428    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:22:32 887428    Dirctory.GetFiles.Length = 6
+2024/09/08 21:22:32 888400    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:22:32 890420    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:22:32 891418      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:22:32 891418    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:22:32 892388    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:22:32 893243    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:22:32 894234     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:22:32 894234    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:22:32 895231    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:22:37 116682    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:22:37 116682    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:22:37 117681    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:22:37 117681     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:22:37 117681    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:22:47 424824    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:23:51 883403    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:23:51 883403    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:23:51 884399    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:23:51 885396     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:23:51 886393    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:24:55 032014    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:24:55 035006    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:24:55 036004    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:25:00 212424    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:25:00 432176    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:25:00 433173    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:25:00 433173    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:25:00 435168    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:25:00 435168      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:25:00 440551    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:25:00 440551    fileFilterConditionList = 
+2024/09/08 21:25:00 440551    fileIgnoreConditionList = 
+2024/09/08 21:25:00 441549    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:25:00 513067    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:25:00 514064    Dirctory.GetFiles.Length = 6
+2024/09/08 21:25:00 515064    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:25:00 516060    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:25:00 518055      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:25:00 518055    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:25:00 519051    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:25:00 519051    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:25:00 520048     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:25:00 520048    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:25:00 521046    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:25:03 632295    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:25:03 633301    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:25:03 633301    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:25:03 634289     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:25:03 634289    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:25:06 894984    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:25:06 895981    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:25:06 895981     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:25:06 896980    first Path = J:\ZMyFolder_2\jpgbest\To LOVEる ダークネス 第07巻00172.jpeg
+2024/09/08 21:25:06 897976    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:25:06 900970    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 21:25:10 693072    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > _listBox_Click
+2024/09/08 21:25:10 693072    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:25:12 051325    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > _listBox_Click
+2024/09/08 21:25:12 051325    CommonUtility.FileListUtility.Files > Move(int index) index=2
+2024/09/08 21:25:12 451706    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > _listBox_Click
+2024/09/08 21:25:12 451706    CommonUtility.FileListUtility.Files > Move(int index) index=4
+2024/09/08 21:25:49 655832    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:25:49 658825    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:25:49 660819    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:25:51 902968    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:25:52 110126    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:25:52 110126    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:25:52 111124    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:25:52 112121    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:25:52 112121      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:25:52 117323    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:25:52 117323    fileFilterConditionList = 
+2024/09/08 21:25:52 118294    fileIgnoreConditionList = 
+2024/09/08 21:25:52 119292    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:25:52 188947    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:25:52 188947    Dirctory.GetFiles.Length = 6
+2024/09/08 21:25:52 190967    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:25:52 191940    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:25:52 192936      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:25:52 193934    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:25:52 193934    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:25:52 194930    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:25:52 194930     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:25:52 195928    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:25:52 195928    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:25:52 195928    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:25:52 196928    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:25:52 196928    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:25:52 196928     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:25:52 197925    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:25:52 197925    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:25:52 198922    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:25:52 198922     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:25:52 199918    first Path = J:\ZMyFolder_2\jpgbest\test.jpeg
+2024/09/08 21:25:52 199918    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:25:52 201940    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 21:25:58 247180    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:26:00 409964    SettingForm > buttonApply_Click
+2024/09/08 21:26:00 410961    Setting.FlagChange > ChangeListRandom = True
+2024/09/08 21:26:00 410961    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:26:00 414951    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:26:00 415947    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:26:00 415947    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:26:00 416944    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:26:02 483594    SettingForm > buttonClose_Click
+2024/09/08 21:26:09 226876    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:26:14 898596    SettingForm > buttonApply_Click
+2024/09/08 21:26:14 898596    Setting.FlagChange > ChangeListRandom = True
+2024/09/08 21:26:14 899592    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:26:14 899592    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:26:14 900590    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:26:14 900590    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:26:14 901586    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:26:22 255060    SettingForm > buttonApply_Click
+2024/09/08 21:26:22 256057    Setting.FlagChange > ChangeListRandom = False
+2024/09/08 21:26:22 256057    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:26:22 257055    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:26:22 257055    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:26:22 258052    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:26:22 259049    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:26:25 329118    SettingForm > buttonApply_Click
+2024/09/08 21:26:25 330117    Setting.FlagChange > ChangeListRandom = True
+2024/09/08 21:26:25 330117    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:26:25 331114    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:26:25 331114    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:26:25 331114    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:26:25 332113    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:26:26 702177    SettingForm > buttonClose_Click
+2024/09/08 21:29:54 220797    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:29:54 222791    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:29:54 223789    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:29:55 939810    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:29:59 819382    SettingForm > buttonApply_Click
+2024/09/08 21:30:04 377750    Setting.FlagChange > ChangeListRandom = True
+2024/09/08 21:30:07 844261    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:30:10 714713    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:30:10 715694    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:30:10 715694    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:30:25 932981    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:30:27 477523    SettingForm > buttonClose_Click
+2024/09/08 21:30:29 936654    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:30:29 942637    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:30:29 956500    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:30:29 971681    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:30:30 258579    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:30:30 259576    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:30:30 260574    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:30:30 262618    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:30:30 263615      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:30:30 268190    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:30:30 268190    fileFilterConditionList = 
+2024/09/08 21:30:30 268190    fileIgnoreConditionList = 
+2024/09/08 21:30:30 270185    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:30:30 337299    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:30:30 337299    Dirctory.GetFiles.Length = 6
+2024/09/08 21:30:30 339294    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:30:30 340267    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:30:30 342287      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:30:30 342287    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:30:30 342287    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:30:30 343258    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:30:30 344258     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:30:30 344258    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:30:30 345253    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:30:30 346279    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:30:30 346279    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:30:30 347248    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:30:30 347248     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:30:30 347248    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:30:30 348244    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:30:30 348244    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:30:30 349244     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:30:30 349244    first Path = J:\ZMyFolder_2\jpgbest\To LOVEる ダークネス 第07巻00172.jpeg
+2024/09/08 21:30:30 349244    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:30:30 351797    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 21:30:34 943367    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:30:36 752974    SettingForm > buttonApply_Click
+2024/09/08 21:30:38 916706    Setting.FlagChange > ChangeListRandom = False
+2024/09/08 21:30:39 656365    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:30:39 656365    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:30:39 657365    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:30:39 657365    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:30:39 658363    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:30:40 675350    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:30:47 020778    SettingForm > buttonApply_Click
+2024/09/08 21:30:48 717243    Setting.FlagChange > ChangeListRandom = True
+2024/09/08 21:30:48 717243    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:30:48 718239    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:30:48 718239    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:30:48 718239    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:30:48 720235    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:30:49 720941    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:30:54 586756    SettingForm > buttonApply_Click
+2024/09/08 21:30:55 838666    Setting.FlagChange > ChangeListRandom = False
+2024/09/08 21:31:01 142367    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:31:12 149406    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:31:12 151400    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:31:12 152398    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:31:12 157391    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:34:07 894658    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:34:07 897650    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:34:07 897650    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:34:11 650686    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:34:11 660658    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:34:11 750686    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:34:11 916895    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:34:11 916895    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:34:11 917893    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:34:11 919888    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:34:11 919888      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:34:11 925759    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:34:11 925759    fileFilterConditionList = 
+2024/09/08 21:34:11 926758    fileIgnoreConditionList = 
+2024/09/08 21:34:11 927782    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:34:11 997157    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:34:11 997157    Dirctory.GetFiles.Length = 6
+2024/09/08 21:34:11 999152    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:34:12 000149    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:34:12 002171      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:34:12 002171    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:34:12 002171    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:34:12 003141    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:34:12 004139     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:34:12 004139    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:34:12 005136    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:34:12 005136    fileNameList = test.jpeg,To LOVEる ダークネス 第05巻00175.jpeg,To LOVEる ダークネス 第07巻00171.jpeg,To LOVEる ダークネス 第07巻00172.jpeg,To LOVEる ダークネス 第07巻00173.jpeg,To LOVEる ダークネス 第12巻00136.jpeg
+2024/09/08 21:34:30 698543    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:34:30 698543    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:34:30 699540    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:34:30 700538     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:34:30 700538    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:34:30 701536    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:34:30 701536    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:34:30 701536     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:34:30 702533    first Path = J:\ZMyFolder_2\jpgbest\test.jpeg
+2024/09/08 21:34:30 703530    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:34:30 706522    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 21:34:35 326868    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:34:37 035500    SettingForm > buttonApply_Click
+2024/09/08 21:34:38 770534    Setting.FlagChange > ChangeListRandom = True
+2024/09/08 21:34:38 771532    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:34:38 775522    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:34:38 775522    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:34:38 776518    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:34:38 777517    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:34:39 767960    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:34:57 270715    SettingForm > buttonApply_Click
+2024/09/08 21:34:58 892997    Setting.FlagChange > ChangeListRandom = False
+2024/09/08 21:34:58 892997    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:34:58 893995    fileNameList = test.jpeg,To LOVEる ダークネス 第05巻00175.jpeg,To LOVEる ダークネス 第07巻00171.jpeg,To LOVEる ダークネス 第07巻00172.jpeg,To LOVEる ダークネス 第07巻00173.jpeg,To LOVEる ダークネス 第12巻00136.jpeg
+2024/09/08 21:35:33 909803    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:35:33 911798    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:35:33 912795    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:35:37 362141    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:35:37 386628    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:35:37 596255    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:35:37 597253    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:35:37 598251    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:35:37 599248    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:35:37 600245      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:35:37 607227    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:35:37 607227    fileFilterConditionList = 
+2024/09/08 21:35:37 608225    fileIgnoreConditionList = 
+2024/09/08 21:35:37 609221    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:35:37 679447    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:35:37 679447    Dirctory.GetFiles.Length = 6
+2024/09/08 21:35:37 681437    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:35:37 682435    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:35:37 683433      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:35:37 683433    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:35:37 684405    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:35:37 685402    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:35:37 686402     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:35:46 298156    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:35:46 299153    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:35:46 299153    fileNameList = test.jpeg,To LOVEる ダークネス 第05巻00175.jpeg,To LOVEる ダークネス 第07巻00171.jpeg,To LOVEる ダークネス 第07巻00172.jpeg,To LOVEる ダークネス 第07巻00173.jpeg,To LOVEる ダークネス 第12巻00136.jpeg
+2024/09/08 21:35:46 300151    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:35:46 300151    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:35:46 301148    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:35:46 301148     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:35:48 743860    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:35:48 743860    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:35:48 744862    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:35:48 744862     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:35:48 745858    first Path = J:\ZMyFolder_2\jpgbest\test.jpeg
+2024/09/08 21:35:48 746854    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:35:48 749861    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 21:35:56 934943    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:35:56 936936    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:35:56 937934    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:36:00 698276    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:36:00 702266    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:36:00 921276    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:36:00 922276    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:36:00 922276    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:36:00 923273    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:36:00 923273      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:36:00 928259    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:36:00 928259    fileFilterConditionList = 
+2024/09/08 21:36:00 929256    fileIgnoreConditionList = 
+2024/09/08 21:36:00 930254    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:36:00 999455    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:36:00 999455    Dirctory.GetFiles.Length = 6
+2024/09/08 21:36:01 001444    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:36:01 002444    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:36:01 003439      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:36:01 004412    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:36:01 004412    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:36:01 005411    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:36:01 005411     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:36:02 551573    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:36:02 552575    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:36:02 552575    fileNameList = test.jpeg,To LOVEる ダークネス 第05巻00175.jpeg,To LOVEる ダークネス 第07巻00171.jpeg,To LOVEる ダークネス 第07巻00172.jpeg,To LOVEる ダークネス 第07巻00173.jpeg,To LOVEる ダークネス 第12巻00136.jpeg
+2024/09/08 21:36:02 552575    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:36:02 553570    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:36:02 553570    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:36:02 554568     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:36:05 304229    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:36:14 752091    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:36:14 752091    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:36:14 753092     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:36:15 550870    first Path = J:\ZMyFolder_2\jpgbest\test.jpeg
+2024/09/08 21:37:39 283990    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:37:39 285984    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:37:39 285984    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:37:41 730296    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:37:41 739271    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:37:41 964950    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:37:41 965948    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:37:41 966945    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:37:41 967942    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:37:41 968939      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:37:41 974414    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:37:41 974414    fileFilterConditionList = 
+2024/09/08 21:37:41 975411    fileIgnoreConditionList = 
+2024/09/08 21:37:41 976410    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:37:42 043666    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:37:42 043666    Dirctory.GetFiles.Length = 6
+2024/09/08 21:37:42 045631    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:37:42 046628    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:37:42 047626      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:37:42 047626    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:37:42 048621    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:37:42 048621    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:37:42 049621     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:37:42 049621    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:37:42 050619    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:37:42 050619    fileNameList = test.jpeg,To LOVEる ダークネス 第05巻00175.jpeg,To LOVEる ダークネス 第07巻00171.jpeg,To LOVEる ダークネス 第07巻00172.jpeg,To LOVEる ダークネス 第07巻00173.jpeg,To LOVEる ダークネス 第12巻00136.jpeg
+2024/09/08 21:37:42 051613    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:37:42 051613    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:37:42 051613    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:37:42 052613     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:37:42 052613    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:37:42 053610    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:37:42 053610    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:37:42 053610     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:37:42 054605    first Path = J:\ZMyFolder_2\jpgbest\test.jpeg
+2024/09/08 21:37:42 054605    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:37:42 057600    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 21:37:44 374810    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:37:46 599404    SettingForm > buttonApply_Click
+2024/09/08 21:37:48 260498    Setting.FlagChange > ChangeListRandom = True
+2024/09/08 21:37:48 261469    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:37:48 265460    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:37:48 266485    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:37:48 267455    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:37:48 268451    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:37:48 268451    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:37:49 273534    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:37:53 091413    SettingForm > buttonApply_Click
+2024/09/08 21:37:54 373771    Setting.FlagChange > ChangeListRandom = False
+2024/09/08 21:37:54 374770    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:37:54 374770    fileNameList = test.jpeg,To LOVEる ダークネス 第05巻00175.jpeg,To LOVEる ダークネス 第07巻00171.jpeg,To LOVEる ダークネス 第07巻00172.jpeg,To LOVEる ダークネス 第07巻00173.jpeg,To LOVEる ダークネス 第12巻00136.jpeg
+2024/09/08 21:37:54 375767    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:37:54 375767    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:37:54 376765    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:37:54 377763    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:37:54 377763    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:37:55 383544    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:38:01 470934    SettingForm > buttonApply_Click
+2024/09/08 21:38:04 964773    Setting.FlagChange > ChangeListRandom = True
+2024/09/08 21:38:05 838349    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:38:05 838349    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:38:05 839347    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:38:05 840344    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:38:05 841369    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:38:05 841369    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:38:06 846307    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:38:11 127384    SettingForm > buttonApply_Click
+2024/09/08 21:38:12 081111    Setting.FlagChange > ChangeListRandom = False
+2024/09/08 21:38:13 645683    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:38:13 646684    fileNameList = test.jpeg,To LOVEる ダークネス 第05巻00175.jpeg,To LOVEる ダークネス 第07巻00171.jpeg,To LOVEる ダークネス 第07巻00172.jpeg,To LOVEる ダークネス 第07巻00173.jpeg,To LOVEる ダークネス 第12巻00136.jpeg
+2024/09/08 21:38:13 650670    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:38:13 653665    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:38:13 654666    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:38:13 658648    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:38:19 007001    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:38:32 858723    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:38:41 737608    SettingForm > buttonApply_Click
+2024/09/08 21:38:43 681534    Setting.FlagChange > ChangeListRandom = True
+2024/09/08 21:38:43 681534    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:38:43 682536    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:38:43 682536    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:38:43 683530    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:38:43 684529    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:38:43 684529    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:38:44 700005    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:38:48 017355    SettingForm > buttonApply_Click
+2024/09/08 21:38:49 244825    Setting.FlagChange > ChangeListRandom = False
+2024/09/08 21:38:49 244825    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:38:49 245793    fileNameList = test.jpeg,To LOVEる ダークネス 第05巻00175.jpeg,To LOVEる ダークネス 第07巻00171.jpeg,To LOVEる ダークネス 第07巻00172.jpeg,To LOVEる ダークネス 第07巻00173.jpeg,To LOVEる ダークネス 第12巻00136.jpeg
+2024/09/08 21:38:49 245793    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:38:49 246790    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:38:49 246790    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:38:49 247787    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:38:49 247787    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:38:50 254940    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:38:51 856779    SettingForm > buttonApply_Click
+2024/09/08 21:38:55 909373    Setting.FlagChange > ChangeListRandom = True
+2024/09/08 21:38:58 772761    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:38:58 774755    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:38:58 778748    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:38:58 780739    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:38:58 782734    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:39:15 916765    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:45:19 751018    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/08 21:45:19 753982    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:45:19 753982    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/08 21:45:21 837920    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:45:21 920943    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/08 21:45:22 113859    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/08 21:45:22 114863    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/08 21:45:22 114863    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/08 21:45:22 116851    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/08 21:45:22 116851      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:45:22 124178    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:45:22 124178    fileFilterConditionList = 
+2024/09/08 21:45:22 124178    fileIgnoreConditionList = 
+2024/09/08 21:45:22 126173    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/08 21:45:22 193597    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/08 21:45:22 194594    Dirctory.GetFiles.Length = 6
+2024/09/08 21:45:22 195591    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:45:22 196589    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:45:22 198583      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:45:22 198583    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:45:22 198583    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:45:22 199582    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:45:22 200578     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:45:22 200578    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:45:22 201575    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:45:22 201575    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:45:22 201575    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:45:22 202573    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:45:22 202573     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:45:22 203570    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:45:22 203570    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:45:22 203570    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:45:22 204572     listBox1.Items.Count < 1 , retrun
+2024/09/08 21:45:22 204572    first Path = J:\ZMyFolder_2\jpgbest\test.jpeg
+2024/09/08 21:45:22 205564    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:45:22 206562    ListJoin = test.jpeg,To LOVEる ダークネス 第05巻00175.jpeg,To LOVEる ダークネス 第07巻00171.jpeg,To LOVEる ダークネス 第07巻00172.jpeg,To LOVEる ダークネス 第07巻00173.jpeg,To LOVEる ダークネス 第12巻00136.jpeg
+2024/09/08 21:45:22 208586    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/08 21:45:32 099132    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:45:33 984526    SettingForm > buttonApply_Click
+2024/09/08 21:45:36 773051    Setting.FlagChange > ChangeListRandom = True
+2024/09/08 21:45:36 773051    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:45:36 777044    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:45:36 778040    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:45:36 778040    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:45:36 780035    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:45:36 780035    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:45:36 782029    ListJoin = To LOVEる ダークネス 第07巻00173.jpeg,To LOVEる ダークネス 第07巻00171.jpeg,To LOVEる ダークネス 第05巻00175.jpeg,test.jpeg,To LOVEる ダークネス 第12巻00136.jpeg,To LOVEる ダークネス 第07巻00172.jpeg
+2024/09/08 21:45:37 781244    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:45:46 177431    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:45:47 555960    SettingForm > buttonApply_Click
+2024/09/08 21:45:49 177717    Setting.FlagChange > ChangeListRandom = False
+2024/09/08 21:45:49 177717    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:45:49 178716    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:45:49 179712    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:45:49 179712    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:45:49 180709    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:45:49 180709    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:45:49 183701    ListJoin = test.jpeg,To LOVEる ダークネス 第05巻00175.jpeg,To LOVEる ダークネス 第07巻00171.jpeg,To LOVEる ダークネス 第07巻00172.jpeg,To LOVEる ダークネス 第07巻00173.jpeg,To LOVEる ダークネス 第12巻00136.jpeg
+2024/09/08 21:45:50 191983    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:45:54 593148    SettingForm > buttonApply_Click
+2024/09/08 21:45:56 006468    Setting.FlagChange > ChangeListRandom = True
+2024/09/08 21:45:56 006468    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:45:56 007472    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:45:56 007472    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:45:56 008466    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:45:56 009463    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:45:56 009463    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:45:56 011458    ListJoin = To LOVEる ダークネス 第07巻00173.jpeg,test.jpeg,To LOVEる ダークネス 第05巻00175.jpeg,To LOVEる ダークネス 第07巻00171.jpeg,To LOVEる ダークネス 第07巻00172.jpeg,To LOVEる ダークネス 第12巻00136.jpeg
+2024/09/08 21:45:57 002849    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:45:59 558293    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:46:01 083973    SettingForm > buttonApply_Click
+2024/09/08 21:46:01 083973    Setting.FlagChange > ChangeListRandom = False
+2024/09/08 21:46:01 084969    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:46:01 084969    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:46:01 085967    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:46:01 085967    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:46:01 086964    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:46:01 086964    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:46:01 088958    ListJoin = test.jpeg,To LOVEる ダークネス 第05巻00175.jpeg,To LOVEる ダークネス 第07巻00171.jpeg,To LOVEる ダークネス 第07巻00172.jpeg,To LOVEる ダークネス 第07巻00173.jpeg,To LOVEる ダークネス 第12巻00136.jpeg
+2024/09/08 21:46:04 686605    SettingForm > buttonApply_Click
+2024/09/08 21:46:04 687601    Setting.FlagChange > _isFixedDirectory = True
+2024/09/08 21:46:04 687601    [Caution] _isFixedFileList, _isFixedDirectory 両方変更している
+2024/09/08 21:46:09 548805    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > _listBox_Click
+2024/09/08 21:46:09 549807    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:46:10 753115    CommonUtility.FileListUtility.Files > MoveNext index=1
+2024/09/08 21:46:10 753115    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:46:10 968883    CommonUtility.FileListUtility.Files > MoveNext index=2
+2024/09/08 21:46:10 968883    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:46:11 134352    CommonUtility.FileListUtility.Files > MoveNext index=3
+2024/09/08 21:46:11 134352    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:46:11 299529    CommonUtility.FileListUtility.Files > MoveNext index=4
+2024/09/08 21:46:11 300532    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:46:11 509237    CommonUtility.FileListUtility.Files > MoveNext index=5
+2024/09/08 21:46:11 509237    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:46:11 831662    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory
+2024/09/08 21:46:11 832661    CommonUtility.FileListUtility.FileListManager > Setting._isFixedDirectory = true
+2024/09/08 21:46:12 573329    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory
+2024/09/08 21:46:12 574328    CommonUtility.FileListUtility.FileListManager > Setting._isFixedDirectory = true
+2024/09/08 21:46:12 791286    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory
+2024/09/08 21:46:12 791286    CommonUtility.FileListUtility.FileListManager > Setting._isFixedDirectory = true
+2024/09/08 21:46:14 376104    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory
+2024/09/08 21:46:14 376104    CommonUtility.FileListUtility.FileListManager > Setting._isFixedDirectory = true
+2024/09/08 21:46:15 740475    CommonUtility.FileListUtility.Files > MovePrevious index=4
+2024/09/08 21:46:15 740475    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:46:16 076527    CommonUtility.FileListUtility.Files > MovePrevious index=3
+2024/09/08 21:46:16 077527    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:46:16 250453    CommonUtility.FileListUtility.Files > MovePrevious index=2
+2024/09/08 21:46:16 251452    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:46:16 395161    CommonUtility.FileListUtility.Files > MovePrevious index=1
+2024/09/08 21:46:16 396159    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:46:16 550979    CommonUtility.FileListUtility.Files > MovePrevious index=0
+2024/09/08 21:46:16 550979    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:46:16 718530    CommonUtility.FileListUtility.FileListManager > MovePreviousDirectory
+2024/09/08 21:46:16 719529    CommonUtility.FileListUtility.FileListManager > Setting._isFixedDirectory = true
+2024/09/08 21:46:16 950597    CommonUtility.FileListUtility.FileListManager > MovePreviousDirectory
+2024/09/08 21:46:16 951594    CommonUtility.FileListUtility.FileListManager > Setting._isFixedDirectory = true
+2024/09/08 21:46:17 244768    CommonUtility.FileListUtility.FileListManager > MovePreviousDirectory
+2024/09/08 21:46:17 244768    CommonUtility.FileListUtility.FileListManager > Setting._isFixedDirectory = true
+2024/09/08 21:46:20 863481    SettingForm > FileListManagerSetting_Activated
+2024/09/08 21:46:22 902823    SettingForm > buttonApply_Click
+2024/09/08 21:46:22 902823    Setting.FlagChange > ChangeIncludeSubFolder = True
+2024/09/08 21:46:22 903797    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/08 21:46:22 903797    fileFilterConditionList = 
+2024/09/08 21:46:22 903797    fileIgnoreConditionList = 
+2024/09/08 21:46:22 906788    Dirctory.GetFiles.Length = 401
+2024/09/08 21:46:22 907786    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/08 21:46:22 907786    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/08 21:46:22 912772      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/08 21:46:22 913770    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:46:22 914767    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:46:22 914767    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:46:22 915765    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:46:22 915765    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/08 21:46:22 917759    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/08 21:46:22 917759    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:46:22 917759    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:46:22 918757    Item is Nothing
+2024/09/08 21:46:22 918757    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/08 21:46:22 919754    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/08 21:46:22 919754    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/08 21:46:22 920751    Item is Nothing
+2024/09/08 21:46:22 920751    first Path = J:\ZMyFolder_2\jpgbest\Folder2\140703-419.jpg
+2024/09/08 21:46:22 920751    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/08 21:46:22 926735    ListJoin = 140703-419.jpg,15.jpg,150825114.jpg,151004-501 (1).jpg,151004-503.jpg,151019214.jpg,2c57006d-s.jpg,43db7191-s.jpg,56fe9d9f.jpg,5d36d9bb-s.jpg,blog_import_51a50ffb6b5dc.jpg,ee1b983d.jpg,ace21392.jpg,Darkness 6_082.jpg,livejupiter_1453455051_47501.jpg,livejupiter_1464670858_101.jpg,To LOVEる ダークネス 第04巻00192.jpeg,To LOVEる ダークネス 第06巻00084.jpeg,To LOVEる ダークネス 第09巻00106.jpeg,To LOVEる とらぶる ダークネス カラー版 第14巻00026.jpeg,あやみIMG_0833000005.jpg,あやみIMG_0834000006.jpg,あやみIMG_0835000007.jpg,あやみIMG_0835000007[1].jpg,あやみIMG_0836000008.jpg,ちなんぼ001000001.jpg,ちなんぼ002000002.jpg,ちなんぼ003000003.jpg,山口みなみ_かけがえのない時間0014.jpg,山口みなみ_かけがえのない時間0060.jpg,西村理香_15_1605305.jpg,西村理香_15_1605320.jpg,西村理香_15_1605342.jpg,西村理香_15_1605343.jpg,西村理香_15_1605352.jpg,西村理香_AliceClub&サタン05445.jpg,西村理香_AliceClub&サタン05459.jpg,誰よりも深く05856.JPG,天野美由紀14迎えに来てね0027.jpg,rk aa (IV) [渋谷書店] 無毛少女生撮専科 07 佐藤かすみ2_x264.mp4_000376983.jpg,02147b70.png,027dd49d6da8f0b5d0a8fa03c711ce41.png,080b848059f28cebf0e9dc78344948ff.png,132.png,133.png,134.png,135.png,136.png,137.png,1412912917805.png,161225blog_import_51a62e78599a3124.png,1705030235cc681a091.png,1705030242bb6f4f099.png,17050302f24fe0d9180.png,17050302f2d0fa7f181.png,17050302images (1)208.png,17050302images (2)220.png,17050302images237.png,17050303blog_import_51a583e37436f043.png,17050303blog_import_51a62e78599a3054.png,17050303e73c1735080.png,17052359325466011.png,1776c79c.png,1bab07597aa1440d395506a153b24610.png,20.png,20150330001133fce.png,21.png,38cdb593b51f1e7c2ef8b8e90d813eab.png,3b70ae511b622ed2f2796dbe7e95f878.png,3d4eae625606d7bd378fe890c9d423a2.png,4b2273bf65d7f6fd77288cdb88e481e8.png,5736beaeb6cc641fd5df929b42354a07 (1).png,5736beaeb6cc641fd5df929b42354a07.png,576ec78c4169be06cc90c215ddf04333 (1).png,576ec78c4169be06cc90c215ddf04333.png,59.png,5bb03508cf84c6321303132250b48f8b.png,5d00b7218dd86ffa6f65b6de82f630f1.png,5f8031131b10198f13ee6f271dbf9e00.png,67434a161c71922f29a4e8cb42e7b4a1-650x915s.png,7a12e2822d215283687db4d26c8ca9c4.png,803c68db5757b355d5a612e8dd0cd835.png,835849b3ea967bf0b6762a9930c946d5.png,900eaa7e0d96fda8296571afa0f0f3c6.png,91e7fc53bca7cfbc8bd0aee3c99657b7.png,9c120afc81493acc49c47c80e0b55b6f.png,a20.png,a21.png,a36.png,a38.png,ad2f0860f11255cb6981ec5105ae05f5.png,asaloon_1500050481_73402.png,blog_import_51a4b5f743704.png,cb3b91c8.png,d01e9675fad215527696d66876bc6642.png,d273ff5f-s.png,d56341f82bfcc577ce36e2501d2f57d7.png,d633435d1d3ce267af64d9a6b64e09f2.png,d6f8d77f6f98d34f6ef31312f017efaf.png,dadf14e1e1ff50521cc5e2a2145cb7c3.png,010.gif,0index.htm,0index-base.htm,1-2.gif,160202309.gif,160202313.gif,160202314.gif,160202315.gif,160501001.gif,160501002.gif,160501006.gif,160501012 (1).gif,160501012.gif,160501015.gif,160501016.gif,160501018.gif,160613-202.gif,161225112221017.gif,161225112223018.gif,161225112224019.gif,161225112225020.gif,161225160620003032.gif,161225160620018033.gif,161225160831-314034.gif,161225161019011036.gif,161225161019012037.gif,161225161019013038.gif,1612253188941b063.gif,1612254bb9c657069.gif,161225mjkr6_mn6rt4_23213.gif,25db7b23.gif,2730017c.gif,2f727e88.gif,30fa3b11.gif,32.gif,35.gif,356_1.gif,37c2cacdecbf817381e69c8f102f6b7e.gif,38.gif,40SJCFT.gif,5Bc2bfe.gif,5cc0ona.gif,70-1.gif,7b00cb25.gif,948f3c2e.gif,a5f6e0ac.gif,d567f49a9b6282998f30bbcec109fc5d8c21dd5e.gif,ditua_dkid5t_1.gif,eb2cdd9f.gif,161225250dfffc058.gif,1612252a14e684061.gif,161225700d9b38082.gif,1612257458c8db084.gif,161225932b1ad3094.gif,1612259a0afe87096.gif,161225b10e5c46103.gif,161225e90e5358155.gif,170523025a5bd2-s001.jpg,17052308b975e1002.jpg,17052311721601-s003.jpg,1705231d89da5f-s004.jpg,1705232ded2aca-s005.jpg,170523413777a7006.gif,17052345c94ab4007.jpg,1705234d0eb2b2a9c45d12876c4ef062911b0c6decff671473700807-s008.jpg,1705235547b1a2009.jpg,170523573e49ce-s010.jpg,17052359325466011.png,1705235bef4622-s012.jpg,1705236005598b013.jpg,1705236e907fd1-s014.jpg,1705237c1d790e015.jpg,1705237e8a9d71-s016.jpg,17052398e6e511-s018.jpg,170523a52e97e3-s019.jpg,170523aa6581df020.jpg,170523aacc64d6-s021.jpg,170523b4fa3a56-s022.jpg,170523b868090a023.jpg,170523b972b2a024.jpg,170523bb96a5f5-s025.jpg,170523d48b5f91026.jpg,170523d531345a-s027.jpg,170523d81ab004-s028.jpg,170523d82767d8-s029.jpg,170523ddc69d7b030.jpg,170523ea594980031.jpg,27362393.gif,Guf4epq.gif,kim_uttg_24.gif,LaQx3d5.gif,02index.html,03index - コピー.htm,04index - コピー.htm,index2.htm,oppai421.gif,panchira_kaze023.gif,panchira_kaze038.gif,panchira_kaze040.gif,wpid-1443351378900.gif,wpid-1443351588916.gif,wpid-1443354549124.gif,wpid-1443355772469.gif,wpid-1443359335098.gif,i_20131125090308s.png,i_20150504144054.png,livejupiter_1455441376_38501.png,to_2572_004s.png,VNsTDhA.png,zzz2afc4238-s.png,無邪気の楽園 カラー版 第03巻026.png,無邪気の楽園 カラー版 第03巻040.png,無邪気の楽園 カラー版 第03巻091.png,無邪気の楽園 カラー版 第03巻119.png,無邪気の楽園 カラー版 第03巻120.png,無邪気の楽園 カラー版 第03巻121.png,無邪気の楽園 カラー版 第03巻131.png,無邪気の楽園 第04巻027.png,無邪気の楽園 第04巻030.png,無邪気の楽園 第04巻031.png,無邪気の楽園 第04巻033.png,2c57006d-s.jpg,あやみIMG_0833000005.jpg,15562350469.jpg,156314964126s.jpg,25f9662c-s.jpg,32b870c1-s.jpg,6e5e03a7-s.jpg,7729f167-s.jpg,9ee097f9-s.jpg,a3f7253e-s.jpg,b59d2f12-s.jpg,b5b1162a-s.jpg,BkDGPzMCYAE5abs.jpg,dcf046d0.jpg,dcf046d0[1].jpg,downblouse_chira003.jpg,h499Ej4.jpg,livejupiter_1550197632_1401.jpg,livejupiter_1550197632_1402.jpg,tumblr_ohesvgAuRA1u8m4aeo4_1280.jpg,test.jpeg,001_testFolder___To LOVEる ダークネス 第05巻00175001.jpeg,002_testFolder___To LOVEる ダークネス 第07巻00171002.jpeg,003_testFolder___To LOVEる ダークネス 第07巻00172003.jpeg,004_testFolder___To LOVEる ダークネス 第07巻00173004.jpeg,005_testFolder___To LOVEる ダークネス 第12巻00136005.jpeg,001_Folder01___140703-419001.jpg,002_Folder01___15002.jpg,003_Folder01___150825114003.jpg,004_Folder01___151004-501 (1)004.jpg,005_Folder01___151004-503005.jpg,006_Folder01___151019214006.jpg,007_Folder01___2c57006d-s007.jpg,008_Folder01___43db7191-s008.jpg,009_Folder01___56fe9d9f009.jpg,010_Folder01___5d36d9bb-s010.jpg,011_Folder01___blog_import_51a50ffb6b5dc011.jpg,012_Folder01___ee1b983d012.jpg,013_Folder01___rk aa (IV) [渋谷書店] 無毛少女生撮専科 07 佐藤かすみ2_x264.mp4_000376983013.jpg,001_Folder02___02147b70001.png,002_Folder02___027dd49d6da8f0b5d0a8fa03c711ce41002.png,003_Folder02___080b848059f28cebf0e9dc78344948ff003.png,004_Folder02___132004.png,005_Folder02___133005.png,006_Folder02___134006.png,007_Folder02___135007.png,008_Folder02___136008.png,009_Folder02___137009.png,010_Folder02___1412912917805010.png,011_Folder02___161225blog_import_51a62e78599a3124011.png,012_Folder02___1705030235cc681a091012.png,013_Folder02___1705030242bb6f4f099013.png,014_Folder02___17050302f24fe0d9180014.png,015_Folder02___17050302f2d0fa7f181015.png,016_Folder02___17050302images (1)208016.png,017_Folder02___17050302images (2)220017.png,018_Folder02___17050302images237018.png,019_Folder02___17050303blog_import_51a583e37436f043019.png,020_Folder02___17050303blog_import_51a62e78599a3054020.png,021_Folder02___17050303e73c1735080021.png,022_Folder02___17052359325466011022.png,023_Folder02___1776c79c023.png,024_Folder02___1bab07597aa1440d395506a153b24610024.png,025_Folder02___20025.png,026_Folder02___20150330001133fce026.png,027_Folder02___21027.png,028_Folder02___38cdb593b51f1e7c2ef8b8e90d813eab028.png,029_Folder02___3b70ae511b622ed2f2796dbe7e95f878029.png,030_Folder02___3d4eae625606d7bd378fe890c9d423a2030.png,031_Folder02___4b2273bf65d7f6fd77288cdb88e481e8031.png,032_Folder02___5736beaeb6cc641fd5df929b42354a07 (1)032.png,033_Folder02___5736beaeb6cc641fd5df929b42354a07033.png,034_Folder02___576ec78c4169be06cc90c215ddf04333 (1)034.png,035_Folder02___576ec78c4169be06cc90c215ddf04333035.png,036_Folder02___59036.png,037_Folder02___5bb03508cf84c6321303132250b48f8b037.png,038_Folder02___5d00b7218dd86ffa6f65b6de82f630f1038.png,039_Folder02___5f8031131b10198f13ee6f271dbf9e00039.png,040_Folder02___67434a161c71922f29a4e8cb42e7b4a1-650x915s040.png,041_Folder02___7a12e2822d215283687db4d26c8ca9c4041.png,042_Folder02___803c68db5757b355d5a612e8dd0cd835042.png,043_Folder02___835849b3ea967bf0b6762a9930c946d5043.png,044_Folder02___900eaa7e0d96fda8296571afa0f0f3c6044.png,045_Folder02___91e7fc53bca7cfbc8bd0aee3c99657b7045.png,046_Folder02___9c120afc81493acc49c47c80e0b55b6f046.png,047_Folder02___a20047.png,048_Folder02___a21048.png,049_Folder02___a36049.png,050_Folder02___a38050.png,051_Folder02___ad2f0860f11255cb6981ec5105ae05f5051.png,052_Folder02___asaloon_1500050481_73402052.png,053_Folder02___blog_import_51a4b5f743704053.png,054_Folder02___cb3b91c8054.png,055_Folder02___d01e9675fad215527696d66876bc6642055.png,056_Folder02___d273ff5f-s056.png,057_Folder02___d56341f82bfcc577ce36e2501d2f57d7057.png,058_Folder02___d633435d1d3ce267af64d9a6b64e09f2058.png,059_Folder02___d6f8d77f6f98d34f6ef31312f017efaf059.png,060_Folder02___dadf14e1e1ff50521cc5e2a2145cb7c3060.png,061_Folder02___i_20131125090308s061.png,062_Folder02___i_20150504144054062.png,063_Folder02___livejupiter_1455441376_38501063.png,064_Folder02___to_2572_004s064.png,065_Folder02___VNsTDhA065.png,066_Folder02___zzz2afc4238-s066.png,067_Folder02___無邪気の楽園 カラー版 第03巻026067.png,068_Folder02___無邪気の楽園 カラー版 第03巻040068.png,069_Folder02___無邪気の楽園 カラー版 第03巻091069.png,070_Folder02___無邪気の楽園 カラー版 第03巻119070.png,071_Folder02___無邪気の楽園 カラー版 第03巻120071.png,072_Folder02___無邪気の楽園 カラー版 第03巻121072.png,073_Folder02___無邪気の楽園 カラー版 第03巻131073.png,074_Folder02___無邪気の楽園 第04巻027074.png,075_Folder02___無邪気の楽園 第04巻030075.png,076_Folder02___無邪気の楽園 第04巻031076.png,077_Folder02___無邪気の楽園 第04巻033077.png,001_Folder03___010001.gif,002_Folder03___1-2002.gif,003_Folder03___160202309003.gif,004_Folder03___160202313004.gif,005_Folder03___160202314005.gif,006_Folder03___160202315006.gif,007_Folder03___160501001007.gif,008_Folder03___160501002008.gif,009_Folder03___160501006009.gif,010_Folder03___160501012 (1)010.gif,011_Folder03___160501012011.gif,012_Folder03___160501015012.gif,013_Folder03___160501016013.gif,014_Folder03___160501018014.gif,015_Folder03___160613-202015.gif,016_Folder03___161225112221017016.gif,017_Folder03___161225112223018017.gif,018_Folder03___161225112224019018.gif,019_Folder03___161225112225020019.gif,020_Folder03___161225160620003032020.gif,021_Folder03___161225160620018033021.gif,022_Folder03___161225160831-314034022.gif,023_Folder03___161225161019011036023.gif,024_Folder03___161225161019012037024.gif,025_Folder03___161225161019013038025.gif,026_Folder03___1612253188941b063026.gif,027_Folder03___1612254bb9c657069027.gif,028_Folder03___161225mjkr6_mn6rt4_23213028.gif,029_Folder03___25db7b23029.gif,030_Folder03___2730017c030.gif,031_Folder03___2f727e88031.gif,032_Folder03___30fa3b11032.gif,033_Folder03___32033.gif,034_Folder03___35034.gif,035_Folder03___356_1035.gif,036_Folder03___37c2cacdecbf817381e69c8f102f6b7e036.gif,037_Folder03___38037.gif,038_Folder03___40SJCFT038.gif,039_Folder03___5Bc2bfe039.gif,040_Folder03___5cc0ona040.gif,041_Folder03___70-1041.gif,042_Folder03___7b00cb25042.gif,043_Folder03___948f3c2e043.gif,044_Folder03___a5f6e0ac044.gif,045_Folder03___d567f49a9b6282998f30bbcec109fc5d8c21dd5e045.gif,046_Folder03___ditua_dkid5t_1046.gif,047_Folder03___eb2cdd9f047.gif,048_Folder03___Guf4epq048.gif,049_Folder03___kim_uttg_24049.gif,050_Folder03___LaQx3d5050.gif,051_Folder03___oppai421051.gif,052_Folder03___panchira_kaze023052.gif,053_Folder03___panchira_kaze038053.gif,054_Folder03___panchira_kaze040054.gif,055_Folder03___wpid-1443351378900055.gif,056_Folder03___wpid-1443351588916056.gif,057_Folder03___wpid-1443354549124057.gif,058_Folder03___wpid-1443355772469058.gif,059_Folder03___wpid-1443359335098059.gif,To LOVEる ダークネス 第05巻00175.jpeg,To LOVEる ダークネス 第07巻00171.jpeg,To LOVEる ダークネス 第07巻00172.jpeg,To LOVEる ダークネス 第07巻00173.jpeg,To LOVEる ダークネス 第12巻00136.jpeg
+2024/09/08 21:46:29 986211    SettingForm > FileListManagerSetting_Activated
+2024/09/09 03:22:20 376017    DragAndDropSample.DragAndDropOnControl > AddRecieveControls
+2024/09/09 03:22:20 379010    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/09 03:22:20 379010    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/09 03:22:22 173012    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/09 03:22:22 177001    DragAndDropSample.DragAndDropOnControl > Control_DragEnter
+2024/09/09 03:22:22 523077    DragAndDropSample.DragAndDropOnControl > Control_DragDrop
+2024/09/09 03:22:22 523077    DragAndDropSample.DragAndDropForFile > DragAndDropAfterEvent
+2024/09/09 03:22:22 525072    DragAndDropSample.DragAndDropForFile > GetFilesByDragAndDrop
+2024/09/09 03:22:22 529060    FileListManagerSample.FileListManagerSampleForm, Text: FileListManager > DragAndDropEventAfterEventForFile
+2024/09/09 03:22:22 530059      GetPath=C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/09 03:22:22 538036    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/09 03:22:22 539036    fileFilterConditionList = 
+2024/09/09 03:22:22 541029    fileIgnoreConditionList = 
+2024/09/09 03:22:22 544020    lnk file true = C:\Users\OK\Desktop\jpgbest - ショートカット.lnk
+2024/09/09 03:22:22 650734    lnk file read content path = J:\ZMyFolder_2\jpgbest
+2024/09/09 03:22:22 650734    Dirctory.GetFiles.Length = 6
+2024/09/09 03:22:22 652729    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/09 03:22:22 653726    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/09 03:22:22 655721      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/09 03:22:22 655721    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/09 03:22:22 656720    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/09 03:22:22 657718    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/09 03:22:22 658713     listBox1.Items.Count < 1 , retrun
+2024/09/09 03:22:22 658713    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/09 03:22:22 659711    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/09 03:22:22 659711    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/09 03:22:22 659711    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/09 03:22:22 660708    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/09 03:22:22 660708     listBox1.Items.Count < 1 , retrun
+2024/09/09 03:22:22 661706    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/09 03:22:22 661706    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/09 03:22:22 662702    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/09 03:22:22 662702     listBox1.Items.Count < 1 , retrun
+2024/09/09 03:22:22 663701    first Path = J:\ZMyFolder_2\jpgbest\test.jpeg
+2024/09/09 03:22:22 665694    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/09 03:22:22 667689    ListJoin = test.jpeg,To LOVEる ダークネス 第05巻00175.jpeg,To LOVEる ダークネス 第07巻00171.jpeg,To LOVEる ダークネス 第07巻00172.jpeg,To LOVEる ダークネス 第07巻00173.jpeg,To LOVEる ダークネス 第12巻00136.jpeg
+2024/09/09 03:22:22 668687    DragAndDropSample.DragAndDropOnControl > Control_DragDrop Finally
+2024/09/09 03:22:27 312159    SettingForm > FileListManagerSetting_Activated
+2024/09/09 03:22:31 223272    SettingForm > buttonApply_Click
+2024/09/09 03:22:31 223272    Setting.FlagChange > ChangeIncludeSubFolder = True
+2024/09/09 03:22:31 224269    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/09 03:22:31 224269    fileFilterConditionList = 
+2024/09/09 03:22:31 225267    fileIgnoreConditionList = 
+2024/09/09 03:22:31 227263    Dirctory.GetFiles.Length = 401
+2024/09/09 03:22:31 228259    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/09 03:22:31 228259    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/09 03:22:31 233247      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/09 03:22:31 233247    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/09 03:22:31 234243    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/09 03:22:31 235242    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/09 03:22:31 235242    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/09 03:22:31 235242    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/09 03:22:31 238261    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/09 03:22:31 238261    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/09 03:22:31 238261    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/09 03:22:31 239231    Item is Nothing
+2024/09/09 03:22:31 239231    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/09 03:22:31 240228    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/09 03:22:31 240228    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/09 03:22:31 240228    Item is Nothing
+2024/09/09 03:22:31 241225    first Path = J:\ZMyFolder_2\jpgbest\Folder2\140703-419.jpg
+2024/09/09 03:22:31 241225    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/09 03:22:31 248207    ListJoin = 140703-419.jpg,15.jpg,150825114.jpg,151004-501 (1).jpg,151004-503.jpg,151019214.jpg,2c57006d-s.jpg,43db7191-s.jpg,56fe9d9f.jpg,5d36d9bb-s.jpg,blog_import_51a50ffb6b5dc.jpg,ee1b983d.jpg,ace21392.jpg,Darkness 6_082.jpg,livejupiter_1453455051_47501.jpg,livejupiter_1464670858_101.jpg,To LOVEる ダークネス 第04巻00192.jpeg,To LOVEる ダークネス 第06巻00084.jpeg,To LOVEる ダークネス 第09巻00106.jpeg,To LOVEる とらぶる ダークネス カラー版 第14巻00026.jpeg,あやみIMG_0833000005.jpg,あやみIMG_0834000006.jpg,あやみIMG_0835000007.jpg,あやみIMG_0835000007[1].jpg,あやみIMG_0836000008.jpg,ちなんぼ001000001.jpg,ちなんぼ002000002.jpg,ちなんぼ003000003.jpg,山口みなみ_かけがえのない時間0014.jpg,山口みなみ_かけがえのない時間0060.jpg,西村理香_15_1605305.jpg,西村理香_15_1605320.jpg,西村理香_15_1605342.jpg,西村理香_15_1605343.jpg,西村理香_15_1605352.jpg,西村理香_AliceClub&サタン05445.jpg,西村理香_AliceClub&サタン05459.jpg,誰よりも深く05856.JPG,天野美由紀14迎えに来てね0027.jpg,rk aa (IV) [渋谷書店] 無毛少女生撮専科 07 佐藤かすみ2_x264.mp4_000376983.jpg,02147b70.png,027dd49d6da8f0b5d0a8fa03c711ce41.png,080b848059f28cebf0e9dc78344948ff.png,132.png,133.png,134.png,135.png,136.png,137.png,1412912917805.png,161225blog_import_51a62e78599a3124.png,1705030235cc681a091.png,1705030242bb6f4f099.png,17050302f24fe0d9180.png,17050302f2d0fa7f181.png,17050302images (1)208.png,17050302images (2)220.png,17050302images237.png,17050303blog_import_51a583e37436f043.png,17050303blog_import_51a62e78599a3054.png,17050303e73c1735080.png,17052359325466011.png,1776c79c.png,1bab07597aa1440d395506a153b24610.png,20.png,20150330001133fce.png,21.png,38cdb593b51f1e7c2ef8b8e90d813eab.png,3b70ae511b622ed2f2796dbe7e95f878.png,3d4eae625606d7bd378fe890c9d423a2.png,4b2273bf65d7f6fd77288cdb88e481e8.png,5736beaeb6cc641fd5df929b42354a07 (1).png,5736beaeb6cc641fd5df929b42354a07.png,576ec78c4169be06cc90c215ddf04333 (1).png,576ec78c4169be06cc90c215ddf04333.png,59.png,5bb03508cf84c6321303132250b48f8b.png,5d00b7218dd86ffa6f65b6de82f630f1.png,5f8031131b10198f13ee6f271dbf9e00.png,67434a161c71922f29a4e8cb42e7b4a1-650x915s.png,7a12e2822d215283687db4d26c8ca9c4.png,803c68db5757b355d5a612e8dd0cd835.png,835849b3ea967bf0b6762a9930c946d5.png,900eaa7e0d96fda8296571afa0f0f3c6.png,91e7fc53bca7cfbc8bd0aee3c99657b7.png,9c120afc81493acc49c47c80e0b55b6f.png,a20.png,a21.png,a36.png,a38.png,ad2f0860f11255cb6981ec5105ae05f5.png,asaloon_1500050481_73402.png,blog_import_51a4b5f743704.png,cb3b91c8.png,d01e9675fad215527696d66876bc6642.png,d273ff5f-s.png,d56341f82bfcc577ce36e2501d2f57d7.png,d633435d1d3ce267af64d9a6b64e09f2.png,d6f8d77f6f98d34f6ef31312f017efaf.png,dadf14e1e1ff50521cc5e2a2145cb7c3.png,010.gif,0index.htm,0index-base.htm,1-2.gif,160202309.gif,160202313.gif,160202314.gif,160202315.gif,160501001.gif,160501002.gif,160501006.gif,160501012 (1).gif,160501012.gif,160501015.gif,160501016.gif,160501018.gif,160613-202.gif,161225112221017.gif,161225112223018.gif,161225112224019.gif,161225112225020.gif,161225160620003032.gif,161225160620018033.gif,161225160831-314034.gif,161225161019011036.gif,161225161019012037.gif,161225161019013038.gif,1612253188941b063.gif,1612254bb9c657069.gif,161225mjkr6_mn6rt4_23213.gif,25db7b23.gif,2730017c.gif,2f727e88.gif,30fa3b11.gif,32.gif,35.gif,356_1.gif,37c2cacdecbf817381e69c8f102f6b7e.gif,38.gif,40SJCFT.gif,5Bc2bfe.gif,5cc0ona.gif,70-1.gif,7b00cb25.gif,948f3c2e.gif,a5f6e0ac.gif,d567f49a9b6282998f30bbcec109fc5d8c21dd5e.gif,ditua_dkid5t_1.gif,eb2cdd9f.gif,161225250dfffc058.gif,1612252a14e684061.gif,161225700d9b38082.gif,1612257458c8db084.gif,161225932b1ad3094.gif,1612259a0afe87096.gif,161225b10e5c46103.gif,161225e90e5358155.gif,170523025a5bd2-s001.jpg,17052308b975e1002.jpg,17052311721601-s003.jpg,1705231d89da5f-s004.jpg,1705232ded2aca-s005.jpg,170523413777a7006.gif,17052345c94ab4007.jpg,1705234d0eb2b2a9c45d12876c4ef062911b0c6decff671473700807-s008.jpg,1705235547b1a2009.jpg,170523573e49ce-s010.jpg,17052359325466011.png,1705235bef4622-s012.jpg,1705236005598b013.jpg,1705236e907fd1-s014.jpg,1705237c1d790e015.jpg,1705237e8a9d71-s016.jpg,17052398e6e511-s018.jpg,170523a52e97e3-s019.jpg,170523aa6581df020.jpg,170523aacc64d6-s021.jpg,170523b4fa3a56-s022.jpg,170523b868090a023.jpg,170523b972b2a024.jpg,170523bb96a5f5-s025.jpg,170523d48b5f91026.jpg,170523d531345a-s027.jpg,170523d81ab004-s028.jpg,170523d82767d8-s029.jpg,170523ddc69d7b030.jpg,170523ea594980031.jpg,27362393.gif,Guf4epq.gif,kim_uttg_24.gif,LaQx3d5.gif,02index.html,03index - コピー.htm,04index - コピー.htm,index2.htm,oppai421.gif,panchira_kaze023.gif,panchira_kaze038.gif,panchira_kaze040.gif,wpid-1443351378900.gif,wpid-1443351588916.gif,wpid-1443354549124.gif,wpid-1443355772469.gif,wpid-1443359335098.gif,i_20131125090308s.png,i_20150504144054.png,livejupiter_1455441376_38501.png,to_2572_004s.png,VNsTDhA.png,zzz2afc4238-s.png,無邪気の楽園 カラー版 第03巻026.png,無邪気の楽園 カラー版 第03巻040.png,無邪気の楽園 カラー版 第03巻091.png,無邪気の楽園 カラー版 第03巻119.png,無邪気の楽園 カラー版 第03巻120.png,無邪気の楽園 カラー版 第03巻121.png,無邪気の楽園 カラー版 第03巻131.png,無邪気の楽園 第04巻027.png,無邪気の楽園 第04巻030.png,無邪気の楽園 第04巻031.png,無邪気の楽園 第04巻033.png,2c57006d-s.jpg,あやみIMG_0833000005.jpg,15562350469.jpg,156314964126s.jpg,25f9662c-s.jpg,32b870c1-s.jpg,6e5e03a7-s.jpg,7729f167-s.jpg,9ee097f9-s.jpg,a3f7253e-s.jpg,b59d2f12-s.jpg,b5b1162a-s.jpg,BkDGPzMCYAE5abs.jpg,dcf046d0.jpg,dcf046d0[1].jpg,downblouse_chira003.jpg,h499Ej4.jpg,livejupiter_1550197632_1401.jpg,livejupiter_1550197632_1402.jpg,tumblr_ohesvgAuRA1u8m4aeo4_1280.jpg,test.jpeg,001_testFolder___To LOVEる ダークネス 第05巻00175001.jpeg,002_testFolder___To LOVEる ダークネス 第07巻00171002.jpeg,003_testFolder___To LOVEる ダークネス 第07巻00172003.jpeg,004_testFolder___To LOVEる ダークネス 第07巻00173004.jpeg,005_testFolder___To LOVEる ダークネス 第12巻00136005.jpeg,001_Folder01___140703-419001.jpg,002_Folder01___15002.jpg,003_Folder01___150825114003.jpg,004_Folder01___151004-501 (1)004.jpg,005_Folder01___151004-503005.jpg,006_Folder01___151019214006.jpg,007_Folder01___2c57006d-s007.jpg,008_Folder01___43db7191-s008.jpg,009_Folder01___56fe9d9f009.jpg,010_Folder01___5d36d9bb-s010.jpg,011_Folder01___blog_import_51a50ffb6b5dc011.jpg,012_Folder01___ee1b983d012.jpg,013_Folder01___rk aa (IV) [渋谷書店] 無毛少女生撮専科 07 佐藤かすみ2_x264.mp4_000376983013.jpg,001_Folder02___02147b70001.png,002_Folder02___027dd49d6da8f0b5d0a8fa03c711ce41002.png,003_Folder02___080b848059f28cebf0e9dc78344948ff003.png,004_Folder02___132004.png,005_Folder02___133005.png,006_Folder02___134006.png,007_Folder02___135007.png,008_Folder02___136008.png,009_Folder02___137009.png,010_Folder02___1412912917805010.png,011_Folder02___161225blog_import_51a62e78599a3124011.png,012_Folder02___1705030235cc681a091012.png,013_Folder02___1705030242bb6f4f099013.png,014_Folder02___17050302f24fe0d9180014.png,015_Folder02___17050302f2d0fa7f181015.png,016_Folder02___17050302images (1)208016.png,017_Folder02___17050302images (2)220017.png,018_Folder02___17050302images237018.png,019_Folder02___17050303blog_import_51a583e37436f043019.png,020_Folder02___17050303blog_import_51a62e78599a3054020.png,021_Folder02___17050303e73c1735080021.png,022_Folder02___17052359325466011022.png,023_Folder02___1776c79c023.png,024_Folder02___1bab07597aa1440d395506a153b24610024.png,025_Folder02___20025.png,026_Folder02___20150330001133fce026.png,027_Folder02___21027.png,028_Folder02___38cdb593b51f1e7c2ef8b8e90d813eab028.png,029_Folder02___3b70ae511b622ed2f2796dbe7e95f878029.png,030_Folder02___3d4eae625606d7bd378fe890c9d423a2030.png,031_Folder02___4b2273bf65d7f6fd77288cdb88e481e8031.png,032_Folder02___5736beaeb6cc641fd5df929b42354a07 (1)032.png,033_Folder02___5736beaeb6cc641fd5df929b42354a07033.png,034_Folder02___576ec78c4169be06cc90c215ddf04333 (1)034.png,035_Folder02___576ec78c4169be06cc90c215ddf04333035.png,036_Folder02___59036.png,037_Folder02___5bb03508cf84c6321303132250b48f8b037.png,038_Folder02___5d00b7218dd86ffa6f65b6de82f630f1038.png,039_Folder02___5f8031131b10198f13ee6f271dbf9e00039.png,040_Folder02___67434a161c71922f29a4e8cb42e7b4a1-650x915s040.png,041_Folder02___7a12e2822d215283687db4d26c8ca9c4041.png,042_Folder02___803c68db5757b355d5a612e8dd0cd835042.png,043_Folder02___835849b3ea967bf0b6762a9930c946d5043.png,044_Folder02___900eaa7e0d96fda8296571afa0f0f3c6044.png,045_Folder02___91e7fc53bca7cfbc8bd0aee3c99657b7045.png,046_Folder02___9c120afc81493acc49c47c80e0b55b6f046.png,047_Folder02___a20047.png,048_Folder02___a21048.png,049_Folder02___a36049.png,050_Folder02___a38050.png,051_Folder02___ad2f0860f11255cb6981ec5105ae05f5051.png,052_Folder02___asaloon_1500050481_73402052.png,053_Folder02___blog_import_51a4b5f743704053.png,054_Folder02___cb3b91c8054.png,055_Folder02___d01e9675fad215527696d66876bc6642055.png,056_Folder02___d273ff5f-s056.png,057_Folder02___d56341f82bfcc577ce36e2501d2f57d7057.png,058_Folder02___d633435d1d3ce267af64d9a6b64e09f2058.png,059_Folder02___d6f8d77f6f98d34f6ef31312f017efaf059.png,060_Folder02___dadf14e1e1ff50521cc5e2a2145cb7c3060.png,061_Folder02___i_20131125090308s061.png,062_Folder02___i_20150504144054062.png,063_Folder02___livejupiter_1455441376_38501063.png,064_Folder02___to_2572_004s064.png,065_Folder02___VNsTDhA065.png,066_Folder02___zzz2afc4238-s066.png,067_Folder02___無邪気の楽園 カラー版 第03巻026067.png,068_Folder02___無邪気の楽園 カラー版 第03巻040068.png,069_Folder02___無邪気の楽園 カラー版 第03巻091069.png,070_Folder02___無邪気の楽園 カラー版 第03巻119070.png,071_Folder02___無邪気の楽園 カラー版 第03巻120071.png,072_Folder02___無邪気の楽園 カラー版 第03巻121072.png,073_Folder02___無邪気の楽園 カラー版 第03巻131073.png,074_Folder02___無邪気の楽園 第04巻027074.png,075_Folder02___無邪気の楽園 第04巻030075.png,076_Folder02___無邪気の楽園 第04巻031076.png,077_Folder02___無邪気の楽園 第04巻033077.png,001_Folder03___010001.gif,002_Folder03___1-2002.gif,003_Folder03___160202309003.gif,004_Folder03___160202313004.gif,005_Folder03___160202314005.gif,006_Folder03___160202315006.gif,007_Folder03___160501001007.gif,008_Folder03___160501002008.gif,009_Folder03___160501006009.gif,010_Folder03___160501012 (1)010.gif,011_Folder03___160501012011.gif,012_Folder03___160501015012.gif,013_Folder03___160501016013.gif,014_Folder03___160501018014.gif,015_Folder03___160613-202015.gif,016_Folder03___161225112221017016.gif,017_Folder03___161225112223018017.gif,018_Folder03___161225112224019018.gif,019_Folder03___161225112225020019.gif,020_Folder03___161225160620003032020.gif,021_Folder03___161225160620018033021.gif,022_Folder03___161225160831-314034022.gif,023_Folder03___161225161019011036023.gif,024_Folder03___161225161019012037024.gif,025_Folder03___161225161019013038025.gif,026_Folder03___1612253188941b063026.gif,027_Folder03___1612254bb9c657069027.gif,028_Folder03___161225mjkr6_mn6rt4_23213028.gif,029_Folder03___25db7b23029.gif,030_Folder03___2730017c030.gif,031_Folder03___2f727e88031.gif,032_Folder03___30fa3b11032.gif,033_Folder03___32033.gif,034_Folder03___35034.gif,035_Folder03___356_1035.gif,036_Folder03___37c2cacdecbf817381e69c8f102f6b7e036.gif,037_Folder03___38037.gif,038_Folder03___40SJCFT038.gif,039_Folder03___5Bc2bfe039.gif,040_Folder03___5cc0ona040.gif,041_Folder03___70-1041.gif,042_Folder03___7b00cb25042.gif,043_Folder03___948f3c2e043.gif,044_Folder03___a5f6e0ac044.gif,045_Folder03___d567f49a9b6282998f30bbcec109fc5d8c21dd5e045.gif,046_Folder03___ditua_dkid5t_1046.gif,047_Folder03___eb2cdd9f047.gif,048_Folder03___Guf4epq048.gif,049_Folder03___kim_uttg_24049.gif,050_Folder03___LaQx3d5050.gif,051_Folder03___oppai421051.gif,052_Folder03___panchira_kaze023052.gif,053_Folder03___panchira_kaze038053.gif,054_Folder03___panchira_kaze040054.gif,055_Folder03___wpid-1443351378900055.gif,056_Folder03___wpid-1443351588916056.gif,057_Folder03___wpid-1443354549124057.gif,058_Folder03___wpid-1443355772469058.gif,059_Folder03___wpid-1443359335098059.gif,To LOVEる ダークネス 第05巻00175.jpeg,To LOVEる ダークネス 第07巻00171.jpeg,To LOVEる ダークネス 第07巻00172.jpeg,To LOVEる ダークネス 第07巻00173.jpeg,To LOVEる ダークネス 第12巻00136.jpeg
+2024/09/09 03:22:35 885225    SettingForm > buttonApply_Click
+2024/09/09 03:22:35 886193    Setting.FlagChange > ChangeListRandom = True
+2024/09/09 03:22:35 886193    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/09 03:22:35 891179    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/09 03:22:35 891179    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/09 03:22:35 892177    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/09 03:22:36 228282    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/09 03:22:36 229272    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/09 03:22:36 392604    ListJoin = To LOVEる ダークネス 第04巻00192.jpeg,006_Folder01___151019214006.jpg,007_Folder01___2c57006d-s007.jpg,041_Folder02___7a12e2822d215283687db4d26c8ca9c4041.png,livejupiter_1453455051_47501.jpg,576ec78c4169be06cc90c215ddf04333 (1).png,5736beaeb6cc641fd5df929b42354a07.png,055_Folder02___d01e9675fad215527696d66876bc6642055.png,2c57006d-s.jpg,356_1.gif,803c68db5757b355d5a612e8dd0cd835.png,031_Folder03___2f727e88031.gif,049_Folder02___a36049.png,To LOVEる ダークネス 第09巻00106.jpeg,d567f49a9b6282998f30bbcec109fc5d8c21dd5e.gif,0index.htm,136.png,012_Folder02___1705030235cc681a091012.png,d273ff5f-s.png,133.png,039_Folder02___5f8031131b10198f13ee6f271dbf9e00039.png,downblouse_chira003.jpg,160202313.gif,046_Folder02___9c120afc81493acc49c47c80e0b55b6f046.png,37c2cacdecbf817381e69c8f102f6b7e.gif,049_Folder03___kim_uttg_24049.gif,25f9662c-s.jpg,17050302f24fe0d9180.png,山口みなみ_かけがえのない時間0014.jpg,036_Folder02___59036.png,045_Folder03___d567f49a9b6282998f30bbcec109fc5d8c21dd5e045.gif,015_Folder02___17050302f2d0fa7f181015.png,161225932b1ad3094.gif,053_Folder03___panchira_kaze038053.gif,132.png,032_Folder02___5736beaeb6cc641fd5df929b42354a07 (1)032.png,048_Folder03___Guf4epq048.gif,900eaa7e0d96fda8296571afa0f0f3c6.png,17050303e73c1735080.png,012_Folder03___160501015012.gif,a21.png,1705237c1d790e015.jpg,042_Folder03___7b00cb25042.gif,無邪気の楽園 第04巻030.png,blog_import_51a50ffb6b5dc.jpg,056_Folder02___d273ff5f-s056.png,21.png,panchira_kaze040.gif,170523413777a7006.gif,1705030235cc681a091.png,i_20131125090308s.png,7a12e2822d215283687db4d26c8ca9c4.png,043_Folder03___948f3c2e043.gif,17050302images237.png,170523b868090a023.jpg,075_Folder02___無邪気の楽園 第04巻030075.png,069_Folder02___無邪気の楽園 カラー版 第03巻091069.png,051_Folder03___oppai421051.gif,oppai421.gif,005_testFolder___To LOVEる ダークネス 第12巻00136005.jpeg,018_Folder03___161225112224019018.gif,h499Ej4.jpg,無邪気の楽園 カラー版 第03巻131.png,30fa3b11.gif,無邪気の楽園 第04巻027.png,016_Folder02___17050302images (1)208016.png,051_Folder02___ad2f0860f11255cb6981ec5105ae05f5051.png,160613-202.gif,b59d2f12-s.jpg,170523025a5bd2-s001.jpg,034_Folder03___35034.gif,003_Folder01___150825114003.jpg,027_Folder02___21027.png,160202309.gif,161225160620018033.gif,015_Folder03___160613-202015.gif,001_testFolder___To LOVEる ダークネス 第05巻00175001.jpeg,021_Folder03___161225160620018033021.gif,070_Folder02___無邪気の楽園 カラー版 第03巻119070.png,1bab07597aa1440d395506a153b24610.png,053_Folder02___blog_import_51a4b5f743704053.png,002_Folder02___027dd49d6da8f0b5d0a8fa03c711ce41002.png,161225b10e5c46103.gif,019_Folder03___161225112225020019.gif,1705237e8a9d71-s016.jpg,062_Folder02___i_20150504144054062.png,030_Folder03___2730017c030.gif,170523ddc69d7b030.jpg,あやみIMG_0835000007.jpg,25db7b23.gif,161225161019011036.gif,あやみIMG_0833000005.jpg,035_Folder02___576ec78c4169be06cc90c215ddf04333035.png,038_Folder02___5d00b7218dd86ffa6f65b6de82f630f1038.png,001_Folder03___010001.gif,ditua_dkid5t_1.gif,西村理香_15_1605352.jpg,9ee097f9-s.jpg,058_Folder03___wpid-1443355772469058.gif,161225700d9b38082.gif,5bb03508cf84c6321303132250b48f8b.png,029_Folder02___3b70ae511b622ed2f2796dbe7e95f878029.png,151019214.jpg,2f727e88.gif,dcf046d0.jpg,43db7191-s.jpg,LaQx3d5.gif,061_Folder02___i_20131125090308s061.png,057_Folder02___d56341f82bfcc577ce36e2501d2f57d7057.png,161225112225020.gif,dcf046d0[1].jpg,a36.png,無邪気の楽園 カラー版 第03巻040.png,あやみIMG_0834000006.jpg,161225161019013038.gif,ad2f0860f11255cb6981ec5105ae05f5.png,047_Folder03___eb2cdd9f047.gif,063_Folder02___livejupiter_1455441376_38501063.png,160202314.gif,西村理香_AliceClub&サタン05445.jpg,074_Folder02___無邪気の楽園 第04巻027074.png,1705236e907fd1-s014.jpg,170523aa6581df020.jpg,rk aa (IV) [渋谷書店] 無毛少女生撮専科 07 佐藤かすみ2_x264.mp4_000376983.jpg,17052311721601-s003.jpg,072_Folder02___無邪気の楽園 カラー版 第03巻121072.png,index2.htm,17050302f2d0fa7f181.png,009_Folder01___56fe9d9f009.jpg,161225blog_import_51a62e78599a3124.png,To LOVEる ダークネス 第07巻00171.jpeg,151004-503.jpg,161225250dfffc058.gif,5cc0ona.gif,004_Folder01___151004-501 (1)004.jpg,021_Folder02___17050303e73c1735080021.png,17052359325466011.png,066_Folder02___zzz2afc4238-s066.png,a20.png,576ec78c4169be06cc90c215ddf04333.png,043_Folder02___835849b3ea967bf0b6762a9930c946d5043.png,020_Folder03___161225160620003032020.gif,a3f7253e-s.jpg,054_Folder02___cb3b91c8054.png,1705235547b1a2009.jpg,156314964126s.jpg,008_Folder01___43db7191-s008.jpg,008_Folder03___160501002008.gif,044_Folder03___a5f6e0ac044.gif,35.gif,170523d48b5f91026.jpg,あやみIMG_0833000005.jpg,056_Folder03___wpid-1443351588916056.gif,西村理香_AliceClub&サタン05459.jpg,045_Folder02___91e7fc53bca7cfbc8bd0aee3c99657b7045.png,022_Folder02___17052359325466011022.png,blog_import_51a4b5f743704.png,67434a161c71922f29a4e8cb42e7b4a1-650x915s.png,160202315.gif,panchira_kaze038.gif,32b870c1-s.jpg,asaloon_1500050481_73402.png,ちなんぼ001000001.jpg,161225160620003032.gif,誰よりも深く05856.JPG,002_Folder01___15002.jpg,073_Folder02___無邪気の楽園 カラー版 第03巻131073.png,1776c79c.png,9c120afc81493acc49c47c80e0b55b6f.png,001_Folder02___02147b70001.png,025_Folder03___161225161019013038025.gif,To LOVEる ダークネス 第05巻00175.jpeg,160501006.gif,0index-base.htm,5d36d9bb-s.jpg,kim_uttg_24.gif,a38.png,tumblr_ohesvgAuRA1u8m4aeo4_1280.jpg,ace21392.jpg,067_Folder02___無邪気の楽園 カラー版 第03巻026067.png,134.png,002_Folder03___1-2002.gif,02147b70.png,4b2273bf65d7f6fd77288cdb88e481e8.png,030_Folder02___3d4eae625606d7bd378fe890c9d423a2030.png,060_Folder02___dadf14e1e1ff50521cc5e2a2145cb7c3060.png,018_Folder02___17050302images237018.png,無邪気の楽園 カラー版 第03巻121.png,無邪気の楽園 第04巻033.png,137.png,005_Folder01___151004-503005.jpg,065_Folder02___VNsTDhA065.png,1612259a0afe87096.gif,135.png,2c57006d-s.jpg,003_Folder02___080b848059f28cebf0e9dc78344948ff003.png,to_2572_004s.png,027dd49d6da8f0b5d0a8fa03c711ce41.png,6e5e03a7-s.jpg,160501002.gif,037_Folder03___38037.gif,1412912917805.png,西村理香_15_1605343.jpg,077_Folder02___無邪気の楽園 第04巻033077.png,あやみIMG_0835000007[1].jpg,17052345c94ab4007.jpg,170523d81ab004-s028.jpg,160501012 (1).gif,024_Folder02___1bab07597aa1440d395506a153b24610024.png,009_Folder02___137009.png,1705234d0eb2b2a9c45d12876c4ef062911b0c6decff671473700807-s008.jpg,048_Folder02___a21048.png,014_Folder02___17050302f24fe0d9180014.png,ちなんぼ002000002.jpg,西村理香_15_1605320.jpg,livejupiter_1550197632_1402.jpg,zzz2afc4238-s.png,036_Folder03___37c2cacdecbf817381e69c8f102f6b7e036.gif,wpid-1443355772469.gif,012_Folder01___ee1b983d012.jpg,055_Folder03___wpid-1443351378900055.gif,170523b972b2a024.jpg,040_Folder02___67434a161c71922f29a4e8cb42e7b4a1-650x915s040.png,1612252a14e684061.gif,013_Folder03___160501016013.gif,livejupiter_1550197632_1401.jpg,026_Folder02___20150330001133fce026.png,017_Folder02___17050302images (2)220017.png,1705232ded2aca-s005.jpg,010.gif,038_Folder03___40SJCFT038.gif,003_Folder03___160202309003.gif,027_Folder03___1612254bb9c657069027.gif,17052359325466011.png,38cdb593b51f1e7c2ef8b8e90d813eab.png,5736beaeb6cc641fd5df929b42354a07 (1).png,livejupiter_1464670858_101.jpg,panchira_kaze023.gif,17050303blog_import_51a583e37436f043.png,029_Folder03___25db7b23029.gif,27362393.gif,011_Folder01___blog_import_51a50ffb6b5dc011.jpg,044_Folder02___900eaa7e0d96fda8296571afa0f0f3c6044.png,006_Folder02___134006.png,Guf4epq.gif,026_Folder03___1612253188941b063026.gif,59.png,019_Folder02___17050303blog_import_51a583e37436f043019.png,161225112223018.gif,To LOVEる ダークネス 第06巻00084.jpeg,050_Folder02___a38050.png,1-2.gif,007_Folder03___160501001007.gif,無邪気の楽園 カラー版 第03巻091.png,059_Folder02___d6f8d77f6f98d34f6ef31312f017efaf059.png,1705030242bb6f4f099.png,d6f8d77f6f98d34f6ef31312f017efaf.png,1612257458c8db084.gif,170523b4fa3a56-s022.jpg,835849b3ea967bf0b6762a9930c946d5.png,160501012.gif,023_Folder03___161225161019011036023.gif,005_Folder03___160202314005.gif,dadf14e1e1ff50521cc5e2a2145cb7c3.png,005_Folder02___133005.png,VNsTDhA.png,009_Folder03___160501006009.gif,170523aacc64d6-s021.jpg,15562350469.jpg,1705235bef4622-s012.jpg,160501001.gif,40SJCFT.gif,5f8031131b10198f13ee6f271dbf9e00.png,i_20150504144054.png,042_Folder02___803c68db5757b355d5a612e8dd0cd835042.png,001_Folder01___140703-419001.jpg,010_Folder02___1412912917805010.png,1705236005598b013.jpg,013_Folder01___rk aa (IV) [渋谷書店] 無毛少女生撮専科 07 佐藤かすみ2_x264.mp4_000376983013.jpg,38.gif,7b00cb25.gif,004_testFolder___To LOVEる ダークネス 第07巻00173004.jpeg,eb2cdd9f.gif,006_Folder03___160202315006.gif,ee1b983d.jpg,161225mjkr6_mn6rt4_23213.gif,040_Folder03___5cc0ona040.gif,5Bc2bfe.gif,058_Folder02___d633435d1d3ce267af64d9a6b64e09f2058.png,025_Folder02___20025.png,050_Folder03___LaQx3d5050.gif,天野美由紀14迎えに来てね0027.jpg,161225161019012037.gif,32.gif,032_Folder03___30fa3b11032.gif,cb3b91c8.png,無邪気の楽園 カラー版 第03巻119.png,無邪気の楽園 カラー版 第03巻120.png,151004-501 (1).jpg,test.jpeg,046_Folder03___ditua_dkid5t_1046.gif,livejupiter_1455441376_38501.png,7729f167-s.jpg,170523d531345a-s027.jpg,3b70ae511b622ed2f2796dbe7e95f878.png,013_Folder02___1705030242bb6f4f099013.png,1612254bb9c657069.gif,161225160831-314034.gif,BkDGPzMCYAE5abs.jpg,016_Folder03___161225112221017016.gif,wpid-1443354549124.gif,1612253188941b063.gif,04index - コピー.htm,022_Folder03___161225160831-314034022.gif,02index.html,161225112221017.gif,004_Folder03___160202313004.gif,033_Folder03___32033.gif,160501016.gif,To LOVEる とらぶる ダークネス カラー版 第14巻00026.jpeg,西村理香_15_1605305.jpg,56fe9d9f.jpg,03index - コピー.htm,041_Folder03___70-1041.gif,d56341f82bfcc577ce36e2501d2f57d7.png,052_Folder02___asaloon_1500050481_73402052.png,010_Folder03___160501012 (1)010.gif,047_Folder02___a20047.png,140703-419.jpg,080b848059f28cebf0e9dc78344948ff.png,17050303blog_import_51a62e78599a3054.png,161225e90e5358155.gif,011_Folder03___160501012011.gif,17050302images (2)220.png,To LOVEる ダークネス 第07巻00172.jpeg,020_Folder02___17050303blog_import_51a62e78599a3054020.png,014_Folder03___160501018014.gif,d633435d1d3ce267af64d9a6b64e09f2.png,052_Folder03___panchira_kaze023052.gif,071_Folder02___無邪気の楽園 カラー版 第03巻120071.png,170523d82767d8-s029.jpg,70-1.gif,023_Folder02___1776c79c023.png,Darkness 6_082.jpg,170523a52e97e3-s019.jpg,17050302images (1)208.png,150825114.jpg,170523ea594980031.jpg,039_Folder03___5Bc2bfe039.gif,035_Folder03___356_1035.gif,1705231d89da5f-s004.jpg,山口みなみ_かけがえのない時間0060.jpg,057_Folder03___wpid-1443354549124057.gif,91e7fc53bca7cfbc8bd0aee3c99657b7.png,d01e9675fad215527696d66876bc6642.png,160501015.gif,068_Folder02___無邪気の楽園 カラー版 第03巻040068.png,004_Folder02___132004.png,003_testFolder___To LOVEる ダークネス 第07巻00172003.jpeg,054_Folder03___panchira_kaze040054.gif,948f3c2e.gif,008_Folder02___136008.png,To LOVEる ダークネス 第12巻00136.jpeg,5d00b7218dd86ffa6f65b6de82f630f1.png,034_Folder02___576ec78c4169be06cc90c215ddf04333 (1)034.png,17052308b975e1002.jpg,3d4eae625606d7bd378fe890c9d423a2.png,007_Folder02___135007.png,170523bb96a5f5-s025.jpg,170523573e49ce-s010.jpg,010_Folder01___5d36d9bb-s010.jpg,ちなんぼ003000003.jpg,17052398e6e511-s018.jpg,wpid-1443351588916.gif,017_Folder03___161225112223018017.gif,160501018.gif,15.jpg,028_Folder02___38cdb593b51f1e7c2ef8b8e90d813eab028.png,あやみIMG_0836000008.jpg,wpid-1443351378900.gif,028_Folder03___161225mjkr6_mn6rt4_23213028.gif,20.png,161225112224019.gif,037_Folder02___5bb03508cf84c6321303132250b48f8b037.png,b5b1162a-s.jpg,20150330001133fce.png,2730017c.gif,無邪気の楽園 第04巻031.png,076_Folder02___無邪気の楽園 第04巻031076.png,031_Folder02___4b2273bf65d7f6fd77288cdb88e481e8031.png,002_testFolder___To LOVEる ダークネス 第07巻00171002.jpeg,西村理香_15_1605342.jpg,無邪気の楽園 カラー版 第03巻026.png,059_Folder03___wpid-1443359335098059.gif,033_Folder02___5736beaeb6cc641fd5df929b42354a07033.png,wpid-1443359335098.gif,a5f6e0ac.gif,064_Folder02___to_2572_004s064.png,To LOVEる ダークネス 第07巻00173.jpeg,024_Folder03___161225161019012037024.gif,011_Folder02___161225blog_import_51a62e78599a3124011.png
+2024/09/09 03:22:44 999319    SettingForm > FileListManagerSetting_Activated

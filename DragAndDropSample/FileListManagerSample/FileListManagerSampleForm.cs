@@ -24,6 +24,10 @@ namespace FileListManagerSample
         public bool _dragDropEnabled;
         // 起動開始時のフォームがこのフォームかどうかを保持する（ダイアログクローズ時オブジェクトを破棄しないようにするため）
         public bool _startedThisForm = true;
+        //#
+        //設定フォーム（メンバに設定値を持つ）
+        public FileListManagerSettingForm _fileListManagerSettingForm;
+        //#
         public FileListManagerSampleForm(AppLogger logger=null, bool dragDropEnable=true, bool startedThisForm=true)
         {
             InitializeComponent();
@@ -37,7 +41,6 @@ namespace FileListManagerSample
             {
                 _logger = logger;
             }
-            dragDropEnable = false;
             this._dragDropEnabled = dragDropEnable;
             if (_dragDropEnabled)
             {
@@ -57,6 +60,8 @@ namespace FileListManagerSample
             _files.SelectedFileEvent += _fileListControl.ChangedFileInFile;
             // コントロールの一覧がクリックされたとき、_filesの選択に反映させる
             _fileListControl.SelectedItemEvent += _files.ChangeFileRecieve;
+            //Setting
+            _fileListManagerSettingForm = new FileListManagerSettingForm(_logger, _fileListManager._fileListManagerSetting);
         }
 
         public void FileListManagerForm_UpdateFileListAfterEvent(object sender, EventArgs e)
@@ -248,5 +253,15 @@ namespace FileListManagerSample
             }
         }
 
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonSetting_Click(object sender, EventArgs e)
+        {
+            _fileListManagerSettingForm._isPshedShowButton = true;
+            _fileListManagerSettingForm.Show();
+        }
     }
 }

@@ -59,6 +59,13 @@
     <Compile Include="FileListManagerSampleForm.Designer.cs">
       <DependentUpon>FileListManagerSampleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FileListManager\FileListManagerSetting.cs" />
+    <Compile Include="FileListManagerSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileListManagerSettingForm.Designer.cs">
+      <DependentUpon>FileListManagerSettingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FileListManager\FileListManagerConstants.cs" />
     <Compile Include="FileListManager\RandomListCreater.cs" />
     <Compile Include="FileListManager\FileListManager.cs" />
@@ -73,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FileListManagerSampleForm.resx">
       <DependentUpon>FileListManagerSampleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileListManagerSettingForm.resx">
+      <DependentUpon>FileListManagerSettingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

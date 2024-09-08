@@ -31,6 +31,11 @@ namespace CommonUtility.FileListUtility
         public List<string> _fileFilterConditionList = new List<string> { };
         public List<string> _fileIgnoreConditionList = new List<string> { };
 
+        // ファイルリストをセットしたときの最初のパス
+        // D&Dしたものがlnkでないファイルならそのまま
+        // lnkならlnk内の最初のファイル
+        // dirならDirの最初のファイルとなる
+        public string _listStartPath = "";
 
         //#
         //以下の条件リストは使用していない 240901
@@ -180,18 +185,21 @@ namespace CommonUtility.FileListUtility
         /// <param name="path"></param>
         /// <returns></returns>
         public int SetFileListFromPath(
-            string path, 
+            string path,
             List<string> fileFilterConditionList = null,
-            List<string> fileIgnoreConditionList = null)
+            List<string> fileIgnoreConditionList = null,
+            bool isIncludeSubDirAll = false)
         {
             try
             {
-                if ((fileFilterConditionList == null) || (fileFilterConditionList.Count<1)){
+                if ((fileFilterConditionList == null) || (fileFilterConditionList.Count < 1))
+                {
                     fileFilterConditionList = _fileFilterConditionList;
                 }
                 else
-                if ((fileIgnoreConditionList == null) || (fileIgnoreConditionList.Count<1)){
-                    fileIgnoreConditionList = _fileIgnoreConditionList; 
+                if ((fileIgnoreConditionList == null) || (fileIgnoreConditionList.Count < 1))
+                {
+                    fileIgnoreConditionList = _fileIgnoreConditionList;
                 }
                 _fileList = new List<string>();
                 _folderList = new List<string>();
@@ -199,22 +207,58 @@ namespace CommonUtility.FileListUtility
 
                 if (!((System.IO.File.Exists(path)) || (System.IO.Directory.Exists(path))))
                 {
-                    _logger.AddLogWarning(" Path Not Exists. path="+path); return -1;
+                    _logger.AddLogWarning(" Path Not Exists. path=" + path); return -1;
                 }
-                if (System.IO.File.Exists(path))
+                bool changeStartFile = false;
+                if (File.Exists(path))
                 {
-                    // path がファイルの時は、DirectoryPath を取得する
-                    int pos = path.LastIndexOf("\\");
-                    path = path.Substring(0, pos);
+                    if (Path.GetExtension(path) == ".lnk")
+                    {
+                        _logger.PrintInfo(string.Format("lnk file true = {0}", path));
+                        path = new ShortCutReader(_logger).GetSourceFromPath(path);
+                        _logger.PrintInfo(string.Format("lnk file read content path = {0}", path));
+                    }
+                    if (File.Exists(path))
+                    {
+                        // path がファイルの時は、DirectoryPath を取得する
+                        int pos = path.LastIndexOf("\\");
+                        path = path.Substring(0, pos);
+                    }
+                    //D&Dしたものがディレクトリ以外の場合は、
+                    //fileList内のMove(path)とすると、存在せずえらとなるので以下のフラグを契機に置き換える
+                    changeStartFile = true;
                 }
                 this.DirectoryPath = path;
-                string[] aryFilePath = Directory.GetFiles(path);
+                string[] aryFilePath;
+                if (isIncludeSubDirAll)
+                {
+                    aryFilePath = Directory.GetFiles(path, "*", SearchOption.AllDirectories);
+                }
+                else { 
+                    aryFilePath = Directory.GetFiles(path);
+                }
                 _logger.PrintInfo(String.Format("Dirctory.GetFiles.Length = {0}", aryFilePath.Length));
                 //List<string> list = new List<string>(ary);
+                //この絞り込みはMkeListの後にしなければならない？
                 List<string> retList = FilterAndExcludeFilesWithRegex(
                     aryFilePath, fileFilterConditionList, fileIgnoreConditionList);
-                return SetFileList(retList);
-                
+                //#
+                int ret = SetFileList(retList);
+                //#
+                //このリスト
+                if (changeStartFile)
+                {
+                    if (0 < _fileList.Count)
+                    {
+                        _listStartPath = _fileList[0];
+                    }
+                    else
+                    {
+                        _listStartPath = "";
+                    }
+                }
+                return ret;
+
             } catch(System.UnauthorizedAccessException ex)
             {
                 //_logger.AddException(ex, this, "SetFileListFromPath Failed");
@@ -253,40 +297,56 @@ namespace CommonUtility.FileListUtility
                 ////#
                 // fileFilterConditionListに合致するファイルパスをリストに追加
                 List<string> filteredFiles = new List<string>();
-                foreach (string filePath in filePathList)
+                if (0 < fileFilterConditionList.Count)
                 {
-                    bool matchesFilter = false;
-                    foreach (string condition in fileFilterConditionList)
+                    foreach (string filePath in filePathList)
                     {
-                        if (Regex.IsMatch(filePath, condition))
+                        bool matchesFilter = false;
+                        foreach (string condition in fileFilterConditionList)
                         {
-                            matchesFilter = true;
-                            break;
+                            if (Regex.IsMatch(filePath, condition))
+                            {
+                                matchesFilter = true;
+                                break;
+                            }
+                        }
+                        if (matchesFilter)
+                        {
+                            filteredFiles.Add(filePath);
                         }
                     }
-                    if (matchesFilter)
-                    {
-                        filteredFiles.Add(filePath);
-                    }
+                }
+                else
+                {
+                    //フィルターリストがない場合は、そのまま
+                    filteredFiles = filePathList.ToList();
                 }
 
                 // fileIgnoreConditionListに合致するファイルパスをリストから除外
                 List<string> resultFiles = new List<string>();
-                foreach (string filePath in filteredFiles)
+                if (0 < fileIgnoreConditionList.Count)
                 {
-                    bool shouldIgnore = false;
-                    foreach (string ignoreCondition in fileIgnoreConditionList)
+                    foreach (string filePath in filteredFiles)
                     {
-                        if (Regex.IsMatch(filePath, ignoreCondition))
+                        bool shouldIgnore = false;
+                        foreach (string ignoreCondition in fileIgnoreConditionList)
                         {
-                            shouldIgnore = true;
-                            break;
+                            if (Regex.IsMatch(filePath, ignoreCondition))
+                            {
+                                shouldIgnore = true;
+                                break;
+                            }
+                        }
+                        if (!shouldIgnore)
+                        {
+                            resultFiles.Add(filePath);
                         }
                     }
-                    if (!shouldIgnore)
-                    {
-                        resultFiles.Add(filePath);
-                    }
+                }
+                else
+                {
+                    //ignoreListがない場合はそのまま渡す
+                    resultFiles = filteredFiles;
                 }
 
                 return resultFiles;
@@ -305,7 +365,7 @@ namespace CommonUtility.FileListUtility
         /// FileListRegister._fileList に格納される
         /// リストがないときは ListStringをNewする
         /// </summary>
-        /// <param name="list"></param>
+        /// <param name="list">このリストは読み込み元Dirパス,やlnkファイルパスのリスト</param>
         /// <returns></returns>
         public int SetFileList(List<string> list)
         {
@@ -332,12 +392,14 @@ namespace CommonUtility.FileListUtility
                 if(ret < 1)
                 {
                     _logger.AddLogAlert(this, "setFileList : MakeFileList Failed");
+                    //return 3;
                 }
                 // 条件以外を除外
                 ret = SetFileListWithApplyConditions(_fileList);
                 if (ret < 1)
                 {
                     _logger.AddLogAlert(this, "setFileList : setFileListWithApplyConditions Failed");
+                    return 4;
                 }
                 return 1;
             } catch (Exception ex)

@@ -28,3 +28,4 @@ C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.csproj.CopyComplete
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.exe
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.pdb
+C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.FileListManagerSettingForm.resources
