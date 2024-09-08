@@ -25,6 +25,8 @@ namespace CommonUtility.FileListUtility
         string GetCurrentValue();
         List<string> GetList();
 
+        string StringJoinList(int index=-1);
+
         int Count();
 
         bool IsLastIndex();

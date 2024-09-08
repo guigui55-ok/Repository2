@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using AppLoggerModule;
+using System.IO;
 
 namespace CommonUtility.FileListUtility
 {
@@ -18,6 +19,9 @@ namespace CommonUtility.FileListUtility
         public bool _isRecievedChangeFileFromOut = false;
         //このクラスからファイルが変更されたときのフラグ
         public bool _isChangeFileInThis = false;
+        // リストの
+        public bool _isDoLoopWhenOverListMaxMin = true;
+
         public EventHandler ChangedFileListEvent { get => _changeFilesEvent; set => _changeFilesEvent = value; }
 
         //検討中
@@ -191,7 +195,15 @@ namespace CommonUtility.FileListUtility
             if (_fileList == null) { return; }
             if (NowIndex >= _fileList.Count - 1)
             {
-                NowIndex = 0;
+                if (_isDoLoopWhenOverListMaxMin)
+                {
+                    NowIndex = 0;
+                }
+                else
+                {
+                    _logger.AddLog(this, "MoveNext CountMax (Loop=false) =" + NowIndex);
+                    return;
+                }
             } else
             {
                 NowIndex++;
@@ -207,7 +219,15 @@ namespace CommonUtility.FileListUtility
             if (_fileList == null) { return; }
             if (NowIndex <= 0)
             {
-                NowIndex = _fileList.Count -1;
+                if (_isDoLoopWhenOverListMaxMin)
+                {
+                    NowIndex = _fileList.Count - 1;
+                }
+                else
+                {
+                    _logger.AddLog(this, "MoveNext CountMin (Loop=false) =" + NowIndex);
+                    return;
+                }
             } else
             {
                 NowIndex--;
@@ -286,6 +306,25 @@ namespace CommonUtility.FileListUtility
         public void UpdateFileList(List<string> list)
         {
             this.FileList = list;
+        }
+
+        public string StringJoinList(int index=-1)
+        {
+            //#
+            List<string> bufList = new List<string> { };
+            if (0 < index)
+            {
+                //長いとき用
+                bufList = _fileList.GetRange(0, index);
+            }
+            foreach (string buf in _fileList)
+            {
+                bufList.Add(Path.GetFileName(buf));
+            }
+            //#
+            string bufJoin = String.Join(",", bufList);
+            //_logger.PrintInfo("fileNameList = " + bufJoin);
+            return bufJoin;
         }
     }
 }

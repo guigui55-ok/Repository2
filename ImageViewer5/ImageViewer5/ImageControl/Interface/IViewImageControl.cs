@@ -6,7 +6,7 @@ namespace ViewImageModule
     // PictureBox
     /// <summary>
     /// ViewImageの、外側UserControl(Control)と、内側PictureBoxの機能などを実装
-    /// ViewImageControlPictureBox で使用される
+    /// ViewImageControl, PictureBox で使用される
     /// <para></para>
     /// 240824
     /// ViewImageControlPictureBox

@@ -116,6 +116,15 @@ namespace AppLoggerModule
                 this.Print(value);
             }
         }
+        public void PrintError(Exception ex, string value)
+        {
+            if (LogLevel.ERR <= this.LoggerLogLevel)
+            {
+                this.Print(value);
+                this.Print(ex.Message);
+                this.Print(ex.StackTrace);
+            }
+        }
 
         public void PrintAlert(string value)
         {

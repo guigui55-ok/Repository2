@@ -9,6 +9,7 @@ using System.Drawing;
 using ViewImageModule;
 using CommonControlUtilityModule;
 using ImageViewer5.CommonModules;
+using CommonControlUtilityModuleB;
 
 namespace ImageViewer5.ImageControl
 {
@@ -16,7 +17,7 @@ namespace ImageViewer5.ImageControl
     /// 1つのコントロールやイメージ処理を、取りまとめて扱うクラス
     /// ViewImage、外枠UserControl、内側PictureBoxの、機能や連携処理を扱う
     /// </summary>
-    public class ImageViwerMainClass
+    public class ImageMainClass
     {
         public PictureBox _pictureBox;
         public Control _parentControl;
@@ -36,7 +37,7 @@ namespace ImageViewer5.ImageControl
         /// <param name="formMain"></param>
         /// <param name="parentControl"></param>
         /// <param name="pictureBox"></param>
-        public ImageViwerMainClass(AppLogger logger,Form formMain, Control parentControl, PictureBox pictureBox)
+        public ImageMainClass(AppLogger logger,Form formMain, Control parentControl, PictureBox pictureBox)
         {
             _logger = logger;
             _pictureBox = pictureBox;
@@ -45,7 +46,8 @@ namespace ImageViewer5.ImageControl
             _viewImage = new ViewImage(_logger);
             _viewImageControl = new ViewImageControlPictureBox(_logger, parentControl, pictureBox);
             _viewImageFrameControl = new ViewImageFrameControlForm(_logger, formMain);
-            _viewImageFunction = new ViewImageFunction(_logger, _viewImage, _viewImageFrameControl, _viewImageControl);
+            _viewImageFunction = new ViewImageFunction(
+                _logger, _viewImage, _viewImageFrameControl, _viewImageControl, (ImageMainFrame)parentControl);
         }
         private void SetImageSettings()
         {
@@ -68,12 +70,6 @@ namespace ImageViewer5.ImageControl
         public void InitializeValues(List<string> SupportedImageExtList)
         {
             _logger.PrintInfo("ImageViewerMainClass > InitializeValues");
-            //_viewImage.SetPath(initPath);
-            //_viewImageControl = new ViewImageControlPictureBox(_err, panel1, pictureBox1);
-            // 画像を表示する
-            //_viewImageControl.SetImageWithDispose(_viewImage.GetImage());
-            // 初期化が終わらないとfileListも初期化されず、パス設定の処理に一貫性がなくなる
-            //ViewImageFunction.ViewImageDefault();
 
             // PictureBox をドラッグする
             ControlDragger dragger = new ControlDragger(_logger, _pictureBox, _pictureBox);
@@ -88,8 +84,11 @@ namespace ImageViewer5.ImageControl
             judgeClickRightOrLeftChild.ClickLeft += PictureBox_ClickLeftEvent;
 
             // Panel が MouseWheel を受けたとき、PictureBox の大きさを変更する
-            ChangeSizeByMouseWheel changeSizeByMouseWheel = new ChangeSizeByMouseWheel(
+            //ChangeSizeByMouseWheel changeSizeByMouseWheel = new ChangeSizeByMouseWheel(
+            //    _logger, _pictureBox, _parentControl);
+            ChangeSizeByMouseWheelWithMousePointer _changeSizeByMouseWheel = new ChangeSizeByMouseWheelWithMousePointer(
                 _logger, _pictureBox, _parentControl);
+            //ChangeSizeByMouseWheelWithMousePointer changeSizeByMouseWheelWithMousePointer;
 
             _viewImageFunction.InitializeValue();
         }
@@ -97,17 +96,8 @@ namespace ImageViewer5.ImageControl
         public void ShowImageThisPath()
         {
             _logger.PrintInfo("ImageViewerMainClass > ShowImageThisPath");
-            //_viewImageFunction.ViewImageDefault();
             //
-            // ReadFileEventと同じ 240901
-            //_viewImage.SetPath(_readFileByDragDrop.Files.GetCurrentValue());
-            ImageMainFrame ImageMainFrame1 = (ImageMainFrame)_parentControl;
-            string path = ImageMainFrame1._formFileList._files.GetCurrentValue();
-            //ファイルパスが対応しているか（未対応）240831
-            _viewImage.SetPath(path);
-            // 画像を表示する
-            //_viewImageControl.SetImageWithDispose(_viewImage.GetImage());
-            _viewImageFunction.ViewImageDefault();
+            _viewImageFunction._imagePlayer.ViewImageMain();
         }
 
         /// <summary>
@@ -118,12 +108,7 @@ namespace ImageViewer5.ImageControl
         public void ShowImageAfterInitialize(string path)
         {
             _logger.PrintInfo("ImageViewerMainClass > ShowImageAfterInitialize");
-            _viewImage.SetPath(path);
-            //_viewImageControl = new ViewImageControlPictureBox(_logger, panel1, pictureBox1);
-            //画像を表示する
-            _viewImageControl.SetImageWithDispose(_viewImage.GetImage());
-            //初期化が終わらないとfileListも初期化されず、パス設定の処理に一貫性がなくなる
-            _viewImageFunction.ViewImageDefault();
+            _viewImageFunction._imagePlayer.ViewImageMain();
         }
 
         public void PictureBox_ClickRightEvent(object sender, EventArgs e)
@@ -146,14 +131,7 @@ namespace ImageViewer5.ImageControl
             try
             {
                 _logger.AddLog(this, "ReadFileEvent");
-                //_viewImage.SetPath(_readFileByDragDrop.Files.GetCurrentValue());
-                ImageMainFrame ImageMainFrame1 = (ImageMainFrame)_parentControl;
-                string path = ImageMainFrame1._formFileList._files.GetCurrentValue();
-                //ファイルパスが対応しているか（未対応）240831
-                _viewImage.SetPath(path);
-                // 画像を表示する
-                //_viewImageControl.SetImageWithDispose(_viewImage.GetImage());
-                _viewImageFunction.ViewImageDefault();
+                _viewImageFunction._imagePlayer.ViewImageMain();
             }
             catch (Exception ex)
             {

@@ -13,5 +13,11 @@ namespace ImageViewer5.ImageControl
         // メインフォームのウィンドウサイズ比と連動させる
         //Link the size ratio with the main form
         public bool _isLinkeControlSizeRadioWithFormMain = false;
+
+        public bool _slideShowOn = false;
+        public int _slideShowInterval = 1750;
+        /*
+         * 
+         */
     }
 }

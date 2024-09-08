@@ -26,11 +26,14 @@ namespace ImageViewer5.ImageControl
         //フォームを閉じるときにサブスレッドを終了させるようフラグ
         bool _isFormClosingForFileListThread = false;
         // ViewImageのコントロール、機能について取りまとめているクラス
-        public ImageViwerMainClass _imageViewerMain;
+        public ImageMainClass _imageViewerMain;
         // ファイルリストを管理するクラス
         public FileListManagerSampleForm _formFileList = null;
         // ImageMainFrame全体の設定（コントロールの振る舞いや、ファイルリストの振る舞いなどなど）
         public ImageMainFrameSetting _imageMainFrameSetting;
+        // index
+        public int Index = -1;
+
         public ImageMainFrame()
         {
             Debugger.DebugPrint("ImageMainFrame New");
@@ -44,7 +47,7 @@ namespace ImageViewer5.ImageControl
         public void InitializeValues(List<string> SupportedImageExtList)
         {
             _logger.PrintInfo("ImageMainFrame > InitializeValues");
-            _imageViewerMain = new ImageViwerMainClass(
+            _imageViewerMain = new ImageMainClass(
                 _logger, (Form)this.Parent, this, this.pictureBox_ImageMain);
             _imageViewerMain.InitializeValues(SupportedImageExtList);
             //this._formFileList.SetFilesFromPath(path);
@@ -102,7 +105,9 @@ namespace ImageViewer5.ImageControl
             if (_formFileList == null)
             {
                 this._formFileList = new FileListManagerSampleForm(
-                    _logger, dragDropEnable: false, startedThisForm: false);
+                    _logger,
+                    dragDropEnable: false,
+                    startedThisForm: false);
                 this._formFileList.AddEventHandler_UpdateFileListAfterEvent(ChangeFileListEvent);
                 this._formFileList.AddEventHandler_SelectedFileEvent(SelectedFile);
             }
@@ -114,6 +119,10 @@ namespace ImageViewer5.ImageControl
             this._formFileList.Location = new Point(x, formMain.Location.Y);
         }
 
+        /// <summary>
+        /// 使用していない
+        /// 非同期で試したとき用のメソッド
+        /// </summary>
         private void SubProcMain()
         {
             _logger.PrintInfo("SubThread=" + Thread.CurrentThread.ManagedThreadId);
@@ -217,6 +226,12 @@ namespace ImageViewer5.ImageControl
         {
             _logger.PrintInfo("ShowFileList_ToolStripMenuItem_Click");
             _formFileList.Visible = true;
+        }
+
+        private void SlideShowOnOff_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _logger.PrintInfo("SlideShowOnOff_ToolStripMenuItem_Click");
+            _imageViewerMain._viewImageFunction._viewImageSlideShow.ChangeOnOff();
         }
     }
 }

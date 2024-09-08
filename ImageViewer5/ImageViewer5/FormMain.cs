@@ -19,7 +19,10 @@ namespace ImageViewer5
         private AppLogger _logger;
         bool _isFirstPaint = true;
         public ImageMainFrame _nowImageMainFrame;
-        public FormMain()
+        public ImageViewerArgs _imageViewerArgs;
+        public ApplySettings _applySettings;
+        public List<ImageMainFrame> _imageMainFrameList;
+        public FormMain(string[] args)
         {
             Debugger.DebugPrint("FormMain New");
             InitializeComponent();
@@ -36,6 +39,9 @@ namespace ImageViewer5
             // ログをコンソールとファイルに出力するように設定
             _logger.LogOutPutMode = OutputMode.CONSOLE | OutputMode.FILE;
             //#
+            _imageViewerArgs = new ImageViewerArgs(_logger, args);
+            _imageViewerArgs.ParseArguments(args);
+            //#
             //FormMain設定
             //this.Size = Size(300, 400);
             this.Location = new Point(400, 80);
@@ -49,6 +55,10 @@ namespace ImageViewer5
             this.imageMainFrame1.Parent = this;
             _nowImageMainFrame = imageMainFrame1;
             _nowImageMainFrame.Size = this.ClientSize;
+            _nowImageMainFrame.Index = 0;
+            //#
+            List<Control> conList = CommonGeneral.GetControlListIsMatchType(this, typeof(ImageMainFrame));
+            _imageMainFrameList = ConvertControlListToImageMainFrameList(conList);
         }
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -58,6 +68,7 @@ namespace ImageViewer5
                 _logger.PrintInfo("FormMain_Load");
                 //
                 //FormMain_Load中の処理
+                _applySettings = new ApplySettings(_logger, this);
                 //
                 _logger.PrintInfo("FormMain_Load End");
 
@@ -83,9 +94,26 @@ namespace ImageViewer5
                     ignoreList);
                 _nowImageMainFrame.ShowSubFormFileList(parameters);
                 _nowImageMainFrame._imageViewerMain.ShowImageAfterInitialize(path);
+                //引数設定を適用
+                _applySettings.ApplyArgs(_imageViewerArgs);
+                //
+                _nowImageMainFrame._imageViewerMain._viewImageFunction.InitializeValue_LoadAfter();
             }
         }
 
+        public ImageMainFrame GetNowImageMainFrame()
+        {
+            return _nowImageMainFrame;
+        }
+        /// <summary>
+        /// List＜Control＞ から List＜ImageMainFrame＞ に変換する
+        /// </summary>
+        /// <param name="controlList"></param>
+        /// <returns></returns>
+        public static List<ImageMainFrame> ConvertControlListToImageMainFrameList(List<Control> controlList)
+        {
+            return controlList.OfType<ImageMainFrame>().ToList();
+        }
 
         private void FormMain_Closed(object sender, FormClosedEventArgs e)
         {

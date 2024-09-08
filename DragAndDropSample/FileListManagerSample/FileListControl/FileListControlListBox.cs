@@ -97,6 +97,7 @@ namespace CommonUtility.FileListUtility.FileListControl
             {
                 _logger.AddLog(this, "UpdateFileListAfterEvent");
                 int ret = SetFilesToControl(_files);
+                _logger.PrintInfo("ListJoin = " + _files.StringJoinList());
                 if (_logger.hasError()) { _logger.AddLog(" SetFilesToControl Failed"); _logger.ClearError(); }
                 SelectItem(0);
             } catch (Exception ex)

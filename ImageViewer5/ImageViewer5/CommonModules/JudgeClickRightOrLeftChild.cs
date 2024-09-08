@@ -14,28 +14,40 @@ namespace CommonControlUtilityModule
         public EventHandler ClickLeft;
         protected bool IsDrag = false;
         protected bool IsDown = false;
-        public JudgeClickRightOrLeftChild(AppLogger logger, Control control,Control parentControl)
+        public JudgeClickRightOrLeftChild(
+            AppLogger logger,
+            Control control,
+            Control parentControl)
         {
-            _logger = logger;
-            _control = control;
-            _parentControl = control;
-            _control.MouseClick += Control_MouseClick;
-            _control.MouseDown += Control_MouseDown;
-            _control.MouseUp += Control_MouseUp;
-            _control.MouseMove += Control_MouseMove;
+            InitializeValues(logger, control, parentControl);
         }
-        public JudgeClickRightOrLeftChild(AppLogger logger, Control control, Control parentControl
-            , EventHandler clickRight, EventHandler clickLeft)
+        public JudgeClickRightOrLeftChild(
+            AppLogger logger,
+            Control control,
+            Control parentControl,
+            EventHandler clickRight,
+            EventHandler clickLeft)
         {
-            _logger = logger;
-            _control = control;
-            _parentControl = control;
             ClickRight = clickRight;
             ClickLeft = clickLeft;
+            InitializeValues(logger, control, parentControl);
+        }
+        private void InitializeValues(
+            AppLogger logger,
+            Control control,
+            Control parentControl)
+        {
+            _logger = logger;
+            _control = control;
+            _parentControl = parentControl;
             _control.MouseClick += Control_MouseClick;
             _control.MouseDown += Control_MouseDown;
             _control.MouseUp += Control_MouseUp;
             _control.MouseMove += Control_MouseMove;
+            _parentControl.MouseClick += Control_MouseClick;
+            _parentControl.MouseDown += Control_MouseDown;
+            _parentControl.MouseUp += Control_MouseUp;
+            _parentControl.MouseMove += Control_MouseMove;
         }
         private void Control_MouseMove(object sender, MouseEventArgs e)
         {

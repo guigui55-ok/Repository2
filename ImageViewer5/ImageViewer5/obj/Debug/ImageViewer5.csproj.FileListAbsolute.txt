@@ -15,3 +15,9 @@ C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\bin\Debug\File
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\obj\Debug\ImageViewer5.csproj.CopyComplete
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\obj\Debug\ImageViewer5.exe
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\obj\Debug\ImageViewer5.pdb
+C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\bin\Debug\PlayImageTest.exe
+C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\bin\Debug\PlayImageTest.pdb
+C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\bin\Debug\PlayImageTest.exe.config
+C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\bin\Debug\MouseWheelZoomHandler.exe
+C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\bin\Debug\MouseWheelZoomHandler.pdb
+C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\bin\Debug\MouseWheelZoomHandler.exe.config
