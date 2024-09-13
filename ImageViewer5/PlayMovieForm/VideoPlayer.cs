@@ -106,7 +106,6 @@ namespace PlayMovieForm
                 _logger.PrintError(ex, $"Failed to set movie: {moviePath}");
             }
         }
-
         public void Play()
         {
             try
@@ -117,7 +116,17 @@ namespace PlayMovieForm
                 // タイマーを使ってフレーム描画を繰り返す
                 Timer timer = new Timer();
                 timer.Interval = 16; // 60 FPSに近いレートで呼び出し
-                timer.Tick += (s, e) => RenderFrame();
+                timer.Tick += (s, e) =>
+                {
+                    if (!_mediaEngineEx.IsPaused)
+                    {
+                        RenderFrame();
+                    }
+                    else
+                    {
+                        _logger.PrintInfo("Video is paused or not ready for rendering.");
+                    }
+                };
                 timer.Start();
             }
             catch (Exception ex)
@@ -125,6 +134,7 @@ namespace PlayMovieForm
                 _logger.PrintError(ex, "Error playing movie.");
             }
         }
+
 
         private void RenderFrame()
         {
@@ -166,6 +176,7 @@ namespace PlayMovieForm
                 }
             }
         }
+
 
 
 

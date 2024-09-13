@@ -10,5 +10,3 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:PlayImageTest.FormMainPlayImageTest._logger")]
 [assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:PlayImageTest.FormMainPlayImageTest._pathList")]
 [assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:PlayImageTest.FormMainPlayImageTest._playGif")]
-[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:PlayMovieForm.VideoPlayer._logger")]
-[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:PlayMovieForm.VideoPlayer._panel")]
