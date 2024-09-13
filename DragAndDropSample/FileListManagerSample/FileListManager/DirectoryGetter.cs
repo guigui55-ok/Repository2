@@ -29,7 +29,8 @@ namespace CommonUtility.FileListUtility
                 }
                 if (!System.IO.Directory.Exists(path))
                 {
-                    _logger.AddLogAlert("  Directory Not Exists path=" + path); return "";
+                    _logger.AddLogAlert("  Directory Not Exists path=" + path);
+                    return "";
                 }
                 return path;
             } catch (Exception ex)
@@ -311,7 +312,12 @@ namespace CommonUtility.FileListUtility
             }
         }
 
-        // path 親ディレクトリが構成しているディレクトリ一覧から path の次を取得する
+        /// <summary>
+        /// path 親ディレクトリが構成しているディレクトリ一覧から path の次を取得する
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="isTargetIncludeChild"></param>
+        /// <returns></returns>
         public string NextDirectoryWhenNotAbleAccess(string path,bool isTargetIncludeChild = true)
         {
             try

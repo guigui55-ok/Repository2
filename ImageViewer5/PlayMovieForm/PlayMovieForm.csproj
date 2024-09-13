@@ -64,7 +64,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="FormPlayMovie.cs" />
+=======
+    <Compile Include="FormPlayMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+>>>>>>> c6b11a973b820b6778ad72236bb1c7223a857c9f
     <Compile Include="FormPlayMovie.Designer.cs">
       <DependentUpon>FormPlayMovie.cs</DependentUpon>
     </Compile>

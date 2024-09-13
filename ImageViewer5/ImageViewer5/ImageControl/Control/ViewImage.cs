@@ -117,5 +117,20 @@ namespace ViewImageModule
                 return true;
             }
         }
+
+        public bool DisposeImage()
+        {
+            try
+            {
+                _image?.Dispose();
+                _image = null;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _logger.AddException(ex, this, "DisposeImage");
+                return false;
+            }
+        }
     }
 }

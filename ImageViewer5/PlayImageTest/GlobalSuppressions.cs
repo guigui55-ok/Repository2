@@ -5,8 +5,6 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:PlayImageModule.GifPlayer._pictureBox")]
-[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:PlayImageModule.GifPlayer._timer")]
 [assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:PlayImageModule.PlayGif._pictureBox")]
 [assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:PlayImageModule.PlayGif._timer")]
 [assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:PlayImageTest.FormMainPlayImageTest._logger")]

@@ -62,6 +62,7 @@ namespace FileListManagerSample
             _fileListControl.SelectedItemEvent += _files.ChangeFileRecieve;
             //Setting
             _fileListManagerSettingForm = new FileListManagerSettingForm(_logger, _fileListManager._fileListManagerSetting);
+            //this.listBox_FileList.SelectedIndexChanged += listBox_FileList_ChangedItem;
         }
 
         public void FileListManagerForm_UpdateFileListAfterEvent(object sender, EventArgs e)
@@ -263,5 +264,25 @@ namespace FileListManagerSample
             _fileListManagerSettingForm._isPshedShowButton = true;
             _fileListManagerSettingForm.Show();
         }
+
+        private void listBox_FileList_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Down)
+            {
+                _logger.PrintInfo("listBox_FileList_ChangedItem KeyDown");
+                string value = listBox_FileList.SelectedItem.ToString();
+                _files.Move(value);
+            } else if(e.KeyCode == Keys.Up)
+            {
+                _logger.PrintInfo("listBox_FileList_ChangedItem KeyUp");
+                string value = listBox_FileList.SelectedItem.ToString();
+                _files.Move(value);
+            }
+        }
+
+        //private void listBox_FileList_ChangedItem(object sender, EventArgs e)
+        //{
+        //　ここで（_files.moveで）ファイル更新するとループするので注意 240911
+        //}
     }
 }
