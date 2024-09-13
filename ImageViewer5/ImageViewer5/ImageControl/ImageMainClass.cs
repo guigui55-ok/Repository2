@@ -10,6 +10,7 @@ using ViewImageModule;
 using CommonControlUtilityModule;
 using ImageViewer5.CommonModules;
 using CommonControlUtilityModuleB;
+using TransportForm;
 
 namespace ImageViewer5.ImageControl
 {
@@ -29,6 +30,16 @@ namespace ImageViewer5.ImageControl
         public IViewImageFrameControl _viewImageFrameControl;
         public ReadFileByDragDrop _readFileByDragDrop;
         public ViewImageFunction _viewImageFunction;
+
+        ControlDraggerB _draggerFrame;
+        ControlDraggerB _draggerInner_ToInner;
+        ControlDraggerB _draggerInner_ToFrame;
+        FormDragger _formDraggerByForm;
+        FormDragger _formDraggerByFrame;
+        //
+        FormDragger _formDraggerByInner;
+
+        TransparentFormSwitch _transparentFormSwitch;
 
         /// <summary>
         /// ViewImageのコントロールや機能を取りまとめるクラス
@@ -72,7 +83,26 @@ namespace ImageViewer5.ImageControl
             _logger.PrintInfo("ImageViewerMainClass > InitializeValues");
 
             // PictureBox をドラッグする
-            ControlDragger dragger = new ControlDragger(_logger, _pictureBox, _pictureBox);
+            //ControlDragger dragger = new ControlDragger(_logger, _pictureBox, _pictureBox);
+            _draggerInner_ToInner = new ControlDraggerB(_logger, _pictureBox, _pictureBox);
+            Control frame = _viewImageControl.GetParentControl();
+            Form form = _viewImageFrameControl.GetParentForm();
+            _draggerInner_ToFrame = new ControlDraggerB(_logger, frame, _pictureBox);
+            _draggerFrame = new ControlDraggerB(_logger, frame, frame);
+            _formDraggerByForm = new FormDragger(_logger, form, form);
+            _formDraggerByFrame = new FormDragger(_logger, form, frame);
+            //
+            _formDraggerByInner = new FormDragger(_logger, form, _pictureBox);
+
+            _transparentFormSwitch = new TransparentFormSwitch(_logger, form, frame);
+            _transparentFormSwitch.SetDraggerFlags(
+                ref _formDraggerByForm._isDragEnable,
+                ref  _formDraggerByFrame._isDragEnable,
+                ref _draggerFrame._isDragEnable,
+                ref _draggerInner_ToInner._isDragEnable,
+                ref _formDraggerByInner._isDragEnable,
+                ref _draggerInner_ToFrame._isDragEnable);
+            _transparentFormSwitch.SwitchFlagsByTransparencyKey(false);
 
             // Panel のクリックされた位置が右側半分か左側半分か判定する
             JudgeClickRightOrLeft judgeClickRightOrLeft = new JudgeClickRightOrLeft(_logger, _parentControl);

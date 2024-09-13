@@ -14,7 +14,8 @@ namespace SlideShowImage
     {
         AppLogger _logger;
         public ImageAttributes _drawImageAttributes;
-        public double _alphaPercent = 100;
+        //透明度0（初期値が200）
+        public double _alphaPercent = 200;
         private bool _isDisposed = true;
         public ColorMatrix _matrix;
         public EffectFadeSetting(AppLogger logger)

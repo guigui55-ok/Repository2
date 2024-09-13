@@ -13,17 +13,28 @@ namespace TransportForm
     {
         AppLogger _logger;
         Form _form;
-        Control _recieveControl;
+        Control _sendControl;
         Point _mousePoint;
-        public FormDragger(AppLogger logger, Form form, Control recieveControl)
+        public IsDragEnable _isDragEnable;
+        public List<Point> _historyList = new List<Point> { };
+        public FormDragger(AppLogger logger, Form form, Control sendControl)
         {
             _logger = logger;
             _form = form;
-            _recieveControl = recieveControl;
+            _sendControl = sendControl;
+            _isDragEnable = new IsDragEnable(true);
             //_form.MouseDown += Form1_MouseDown;
             //_form.MouseMove += Form1_MouseMove;
-            _recieveControl.MouseDown += Form1_MouseDown;
-            _recieveControl.MouseMove += Form1_MouseMove;
+            _sendControl.MouseDown += Form1_MouseDown;
+            _sendControl.MouseMove += Form1_MouseMove;
+            _sendControl.MouseUp += Form1_MouseUp;
+        }
+
+        public void PrintInfo(string value)
+        {
+            string msg = this.ToString() + " > ";
+            msg += _sendControl.Name + " -> " + _form.Name + " > " + value;
+            _logger.PrintInfo(msg);
         }
 
         //Form1のMouseDownイベントハンドラ
@@ -37,18 +48,36 @@ namespace TransportForm
             }
         }
 
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (_isDragEnable._value)
+            {
+                if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+                {
+                    PrintInfo("MouseMove > Up");
+                    //_logger.PrintInfo(String.Format(_sendControl.Name + "__MouseMove>Up , {0}", _isDragEnable._value));
+                    _historyList.Add(_mousePoint);
+                }
+            }
+        }
+
         //Form1のMouseMoveイベントハンドラ
         //マウスが動いたとき
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            if (_isDragEnable._value)
             {
-                _form.Left += e.X - _mousePoint.X;
-                _form.Top += e.Y - _mousePoint.Y;
-                //または、つぎのようにする
-                //this.Location = new Point(
-                //    this.Location.X + e.X - mousePoint.X,
-                //    this.Location.Y + e.Y - mousePoint.Y);
+                if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+                {
+                    //_logger.PrintInfo(String.Format(_sendControl.Name + "__MouseMove , {0}", _isDragEnable._value));
+                    //_historyList.Add(_mousePoint);
+                    _form.Left += e.X - _mousePoint.X;
+                    _form.Top += e.Y - _mousePoint.Y;
+                    //または、つぎのようにする
+                    //this.Location = new Point(
+                    //    this.Location.X + e.X - mousePoint.X,
+                    //    this.Location.Y + e.Y - mousePoint.Y);
+                }
             }
         }
     }

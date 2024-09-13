@@ -16,7 +16,7 @@ namespace ImageViewer5
 {
     public partial class FormMain : Form
     {
-        private AppLogger _logger;
+        public AppLogger _logger;
         bool _isFirstPaint = true;
         public ImageMainFrame _nowImageMainFrame;
         public ImageViewerArgs _imageViewerArgs;
@@ -94,10 +94,11 @@ namespace ImageViewer5
                     ignoreList);
                 _nowImageMainFrame.ShowSubFormFileList(parameters);
                 _nowImageMainFrame._imageViewerMain.ShowImageAfterInitialize(path);
-                //引数設定を適用
-                _applySettings.ApplyArgs(_imageViewerArgs);
-                //
+                //ファイルリスト設定後に実行する
                 _nowImageMainFrame._imageViewerMain._viewImageFunction.InitializeValue_LoadAfter();
+                //引数設定を適用
+                //（スライドショーインスタンス生成などがあるため）
+                _applySettings.ApplyArgs(_imageViewerArgs);
             }
         }
 

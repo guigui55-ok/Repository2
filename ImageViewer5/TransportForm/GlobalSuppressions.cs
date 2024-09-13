@@ -1,0 +1,41 @@
+﻿// This file is used by Code Analysis to maintain SuppressMessage
+// attributes that are applied to this project.
+// Project-level suppressions either have no target or are given
+// a specific target and scoped to a namespace, type, member, etc.
+
+using System.Diagnostics.CodeAnalysis;
+
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.FormDragger._form")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.FormDragger._logger")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.FormDragger._sendControl")]
+[assembly: SuppressMessage("CodeQuality", "IDE0052:読み取られていないプライベート メンバーを削除", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.FormTransportTest._dragger")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.FormTransportTest._dragger")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.FormTransportTest._draggerFrame")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.FormTransportTest._formDraggerByForm")]
+[assembly: SuppressMessage("CodeQuality", "IDE0052:読み取られていないプライベート メンバーを削除", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.FormTransportTest._formDraggerByForm")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.FormTransportTest._formDraggerByFrame")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.FormTransportTest._logger")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.FormTransportTest._transparentFormSwitch")]
+[assembly: SuppressMessage("CodeQuality", "IDE0052:読み取られていないプライベート メンバーを削除", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormSwitch._control")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormSwitch._control")]
+[assembly: SuppressMessage("CodeQuality", "IDE0052:読み取られていないプライベート メンバーを削除", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormSwitch._controlToControlDragFlag")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormSwitch._form")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormSwitch._logger")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.FormTransportTest._formDraggerByInner")]
+[assembly: SuppressMessage("CodeQuality", "IDE0052:読み取られていないプライベート メンバーを削除", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormSwitch._innerToFormDragFlag")]
+[assembly: SuppressMessage("CodeQuality", "IDE0052:読み取られていないプライベート メンバーを削除", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormSwitch._innerToinnerDragFlag")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.FormTransportTest._draggerInnerToFrame")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormSwitch._innerKeyTimer")]
+[assembly: SuppressMessage("CodeQuality", "IDE0052:読み取られていないプライベート メンバーを削除", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormSwitch._mode")]
+[assembly: SuppressMessage("Style", "IDE0017:オブジェクトの初期化を簡略化します", Justification = "<保留中>", Scope = "member", Target = "~M:TransportForm.FormTransportTest.#ctor")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormFunctionB._logger")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormFunctionB._targetForm")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormFunctionWin32B._logger")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormFunctionWin32B._targetForm")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormSwitch._frameKeyTimer")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormSwitch._tempFrameFlagList")]
+[assembly: SuppressMessage("CodeQuality", "IDE0052:読み取られていないプライベート メンバーを削除", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormFunctionB._logger")]
+[assembly: SuppressMessage("CodeQuality", "IDE0052:読み取られていないプライベート メンバーを削除", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormFunctionWin32B._logger")]
+[assembly: SuppressMessage("CodeQuality", "IDE0051:使用されていないプライベート メンバーを削除する", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormFunctionB.LWA_COLORKEY")]
+[assembly: SuppressMessage("CodeQuality", "IDE0051:使用されていないプライベート メンバーを削除する", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormFunctionWin32B.WS_EX_TRANSPARENT")]
+[assembly: SuppressMessage("Style", "IDE0060:未使用のパラメーターを削除します", Justification = "<保留中>", Scope = "member", Target = "~M:TransportForm.ControlDraggerB.SetTrigerKey(System.Windows.Forms.Keys)")]

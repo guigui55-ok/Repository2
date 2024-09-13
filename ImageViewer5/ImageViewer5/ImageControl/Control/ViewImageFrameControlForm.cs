@@ -28,6 +28,11 @@ namespace ViewImageModule
             return _form;
         }
 
+        public Form GetParentForm()
+        {
+            return _form;
+        }
+
         public Size GetSize()
         {
             if(_form != null)

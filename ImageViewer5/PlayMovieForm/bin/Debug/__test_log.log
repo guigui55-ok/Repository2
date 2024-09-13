@@ -1,0 +1,682 @@
+2024/09/14 01:43:03 335086    Video player initialized.
+2024/09/14 01:43:03 343064    Movie set to: J:\ZMyFolder_2\00movie\(ロリ)16歳のパイパン女子高生がオナニー自撮り kaw (2)0001_2.mkv
+2024/09/14 01:43:03 371988    Volume set to 30
+2024/09/14 01:43:03 372987    Default volume set to 30
+2024/09/14 01:43:03 373983    Panel.Size = {Width=470, Height=268}
+2024/09/14 01:43:03 375977    Panel.Location = {X=12,Y=12}
+2024/09/14 01:43:37 219968    Logger.FilePath = C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\bin\Debug\__test_log.log
+2024/09/14 01:43:37 334660    Video player initialized.
+2024/09/14 01:43:37 340646    Movie set to: J:\ZMyFolder_2\00movie\(ロリ)16歳のパイパン女子高生がオナニー自撮り kaw (2)0001_2.mkv
+2024/09/14 01:43:37 343637    Volume set to 30
+2024/09/14 01:43:37 345630    Default volume set to 30
+2024/09/14 01:43:37 346629    Panel.Size = {Width=470, Height=268}
+2024/09/14 01:43:37 349621    Panel.Location = {X=12,Y=12}
+2024/09/14 01:45:15 504690    ####################
+2024/09/14 01:45:15 508679    Logger.FilePath = C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\bin\Debug\__test_log.log
+2024/09/14 01:45:15 697176    Video player initialized.
+2024/09/14 01:45:15 705155    Movie set to: J:\ZMyFolder_2\00movie\(ロリ)16歳のパイパン女子高生がオナニー自撮り kaw (2)0001_2.mkv
+2024/09/14 01:45:15 742055    Volume set to 30
+2024/09/14 01:45:15 743054    Default volume set to 30
+2024/09/14 01:45:15 745047    Panel.Size = {Width=470, Height=268}
+2024/09/14 01:45:15 747042    Panel.Location = {X=12,Y=12}
+2024/09/14 01:45:20 868335    Movie playing.
+2024/09/14 01:45:20 903240    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:20 904238    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:20 922190       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:20 935154    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:20 936151    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:20 938146       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:20 948120    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:20 949118    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:20 951112       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:20 979040    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:20 979040    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:20 981032       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 008957    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 009954    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 011948       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 024914    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 025912    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 027908       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 054834    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 055831    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 057829       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 069794    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 070791    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 072786       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 102706    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 103704    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 105698       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 137125    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 138123    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 140117       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 153082    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 154079    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 156074       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 180037    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 181007    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 183003       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 195968    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 196965    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 198959       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 227352    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 228349    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 230345       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 259296    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 260264    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 262259       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 274226    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 275224    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 277219       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 305145    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 306141    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 308136       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 322099    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 323097    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 325091       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 355011    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 356007    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 358003       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 397898    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 397898    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 400888       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 412855    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 413853    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 415768       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 429723    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 430721    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 432716       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 460642    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 461638    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 463634       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 476600    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 477596    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 479591       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 512502    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 512502    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 515496       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 538434    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 539431    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 541424       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 556388    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 557383    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 560374       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 573341    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 574336    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 577329       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 613232    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 614231    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 616240       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 641187    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 642162    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 644155       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 661110    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 662108    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 664128       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 694049    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 695020    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 697015       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 710006    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 710977    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 712974       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 730924    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 731922    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 733916       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 769846    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 770816    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 772832       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 781813    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 782787    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 784779       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 806722    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 807718    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 809715       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 830195    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 831165    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 833159       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 852108    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 853106    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 855101       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 892017    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 892999    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 894994       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 907961    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 908958    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 910953       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 931896    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 932894    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 934888       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 956830    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 957826    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 959824       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:21 986509    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:21 987505    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:21 989499       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 017425    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 018424    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 021414       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 031388    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 032385    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 035378       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 058316    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 059313    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 061307       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 076267    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 077266    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 080256       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 106187    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 107186    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 110177       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 144086    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 145084    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 148076       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 158049    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 159046    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 161041       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 180988    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 181985    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 183979       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 195947    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 196945    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 199936       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 226864    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 227863    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 229857       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 256784    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 257782    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 259776       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 287701    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 288699    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 290695       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 317621    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 317621    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 319617       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 332582    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 333579    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 336571       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 352530    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 353527    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 355548       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 393446    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 394417    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 396411       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 409377    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 410375    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 412369       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 440317    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 441291    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 443286       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 454256    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 455253    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 457249       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 485173    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 486172    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 488166       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 516091    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 517088    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 519083       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 530054    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 531053    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 534043       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 562965    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 563964    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 564960       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 577925    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 578923    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 581915       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 607846    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 608843    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 610839       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 638793    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 639760    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 641755       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 653724    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 653724    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 656715       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 684640    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 685637    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 687632       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 697605    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 698604    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 700597       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 730517    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 731516    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 733511       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 762459    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 763430    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 765452       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 777420    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 778390    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 780384       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 807311    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 808309    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 810332       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 821302    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 822274    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 823270       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 852191    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 853189    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 855184       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 884106    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 885103    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 887123       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 899066    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 900064    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 902058       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 929709    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 930707    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 932701       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 959629    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 960628    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 962622       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:22 983565    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:22 983565    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:22 985560       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 013487    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 014483    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 017476       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 029444    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 030440    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 032434       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 102248    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 103246    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 112222       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 123192    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 124190    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 126185       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 138152    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 138152    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 141144       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 151118    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 152115    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 155110       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 186025    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 187021    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 190015       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 208964    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 209961    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 212952       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 231902    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 232900    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 234893       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 262818    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 263815    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 265811       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 279773    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 279773    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 282766       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 312685    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 313684    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 315679       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 328670    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 329641    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 331635       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 359585    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 360559    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 362551       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 389490    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 390478    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 392473       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 404468    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 405437    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 408430       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 431367    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 432364    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 433362       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 447327    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 448324    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 451342       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 480236    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 481235    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 483229       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 509161    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 510158    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 512179       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 526114    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 527115    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 530104       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 557031    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 558028    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 560024       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 570995    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 571994    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 574984       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 602909    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 603906    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 605901       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 633853    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 634824    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 636818       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 648788    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 649783    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 651778       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 680725    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 681697    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 682695       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 697656    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 698655    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 700649       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 741539    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 742535    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 745542       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 772483    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 773453    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 775448       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 787444    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 788413    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 790407       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 818334    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 819329    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 821326       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 832295    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 833292    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 835308       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 856233    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 857229    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 860224       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 885155    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 886151    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 888145       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 901112    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 902109    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 905101       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 940007    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 941004    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 942999       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 954967    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 955964    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 958957       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:23 986882    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:23 987879    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:23 989875       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:24 017824    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:24 018797    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:24 020791       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:24 031790    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:24 032759    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:24 035751       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:24 062680    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:24 063678    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:24 065671       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:24 076642    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:24 077639    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:24 079634       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:24 107560    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:24 108557    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:24 110551       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:24 137481    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:24 138477    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:24 140471       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:24 152465    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:24 153436    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:24 156429       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:24 183357    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:24 184353    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:24 186348       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151
+2024/09/14 01:45:24 199314    Frame is not ready yet, skipping this render.
+2024/09/14 01:45:24 200311    HRESULT: [0xC00D4E26], Module: [Unknown], ApiCode: [Unknown/Unknown], Message: ビデオ サンプルが、ミキシングに必要なストリームのキューに入っていません。
+2024/09/14 01:45:24 202306       場所 SharpDX.Result.CheckError() 場所 C:\projects\sharpdx\Source\SharpDX\Result.cs:行 195
+   場所 SharpDX.MediaFoundation.MediaEngine.TransferVideoFrame(IUnknown dstSurfRef, Nullable`1 srcRef, RawRectangle dstRef, Nullable`1 borderClrRef) 場所 C:\projects\sharpdx\Source\SharpDX.MediaFoundation\Generated\DESKTOP_APP\Interfaces.cs:行 9757
+   場所 PlayMovieForm.VideoPlayer.RenderFrame() 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayMovieForm\VideoPlayer.cs:行 151

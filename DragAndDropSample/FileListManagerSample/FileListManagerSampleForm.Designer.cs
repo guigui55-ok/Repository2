@@ -75,6 +75,7 @@ namespace FileListManagerSample
             this.listBox_FileList.Name = "listBox_FileList";
             this.listBox_FileList.Size = new System.Drawing.Size(683, 196);
             this.listBox_FileList.TabIndex = 3;
+            this.listBox_FileList.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBox_FileList_KeyDown);
             // 
             // label_FileList
             // 

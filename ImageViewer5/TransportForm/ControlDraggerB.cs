@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using AppLoggerModule;
+using System.Collections.Generic;
 
 namespace TransportForm
 {
@@ -24,18 +25,37 @@ namespace TransportForm
 
         public bool isSendToForm = true;
         public Form _sendControl;
+        public IsDragEnable _isDragEnable;
+        public List<Point> _historyList = new List<Point> {  };
+        //このキーが押された＋MouseDrag、AND、_isDragEnable=True で control移動をする
+        //Keys.Noneの時は、_isDragEnable=Trueのみで移動する
+        public Keys _trigerKey = Keys.None;
+        protected bool _isDownTrigerKey = false;
         
         public ControlDraggerB(AppLogger logger, Control control,Control recieveEventControl)
         {
             _logger= logger;
             _control = control;
             _recieveControl = recieveEventControl;
+            _isDragEnable = new IsDragEnable(true);
             // イベントのインスタンスを生成
             //MouseEventHandler = new ViewImageMouseEventHandler();
             // このクラス内のメソッドをイベントへ紐づけ
             _recieveControl.MouseMove += Control_MouseMove;
             _recieveControl.MouseDown += Control_MouseDown;
             _recieveControl.MouseUp += Control_MouseUp;
+        }
+
+        public void SetTrigerKey(Keys key)
+        {
+
+        }
+
+        public void PrintInfo(string value)
+        {
+            string msg = this.ToString() + " > ";
+            msg += _recieveControl.Name + " -> " + _control.Name + " > " + value;
+            _logger.PrintInfo(msg);
         }
 
         private void ChangeLocationByMouse(MouseEventArgs e,Point mp)
@@ -60,12 +80,16 @@ namespace TransportForm
                     ControlDockIsNone = false;
                     return;
                 }
-                // 左ボタンの時に実行する
-                if (e.Button == MouseButtons.Left)
+                if (_isDragEnable._value)
                 {
-                    _control.Left += e.X - mp.X;
-                    _control.Top += e.Y - mp.Y;
-                    //Console.Write("#");
+                    // 左ボタンの時に実行する
+                    if (e.Button == MouseButtons.Left)
+                    {
+                        _historyList.Add(new Point(mp.X, mp.Y));
+                        _control.Left += e.X - mp.X;
+                        _control.Top += e.Y - mp.Y;
+                        //Console.Write("#");
+                    }
                 }
             } catch (Exception ex)
             {
@@ -91,7 +115,7 @@ namespace TransportForm
         }
         private void Control_MouseDown(object sender, MouseEventArgs e)
         {
-            Debug.WriteLine(this.ToString()+".Control_MouseDown"); ;
+            PrintInfo("Control_MouseDown");
             IsDown = true;
             try
             {

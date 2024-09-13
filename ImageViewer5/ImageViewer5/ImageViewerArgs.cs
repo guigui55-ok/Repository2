@@ -70,74 +70,95 @@ namespace ImageViewer5
                     }
                     else if (arg.StartsWith("--frame"))
                     {
-                        //var subSettings = new Dictionary<string, object>();
                         var frameNumber = GetFrameNumber(arg);
                         var frameKey = string.Format(SETTINGS_KEYS.FRAME_SETTINGS, frameNumber);
-
+                        Dictionary<string, object> subSettings;
                         if (!settings.ContainsKey(frameKey))
                         {
-                            settings[frameKey] = new Dictionary<string, object>();
+                            subSettings = new Dictionary<string, object>();
+                        }
+                        else
+                        {
+                            subSettings = (Dictionary<string, object>)settings[frameKey];
                         }
 
-                        var frameSettings = (Dictionary<string, object>)settings[frameKey];
+                        //var frameSettings = (Dictionary<string, object>)settings[frameKey];
 
-                        frameSettings[SETTINGS_KEYS.FRAME_NUMBER] = frameNumber;
+                        subSettings[SETTINGS_KEYS.FRAME_NUMBER] = frameNumber;
                         UpdateFrameSettingsDict(_frameSettingsList, frameNumber, SETTINGS_KEYS.FRAME_NUMBER, frameNumber);
 
                         if (arg.Contains("-folder="))
                         {
                             string buf = arg.Split('=')[1];
                             UpdateFrameSettingsDict(_frameSettingsList, frameNumber, SETTINGS_KEYS.FOLDER, buf);
-                            frameSettings[SETTINGS_KEYS.FOLDER] = buf;
+                            subSettings[SETTINGS_KEYS.FOLDER] = buf;
                         }
                         if (arg.Contains("-size="))
                         {
                             string buf = arg.Split('=')[1];
                             UpdateFrameSettingsDict(_frameSettingsList, frameNumber, SETTINGS_KEYS.FRAME_SIZE, buf);
-                            frameSettings[SETTINGS_KEYS.FRAME_SIZE] = buf;
+                            subSettings[SETTINGS_KEYS.FRAME_SIZE] = buf;
                         }
                         if (arg.Contains("-location="))
                         {
                             string buf = arg.Split('=')[1];
                             UpdateFrameSettingsDict(_frameSettingsList, frameNumber, SETTINGS_KEYS.FRAME_LOC, buf);
-                            frameSettings[SETTINGS_KEYS.FRAME_LOC] = buf;
+                            subSettings[SETTINGS_KEYS.FRAME_LOC] = buf;
                         }
                         else if (arg.Contains("-subfolders="))
                         {
                             bool buf = bool.Parse(arg.Split('=')[1]); ;
                             UpdateFrameSettingsDict(_frameSettingsList, frameNumber, SETTINGS_KEYS.SUBFOLDERS, buf);
-                            frameSettings[SETTINGS_KEYS.SUBFOLDERS] = buf;
+                            subSettings[SETTINGS_KEYS.SUBFOLDERS] = buf;
                         }
                         else if (arg.Contains("-random="))
                         {
                             bool buf = bool.Parse(arg.Split('=')[1]); ;
                             UpdateFrameSettingsDict(_frameSettingsList, frameNumber, SETTINGS_KEYS.RANDOM, buf);
-                            frameSettings[SETTINGS_KEYS.RANDOM] = buf;
+                            subSettings[SETTINGS_KEYS.RANDOM] = buf;
                         }
                         else if (arg.Contains("-slideshow="))
                         {
                             bool buf = bool.Parse(arg.Split('=')[1]); ;
                             UpdateFrameSettingsDict(_frameSettingsList, frameNumber, SETTINGS_KEYS.SLIDESHOW, buf);
-                            frameSettings[SETTINGS_KEYS.SLIDESHOW] = buf;
+                            subSettings[SETTINGS_KEYS.SLIDESHOW] = buf;
                         }
                         else if (arg.Contains("-interval="))
                         {
                             int buf = int.Parse(arg.Split('=')[1]); ;
                             UpdateFrameSettingsDict(_frameSettingsList, frameNumber, SETTINGS_KEYS.INTERVAL, buf);
-                            frameSettings[SETTINGS_KEYS.INTERVAL] = buf;
+                            subSettings[SETTINGS_KEYS.INTERVAL] = buf;
                         }
                         else if (arg.Contains("-listwindow="))
                         {
                             int buf = int.Parse(arg.Split('=')[1]); ;
                             UpdateFrameSettingsDict(_frameSettingsList, frameNumber, SETTINGS_KEYS.FILE_LIST_WINDOW, buf);
-                            frameSettings[SETTINGS_KEYS.FILE_LIST_WINDOW] = buf;
+                            subSettings[SETTINGS_KEYS.FILE_LIST_WINDOW] = buf;
                         }
 
                         //var dictStr = String.Join(",", frameSettings.Select(kvp => kvp.Key + " : " + kvp.Value));
                         //_logger.PrintInfo(string.Format("frameSettings　DictStr = {0}", dictStr));
-                        _frameSettingsList.Add(frameSettings);
+                        //_frameSettingsList.Add(frameSettings);
+                        //設定変更後元に戻す
+                        settings[frameKey] = subSettings;
+                        //if (!settings.ContainsKey(frameKey))
+                        //{
+                        //    subSettings = new Dictionary<string, object>();
+                        //}
+                        //else
+                        //{
+                        //    subSettings = (Dictionary<string, object>)settings[frameKey];
+                        //}
                     }
                 }
+                _logger.PrintInfo("read args");
+                //foreach(KeyValuePair<string, object> dict in settings)
+                //{
+                //    if (dict.Key.Contains("-setting"))
+                //    {
+                //        _frameSettingsList.Add((Dictionary<string, object>)dict.Value);
+                //    }
+                //}
                 _settings = settings;
             } catch (Exception ex)
             {
