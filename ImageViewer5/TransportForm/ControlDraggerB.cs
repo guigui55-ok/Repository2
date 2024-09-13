@@ -6,6 +6,73 @@ using AppLoggerModule;
 
 namespace TransportForm
 {
+
+    /// <summary>
+    /// draggerクラスで値を保持して、外部から変更したものを反映させるためのクラス
+    /// </summary>
+    public class IsEnableFlag
+    {
+        public bool _value;
+        public IsEnableFlag(bool flag=false)
+        {
+            _value = flag;
+        }
+    }
+
+    /// <summary>
+    /// draggerクラスで、移動を有効するときのKey設定
+    /// </summary>
+    public class EnableKeys
+    {
+        public Keys _key;
+        public Keys _controlKey;
+
+        public EnableKeys(Keys key, Keys controlKey=Keys.None)
+        {
+            _key = key;
+            _controlKey = controlKey;
+        }
+
+        public bool IsMatch(KeyEventArgs e)
+        {
+            bool retCon;
+            bool ret;
+            //Control以外は未対応
+            if (_controlKey == Keys.Control)
+            {
+                if (e.Control)
+                {
+                    retCon = true;
+                }
+                else
+                {
+                    retCon = false;
+                }
+            }
+            else
+            {
+                retCon = true;
+            }
+            if (_key != Keys.None)
+            {
+                if (e.KeyCode == _key)
+                {
+                    ret = true;
+                }
+                else
+                {
+                    ret = false;
+                }
+            }
+            else
+            {
+                ret = true;
+            }
+            return ret && retCon;
+        }
+    }
+
+
     // InnerContrl ControlMove用　ChangeLocation
     // ImageViewer.CommonModules のファイル・クラスと名前が競合するので 末尾にBを付与
     // このクラスは動作テスト用
@@ -24,10 +91,13 @@ namespace TransportForm
 
         public bool isSendToForm = true;
         public Form _sendControl;
-        
-        public ControlDraggerB(AppLogger logger, Control control,Control recieveEventControl)
+        public IsEnableFlag _isDragEnable = new IsEnableFlag(true);
+        public EnableKeys _enableKeys = new EnableKeys(Keys.None);
+
+        public ControlDraggerB(AppLogger logger, Control control,Control recieveEventControl, EnableKeys enableKeys)
         {
-            _logger= logger;
+            _enableKeys = enableKeys;
+            _logger = logger;
             _control = control;
             _recieveControl = recieveEventControl;
             // イベントのインスタンスを生成
@@ -63,9 +133,12 @@ namespace TransportForm
                 // 左ボタンの時に実行する
                 if (e.Button == MouseButtons.Left)
                 {
-                    _control.Left += e.X - mp.X;
-                    _control.Top += e.Y - mp.Y;
-                    //Console.Write("#");
+                    if (_isDragEnable._value)
+                    {
+                        _control.Left += e.X - mp.X;
+                        _control.Top += e.Y - mp.Y;
+                        //Console.Write("#");
+                    }
                 }
             } catch (Exception ex)
             {
