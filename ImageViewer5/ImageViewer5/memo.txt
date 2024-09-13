@@ -1,29 +1,38 @@
 
 
+--window-size=800x600 --window-location=100,100 --frame-count=2 --frame1-folder=C:\Images --frame1-size=700x500 --frame1-location=100,100 --frame1-subfolders=true --frame1-random=true --frame1-slideshow=true --frame1-interval=5 --frame1-file-list-window=0 
+--frame2-folder=C:\Pictures --frame2-subfolders=false --frame2-random=false --frame2-slideshow=false --frame2-interval=10
+
+最初のフォルダの画像表示後
+　画像がないフォルダを読み込んだ時、ImageがNothingにならない
+　　（アプリ起動＞テストフォルダ読み込み＞引数でフォルダ設定時C:\Images）
+
+--window-size=800x600 --window-location=100,100 --frame-count=2 --frame1-folder=C:\Images --frame1-size=700x500 --frame1-location=100,100 --frame1-subfolders=true --frame1-random=true --frame1-slideshow=true --frame1-interval=2000 --frame1-file-list-window=0 
+
+
 
 
 外部からコマンドラインで、指定フォルダ、スライドショー（Interval）、位置表示、を実行
 フォルダウィンドを表示、設定値、引数
 
-
-画面ドラッグ
-　PictureBox (Shift Ctrl None, Flag[キーなしで各部品を移動],  十字キー（Mode）)
-  UserControl(Ctrl Flag[キーなしで各部品を移動]、十字キー（Mode）)
-
-
-
 動画再生（出来れば）
 
-Window透過（新要件）
-　　特定のショートカットキー（or 右クリックメニュー）でFormMainを透過する、を切り替える
-　　　これだと移動できなくなるので、さらに特定のキーorメニューで、移動するフォームをきりかえる（PictureBox、Form、UserControl）
-　　　　設定画面で？
-　　　　　Shiftを押しながらPictureBox、UserControlをドラッグすると、Windowを移動する
-　　　　　　Ctrlを押しながらPictureBox、UserControl、をドラッグすると、UserControlを移動する
-　　透過Windowを、常に前面に表示（前に置きながら、後ろの何かを操作する、エクセルとかHTMLの配置確認とかに使える？）
-　　　パーツだけ透過できるなら、Windowをすべて透過させて、パーツの透過度を設定する
+パーツだけ透過（Graphicsの使用が必要）
+
+スライドショー開始時のコントロールtext変更
+
+
+十字キー移動
+
+パスがないときにスライドショーを停止
+
 
 *****
+240908
+Window透明　済
+	Window透明時・非透明時　PictureBox＞FormをMouseDragで移動
+	Window透明時・非透明時　Space＋DragでPictureBox移動
+	いくつか想定しない動作があるが、一旦保留
 240908
 透明Window
 	Windowの背景を透明にすることは可能
@@ -104,6 +113,57 @@ PictureBox、UserControlにFitさせない
 　　マウススクロールで拡大縮小を可能にする
 　　右側クリックで、Nextイベント、左側クリックでPrevイベントを発火
 
+------------------
+Window透過（新要件）
+　　特定のショートカットキー（or 右クリックメニュー）でFormMainを透過する、を切り替える
+　　　これだと移動できなくなるので、さらに特定のキーorメニューで、移動するフォームをきりかえる（PictureBox、Form、UserControl）
+　　　　設定画面でキーや、デフォルトの移動コントロールを変更？（検討中）
+　　　　　Shiftを押しながらPictureBox、UserControlをドラッグすると、Windowを移動する
+　　　　　　Ctrlを押しながらPictureBox、UserControl、をドラッグすると、UserControlを移動する
+　　透過Windowを、常に前面に表示（前に置きながら、後ろの何かを操作する、エクセルとかHTMLの配置確認とかに使える？）
+　　　パーツだけ透過できるなら、Windowをすべて透過させて、パーツの透過度を設定する
+====================
+240911保留
+
+■Form透過時の移動可否
+※基本的に、すべて独立して動かせること
+タイトルバーあるとき
+PictureBox:true,  Frame:true,  Form:true;
+タイトルバーないとき
+PictureBox:true,  Frame:true,  Form:true;
+Form非透過
+PictureBox:true,  Frame:true,  Form:true
+-----
+Form透過　（透過時だけControl→Form移動として、Controlを動かしたいときは、何かアクションをして移動対象を選択する）
+PictureBox:true,  Frame:true,  Form:true（移動不可）
+→PictureBox:true,  Frame:true,  Form:Frameから
+　この時、Ctrl＋MでFormとFrameを選択する
+-----
+PictureBoxが大きく、タイトルなし時にウィンドウの移動が、できない
+　　ウィンドウの移動が感覚的に、合わないので、スペース＋手のひらツールなどで明示的にする必要がある？
+　　　→通常時はPictureBox、Ctrl押下＋マウスMoveDown＋Move＝Dragでウィンドウ移動、ShiftでUserControl、
+====================
+
+画面ドラッグ
+　PictureBox (Shift Ctrl None, Flag[キーなしで各部品を移動],  十字キー（Mode）)
+  UserControl(Ctrl Flag[キーなしで各部品を移動]、十字キー（Mode）)
+  
+  Windowタイトルありの場合は、Windowはタイトルバーでのみ移動する
+  通常モード（Windowタイトルなし、PictureBox固定:Space、Frame固定:Ctrl、WindowMove:なしorShift）
+　		Space＋Mouse：PictureBox（Spaceでもよい？）
+　　　　Space＋Wheel：PictureBoxサイズ変更
+　		Ctrl＋Mouse、Frame移動
+		※そのうち実装したい
+  　　　	Ctrl＋Wheel、拡大縮小サイズ変更  、Ctrl＋矢印、FrameのLocation移動
+  Window固定、Frame固定モード（Windowタイトルなしのみ、PictureBox移動、Frame固定）
+	Space＞PictureBox
+  Window固定、PictureBox固定モード（Windowタイトルなしのみ、PictureBox移動、PictureBox固定）
+  　Ctrl＞Frame
+  Window固定時は　Shift＋でWindow移動
+====================
+
+
+
 Controlで手のひらツール、UserControlを移動可能に
 
 ---
@@ -133,6 +193,8 @@ Controlで手のひらツール、UserControlを移動可能に
 　　D&Dでフォルダ登録（フォルダ名をボタンに表示）
 　　ボタン押下で、実行
 　　移動orMoveはチェックボックスで
+　　ボタンは可変個数にする
+　　ウィンドウサイズ変更は、ウィンドウサイズ変更ONにして変更してから、またOFFにする
 　
 
 サンプル
@@ -142,6 +204,9 @@ Controlで手のひらツール、UserControlを移動可能に
 　　マウスダウン移動でPictureBox移動
 
 設定まとめ
+　　ウィンドウサイズなどは、変更されたら、フラグを更新してTrueになったとき、タイマーで30秒待って、タイマー終了でFalseにする。
+　　タイマー終了時に、サイズLocationを更新する（ファイル・設定値）。Trueの時は値を更新しない。
+　　（Size/Locationは何回かか連続して操作をすると思われ、何度もfileや設定値書き込み・ログ出力などを抑制するため）
 設定
 	FormMain
 		前回のファイル・フォルダを表示する
@@ -158,7 +223,7 @@ Controlで手のひらツール、UserControlを移動可能に
 		ランダム、
 		スライドショー、インターバル
 
-		
+---------------
 FileListManager
 複数のフォルダを合わせたリスト、
 　　表示するフォルダパスは、コンマ区切り、ディレクトリ変数は先頭の1つ、別変数にコンマ区切りのパスを保持する
@@ -167,6 +232,7 @@ FileListManager
 ウィンドウ、Frame、PictureBoxを十字キーで移動（移動モード切替）
 デバッグ、ファイルリストウィンドウ、十字キーで選択時Imageが反映されない
 
+Frame2個目表示
 
 
 ######################

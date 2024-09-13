@@ -12,5 +12,8 @@ namespace ViewImageModule
         Size GetSize();
 
         Control GetControl();
+
+        //Control GetParentControl();
+        Form GetParentForm();
     }
 }

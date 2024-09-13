@@ -21,3 +21,6 @@ C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\bin\Debug\Play
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\bin\Debug\MouseWheelZoomHandler.exe
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\bin\Debug\MouseWheelZoomHandler.pdb
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\bin\Debug\MouseWheelZoomHandler.exe.config
+C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\bin\Debug\TransportForm.exe
+C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\bin\Debug\TransportForm.pdb
+C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\bin\Debug\TransportForm.exe.config

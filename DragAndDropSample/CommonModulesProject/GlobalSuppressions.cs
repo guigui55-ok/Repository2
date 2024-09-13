@@ -9,3 +9,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Style", "IDE1006:命名スタイル", Justification = "<保留中>", Scope = "member", Target = "~M:AppLoggerModule.AppLogger.hasError~System.Boolean")]
 [assembly: SuppressMessage("Style", "IDE0060:未使用のパラメーターを削除します", Justification = "<保留中>", Scope = "member", Target = "~M:AppLoggerModule.AppLogger.GetErrorMessages(System.Boolean,System.Boolean)~System.Collections.Generic.List{System.String}")]
 [assembly: SuppressMessage("Style", "IDE0060:未使用のパラメーターを削除します", Justification = "<保留中>", Scope = "member", Target = "~M:AppLoggerModule.AppLogger.GetLastErrorMessagesAsString(System.Int32,System.Boolean)~System.String")]
+[assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:CommonModules.ExecuteDelayTimer._timer")]

@@ -181,6 +181,7 @@ namespace CommonUtility.FileListUtility
         /// <param name="e"></param>
         public void MoveNextFileWhenLastFileNextDirectoryEvent(object sender, EventArgs e)
         {
+            _logger.PrintInfo("MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]");
             bool isMove = MoveNextFileWhenLastFileNextDirectory();
         }
 
@@ -233,6 +234,12 @@ namespace CommonUtility.FileListUtility
                     _logger.AddLog(this, "Setting._isFixedDirectory = true");
                     return false;
                 }
+                if (!Directory.Exists(_files.DirectoryPath))
+                {
+                    _logger.AddLog(this, string.Format("MoveNextDirectory > _files.DirectoryPath Not Exists [path={0}]", _files.DirectoryPath));
+                    return false;
+                }
+
                 string dir = _directoryGetter.GetNextDirectory(_files.DirectoryPath);
                 SetFilesFromPath(dir);
                 if (_logger.hasError()) { 

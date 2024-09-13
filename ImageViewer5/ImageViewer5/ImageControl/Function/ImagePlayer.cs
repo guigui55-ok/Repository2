@@ -8,6 +8,7 @@ using ImageViewer5.ImageControl;
 using PlayImageTest;
 using ViewImageModule;
 using PlayImageModule;
+using System.IO;
 
 namespace ImageViewer5.ImageControl.Function
 {
@@ -84,6 +85,19 @@ namespace ImageViewer5.ImageControl.Function
                 ImageMainFrame frameControl = (ImageMainFrame)_viewImageControl.GetParentControl();
                 string path = frameControl._formFileList._files.GetCurrentValue();
                 //ファイルパスが対応しているか（未対応）240831
+                if (!File.Exists(path)){
+                    _logger.PrintError(string.Format("ViewImageMain > Path Not Exists. [{0}]", path));
+                    _viewImage.DisposeImage();
+                    // 240913
+                    // ここでreturnするとエラーとなる、
+                    /*
+                     *    場所 System.Drawing.Image.get_Width()
+                           場所 System.Drawing.Image.get_Size()
+                           場所 System.Windows.Forms.PictureBox.ImageRectangleFromSizeMode(PictureBoxSizeMode mode)
+                           場所 System.Windows.Forms.PictureBox.OnPaint(PaintEventArgs pe)
+                     */
+                    //return;
+                }
                 _viewImage.SetPath(path);
                 // 画像を表示する
 

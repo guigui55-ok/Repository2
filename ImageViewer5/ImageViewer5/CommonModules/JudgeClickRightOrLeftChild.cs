@@ -80,7 +80,10 @@ namespace CommonControlUtilityModule
         {
             try
             {
-                if (IsDrag) { _logger.AddLog(this, "ControlClicked , IsDrag=true , return"); return -1; }
+                if (IsDrag) {
+                    _logger.AddLog(this, "ControlClicked , IsDrag=true , return");                    
+                    return -1; 
+                }
                 Point po = control.PointToClient(Cursor.Position);
                 if (po.X > (control.Width / 2))
                 {
