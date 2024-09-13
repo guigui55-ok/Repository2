@@ -24674,3 +24674,58 @@
 2024/09/08 21:55:38 439720    ImageViewerMainClass > ShowImageThisPath
 2024/09/08 21:55:38 448657    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
 2024/09/08 21:55:40 090161    ##########  Form_Closed  #########
+2024/09/14 02:05:07 818090    ImageViewerArgs.ParseArguments
+2024/09/14 02:05:07 827067    ImageMainFrame_Load
+2024/09/14 02:05:07 834050    FormMain_Load
+2024/09/14 02:05:07 834050    FormMain_Load End
+2024/09/14 02:05:07 835047    ImageMainFrame > InitializeValues
+2024/09/14 02:05:07 845019    ImageViewerMainClass > InitializeValues
+2024/09/14 02:05:07 846016    ViewImageFunction > InitializeValue
+2024/09/14 02:05:07 848011    ShowSubFormFileList
+2024/09/14 02:05:07 848011    SubThread=1
+2024/09/14 02:05:07 859981    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 02:05:07 860976    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 02:05:07 868956    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/14 02:05:07 869952    fileFilterConditionList = \.jpg$,\.jpeg$,\.png$,\.bmp$,\.gif$,\.tiff$,\.tif$,\.webp$
+2024/09/14 02:05:07 869952    fileIgnoreConditionList = 
+2024/09/14 02:05:07 871946    Dirctory.GetFiles.Length = 14
+2024/09/14 02:05:07 873941    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/14 02:05:07 874939    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/14 02:05:07 877931      SetDirecoryPath=C:\Users\OK\source\repos\test_media_files\test_jpg
+2024/09/14 02:05:07 877931    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 02:05:07 878928    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 02:05:07 879925    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 02:05:07 880922     listBox1.Items.Count < 1 , retrun
+2024/09/14 02:05:07 880922    SelectedFile  > sender = C:\Users\OK\source\repos\test_media_files\test_jpg\01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg
+2024/09/14 02:05:07 880922    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 02:05:07 887904    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 02:05:07 890898    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 02:05:07 891895    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 02:05:07 892891    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 02:05:07 892891    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 02:05:07 893888    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 02:05:07 893888     listBox1.Items.Count < 1 , retrun
+2024/09/14 02:05:07 894885    SelectedFile  > sender = C:\Users\OK\source\repos\test_media_files\test_jpg\01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg
+2024/09/14 02:05:07 894885    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 02:05:07 897878    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 02:05:07 898874    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 02:05:07 898874    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 02:05:07 899872    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 02:05:07 899872     listBox1.Items.Count < 1 , retrun
+2024/09/14 02:05:07 900870    SelectedFile  > sender = C:\Users\OK\source\repos\test_media_files\test_jpg\01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg
+2024/09/14 02:05:07 901868    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 02:05:07 904859    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 02:05:07 905857    first Path = C:\Users\OK\source\repos\test_media_files\test_jpg\01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg
+2024/09/14 02:05:07 905857    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 02:05:07 906855    ListJoin = 01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg,02_450-2010011100523260119.jpg,03_450-2018022021381680165.jpg,04_450-20190710120721245784.jpg,05_25400841.jpg,06_40586195-M-imagenavi.jpg,07_83734773.png,08_72484654_480x480.jpg,ocr_test2.jpg,ocr_test2_ret.jpg,Screenshot_20230205-123842.jpg,Screenshot_20230205-123842_ret.jpg,Screenshot_20230205-134825.jpg,Screenshot_20230205-134825_ret.jpg
+2024/09/14 02:05:07 907851    ChangeFileListEvent  > sender.Length = 14
+2024/09/14 02:05:07 960004    ImageViewerMainClass > ShowImageAfterInitialize
+2024/09/14 02:05:07 962996    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 02:05:07 964992    ApplySettings.ApplyArgs
+2024/09/14 02:05:07 967982    ApplyArgsImageViewerFrame.ApplyArgs
+2024/09/14 02:05:07 967982    ViewImageFunction > InitializeValue_LoadAfter
+2024/09/14 02:05:07 976958    FormMain_Paint First
+2024/09/14 02:05:07 977957    FormMain.Size = {Width=591, Height=802}
+2024/09/14 02:05:07 978954    ImageViewerMainClass > ShowImageAfterInitialize
+2024/09/14 02:05:07 983940    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 02:05:12 011920    ##########  Form_Closed  #########

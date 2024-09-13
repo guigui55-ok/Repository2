@@ -15,11 +15,13 @@ namespace TransportForm
         Form _form;
         Control _recieveControl;
         Point _mousePoint;
+        public IsEnableFlag _isDragEnable;
         public FormDragger(AppLogger logger, Form form, Control recieveControl)
         {
             _logger = logger;
             _form = form;
             _recieveControl = recieveControl;
+            _isDragEnable = new IsEnableFlag(true);
             //_form.MouseDown += Form1_MouseDown;
             //_form.MouseMove += Form1_MouseMove;
             _recieveControl.MouseDown += Form1_MouseDown;
@@ -43,12 +45,15 @@ namespace TransportForm
         {
             if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
             {
-                _form.Left += e.X - _mousePoint.X;
-                _form.Top += e.Y - _mousePoint.Y;
-                //または、つぎのようにする
-                //this.Location = new Point(
-                //    this.Location.X + e.X - mousePoint.X,
-                //    this.Location.Y + e.Y - mousePoint.Y);
+                if (_isDragEnable._value)
+                {
+                    _form.Left += e.X - _mousePoint.X;
+                    _form.Top += e.Y - _mousePoint.Y;
+                    //または、つぎのようにする
+                    //this.Location = new Point(
+                    //    this.Location.X + e.X - mousePoint.X,
+                    //    this.Location.Y + e.Y - mousePoint.Y);
+                }
             }
         }
     }

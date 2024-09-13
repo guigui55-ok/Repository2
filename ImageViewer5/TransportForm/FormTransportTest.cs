@@ -15,20 +15,28 @@ namespace TransportForm
     public partial class FormTransportTest : Form
     {
         AppLogger _logger;
-        ControlDraggerB _dragger;
-        ControlDraggerB _draggerFrame;
-        FormDragger _formDragger;
+        ControlDraggerB _draggerInnerToInner;
+        ControlDraggerB _draggerInnerToFrame;
+        ControlDraggerB _draggerFrameToFrame;
+        FormDragger _draggerFrameToForm;
+        FormDragger _draggerInnerToForm;
+        FormDragger _draggerFormToForm;
         double _formOpacity = 100;
 
 
-        private TransparentFormFunction _transparentFormFunction;
+        //private TransparentFormFunction _transparentFormFunction;
         public FormTransportTest()
         {
             InitializeComponent();
             _logger = new AppLogger();
-            _dragger = new ControlDraggerB(_logger, pictureBox1, pictureBox1);
-            //_draggerFrame = new ControlDraggerB(_logger, panel1, panel1);
-            _formDragger = new FormDragger(_logger, this, panel1);
+            _draggerInnerToInner = new ControlDraggerB(_logger, pictureBox1, pictureBox1, new EnableKeys(Keys.Space));
+            _draggerInnerToFrame = new ControlDraggerB(_logger, panel1, pictureBox1, new EnableKeys(Keys.None, Keys.Control));
+            _draggerInnerToForm = new FormDragger(_logger, this, pictureBox1);
+            //
+            _draggerFrameToFrame = new ControlDraggerB(_logger, panel1, panel1, new EnableKeys(Keys.None, Keys.Control));
+            _draggerFrameToForm = new FormDragger(_logger, this, panel1);
+            //
+            _draggerFormToForm = new FormDragger(_logger, this, this);
 
             // TransparentFormFunctionにthisを渡す
             //_transparentFormFunction = new TransparentFormFunction(_logger, this);
