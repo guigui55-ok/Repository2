@@ -92,6 +92,7 @@ namespace TransportForm
 
         public bool isSendToForm = true;
         public Form _sendControl;
+<<<<<<< HEAD
         public IsDragEnable _isDragEnable;
         public List<Point> _historyList = new List<Point> {  };
         //このキーが押された＋MouseDrag、AND、_isDragEnable=True で control移動をする
@@ -100,6 +101,12 @@ namespace TransportForm
         protected bool _isDownTrigerKey = false;
         
         public ControlDraggerB(AppLogger logger, Control control,Control recieveEventControl)
+=======
+        public IsEnableFlag _isDragEnable = new IsEnableFlag(true);
+        public EnableKeys _enableKeys = new EnableKeys(Keys.None);
+
+        public ControlDraggerB(AppLogger logger, Control control,Control recieveEventControl, EnableKeys enableKeys)
+>>>>>>> 981fce9 (240914-0240)
         {
             _enableKeys = enableKeys;
             _logger = logger;
@@ -150,10 +157,15 @@ namespace TransportForm
                 }
                 if (_isDragEnable._value)
                 {
+<<<<<<< HEAD
                     // 左ボタンの時に実行する
                     if (e.Button == MouseButtons.Left)
                     {
                         _historyList.Add(new Point(mp.X, mp.Y));
+=======
+                    if (_isDragEnable._value)
+                    {
+>>>>>>> 981fce9 (240914-0240)
                         _control.Left += e.X - mp.X;
                         _control.Top += e.Y - mp.Y;
                         //Console.Write("#");

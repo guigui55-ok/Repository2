@@ -65,12 +65,16 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="FormPlayMovie.cs" />
 =======
     <Compile Include="FormPlayMovie.cs">
       <SubType>Form</SubType>
     </Compile>
 >>>>>>> c6b11a973b820b6778ad72236bb1c7223a857c9f
+=======
+    <Compile Include="FormPlayMovie.cs" />
+>>>>>>> 981fce9 (240914-0240)
     <Compile Include="FormPlayMovie.Designer.cs">
       <DependentUpon>FormPlayMovie.cs</DependentUpon>
     </Compile>

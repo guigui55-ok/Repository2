@@ -1,0 +1,8 @@
+*/obj/
+*/bin/
+*/.vs/
+*/obj/Debug
+*/bin/Debug
+*/bin/Reliease
+*/obj/Release
+__test_*.*
