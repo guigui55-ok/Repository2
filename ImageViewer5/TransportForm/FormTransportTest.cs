@@ -48,9 +48,16 @@ namespace TransportForm
             //this.TransparencyKey = this.BackColor;
             // フォームの設定
             this.FormBorderStyle = FormBorderStyle.None;  // フォームの境界線を非表示
-            this.BackColor = Color.Magenta;  // フォームの背景色（透明にする色）
-            this.TransparencyKey = this.BackColor;  // Magentaを透明化
+            //this.BackColor = Color.Magenta;  // フォームの背景色（透明にする色）
+            //this.TransparencyKey = this.BackColor;  // Magentaを透明化
+            //_transparentFormSwitch.SwitchFlagsByTransparencyKey(
+            //    (this.TransparencyKey != this.BackColor));
+            _transparentFormSwitch.SwitchFlagsByTransparencyKey(false);
+            _transparentFormSwitch.SwitchFormTitleBarVisible(true);
 
+            //_transparentFormSwitch.SwitchDefaultNotFormTitle_B_FreeInner();
+            //_transparentFormSwitch.SwitchDefaultNotFormTitle_C_FreeFrame();
+            _transparentFormSwitch.SwitchDefaultNotFormTitle_A_MoveWindowMain();
 
         }
 
@@ -64,6 +71,25 @@ namespace TransportForm
         //    base.WndProc(ref m);
         //}
 
+        //private void SwitchFlagsByTransparencyKey(bool toOn)
+        //{
+        //    //if (this.TransparencyKey == this.BackColor)
+        //    if(!toOn)
+        //    {
+        //        this.TransparencyKey = Color.Empty;
+        //        _draggerFrame._isDragEnable._value = true;
+        //        _formDraggerByFrame._isDragEnable._value = false;
+        //        _logger.PrintInfo(String.Format("TransparencyKey = {0}", "Empty, False"));
+        //    }
+        //    else
+        //    {
+        //        this.TransparencyKey = this.BackColor;
+        //        _draggerFrame._isDragEnable._value = false;
+        //        _formDraggerByFrame._isDragEnable._value = true;
+        //        _logger.PrintInfo(String.Format("TransparencyKey = {0}", "BackColor, True"));
+        //    }
+        //}
+
         private void FormTransportTest_Load(object sender, EventArgs e)
         {
 
@@ -72,11 +98,22 @@ namespace TransportForm
         private void FormTransportTest_KeyDown(object sender, KeyEventArgs e)
         {
 
-
-            if (e.KeyCode == Keys.I && e.Control)
+            if (e.KeyCode == Keys.Control)
             {
 
-            }else if (e.KeyCode == Keys.S)
+            }
+            if (e.KeyCode == Keys.T && e.Control)
+            {
+                bool toOn = true;
+                if (this.TransparencyKey == this.BackColor)
+                {
+                    toOn = false;
+                }
+                _transparentFormSwitch.SwitchFlagsByTransparencyKey(toOn);
+                //_transparentFormSwitch.SwitchFlagsByTransparencyKey(
+                //    (this.TransparencyKey == this.BackColor));
+            }
+            else if (e.KeyCode == Keys.S)
             {
                 _formOpacity += 10;
                 this.Opacity = _formOpacity;
@@ -91,30 +128,25 @@ namespace TransportForm
             }
             else if (e.KeyCode == Keys.D)
             {
-                if (this.TransparencyKey == this.BackColor)
-                {
-                    this.TransparencyKey = Color.Empty;
-                    _logger.PrintInfo(String.Format("TransparencyKey = {0}", "Empty"));
-                }
-                else
-                {
-                    this.TransparencyKey = this.BackColor;
-                    _logger.PrintInfo(String.Format("TransparencyKey = {0}", "BackColor"));
-                }
             }
             else if (e.KeyCode == Keys.F)
             {
-                if (this.FormBorderStyle == FormBorderStyle.Sizable)
+                if (this.FormBorderStyle == FormBorderStyle.None)
                 {
                     //this.FormBorderStyle = FormBorderStyle.Fixed3D;
                     //this.FormBorderStyle = FormBorderStyle.FixedDialog;
                     this.FormBorderStyle = FormBorderStyle.FixedSingle;
                     _logger.PrintInfo(String.Format("FormBorderStyle = {0}", "FixedSingle"));
                 }
-                else
+                else if(this.FormBorderStyle == FormBorderStyle.FixedSingle)
                 {
                     this.FormBorderStyle = FormBorderStyle.Sizable;
                     _logger.PrintInfo(String.Format("FormBorderStyle = {0}", "Sizable"));
+                }
+                else if (this.FormBorderStyle == FormBorderStyle.Sizable)
+                {
+                    this.FormBorderStyle = FormBorderStyle.None;
+                    _logger.PrintInfo(String.Format("FormBorderStyle = {0}", "None"));
                 }
             }
         }

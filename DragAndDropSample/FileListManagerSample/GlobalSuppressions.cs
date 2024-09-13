@@ -22,3 +22,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Style", "IDE1006:命名スタイル", Justification = "<保留中>", Scope = "member", Target = "~M:FileListManagerSample.FileListManagerSettingForm.buttonApply_Click(System.Object,System.EventArgs)")]
 [assembly: SuppressMessage("Style", "IDE1006:命名スタイル", Justification = "<保留中>", Scope = "member", Target = "~M:FileListManagerSample.FileListManagerSettingForm.buttonClose_Click(System.Object,System.EventArgs)")]
 [assembly: SuppressMessage("Style", "IDE0059:値の不必要な代入", Justification = "<保留中>", Scope = "member", Target = "~M:CommonUtility.FileListUtility.FileListManager.MoveNextFileWhenLastFileNextDirectoryEvent(System.Object,System.EventArgs)")]
+[assembly: SuppressMessage("Style", "IDE1006:命名スタイル", Justification = "<保留中>", Scope = "member", Target = "~M:FileListManagerSample.FileListManagerSampleForm.listBox_FileList_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)")]

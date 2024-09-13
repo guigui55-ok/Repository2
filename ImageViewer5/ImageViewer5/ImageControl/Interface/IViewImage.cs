@@ -12,5 +12,7 @@ namespace ViewImageModule
 
         bool ImageIsNull();
 
+        bool DisposeImage();
+
     }
 }

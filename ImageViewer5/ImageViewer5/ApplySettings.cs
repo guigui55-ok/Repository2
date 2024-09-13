@@ -34,7 +34,7 @@ namespace ImageViewer5
         {
             try
             {
-                _logger.PrintInfo("ApplySettings.ApplyArgs");
+                _logger.PrintInfo("## ApplySettings > ApplyArgs");
                 Size winSize = imageViewerArgs.GetWindowSize();
                 if (!winSize.Equals(new Size()))
                 {
@@ -62,9 +62,12 @@ namespace ImageViewer5
         {
             try
             {
-                _logger.PrintInfo("ApplyArgsImageViewerFrame.ApplyArgs");
+                //throw new Exception("ループの処理が重複している、　foreach imageViewerArgs._frameSettingsList が9回実行されている");
+                _logger.PrintInfo("ApplyArgsImageViewerFrame > ApplyArgs");
+                int count = 0;
                 foreach (Dictionary<string, object> dict in imageViewerArgs._frameSettingsList)
                 {
+                    _logger.PrintInfo(string.Format("count = {0}", count));
                     int frameNumber = (int)GetDictValue(dict, SETTINGS_KEYS.FRAME_NUMBER);
                     _logger.PrintInfo(string.Format("----- frameNumber = {0}", frameNumber));
                     var dictStr = String.Join(",", dict.Select(kvp => kvp.Key + " : " + kvp.Value));
@@ -85,7 +88,9 @@ namespace ImageViewer5
                     if (folderPath != "")
                     {
                         _logger.PrintInfo(string.Format("Args folderPath = {0}", folderPath));
+                        //フォルダのパスを変更する
                         imageMainFrame._formFileList.SetFilesFromPath(folderPath, null, null);
+                        //フォルダパスが存在しなければ処理はしない（未実装）
                     }
                     string sizeFrameStr = (string)GetDictValue(dict, SETTINGS_KEYS.FRAME_SIZE);
                     if (sizeFrameStr!="")
@@ -93,7 +98,7 @@ namespace ImageViewer5
                         Size frameSize = imageViewerArgs.CnvWindowSize(dict, SETTINGS_KEYS.FRAME_SIZE);
                         _logger.PrintInfo(string.Format("Args frameSize = {0}", frameSize));
                         //Frameのサイズを変更する 処理を記載
-                        //imageMainFrame._formFileList._fileListManagerSettingForm._fileListManagerSetting.ChangeIncludeSubFolder(readSubFolderBool);
+                        imageMainFrame.Size = frameSize;
                     }
 
 
@@ -103,7 +108,7 @@ namespace ImageViewer5
                         Point frameLoc = imageViewerArgs.CnvWindowLocation(dict, SETTINGS_KEYS.FRAME_LOC);
                         _logger.PrintInfo(string.Format("Args frameLoc = {0}", frameLoc));
                         //FrameのLocationを変更する 処理を記載
-                        //imageMainFrame._formFileList._fileListManagerSettingForm._fileListManagerSetting.ChangeIncludeSubFolder(readSubFolderBool);
+                        imageMainFrame.Location = frameLoc;
                     }
 
 
@@ -141,7 +146,7 @@ namespace ImageViewer5
                         //スライドショーをオンにする 処理を記載
                         imageMainFrame._imageViewerMain._viewImageFunction._viewImageSlideShow.StartTimer();
                     }
-                    int fileListWIndow = (int)GetDictValue(dict, SETTINGS_KEYS.FILE_LIST_WINDOW);
+                    int fileListWIndow = (int)GetDictValueInt(dict, SETTINGS_KEYS.FILE_LIST_WINDOW);
                     if (fileListWIndow >= 0)
                     {
                         _logger.PrintInfo(string.Format("Args fileListtWindow = {0}", fileListWIndow));
@@ -157,19 +162,49 @@ namespace ImageViewer5
 
         private object GetDictValue(Dictionary<string, object> dict, string key)
         {
-            return dict[key];
+            try
+            {
+                return dict[key];
+            } catch(KeyNotFoundException ex)
+            {
+                Debugger.DebugPrint(ex.Message);
+                return null;
+            }
         }
         private string GetDictValueStr(Dictionary<string, object> dict, string key)
         {
-            return (string)dict[key];
+            try
+            {
+                return (string)dict[key];
+            }
+            catch (KeyNotFoundException ex)
+            {
+                Debugger.DebugPrint(ex.Message);
+                return "";
+            }
         }
         private int GetDictValueInt(Dictionary<string, object> dict, string key)
         {
-            return (int)dict[key];
+            try
+            {
+                return (int)dict[key];
+            } catch (KeyNotFoundException ex)
+            {
+                Debugger.DebugPrint(ex.Message);
+                return 0;
+            }
         }
         private int GetDictValueBool(Dictionary<string, object> dict, string key)
         {
-            return (int)dict[key];
+            try
+            {
+                return (int)dict[key];
+            }
+            catch (KeyNotFoundException ex)
+            {
+                Debugger.DebugPrint(ex.Message);
+                return 0;
+            }
         }
     }
 }
