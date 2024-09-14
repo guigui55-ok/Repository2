@@ -84,11 +84,11 @@ namespace ImageViewer5.ImageControl
 
             // PictureBox をドラッグする
             //ControlDragger dragger = new ControlDragger(_logger, _pictureBox, _pictureBox);
-            _draggerInner_ToInner = new ControlDraggerB(_logger, _pictureBox, _pictureBox);
+            _draggerInner_ToInner = new ControlDraggerB(_logger, _pictureBox, _pictureBox, new SwitchKeys(Keys.Space));
             Control frame = _viewImageControl.GetParentControl();
             Form form = _viewImageFrameControl.GetParentForm();
-            _draggerInner_ToFrame = new ControlDraggerB(_logger, frame, _pictureBox);
-            _draggerFrame = new ControlDraggerB(_logger, frame, frame);
+            _draggerInner_ToFrame = new ControlDraggerB(_logger, frame, _pictureBox, null);
+            _draggerFrame = new ControlDraggerB(_logger, frame, frame, new SwitchKeys(Keys.None, Keys.Control, true));
             _formDraggerByForm = new FormDragger(_logger, form, form);
             _formDraggerByFrame = new FormDragger(_logger, form, frame);
             //

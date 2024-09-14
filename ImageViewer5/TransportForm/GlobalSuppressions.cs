@@ -37,3 +37,6 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.FormTransportTest._draggerInnerToForm")]
 [assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.FormTransportTest._draggerInnerToInner")]
 [assembly: SuppressMessage("Style", "IDE0059:値の不必要な代入", Justification = "<保留中>", Scope = "member", Target = "~M:TransportForm.FormTransportTest.FormTransportTest_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)")]
+[assembly: SuppressMessage("CodeQuality", "IDE0052:読み取られていないプライベート メンバーを削除", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormSwitch._frameKeyTimer")]
+[assembly: SuppressMessage("CodeQuality", "IDE0052:読み取られていないプライベート メンバーを削除", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.TransparentFormSwitch._innerKeyTimer")]
+[assembly: SuppressMessage("CodeQuality", "IDE0051:使用されていないプライベート メンバーを削除する", Justification = "<保留中>", Scope = "member", Target = "~F:TransportForm.FormTransportTest._formOpacity")]

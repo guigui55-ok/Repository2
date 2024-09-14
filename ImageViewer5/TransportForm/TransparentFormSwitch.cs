@@ -62,7 +62,7 @@ namespace TransportForm
         IsDragEnable _innerToFormDragFlag;
         IsDragEnable _innerToFrameDragFlag;
         // CtrlのKeyDown時にFrameを動かすときに、元に戻す用のフラグ格納リスト
-        List<bool> _tempFrameFlagList = new List<bool> { false, false, false };
+        //List<bool> _tempFrameFlagList = new List<bool> { false, false, false };
         //240910
         // ControlKeyはKeyDown,Up判定処理が異なるが一旦以下のままとする
         //public Keys _moveInnerKey = Keys.Space;
@@ -380,11 +380,11 @@ namespace TransportForm
             }
         }
 
-        private bool IsControlKeyPressed(KeyEventArgs e, Keys controlKeyCode)
-        {
-            // Controlキーが押されたかどうかを判定
-            return e.KeyCode == Keys.ControlKey || e.KeyCode == controlKeyCode;
-        }
+        //private bool IsControlKeyPressed(KeyEventArgs e, Keys controlKeyCode)
+        //{
+        //    // Controlキーが押されたかどうかを判定
+        //    return e.KeyCode == Keys.ControlKey || e.KeyCode == controlKeyCode;
+        //}
 
         private void FormTransport_KeyDown(object sender, KeyEventArgs e)
         {

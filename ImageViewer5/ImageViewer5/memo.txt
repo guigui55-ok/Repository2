@@ -3,9 +3,6 @@
 --window-size=800x600 --window-location=100,100 --frame-count=2 --frame1-folder=C:\Images --frame1-size=700x500 --frame1-location=100,100 --frame1-subfolders=true --frame1-random=true --frame1-slideshow=true --frame1-interval=5 --frame1-file-list-window=0 
 --frame2-folder=C:\Pictures --frame2-subfolders=false --frame2-random=false --frame2-slideshow=false --frame2-interval=10
 
-最初のフォルダの画像表示後
-　画像がないフォルダを読み込んだ時、ImageがNothingにならない
-　　（アプリ起動＞テストフォルダ読み込み＞引数でフォルダ設定時C:\Images）
 
 --window-size=800x600 --window-location=100,100 --frame-count=2 --frame1-folder=C:\Images --frame1-size=700x500 --frame1-location=100,100 --frame1-subfolders=true --frame1-random=true --frame1-slideshow=true --frame1-interval=2000 --frame1-file-list-window=0 
 
@@ -15,19 +12,33 @@
 外部からコマンドラインで、指定フォルダ、スライドショー（Interval）、位置表示、を実行
 フォルダウィンドを表示、設定値、引数
 
-動画再生（出来れば）
 
-パーツだけ透過（Graphicsの使用が必要）
+パスがないときにスライドショーを停止
 
 スライドショー開始時のコントロールtext変更
 
 
+動画再生（出来れば）
 十字キー移動
-
-パスがないときにスライドショーを停止
+パーツだけ透過（Graphicsの使用が必要）
 
 
 *****
+240915
+最初のフォルダの画像表示後
+　画像がないフォルダを読み込んだ時、ImageがNothingにならない
+　　（アプリ起動＞テストフォルダ読み込み＞引数でフォルダ設定時C:\Images）
+Inner,Frame,Formをドラッグ移動　済
+	InnerはSpace押下時ドラッグ可能　済
+	FrameはCtrl押下時ドラッグ可能　済
+	（ドラッグ切替で、Space押下Innerを移動した後（KeyUp後）Inner移動でおかしくなる（コントロールが震えるような動作となる）
+	　　PictureBoc>Panelが2回実行される？
+	　　　＞ドラッグのスイッチを繰り返すと、元通りになる事があるが、再度Inner移動するとまた発生する。
+	　　　　＞一旦保留
+タイトルバー非表示　済　Ctrl+TでON/OFF切替
+240914
+ファイル整理のためgit Revertしたが、更新部分が消失する
+　　＞途中まで復旧、240908まで手戻り
 240908
 Window透明　済
 	Window透明時・非透明時　PictureBox＞FormをMouseDragで移動
