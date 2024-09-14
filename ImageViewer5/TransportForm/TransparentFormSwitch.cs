@@ -54,8 +54,10 @@ namespace TransportForm
         Form _form;
         Control _control;
         IsDragEnable _formToFormDragFlag;
-        IsDragEnable _controlToFormDragFlag;
-        IsDragEnable _controlToControlDragFlag;
+        //
+        IsDragEnable _frameToFormDragFlag;
+        IsDragEnable _frameToFrameDragFlag;
+        //
         IsDragEnable _innerToinnerDragFlag;
         IsDragEnable _innerToFormDragFlag;
         IsDragEnable _innerToFrameDragFlag;
@@ -63,8 +65,10 @@ namespace TransportForm
         List<bool> _tempFrameFlagList = new List<bool> { false, false, false };
         //240910
         // ControlKeyはKeyDown,Up判定処理が異なるが一旦以下のままとする
-        public Keys _moveInnerKey = Keys.Space;
-        public Keys _moveFrameKey = Keys.Control;
+        //public Keys _moveInnerKey = Keys.Space;
+        //public Keys _moveFrameKey = Keys.Control;
+        public SwitchKeys _moveInnerKey;
+        public SwitchKeys _moveFrameKey;
         //
         private ExecuteDelayTimer _innerKeyTimer = new ExecuteDelayTimer();
         private ExecuteDelayTimer _frameKeyTimer = new ExecuteDelayTimer();
@@ -83,21 +87,21 @@ namespace TransportForm
         /// 各フラグをセットする（渡し間違え注意）
         /// </summary>
         /// <param name="formToFormDragFlag"></param>
-        /// <param name="controlToFormDragFlag"></param>
-        /// <param name="controlToControlDragFlag"></param>
+        /// <param name="frameToFormDragFlag"></param>
+        /// <param name="frameToFramelDragFlag"></param>
         /// <param name="innerToInnerDragFlag"></param>
         /// <param name="innerToFormDragFlag"></param>
         public void SetDraggerFlags(
             ref IsDragEnable formToFormDragFlag,
-            ref IsDragEnable controlToFormDragFlag,
-            ref IsDragEnable controlToControlDragFlag,
+            ref IsDragEnable frameToFormDragFlag,
+            ref IsDragEnable frameToFramelDragFlag,
             ref IsDragEnable innerToInnerDragFlag,
             ref IsDragEnable innerToFormDragFlag,
             ref IsDragEnable innerToFrameDragFlag)
         {
             _formToFormDragFlag = formToFormDragFlag;
-            _controlToFormDragFlag = controlToFormDragFlag;
-            _controlToControlDragFlag = controlToControlDragFlag;
+            _frameToFormDragFlag = frameToFormDragFlag;
+            _frameToFrameDragFlag = frameToFramelDragFlag;
             _innerToinnerDragFlag = innerToInnerDragFlag;
             _innerToFormDragFlag = innerToFormDragFlag;
             _innerToFrameDragFlag = innerToFrameDragFlag;
@@ -127,8 +131,8 @@ namespace TransportForm
                 _innerToFormDragFlag._value = !_innerToFormDragFlag._value;
                 //
                 //FrameToForm_ON, FrameToFrame_OFF
-                _controlToFormDragFlag._value = true;
-                _controlToControlDragFlag._value = !_controlToFormDragFlag._value;
+                _frameToFormDragFlag._value = true;
+                _frameToFrameDragFlag._value = !_frameToFormDragFlag._value;
                 //
                 //FormToForm_OFF
                 _formToFormDragFlag._value = true;
@@ -146,20 +150,24 @@ namespace TransportForm
         {
             _logger.PrintInfo("SwitchDefault");
             _mode = ConstMoveControlSetMode.DEFAULT;
+            ////#
+            ////InnerToInner on , InnerToForm off
+            //_innerToinnerDragFlag._value = true;
+            //_innerToFormDragFlag._value = !_innerToFormDragFlag._value;
+            ////
+            ////FrameToForm off, FrameToFrame on
+            //_frameToFrameDragFlag._value = true;
+            //_frameToFormDragFlag._value = !_frameToFrameDragFlag._value;
+            ////
+            ////FormToForm on
+            //_formToFormDragFlag._value = true;
+            ////
+            ////InnerToFrame off
+            //_innerToFrameDragFlag._value = true;
             //#
-            //InnerToInner on , InnerToForm off
-            _innerToinnerDragFlag._value = true;
-            _innerToFormDragFlag._value = !_innerToFormDragFlag._value;
-            //
-            //FrameToForm off, FrameToFrame on
-            _controlToControlDragFlag._value = true;
-            _controlToFormDragFlag._value = !_controlToControlDragFlag._value;
-            //
-            //FormToForm on
-            _formToFormDragFlag._value = true;
-            //
-            //InnerToFrame off
-            _innerToFrameDragFlag._value = true;
+            //InnerToInner ON, FrameToFrame ONにしていたが、変更 Form移動をメインに
+            //#
+            SwitchDefaultNotFormTitle_A_MoveWindowMain();
 
             SwitchFlagsByTransparency();
         }
@@ -171,20 +179,21 @@ namespace TransportForm
         /// </summary>
         public void SwitchDefaultNotFormTitle_A_MoveWindowMain()
         {
+            _logger.PrintInfo("SwitchDefaultNotFormTitle_A_MoveWindowMain");
             _mode = ConstMoveControlSetMode.WINDOW_MOVE_MAIN;
             //#
-            //InnerToInner on , InnerToForm off
+            //InnerToInner off , InnerToForm on
             _innerToinnerDragFlag._value = false;
-            _innerToFormDragFlag._value = !_innerToFormDragFlag._value;
+            _innerToFormDragFlag._value = true;
+            //InnerToFrame
+            _innerToFrameDragFlag._value = false;
             //
             //FrameToForm off, FrameToFrame on
-            _controlToControlDragFlag._value = false;
-            _controlToFormDragFlag._value = !_controlToControlDragFlag._value;
+            _frameToFrameDragFlag._value = false;
+            _frameToFormDragFlag._value = !_frameToFrameDragFlag._value;
             //
-            //FormToForm on
+            //FormToForm
             _formToFormDragFlag._value = true;
-            //InnerToFrame on
-            _innerToFrameDragFlag._value = false;
         }
 
         /// <summary>
@@ -202,8 +211,8 @@ namespace TransportForm
             _innerToFormDragFlag._value = !_innerToinnerDragFlag._value;
             //
             //FrameToForm off, FrameToFrame on
-            _controlToControlDragFlag._value = !_innerToinnerDragFlag._value;
-            _controlToFormDragFlag._value = true;
+            _frameToFrameDragFlag._value = !_innerToinnerDragFlag._value;
+            _frameToFormDragFlag._value = true;
             //
             //FormToForm on
             _formToFormDragFlag._value = true;
@@ -226,8 +235,8 @@ namespace TransportForm
             _innerToFormDragFlag._value = false;
             //
             //FrameToForm off, FrameToFrame on
-            _controlToControlDragFlag._value = true;
-            _controlToFormDragFlag._value = !_controlToControlDragFlag._value;
+            _frameToFrameDragFlag._value = true;
+            _frameToFormDragFlag._value = !_frameToFrameDragFlag._value;
             //
             //FormToForm on
             _formToFormDragFlag._value = true;
@@ -236,26 +245,31 @@ namespace TransportForm
         }
 
 
+        /// <summary>
+        /// 透明なときも InnerToInner OFF, FrameToFrame OFF ＝ Form移動メインにする
+        /// 
+        /// </summary>
         public void SwitchFlagsByTransparency()
         {
             if(_form.TransparencyKey != _form.BackColor)
             {
                 //SwitchDefault(); //SwitchDefaultから呼ばれるようにする
-                _innerToFormDragFlag._value = true;
                 _innerToinnerDragFlag._value = false;
+                _innerToFormDragFlag._value = true;
             }
             else
             {
-                //_controlToFormDragFlag._value = true;
+                //_frameToFormDragFlag._value = true;
                 //_formToFormDragFlag._value = false;
                 _innerToinnerDragFlag._value = false;
                 _innerToFormDragFlag._value = true;
-                _controlToFormDragFlag._value = true;
+                _frameToFormDragFlag._value = true;
             }
         }
 
         public void SwitchFlagsByTransparencyKey(bool toOn)
         {
+            _logger.PrintInfo("SwitchFlagsByTransparencyKey");
             //if (this.TransparencyKey == this.BackColor)
             if (!toOn)
             {
@@ -290,8 +304,8 @@ namespace TransportForm
                 _form.Text = "ImageViewer5";
                 _logger.PrintInfo(this.ToString() + String.Format(".FormTitle Visible = {0}", "True"));
                 //FrameToForm_OFF, FormToForm_ON
-                _controlToFormDragFlag._value = false;
-                _formToFormDragFlag._value = !_controlToFormDragFlag._value;
+                _frameToFormDragFlag._value = false;
+                _formToFormDragFlag._value = !_frameToFormDragFlag._value;
                 //FormON
                 //#
                 SwitchDefault();
@@ -311,38 +325,58 @@ namespace TransportForm
                 _innerToFormDragFlag._value = !_innerToFormDragFlag._value;
                 //
                 //FrameToForm_ON, FormToForm_OFF
-                _controlToFormDragFlag._value = true;
-                _formToFormDragFlag._value = !_controlToFormDragFlag._value;
+                _frameToFormDragFlag._value = true;
+                _formToFormDragFlag._value = !_frameToFormDragFlag._value;
                 //
                 //FrameToFrame_OFF
-                _controlToControlDragFlag._value = false;
+                _frameToFrameDragFlag._value = false;
             }
         }
 
         private void FormTransport_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == _moveInnerKey)
+            //    if (e.KeyCode == _moveInnerKey)
+            //    {
+            //        //_innerToinnerDragFlag._value = false;
+            //        //_innerToFormDragFlag._value = !_innerToinnerDragFlag._value;
+            //        //_logger.PrintInfo("KeyUp , " + _moveFrameKey.ToString("G"));
+            //        ////SwitchNowMode();
+            //        //SwitchDefault();
+            //    }
+            //    else if (IsControlKeyPressed(e, _moveFrameKey))
+            //    {
+            //        //_frameToFrameDragFlag._value = false;
+            //        //_frameToFormDragFlag._value = !_frameToFrameDragFlag._value;
+            //        ////Frameの時はInnerでもFrameを動かせ多のを元に戻す
+            //        ////_innerToinnerDragFlag._value = _tempFrameFlagList[0];
+            //        ////_innerToFrameDragFlag._value = _tempFrameFlagList[1];
+            //        //_innerToinnerDragFlag._value = _tempFrameFlagList[0];
+            //        //_innerToFrameDragFlag._value = _tempFrameFlagList[1];
+            //        //_innerToFormDragFlag._value = _tempFrameFlagList[2];
+            //        //_logger.PrintInfo(String.Join(",", _tempFrameFlagList));
+            //        ////SwitchNowMode();
+            //        //SwitchDefault();
+            //        _logger.PrintInfo("KeyUp , " + _moveFrameKey.ToString("G"));
+            //    }
+            if (_moveFrameKey.IsMatch(e))
             {
-                _innerToinnerDragFlag._value = false;
-                _innerToFormDragFlag._value = !_innerToinnerDragFlag._value;
-                _logger.PrintInfo("KeyUp , " + _moveFrameKey.ToString("G"));
-                //SwitchNowMode();
+                //_logger.PrintInfo("*Key_UP , " + e.KeyCode.ToString("G"));
+                bool FrameIsOn = false;
+                _frameToFrameDragFlag._value = FrameIsOn;
+                _frameToFormDragFlag._value = !FrameIsOn;
+                _innerToFrameDragFlag._value = FrameIsOn;
+                _innerToFormDragFlag._value = !FrameIsOn;
                 SwitchDefault();
             }
-            else if (IsControlKeyPressed(e, _moveFrameKey))
+            else if (_moveInnerKey.IsMatch(e))
             {
-                _controlToControlDragFlag._value = false;
-                _controlToFormDragFlag._value = !_controlToControlDragFlag._value;
-                //Frameの時はInnerでもFrameを動かせ多のを元に戻す
-                //_innerToinnerDragFlag._value = _tempFrameFlagList[0];
-                //_innerToFrameDragFlag._value = _tempFrameFlagList[1];
-                _innerToinnerDragFlag._value = _tempFrameFlagList[0];
-                _innerToFrameDragFlag._value = _tempFrameFlagList[1];
-                _innerToFormDragFlag._value = _tempFrameFlagList[2];
-                _logger.PrintInfo(String.Join(",", _tempFrameFlagList));
-                //SwitchNowMode();
+                //_logger.PrintInfo("*Key_UP , " + e.KeyCode.ToString("G"));
+                bool InnerIsOn = false;
+                _innerToinnerDragFlag._value = InnerIsOn;
+                _innerToFormDragFlag._value = !InnerIsOn;
+                _frameToFormDragFlag._value = !InnerIsOn;
+                _frameToFrameDragFlag._value = InnerIsOn;
                 SwitchDefault();
-                _logger.PrintInfo("KeyUp , " + _moveFrameKey.ToString("G"));
             }
         }
 
@@ -354,28 +388,47 @@ namespace TransportForm
 
         private void FormTransport_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == _moveInnerKey)
+            if (_moveFrameKey.IsMatch(e))
             {
-                _innerToinnerDragFlag._value = true;
-                _innerToFormDragFlag._value = !_innerToinnerDragFlag._value;
-                //_logger.PrintInfo("KeyDown , " + e.KeyCode.ToString("G"));
-                //_innerKeyTimer.Execute(_logger.PrintInfo, "KeyDown , " + e.KeyCode.ToString("G"));
-                _innerKeyTimer.Execute(value => _logger.PrintInfo(value.ToString()), "KeyDown , " + e.KeyCode.ToString("G"));
+                //_logger.PrintInfo("*KeyDown , " + e.KeyCode.ToString("G"));
+                bool FrameIsOn = true;
+                _frameToFrameDragFlag._value = FrameIsOn;
+                _frameToFormDragFlag._value = !FrameIsOn;
+                _innerToFrameDragFlag._value = FrameIsOn;
+                _innerToFormDragFlag._value = !FrameIsOn;
             }
-            else if (IsControlKeyPressed(e, _moveFrameKey))
+            else if (_moveInnerKey.IsMatch(e))
             {
-                _controlToControlDragFlag._value = true;
-                _controlToFormDragFlag._value = !_controlToControlDragFlag._value;
-                //Frameの時はInnerでもFrameを動かせるように
-                _tempFrameFlagList[0] = _innerToinnerDragFlag._value;
-                _innerToinnerDragFlag._value = false;
-                _tempFrameFlagList[1] = _innerToFrameDragFlag._value;
-                _innerToFrameDragFlag._value = true;
-                _tempFrameFlagList[2] = _innerToFrameDragFlag._value;
-                _innerToFormDragFlag._value = false;
-                //_logger.PrintInfo("KeyDown , " + e.KeyCode.ToString("G"));
-                _frameKeyTimer.Execute(value => _logger.PrintInfo(value.ToString()), "KeyDown , " + e.KeyCode.ToString("G"));
+                //_logger.PrintInfo("*KeyDown , " + e.KeyCode.ToString("G"));
+                bool InnerIsOn = true;
+                _innerToinnerDragFlag._value = InnerIsOn;
+                _innerToFormDragFlag._value = !InnerIsOn;
+                _frameToFormDragFlag._value = !InnerIsOn;
+                _frameToFrameDragFlag._value = InnerIsOn;
             }
+
+            //if (e.KeyCode == _moveInnerKey)
+            //{
+            //    //_innerToinnerDragFlag._value = true;
+            //    //_innerToFormDragFlag._value = !_innerToinnerDragFlag._value;
+            //    ////_logger.PrintInfo("KeyDown , " + e.KeyCode.ToString("G"));
+            //    ////_innerKeyTimer.Execute(_logger.PrintInfo, "KeyDown , " + e.KeyCode.ToString("G"));
+            //    _innerKeyTimer.Execute(value => _logger.PrintInfo(value.ToString()), "KeyDown , " + e.KeyCode.ToString("G"));
+            //}
+            //else if (IsControlKeyPressed(e, _moveFrameKey))
+            //{
+            //    //_frameToFrameDragFlag._value = true;
+            //    //_frameToFormDragFlag._value = !_frameToFrameDragFlag._value;
+            //    ////Frameの時はInnerでもFrameを動かせるように
+            //    //_tempFrameFlagList[0] = _innerToinnerDragFlag._value;
+            //    //_innerToinnerDragFlag._value = false;
+            //    //_tempFrameFlagList[1] = _innerToFrameDragFlag._value;
+            //    //_innerToFrameDragFlag._value = true;
+            //    //_tempFrameFlagList[2] = _innerToFrameDragFlag._value;
+            //    //_innerToFormDragFlag._value = false;
+            //    ////_logger.PrintInfo("KeyDown , " + e.KeyCode.ToString("G"));
+            //    _frameKeyTimer.Execute(value => _logger.PrintInfo(value.ToString()), "KeyDown , " + e.KeyCode.ToString("G"));
+            //}
             if (e.KeyCode == Keys.Y && e.Control)
             {
                 if (_form.Text == "")
@@ -390,12 +443,15 @@ namespace TransportForm
             }
             else if (e.KeyCode == Keys.T && e.Control)
             {
-                bool toOn = true;
                 if (_form.TransparencyKey == _form.BackColor)
                 {
-                    toOn = false;
+                    SwitchFlagsByTransparencyKey(false);
                 }
-                SwitchFlagsByTransparencyKey(toOn);
+                else
+                {
+                    SwitchFlagsByTransparencyKey(true);
+                }
+                
                 //SwitchFlagsByTransparencyKey(
                 //    (_form.TransparencyKey != _form.BackColor));
             }

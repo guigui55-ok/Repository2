@@ -7,73 +7,6 @@ using System.Collections.Generic;
 
 namespace TransportForm
 {
-
-    /// <summary>
-    /// draggerクラスで値を保持して、外部から変更したものを反映させるためのクラス
-    /// </summary>
-    public class IsEnableFlag
-    {
-        public bool _value;
-        public IsEnableFlag(bool flag=false)
-        {
-            _value = flag;
-        }
-    }
-
-    /// <summary>
-    /// draggerクラスで、移動を有効するときのKey設定
-    /// </summary>
-    public class EnableKeys
-    {
-        public Keys _key;
-        public Keys _controlKey;
-
-        public EnableKeys(Keys key, Keys controlKey=Keys.None)
-        {
-            _key = key;
-            _controlKey = controlKey;
-        }
-
-        public bool IsMatch(KeyEventArgs e)
-        {
-            bool retCon;
-            bool ret;
-            //Control以外は未対応
-            if (_controlKey == Keys.Control)
-            {
-                if (e.Control)
-                {
-                    retCon = true;
-                }
-                else
-                {
-                    retCon = false;
-                }
-            }
-            else
-            {
-                retCon = true;
-            }
-            if (_key != Keys.None)
-            {
-                if (e.KeyCode == _key)
-                {
-                    ret = true;
-                }
-                else
-                {
-                    ret = false;
-                }
-            }
-            else
-            {
-                ret = true;
-            }
-            return ret && retCon;
-        }
-    }
-
-
     // InnerContrl ControlMove用　ChangeLocation
     // ImageViewer.CommonModules のファイル・クラスと名前が競合するので 末尾にBを付与
     // このクラスは動作テスト用
@@ -96,16 +29,21 @@ namespace TransportForm
         public List<Point> _historyList = new List<Point> {  };
         //このキーが押された＋MouseDrag、AND、_isDragEnable=True で control移動をする
         //Keys.Noneの時は、_isDragEnable=Trueのみで移動する
-        public Keys _trigerKey = Keys.None;
+        public SwitchKeys _switchKeys = new SwitchKeys(Keys.None); // 未設定でもエラーにならないよう初期化する
         protected bool _isDownTrigerKey = false;
         
-        public ControlDraggerB(AppLogger logger, Control control,Control recieveEventControl)
+        public ControlDraggerB(AppLogger logger, Control control,Control recieveEventControl, SwitchKeys switchKeys)
         {
             //_enableKeys = enableKeys;
             _logger = logger;
             _control = control;
             _recieveControl = recieveEventControl;
             _isDragEnable = new IsDragEnable(true);
+            if (switchKeys != null)
+            {
+                _switchKeys = switchKeys;
+            }
+            _switchKeys.SetEventForControl(recieveEventControl);
             // イベントのインスタンスを生成
             //MouseEventHandler = new ViewImageMouseEventHandler();
             // このクラス内のメソッドをイベントへ紐づけ
@@ -183,7 +121,10 @@ namespace TransportForm
         }
         private void Control_MouseDown(object sender, MouseEventArgs e)
         {
-            PrintInfo("Control_MouseDown");
+            if (_isDragEnable._value)
+            {
+                PrintInfo("Control_MouseDown");
+            }
             IsDown = true;
             try
             {
@@ -214,4 +155,106 @@ namespace TransportForm
             }
         }
     }
+
+
+    // ################################################################################
+    /// <summary>
+    /// draggerクラスで値を保持して、外部から変更したものを反映させるためのクラス
+    /// </summary>
+    public class IsEnableFlag
+    {
+        public bool _value;
+        public IsEnableFlag(bool flag = false)
+        {
+            _value = flag;
+        }
+    }
+
+    /// <summary>
+    /// draggerクラスで、移動を有効するときのKey設定
+    /// このクラスでKeyが押されたかどうかを判定して、そのbool値を保持する
+    /// イベントの設定はSetEventForControlで行う
+    /// </summary>
+    public class SwitchKeys
+    {
+        public Keys _key;
+        public Keys _controlKey;
+        public IsEnableFlag _isEnableFlag;
+        public bool _isControlOnly;
+
+        public SwitchKeys(Keys key, Keys controlKey = Keys.None, bool isControlOnly = false)
+        {
+            _key = key;
+            _controlKey = controlKey;
+            _isControlOnly = isControlOnly;
+            _isEnableFlag = new IsEnableFlag();
+        }
+
+        public void SetEventForControl(Control control)
+        {
+            control.KeyDown += SwitchKeys_KeyDown;
+            control.KeyUp += SwitchKeys_KeyUp;
+        }
+
+        public void SwitchKeys_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (IsMatch(e))
+            {
+                _isEnableFlag._value = true;
+            }
+        }
+
+        public void SwitchKeys_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (IsMatch(e))
+            {
+                _isEnableFlag._value = false;
+            }
+        }
+
+        public bool IsMatch(KeyEventArgs e)
+        {
+            bool retCon;
+            bool ret;
+            //Control以外は未対応
+            if (_controlKey == Keys.Control)
+            {
+                if (e.Control)
+                {
+                    retCon = true;
+                }
+                else
+                {
+                    retCon = false;
+                }
+                //Controlキーのみで判定する
+                if (_isControlOnly)
+                {
+                    return retCon;
+                }
+            }
+            else
+            {
+                retCon = true;
+            }
+            //
+            if (_key != Keys.None)
+            {
+                if (e.KeyCode == _key)
+                {
+                    ret = true;
+                }
+                else
+                {
+                    ret = false;
+                }
+            }
+            else
+            {
+                ret = true;
+            }
+            return ret && retCon;
+        }
+    }
+
 }

@@ -2,3 +2,6 @@
 
 # CS0414: フィールド 'FileListControlListBox._isRecievedChangeFile' が割り当てられていますが、値は使用されていません
 dotnet_diagnostic.CS0414.severity = silent
+
+# IDE0044: 読み取り専用修飾子を追加します
+dotnet_diagnostic.IDE0044.severity = none

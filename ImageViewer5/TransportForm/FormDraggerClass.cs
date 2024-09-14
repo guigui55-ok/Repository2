@@ -43,6 +43,10 @@ namespace TransportForm
         {
             if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
             {
+                if (_isDragEnable._value)
+                {
+                    PrintInfo("MouseDown");
+                }
                 //位置を記憶する
                 _mousePoint = new Point(e.X, e.Y);
             }
@@ -50,9 +54,9 @@ namespace TransportForm
 
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
-            if (_isDragEnable._value)
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
             {
-                if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+                if (_isDragEnable._value)
                 {
                     PrintInfo("MouseMove > Up");
                     //_logger.PrintInfo(String.Format(_sendControl.Name + "__MouseMove>Up , {0}", _isDragEnable._value));
@@ -65,9 +69,10 @@ namespace TransportForm
         //マウスが動いたとき
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (_isDragEnable._value)
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
             {
-                if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+
+                if (_isDragEnable._value)
                 {
                     //_logger.PrintInfo(String.Format(_sendControl.Name + "__MouseMove , {0}", _isDragEnable._value));
                     //_historyList.Add(_mousePoint);
@@ -79,6 +84,7 @@ namespace TransportForm
                     //    this.Location.Y + e.Y - mousePoint.Y);
                 }
             }
+            
         }
     }
 }
