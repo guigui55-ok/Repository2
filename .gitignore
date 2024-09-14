@@ -6,3 +6,6 @@
 */bin/Reliease
 */obj/Release
 __test_*.*
+**/__test_log.log
+**/__test_log.txt
+**/__test_result_grep.txt
