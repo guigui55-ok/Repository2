@@ -29,11 +29,11 @@ namespace TransportForm
         {
             InitializeComponent();
             _logger = new AppLogger();
-            _draggerInnerToInner = new ControlDraggerB(_logger, pictureBox1, pictureBox1, new EnableKeys(Keys.Space));
-            _draggerInnerToFrame = new ControlDraggerB(_logger, panel1, pictureBox1, new EnableKeys(Keys.None, Keys.Control));
+            _draggerInnerToInner = new ControlDraggerB(_logger, pictureBox1, pictureBox1);
+            _draggerInnerToFrame = new ControlDraggerB(_logger, panel1, pictureBox1);
             _draggerInnerToForm = new FormDragger(_logger, this, pictureBox1);
             //
-            _draggerFrameToFrame = new ControlDraggerB(_logger, panel1, panel1, new EnableKeys(Keys.None, Keys.Control));
+            _draggerFrameToFrame = new ControlDraggerB(_logger, panel1, panel1);
             _draggerFrameToForm = new FormDragger(_logger, this, panel1);
             //
             _draggerFormToForm = new FormDragger(_logger, this, this);
@@ -52,12 +52,12 @@ namespace TransportForm
             //this.TransparencyKey = this.BackColor;  // Magentaを透明化
             //_transparentFormSwitch.SwitchFlagsByTransparencyKey(
             //    (this.TransparencyKey != this.BackColor));
-            _transparentFormSwitch.SwitchFlagsByTransparencyKey(false);
-            _transparentFormSwitch.SwitchFormTitleBarVisible(true);
+            //_transparentFormSwitch.SwitchFlagsByTransparencyKey(false);
+            //_transparentFormSwitch.SwitchFormTitleBarVisible(true);
 
             //_transparentFormSwitch.SwitchDefaultNotFormTitle_B_FreeInner();
             //_transparentFormSwitch.SwitchDefaultNotFormTitle_C_FreeFrame();
-            _transparentFormSwitch.SwitchDefaultNotFormTitle_A_MoveWindowMain();
+            //_transparentFormSwitch.SwitchDefaultNotFormTitle_A_MoveWindowMain();
 
         }
 
@@ -109,7 +109,7 @@ namespace TransportForm
                 {
                     toOn = false;
                 }
-                _transparentFormSwitch.SwitchFlagsByTransparencyKey(toOn);
+                //_transparentFormSwitch.SwitchFlagsByTransparencyKey(toOn);
                 //_transparentFormSwitch.SwitchFlagsByTransparencyKey(
                 //    (this.TransparencyKey == this.BackColor));
             }

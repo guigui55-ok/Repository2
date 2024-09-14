@@ -47,15 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlDraggerB.cs" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <Compile Include="ControlDraggerSwitcher.cs" />
-=======
     <Compile Include="ControlDraggerStatusX.cs" />
->>>>>>> c6b11a973b820b6778ad72236bb1c7223a857c9f
-=======
-    <Compile Include="ControlDraggerSwitcher.cs" />
->>>>>>> 981fce9 (240914-0240)
     <Compile Include="FormDraggerClass.cs" />
     <Compile Include="FormTransportTest.cs">
       <SubType>Form</SubType>

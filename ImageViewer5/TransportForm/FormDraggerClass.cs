@@ -15,19 +15,6 @@ namespace TransportForm
         Form _form;
         Control _sendControl;
         Point _mousePoint;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 981fce9 (240914-0240)
-        public IsEnableFlag _isDragEnable;
-        public FormDragger(AppLogger logger, Form form, Control recieveControl)
-        {
-            _logger = logger;
-            _form = form;
-            _recieveControl = recieveControl;
-            _isDragEnable = new IsEnableFlag(true);
-<<<<<<< HEAD
-=======
         public IsDragEnable _isDragEnable;
         public List<Point> _historyList = new List<Point> { };
         public FormDragger(AppLogger logger, Form form, Control sendControl)
@@ -36,9 +23,6 @@ namespace TransportForm
             _form = form;
             _sendControl = sendControl;
             _isDragEnable = new IsDragEnable(true);
->>>>>>> c6b11a973b820b6778ad72236bb1c7223a857c9f
-=======
->>>>>>> 981fce9 (240914-0240)
             //_form.MouseDown += Form1_MouseDown;
             //_form.MouseMove += Form1_MouseMove;
             _sendControl.MouseDown += Form1_MouseDown;
@@ -83,20 +67,10 @@ namespace TransportForm
         {
             if (_isDragEnable._value)
             {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                if (_isDragEnable._value)
-                {
-=======
                 if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
                 {
                     //_logger.PrintInfo(String.Format(_sendControl.Name + "__MouseMove , {0}", _isDragEnable._value));
                     //_historyList.Add(_mousePoint);
->>>>>>> c6b11a973b820b6778ad72236bb1c7223a857c9f
-=======
-                if (_isDragEnable._value)
-                {
->>>>>>> 981fce9 (240914-0240)
                     _form.Left += e.X - _mousePoint.X;
                     _form.Top += e.Y - _mousePoint.Y;
                     //または、つぎのようにする

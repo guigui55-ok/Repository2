@@ -44,9 +44,6 @@ namespace TransportForm
             _frameToForm._value = true;
             _FormToForm._value = true;
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> 981fce9 (240914-0240)
     }
 }

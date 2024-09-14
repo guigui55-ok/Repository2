@@ -45,3 +45,4 @@ C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Release\FileListManagerSample.pdb
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\bin\Release\CommonModulesProject.dll
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\bin\Release\CommonModulesProject.pdb
+C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Release\FileListManagerSample.FileListManagerSettingForm.resources

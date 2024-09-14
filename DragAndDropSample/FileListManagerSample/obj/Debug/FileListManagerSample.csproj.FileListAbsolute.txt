@@ -22,10 +22,10 @@ C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Debug\Interop.IWshRuntimeLibrary.dll
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.csproj.ResolveComReference.cache
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.FileListManagerSampleForm.resources
+C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.FileListManagerSettingForm.resources
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.Properties.Resources.resources
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.csproj.GenerateResource.cache
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.csproj.CoreCompileInputs.cache
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.csproj.CopyComplete
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.exe
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.pdb
-C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Debug\FileListManagerSample.FileListManagerSettingForm.resources

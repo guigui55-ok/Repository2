@@ -1,0 +1,837 @@
+2024/09/14 13:32:33 452351    ImageViewerArgs.ParseArguments
+2024/09/14 13:32:33 455343    read args
+2024/09/14 13:32:33 462326    ImageMainFrame_Load
+2024/09/14 13:32:33 470304    FormMain_Load
+2024/09/14 13:32:33 470304    FormMain_Load End
+2024/09/14 13:32:33 471300    ImageMainFrame > InitializeValues
+2024/09/14 13:32:33 487257    ImageViewerMainClass > InitializeValues
+2024/09/14 13:32:33 492244    TransportForm.TransparentFormSwitch.TransparencyKey = Empty, False
+2024/09/14 13:32:33 493241    ViewImageFunction > InitializeValue
+2024/09/14 13:32:33 494238    ShowSubFormFileList
+2024/09/14 13:32:33 495238    SubThread=1
+2024/09/14 13:32:33 509198    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:33 510196    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:32:33 524159    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/14 13:32:33 525156    fileFilterConditionList = \.jpg$,\.jpeg$,\.png$,\.bmp$,\.gif$,\.tiff$,\.tif$,\.webp$
+2024/09/14 13:32:33 526154    fileIgnoreConditionList = 
+2024/09/14 13:32:33 530142    Dirctory.GetFiles.Length = 14
+2024/09/14 13:32:33 538122    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/14 13:32:33 540115    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/14 13:32:33 543109      SetDirecoryPath=C:\Users\OK\source\repos\test_media_files\test_jpg
+2024/09/14 13:32:33 543109    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:33 544106    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:33 545103    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:33 546101     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:32:33 546101    SelectedFile  > sender = C:\Users\OK\source\repos\test_media_files\test_jpg\01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg
+2024/09/14 13:32:33 547097    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:33 553081    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:33 558095    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:33 558095    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 13:32:33 559066    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:33 559066    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:33 560062    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:33 560062     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:32:33 562057    SelectedFile  > sender = C:\Users\OK\source\repos\test_media_files\test_jpg\01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg
+2024/09/14 13:32:33 562057    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:33 566047    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:33 567044    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:33 568041    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:33 568041    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:33 569039     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:32:33 569039    SelectedFile  > sender = C:\Users\OK\source\repos\test_media_files\test_jpg\01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg
+2024/09/14 13:32:33 569039    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:33 573027    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:33 575022    first Path = C:\Users\OK\source\repos\test_media_files\test_jpg\01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg
+2024/09/14 13:32:33 575022    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 13:32:33 578015    ListJoin = 01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg,02_450-2010011100523260119.jpg,03_450-2018022021381680165.jpg,04_450-20190710120721245784.jpg,05_25400841.jpg,06_40586195-M-imagenavi.jpg,07_83734773.png,08_72484654_480x480.jpg,ocr_test2.jpg,ocr_test2_ret.jpg,Screenshot_20230205-123842.jpg,Screenshot_20230205-123842_ret.jpg,Screenshot_20230205-134825.jpg,Screenshot_20230205-134825_ret.jpg
+2024/09/14 13:32:33 579013    ChangeFileListEvent  > sender.Length = 14
+2024/09/14 13:32:33 630873    ImageViewerMainClass > ShowImageAfterInitialize
+2024/09/14 13:32:33 634862    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:33 635861    ViewImageFunction > InitializeValue_LoadAfter
+2024/09/14 13:32:33 636857    ## ApplySettings > ApplyArgs
+2024/09/14 13:32:33 637854    Args winSize = {Width=580, Height=630}
+2024/09/14 13:32:33 641844    Args winLoc = {X=1343,Y=10}
+2024/09/14 13:32:33 645832    ApplyArgsImageViewerFrame > ApplyArgs
+2024/09/14 13:32:33 646830    count = 0
+2024/09/14 13:32:33 646830    ----- frameNumber = 1
+2024/09/14 13:32:33 647827    dictStr = frame-number : 1,folder : C:\Images,frame-size : 700x500,frame-location : 100,100,subfolders : True,random : True,slideshow : True,interval : 2000
+2024/09/14 13:32:33 648826    Args folderPath = C:\Images
+2024/09/14 13:32:33 648826    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/14 13:32:33 649823    fileFilterConditionList = \.jpg$,\.jpeg$,\.png$,\.bmp$,\.gif$,\.tiff$,\.tif$,\.webp$
+2024/09/14 13:32:33 650820    fileIgnoreConditionList = 
+2024/09/14 13:32:33 655806     Path Not Exists. path=C:\Images
+2024/09/14 13:32:33 657801      SetDirecoryPath=
+2024/09/14 13:32:33 658798    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:33 659796    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:32:33 659796    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:33 660793    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 13:32:33 661792    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:33 661792    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:32:33 662788    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:33 662788    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:32:33 663785    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/14 13:32:33 664783    first Path = 
+2024/09/14 13:32:33 664783    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 13:32:33 668771    ListJoin = 
+2024/09/14 13:32:33 669769     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:32:33 669769    ChangeFileListEvent  > sender.Length = 0
+2024/09/14 13:32:33 670767    Args frameSize = {Width=700, Height=500}
+2024/09/14 13:32:33 672761    Args frameLoc = {X=100,Y=100}
+2024/09/14 13:32:33 674758    Args readSubFolderBool = True
+2024/09/14 13:32:33 674758    Setting.FlagChange > ChangeIncludeSubFolder = True
+2024/09/14 13:32:33 674758    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/14 13:32:33 675753    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/14 13:32:33 675753    fileFilterConditionList = \.jpg$,\.jpeg$,\.png$,\.bmp$,\.gif$,\.tiff$,\.tif$,\.webp$
+2024/09/14 13:32:33 676750    fileIgnoreConditionList = 
+2024/09/14 13:32:33 677748     Path Not Exists. path=
+2024/09/14 13:32:33 677748      SetDirecoryPath=
+2024/09/14 13:32:33 678745    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:33 679742    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:32:33 680741    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:33 680741    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 13:32:33 681738    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:33 682734    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:32:33 682734    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:33 683732    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:32:33 683732    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/14 13:32:33 684730    first Path = 
+2024/09/14 13:32:33 684730    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 13:32:33 685727    ListJoin = 
+2024/09/14 13:32:33 686724     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:32:33 686724    ChangeFileListEvent  > sender.Length = 0
+2024/09/14 13:32:33 687721    Args randomBool = True
+2024/09/14 13:32:33 687721    Setting.FlagChange > ChangeListRandom = True
+2024/09/14 13:32:33 688719    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 13:32:33 692708    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:33 692708    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:32:33 693705    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:33 693705    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 13:32:33 694703    ListJoin = 
+2024/09/14 13:32:33 694703     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:32:33 695699    ChangeFileListEvent  > sender.Length = 0
+2024/09/14 13:32:33 695699    Args slideShowIntervalInt = 2000
+2024/09/14 13:32:33 695699    Args slideShowBool = True
+2024/09/14 13:32:33 696697    _SlideShowTimer.Start
+2024/09/14 13:32:33 696697    Interval = 2000
+2024/09/14 13:32:33 740580    Args fileListtWindow = 0
+2024/09/14 13:32:33 748559    FormMain_Paint First
+2024/09/14 13:32:33 748559    FormMain.Size = {Width=580, Height=630}
+2024/09/14 13:32:33 754543    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/14 13:32:33 756539    ImageViewerMainClass > ShowImageAfterInitialize
+2024/09/14 13:32:33 758533    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/14 13:32:33 759531    ViewImageMain > Path Not Exists. []
+2024/09/14 13:32:33 761525    ViewImageModule.ViewImage.FileNotExists:
+2024/09/14 13:32:33 761525    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:33 762522    ImageIsNull
+2024/09/14 13:32:33 763519    ViewImageModule.ViewImage.getImage : isExistsImage : false
+2024/09/14 13:32:35 694556    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:32:35 697555    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory
+2024/09/14 13:32:35 699549    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory > _files.DirectoryPath Not Exists [path=]
+2024/09/14 13:32:37 697237    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:32:37 699234    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory
+2024/09/14 13:32:37 705218    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory > _files.DirectoryPath Not Exists [path=]
+2024/09/14 13:32:39 688919    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:32:39 689929    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory
+2024/09/14 13:32:39 692914    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory > _files.DirectoryPath Not Exists [path=]
+2024/09/14 13:32:41 697094    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:32:41 697094    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory
+2024/09/14 13:32:41 698092    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory > _files.DirectoryPath Not Exists [path=]
+2024/09/14 13:32:43 695457    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:32:43 695457    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory
+2024/09/14 13:32:43 696459    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory > _files.DirectoryPath Not Exists [path=]
+2024/09/14 13:32:44 080792    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/14 13:32:44 080792    fileFilterConditionList = \.jpg$,\.jpeg$,\.png$,\.bmp$,\.gif$,\.tiff$,\.tif$,\.webp$
+2024/09/14 13:32:44 081790    fileIgnoreConditionList = 
+2024/09/14 13:32:44 084783    Dirctory.GetFiles.Length = 401
+2024/09/14 13:32:44 086777    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/14 13:32:44 086777    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/14 13:32:44 090766      SetFileListFromPath Failed
+2024/09/14 13:32:44 091763      SetDirecoryPath=J:\ZMyFolder_2\jpgbest
+2024/09/14 13:32:44 091763    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:44 092761    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:44 092761    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:44 093758     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:32:44 093758    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\test.jpeg
+2024/09/14 13:32:44 093758    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:44 105726    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:44 108719    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:44 108719    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 13:32:44 110738    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:44 110738    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:44 111710    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:44 111710     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:32:44 112708    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\testFolder\Folder02\020_Folder02___17050303blog_import_51a62e78599a3054020.png
+2024/09/14 13:32:44 112708    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:44 119688    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:44 121683    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:44 121683    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:44 122681    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:44 122681     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:32:44 122681    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\testFolder\Folder02\020_Folder02___17050303blog_import_51a62e78599a3054020.png
+2024/09/14 13:32:44 123678    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:44 127667    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:44 129662    first Path = J:\ZMyFolder_2\jpgbest\testFolder\Folder02\020_Folder02___17050303blog_import_51a62e78599a3054020.png
+2024/09/14 13:32:44 129662    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 13:32:44 134649    ListJoin = 020_Folder02___17050303blog_import_51a62e78599a3054020.png,007_Folder03___160501001007.gif,072_Folder02___無邪気の楽園 カラー版 第03巻121072.png,016_Folder03___161225112221017016.gif,019_Folder02___17050303blog_import_51a583e37436f043019.png,170523d531345a-s027.jpg,livejupiter_1464670858_101.jpg,003_Folder02___080b848059f28cebf0e9dc78344948ff003.png,4b2273bf65d7f6fd77288cdb88e481e8.png,140703-419.jpg,dcf046d0.jpg,005_Folder01___151004-503005.jpg,057_Folder02___d56341f82bfcc577ce36e2501d2f57d7057.png,048_Folder03___Guf4epq048.gif,To LOVEる ダークネス 第09巻00106.jpeg,037_Folder03___38037.gif,170523bb96a5f5-s025.jpg,065_Folder02___VNsTDhA065.png,17052308b975e1002.jpg,068_Folder02___無邪気の楽園 カラー版 第03巻040068.png,1705236e907fd1-s014.jpg,006_Folder03___160202315006.gif,h499Ej4.jpg,27362393.gif,010_Folder01___5d36d9bb-s010.jpg,039_Folder02___5f8031131b10198f13ee6f271dbf9e00039.png,136.png,151004-503.jpg,1bab07597aa1440d395506a153b24610.png,066_Folder02___zzz2afc4238-s066.png,37c2cacdecbf817381e69c8f102f6b7e.gif,170523ea594980031.jpg,133.png,wpid-1443351588916.gif,021_Folder02___17050303e73c1735080021.png,036_Folder03___37c2cacdecbf817381e69c8f102f6b7e036.gif,151019214.jpg,17052345c94ab4007.jpg,049_Folder03___kim_uttg_24049.gif,wpid-1443351378900.gif,1705236005598b013.jpg,20150330001133fce.png,063_Folder02___livejupiter_1455441376_38501063.png,2c57006d-s.jpg,045_Folder03___d567f49a9b6282998f30bbcec109fc5d8c21dd5e045.gif,dcf046d0[1].jpg,005_Folder03___160202314005.gif,027_Folder03___1612254bb9c657069027.gif,1612254bb9c657069.gif,062_Folder02___i_20150504144054062.png,170523573e49ce-s010.jpg,あやみIMG_0836000008.jpg,a21.png,029_Folder03___25db7b23029.gif,7b00cb25.gif,160202309.gif,1412912917805.png,17052398e6e511-s018.jpg,053_Folder02___blog_import_51a4b5f743704053.png,012_Folder02___1705030235cc681a091012.png,004_Folder02___132004.png,047_Folder03___eb2cdd9f047.gif,ちなんぼ003000003.jpg,055_Folder03___wpid-1443351378900055.gif,044_Folder03___a5f6e0ac044.gif,004_Folder01___151004-501 (1)004.jpg,161225161019011036.gif,002_Folder03___1-2002.gif,029_Folder02___3b70ae511b622ed2f2796dbe7e95f878029.png,047_Folder02___a20047.png,170523a52e97e3-s019.jpg,033_Folder02___5736beaeb6cc641fd5df929b42354a07033.png,038_Folder03___40SJCFT038.gif,051_Folder03___oppai421051.gif,5736beaeb6cc641fd5df929b42354a07 (1).png,40SJCFT.gif,034_Folder02___576ec78c4169be06cc90c215ddf04333 (1)034.png,031_Folder03___2f727e88031.gif,ditua_dkid5t_1.gif,002_testFolder___To LOVEる ダークネス 第07巻00171002.jpeg,014_Folder02___17050302f24fe0d9180014.png,1612257458c8db084.gif,161225161019013038.gif,803c68db5757b355d5a612e8dd0cd835.png,5d36d9bb-s.jpg,2c57006d-s.jpg,035_Folder03___356_1035.gif,010_Folder02___1412912917805010.png,036_Folder02___59036.png,025_Folder02___20025.png,17052359325466011.png,151004-501 (1).jpg,dadf14e1e1ff50521cc5e2a2145cb7c3.png,009_Folder03___160501006009.gif,057_Folder03___wpid-1443354549124057.gif,panchira_kaze023.gif,045_Folder02___91e7fc53bca7cfbc8bd0aee3c99657b7045.png,032_Folder03___30fa3b11032.gif,1705235547b1a2009.jpg,To LOVEる ダークネス 第04巻00192.jpeg,032_Folder02___5736beaeb6cc641fd5df929b42354a07 (1)032.png,35.gif,170523b868090a023.jpg,livejupiter_1453455051_47501.jpg,67434a161c71922f29a4e8cb42e7b4a1-650x915s.png,5736beaeb6cc641fd5df929b42354a07.png,035_Folder02___576ec78c4169be06cc90c215ddf04333035.png,西村理香_15_1605320.jpg,160501015.gif,026_Folder03___1612253188941b063026.gif,170523025a5bd2-s001.jpg,無邪気の楽園 カラー版 第03巻131.png,041_Folder03___70-1041.gif,livejupiter_1455441376_38501.png,051_Folder02___ad2f0860f11255cb6981ec5105ae05f5051.png,054_Folder02___cb3b91c8054.png,161225932b1ad3094.gif,7a12e2822d215283687db4d26c8ca9c4.png,056_Folder03___wpid-1443351588916056.gif,あやみIMG_0833000005.jpg,To LOVEる ダークネス 第07巻00172.jpeg,028_Folder02___38cdb593b51f1e7c2ef8b8e90d813eab028.png,山口みなみ_かけがえのない時間0014.jpg,023_Folder03___161225161019011036023.gif,046_Folder02___9c120afc81493acc49c47c80e0b55b6f046.png,001_Folder02___02147b70001.png,70-1.gif,002_Folder02___027dd49d6da8f0b5d0a8fa03c711ce41002.png,037_Folder02___5bb03508cf84c6321303132250b48f8b037.png,1705234d0eb2b2a9c45d12876c4ef062911b0c6decff671473700807-s008.jpg,054_Folder03___panchira_kaze040054.gif,panchira_kaze038.gif,3d4eae625606d7bd378fe890c9d423a2.png,a5f6e0ac.gif,027dd49d6da8f0b5d0a8fa03c711ce41.png,011_Folder01___blog_import_51a50ffb6b5dc011.jpg,無邪気の楽園 カラー版 第03巻119.png,835849b3ea967bf0b6762a9930c946d5.png,013_Folder03___160501016013.gif,2730017c.gif,576ec78c4169be06cc90c215ddf04333 (1).png,020_Folder03___161225160620003032020.gif,030_Folder03___2730017c030.gif,948f3c2e.gif,013_Folder01___rk aa (IV) [渋谷書店] 無毛少女生撮専科 07 佐藤かすみ2_x264.mp4_000376983013.jpg,17050303e73c1735080.png,024_Folder03___161225161019012037024.gif,161225160620018033.gif,039_Folder03___5Bc2bfe039.gif,080b848059f28cebf0e9dc78344948ff.png,5f8031131b10198f13ee6f271dbf9e00.png,150825114.jpg,008_Folder03___160501002008.gif,011_Folder03___160501012011.gif,576ec78c4169be06cc90c215ddf04333.png,kim_uttg_24.gif,170523aa6581df020.jpg,cb3b91c8.png,02147b70.png,170523ddc69d7b030.jpg,009_Folder01___56fe9d9f009.jpg,042_Folder03___7b00cb25042.gif,d6f8d77f6f98d34f6ef31312f017efaf.png,あやみIMG_0833000005.jpg,160202314.gif,西村理香_AliceClub&サタン05445.jpg,003_testFolder___To LOVEる ダークネス 第07巻00172003.jpeg,006_Folder01___151019214006.jpg,wpid-1443354549124.gif,1705235bef4622-s012.jpg,3b70ae511b622ed2f2796dbe7e95f878.png,041_Folder02___7a12e2822d215283687db4d26c8ca9c4041.png,060_Folder02___dadf14e1e1ff50521cc5e2a2145cb7c3060.png,1705030242bb6f4f099.png,018_Folder03___161225112224019018.gif,043_Folder02___835849b3ea967bf0b6762a9930c946d5043.png,022_Folder03___161225160831-314034022.gif,042_Folder02___803c68db5757b355d5a612e8dd0cd835042.png,034_Folder03___35034.gif,あやみIMG_0835000007[1].jpg,1705232ded2aca-s005.jpg,050_Folder03___LaQx3d5050.gif,ee1b983d.jpg,a20.png,無邪気の楽園 カラー版 第03巻026.png,d567f49a9b6282998f30bbcec109fc5d8c21dd5e.gif,無邪気の楽園 カラー版 第03巻120.png,059_Folder03___wpid-1443359335098059.gif,wpid-1443355772469.gif,160501016.gif,009_Folder02___137009.png,西村理香_15_1605305.jpg,6e5e03a7-s.jpg,30fa3b11.gif,21.png,5bb03508cf84c6321303132250b48f8b.png,017_Folder02___17050302images (2)220017.png,008_Folder01___43db7191-s008.jpg,無邪気の楽園 第04巻027.png,天野美由紀14迎えに来てね0027.jpg,008_Folder02___136008.png,downblouse_chira003.jpg,ちなんぼ001000001.jpg,d273ff5f-s.png,17050302images (2)220.png,013_Folder02___1705030242bb6f4f099013.png,015_Folder02___17050302f2d0fa7f181015.png,38.gif,001_testFolder___To LOVEる ダークネス 第05巻00175001.jpeg,161225112223018.gif,to_2572_004s.png,027_Folder02___21027.png,5Bc2bfe.gif,004_testFolder___To LOVEる ダークネス 第07巻00173004.jpeg,32.gif,91e7fc53bca7cfbc8bd0aee3c99657b7.png,001_Folder03___010001.gif,1612253188941b063.gif,161225160831-314034.gif,161225112225020.gif,044_Folder02___900eaa7e0d96fda8296571afa0f0f3c6044.png,To LOVEる とらぶる ダークネス カラー版 第14巻00026.jpeg,059_Folder02___d6f8d77f6f98d34f6ef31312f017efaf059.png,無邪気の楽園 カラー版 第03巻040.png,LaQx3d5.gif,25db7b23.gif,山口みなみ_かけがえのない時間0060.jpg,17050302f2d0fa7f181.png,livejupiter_1550197632_1401.jpg,073_Folder02___無邪気の楽園 カラー版 第03巻131073.png,074_Folder02___無邪気の楽園 第04巻027074.png,028_Folder03___161225mjkr6_mn6rt4_23213028.gif,160501001.gif,To LOVEる ダークネス 第07巻00171.jpeg,069_Folder02___無邪気の楽園 カラー版 第03巻091069.png,38cdb593b51f1e7c2ef8b8e90d813eab.png,049_Folder02___a36049.png,160501002.gif,021_Folder03___161225160620018033021.gif,170523d82767d8-s029.jpg,西村理香_15_1605352.jpg,076_Folder02___無邪気の楽園 第04巻031076.png,055_Folder02___d01e9675fad215527696d66876bc6642055.png,1705237e8a9d71-s016.jpg,無邪気の楽園 第04巻033.png,017_Folder03___161225112223018017.gif,160501012.gif,Darkness 6_082.jpg,170523aacc64d6-s021.jpg,161225112221017.gif,b5b1162a-s.jpg,161225160620003032.gif,無邪気の楽園 カラー版 第03巻121.png,1705231d89da5f-s004.jpg,025_Folder03___161225161019013038025.gif,170523b972b2a024.jpg,005_Folder02___133005.png,160501006.gif,ちなんぼ002000002.jpg,070_Folder02___無邪気の楽園 カラー版 第03巻119070.png,1776c79c.png,004_Folder03___160202313004.gif,1705237c1d790e015.jpg,077_Folder02___無邪気の楽園 第04巻033077.png,blog_import_51a4b5f743704.png,a3f7253e-s.jpg,170523d81ab004-s028.jpg,156314964126s.jpg,161225161019012037.gif,i_20131125090308s.png,356_1.gif,132.png,eb2cdd9f.gif,56fe9d9f.jpg,003_Folder01___150825114003.jpg,170523413777a7006.gif,1612252a14e684061.gif,17050303blog_import_51a62e78599a3054.png,17050302images (1)208.png,25f9662c-s.jpg,To LOVEる ダークネス 第12巻00136.jpeg,Guf4epq.gif,006_Folder02___134006.png,To LOVEる ダークネス 第07巻00173.jpeg,001_Folder01___140703-419001.jpg,1705030235cc681a091.png,019_Folder03___161225112225020019.gif,ace21392.jpg,15.jpg,161225b10e5c46103.gif,137.png,040_Folder02___67434a161c71922f29a4e8cb42e7b4a1-650x915s040.png,012_Folder03___160501015012.gif,160202315.gif,160501018.gif,161225mjkr6_mn6rt4_23213.gif,053_Folder03___panchira_kaze038053.gif,あやみIMG_0835000007.jpg,071_Folder02___無邪気の楽園 カラー版 第03巻120071.png,西村理香_15_1605343.jpg,067_Folder02___無邪気の楽園 カラー版 第03巻026067.png,d56341f82bfcc577ce36e2501d2f57d7.png,59.png,To LOVEる ダークネス 第06巻00084.jpeg,blog_import_51a50ffb6b5dc.jpg,048_Folder02___a21048.png,1612259a0afe87096.gif,7729f167-s.jpg,170523d48b5f91026.jpg,9c120afc81493acc49c47c80e0b55b6f.png,17050303blog_import_51a583e37436f043.png,無邪気の楽園 第04巻030.png,046_Folder03___ditua_dkid5t_1046.gif,161225e90e5358155.gif,d633435d1d3ce267af64d9a6b64e09f2.png,161225112224019.gif,018_Folder02___17050302images237018.png,a38.png,無邪気の楽園 第04巻031.png,014_Folder03___160501018014.gif,oppai421.gif,033_Folder03___32033.gif,160613-202.gif,西村理香_AliceClub&サタン05459.jpg,20.png,023_Folder02___1776c79c023.png,056_Folder02___d273ff5f-s056.png,5cc0ona.gif,9ee097f9-s.jpg,135.png,BkDGPzMCYAE5abs.jpg,161225250dfffc058.gif,010.gif,007_Folder02___135007.png,wpid-1443359335098.gif,043_Folder03___948f3c2e043.gif,012_Folder01___ee1b983d012.jpg,あやみIMG_0834000006.jpg,無邪気の楽園 カラー版 第03巻091.png,1-2.gif,064_Folder02___to_2572_004s064.png,058_Folder03___wpid-1443355772469058.gif,050_Folder02___a38050.png,003_Folder03___160202309003.gif,030_Folder02___3d4eae625606d7bd378fe890c9d423a2030.png,17050302images237.png,061_Folder02___i_20131125090308s061.png,2f727e88.gif,052_Folder02___asaloon_1500050481_73402052.png,17052311721601-s003.jpg,5d00b7218dd86ffa6f65b6de82f630f1.png,002_Folder01___15002.jpg,rk aa (IV) [渋谷書店] 無毛少女生撮専科 07 佐藤かすみ2_x264.mp4_000376983.jpg,005_testFolder___To LOVEる ダークネス 第12巻00136005.jpeg,To LOVEる ダークネス 第05巻00175.jpeg,17052359325466011.png,161225700d9b38082.gif,test.jpeg,016_Folder02___17050302images (1)208016.png,livejupiter_1550197632_1402.jpg,161225blog_import_51a62e78599a3124.png,022_Folder02___17052359325466011022.png,panchira_kaze040.gif,43db7191-s.jpg,160501012 (1).gif,15562350469.jpg,024_Folder02___1bab07597aa1440d395506a153b24610024.png,西村理香_15_1605342.jpg,170523b4fa3a56-s022.jpg,058_Folder02___d633435d1d3ce267af64d9a6b64e09f2058.png,tumblr_ohesvgAuRA1u8m4aeo4_1280.jpg,011_Folder02___161225blog_import_51a62e78599a3124011.png,d01e9675fad215527696d66876bc6642.png,026_Folder02___20150330001133fce026.png,32b870c1-s.jpg,007_Folder01___2c57006d-s007.jpg,040_Folder03___5cc0ona040.gif,010_Folder03___160501012 (1)010.gif,075_Folder02___無邪気の楽園 第04巻030075.png,17050302f24fe0d9180.png,134.png,052_Folder03___panchira_kaze023052.gif,031_Folder02___4b2273bf65d7f6fd77288cdb88e481e8031.png,i_20150504144054.png,asaloon_1500050481_73402.png,zzz2afc4238-s.png,038_Folder02___5d00b7218dd86ffa6f65b6de82f630f1038.png,015_Folder03___160613-202015.gif,VNsTDhA.png,ad2f0860f11255cb6981ec5105ae05f5.png,900eaa7e0d96fda8296571afa0f0f3c6.png,b59d2f12-s.jpg,160202313.gif,a36.png
+2024/09/14 13:32:44 135645    ChangeFileListEvent  > sender.Length = 394
+2024/09/14 13:32:45 111413    TransportForm.ControlDraggerB > pictureBox_ImageMain -> pictureBox_ImageMain > Control_MouseDown
+2024/09/14 13:32:45 112411    TransportForm.ControlDraggerB > pictureBox_ImageMain -> imageMainFrame1 > Control_MouseDown
+2024/09/14 13:32:45 218752    CommonControlUtilityModule.JudgeClickRightOrLeftChild > ClickLeft
+2024/09/14 13:32:45 219750    CommonUtility.FileListUtility.FileListManager > MovePreviousDirectory
+2024/09/14 13:32:45 220748    CommonUtility.FileListUtility.DirectoryGetter > GetPreviousDirectory
+2024/09/14 13:32:45 220748    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/14 13:32:45 221745    CommonUtility.FileListUtility.DirectoryGetter > GetDeepestAndLastDirectory
+2024/09/14 13:32:45 222743    CommonUtility.FileListUtility.DirectoryGetter > GetLastDirectory
+2024/09/14 13:32:45 222743    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/14 13:32:45 222743     dirs.Length < 1[Child Directory Nothing]
+2024/09/14 13:32:45 223739      Child Directory Nothing
+2024/09/14 13:32:45 223739    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/14 13:32:45 224737    fileFilterConditionList = \.jpg$,\.jpeg$,\.png$,\.bmp$,\.gif$,\.tiff$,\.tif$,\.webp$
+2024/09/14 13:32:45 224737    fileIgnoreConditionList = 
+2024/09/14 13:32:45 225734    Dirctory.GetFiles.Length = 14
+2024/09/14 13:32:45 225734    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/14 13:32:45 226731    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/14 13:32:45 233570      SetFileListFromPath Failed
+2024/09/14 13:32:45 233570      SetDirecoryPath=J:\ZMyFolder_2\0test file
+2024/09/14 13:32:45 234568    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:45 234568    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:45 235565    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:45 235565    Item is Nothing
+2024/09/14 13:32:45 236563    SelectedFile  > sender = J:\ZMyFolder_2\0test file\161225112221017.gif
+2024/09/14 13:32:45 236563    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:45 255903    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:45 255903    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 13:32:45 256873    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:45 256873    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:45 257870    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:45 257870    Item is Nothing
+2024/09/14 13:32:45 258868    SelectedFile  > sender = J:\ZMyFolder_2\0test file\r084442598B.jpg
+2024/09/14 13:32:45 258868    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:45 266848    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:45 268844    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:45 269840    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:45 269840    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:45 270837    Item is Nothing
+2024/09/14 13:32:45 270837    SelectedFile  > sender = J:\ZMyFolder_2\0test file\r084442598B.jpg
+2024/09/14 13:32:45 271834    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:45 276821    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:45 277816    first Path = J:\ZMyFolder_2\0test file\r084442598B.jpg
+2024/09/14 13:32:45 278816    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 13:32:45 319706    ListJoin = r084442598B.jpg,miad00978pl.jpg,r084466167B.jpg,2019120107364242.jpg,161225112221017.gif,67134f72-s.jpg,2019121011151111.jpg,20110210022937.png,r084459013B.jpg
+2024/09/14 13:32:45 319706    ChangeFileListEvent  > sender.Length = 9
+2024/09/14 13:32:45 320702    ImageViewer5.ImageControl.ImageMainClass > ReadFileEvent
+2024/09/14 13:32:45 325688    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:45 327684    TransportForm.FormDragger > pictureBox_ImageMain -> FormMain > MouseMove > Up
+2024/09/14 13:32:45 699008    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:32:45 700012    CommonUtility.FileListUtility.Files > MoveNext index=1
+2024/09/14 13:32:45 701009    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:45 702007    SelectedFile  > sender = J:\ZMyFolder_2\0test file\miad00978pl.jpg
+2024/09/14 13:32:45 703006    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:45 720146    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:45 918813    TransportForm.ControlDraggerB > pictureBox_ImageMain -> pictureBox_ImageMain > Control_MouseDown
+2024/09/14 13:32:45 920815    TransportForm.ControlDraggerB > pictureBox_ImageMain -> imageMainFrame1 > Control_MouseDown
+2024/09/14 13:32:46 050522    CommonControlUtilityModule.JudgeClickRightOrLeftChild > ClickLeft
+2024/09/14 13:32:46 051519    CommonUtility.FileListUtility.Files > MovePrevious index=0
+2024/09/14 13:32:46 051519    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:46 051519    SelectedFile  > sender = J:\ZMyFolder_2\0test file\r084442598B.jpg
+2024/09/14 13:32:46 052518    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:46 057531    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:46 060495    ImageViewer5.ImageControl.ImageMainClass > ReadFileEvent
+2024/09/14 13:32:46 065482    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:46 067478    TransportForm.FormDragger > pictureBox_ImageMain -> FormMain > MouseMove > Up
+2024/09/14 13:32:46 538359    TransportForm.ControlDraggerB > pictureBox_ImageMain -> pictureBox_ImageMain > Control_MouseDown
+2024/09/14 13:32:46 539359    TransportForm.ControlDraggerB > pictureBox_ImageMain -> imageMainFrame1 > Control_MouseDown
+2024/09/14 13:32:46 637590    CommonControlUtilityModule.JudgeClickRightOrLeftChild > ClickLeft
+2024/09/14 13:32:46 637590    CommonUtility.FileListUtility.FileListManager > MovePreviousDirectory
+2024/09/14 13:32:46 638581    CommonUtility.FileListUtility.DirectoryGetter > GetPreviousDirectory
+2024/09/14 13:32:46 638581    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/14 13:32:46 639578    CommonUtility.FileListUtility.DirectoryGetter > GetDeepestAndLastDirectory
+2024/09/14 13:32:46 639578    CommonUtility.FileListUtility.DirectoryGetter > GetLastDirectory
+2024/09/14 13:32:46 640574    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/14 13:32:46 640574    CommonUtility.FileListUtility.DirectoryGetter > GetLastDirectory
+2024/09/14 13:32:46 641571    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/14 13:32:46 641571     dirs.Length < 1[Child Directory Nothing]
+2024/09/14 13:32:46 642570    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/14 13:32:46 642570    fileFilterConditionList = \.jpg$,\.jpeg$,\.png$,\.bmp$,\.gif$,\.tiff$,\.tif$,\.webp$
+2024/09/14 13:32:46 644563    fileIgnoreConditionList = 
+2024/09/14 13:32:46 645560    Dirctory.GetFiles.Length = 18
+2024/09/14 13:32:46 645560    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/14 13:32:46 646558    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/14 13:32:46 652995      SetFileListFromPath Failed
+2024/09/14 13:32:46 652995      SetDirecoryPath=J:\ZMyFolder_2\00movie\gif jpg
+2024/09/14 13:32:46 652995    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:46 653996    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:46 653996    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:46 654991    Item is Nothing
+2024/09/14 13:32:46 654991    SelectedFile  > sender = J:\ZMyFolder_2\00movie\gif jpg\08af22b3.gif
+2024/09/14 13:32:46 654991    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:46 686786    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:46 686786    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 13:32:46 687786    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:46 687786    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:46 688783    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:46 688783    Item is Nothing
+2024/09/14 13:32:46 688783    SelectedFile  > sender = J:\ZMyFolder_2\00movie\gif jpg\9d788612.gif
+2024/09/14 13:32:46 689780    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:46 701776    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:46 701776    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:46 702746    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:46 702746    Item is Nothing
+2024/09/14 13:32:46 702746    SelectedFile  > sender = J:\ZMyFolder_2\00movie\gif jpg\9d788612.gif
+2024/09/14 13:32:46 703743    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:46 709727    first Path = J:\ZMyFolder_2\00movie\gif jpg\9d788612.gif
+2024/09/14 13:32:46 710724    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 13:32:46 713633    ListJoin = 9d788612.gif,201608081228187d2.jpg,08af22b3.gif,15741239231.jpg,oppai78_58.jpg,13-3.gif,12-59.jpg,3D5gBNs.gif,4c76f221.gif,157723512219s.jpg,201608081218596b9.jpg,3-1.gif,22-54.jpg,9a41531bc8400800438008cfd1e68a7c.jpg,11-58.jpg,oppai78_20.jpg,4-12.gif,oppai77_10.jpg
+2024/09/14 13:32:46 713633    ChangeFileListEvent  > sender.Length = 18
+2024/09/14 13:32:46 714633    ImageViewer5.ImageControl.ImageMainClass > ReadFileEvent
+2024/09/14 13:32:46 721238    TransportForm.FormDragger > pictureBox_ImageMain -> FormMain > MouseMove > Up
+2024/09/14 13:32:47 024470    TransportForm.ControlDraggerB > pictureBox_ImageMain -> pictureBox_ImageMain > Control_MouseDown
+2024/09/14 13:32:47 025115    TransportForm.ControlDraggerB > pictureBox_ImageMain -> imageMainFrame1 > Control_MouseDown
+2024/09/14 13:32:47 121484    FitImageByDoubleClick_Clicked
+2024/09/14 13:32:47 121484    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 125214    FitImageByDoubleClick_Clicked
+2024/09/14 13:32:47 125214    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 126700    FitImageByDoubleClick_Clicked
+2024/09/14 13:32:47 126700    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 128344    FitImageByDoubleClick_Clicked
+2024/09/14 13:32:47 128344    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 129343    FitImageByDoubleClick_Clicked
+2024/09/14 13:32:47 129343    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 130341    FitImageByDoubleClick_Clicked
+2024/09/14 13:32:47 130341    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 132336    FitImageByDoubleClick_Clicked
+2024/09/14 13:32:47 132336    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 133333    FitImageByDoubleClick_Clicked
+2024/09/14 13:32:47 133333    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 134331    FitImageByDoubleClick_Clicked
+2024/09/14 13:32:47 134331    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 136325    FitImageByDoubleClick_Clicked
+2024/09/14 13:32:47 136325    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 137322    FitImageByDoubleClick_Clicked
+2024/09/14 13:32:47 137322    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 138319    FitImageByDoubleClick_Clicked
+2024/09/14 13:32:47 139317    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 140314    FitImageByDoubleClick_Clicked
+2024/09/14 13:32:47 140314    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 141313    FitImageByDoubleClick_Clicked
+2024/09/14 13:32:47 141313    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 143306    TransportForm.FormDragger > pictureBox_ImageMain -> FormMain > MouseMove > Up
+2024/09/14 13:32:47 529234    TransportForm.ControlDraggerB > pictureBox_ImageMain -> pictureBox_ImageMain > Control_MouseDown
+2024/09/14 13:32:47 531228    TransportForm.ControlDraggerB > pictureBox_ImageMain -> imageMainFrame1 > Control_MouseDown
+2024/09/14 13:32:47 616551    CommonControlUtilityModule.JudgeClickRightOrLeftChild > ClickLeft
+2024/09/14 13:32:47 616551    CommonUtility.FileListUtility.FileListManager > MovePreviousDirectory
+2024/09/14 13:32:47 617551    CommonUtility.FileListUtility.DirectoryGetter > GetPreviousDirectory
+2024/09/14 13:32:47 617551    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/14 13:32:47 618545    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/14 13:32:47 618545    fileFilterConditionList = \.jpg$,\.jpeg$,\.png$,\.bmp$,\.gif$,\.tiff$,\.tif$,\.webp$
+2024/09/14 13:32:47 618545    fileIgnoreConditionList = 
+2024/09/14 13:32:47 619542    Dirctory.GetFiles.Length = 30
+2024/09/14 13:32:47 619542    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/14 13:32:47 620541    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/14 13:32:47 620541      SetFileListFromPath Failed
+2024/09/14 13:32:47 621538      SetDirecoryPath=J:\ZMyFolder_2\00movie
+2024/09/14 13:32:47 621538    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:47 621538    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:47 622535    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:47 622535    Item is Nothing
+2024/09/14 13:32:47 623533    SelectedFile  > sender = J:\ZMyFolder_2\00movie\tumblr_ovwismlz0M1rfkswfo1_1280 2.jpg
+2024/09/14 13:32:47 623533    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:47 640514    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 642482    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:47 643479    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 13:32:47 643479    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:47 643479    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:47 644476    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:47 644476    SelectedFile  > sender = J:\ZMyFolder_2\00movie\gif jpg\9a41531bc8400800438008cfd1e68a7c.jpg
+2024/09/14 13:32:47 645474    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:47 649462    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 651457    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:47 652454    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:47 652454    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:47 653452    SelectedFile  > sender = J:\ZMyFolder_2\00movie\gif jpg\9a41531bc8400800438008cfd1e68a7c.jpg
+2024/09/14 13:32:47 653452    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:47 658469    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 659437    first Path = J:\ZMyFolder_2\00movie\gif jpg\9a41531bc8400800438008cfd1e68a7c.jpg
+2024/09/14 13:32:47 660435    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 13:32:47 665419    ListJoin = 9a41531bc8400800438008cfd1e68a7c.jpg,11-58.jpg,13-3.gif,tumblr_ovwismlz0M1rfkswfo1_1280 2.jpg,oppai78_20.jpg,201608081218596b9.jpg,15741239231.jpg,22-54.jpg,oppai77_10.jpg,3-1.gif,4c76f221.gif,4-12.gif,3D5gBNs.gif,08af22b3.gif,157723512219s.jpg,oppai78_58.jpg,201608081228187d2.jpg,12-59.jpg,9d788612.gif
+2024/09/14 13:32:47 666417    ChangeFileListEvent  > sender.Length = 19
+2024/09/14 13:32:47 666417    ImageViewer5.ImageControl.ImageMainClass > ReadFileEvent
+2024/09/14 13:32:47 671404    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:47 672402    TransportForm.FormDragger > pictureBox_ImageMain -> FormMain > MouseMove > Up
+2024/09/14 13:32:47 693378    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:32:47 693378    CommonUtility.FileListUtility.Files > MoveNext index=1
+2024/09/14 13:32:47 694343    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:47 694343    SelectedFile  > sender = J:\ZMyFolder_2\00movie\gif jpg\11-58.jpg
+2024/09/14 13:32:47 695340    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:47 700541    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:48 072523    TransportForm.ControlDraggerB > pictureBox_ImageMain -> pictureBox_ImageMain > Control_MouseDown
+2024/09/14 13:32:48 072523    TransportForm.ControlDraggerB > pictureBox_ImageMain -> imageMainFrame1 > Control_MouseDown
+2024/09/14 13:32:48 195703    CommonControlUtilityModule.JudgeClickRightOrLeftChild > ClickLeft
+2024/09/14 13:32:48 195703    CommonUtility.FileListUtility.Files > MovePrevious index=0
+2024/09/14 13:32:48 196700    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:48 196700    SelectedFile  > sender = J:\ZMyFolder_2\00movie\gif jpg\9a41531bc8400800438008cfd1e68a7c.jpg
+2024/09/14 13:32:48 197698    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:48 200716    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:48 203310    ImageViewer5.ImageControl.ImageMainClass > ReadFileEvent
+2024/09/14 13:32:48 205330    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:48 207301    TransportForm.FormDragger > pictureBox_ImageMain -> FormMain > MouseMove > Up
+2024/09/14 13:32:48 588414    TransportForm.ControlDraggerB > pictureBox_ImageMain -> pictureBox_ImageMain > Control_MouseDown
+2024/09/14 13:32:48 589374    TransportForm.ControlDraggerB > pictureBox_ImageMain -> imageMainFrame1 > Control_MouseDown
+2024/09/14 13:32:48 686382    CommonControlUtilityModule.JudgeClickRightOrLeftChild > ClickLeft
+2024/09/14 13:32:48 687040    CommonUtility.FileListUtility.FileListManager > MovePreviousDirectory
+2024/09/14 13:32:48 687040    CommonUtility.FileListUtility.DirectoryGetter > GetPreviousDirectory
+2024/09/14 13:32:48 688040    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/14 13:32:48 688040    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/14 13:32:48 689038    fileFilterConditionList = \.jpg$,\.jpeg$,\.png$,\.bmp$,\.gif$,\.tiff$,\.tif$,\.webp$
+2024/09/14 13:32:48 689038    fileIgnoreConditionList = 
+2024/09/14 13:32:48 716244    Dirctory.GetFiles.Length = 743
+2024/09/14 13:32:48 719211    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/14 13:32:48 719211    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/14 13:32:48 723228      SetFileListFromPath Failed
+2024/09/14 13:32:48 723228      SetDirecoryPath=J:\ZMyFolder_2
+2024/09/14 13:32:48 724198    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:48 724198    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:48 725195    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:48 725195    SelectedFile  > sender = J:\ZMyFolder_2\00movie\tumblr_ovwismlz0M1rfkswfo1_1280 2.jpg
+2024/09/14 13:32:48 726194    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:48 733173    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:48 735169    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:48 736167    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 13:32:48 736167    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:48 737163    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:48 737163    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:48 737163    Item is Nothing
+2024/09/14 13:32:48 738161    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\gif_png_bmp\無邪気の楽園 カラー版 第03巻091.png
+2024/09/14 13:32:48 738161    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:48 757110    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:48 759107    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:48 760103    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:48 760103    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:48 761100    Item is Nothing
+2024/09/14 13:32:48 761100    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\gif_png_bmp\無邪気の楽園 カラー版 第03巻091.png
+2024/09/14 13:32:48 762097    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:48 774094    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:48 776060    first Path = J:\ZMyFolder_2\jpgbest\gif_png_bmp\無邪気の楽園 カラー版 第03巻091.png
+2024/09/14 13:32:48 777057    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 13:32:48 784038    ListJoin = 無邪気の楽園 カラー版 第03巻091.png,d6f8d77f6f98d34f6ef31312f017efaf.png,4b2273bf65d7f6fd77288cdb88e481e8.png,133.png,1705030235cc681a091.png,170523d531345a-s027.jpg,022_Folder02___17052359325466011022.png,ee1b983d.jpg,576ec78c4169be06cc90c215ddf04333.png,cb3b91c8.png,Guf4epq.gif,59.png,1705235bef4622-s012.jpg,048_Folder02___a21048.png,135.png,058_Folder02___d633435d1d3ce267af64d9a6b64e09f2058.png,wpid-1443351588916.gif,161225b10e5c46103.gif,011_Folder01___blog_import_51a50ffb6b5dc011.jpg,2c57006d-s.jpg,052_Folder02___asaloon_1500050481_73402052.png,17050302f24fe0d9180.png,070_Folder02___無邪気の楽園 カラー版 第03巻119070.png,013_Folder02___1705030242bb6f4f099013.png,067_Folder02___無邪気の楽園 カラー版 第03巻026067.png,024_Folder03___161225161019012037024.gif,017_Folder02___17050302images (2)220017.png,025_Folder03___161225161019013038025.gif,ちなんぼ003000003.jpg,075_Folder02___無邪気の楽園 第04巻030075.png,無邪気の楽園 第04巻030.png,044_Folder03___a5f6e0ac044.gif,40SJCFT.gif,160202309.gif,041_Folder03___70-1041.gif,161225932b1ad3094.gif,17050303blog_import_51a583e37436f043.png,17050302images (2)220.png,To LOVEる ダークネス 第05巻00175.jpeg,136.png,013_Folder01___rk aa (IV) [渋谷書店] 無毛少女生撮専科 07 佐藤かすみ2_x264.mp4_000376983013.jpg,ditua_dkid5t_1.gif,044_Folder02___900eaa7e0d96fda8296571afa0f0f3c6044.png,livejupiter_1550197632_1401.jpg,12-59.jpg,04_450-20190710120721245784.jpg,20110210022937.png,028_Folder02___38cdb593b51f1e7c2ef8b8e90d813eab028.png,4-12.gif,161225112221017.gif,012_Folder03___160501015012.gif,057_Folder03___wpid-1443354549124057.gif,035_Folder03___356_1035.gif,a20.png,018_Folder02___17050302images237018.png,VNsTDhA.png,170523573e49ce-s010.jpg,037_Folder02___5bb03508cf84c6321303132250b48f8b037.png,32b870c1-s.jpg,021_Folder03___161225160620018033021.gif,3d4eae625606d7bd378fe890c9d423a2.png,057_Folder02___d56341f82bfcc577ce36e2501d2f57d7057.png,170523b972b2a024.jpg,1705030242bb6f4f099.png,014_Folder03___160501018014.gif,170523d48b5f91026.jpg,2019121011151111.jpg,046_Folder02___9c120afc81493acc49c47c80e0b55b6f046.png,043_Folder03___948f3c2e043.gif,051_Folder03___oppai421051.gif,039_Folder02___5f8031131b10198f13ee6f271dbf9e00039.png,1705237e8a9d71-s016.jpg,5736beaeb6cc641fd5df929b42354a07 (1).png,021_Folder02___17050303e73c1735080021.png,1612254bb9c657069.gif,1bab07597aa1440d395506a153b24610.png,201608081218596b9.jpg,046_Folder03___ditua_dkid5t_1046.gif,028_Folder03___161225mjkr6_mn6rt4_23213028.gif,27362393.gif,17050302f2d0fa7f181.png,020_Folder02___17050303blog_import_51a62e78599a3054020.png,026_Folder02___20150330001133fce026.png,003_Folder01___150825114003.jpg,041_Folder02___7a12e2822d215283687db4d26c8ca9c4041.png,053_Folder03___panchira_kaze038053.gif,西村理香_AliceClub&サタン05445.jpg,160501015.gif,oppai78_58.jpg,080b848059f28cebf0e9dc78344948ff.png,062_Folder02___i_20150504144054062.png,17052359325466011.png,livejupiter_1455441376_38501.png,042_Folder03___7b00cb25042.gif,056_Folder02___d273ff5f-s056.png,002_Folder03___1-2002.gif,a21.png,4c76f221.gif,010_Folder03___160501012 (1)010.gif,012_Folder01___ee1b983d012.jpg,LaQx3d5.gif,004_testFolder___To LOVEる ダークネス 第07巻00173004.jpeg,panchira_kaze040.gif,5cc0ona.gif,2730017c.gif,170523ea594980031.jpg,2f727e88.gif,032_Folder03___30fa3b11032.gif,077_Folder02___無邪気の楽園 第04巻033077.png,あやみIMG_0835000007[1].jpg,156314964126s.jpg,160202313.gif,059_Folder02___d6f8d77f6f98d34f6ef31312f017efaf059.png,170523d81ab004-s028.jpg,002_testFolder___To LOVEる ダークネス 第07巻00171002.jpeg,wpid-1443351378900.gif,03_450-2018022021381680165.jpg,356_1.gif,161225112224019.gif,西村理香_15_1605343.jpg,37c2cacdecbf817381e69c8f102f6b7e.gif,67434a161c71922f29a4e8cb42e7b4a1-650x915s.png,160501006.gif,20.png,b59d2f12-s.jpg,170523413777a7006.gif,1705235547b1a2009.jpg,eb2cdd9f.gif,034_Folder02___576ec78c4169be06cc90c215ddf04333 (1)034.png,25f9662c-s.jpg,67134f72-s.jpg,015_Folder03___160613-202015.gif,161225160831-314034.gif,132.png,5d36d9bb-s.jpg,160501018.gif,To LOVEる ダークネス 第12巻00136.jpeg,023_Folder02___1776c79c023.png,i_20131125090308s.png,009_Folder02___137009.png,1705237c1d790e015.jpg,019_Folder03___161225112225020019.gif,無邪気の楽園 カラー版 第03巻040.png,002_Folder02___027dd49d6da8f0b5d0a8fa03c711ce41002.png,70-1.gif,1-2.gif,019_Folder02___17050303blog_import_51a583e37436f043019.png,049_Folder03___kim_uttg_24049.gif,001_Folder03___010001.gif,5736beaeb6cc641fd5df929b42354a07.png,rk aa (IV) [渋谷書店] 無毛少女生撮専科 07 佐藤かすみ2_x264.mp4_000376983.jpg,161225112223018.gif,d633435d1d3ce267af64d9a6b64e09f2.png,livejupiter_1453455051_47501.jpg,161225160620018033.gif,山口みなみ_かけがえのない時間0060.jpg,027_Folder03___1612254bb9c657069027.gif,835849b3ea967bf0b6762a9930c946d5.png,38cdb593b51f1e7c2ef8b8e90d813eab.png,157723512219s.jpg,a38.png,西村理香_15_1605305.jpg,006_Folder02___134006.png,160501012.gif,あやみIMG_0836000008.jpg,panchira_kaze038.gif,43db7191-s.jpg,054_Folder03___panchira_kaze040054.gif,17052308b975e1002.jpg,170523a52e97e3-s019.jpg,r084466167B.jpg,001_Folder01___140703-419001.jpg,5Bc2bfe.gif,035_Folder02___576ec78c4169be06cc90c215ddf04333035.png,d01e9675fad215527696d66876bc6642.png,161225112225020.gif,無邪気の楽園 カラー版 第03巻131.png,西村理香_15_1605352.jpg,無邪気の楽園 カラー版 第03巻121.png,008_Folder02___136008.png,r084442598B.jpg,034_Folder03___35034.gif,dcf046d0[1].jpg,033_Folder03___32033.gif,Darkness 6_082.jpg,007_Folder02___135007.png,161225161019013038.gif,061_Folder02___i_20131125090308s061.png,058_Folder03___wpid-1443355772469058.gif,i_20150504144054.png,053_Folder02___blog_import_51a4b5f743704053.png,040_Folder02___67434a161c71922f29a4e8cb42e7b4a1-650x915s040.png,161225160620003032.gif,013_Folder03___160501016013.gif,011_Folder03___160501012011.gif,036_Folder02___59036.png,017_Folder03___161225112223018017.gif,08_72484654_480x480.jpg,17050302images237.png,037_Folder03___38037.gif,ad2f0860f11255cb6981ec5105ae05f5.png,6e5e03a7-s.jpg,010_Folder01___5d36d9bb-s010.jpg,ちなんぼ002000002.jpg,161225e90e5358155.gif,161225112221017.gif,045_Folder03___d567f49a9b6282998f30bbcec109fc5d8c21dd5e045.gif,5d00b7218dd86ffa6f65b6de82f630f1.png,170523b868090a023.jpg,2c57006d-s.jpg,1612253188941b063.gif,To LOVEる ダークネス 第09巻00106.jpeg,1776c79c.png,003_Folder03___160202309003.gif,32.gif,066_Folder02___zzz2afc4238-s066.png,052_Folder03___panchira_kaze023052.gif,022_Folder03___161225160831-314034022.gif,wpid-1443359335098.gif,あやみIMG_0835000007.jpg,17052311721601-s003.jpg,047_Folder02___a20047.png,無邪気の楽園 カラー版 第03巻120.png,049_Folder02___a36049.png,002_Folder01___15002.jpg,oppai77_10.jpg,160202315.gif,010.gif,161225250dfffc058.gif,170523aacc64d6-s021.jpg,150825114.jpg,無邪気の楽園 第04巻033.png,asaloon_1500050481_73402.png,56fe9d9f.jpg,15562350469.jpg,006_Folder01___151019214006.jpg,wpid-1443354549124.gif,073_Folder02___無邪気の楽園 カラー版 第03巻131073.png,027_Folder02___21027.png,7729f167-s.jpg,036_Folder03___37c2cacdecbf817381e69c8f102f6b7e036.gif,008_Folder03___160501002008.gif,test.jpeg,001_Folder02___02147b70001.png,panchira_kaze023.gif,161225mjkr6_mn6rt4_23213.gif,15.jpg,17052345c94ab4007.jpg,To LOVEる ダークネス 第07巻00173.jpeg,039_Folder03___5Bc2bfe039.gif,026_Folder03___1612253188941b063026.gif,kim_uttg_24.gif,027dd49d6da8f0b5d0a8fa03c711ce41.png,To LOVEる ダークネス 第04巻00192.jpeg,15741239231.jpg,9c120afc81493acc49c47c80e0b55b6f.png,051_Folder02___ad2f0860f11255cb6981ec5105ae05f5051.png,08af22b3.gif,047_Folder03___eb2cdd9f047.gif,無邪気の楽園 カラー版 第03巻026.png,17050303e73c1735080.png,161225blog_import_51a62e78599a3124.png,02_450-2010011100523260119.jpg,1705234d0eb2b2a9c45d12876c4ef062911b0c6decff671473700807-s008.jpg,170523b4fa3a56-s022.jpg,151004-503.jpg,161225161019011036.gif,065_Folder02___VNsTDhA065.png,07_83734773.png,17050302images (1)208.png,005_Folder01___151004-503005.jpg,91e7fc53bca7cfbc8bd0aee3c99657b7.png,160501002.gif,018_Folder03___161225112224019018.gif,031_Folder02___4b2273bf65d7f6fd77288cdb88e481e8031.png,1612257458c8db084.gif,032_Folder02___5736beaeb6cc641fd5df929b42354a07 (1)032.png,1705231d89da5f-s004.jpg,17052359325466011.png,あやみIMG_0834000006.jpg,30fa3b11.gif,無邪気の楽園 第04巻031.png,西村理香_15_1605320.jpg,1412912917805.png,076_Folder02___無邪気の楽園 第04巻031076.png,059_Folder03___wpid-1443359335098059.gif,005_Folder03___160202314005.gif,008_Folder01___43db7191-s008.jpg,014_Folder02___17050302f24fe0d9180014.png,1612259a0afe87096.gif,To LOVEる ダークネス 第06巻00084.jpeg,020_Folder03___161225160620003032020.gif,005_Folder02___133005.png,004_Folder01___151004-501 (1)004.jpg,13-3.gif,b5b1162a-s.jpg,576ec78c4169be06cc90c215ddf04333 (1).png,17052398e6e511-s018.jpg,a5f6e0ac.gif,030_Folder03___2730017c030.gif,016_Folder02___17050302images (1)208016.png,007_Folder03___160501001007.gif,003_testFolder___To LOVEる ダークネス 第07巻00172003.jpeg,038_Folder03___40SJCFT038.gif,040_Folder03___5cc0ona040.gif,004_Folder02___132004.png,048_Folder03___Guf4epq048.gif,downblouse_chira003.jpg,068_Folder02___無邪気の楽園 カラー版 第03巻040068.png,21.png,140703-419.jpg,無邪気の楽園 第04巻027.png,011_Folder02___161225blog_import_51a62e78599a3124011.png,h499Ej4.jpg,025_Folder02___20025.png,160501012 (1).gif,803c68db5757b355d5a612e8dd0cd835.png,dcf046d0.jpg,170523bb96a5f5-s025.jpg,01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg,9d788612.gif,西村理香_15_1605342.jpg,To LOVEる ダークネス 第07巻00172.jpeg,blog_import_51a50ffb6b5dc.jpg,無邪気の楽園 カラー版 第03巻119.png,d56341f82bfcc577ce36e2501d2f57d7.png,033_Folder02___5736beaeb6cc641fd5df929b42354a07033.png,西村理香_AliceClub&サタン05459.jpg,5bb03508cf84c6321303132250b48f8b.png,d567f49a9b6282998f30bbcec109fc5d8c21dd5e.gif,005_testFolder___To LOVEる ダークネス 第12巻00136005.jpeg,050_Folder03___LaQx3d5050.gif,160501001.gif,7a12e2822d215283687db4d26c8ca9c4.png,d273ff5f-s.png,069_Folder02___無邪気の楽園 カラー版 第03巻091069.png,038_Folder02___5d00b7218dd86ffa6f65b6de82f630f1038.png,2019120107364242.jpg,ace21392.jpg,074_Folder02___無邪気の楽園 第04巻027074.png,050_Folder02___a38050.png,023_Folder03___161225161019011036023.gif,071_Folder02___無邪気の楽園 カラー版 第03巻120071.png,1705236005598b013.jpg,900eaa7e0d96fda8296571afa0f0f3c6.png,031_Folder03___2f727e88031.gif,9a41531bc8400800438008cfd1e68a7c.jpg,015_Folder02___17050302f2d0fa7f181015.png,043_Folder02___835849b3ea967bf0b6762a9930c946d5043.png,35.gif,151004-501 (1).jpg,029_Folder02___3b70ae511b622ed2f2796dbe7e95f878029.png,054_Folder02___cb3b91c8054.png,天野美由紀14迎えに来てね0027.jpg,3b70ae511b622ed2f2796dbe7e95f878.png,1612252a14e684061.gif,063_Folder02___livejupiter_1455441376_38501063.png,To LOVEる ダークネス 第07巻00171.jpeg,137.png,miad00978pl.jpg,ちなんぼ001000001.jpg,006_Folder03___160202315006.gif,25db7b23.gif,030_Folder02___3d4eae625606d7bd378fe890c9d423a2030.png,zzz2afc4238-s.png,007_Folder01___2c57006d-s007.jpg,024_Folder02___1bab07597aa1440d395506a153b24610024.png,010_Folder02___1412912917805010.png,あやみIMG_0833000005.jpg,161225161019012037.gif,blog_import_51a4b5f743704.png,161225700d9b38082.gif,9ee097f9-s.jpg,17050303blog_import_51a62e78599a3054.png,livejupiter_1464670858_101.jpg,134.png,06_40586195-M-imagenavi.jpg,055_Folder02___d01e9675fad215527696d66876bc6642055.png,016_Folder03___161225112221017016.gif,170523aa6581df020.jpg,BkDGPzMCYAE5abs.jpg,170523d82767d8-s029.jpg,060_Folder02___dadf14e1e1ff50521cc5e2a2145cb7c3060.png,1705232ded2aca-s005.jpg,a36.png,3-1.gif,160501016.gif,dadf14e1e1ff50521cc5e2a2145cb7c3.png,948f3c2e.gif,tumblr_ovwismlz0M1rfkswfo1_1280 2.jpg,22-54.jpg,1705236e907fd1-s014.jpg,7b00cb25.gif,009_Folder01___56fe9d9f009.jpg,003_Folder02___080b848059f28cebf0e9dc78344948ff003.png,livejupiter_1550197632_1402.jpg,あやみIMG_0833000005.jpg,160202314.gif,160613-202.gif,38.gif,042_Folder02___803c68db5757b355d5a612e8dd0cd835042.png,201608081228187d2.jpg,004_Folder03___160202313004.gif,045_Folder02___91e7fc53bca7cfbc8bd0aee3c99657b7045.png,20150330001133fce.png,oppai421.gif,3D5gBNs.gif,170523025a5bd2-s001.jpg,072_Folder02___無邪気の楽園 カラー版 第03巻121072.png,056_Folder03___wpid-1443351588916056.gif,02147b70.png,029_Folder03___25db7b23029.gif,11-58.jpg,山口みなみ_かけがえのない時間0014.jpg,tumblr_ohesvgAuRA1u8m4aeo4_1280.jpg,to_2572_004s.png,064_Folder02___to_2572_004s064.png,5f8031131b10198f13ee6f271dbf9e00.png,009_Folder03___160501006009.gif,151019214.jpg,wpid-1443355772469.gif,05_25400841.jpg,a3f7253e-s.jpg,To LOVEる とらぶる ダークネス カラー版 第14巻00026.jpeg,oppai78_20.jpg,r084459013B.jpg,170523ddc69d7b030.jpg,001_testFolder___To LOVEる ダークネス 第05巻00175001.jpeg,012_Folder02___1705030235cc681a091012.png,055_Folder03___wpid-1443351378900055.gif
+2024/09/14 13:32:48 785035    ChangeFileListEvent  > sender.Length = 430
+2024/09/14 13:32:48 785035    ImageViewer5.ImageControl.ImageMainClass > ReadFileEvent
+2024/09/14 13:32:48 797005    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:48 798001    TransportForm.FormDragger > pictureBox_ImageMain -> FormMain > MouseMove > Up
+2024/09/14 13:32:49 442420    TransportForm.ControlDraggerB > pictureBox_ImageMain -> pictureBox_ImageMain > Control_MouseDown
+2024/09/14 13:32:49 443382    TransportForm.ControlDraggerB > pictureBox_ImageMain -> imageMainFrame1 > Control_MouseDown
+2024/09/14 13:32:49 545461    CommonControlUtilityModule.JudgeClickRightOrLeftChild > ClickLeft
+2024/09/14 13:32:49 545461    CommonUtility.FileListUtility.FileListManager > MovePreviousDirectory
+2024/09/14 13:32:49 546464    CommonUtility.FileListUtility.DirectoryGetter > GetPreviousDirectory
+2024/09/14 13:32:49 546464    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/14 13:32:49 547459    CommonUtility.FileListUtility.DirectoryGetter > GetDeepestAndLastDirectory
+2024/09/14 13:32:49 547459    CommonUtility.FileListUtility.DirectoryGetter > GetLastDirectory
+2024/09/14 13:32:49 547459    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/14 13:32:49 548457    CommonUtility.FileListUtility.DirectoryGetter > GetLastDirectory
+2024/09/14 13:32:49 548457    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/14 13:32:49 555214    CommonUtility.FileListUtility.DirectoryGetter > GetLastDirectory
+2024/09/14 13:32:49 555214    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/14 13:32:49 556213     dirs.Length < 1[Child Directory Nothing]
+2024/09/14 13:32:49 556213    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/14 13:32:49 557211    fileFilterConditionList = \.jpg$,\.jpeg$,\.png$,\.bmp$,\.gif$,\.tiff$,\.tif$,\.webp$
+2024/09/14 13:32:49 557211    fileIgnoreConditionList = 
+2024/09/14 13:32:49 558208    Dirctory.GetFiles.Length = 6
+2024/09/14 13:32:49 558208    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/14 13:32:49 558208      list.Count < 1
+2024/09/14 13:32:49 559205      SetFileListFromPath Failed
+2024/09/14 13:32:49 559205      SetDirecoryPath=J:\ZMOVIE_SELECT2\av ab new\vx
+2024/09/14 13:32:49 559205    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:49 560203    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:32:49 560203    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:49 561200    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 13:32:49 561200    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:49 561200    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:32:49 562197    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:49 562197    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:32:49 563195    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/14 13:32:49 563195    first Path = 
+2024/09/14 13:32:49 564192    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 13:32:49 603610    ListJoin = 
+2024/09/14 13:32:49 604608     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:32:49 604608    ChangeFileListEvent  > sender.Length = 0
+2024/09/14 13:32:49 605606    ImageViewer5.ImageControl.ImageMainClass > ReadFileEvent
+2024/09/14 13:32:49 605606    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/14 13:32:49 606603    ViewImageMain > Path Not Exists. []
+2024/09/14 13:32:49 607600    ViewImageModule.ViewImage.FileNotExists:
+2024/09/14 13:32:49 607600    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:49 607600    ImageIsNull
+2024/09/14 13:32:49 608598    ViewImageModule.ViewImage.getImage : isExistsImage : false
+2024/09/14 13:32:49 608598    TransportForm.FormDragger > pictureBox_ImageMain -> FormMain > MouseMove > Up
+2024/09/14 13:32:49 688255    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:32:49 689252    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory
+2024/09/14 13:32:49 692251    CommonUtility.FileListUtility.DirectoryGetter > GetNextDirectory
+2024/09/14 13:32:49 693248    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/14 13:32:49 696262    CommonUtility.FileListUtility.DirectoryGetter > NextDirectoryWhenNotAbleAccess
+2024/09/14 13:32:49 700229      IsLastDirectory=true , path=J:\ZMOVIE_SELECT2\av ab new\vx
+2024/09/14 13:32:49 700229    CommonUtility.FileListUtility.DirectoryGetter > NextDirectoryWhenNotAbleAccess
+2024/09/14 13:32:49 703216      IsLastDirectory=true , path=J:\ZMOVIE_SELECT2\av ab new
+2024/09/14 13:32:49 704213    CommonUtility.FileListUtility.DirectoryGetter > NextDirectoryWhenNotAbleAccess
+2024/09/14 13:32:49 707233    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/14 13:32:49 707233    fileFilterConditionList = \.jpg$,\.jpeg$,\.png$,\.bmp$,\.gif$,\.tiff$,\.tif$,\.webp$
+2024/09/14 13:32:49 709205    fileIgnoreConditionList = 
+2024/09/14 13:32:49 736128    Dirctory.GetFiles.Length = 743
+2024/09/14 13:32:49 743107    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/14 13:32:49 744105    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/14 13:32:49 752113      SetFileListFromPath Failed
+2024/09/14 13:32:49 752113      SetDirecoryPath=J:\ZMyFolder_2
+2024/09/14 13:32:49 753081    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:49 754080    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:49 755076    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:49 756074     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:32:49 756074    SelectedFile  > sender = J:\ZMyFolder_2\00movie\tumblr_ovwismlz0M1rfkswfo1_1280 2.jpg
+2024/09/14 13:32:49 757068    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:49 764078    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:49 767539    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:49 767539    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 13:32:49 768539    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:49 768539    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:49 769536    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:49 769536     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:32:49 769536    SelectedFile  > sender = J:\ZMyFolder_2\00movie\gif jpg\3-1.gif
+2024/09/14 13:32:49 770534    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:49 802230    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:49 802230    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:49 803205    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:49 803205     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:32:49 804200    SelectedFile  > sender = J:\ZMyFolder_2\00movie\gif jpg\3-1.gif
+2024/09/14 13:32:49 804200    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:49 822152    first Path = J:\ZMyFolder_2\00movie\gif jpg\3-1.gif
+2024/09/14 13:32:49 822152    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 13:32:49 827747    ListJoin = 3-1.gif,4b2273bf65d7f6fd77288cdb88e481e8.png,91e7fc53bca7cfbc8bd0aee3c99657b7.png,To LOVEる ダークネス 第04巻00192.jpeg,049_Folder02___a36049.png,170523aa6581df020.jpg,2730017c.gif,070_Folder02___無邪気の楽園 カラー版 第03巻119070.png,003_Folder01___150825114003.jpg,05_25400841.jpg,160501001.gif,027_Folder03___1612254bb9c657069027.gif,西村理香_15_1605305.jpg,1412912917805.png,20.png,08_72484654_480x480.jpg,006_Folder02___134006.png,004_Folder03___160202313004.gif,031_Folder03___2f727e88031.gif,007_Folder01___2c57006d-s007.jpg,4-12.gif,22-54.jpg,西村理香_15_1605352.jpg,dcf046d0.jpg,161225161019013038.gif,40SJCFT.gif,17052345c94ab4007.jpg,5d00b7218dd86ffa6f65b6de82f630f1.png,無邪気の楽園 第04巻033.png,035_Folder03___356_1035.gif,050_Folder02___a38050.png,無邪気の楽園 カラー版 第03巻119.png,161225112221017.gif,576ec78c4169be06cc90c215ddf04333 (1).png,dcf046d0[1].jpg,miad00978pl.jpg,803c68db5757b355d5a612e8dd0cd835.png,17052311721601-s003.jpg,eb2cdd9f.gif,38cdb593b51f1e7c2ef8b8e90d813eab.png,004_Folder01___151004-501 (1)004.jpg,170523b972b2a024.jpg,044_Folder02___900eaa7e0d96fda8296571afa0f0f3c6044.png,157723512219s.jpg,ee1b983d.jpg,077_Folder02___無邪気の楽園 第04巻033077.png,wpid-1443355772469.gif,1612254bb9c657069.gif,007_Folder02___135007.png,r084459013B.jpg,1705234d0eb2b2a9c45d12876c4ef062911b0c6decff671473700807-s008.jpg,037_Folder03___38037.gif,17052398e6e511-s018.jpg,160501006.gif,161225160831-314034.gif,1612252a14e684061.gif,356_1.gif,a3f7253e-s.jpg,015_Folder03___160613-202015.gif,201608081218596b9.jpg,6e5e03a7-s.jpg,161225161019012037.gif,055_Folder03___wpid-1443351378900055.gif,021_Folder02___17050303e73c1735080021.png,011_Folder01___blog_import_51a50ffb6b5dc011.jpg,069_Folder02___無邪気の楽園 カラー版 第03巻091069.png,5Bc2bfe.gif,026_Folder03___1612253188941b063026.gif,038_Folder03___40SJCFT038.gif,無邪気の楽園 第04巻027.png,051_Folder03___oppai421051.gif,wpid-1443359335098.gif,無邪気の楽園 カラー版 第03巻040.png,a5f6e0ac.gif,06_40586195-M-imagenavi.jpg,067_Folder02___無邪気の楽園 カラー版 第03巻026067.png,2019121011151111.jpg,052_Folder03___panchira_kaze023052.gif,160501018.gif,西村理香_15_1605343.jpg,rk aa (IV) [渋谷書店] 無毛少女生撮専科 07 佐藤かすみ2_x264.mp4_000376983.jpg,161225161019011036.gif,04_450-20190710120721245784.jpg,17050302f2d0fa7f181.png,02147b70.png,044_Folder03___a5f6e0ac044.gif,9a41531bc8400800438008cfd1e68a7c.jpg,59.png,15562350469.jpg,wpid-1443354549124.gif,17050302images (1)208.png,To LOVEる ダークネス 第09巻00106.jpeg,a21.png,039_Folder03___5Bc2bfe039.gif,022_Folder03___161225160831-314034022.gif,15.jpg,1705030242bb6f4f099.png,029_Folder03___25db7b23029.gif,041_Folder02___7a12e2822d215283687db4d26c8ca9c4041.png,西村理香_15_1605320.jpg,Guf4epq.gif,VNsTDhA.png,036_Folder03___37c2cacdecbf817381e69c8f102f6b7e036.gif,022_Folder02___17052359325466011022.png,170523d531345a-s027.jpg,009_Folder01___56fe9d9f009.jpg,山口みなみ_かけがえのない時間0014.jpg,170523ea594980031.jpg,065_Folder02___VNsTDhA065.png,西村理香_AliceClub&サタン05445.jpg,無邪気の楽園 第04巻030.png,017_Folder02___17050302images (2)220017.png,170523573e49ce-s010.jpg,a20.png,020_Folder03___161225160620003032020.gif,012_Folder02___1705030235cc681a091012.png,140703-419.jpg,137.png,023_Folder03___161225161019011036023.gif,あやみIMG_0836000008.jpg,あやみIMG_0835000007[1].jpg,25f9662c-s.jpg,161225112224019.gif,2f727e88.gif,d273ff5f-s.png,downblouse_chira003.jpg,livejupiter_1455441376_38501.png,無邪気の楽園 第04巻031.png,042_Folder02___803c68db5757b355d5a612e8dd0cd835042.png,033_Folder03___32033.gif,080b848059f28cebf0e9dc78344948ff.png,013_Folder01___rk aa (IV) [渋谷書店] 無毛少女生撮専科 07 佐藤かすみ2_x264.mp4_000376983013.jpg,053_Folder02___blog_import_51a4b5f743704053.png,to_2572_004s.png,010.gif,015_Folder02___17050302f2d0fa7f181015.png,To LOVEる とらぶる ダークネス カラー版 第14巻00026.jpeg,151019214.jpg,025_Folder03___161225161019013038025.gif,054_Folder03___panchira_kaze040054.gif,1705235bef4622-s012.jpg,071_Folder02___無邪気の楽園 カラー版 第03巻120071.png,014_Folder03___160501018014.gif,i_20131125090308s.png,ace21392.jpg,013_Folder03___160501016013.gif,160501012 (1).gif,057_Folder02___d56341f82bfcc577ce36e2501d2f57d7057.png,To LOVEる ダークネス 第05巻00175.jpeg,029_Folder02___3b70ae511b622ed2f2796dbe7e95f878029.png,161225e90e5358155.gif,5bb03508cf84c6321303132250b48f8b.png,048_Folder02___a21048.png,1705237e8a9d71-s016.jpg,1776c79c.png,a36.png,004_testFolder___To LOVEる ダークネス 第07巻00173004.jpeg,030_Folder02___3d4eae625606d7bd378fe890c9d423a2030.png,wpid-1443351588916.gif,135.png,056_Folder03___wpid-1443351588916056.gif,5d36d9bb-s.jpg,無邪気の楽園 カラー版 第03巻120.png,livejupiter_1464670858_101.jpg,170523413777a7006.gif,023_Folder02___1776c79c023.png,To LOVEる ダークネス 第06巻00084.jpeg,ちなんぼ003000003.jpg,30fa3b11.gif,061_Folder02___i_20131125090308s061.png,032_Folder03___30fa3b11032.gif,170523b4fa3a56-s022.jpg,063_Folder02___livejupiter_1455441376_38501063.png,161225700d9b38082.gif,wpid-1443351378900.gif,あやみIMG_0833000005.jpg,blog_import_51a4b5f743704.png,028_Folder03___161225mjkr6_mn6rt4_23213028.gif,010_Folder02___1412912917805010.png,005_testFolder___To LOVEる ダークネス 第12巻00136005.jpeg,oppai421.gif,059_Folder02___d6f8d77f6f98d34f6ef31312f017efaf059.png,010_Folder01___5d36d9bb-s010.jpg,136.png,052_Folder02___asaloon_1500050481_73402052.png,ditua_dkid5t_1.gif,21.png,160613-202.gif,054_Folder02___cb3b91c8054.png,blog_import_51a50ffb6b5dc.jpg,161225160620018033.gif,050_Folder03___LaQx3d5050.gif,006_Folder03___160202315006.gif,001_Folder02___02147b70001.png,tumblr_ovwismlz0M1rfkswfo1_1280 2.jpg,161225112225020.gif,009_Folder02___137009.png,002_Folder02___027dd49d6da8f0b5d0a8fa03c711ce41002.png,17050303blog_import_51a583e37436f043.png,i_20150504144054.png,008_Folder03___160501002008.gif,056_Folder02___d273ff5f-s056.png,zzz2afc4238-s.png,b59d2f12-s.jpg,027_Folder02___21027.png,133.png,024_Folder02___1bab07597aa1440d395506a153b24610024.png,075_Folder02___無邪気の楽園 第04巻030075.png,134.png,033_Folder02___5736beaeb6cc641fd5df929b42354a07033.png,oppai78_20.jpg,9d788612.gif,h499Ej4.jpg,To LOVEる ダークネス 第12巻00136.jpeg,ad2f0860f11255cb6981ec5105ae05f5.png,161225b10e5c46103.gif,041_Folder03___70-1041.gif,003_Folder03___160202309003.gif,160501016.gif,039_Folder02___5f8031131b10198f13ee6f271dbf9e00039.png,無邪気の楽園 カラー版 第03巻091.png,019_Folder02___17050303blog_import_51a583e37436f043019.png,043_Folder02___835849b3ea967bf0b6762a9930c946d5043.png,56fe9d9f.jpg,5cc0ona.gif,011_Folder02___161225blog_import_51a62e78599a3124011.png,1612253188941b063.gif,panchira_kaze040.gif,161225932b1ad3094.gif,012_Folder01___ee1b983d012.jpg,12-59.jpg,01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg,048_Folder03___Guf4epq048.gif,161225blog_import_51a62e78599a3124.png,asaloon_1500050481_73402.png,161225250dfffc058.gif,008_Folder02___136008.png,073_Folder02___無邪気の楽園 カラー版 第03巻131073.png,005_Folder03___160202314005.gif,1705030235cc681a091.png,5736beaeb6cc641fd5df929b42354a07.png,2c57006d-s.jpg,20150330001133fce.png,160202309.gif,無邪気の楽園 カラー版 第03巻121.png,170523d48b5f91026.jpg,040_Folder02___67434a161c71922f29a4e8cb42e7b4a1-650x915s040.png,047_Folder03___eb2cdd9f047.gif,034_Folder02___576ec78c4169be06cc90c215ddf04333 (1)034.png,d56341f82bfcc577ce36e2501d2f57d7.png,livejupiter_1453455051_47501.jpg,17050302images (2)220.png,25db7b23.gif,7729f167-s.jpg,161225112221017.gif,025_Folder02___20025.png,160202314.gif,011_Folder03___160501012011.gif,034_Folder03___35034.gif,35.gif,055_Folder02___d01e9675fad215527696d66876bc6642055.png,To LOVEる ダークネス 第07巻00171.jpeg,021_Folder03___161225160620018033021.gif,13-3.gif,014_Folder02___17050302f24fe0d9180014.png,7b00cb25.gif,5736beaeb6cc641fd5df929b42354a07 (1).png,livejupiter_1550197632_1402.jpg,67134f72-s.jpg,058_Folder02___d633435d1d3ce267af64d9a6b64e09f2058.png,064_Folder02___to_2572_004s064.png,151004-503.jpg,1705237c1d790e015.jpg,160501012.gif,037_Folder02___5bb03508cf84c6321303132250b48f8b037.png,019_Folder03___161225112225020019.gif,無邪気の楽園 カラー版 第03巻026.png,山口みなみ_かけがえのない時間0060.jpg,1-2.gif,tumblr_ohesvgAuRA1u8m4aeo4_1280.jpg,3d4eae625606d7bd378fe890c9d423a2.png,d567f49a9b6282998f30bbcec109fc5d8c21dd5e.gif,017_Folder03___161225112223018017.gif,d633435d1d3ce267af64d9a6b64e09f2.png,17050302f24fe0d9180.png,201608081228187d2.jpg,test.jpeg,008_Folder01___43db7191-s008.jpg,1612259a0afe87096.gif,2c57006d-s.jpg,1bab07597aa1440d395506a153b24610.png,057_Folder03___wpid-1443354549124057.gif,あやみIMG_0835000007.jpg,160501002.gif,ちなんぼ001000001.jpg,1705236e907fd1-s014.jpg,002_Folder03___1-2002.gif,160202313.gif,17050302images237.png,あやみIMG_0834000006.jpg,004_Folder02___132004.png,3D5gBNs.gif,15741239231.jpg,20110210022937.png,040_Folder03___5cc0ona040.gif,西村理香_15_1605342.jpg,035_Folder02___576ec78c4169be06cc90c215ddf04333035.png,003_testFolder___To LOVEる ダークネス 第07巻00172003.jpeg,3b70ae511b622ed2f2796dbe7e95f878.png,576ec78c4169be06cc90c215ddf04333.png,016_Folder02___17050302images (1)208016.png,70-1.gif,38.gif,03_450-2018022021381680165.jpg,018_Folder03___161225112224019018.gif,161225mjkr6_mn6rt4_23213.gif,43db7191-s.jpg,042_Folder03___7b00cb25042.gif,32.gif,17052359325466011.png,068_Folder02___無邪気の楽園 カラー版 第03巻040068.png,012_Folder03___160501015012.gif,016_Folder03___161225112221017016.gif,002_testFolder___To LOVEる ダークネス 第07巻00171002.jpeg,1705231d89da5f-s004.jpg,170523bb96a5f5-s025.jpg,010_Folder03___160501012 (1)010.gif,11-58.jpg,001_testFolder___To LOVEる ダークネス 第05巻00175001.jpeg,d6f8d77f6f98d34f6ef31312f017efaf.png,001_Folder01___140703-419001.jpg,047_Folder02___a20047.png,livejupiter_1550197632_1401.jpg,002_Folder01___15002.jpg,030_Folder03___2730017c030.gif,160202315.gif,2019120107364242.jpg,4c76f221.gif,170523b868090a023.jpg,948f3c2e.gif,あやみIMG_0833000005.jpg,ちなんぼ002000002.jpg,020_Folder02___17050303blog_import_51a62e78599a3054020.png,053_Folder03___panchira_kaze038053.gif,001_Folder03___010001.gif,132.png,031_Folder02___4b2273bf65d7f6fd77288cdb88e481e8031.png,170523d82767d8-s029.jpg,066_Folder02___zzz2afc4238-s066.png,天野美由紀14迎えに来てね0027.jpg,08af22b3.gif,060_Folder02___dadf14e1e1ff50521cc5e2a2145cb7c3060.png,a38.png,046_Folder02___9c120afc81493acc49c47c80e0b55b6f046.png,kim_uttg_24.gif,170523a52e97e3-s019.jpg,160501015.gif,900eaa7e0d96fda8296571afa0f0f3c6.png,17050303blog_import_51a62e78599a3054.png,02_450-2010011100523260119.jpg,17050303e73c1735080.png,17052359325466011.png,049_Folder03___kim_uttg_24049.gif,1705232ded2aca-s005.jpg,170523025a5bd2-s001.jpg,dadf14e1e1ff50521cc5e2a2145cb7c3.png,045_Folder02___91e7fc53bca7cfbc8bd0aee3c99657b7045.png,1705236005598b013.jpg,67434a161c71922f29a4e8cb42e7b4a1-650x915s.png,oppai78_58.jpg,051_Folder02___ad2f0860f11255cb6981ec5105ae05f5051.png,003_Folder02___080b848059f28cebf0e9dc78344948ff003.png,9c120afc81493acc49c47c80e0b55b6f.png,27362393.gif,835849b3ea967bf0b6762a9930c946d5.png,1705235547b1a2009.jpg,151004-501 (1).jpg,062_Folder02___i_20150504144054062.png,17052308b975e1002.jpg,BkDGPzMCYAE5abs.jpg,032_Folder02___5736beaeb6cc641fd5df929b42354a07 (1)032.png,panchira_kaze023.gif,5f8031131b10198f13ee6f271dbf9e00.png,d01e9675fad215527696d66876bc6642.png,156314964126s.jpg,9ee097f9-s.jpg,058_Folder03___wpid-1443355772469058.gif,018_Folder02___17050302images237018.png,027dd49d6da8f0b5d0a8fa03c711ce41.png,無邪気の楽園 カラー版 第03巻131.png,oppai77_10.jpg,013_Folder02___1705030242bb6f4f099013.png,024_Folder03___161225161019012037024.gif,043_Folder03___948f3c2e043.gif,028_Folder02___38cdb593b51f1e7c2ef8b8e90d813eab028.png,076_Folder02___無邪気の楽園 第04巻031076.png,170523d81ab004-s028.jpg,7a12e2822d215283687db4d26c8ca9c4.png,1612257458c8db084.gif,072_Folder02___無邪気の楽園 カラー版 第03巻121072.png,059_Folder03___wpid-1443359335098059.gif,150825114.jpg,r084442598B.jpg,LaQx3d5.gif,161225112223018.gif,161225160620003032.gif,036_Folder02___59036.png,009_Folder03___160501006009.gif,Darkness 6_082.jpg,046_Folder03___ditua_dkid5t_1046.gif,b5b1162a-s.jpg,32b870c1-s.jpg,038_Folder02___5d00b7218dd86ffa6f65b6de82f630f1038.png,006_Folder01___151019214006.jpg,To LOVEる ダークネス 第07巻00173.jpeg,170523ddc69d7b030.jpg,005_Folder02___133005.png,07_83734773.png,37c2cacdecbf817381e69c8f102f6b7e.gif,045_Folder03___d567f49a9b6282998f30bbcec109fc5d8c21dd5e045.gif,To LOVEる ダークネス 第07巻00172.jpeg,074_Folder02___無邪気の楽園 第04巻027074.png,005_Folder01___151004-503005.jpg,cb3b91c8.png,170523aacc64d6-s021.jpg,panchira_kaze038.gif,西村理香_AliceClub&サタン05459.jpg,007_Folder03___160501001007.gif,026_Folder02___20150330001133fce026.png,r084466167B.jpg
+2024/09/14 13:32:49 828747    ChangeFileListEvent  > sender.Length = 430
+2024/09/14 13:32:50 561420    TransportForm.ControlDraggerB > pictureBox_ImageMain -> pictureBox_ImageMain > Control_MouseDown
+2024/09/14 13:32:50 562418    TransportForm.ControlDraggerB > pictureBox_ImageMain -> imageMainFrame1 > Control_MouseDown
+2024/09/14 13:32:50 680473    CommonControlUtilityModule.JudgeClickRightOrLeftChild > ClickLeft
+2024/09/14 13:32:50 680473    CommonUtility.FileListUtility.FileListManager > MovePreviousDirectory
+2024/09/14 13:32:50 681472    CommonUtility.FileListUtility.DirectoryGetter > GetPreviousDirectory
+2024/09/14 13:32:50 681472    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/14 13:32:50 682472    CommonUtility.FileListUtility.DirectoryGetter > GetDeepestAndLastDirectory
+2024/09/14 13:32:50 682472    CommonUtility.FileListUtility.DirectoryGetter > GetLastDirectory
+2024/09/14 13:32:50 682472    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/14 13:32:50 683466    CommonUtility.FileListUtility.DirectoryGetter > GetLastDirectory
+2024/09/14 13:32:50 683466    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/14 13:32:50 684464    CommonUtility.FileListUtility.DirectoryGetter > GetLastDirectory
+2024/09/14 13:32:50 684464    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/14 13:32:50 685463     dirs.Length < 1[Child Directory Nothing]
+2024/09/14 13:32:50 685463    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/14 13:32:50 685463    fileFilterConditionList = \.jpg$,\.jpeg$,\.png$,\.bmp$,\.gif$,\.tiff$,\.tif$,\.webp$
+2024/09/14 13:32:50 686459    fileIgnoreConditionList = 
+2024/09/14 13:32:50 686459    Dirctory.GetFiles.Length = 6
+2024/09/14 13:32:50 687456    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/14 13:32:50 687456      list.Count < 1
+2024/09/14 13:32:50 688454      SetFileListFromPath Failed
+2024/09/14 13:32:50 688454      SetDirecoryPath=J:\ZMOVIE_SELECT2\av ab new\vx
+2024/09/14 13:32:50 688454    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:50 689450    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:32:50 689450    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:50 689450    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 13:32:50 690448    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:50 690448    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:32:50 691446    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:50 691446    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:32:50 692442    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/14 13:32:50 692442    first Path = 
+2024/09/14 13:32:50 692442    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 13:32:50 737252    ListJoin = 
+2024/09/14 13:32:50 738249     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:32:50 738249    ChangeFileListEvent  > sender.Length = 0
+2024/09/14 13:32:50 739249    ImageViewer5.ImageControl.ImageMainClass > ReadFileEvent
+2024/09/14 13:32:50 739249    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/14 13:32:50 739249    ViewImageMain > Path Not Exists. []
+2024/09/14 13:32:50 740244    ViewImageModule.ViewImage.FileNotExists:
+2024/09/14 13:32:50 741242    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:50 741242    ImageIsNull
+2024/09/14 13:32:50 742240    ViewImageModule.ViewImage.getImage : isExistsImage : false
+2024/09/14 13:32:50 742240    TransportForm.FormDragger > pictureBox_ImageMain -> FormMain > MouseMove > Up
+2024/09/14 13:32:51 692954    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:32:51 692954    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory
+2024/09/14 13:32:51 694957    CommonUtility.FileListUtility.DirectoryGetter > GetNextDirectory
+2024/09/14 13:32:51 695952    CommonUtility.FileListUtility.DirectoryGetter > GetDirectoryFormPath
+2024/09/14 13:32:51 696948    CommonUtility.FileListUtility.DirectoryGetter > NextDirectoryWhenNotAbleAccess
+2024/09/14 13:32:51 698944      IsLastDirectory=true , path=J:\ZMOVIE_SELECT2\av ab new\vx
+2024/09/14 13:32:51 698944    CommonUtility.FileListUtility.DirectoryGetter > NextDirectoryWhenNotAbleAccess
+2024/09/14 13:32:51 700936      IsLastDirectory=true , path=J:\ZMOVIE_SELECT2\av ab new
+2024/09/14 13:32:51 701933    CommonUtility.FileListUtility.DirectoryGetter > NextDirectoryWhenNotAbleAccess
+2024/09/14 13:32:51 703934    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/14 13:32:51 703934    fileFilterConditionList = \.jpg$,\.jpeg$,\.png$,\.bmp$,\.gif$,\.tiff$,\.tif$,\.webp$
+2024/09/14 13:32:51 704927    fileIgnoreConditionList = 
+2024/09/14 13:32:51 728867    Dirctory.GetFiles.Length = 743
+2024/09/14 13:32:51 734848    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/14 13:32:51 735847    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/14 13:32:51 740856      SetFileListFromPath Failed
+2024/09/14 13:32:51 740856      SetDirecoryPath=J:\ZMyFolder_2
+2024/09/14 13:32:51 741827    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:51 741827    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:51 742825    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:51 743820     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:32:51 743820    SelectedFile  > sender = J:\ZMyFolder_2\00movie\tumblr_ovwismlz0M1rfkswfo1_1280 2.jpg
+2024/09/14 13:32:51 743820    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:51 751827    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:51 753918    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:51 754916    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 13:32:51 755915    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:32:51 755915    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:51 756912    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:51 756912     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:32:51 757909    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\testFolder\Folder03\004_Folder03___160202313004.gif
+2024/09/14 13:32:51 757909    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:51 784854    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:32:51 784854    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:32:51 785854    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:51 785854     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:32:51 786851    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\testFolder\Folder03\004_Folder03___160202313004.gif
+2024/09/14 13:32:51 786851    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:51 799845    first Path = J:\ZMyFolder_2\jpgbest\testFolder\Folder03\004_Folder03___160202313004.gif
+2024/09/14 13:32:51 799845    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 13:32:51 805864    ListJoin = 004_Folder03___160202313004.gif,rk aa (IV) [渋谷書店] 無毛少女生撮専科 07 佐藤かすみ2_x264.mp4_000376983.jpg,1705231d89da5f-s004.jpg,To LOVEる ダークネス 第12巻00136.jpeg,016_Folder02___17050302images (1)208016.png,001_Folder02___02147b70001.png,i_20131125090308s.png,009_Folder02___137009.png,055_Folder03___wpid-1443351378900055.gif,35.gif,160613-202.gif,b59d2f12-s.jpg,058_Folder03___wpid-1443355772469058.gif,134.png,032_Folder02___5736beaeb6cc641fd5df929b42354a07 (1)032.png,022_Folder02___17052359325466011022.png,wpid-1443351588916.gif,dadf14e1e1ff50521cc5e2a2145cb7c3.png,002_Folder01___15002.jpg,40SJCFT.gif,2019120107364242.jpg,001_Folder03___010001.gif,wpid-1443354549124.gif,1705236005598b013.jpg,02_450-2010011100523260119.jpg,017_Folder03___161225112223018017.gif,032_Folder03___30fa3b11032.gif,56fe9d9f.jpg,150825114.jpg,045_Folder02___91e7fc53bca7cfbc8bd0aee3c99657b7045.png,803c68db5757b355d5a612e8dd0cd835.png,5bb03508cf84c6321303132250b48f8b.png,livejupiter_1464670858_101.jpg,天野美由紀14迎えに来てね0027.jpg,008_Folder02___136008.png,test.jpeg,17050302images (1)208.png,013_Folder03___160501016013.gif,077_Folder02___無邪気の楽園 第04巻033077.png,eb2cdd9f.gif,062_Folder02___i_20150504144054062.png,047_Folder03___eb2cdd9f047.gif,160501006.gif,西村理香_15_1605320.jpg,053_Folder02___blog_import_51a4b5f743704053.png,007_Folder03___160501001007.gif,panchira_kaze040.gif,08af22b3.gif,BkDGPzMCYAE5abs.jpg,074_Folder02___無邪気の楽園 第04巻027074.png,無邪気の楽園 第04巻033.png,ちなんぼ001000001.jpg,161225e90e5358155.gif,161225161019013038.gif,028_Folder03___161225mjkr6_mn6rt4_23213028.gif,024_Folder02___1bab07597aa1440d395506a153b24610024.png,016_Folder03___161225112221017016.gif,011_Folder03___160501012011.gif,oppai77_10.jpg,d01e9675fad215527696d66876bc6642.png,013_Folder02___1705030242bb6f4f099013.png,05_25400841.jpg,056_Folder02___d273ff5f-s056.png,asaloon_1500050481_73402.png,161225112225020.gif,161225112221017.gif,010_Folder02___1412912917805010.png,17052398e6e511-s018.jpg,042_Folder03___7b00cb25042.gif,03_450-2018022021381680165.jpg,059_Folder03___wpid-1443359335098059.gif,003_testFolder___To LOVEる ダークネス 第07巻00172003.jpeg,27362393.gif,5Bc2bfe.gif,あやみIMG_0834000006.jpg,r084442598B.jpg,041_Folder03___70-1041.gif,1705234d0eb2b2a9c45d12876c4ef062911b0c6decff671473700807-s008.jpg,1bab07597aa1440d395506a153b24610.png,7a12e2822d215283687db4d26c8ca9c4.png,01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg,057_Folder03___wpid-1443354549124057.gif,無邪気の楽園 カラー版 第03巻119.png,051_Folder02___ad2f0860f11255cb6981ec5105ae05f5051.png,無邪気の楽園 カラー版 第03巻131.png,17050302f24fe0d9180.png,miad00978pl.jpg,161225160620003032.gif,02147b70.png,ditua_dkid5t_1.gif,oppai421.gif,blog_import_51a4b5f743704.png,d633435d1d3ce267af64d9a6b64e09f2.png,38cdb593b51f1e7c2ef8b8e90d813eab.png,161225250dfffc058.gif,20150330001133fce.png,900eaa7e0d96fda8296571afa0f0f3c6.png,160501012 (1).gif,2c57006d-s.jpg,161225932b1ad3094.gif,025_Folder02___20025.png,32b870c1-s.jpg,011_Folder02___161225blog_import_51a62e78599a3124011.png,065_Folder02___VNsTDhA065.png,201608081228187d2.jpg,070_Folder02___無邪気の楽園 カラー版 第03巻119070.png,1776c79c.png,046_Folder03___ditua_dkid5t_1046.gif,06_40586195-M-imagenavi.jpg,oppai78_20.jpg,5d00b7218dd86ffa6f65b6de82f630f1.png,a3f7253e-s.jpg,to_2572_004s.png,007_Folder01___2c57006d-s007.jpg,135.png,43db7191-s.jpg,001_Folder01___140703-419001.jpg,西村理香_AliceClub&サタン05459.jpg,2730017c.gif,046_Folder02___9c120afc81493acc49c47c80e0b55b6f046.png,042_Folder02___803c68db5757b355d5a612e8dd0cd835042.png,576ec78c4169be06cc90c215ddf04333 (1).png,西村理香_15_1605343.jpg,064_Folder02___to_2572_004s064.png,17050303blog_import_51a62e78599a3054.png,026_Folder03___1612253188941b063026.gif,006_Folder01___151019214006.jpg,050_Folder03___LaQx3d5050.gif,あやみIMG_0835000007[1].jpg,038_Folder02___5d00b7218dd86ffa6f65b6de82f630f1038.png,30fa3b11.gif,002_Folder03___1-2002.gif,70-1.gif,056_Folder03___wpid-1443351588916056.gif,161225blog_import_51a62e78599a3124.png,073_Folder02___無邪気の楽園 カラー版 第03巻131073.png,041_Folder02___7a12e2822d215283687db4d26c8ca9c4041.png,無邪気の楽園 カラー版 第03巻120.png,ee1b983d.jpg,066_Folder02___zzz2afc4238-s066.png,027_Folder03___1612254bb9c657069027.gif,67134f72-s.jpg,無邪気の楽園 カラー版 第03巻121.png,170523b868090a023.jpg,a21.png,2c57006d-s.jpg,kim_uttg_24.gif,003_Folder02___080b848059f28cebf0e9dc78344948ff003.png,007_Folder02___135007.png,052_Folder03___panchira_kaze023052.gif,063_Folder02___livejupiter_1455441376_38501063.png,170523413777a7006.gif,To LOVEる ダークネス 第06巻00084.jpeg,無邪気の楽園 カラー版 第03巻091.png,37c2cacdecbf817381e69c8f102f6b7e.gif,panchira_kaze038.gif,1612252a14e684061.gif,13-3.gif,17052359325466011.png,036_Folder02___59036.png,055_Folder02___d01e9675fad215527696d66876bc6642055.png,d6f8d77f6f98d34f6ef31312f017efaf.png,d273ff5f-s.png,160202309.gif,9d788612.gif,11-58.jpg,西村理香_15_1605352.jpg,zzz2afc4238-s.png,021_Folder03___161225160620018033021.gif,157723512219s.jpg,livejupiter_1550197632_1402.jpg,161225112223018.gif,050_Folder02___a38050.png,059_Folder02___d6f8d77f6f98d34f6ef31312f017efaf059.png,010.gif,132.png,023_Folder03___161225161019011036023.gif,170523b4fa3a56-s022.jpg,039_Folder03___5Bc2bfe039.gif,005_Folder01___151004-503005.jpg,014_Folder03___160501018014.gif,無邪気の楽園 第04巻031.png,4b2273bf65d7f6fd77288cdb88e481e8.png,西村理香_15_1605342.jpg,030_Folder03___2730017c030.gif,005_Folder02___133005.png,To LOVEる ダークネス 第04巻00192.jpeg,067_Folder02___無邪気の楽園 カラー版 第03巻026067.png,17050302images237.png,7729f167-s.jpg,052_Folder02___asaloon_1500050481_73402052.png,1705030242bb6f4f099.png,029_Folder03___25db7b23029.gif,011_Folder01___blog_import_51a50ffb6b5dc011.jpg,170523d82767d8-s029.jpg,6e5e03a7-s.jpg,wpid-1443351378900.gif,1705236e907fd1-s014.jpg,04_450-20190710120721245784.jpg,wpid-1443355772469.gif,027dd49d6da8f0b5d0a8fa03c711ce41.png,015_Folder03___160613-202015.gif,040_Folder02___67434a161c71922f29a4e8cb42e7b4a1-650x915s040.png,1612259a0afe87096.gif,21.png,5d36d9bb-s.jpg,1412912917805.png,3-1.gif,008_Folder01___43db7191-s008.jpg,4c76f221.gif,22-54.jpg,025_Folder03___161225161019013038025.gif,17052311721601-s003.jpg,137.png,i_20150504144054.png,034_Folder02___576ec78c4169be06cc90c215ddf04333 (1)034.png,002_Folder02___027dd49d6da8f0b5d0a8fa03c711ce41002.png,051_Folder03___oppai421051.gif,07_83734773.png,160501012.gif,4-12.gif,015_Folder02___17050302f2d0fa7f181015.png,161225161019012037.gif,161225112224019.gif,livejupiter_1455441376_38501.png,170523573e49ce-s010.jpg,030_Folder02___3d4eae625606d7bd378fe890c9d423a2030.png,029_Folder02___3b70ae511b622ed2f2796dbe7e95f878029.png,072_Folder02___無邪気の楽園 カラー版 第03巻121072.png,053_Folder03___panchira_kaze038053.gif,91e7fc53bca7cfbc8bd0aee3c99657b7.png,cb3b91c8.png,無邪気の楽園 第04巻027.png,a36.png,161225b10e5c46103.gif,blog_import_51a50ffb6b5dc.jpg,009_Folder03___160501006009.gif,576ec78c4169be06cc90c215ddf04333.png,075_Folder02___無邪気の楽園 第04巻030075.png,170523d531345a-s027.jpg,040_Folder03___5cc0ona040.gif,057_Folder02___d56341f82bfcc577ce36e2501d2f57d7057.png,035_Folder02___576ec78c4169be06cc90c215ddf04333035.png,022_Folder03___161225160831-314034022.gif,5736beaeb6cc641fd5df929b42354a07.png,17052345c94ab4007.jpg,076_Folder02___無邪気の楽園 第04巻031076.png,031_Folder02___4b2273bf65d7f6fd77288cdb88e481e8031.png,ちなんぼ002000002.jpg,006_Folder02___134006.png,r084466167B.jpg,1705235547b1a2009.jpg,あやみIMG_0833000005.jpg,山口みなみ_かけがえのない時間0060.jpg,049_Folder02___a36049.png,026_Folder02___20150330001133fce026.png,3D5gBNs.gif,058_Folder02___d633435d1d3ce267af64d9a6b64e09f2058.png,無邪気の楽園 カラー版 第03巻026.png,003_Folder01___150825114003.jpg,027_Folder02___21027.png,3d4eae625606d7bd378fe890c9d423a2.png,25db7b23.gif,043_Folder02___835849b3ea967bf0b6762a9930c946d5043.png,044_Folder02___900eaa7e0d96fda8296571afa0f0f3c6044.png,08_72484654_480x480.jpg,151004-503.jpg,170523a52e97e3-s019.jpg,080b848059f28cebf0e9dc78344948ff.png,20.png,wpid-1443359335098.gif,024_Folder03___161225161019012037024.gif,無邪気の楽園 カラー版 第03巻040.png,031_Folder03___2f727e88031.gif,170523b972b2a024.jpg,009_Folder01___56fe9d9f009.jpg,a20.png,151019214.jpg,356_1.gif,17052359325466011.png,5736beaeb6cc641fd5df929b42354a07 (1).png,161225112221017.gif,136.png,1705030235cc681a091.png,7b00cb25.gif,043_Folder03___948f3c2e043.gif,071_Folder02___無邪気の楽園 カラー版 第03巻120071.png,161225mjkr6_mn6rt4_23213.gif,034_Folder03___35034.gif,035_Folder03___356_1035.gif,054_Folder03___panchira_kaze040054.gif,010_Folder01___5d36d9bb-s010.jpg,LaQx3d5.gif,あやみIMG_0833000005.jpg,068_Folder02___無邪気の楽園 カラー版 第03巻040068.png,008_Folder03___160501002008.gif,017_Folder02___17050302images (2)220017.png,069_Folder02___無邪気の楽園 カラー版 第03巻091069.png,Darkness 6_082.jpg,無邪気の楽園 第04巻030.png,001_testFolder___To LOVEる ダークネス 第05巻00175001.jpeg,020_Folder03___161225160620003032020.gif,Guf4epq.gif,948f3c2e.gif,005_Folder03___160202314005.gif,To LOVEる ダークネス 第07巻00171.jpeg,1612257458c8db084.gif,downblouse_chira003.jpg,15741239231.jpg,049_Folder03___kim_uttg_24049.gif,67434a161c71922f29a4e8cb42e7b4a1-650x915s.png,160202315.gif,140703-419.jpg,006_Folder03___160202315006.gif,170523025a5bd2-s001.jpg,panchira_kaze023.gif,160202313.gif,023_Folder02___1776c79c023.png,ace21392.jpg,a38.png,15562350469.jpg,151004-501 (1).jpg,170523bb96a5f5-s025.jpg,20110210022937.png,060_Folder02___dadf14e1e1ff50521cc5e2a2145cb7c3060.png,ちなんぼ003000003.jpg,西村理香_AliceClub&サタン05445.jpg,17050303blog_import_51a583e37436f043.png,170523aa6581df020.jpg,018_Folder03___161225112224019018.gif,037_Folder02___5bb03508cf84c6321303132250b48f8b037.png,dcf046d0.jpg,2f727e88.gif,32.gif,161225160831-314034.gif,033_Folder02___5736beaeb6cc641fd5df929b42354a07033.png,38.gif,d567f49a9b6282998f30bbcec109fc5d8c21dd5e.gif,山口みなみ_かけがえのない時間0014.jpg,005_testFolder___To LOVEる ダークネス 第12巻00136005.jpeg,170523aacc64d6-s021.jpg,020_Folder02___17050303blog_import_51a62e78599a3054020.png,061_Folder02___i_20131125090308s061.png,018_Folder02___17050302images237018.png,17050302images (2)220.png,1612254bb9c657069.gif,019_Folder03___161225112225020019.gif,161225161019011036.gif,ad2f0860f11255cb6981ec5105ae05f5.png,12-59.jpg,028_Folder02___38cdb593b51f1e7c2ef8b8e90d813eab028.png,5cc0ona.gif,livejupiter_1550197632_1401.jpg,160501016.gif,160501002.gif,1705232ded2aca-s005.jpg,014_Folder02___17050302f24fe0d9180014.png,048_Folder03___Guf4epq048.gif,r084459013B.jpg,h499Ej4.jpg,039_Folder02___5f8031131b10198f13ee6f271dbf9e00039.png,002_testFolder___To LOVEる ダークネス 第07巻00171002.jpeg,170523ea594980031.jpg,To LOVEる ダークネス 第05巻00175.jpeg,25f9662c-s.jpg,b5b1162a-s.jpg,59.png,15.jpg,161225700d9b38082.gif,a5f6e0ac.gif,003_Folder03___160202309003.gif,013_Folder01___rk aa (IV) [渋谷書店] 無毛少女生撮専科 07 佐藤かすみ2_x264.mp4_000376983013.jpg,9a41531bc8400800438008cfd1e68a7c.jpg,1612253188941b063.gif,201608081218596b9.jpg,17050302f2d0fa7f181.png,17050303e73c1735080.png,d56341f82bfcc577ce36e2501d2f57d7.png,038_Folder03___40SJCFT038.gif,170523d81ab004-s028.jpg,1705235bef4622-s012.jpg,160501001.gif,160202314.gif,019_Folder02___17050303blog_import_51a583e37436f043019.png,160501015.gif,012_Folder01___ee1b983d012.jpg,037_Folder03___38037.gif,livejupiter_1453455051_47501.jpg,156314964126s.jpg,004_Folder01___151004-501 (1)004.jpg,133.png,048_Folder02___a21048.png,1705237e8a9d71-s016.jpg,dcf046d0[1].jpg,047_Folder02___a20047.png,5f8031131b10198f13ee6f271dbf9e00.png,1-2.gif,044_Folder03___a5f6e0ac044.gif,004_testFolder___To LOVEる ダークネス 第07巻00173004.jpeg,9c120afc81493acc49c47c80e0b55b6f.png,170523ddc69d7b030.jpg,021_Folder02___17050303e73c1735080021.png,012_Folder03___160501015012.gif,3b70ae511b622ed2f2796dbe7e95f878.png,To LOVEる とらぶる ダークネス カラー版 第14巻00026.jpeg,012_Folder02___1705030235cc681a091012.png,あやみIMG_0836000008.jpg,170523d48b5f91026.jpg,160501018.gif,あやみIMG_0835000007.jpg,VNsTDhA.png,161225160620018033.gif,010_Folder03___160501012 (1)010.gif,oppai78_58.jpg,835849b3ea967bf0b6762a9930c946d5.png,tumblr_ovwismlz0M1rfkswfo1_1280 2.jpg,004_Folder02___132004.png,045_Folder03___d567f49a9b6282998f30bbcec109fc5d8c21dd5e045.gif,054_Folder02___cb3b91c8054.png,1705237c1d790e015.jpg,To LOVEる ダークネス 第07巻00173.jpeg,033_Folder03___32033.gif,036_Folder03___37c2cacdecbf817381e69c8f102f6b7e036.gif,tumblr_ohesvgAuRA1u8m4aeo4_1280.jpg,9ee097f9-s.jpg,To LOVEる ダークネス 第09巻00106.jpeg,To LOVEる ダークネス 第07巻00172.jpeg,2019121011151111.jpg,17052308b975e1002.jpg,西村理香_15_1605305.jpg
+2024/09/14 13:32:51 806864    ChangeFileListEvent  > sender.Length = 430
+2024/09/14 13:32:51 806864    TransportForm.ControlDraggerB > pictureBox_ImageMain -> pictureBox_ImageMain > Control_MouseDown
+2024/09/14 13:32:51 807863    TransportForm.ControlDraggerB > pictureBox_ImageMain -> imageMainFrame1 > Control_MouseDown
+2024/09/14 13:32:51 808859    TransportForm.ControlDraggerB.ChangeLocationByMouse:_control.Anchor != AnchorStyles.None > 
+2024/09/14 13:32:51 886774    CommonControlUtilityModule.JudgeClickRightOrLeftChild > ControlClicked , IsDrag=true , return
+2024/09/14 13:32:51 887769    TransportForm.FormDragger > pictureBox_ImageMain -> FormMain > MouseMove > Up
+2024/09/14 13:32:53 687615    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:32:53 688619    CommonUtility.FileListUtility.Files > MoveNext index=1
+2024/09/14 13:32:53 691611    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:53 693603    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\Folder2\rk aa (IV) [渋谷書店] 無毛少女生撮専科 07 佐藤かすみ2_x264.mp4_000376983.jpg
+2024/09/14 13:32:53 695603    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:53 719532    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:55 095452    TransportForm.ControlDraggerB > pictureBox_ImageMain -> pictureBox_ImageMain > Control_MouseDown
+2024/09/14 13:32:55 096456    TransportForm.ControlDraggerB > pictureBox_ImageMain -> imageMainFrame1 > Control_MouseDown
+2024/09/14 13:32:55 216686    CommonControlUtilityModule.JudgeClickRightOrLeftChild > ClickLeft
+2024/09/14 13:32:55 216686    CommonUtility.FileListUtility.Files > MovePrevious index=0
+2024/09/14 13:32:55 217684    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:55 218684    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\testFolder\Folder03\004_Folder03___160202313004.gif
+2024/09/14 13:32:55 218684    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:55 235636    ImageViewer5.ImageControl.ImageMainClass > ReadFileEvent
+2024/09/14 13:32:55 250869    TransportForm.FormDragger > pictureBox_ImageMain -> FormMain > MouseMove > Up
+2024/09/14 13:32:55 453505    TransportForm.ControlDraggerB > pictureBox_ImageMain -> pictureBox_ImageMain > Control_MouseDown
+2024/09/14 13:32:55 454502    TransportForm.ControlDraggerB > pictureBox_ImageMain -> imageMainFrame1 > Control_MouseDown
+2024/09/14 13:32:55 692769    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:32:55 692769    CommonUtility.FileListUtility.Files > MoveNext index=1
+2024/09/14 13:32:55 692769    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:55 693771    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\Folder2\rk aa (IV) [渋谷書店] 無毛少女生撮専科 07 佐藤かすみ2_x264.mp4_000376983.jpg
+2024/09/14 13:32:55 693771    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:55 697786    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:56 500689    ShowFileList_ToolStripMenuItem_Click
+2024/09/14 13:32:57 521445    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > _listBox_Click
+2024/09/14 13:32:57 522447    CommonUtility.FileListUtility.Files > Move(int index) index=6
+2024/09/14 13:32:57 522447    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\gif_png_bmp\i_20131125090308s.png
+2024/09/14 13:32:57 523444    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:57 540641    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:57 695483    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:32:57 696450    CommonUtility.FileListUtility.Files > MoveNext index=7
+2024/09/14 13:32:57 698435    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:57 701438    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\testFolder\Folder02\009_Folder02___137009.png
+2024/09/14 13:32:57 702435    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:57 744139    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:58 100947    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > _listBox_Click
+2024/09/14 13:32:58 100947    CommonUtility.FileListUtility.Files > Move(int index) index=13
+2024/09/14 13:32:58 100947    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\gif_png_bmp\134.png
+2024/09/14 13:32:58 101918    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:58 118673    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:32:59 443564    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > _listBox_Click
+2024/09/14 13:32:59 445560    CommonUtility.FileListUtility.Files > Move(int index) index=68
+2024/09/14 13:32:59 447552    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\testFolder\Folder03\042_Folder03___7b00cb25042.gif
+2024/09/14 13:32:59 451541    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:59 690672    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:32:59 690672    CommonUtility.FileListUtility.Files > MoveNext index=69
+2024/09/14 13:32:59 691669    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:32:59 692667    SelectedFile  > sender = J:\ZMyFolder_2\test_jpg\03_450-2018022021381680165.jpg
+2024/09/14 13:32:59 692667    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:32:59 715607    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:33:01 147365    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > _listBox_Click
+2024/09/14 13:33:01 147365    CommonUtility.FileListUtility.Files > Move(int index) index=52
+2024/09/14 13:33:01 148366    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\gif_png_bmp\gif\funny\161225e90e5358155.gif
+2024/09/14 13:33:01 148366    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:33:01 709449    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:33:01 710417    CommonUtility.FileListUtility.Files > MoveNext index=53
+2024/09/14 13:33:01 711416    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:33:01 712414    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\gif_png_bmp\gif\161225161019013038.gif
+2024/09/14 13:33:01 712414    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:33:01 728368    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > _listBox_Click
+2024/09/14 13:33:01 729368    CommonUtility.FileListUtility.Files > Move(int index) index=53
+2024/09/14 13:33:01 729368    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\gif_png_bmp\gif\161225161019013038.gif
+2024/09/14 13:33:01 730364    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:33:04 111652    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:33:04 112649    CommonUtility.FileListUtility.Files > MoveNext index=54
+2024/09/14 13:33:04 113648    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:33:04 119632    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\testFolder\Folder03\028_Folder03___161225mjkr6_mn6rt4_23213028.gif
+2024/09/14 13:33:04 120631    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:33:05 698607    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:33:05 698607    CommonUtility.FileListUtility.Files > MoveNext index=55
+2024/09/14 13:33:05 699607    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:33:05 701602    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\testFolder\Folder02\024_Folder02___1bab07597aa1440d395506a153b24610024.png
+2024/09/14 13:33:05 701602    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:33:05 769671    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:33:06 168361    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > _listBox_Click
+2024/09/14 13:33:06 168361    CommonUtility.FileListUtility.Files > Move(int index) index=66
+2024/09/14 13:33:06 169362    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\testFolder\Folder02\010_Folder02___1412912917805010.png
+2024/09/14 13:33:06 170359    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:33:06 186027    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:33:07 694489    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:33:07 695503    CommonUtility.FileListUtility.Files > MoveNext index=67
+2024/09/14 13:33:07 698484    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:33:07 757484    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\gif_png_bmp\gif\funny\17052398e6e511-s018.jpg
+2024/09/14 13:33:07 757484    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:33:07 770449    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:33:08 053425    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > _listBox_Click
+2024/09/14 13:33:08 053425    CommonUtility.FileListUtility.Files > Move(int index) index=76
+2024/09/14 13:33:08 054440    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\testFolder\Folder03\041_Folder03___70-1041.gif
+2024/09/14 13:33:08 054440    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:33:09 062470    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > _listBox_Click
+2024/09/14 13:33:09 062470    CommonUtility.FileListUtility.Files > Move(int index) index=82
+2024/09/14 13:33:09 063469    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\gif_png_bmp\無邪気の楽園 カラー版 第03巻119.png
+2024/09/14 13:33:09 063469    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:33:09 085409    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:33:09 691952    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:33:09 691952    CommonUtility.FileListUtility.Files > MoveNext index=83
+2024/09/14 13:33:09 692954    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:33:09 696942    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\testFolder\Folder02\051_Folder02___ad2f0860f11255cb6981ec5105ae05f5051.png
+2024/09/14 13:33:09 697941    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:33:09 771487    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:33:11 701136    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:33:11 702110    CommonUtility.FileListUtility.Files > MoveNext index=84
+2024/09/14 13:33:11 704098    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:33:11 711077    SelectedFile  > sender = J:\ZMyFolder_2\jpgbest\gif_png_bmp\無邪気の楽園 カラー版 第03巻131.png
+2024/09/14 13:33:11 712079    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:33:11 767957    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:33:12 775157    ##########  Form_Closed  #########
+2024/09/14 13:59:27 371914    ImageViewerArgs.ParseArguments
+2024/09/14 13:59:27 374906    read args
+2024/09/14 13:59:27 382885    ImageMainFrame_Load
+2024/09/14 13:59:27 389866    FormMain_Load
+2024/09/14 13:59:27 389866    FormMain_Load End
+2024/09/14 13:59:27 390864    ImageMainFrame > InitializeValues
+2024/09/14 13:59:27 404827    ImageViewerMainClass > InitializeValues
+2024/09/14 13:59:27 410809    TransportForm.TransparentFormSwitch.TransparencyKey = Empty, False
+2024/09/14 13:59:27 412807    ViewImageFunction > InitializeValue
+2024/09/14 13:59:27 413804    ShowSubFormFileList
+2024/09/14 13:59:27 413804    SubThread=1
+2024/09/14 13:59:27 425771    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:59:27 426768    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:59:27 434746    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/14 13:59:27 434746    fileFilterConditionList = \.jpg$,\.jpeg$,\.png$,\.bmp$,\.gif$,\.tiff$,\.tif$,\.webp$
+2024/09/14 13:59:27 435743    fileIgnoreConditionList = 
+2024/09/14 13:59:27 436741    Dirctory.GetFiles.Length = 14
+2024/09/14 13:59:27 438763    CommonUtility.FileListUtility.FileListRegister > SetFileList
+2024/09/14 13:59:27 439732    CommonUtility.FileListUtility.FileListRegister > MakeFileList
+2024/09/14 13:59:27 441727      SetDirecoryPath=C:\Users\OK\source\repos\test_media_files\test_jpg
+2024/09/14 13:59:27 442724    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:59:27 442724    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:59:27 443722    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:59:27 443722     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:59:27 443722    SelectedFile  > sender = C:\Users\OK\source\repos\test_media_files\test_jpg\01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg
+2024/09/14 13:59:27 444719    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:59:27 449705    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:59:27 452698    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:59:27 453695    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 13:59:27 453695    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:59:27 454692    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:59:27 454692    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:59:27 455690     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:59:27 455690    SelectedFile  > sender = C:\Users\OK\source\repos\test_media_files\test_jpg\01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg
+2024/09/14 13:59:27 456687    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:59:27 459679    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:59:27 460677    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:59:27 460677    CommonUtility.FileListUtility.Files > Move(int index) index=0
+2024/09/14 13:59:27 461674    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > ChangedFileInFile
+2024/09/14 13:59:27 461674     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:59:27 461674    SelectedFile  > sender = C:\Users\OK\source\repos\test_media_files\test_jpg\01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg
+2024/09/14 13:59:27 462671    ImageViewerMainClass > ShowImageThisPath
+2024/09/14 13:59:27 465690    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:59:27 466661    first Path = C:\Users\OK\source\repos\test_media_files\test_jpg\01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg
+2024/09/14 13:59:27 466661    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 13:59:27 467658    ListJoin = 01_4a44d3544f1f00b7d1ba958974b0d9eb_w.jpg,02_450-2010011100523260119.jpg,03_450-2018022021381680165.jpg,04_450-20190710120721245784.jpg,05_25400841.jpg,06_40586195-M-imagenavi.jpg,07_83734773.png,08_72484654_480x480.jpg,ocr_test2.jpg,ocr_test2_ret.jpg,Screenshot_20230205-123842.jpg,Screenshot_20230205-123842_ret.jpg,Screenshot_20230205-134825.jpg,Screenshot_20230205-134825_ret.jpg
+2024/09/14 13:59:27 467658    ChangeFileListEvent  > sender.Length = 14
+2024/09/14 13:59:27 512537    ImageViewerMainClass > ShowImageAfterInitialize
+2024/09/14 13:59:27 515557    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:59:27 516527    ViewImageFunction > InitializeValue_LoadAfter
+2024/09/14 13:59:27 517524    ## ApplySettings > ApplyArgs
+2024/09/14 13:59:27 517524    Args winSize = {Width=580, Height=630}
+2024/09/14 13:59:27 521515    Args winLoc = {X=1343,Y=10}
+2024/09/14 13:59:27 523510    ApplyArgsImageViewerFrame > ApplyArgs
+2024/09/14 13:59:27 523510    count = 0
+2024/09/14 13:59:27 524506    ----- frameNumber = 1
+2024/09/14 13:59:27 524506    dictStr = frame-number : 1,folder : C:\Images,frame-size : 700x500,frame-location : 100,100,subfolders : True,random : True,slideshow : True,interval : 2000
+2024/09/14 13:59:27 525505    Args folderPath = C:\Images
+2024/09/14 13:59:27 525505    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/14 13:59:27 525505    fileFilterConditionList = \.jpg$,\.jpeg$,\.png$,\.bmp$,\.gif$,\.tiff$,\.tif$,\.webp$
+2024/09/14 13:59:27 526501    fileIgnoreConditionList = 
+2024/09/14 13:59:27 526501     Path Not Exists. path=C:\Images
+2024/09/14 13:59:27 527500      SetDirecoryPath=
+2024/09/14 13:59:27 527500    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:59:27 527500    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:59:27 528495    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:59:27 528495    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 13:59:27 529496    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:59:27 529496    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:59:27 530490    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:59:27 530490    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:59:27 530490    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/14 13:59:27 531488    first Path = 
+2024/09/14 13:59:27 531488    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 13:59:27 533483    ListJoin = 
+2024/09/14 13:59:27 533483     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:59:27 534479    ChangeFileListEvent  > sender.Length = 0
+2024/09/14 13:59:27 534479    Args frameSize = {Width=700, Height=500}
+2024/09/14 13:59:27 536474    Args frameLoc = {X=100,Y=100}
+2024/09/14 13:59:27 537471    Args readSubFolderBool = True
+2024/09/14 13:59:27 538468    Setting.FlagChange > ChangeIncludeSubFolder = True
+2024/09/14 13:59:27 538468    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/14 13:59:27 538468    CommonUtility.FileListUtility.FileListManager > SetFilesFromPath
+2024/09/14 13:59:27 539466    fileFilterConditionList = \.jpg$,\.jpeg$,\.png$,\.bmp$,\.gif$,\.tiff$,\.tif$,\.webp$
+2024/09/14 13:59:27 539466    fileIgnoreConditionList = 
+2024/09/14 13:59:27 539466     Path Not Exists. path=
+2024/09/14 13:59:27 540463      SetDirecoryPath=
+2024/09/14 13:59:27 540463    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:59:27 541460    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:59:27 541460    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:59:27 541460    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 13:59:27 542459    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:59:27 542459    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:59:27 543455    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:59:27 543455    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:59:27 544454    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/14 13:59:27 544454    first Path = 
+2024/09/14 13:59:27 544454    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 13:59:27 545451    ListJoin = 
+2024/09/14 13:59:27 545451     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:59:27 545451    ChangeFileListEvent  > sender.Length = 0
+2024/09/14 13:59:27 546448    Args randomBool = True
+2024/09/14 13:59:27 546448    Setting.FlagChange > ChangeListRandom = True
+2024/09/14 13:59:27 547445    CommonUtility.FileListUtility.FileListManager > SwitchOrderToRandomOrCorrectByFlag
+2024/09/14 13:59:27 549439    CommonUtility.FileListUtility.Files > FileList:PropertySet
+2024/09/14 13:59:27 550436    CommonUtility.FileListUtility.Files.Move(int index) index is invalid
+2024/09/14 13:59:27 550436    CommonUtility.FileListUtility.FileListManager > ChangedFileList
+2024/09/14 13:59:27 550436    CommonUtility.FileListUtility.FileListControl.FileListControlListBox > UpdateFileListAfterEvent
+2024/09/14 13:59:27 551435    ListJoin = 
+2024/09/14 13:59:27 551435     listBox1.Items.Count < 1 , retrun
+2024/09/14 13:59:27 552431    ChangeFileListEvent  > sender.Length = 0
+2024/09/14 13:59:27 552431    Args slideShowIntervalInt = 2000
+2024/09/14 13:59:27 553428    Args slideShowBool = True
+2024/09/14 13:59:27 554426    _SlideShowTimer.Start
+2024/09/14 13:59:27 554426    Interval = 2000
+2024/09/14 13:59:27 592183    Args fileListtWindow = 0
+2024/09/14 13:59:27 602158    FormMain_Paint First
+2024/09/14 13:59:27 603154    FormMain.Size = {Width=580, Height=630}
+2024/09/14 13:59:27 604154    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/14 13:59:27 605149    ImageViewerMainClass > ShowImageAfterInitialize
+2024/09/14 13:59:27 605149    CommonUtility.FileListUtility.Files > GetCurrentValue : FileList.Count<1
+2024/09/14 13:59:27 606147    ViewImageMain > Path Not Exists. []
+2024/09/14 13:59:27 607145    ViewImageModule.ViewImage.FileNotExists:
+2024/09/14 13:59:27 608141    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl
+2024/09/14 13:59:27 609139    ImageIsNull
+2024/09/14 13:59:27 610136    ViewImageModule.ViewImage.getImage : isExistsImage : false
+2024/09/14 13:59:29 556566    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:59:29 557543    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory
+2024/09/14 13:59:29 557543    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory > _files.DirectoryPath Not Exists [path=]
+2024/09/14 13:59:31 547113    MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]
+2024/09/14 13:59:31 548082    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory
+2024/09/14 13:59:31 548082    CommonUtility.FileListUtility.FileListManager > MoveNextDirectory > _files.DirectoryPath Not Exists [path=]
+2024/09/14 13:59:33 052208    ##########  Form_Closed  #########
