@@ -3,7 +3,6 @@ C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayImageTest\bin\Debug\Pla
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayImageTest\bin\Debug\PlayImageTest.pdb
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayImageTest\bin\Debug\CommonModulesProject.dll
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayImageTest\bin\Debug\CommonModulesProject.pdb
-C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayImageTest\obj\Debug\PlayImageTest.csprojAssemblyReference.cache
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayImageTest\obj\Debug\PlayImageTest.FormMainPlayImageTest.resources
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayImageTest\obj\Debug\PlayImageTest.Properties.Resources.resources
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayImageTest\obj\Debug\PlayImageTest.csproj.GenerateResource.cache
@@ -24,3 +23,4 @@ C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\PlayImageTest\obj\Deb
 C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\PlayImageTest\obj\Debug\PlayImageTest.csproj.CopyComplete
 C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\PlayImageTest\obj\Debug\PlayImageTest.exe
 C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\PlayImageTest\obj\Debug\PlayImageTest.pdb
+C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\PlayImageTest\obj\Debug\PlayImageTest.csproj.AssemblyReference.cache

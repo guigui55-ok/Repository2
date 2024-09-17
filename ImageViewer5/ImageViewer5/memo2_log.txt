@@ -1,0 +1,132 @@
+
+
+
+**************
+240915
+
+TaskStarter から呼び出したときに、
+TransportForm\TransparentFormSwitch_keydownがなぜか実行され
+(_moveFrameKey.IsMatch(e))で参照エラーとなる（インスタンスが生成されていないため）
+　変数宣言時にKeys.Noneのオブジェクト生成する暫定対応
+
+
+***********
+Just-In-Time (JIT) デバッグを呼び出すための詳細については、
+ダイアログ ボックスではなく、このメッセージの最後を参照してください。
+
+************** 例外テキスト **************
+System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 TransportForm.TransparentFormSwitch.FormTransport_KeyDown(Object sender, KeyEventArgs e) 場所 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\TransportForm\TransparentFormSwitch.cs:行 391
+   場所 System.Windows.Forms.KeyEventHandler.Invoke(Object sender, KeyEventArgs e)
+   場所 System.Windows.Forms.Control.OnKeyDown(KeyEventArgs e)
+   場所 System.Windows.Forms.Control.ProcessKeyEventArgs(Message& m)
+   場所 System.Windows.Forms.Form.ProcessKeyPreview(Message& m)
+   場所 System.Windows.Forms.Control.ProcessKeyMessage(Message& m)
+   場所 System.Windows.Forms.Control.WmKeyChar(Message& m)
+   場所 System.Windows.Forms.Control.WndProc(Message& m)
+   場所 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   場所 System.Windows.Forms.ContainerControl.WndProc(Message& m)
+   場所 System.Windows.Forms.UserControl.WndProc(Message& m)
+   場所 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   場所 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   場所 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+
+************** 読み込まれたアセンブリ **************
+mscorlib
+    アセンブリ バージョン:4.0.0.0
+    Win32 バージョン:4.8.9261.0 built by: NET481REL1LAST_C
+    コードベース:file:///C:/Windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll
+----------------------------------------
+ImageViewer5
+    アセンブリ バージョン:1.0.0.0
+    Win32 バージョン:1.0.0.0
+    コードベース:file:///C:/Users/OK/source/repos/Repository2_CS/ImageViewer5/ImageViewer5/bin/Debug/ImageViewer5.exe
+----------------------------------------
+CommonModulesProject
+    アセンブリ バージョン:1.0.0.0
+    Win32 バージョン:1.0.0.0
+    コードベース:file:///C:/Users/OK/source/repos/Repository2_CS/ImageViewer5/ImageViewer5/bin/Debug/CommonModulesProject.DLL
+----------------------------------------
+System.Windows.Forms
+    アセンブリ バージョン:4.0.0.0
+    Win32 バージョン:4.8.9251.0 built by: NET481REL1LAST_C
+    コードベース:file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Windows.Forms/v4.0_4.0.0.0__b77a5c561934e089/System.Windows.Forms.dll
+----------------------------------------
+System
+    アセンブリ バージョン:4.0.0.0
+    Win32 バージョン:4.8.9261.0 built by: NET481REL1LAST_C
+    コードベース:file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System/v4.0_4.0.0.0__b77a5c561934e089/System.dll
+----------------------------------------
+System.Drawing
+    アセンブリ バージョン:4.0.0.0
+    Win32 バージョン:4.8.9037.0 built by: NET481REL1
+    コードベース:file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Drawing/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Drawing.dll
+----------------------------------------
+System.Configuration
+    アセンブリ バージョン:4.0.0.0
+    Win32 バージョン:4.8.9037.0 built by: NET481REL1
+    コードベース:file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Configuration/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Configuration.dll
+----------------------------------------
+System.Core
+    アセンブリ バージョン:4.0.0.0
+    Win32 バージョン:4.8.9261.0 built by: NET481REL1LAST_C
+    コードベース:file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Core/v4.0_4.0.0.0__b77a5c561934e089/System.Core.dll
+----------------------------------------
+System.Xml
+    アセンブリ バージョン:4.0.0.0
+    Win32 バージョン:4.8.9037.0 built by: NET481REL1
+    コードベース:file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Xml/v4.0_4.0.0.0__b77a5c561934e089/System.Xml.dll
+----------------------------------------
+FileListManagerSample
+    アセンブリ バージョン:2.0.0.0
+    Win32 バージョン:2.0.0.0
+    コードベース:file:///C:/Users/OK/source/repos/Repository2_CS/ImageViewer5/ImageViewer5/bin/Debug/FileListManagerSample.EXE
+----------------------------------------
+PlayImageTest
+    アセンブリ バージョン:1.0.0.0
+    Win32 バージョン:1.0.0.0
+    コードベース:file:///C:/Users/OK/source/repos/Repository2_CS/ImageViewer5/ImageViewer5/bin/Debug/PlayImageTest.EXE
+----------------------------------------
+TransportForm
+    アセンブリ バージョン:1.0.0.0
+    Win32 バージョン:1.0.0.0
+    コードベース:file:///C:/Users/OK/source/repos/Repository2_CS/ImageViewer5/ImageViewer5/bin/Debug/TransportForm.EXE
+----------------------------------------
+MouseWheelZoomHandler
+    アセンブリ バージョン:1.0.0.0
+    Win32 バージョン:1.0.0.0
+    コードベース:file:///C:/Users/OK/source/repos/Repository2_CS/ImageViewer5/ImageViewer5/bin/Debug/MouseWheelZoomHandler.EXE
+----------------------------------------
+mscorlib.resources
+    アセンブリ バージョン:4.0.0.0
+    Win32 バージョン:4.8.9037.0 built by: NET481REL1
+    コードベース:file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/mscorlib.resources/v4.0_4.0.0.0_ja_b77a5c561934e089/mscorlib.resources.dll
+----------------------------------------
+System.Windows.Forms.resources
+    アセンブリ バージョン:4.0.0.0
+    Win32 バージョン:4.8.9037.0 built by: NET481REL1
+    コードベース:file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Windows.Forms.resources/v4.0_4.0.0.0_ja_b77a5c561934e089/System.Windows.Forms.resources.dll
+----------------------------------------
+
+************** JIT デバッグ **************
+Just-In-Time (JIT) デバッグを有効にするには、このアプリケーション、
+またはコンピューター (machine.config) の構成ファイルの jitDebugging 
+値を system.windows.forms セクションで設定しなければなりません。
+アプリケーションはまた、デバッグを有効にしてコンパイルされなければ
+なりません。
+
+例:
+
+<configuration>
+    <system.windows.forms jitDebugging="true" />
+</configuration>
+
+JIT デバッグが有効なときは、このダイアログ ボックスで処理するよりも、
+ハンドルされていない例外はすべてコンピューターに登録された
+JIT デバッガーに設定されなければなりません。
+
+
+
+
+

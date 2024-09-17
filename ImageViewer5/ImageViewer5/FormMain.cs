@@ -11,6 +11,7 @@ using AppLoggerModule;
 using CommonModule;
 //using CommonModulesProject;
 using ImageViewer5.ImageControl;
+using System.Reflection;
 
 namespace ImageViewer5
 {
@@ -38,6 +39,9 @@ namespace ImageViewer5
             _logger.LoggerLogLevel = LogLevel.INFO;
             // ログをコンソールとファイルに出力するように設定
             _logger.LogOutPutMode = OutputMode.CONSOLE | OutputMode.FILE;
+            //#
+            Assembly myAssembly = Assembly.GetEntryAssembly();
+            _logger.PrintInfo(String.Format("myAssembly.Location = {0}", myAssembly.Location));
             //#
             _imageViewerArgs = new ImageViewerArgs(_logger, args);
             _imageViewerArgs.ParseArguments(args);

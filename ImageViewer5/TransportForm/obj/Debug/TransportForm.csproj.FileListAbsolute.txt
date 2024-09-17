@@ -3,7 +3,6 @@ C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\TransportForm\bin\Debug\Tra
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\TransportForm\bin\Debug\TransportForm.pdb
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\TransportForm\bin\Debug\CommonModulesProject.dll
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\TransportForm\bin\Debug\CommonModulesProject.pdb
-C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\TransportForm\obj\Debug\TransportForm.csprojAssemblyReference.cache
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\TransportForm\obj\Debug\TransportForm.FormTransportTest.resources
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\TransportForm\obj\Debug\TransportForm.Properties.Resources.resources
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\TransportForm\obj\Debug\TransportForm.csproj.GenerateResource.cache
@@ -24,3 +23,4 @@ C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\TransportForm\obj\Deb
 C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\TransportForm\obj\Debug\TransportForm.csproj.CopyComplete
 C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\TransportForm\obj\Debug\TransportForm.exe
 C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\TransportForm\obj\Debug\TransportForm.pdb
+C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\TransportForm\obj\Debug\TransportForm.csproj.AssemblyReference.cache

@@ -6,7 +6,6 @@ C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\MouseWheelZoomHandler\obj\D
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\MouseWheelZoomHandler\obj\Debug\MouseWheelZoomHandler.csproj.CoreCompileInputs.cache
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\MouseWheelZoomHandler\obj\Debug\MouseWheelZoomHandler.exe
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\MouseWheelZoomHandler\obj\Debug\MouseWheelZoomHandler.pdb
-C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\MouseWheelZoomHandler\obj\Debug\MouseWheelZoomHandler.csprojAssemblyReference.cache
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\MouseWheelZoomHandler\obj\Debug\MouseWheelZoomHandler.FormMouseWheelZoomHandler.resources
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\MouseWheelZoomHandler\bin\Debug\CommonModulesProject.dll
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\MouseWheelZoomHandler\bin\Debug\CommonModulesProject.pdb
@@ -24,3 +23,4 @@ C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\MouseWheelZoomHandler
 C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\MouseWheelZoomHandler\obj\Debug\MouseWheelZoomHandler.csproj.CopyComplete
 C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\MouseWheelZoomHandler\obj\Debug\MouseWheelZoomHandler.exe
 C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\MouseWheelZoomHandler\obj\Debug\MouseWheelZoomHandler.pdb
+C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\MouseWheelZoomHandler\obj\Debug\MouseWheelZoomHandler.csproj.AssemblyReference.cache

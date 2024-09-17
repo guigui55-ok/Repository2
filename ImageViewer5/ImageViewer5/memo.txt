@@ -1,34 +1,45 @@
 
 
---window-size=800x600 --window-location=100,100 --frame-count=2 --frame1-folder=C:\Images --frame1-size=700x500 --frame1-location=100,100 --frame1-subfolders=true --frame1-random=true --frame1-slideshow=true --frame1-interval=5 --frame1-file-list-window=0 
---frame2-folder=C:\Pictures --frame2-subfolders=false --frame2-random=false --frame2-slideshow=false --frame2-interval=10
-
-
---window-size=800x600 --window-location=100,100 --frame-count=2 --frame1-folder=C:\Images --frame1-size=700x500 --frame1-location=100,100 --frame1-subfolders=true --frame1-random=true --frame1-slideshow=true --frame1-interval=2000 --frame1-file-list-window=0 
 
 
 
 
-外部からコマンドラインで、指定フォルダ、スライドショー（Interval）、位置表示、を実行
-フォルダウィンドを表示、設定値、引数
 
 
-パスがないときにスライドショーを停止
+Space＋画像移動、移動しない修正が必要
 
-スライドショー開始時のコントロールtext変更
+D&Dの時、ファイルなら、ファイルがあれば、そこまで移動
 
+
+デフォルトでファイルリストOFF（デバッグ時はON？）
 
 動画再生（出来れば）
-十字キー移動
-パーツだけ透過（Graphicsの使用が必要）
 
+Frame2個目表示
 
-*****
+***************
+実装済み
+***************
+240917
+Webeb表示
+　別途対応が必要
 240915
+引数指定で他アプリからのコマンドライン呼び出し動作確認OK　済
+デバッグ、ファイルリストウィンドウ、十字キーで選択時Imageが反映されない　済
+*
+外部からコマンドラインで、指定フォルダ、スライドショー（Interval）、位置表示、を実行
+フォルダウィンドを表示、設定値、引数
+--window-size=800x600 --window-location=100,100 --frame-count=2 --frame1-folder=C:\Images --frame1-size=700x500 --frame1-location=100,100 --frame1-subfolders=true --frame1-random=true --frame1-slideshow=true --frame1-interval=5 --frame1-file-list-window=0 
+--frame2-folder=C:\Pictures --frame2-subfolders=false --frame2-random=false --frame2-slideshow=false --frame2-interval=10
+*
+--window-size=800x600 --window-location=100,100 --frame-count=2 --frame1-folder=C:\Images --frame1-size=700x500 --frame1-location=100,100 --frame1-subfolders=true --frame1-random=true --frame1-slideshow=true --frame1-interval=2000 --frame1-file-list-window=0 
+-
 最初のフォルダの画像表示後
 　画像がないフォルダを読み込んだ時、ImageがNothingにならない
 　　（アプリ起動＞テストフォルダ読み込み＞引数でフォルダ設定時C:\Images）
 Inner,Frame,Formをドラッグ移動　済
+　　何も指定しないときは すべてのコントロールから Formを移動する（タイトルバーあり時も無し時も、form透明時も・非透明時も）
+　　　　そして、特定のキー押下とMouseDragでInnerとFrameを移動させる
 	InnerはSpace押下時ドラッグ可能　済
 	FrameはCtrl押下時ドラッグ可能　済
 	（ドラッグ切替で、Space押下Innerを移動した後（KeyUp後）Inner移動でおかしくなる（コントロールが震えるような動作となる）
@@ -37,6 +48,7 @@ Inner,Frame,Formをドラッグ移動　済
 	　　　　＞一旦保留
 タイトルバー非表示　済　Ctrl+TでON/OFF切替
 240914
+コマンドライン引数に対応
 ファイル整理のためgit Revertしたが、更新部分が消失する
 　　＞途中まで復旧、240908まで手戻り
 240908
@@ -100,13 +112,13 @@ DragAndDropSample.sln
 ErrorManagerはAppLoggerに置き換え
 ----
 ImageFrameにD&Dで別の、クラスにイベント紐づけ（依存性注意）
-***************
 スペース＋マウスMoveでUserControlを移動（ダブルクリックで元に戻す）
+***************
 ***************
 
 
 -----
-実装
+実装検討、列挙
 Form
 　UserControl
 	PictureBox
@@ -124,6 +136,17 @@ PictureBox、UserControlにFitさせない
 　　マウススクロールで拡大縮小を可能にする
 　　右側クリックで、Nextイベント、左側クリックでPrevイベントを発火
 
+ファイルリストをランダムに
+スライドショー（タイマー切替）
+引数対応
+　　Location
+　　ウィンドウサイズ
+　　初回フォルダ
+　　サブフォルダも含む
+　　ランダムにする
+　　スライドショーON
+　　スライドショー時間
+　　実行設定ファイル
 ------------------
 Window透過（新要件）
 　　特定のショートカットキー（or 右クリックメニュー）でFormMainを透過する、を切り替える
@@ -153,8 +176,12 @@ PictureBox:true,  Frame:true,  Form:true（移動不可）
 PictureBoxが大きく、タイトルなし時にウィンドウの移動が、できない
 　　ウィンドウの移動が感覚的に、合わないので、スペース＋手のひらツールなどで明示的にする必要がある？
 　　　→通常時はPictureBox、Ctrl押下＋マウスMoveDown＋Move＝Dragでウィンドウ移動、ShiftでUserControl、
-====================
 
+ウィンドウタイトルなし
+　　”無しの時”はCtrl＋マウスダウン移動でウィンドウ移動
+　　スペース＋マウスダウン移動でUserControl移動
+　　マウスダウン移動でPictureBox移動
+-------------------
 画面ドラッグ
 　PictureBox (Shift Ctrl None, Flag[キーなしで各部品を移動],  十字キー（Mode）)
   UserControl(Ctrl Flag[キーなしで各部品を移動]、十字キー（Mode）)
@@ -170,34 +197,28 @@ PictureBoxが大きく、タイトルなし時にウィンドウの移動が、�
 	Space＞PictureBox
   Window固定、PictureBox固定モード（Windowタイトルなしのみ、PictureBox移動、PictureBox固定）
   　Ctrl＞Frame
-  Window固定時は　Shift＋でWindow移動
+  Window固定時は　Shift＋でWindow移動  
+-------------------
+コマンドライン引数に対応
+--window-size=800x600 --window-location=100,100 --frame-count=2 --frame1-folder=C:\Images --frame1-size=700x500 --frame1-location=100,100 --frame1-subfolders=true --frame1-random=true --frame1-slideshow=true --frame1-interval=5 --file-list-window=0 --frame2-folder=C:\Pictures --frame2-subfolders=false --frame2-random=false --frame2-slideshow=false --frame2-interval=10
+
+
 ====================
-
-
-
+====================
+あとで、
 Controlで手のひらツール、UserControlを移動可能に
 
----
-あとで、ファイル条件リスト、無視リストについて拡張子リストも必要なら用意する（現状では正規表現対応なので分かりにくいかも）
-
-拡大縮小の位置を変更（常にセンター寄せではなく、マウスポインタに追従する、拡大後マウスポインタの個所に移動する＞調整必要
----
-ファイルリストをランダムに
-スライドショー（タイマー切替）
-引数対応
-　　Location
-　　ウィンドウサイズ
-　　初回フォルダ
-　　サブフォルダも含む
-　　ランダムにする
-　　スライドショーON
-　　スライドショー時間
-　　実行設定ファイル
-
 フェードイン、フェードアウト
+FileListManager
+複数のフォルダを合わせたリスト、
+　　表示するフォルダパスは、コンマ区切り、ディレクトリ変数は先頭の1つ、別変数にコンマ区切りのパスを保持する
+ウィンドウ、Frame、PictureBoxを十字キーで移動（移動モード切替）
 
-サンプル
-　　サンプル起動時、フォルダ作成、ファイルをコピー
+ネットからの画像表示に対応
+　URL、D＆Dですべて読み込み（保存）
+　　　画像を振分け
+　　　設定読み込んだ画像を自動的に保存（ファイル名、yyyymmdd_hhmmss_ff.png）
+
 ファイル振分け
 　　別ウィンドウを表示
 　　ボタンをいくつか用意
@@ -207,14 +228,33 @@ Controlで手のひらツール、UserControlを移動可能に
 　　ボタンは可変個数にする
 　　ウィンドウサイズ変更は、ウィンドウサイズ変更ONにして変更してから、またOFFにする
 　
+画像振り分け、キーDownで自動振分け
+　　フィルターで振り分けフォルダの表示を絞り込み
 
-サンプル
-ウィンドウタイトルなし
-　　”無しの時”はCtrl＋マウスダウン移動でウィンドウ移動
-　　スペース＋マウスダウン移動でUserControl移動
-　　マウスダウン移動でPictureBox移動
+サンプル用（テスト用）
+　　サンプル起動時、フォルダ作成、ファイルをコピー
 
-設定まとめ
+ファイル条件リスト、無視リストについて拡張子リストも必要なら用意する（現状では正規表現対応なので分かりにくいかも）
+拡大縮小の位置を変更
+	（常にセンター寄せではなく、マウスポインタに追従する、拡大後マウスポインタの個所に移動する＞調整必要
+	240915 実装はしたが、動作がかくかくすることが多いので調整が必要（保留）
+
+パスがないときにスライドショーを停止
+スライドショー開始時のコントロールtext変更（ファイル名表示）（フォルダ名表示）？
+十字キー移動（WindowMove、微調整用）
+パーツだけ透過（Graphicsの使用が必要）
+
+引数（外部設定ファイルから指定、この設定ファイルの設定を永続的に適用させる）
+	[アプリ設定](追加)
+	・アプリ設定を外部設定ファイルから指定する（外部設定ファイル名）
+	・アプリ設定を外部設定ファイルから追加する（アプリ設定に反映ON/OFF）
+====================
+
+	
+######################
+設定ファイルに現在の設定を保存、起動時呼び出し
+[設定]終了時設定をファイル保存、呼び出し
+ウィンドウサイズ、Location保存処理
 　　ウィンドウサイズなどは、変更されたら、フラグを更新してTrueになったとき、タイマーで30秒待って、タイマー終了でFalseにする。
 　　タイマー終了時に、サイズLocationを更新する（ファイル・設定値）。Trueの時は値を更新しない。
 　　（Size/Locationは何回かか連続して操作をすると思われ、何度もfileや設定値書き込み・ログ出力などを抑制するため）
@@ -233,62 +273,11 @@ Controlで手のひらツール、UserControlを移動可能に
 		サブフォルダ
 		ランダム、
 		スライドショー、インターバル
-
----------------
-FileListManager
-複数のフォルダを合わせたリスト、
-　　表示するフォルダパスは、コンマ区切り、ディレクトリ変数は先頭の1つ、別変数にコンマ区切りのパスを保持する
-
-
-ウィンドウ、Frame、PictureBoxを十字キーで移動（移動モード切替）
-デバッグ、ファイルリストウィンドウ、十字キーで選択時Imageが反映されない
-
-Frame2個目表示
-
-
 ######################
-C#.Net WinFormsで引数を受け取るサンプルを出力してください。
-
-まず、引数を受け取るアプリの概要は以下の通りです。
-
-起動時FormWindow(MainForm)を1つ起動する。
-MainFormには1つのUserControlがありこの中のPictureBoxに画像を表示する。このUserControlをImageViewFrameと呼ぶ。
-このImageViewFrameは設定によって複数個、MainFormの中に表示することができる。
-ImageViewFrameはフォルダパスとその中のファイルリストをメンバに保持し、ユーザーの操作で順次表示することができる。
-このファイルリストは、フォルダ内を読み込むが、設定によって、フォルダの下層すべてを読み込むことが可能。
-また設定によって、このリストをランダムにできる。
-ImageViewFrameはそれぞれ独立した処理（非同期処理）とする。
-ImageViewFrameはスライドショー機能がありユーザーの操作でOn/Offを切り替える。このスライドショーの切替間隔を設定変更可能。
-
-そして、上記のアプリを想定した引数を受け取り機能を実装したいと考えています。
-引数受け取り機能の要件としては以下の通りです。
-#機能
-[アプリ設定]
-・MainFormのウィンドウサイズ指定（Width,Height）
-・MainFormのLocaiton指定（X,Y）
-・これらの引数を設定に反映する（ON/OFF)
-・ImageViewFrameの個数 （数値）
------
-[ImageViewFrameごとの設定]
-・画像読み込み初回フォルダパス （ファイルパス）
-・サブフォルダ以下のファイルを読み込む （ON/OFF）
-・ファイルリストをランダムにする（ON/OFF)
-・スライドショーを実行する（ON/OFF）
-・スライドショーの時間間隔（秒）
-----
-
-[アプリ設定](追加)
-・アプリ設定を外部設定ファイルから指定する（外部設定ファイル名）
-・アプリ設定を外部設定ファイルから追加する（アプリ設定に反映ON/OFF）
 
 
 
-出力するのは引数を受け取り、項目と設定値をDictionary型の変数に格納するところだけでよいです。
-その他はなるべく省略してください。
-
-また、引数の設定について、上記のアプリ設定は1つのみ、ImageViewFrameごとの設定は複数個設定可能にしたいと考えています。
-ImageViewFrameごとの設定は何か区切りが必要かもしれないと考えています。
-あなたならどのように実装しますか？
 
 
---window-size=800x600 --window-location=100,100 --frame-count=2 --frame1-folder=C:\Images --frame1-size=700x500 --frame1-location=100,100 --frame1-subfolders=true --frame1-random=true --frame1-slideshow=true --frame1-interval=5 --file-list-window=0 --frame2-folder=C:\Pictures --frame2-subfolders=false --frame2-random=false --frame2-slideshow=false --frame2-interval=10
+
+

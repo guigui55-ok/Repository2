@@ -3,3 +3,4 @@ C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\CommonModulesProject\b
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\CommonModulesProject\obj\Debug\CommonModulesProject.csproj.CoreCompileInputs.cache
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\CommonModulesProject\obj\Debug\CommonModulesProject.dll
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\CommonModulesProject\obj\Debug\CommonModulesProject.pdb
+C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\CommonModulesProject\obj\Debug\CommonModulesProject.csproj.AssemblyReference.cache

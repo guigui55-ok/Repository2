@@ -140,6 +140,10 @@
       <Project>{DAFEA8B0-01F0-43FB-9842-E030901F2DF4}</Project>
       <Name>PlayImageTest</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PlayWebp\PlayWebp.csproj">
+      <Project>{dd77dcc4-6f84-44ac-a238-70790b5b4532}</Project>
+      <Name>PlayWebp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TransportForm\TransportForm.csproj">
       <Project>{54074974-5D07-496B-AC04-619F1F2E52ED}</Project>
       <Name>TransportForm</Name>

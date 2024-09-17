@@ -67,8 +67,11 @@ namespace TransportForm
         // ControlKeyはKeyDown,Up判定処理が異なるが一旦以下のままとする
         //public Keys _moveInnerKey = Keys.Space;
         //public Keys _moveFrameKey = Keys.Control;
-        public SwitchKeys _moveInnerKey;
-        public SwitchKeys _moveFrameKey;
+        //public SwitchKeys _moveInnerKey);
+        //public SwitchKeys _moveFrameKeyl;
+        //Load時に参照エラーとなるのでインスタンスを生成（初期化時に外部からインスタンスが生成されるので注意）
+        public SwitchKeys _moveInnerKey = new SwitchKeys(Keys.None); 
+        public SwitchKeys _moveFrameKey = new SwitchKeys(Keys.None);
         //
         private ExecuteDelayTimer _innerKeyTimer = new ExecuteDelayTimer();
         private ExecuteDelayTimer _frameKeyTimer = new ExecuteDelayTimer();
@@ -77,6 +80,7 @@ namespace TransportForm
         public TransparentFormSwitch(AppLogger logger, Form form, Control control)
         {
             _logger = logger;
+            _logger.PrintInfo("TransparentFormSwitch Constracta");
             _form = form;
             _control = control;
             _form.KeyDown += FormTransport_KeyDown;
@@ -388,92 +392,98 @@ namespace TransportForm
 
         private void FormTransport_KeyDown(object sender, KeyEventArgs e)
         {
-            if (_moveFrameKey.IsMatch(e))
+            try
             {
-                //_logger.PrintInfo("*KeyDown , " + e.KeyCode.ToString("G"));
-                bool FrameIsOn = true;
-                _frameToFrameDragFlag._value = FrameIsOn;
-                _frameToFormDragFlag._value = !FrameIsOn;
-                _innerToFrameDragFlag._value = FrameIsOn;
-                _innerToFormDragFlag._value = !FrameIsOn;
-            }
-            else if (_moveInnerKey.IsMatch(e))
-            {
-                //_logger.PrintInfo("*KeyDown , " + e.KeyCode.ToString("G"));
-                bool InnerIsOn = true;
-                _innerToinnerDragFlag._value = InnerIsOn;
-                _innerToFormDragFlag._value = !InnerIsOn;
-                _frameToFormDragFlag._value = !InnerIsOn;
-                _frameToFrameDragFlag._value = InnerIsOn;
-            }
+                if (_moveFrameKey.IsMatch(e))
+                {
+                    //_logger.PrintInfo("*KeyDown , " + e.KeyCode.ToString("G"));
+                    bool FrameIsOn = true;
+                    _frameToFrameDragFlag._value = FrameIsOn;
+                    _frameToFormDragFlag._value = !FrameIsOn;
+                    _innerToFrameDragFlag._value = FrameIsOn;
+                    _innerToFormDragFlag._value = !FrameIsOn;
+                }
+                else if (_moveInnerKey.IsMatch(e))
+                {
+                    //_logger.PrintInfo("*KeyDown , " + e.KeyCode.ToString("G"));
+                    bool InnerIsOn = true;
+                    _innerToinnerDragFlag._value = InnerIsOn;
+                    _innerToFormDragFlag._value = !InnerIsOn;
+                    _frameToFormDragFlag._value = !InnerIsOn;
+                    _frameToFrameDragFlag._value = InnerIsOn;
+                }
 
-            //if (e.KeyCode == _moveInnerKey)
-            //{
-            //    //_innerToinnerDragFlag._value = true;
-            //    //_innerToFormDragFlag._value = !_innerToinnerDragFlag._value;
-            //    ////_logger.PrintInfo("KeyDown , " + e.KeyCode.ToString("G"));
-            //    ////_innerKeyTimer.Execute(_logger.PrintInfo, "KeyDown , " + e.KeyCode.ToString("G"));
-            //    _innerKeyTimer.Execute(value => _logger.PrintInfo(value.ToString()), "KeyDown , " + e.KeyCode.ToString("G"));
-            //}
-            //else if (IsControlKeyPressed(e, _moveFrameKey))
-            //{
-            //    //_frameToFrameDragFlag._value = true;
-            //    //_frameToFormDragFlag._value = !_frameToFrameDragFlag._value;
-            //    ////Frameの時はInnerでもFrameを動かせるように
-            //    //_tempFrameFlagList[0] = _innerToinnerDragFlag._value;
-            //    //_innerToinnerDragFlag._value = false;
-            //    //_tempFrameFlagList[1] = _innerToFrameDragFlag._value;
-            //    //_innerToFrameDragFlag._value = true;
-            //    //_tempFrameFlagList[2] = _innerToFrameDragFlag._value;
-            //    //_innerToFormDragFlag._value = false;
-            //    ////_logger.PrintInfo("KeyDown , " + e.KeyCode.ToString("G"));
-            //    _frameKeyTimer.Execute(value => _logger.PrintInfo(value.ToString()), "KeyDown , " + e.KeyCode.ToString("G"));
-            //}
-            if (e.KeyCode == Keys.Y && e.Control)
+                //if (e.KeyCode == _moveInnerKey)
+                //{
+                //    //_innerToinnerDragFlag._value = true;
+                //    //_innerToFormDragFlag._value = !_innerToinnerDragFlag._value;
+                //    ////_logger.PrintInfo("KeyDown , " + e.KeyCode.ToString("G"));
+                //    ////_innerKeyTimer.Execute(_logger.PrintInfo, "KeyDown , " + e.KeyCode.ToString("G"));
+                //    _innerKeyTimer.Execute(value => _logger.PrintInfo(value.ToString()), "KeyDown , " + e.KeyCode.ToString("G"));
+                //}
+                //else if (IsControlKeyPressed(e, _moveFrameKey))
+                //{
+                //    //_frameToFrameDragFlag._value = true;
+                //    //_frameToFormDragFlag._value = !_frameToFrameDragFlag._value;
+                //    ////Frameの時はInnerでもFrameを動かせるように
+                //    //_tempFrameFlagList[0] = _innerToinnerDragFlag._value;
+                //    //_innerToinnerDragFlag._value = false;
+                //    //_tempFrameFlagList[1] = _innerToFrameDragFlag._value;
+                //    //_innerToFrameDragFlag._value = true;
+                //    //_tempFrameFlagList[2] = _innerToFrameDragFlag._value;
+                //    //_innerToFormDragFlag._value = false;
+                //    ////_logger.PrintInfo("KeyDown , " + e.KeyCode.ToString("G"));
+                //    _frameKeyTimer.Execute(value => _logger.PrintInfo(value.ToString()), "KeyDown , " + e.KeyCode.ToString("G"));
+                //}
+                if (e.KeyCode == Keys.Y && e.Control)
+                {
+                    if (_form.Text == "")
+                    {
+                        SwitchFormTitleBarVisible(true);
+                    }
+                    else
+                    {
+                        //タイトルバーを消す
+                        SwitchFormTitleBarVisible(false);
+                    }
+                }
+                else if (e.KeyCode == Keys.T && e.Control)
+                {
+                    if (_form.TransparencyKey == _form.BackColor)
+                    {
+                        SwitchFlagsByTransparencyKey(false);
+                    }
+                    else
+                    {
+                        SwitchFlagsByTransparencyKey(true);
+                    }
+
+                    //SwitchFlagsByTransparencyKey(
+                    //    (_form.TransparencyKey != _form.BackColor));
+                }
+                else if (e.KeyCode == Keys.U)
+                {
+                    if (_form.FormBorderStyle == FormBorderStyle.None)
+                    {
+                        //this.FormBorderStyle = FormBorderStyle.Fixed3D;
+                        //this.FormBorderStyle = FormBorderStyle.FixedDialog;
+                        _form.FormBorderStyle = FormBorderStyle.FixedSingle;
+                        _logger.PrintInfo(this.ToString() + String.Format("FormBorderStyle = {0}", "FixedSingle"));
+                    }
+                    else if (_form.FormBorderStyle == FormBorderStyle.FixedSingle)
+                    {
+                        _form.FormBorderStyle = FormBorderStyle.Sizable;
+                        _logger.PrintInfo(this.ToString() + String.Format("FormBorderStyle = {0}", "Sizable"));
+                    }
+                    else if (_form.FormBorderStyle == FormBorderStyle.Sizable)
+                    {
+                        _form.FormBorderStyle = FormBorderStyle.None;
+                        _logger.PrintInfo(this.ToString() + String.Format("FormBorderStyle = {0}", "None"));
+                    }
+                }
+            } catch (Exception ex)
             {
-                if (_form.Text == "")
-                {
-                    SwitchFormTitleBarVisible(true);
-                }
-                else
-                {
-                    //タイトルバーを消す
-                    SwitchFormTitleBarVisible(false);
-                }
-            }
-            else if (e.KeyCode == Keys.T && e.Control)
-            {
-                if (_form.TransparencyKey == _form.BackColor)
-                {
-                    SwitchFlagsByTransparencyKey(false);
-                }
-                else
-                {
-                    SwitchFlagsByTransparencyKey(true);
-                }
-                
-                //SwitchFlagsByTransparencyKey(
-                //    (_form.TransparencyKey != _form.BackColor));
-            }
-            else if (e.KeyCode == Keys.U)
-            {
-                if (_form.FormBorderStyle == FormBorderStyle.None)
-                {
-                    //this.FormBorderStyle = FormBorderStyle.Fixed3D;
-                    //this.FormBorderStyle = FormBorderStyle.FixedDialog;
-                    _form.FormBorderStyle = FormBorderStyle.FixedSingle;
-                    _logger.PrintInfo(this.ToString() + String.Format("FormBorderStyle = {0}", "FixedSingle"));
-                }
-                else if (_form.FormBorderStyle == FormBorderStyle.FixedSingle)
-                {
-                    _form.FormBorderStyle = FormBorderStyle.Sizable;
-                    _logger.PrintInfo(this.ToString() + String.Format("FormBorderStyle = {0}", "Sizable"));
-                }
-                else if (_form.FormBorderStyle == FormBorderStyle.Sizable)
-                {
-                    _form.FormBorderStyle = FormBorderStyle.None;
-                    _logger.PrintInfo(this.ToString() + String.Format("FormBorderStyle = {0}", "None"));
-                }
+                _logger.PrintError(ex, this.ToString() + " > FormTransport_KeyDown");
             }
         }
     }

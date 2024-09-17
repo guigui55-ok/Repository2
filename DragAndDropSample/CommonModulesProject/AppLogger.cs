@@ -121,7 +121,9 @@ namespace AppLoggerModule
             if (LogLevel.ERR <= this.LoggerLogLevel)
             {
                 this.Print(value);
+                this.Print("ex.Message");
                 this.Print(ex.Message);
+                this.Print("ex.StackTrace");
                 this.Print(ex.StackTrace);
             }
         }

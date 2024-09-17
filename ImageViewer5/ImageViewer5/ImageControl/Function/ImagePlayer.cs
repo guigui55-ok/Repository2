@@ -9,6 +9,7 @@ using PlayImageTest;
 using ViewImageModule;
 using PlayImageModule;
 using System.IO;
+using PlayWebp;
 
 namespace ImageViewer5.ImageControl.Function
 {
@@ -25,6 +26,7 @@ namespace ImageViewer5.ImageControl.Function
         //#
         //画像表示関連
         private PlayGif _playGif;
+        private PlayAnimatedWebp _playWebp;
         public ImagePlayer(
             AppLogger logger,
             IViewImage viewImage,
@@ -45,6 +47,7 @@ namespace ImageViewer5.ImageControl.Function
             try
             {
                 _playGif = new PlayGif(_logger, (PictureBox)_viewImageControl.GetControl());
+                _playWebp = new PlayAnimatedWebp((PictureBox)_viewImageControl.GetControl());
 
             }
             catch (Exception ex)
@@ -105,6 +108,10 @@ namespace ImageViewer5.ImageControl.Function
                 if (path.EndsWith(".gif"))
                 {
                     _playGif.DisplayGif(path, 50);
+                } else if (path.EndsWith(".webp"))
+                {
+                    //_viewImage.SetImage(_playWebp.GetImageFirstFrameFromFile(path));
+                    _playWebp.SetImageFromFile(path);
                 }
                 else
                 {

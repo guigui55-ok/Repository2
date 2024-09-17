@@ -37,6 +37,20 @@ namespace ViewImageModule
             }
         }
 
+        public int SetImage(Image image)
+        {
+            try
+            {
+                _image = image;
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                _logger.AddException(ex, this, "SetImage");
+                return 0;
+            }
+        }
+
         public bool IsExistsImage()
         {
             try
@@ -132,5 +146,6 @@ namespace ViewImageModule
                 return false;
             }
         }
+
     }
 }
