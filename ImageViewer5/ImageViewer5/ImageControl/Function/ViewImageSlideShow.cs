@@ -18,8 +18,10 @@ namespace ImageViewer5.ImageControl.Function
         {
             _logger = logger;
             _imageMainFrame = imageMainFrame;
-            _SlideShowTimer = new Timer();
-            _SlideShowTimer.Interval = _imageMainFrame._imageMainFrameSetting._slideShowInterval;
+            int objectId = this.GetHashCode();
+            _logger.PrintInfo(_imageMainFrame.Name + " > SlideShow ID: " + objectId.ToString());
+            // _imageMainFrame._formFileList._fileListManage がnullの時がある
+            //_SlideShowTimer = GetNewTimer();
             /*
              * 240907
              * 考えられる追加機能
@@ -32,29 +34,102 @@ namespace ImageViewer5.ImageControl.Function
              */
         }
 
+        public void Initialize_LoadAfter()
+        {
+            _logger.PrintInfo(_imageMainFrame.Name + " > _SlideShowTimer.Initialize_LoadAfter");
+            _SlideShowTimer = GetNewTimer();
+        }
+
+        private Timer GetNewTimer()
+        {
+            Timer retTimer = new Timer();
+            retTimer.Interval = _imageMainFrame._imageMainFrameSetting._slideShowInterval;
+            //retTimer.Tick += _imageMainFrame._formFileList._fileListManager.MoveNextFileWhenLastFileNextDirectoryEvent;
+            // 既にイベントが登録されていないか確認してから追加する
+            if (_imageMainFrame._formFileList._fileListManager != null)
+            {
+                retTimer.Tick -= _imageMainFrame._formFileList._fileListManager.MoveNextFileWhenLastFileNextDirectoryEvent;
+                retTimer.Tick += _imageMainFrame._formFileList._fileListManager.MoveNextFileWhenLastFileNextDirectoryEvent;
+            }
+            // オブジェクトのハッシュコードを取得
+            int objectId = retTimer.GetHashCode();
+            _logger.PrintInfo(_imageMainFrame.Name + " > Timer ID: " + objectId.ToString());
+            objectId = this.GetHashCode();
+            _logger.PrintInfo(_imageMainFrame.Name + " > SlideShow ID: " + objectId.ToString());
+            return retTimer;
+        }
+
         public void StartTimer()
         {
-            _logger.PrintInfo("_SlideShowTimer.Start");
+            _logger.PrintInfo(_imageMainFrame.Name + " > _SlideShowTimer.Start");
+            //// 古いタイマーが存在する場合、停止・破棄する
+            //if (_SlideShowTimer != null)
+            //{
+            //    StopTimer();
+            //}
+            if (_SlideShowTimer == null)
+            {
+                _SlideShowTimer = GetNewTimer();
+            }
+            else
+            {
+                // オブジェクトのハッシュコードを取得
+                _logger.PrintInfo("StartTimer  Timer != null");
+                int objectId = _SlideShowTimer.GetHashCode();
+                _logger.PrintInfo(_imageMainFrame.Name + " > Timer ID: " + objectId.ToString());
+                objectId = this.GetHashCode();
+                _logger.PrintInfo(_imageMainFrame.Name + " > SlideShow ID: " + objectId.ToString());
+            }
             _logger.PrintInfo("Interval = " + _SlideShowTimer.Interval.ToString());
             _SlideShowTimer.Start();
         }
 
         public void StopTimer()
         {
-            _logger.PrintInfo("_SlideShowTimer.Stop");
+            _logger.PrintInfo(_imageMainFrame.Name + " > _SlideShowTimer.Stop");
+            // _formFileList オブジェクトのハッシュコードを取得
+            int objectId = _SlideShowTimer.GetHashCode();
+            _logger.PrintInfo(_imageMainFrame.Name + " > Timer ID: " + objectId.ToString());
+            objectId = this.GetHashCode();
+            _logger.PrintInfo(_imageMainFrame.Name + " > SlideShow ID: " + objectId.ToString());
             _SlideShowTimer.Stop();
+            _SlideShowTimer.Enabled = false;
+            _SlideShowTimer.Tick -= _imageMainFrame._formFileList._fileListManager.MoveNextFileWhenLastFileNextDirectoryEvent;
+            _SlideShowTimer.Dispose();
+            _SlideShowTimer = null;
         }
 
         public void ChangeOnOff()
         {
-            _logger.PrintInfo("_SlideShowTimer.ChangeOnOff");
-            _imageMainFrame._imageMainFrameSetting._slideShowOn = !_imageMainFrame._imageMainFrameSetting._slideShowOn;
-            bool flag = _imageMainFrame._imageMainFrameSetting._slideShowOn;
+            ChangeOnOffByFlag(0);
+        }
+
+        /// <summary>
+        /// スライドショーをスイッチする
+        /// , 0=現在と反対、1=ON, 2=OFF
+        /// </summary>
+        /// <param name="flagInt"></param>
+        public void ChangeOnOffByFlag(int flagInt)
+        {
+            _logger.PrintInfo(_imageMainFrame.Name + " > _SlideShowTimer.ChangeOnOffByFlag");
+            bool afterFlag;
+            if (flagInt == 0)
+            {
+                afterFlag = !_imageMainFrame._imageMainFrameSetting._slideShowOn;
+            } else if(flagInt == 1)
+            {
+                afterFlag = true;
+            }
+            else
+            {
+                afterFlag = false;
+            }
+            _imageMainFrame._imageMainFrameSetting._slideShowOn = afterFlag;
             List<ToolStripMenuItem> bufList = CommonGeneral.GetMenuItemListIsMatchNameInMenuStrip(
                 _imageMainFrame.ContextMenuStrip, "SlideShowOnOff_ToolStripMenuItem");
             // 1つだけしかないはず;
             ToolStripMenuItem menuItem = (ToolStripMenuItem)bufList[0];
-            if (flag)
+            if (afterFlag)
             {
                 menuItem.Text = "スライドショー停止";
                 StartTimer();
@@ -65,5 +140,6 @@ namespace ImageViewer5.ImageControl.Function
                 menuItem.Text = "スライドショー開始";
             }
         }
+
     }
 }

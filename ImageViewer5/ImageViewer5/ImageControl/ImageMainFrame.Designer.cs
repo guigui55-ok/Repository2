@@ -33,8 +33,8 @@ namespace ImageViewer5.ImageControl
             this.pictureBox_ImageMain = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ShowFileList_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CloseApp_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SlideShowOnOff_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CloseApp_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ImageMain)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -56,28 +56,28 @@ namespace ImageViewer5.ImageControl
             this.SlideShowOnOff_ToolStripMenuItem,
             this.CloseApp_ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 70);
             // 
             // ShowFileList_ToolStripMenuItem
             // 
             this.ShowFileList_ToolStripMenuItem.Name = "ShowFileList_ToolStripMenuItem";
-            this.ShowFileList_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ShowFileList_ToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.ShowFileList_ToolStripMenuItem.Text = "FileList表示";
             this.ShowFileList_ToolStripMenuItem.Click += new System.EventHandler(this.ShowFileList_ToolStripMenuItem_Click);
-            // 
-            // CloseApp_ToolStripMenuItem
-            // 
-            this.CloseApp_ToolStripMenuItem.Name = "CloseApp_ToolStripMenuItem";
-            this.CloseApp_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.CloseApp_ToolStripMenuItem.Text = "終了";
-            this.CloseApp_ToolStripMenuItem.Click += new System.EventHandler(this.CloseApp_ToolStripMenuItem_Click);
             // 
             // SlideShowOnOff_ToolStripMenuItem
             // 
             this.SlideShowOnOff_ToolStripMenuItem.Name = "SlideShowOnOff_ToolStripMenuItem";
-            this.SlideShowOnOff_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.SlideShowOnOff_ToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.SlideShowOnOff_ToolStripMenuItem.Text = "スライドショー開始";
             this.SlideShowOnOff_ToolStripMenuItem.Click += new System.EventHandler(this.SlideShowOnOff_ToolStripMenuItem_Click);
+            // 
+            // CloseApp_ToolStripMenuItem
+            // 
+            this.CloseApp_ToolStripMenuItem.Name = "CloseApp_ToolStripMenuItem";
+            this.CloseApp_ToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.CloseApp_ToolStripMenuItem.Text = "終了";
+            this.CloseApp_ToolStripMenuItem.Click += new System.EventHandler(this.CloseApp_ToolStripMenuItem_Click);
             // 
             // ImageMainFrame
             // 
@@ -89,6 +89,7 @@ namespace ImageViewer5.ImageControl
             this.Size = new System.Drawing.Size(415, 421);
             this.Load += new System.EventHandler(this.ImageMainFrame_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ImageMainFrame_KeyDown);
+            this.Resize += new System.EventHandler(this.ImageMainFrame_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ImageMain)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);

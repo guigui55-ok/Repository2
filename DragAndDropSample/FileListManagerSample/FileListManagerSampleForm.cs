@@ -28,6 +28,7 @@ namespace FileListManagerSample
         //設定フォーム（メンバに設定値を持つ）
         public FileListManagerSettingForm _fileListManagerSettingForm;
         //#
+        //string Name = "FileListManagerSampleForm";
         public FileListManagerSampleForm(AppLogger logger=null, bool dragDropEnable=true, bool startedThisForm=true)
         {
             InitializeComponent();

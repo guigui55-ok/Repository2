@@ -339,37 +339,20 @@ namespace TransportForm
 
         private void FormTransport_KeyUp(object sender, KeyEventArgs e)
         {
-            //    if (e.KeyCode == _moveInnerKey)
-            //    {
-            //        //_innerToinnerDragFlag._value = false;
-            //        //_innerToFormDragFlag._value = !_innerToinnerDragFlag._value;
-            //        //_logger.PrintInfo("KeyUp , " + _moveFrameKey.ToString("G"));
-            //        ////SwitchNowMode();
-            //        //SwitchDefault();
-            //    }
-            //    else if (IsControlKeyPressed(e, _moveFrameKey))
-            //    {
-            //        //_frameToFrameDragFlag._value = false;
-            //        //_frameToFormDragFlag._value = !_frameToFrameDragFlag._value;
-            //        ////Frameの時はInnerでもFrameを動かせ多のを元に戻す
-            //        ////_innerToinnerDragFlag._value = _tempFrameFlagList[0];
-            //        ////_innerToFrameDragFlag._value = _tempFrameFlagList[1];
-            //        //_innerToinnerDragFlag._value = _tempFrameFlagList[0];
-            //        //_innerToFrameDragFlag._value = _tempFrameFlagList[1];
-            //        //_innerToFormDragFlag._value = _tempFrameFlagList[2];
-            //        //_logger.PrintInfo(String.Join(",", _tempFrameFlagList));
-            //        ////SwitchNowMode();
-            //        //SwitchDefault();
-            //        _logger.PrintInfo("KeyUp , " + _moveFrameKey.ToString("G"));
-            //    }
             if (_moveFrameKey.IsMatch(e))
             {
                 //_logger.PrintInfo("*Key_UP , " + e.KeyCode.ToString("G"));
+                //bool FrameIsOn = false;
+                //_frameToFrameDragFlag._value = FrameIsOn;
+                //_frameToFormDragFlag._value = !FrameIsOn;
+                //_innerToFrameDragFlag._value = FrameIsOn;
+                //_innerToFormDragFlag._value = !FrameIsOn;
                 bool FrameIsOn = false;
-                _frameToFrameDragFlag._value = FrameIsOn;
-                _frameToFormDragFlag._value = !FrameIsOn;
-                _innerToFrameDragFlag._value = FrameIsOn;
+                _innerToinnerDragFlag._value = !FrameIsOn;
                 _innerToFormDragFlag._value = !FrameIsOn;
+                _frameToFormDragFlag._value = !FrameIsOn;
+                _frameToFrameDragFlag._value = FrameIsOn;
+                _innerToFrameDragFlag._value = FrameIsOn;
                 SwitchDefault();
             }
             else if (_moveInnerKey.IsMatch(e))
@@ -380,6 +363,7 @@ namespace TransportForm
                 _innerToFormDragFlag._value = !InnerIsOn;
                 _frameToFormDragFlag._value = !InnerIsOn;
                 _frameToFrameDragFlag._value = InnerIsOn;
+                _innerToFrameDragFlag._value = !InnerIsOn;
                 SwitchDefault();
             }
         }
@@ -397,20 +381,24 @@ namespace TransportForm
                 if (_moveFrameKey.IsMatch(e))
                 {
                     //_logger.PrintInfo("*KeyDown , " + e.KeyCode.ToString("G"));
+                    _innerKeyTimer.Execute(value => _logger.PrintInfo(value.ToString()), "KeyDown Frame, " + e.KeyCode.ToString("G"));
                     bool FrameIsOn = true;
-                    _frameToFrameDragFlag._value = FrameIsOn;
-                    _frameToFormDragFlag._value = !FrameIsOn;
-                    _innerToFrameDragFlag._value = FrameIsOn;
+                    _innerToinnerDragFlag._value = !FrameIsOn;
                     _innerToFormDragFlag._value = !FrameIsOn;
+                    _frameToFormDragFlag._value = !FrameIsOn;
+                    _frameToFrameDragFlag._value = FrameIsOn;
+                    _innerToFrameDragFlag._value = FrameIsOn;
                 }
                 else if (_moveInnerKey.IsMatch(e))
                 {
                     //_logger.PrintInfo("*KeyDown , " + e.KeyCode.ToString("G"));
+                    _frameKeyTimer.Execute(value => _logger.PrintInfo(value.ToString()), "KeyDown Inner, " + e.KeyCode.ToString("G"));
                     bool InnerIsOn = true;
                     _innerToinnerDragFlag._value = InnerIsOn;
                     _innerToFormDragFlag._value = !InnerIsOn;
                     _frameToFormDragFlag._value = !InnerIsOn;
                     _frameToFrameDragFlag._value = InnerIsOn;
+                    _innerToFrameDragFlag._value = !InnerIsOn;
                 }
 
                 //if (e.KeyCode == _moveInnerKey)

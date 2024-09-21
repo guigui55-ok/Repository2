@@ -74,12 +74,15 @@ namespace CommonModules
         {
             _argExecuteTimerMethod = ArgExecuteTimerTickMethod;
             _timerMethodValue = TimerMethodValue;
+            //既に実行されていたら何もしない
             if (!_timer.Enabled)
             {
-                //既に実行されていたら何もしない
+                // 最初は一回実行
+                _argExecuteTimerMethod?.Invoke(_timerMethodValue);
                 _timer.Start();
                 _timerCount = 0;
             }
+            
         }
 
         // タイマーが経過した時に呼び出されるメソッド

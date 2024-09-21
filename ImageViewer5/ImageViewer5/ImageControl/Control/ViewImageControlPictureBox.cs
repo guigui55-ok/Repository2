@@ -39,7 +39,7 @@ namespace ViewImageModule
         public ViewImageControlPictureBox(AppLogger logger, Control parentControl, PictureBox viewControl)
         {
             _logger = logger;
-            // 240831 Panel から Controlに変更
+            // 240831  parentControlの型を Panel から Controlに変更
             // 外枠がUserControlになったため
             _parentControl = parentControl;
             _pictureBox = viewControl;

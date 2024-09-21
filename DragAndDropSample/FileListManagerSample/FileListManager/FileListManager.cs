@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using AppLoggerModule;
 using System.IO;
+using System.Diagnostics;
 
 namespace CommonUtility.FileListUtility
 {
@@ -23,6 +24,8 @@ namespace CommonUtility.FileListUtility
         // CurrentFileが更新されたときのイベント
         public EventHandler UpdateFileListAfterEvent;
         public int ReadOption = 1;
+        // 複数同時に使用することがあるので名前を追加
+        public string Name = "FileListManager";
 
         public FileListManagerSetting _fileListManagerSetting;
         //public List<string> _fileFilterConditionList = new List<string> { };
@@ -155,13 +158,20 @@ namespace CommonUtility.FileListUtility
                 //    // 引数のpathがファイルがリストにない場合は（index0にする）　未対応 240901
                 //    _files.Move(movePath);
                 //}
-                if (retRandom == 2)
+                int index = _files.FileList.IndexOf(path);
+                if (0 < index)
                 {
-                    _files.Move(0);
-                }
-                else
+                    _files.Move(index);
+                } else
                 {
-                    _files.Move(0);
+                    if (retRandom == 2)
+                    {
+                        _files.Move(0);
+                    }
+                    else
+                    {
+                        _files.Move(0);
+                    }
                 }
                 //string movePath = _filesRegister.getFile(path, IsReadSourceOfShotcut);
                 _logger.AddLog(string.Format("first Path = {0}", _files.GetCurrentValue()));
@@ -181,7 +191,28 @@ namespace CommonUtility.FileListUtility
         /// <param name="e"></param>
         public void MoveNextFileWhenLastFileNextDirectoryEvent(object sender, EventArgs e)
         {
-            _logger.PrintInfo("MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]");
+            _logger.PrintInfo(this.Name +  " > MoveNextFileWhenLastFileNextDirectoryEvent [SlideShow]");
+
+            // 1つ目のタイマーが止まらない調査用
+            ////#
+            //// スタックトレースを取得して呼び出し元のメソッド情報を得る
+            //StackTrace stackTrace = new StackTrace();
+            //int max = 3;
+            //for (int i = 1; i<max; i++)
+            //{
+            //    StackFrame frame = stackTrace.GetFrame(i); // 1つ上のフレームを取得（呼び出し元）
+
+            //    // 呼び出し元のメソッド名とクラス名を取得
+            //    var method = frame.GetMethod();
+            //    string className = method.DeclaringType.Name; // 呼び出し元のクラス名
+            //    string methodName = method.Name; // 呼び出し元のメソッド名
+
+            //    // ログに出力
+            //    _logger.PrintInfo(this.Name + $" >  Called from {className}.{methodName}");
+            //}
+            ////#
+
+
             bool isMove = MoveNextFileWhenLastFileNextDirectory();
         }
 

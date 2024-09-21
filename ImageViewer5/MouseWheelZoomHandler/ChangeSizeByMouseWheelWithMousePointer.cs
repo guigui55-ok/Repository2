@@ -468,8 +468,10 @@ namespace CommonControlUtilityModuleB
                         // マウスポインタが、ParentControl真ん中に近いか
                         if (!IsPointWithinDistance(parentCenter, mousePoint, baseNum))
                         {
-                            int moveX = -(int)(_parentControl.Size.Width * 0.05);
-                            int moveY = -(int)(_parentControl.Size.Height * 0.05);
+                            //int moveX = -(int)(_parentControl.Size.Width * 0.05);
+                            //int moveY = -(int)(_parentControl.Size.Height * 0.05);
+                            int moveX = (int)(_parentControl.Size.Width * 0.05);
+                            int moveY = (int)(_parentControl.Size.Height * 0.05);
                             //左右
                             if (0 < (mousePoint.X - parentCenter.X))
                             {

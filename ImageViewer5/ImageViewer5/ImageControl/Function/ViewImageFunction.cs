@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,9 @@ namespace ViewImageModule
         public ViewImageSlideShow _viewImageSlideShow;
         //
         public ImagePlayer _imagePlayer;
+        public ViewImageFunction_FitInnerToFrame _viewImageFunction_FitInnerToFrame;
+        //複数同時に実行されることがあるため
+        public string Name;
 
         public ViewImageFunction(
             AppLogger logger,
@@ -42,11 +46,14 @@ namespace ViewImageModule
             _viewImageFrameControl = viewImageFrameControl;
             _imagePlayer = new ImagePlayer(
                 _logger, _viewImage, _viewImageFrameControl, _viewImageControl, imageMainFrame);
+            _viewImageFunction_FitInnerToFrame = new ViewImageFunction_FitInnerToFrame(
+                _logger, _viewImageFrameControl, _viewImageControl, _viewImage);
+            this.Name = "ViewImageFunction" + imageMainFrame.GetComponentNumber();
         }
 
         public void InitializeValue()
         {
-            _logger.PrintInfo("ViewImageFunction > InitializeValue");
+            _logger.PrintInfo(this.Name + " > InitializeValue");
             //
             ImageMainFrame frameControl = (ImageMainFrame)_viewImageControl.GetParentControl();
             Control innerControl = (Control)_viewImageControl.GetControl();
@@ -57,10 +64,17 @@ namespace ViewImageModule
 
         public void InitializeValue_LoadAfter()
         {
-            _logger.PrintInfo("ViewImageFunction > InitializeValue_LoadAfter");
+            _logger.PrintInfo(this.Name + " > InitializeValue_LoadAfter");
             //_imageMainFrame._formFileListがLoadの後に設定されるので、そのあとでなければならない
             _viewImageSlideShow = new ViewImageSlideShow(_logger, _imageMainFrame);
-            _viewImageSlideShow._SlideShowTimer.Tick += _imageMainFrame._formFileList._fileListManager.MoveNextFileWhenLastFileNextDirectoryEvent;
+            _viewImageSlideShow.Initialize_LoadAfter();
+            //_viewImageSlideShow._SlideShowTimer.Tick += _imageMainFrame._formFileList._fileListManager.MoveNextFileWhenLastFileNextDirectoryEvent;
+            ForDebug();
+        }
+
+        public void ForDebug()
+        {
+            _imageMainFrame.BackColor = Color.AliceBlue;
         }
         
         /// <summary>

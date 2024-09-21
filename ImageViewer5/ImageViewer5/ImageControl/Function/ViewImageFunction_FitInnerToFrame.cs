@@ -31,11 +31,61 @@ namespace ViewImageModule
             try
             {
                 _logger.PrintInfo("FitImageByDoubleClick_Clicked");
-                FitImageToControl();
+                //FitImageToControl();
             }
             catch (Exception ex)
             {
                 _logger.AddException(this, "FitImageByDoubleClick_Clicked Failed", ex);
+            }
+        }
+
+
+        public void FitImageToControl(bool flag)
+        {
+            try
+            {
+                _logger.AddLog(this, "FitImageToControl_bool");
+                if (!ControlIsValid()) { return; }
+                if (_viewImage.ImageIsNull()) { _logger.AddLog("ImageIsNull"); return; }
+                if (!flag) { 
+
+                    return;
+                }
+
+                Size imageSize = _viewImage.GetImage().Size;
+                Size innerSize = _viewImageControl.GetSize();
+                //Size frameSize = _viewimageFrameControl.GetSize(); //Form
+                Size frameSize = _viewImageControl.GetParentControl().Size; //Frame
+                if (ControlSizeIsNull(frameSize, innerSize)) { _logger.AddLogWarning("  SizeIsNull=true"); }
+
+                // サイズ計算 Panel にフィットさせる
+                Size newSize = GetSizeFitFrame(frameSize, imageSize);
+
+                // ※イメージがControlより小さい場合、中央に表示する、コントロールにFitさせる
+                //// Location
+                //if (viewImageObjects.Controls.ViewInnerControl.Settings.IsViewAlwaysCenter)
+                //{
+                //    // 常に中央に表示する場合
+                //    // サイズ変更、中央計算
+                //}
+                //else
+                //{
+                //    // PictureBox 非固定
+                //}
+
+                // Location 計算
+                // 中央に表示する
+                Point newPoint = GetLocationFrameCenter(frameSize, newSize);
+
+                _viewImageControl.SetVisible(false);
+                _viewImageControl.ChangeLocation(newPoint);
+                _viewImageControl.ChangeSize(newSize);
+                _viewImageControl.SetVisible(true);
+
+            }
+            catch (Exception ex)
+            {
+                _logger.AddException(this, "FitImageToControl Failed" + " > " + "FitImageToControl Failed", ex);
             }
         }
 
@@ -49,7 +99,8 @@ namespace ViewImageModule
 
                 Size imageSize = _viewImage.GetImage().Size;
                 Size innerSize = _viewImageControl.GetSize();
-                Size frameSize = _viewimageFrameControl.GetSize();
+                //Size frameSize = _viewimageFrameControl.GetSize(); //Form
+                Size frameSize = _viewImageControl.GetParentControl().Size; //Frame
                 if (ControlSizeIsNull(frameSize, innerSize)) { _logger.AddLogWarning("  SizeIsNull=true"); }
 
                 // サイズ計算 Panel にフィットさせる

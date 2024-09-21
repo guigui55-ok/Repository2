@@ -63,10 +63,10 @@ namespace ImageViewer5.ImageControl.Function
         {
             try
             {
-                ViewImageFunction_FitInnerToFrame obj =
+                ViewImageFunction_FitInnerToFrame fitFunction =
                     new ViewImageFunction_FitInnerToFrame(
                         _logger, _viewImageFrameControl, _viewImageControl, _viewImage);
-                obj.FitImageToControl();
+                fitFunction.FitImageToControl(_imageMainFrame._imageMainFrameSetting._isFitFormMain);
                 _viewImageControl.SetImageWithDispose(_viewImage.GetImage());
 
             }

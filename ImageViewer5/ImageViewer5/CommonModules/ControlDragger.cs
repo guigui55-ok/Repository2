@@ -43,6 +43,7 @@ namespace CommonControlUtilityModule
                 if ((_control.Anchor != AnchorStyles.None))
                 {
                     string buf = CommonModules.CommonUtility.DisplayEnumValues(typeof(AnchorStyles), (int)_control.Anchor);
+                    if (buf == "") { buf = _control.Anchor.ToString(); }
                     _logger.AddLogAlert(this, "ChangeLocationByMouse:_control.Anchor != AnchorStyles.None > " + buf);
                     ControlAncherIsNone = false;
                     return;

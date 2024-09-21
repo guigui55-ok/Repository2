@@ -31,6 +31,11 @@ namespace TransportForm
         //Keys.Noneの時は、_isDragEnable=Trueのみで移動する
         public SwitchKeys _switchKeys = new SwitchKeys(Keys.None); // 未設定でもエラーにならないよう初期化する
         protected bool _isDownTrigerKey = false;
+        //
+        // コンストラクタで設定する。デバッグの条件を満たすかどうかを格納する
+        // レシーバーと対象のコントロール名などが、特定の場合に動作させたいときに使用する 240920
+        public bool _isDebugMatch = false;
+        public string _DebugMemo = "";
         
         public ControlDraggerB(AppLogger logger, Control control,Control recieveEventControl, SwitchKeys switchKeys)
         {
@@ -50,6 +55,16 @@ namespace TransportForm
             _recieveControl.MouseMove += Control_MouseMove;
             _recieveControl.MouseDown += Control_MouseDown;
             _recieveControl.MouseUp += Control_MouseUp;
+
+            string controlTypeStr = _control.GetType().ToString();
+            _DebugMemo = _recieveControl.GetType() + "_>_" + controlTypeStr;
+            if ((_recieveControl.GetType()==typeof(PictureBox)) && (controlTypeStr.IndexOf("ImageMainFrame")>0))
+            {
+                //_isDebugMatch = true;
+                PrintInfo("ControlDraggerB > _isDebugMatch = true");
+                _logger.PrintInfo("ControlDraggerB > _isDebugMatch = true");
+                _logger.PrintInfo(_DebugMemo);
+            }
         }
 
         public void SetTrigerKey(Keys key)
@@ -74,6 +89,7 @@ namespace TransportForm
                 if ((_control.Anchor != AnchorStyles.None))
                 {
                     string buf = CommonModules.CommonUtility.DisplayEnumValues(typeof(AnchorStyles), (int)_control.Anchor);
+                    if (buf == "") { buf = _control.Anchor.ToString(); }
                     _logger.AddLogAlert(this, "ChangeLocationByMouse:_control.Anchor != AnchorStyles.None > " + buf);
                     ControlAncherIsNone = false;
                     return;
@@ -85,6 +101,12 @@ namespace TransportForm
                     _logger.AddLogAlert(this, "ChangeLocationByMouse:_control.Dock != DockStyle.None > " + buf);
                     ControlDockIsNone = false;
                     return;
+                }
+                if (_isDebugMatch)
+                {
+                    PrintInfo(_DebugMemo);
+                    _logger.PrintInfo(_DebugMemo);
+                    _logger.PrintInfo("_isDebugMatch");
                 }
                 if (_isDragEnable._value)
                 {
@@ -217,7 +239,11 @@ namespace TransportForm
             bool retCon;
             bool ret;
             //Control以外は未対応
-            if (_controlKey == Keys.Control)
+            //(_controlKey == Keys.Control)
+            //Console.WriteLine(string.Format("## {0} , {1}", _controlKey, e.KeyData)); //## Control , ControlKey, Contro
+            //Console.WriteLine(string.Format("## {0} , {1}", _controlKey, e.KeyData));
+            //if (_controlKey  Keys.ControlKey == e.KeyCode)
+            if (e.KeyCode == _controlKey)
             {
                 if (e.Control)
                 {
@@ -253,6 +279,7 @@ namespace TransportForm
             {
                 ret = true;
             }
+            //Console.WriteLine("IsMatch = " + (ret && retCon));
             return ret && retCon;
         }
     }

@@ -73,17 +73,17 @@ namespace ImageViewer5
                     var dictStr = String.Join(",", dict.Select(kvp => kvp.Key + " : " + kvp.Value));
                     _logger.PrintInfo(string.Format("dictStr = {0}", dictStr));
 
-                    if (_formMain._imageMainFrameList.Count < frameNumber)
+                    if (_formMain._mainFrameManager._imageMainFrameList.Count < frameNumber)
                     {
                         _logger.PrintError(this.ToString() + ".ApplyArgsImageViewerFrame  # OutOfRange");
-                        string msg = string.Format("_formMain._imageMainFrameList.Count[{0}]", _formMain._imageMainFrameList.Count);
+                        string msg = string.Format("_formMain._imageMainFrameList.Count[{0}]", _formMain._mainFrameManager._imageMainFrameList.Count);
                         msg += String.Format(" < frameNumber[{0}]", frameNumber);
                         _logger.PrintInfo(msg);
                         msg = string.Format(" (imageViewerArgs_frameSettingsList.Count = {0})", imageViewerArgs._frameSettingsList.Count);
                         _logger.PrintInfo(msg);
                         return;
                     }
-                    ImageMainFrame imageMainFrame = _formMain._imageMainFrameList[frameNumber-1];
+                    ImageMainFrame imageMainFrame = _formMain._mainFrameManager._imageMainFrameList[frameNumber-1];
                     string folderPath = (string)GetDictValue(dict, SETTINGS_KEYS.FOLDER);
                     if (folderPath != "")
                     {
@@ -144,7 +144,8 @@ namespace ImageViewer5
                     {
                         _logger.PrintInfo(string.Format("Args slideShowBool = {0}", slideShowBool));
                         //スライドショーをオンにする 処理を記載
-                        imageMainFrame._imageViewerMain._viewImageFunction._viewImageSlideShow.StartTimer();
+                        //imageMainFrame._imageViewerMain._viewImageFunction._viewImageSlideShow.StartTimer();
+                        imageMainFrame._imageViewerMain._viewImageFunction._viewImageSlideShow.ChangeOnOffByFlag(1);
                     }
                     int fileListWIndow = (int)GetDictValueInt(dict, SETTINGS_KEYS.FILE_LIST_WINDOW);
                     if (fileListWIndow >= 0)

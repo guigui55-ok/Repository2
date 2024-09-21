@@ -10,7 +10,6 @@ C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\SlideShowImage\obj\Debug\Sl
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\SlideShowImage\obj\Debug\SlideShowImage.csproj.CopyComplete
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\SlideShowImage\obj\Debug\SlideShowImage.exe
 C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\SlideShowImage\obj\Debug\SlideShowImage.pdb
-C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\SlideShowImage\obj\Debug\SlideShowImage.csprojAssemblyReference.cache
 C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\SlideShowImage\bin\Debug\SlideShowImage.exe.config
 C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\SlideShowImage\bin\Debug\SlideShowImage.exe
 C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\SlideShowImage\bin\Debug\SlideShowImage.pdb
@@ -24,3 +23,4 @@ C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\SlideShowImage\obj\De
 C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\SlideShowImage\obj\Debug\SlideShowImage.csproj.CopyComplete
 C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\SlideShowImage\obj\Debug\SlideShowImage.exe
 C:\Users\OK\source\repos\Repository2_CS_clone\ImageViewer5\SlideShowImage\obj\Debug\SlideShowImage.pdb
+C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\SlideShowImage\obj\Debug\SlideShowImage.csproj.AssemblyReference.cache

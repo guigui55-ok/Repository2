@@ -23,6 +23,7 @@ namespace ImageViewer5.ImageControl
         public PictureBox _pictureBox;
         public Control _parentControl;
         protected AppLogger _logger;
+        public string Name;
         //# 
         // Member
         public IViewImage _viewImage;
@@ -48,7 +49,7 @@ namespace ImageViewer5.ImageControl
         /// <param name="formMain"></param>
         /// <param name="parentControl"></param>
         /// <param name="pictureBox"></param>
-        public ImageMainClass(AppLogger logger,Form formMain, Control parentControl, PictureBox pictureBox)
+        public ImageMainClass(AppLogger logger,Form formMain, Control parentControl, PictureBox pictureBox, int componentNumber)
         {
             _logger = logger;
             _pictureBox = pictureBox;
@@ -59,6 +60,9 @@ namespace ImageViewer5.ImageControl
             _viewImageFrameControl = new ViewImageFrameControlForm(_logger, formMain);
             _viewImageFunction = new ViewImageFunction(
                 _logger, _viewImage, _viewImageFrameControl, _viewImageControl, (ImageMainFrame)parentControl);
+            this.Name = "ImageMainClass" + componentNumber;
+
+
         }
         private void SetImageSettings()
         {
@@ -80,7 +84,7 @@ namespace ImageViewer5.ImageControl
         /// <param name="initPath"></param>
         public void InitializeValues(List<string> SupportedImageExtList)
         {
-            _logger.PrintInfo("ImageViewerMainClass > InitializeValues");
+            _logger.PrintInfo(this.Name + " > InitializeValues");
 
             // PictureBox をドラッグする
             //ControlDragger dragger = new ControlDragger(_logger, _pictureBox, _pictureBox);
@@ -88,7 +92,10 @@ namespace ImageViewer5.ImageControl
             Control frame = _viewImageControl.GetParentControl();
             Form form = _viewImageFrameControl.GetParentForm();
             _draggerInner_ToFrame = new ControlDraggerB(_logger, frame, _pictureBox, null);
-            _draggerFrame = new ControlDraggerB(_logger, frame, frame, new SwitchKeys(Keys.None, Keys.Control, true));
+            //_draggerInner_ToFrame = new ControlDraggerB(_logger, frame, _pictureBox, new SwitchKeys(Keys.None, Keys.Control, true));
+            //SwitchKeys bufKey = new SwitchKeys(Keys.None, Keys.Control, true); //Controlではなく ControlKey 240920
+            SwitchKeys bufKey = new SwitchKeys(Keys.None, Keys.ControlKey, true);
+            _draggerFrame = new ControlDraggerB(_logger, frame, frame, bufKey);
             _formDraggerByForm = new FormDragger(_logger, form, form);
             _formDraggerByFrame = new FormDragger(_logger, form, frame);
             //
@@ -102,7 +109,9 @@ namespace ImageViewer5.ImageControl
                 ref _draggerInner_ToInner._isDragEnable,
                 ref _formDraggerByInner._isDragEnable,
                 ref _draggerInner_ToFrame._isDragEnable);
-            _transparentFormSwitch.SwitchFlagsByTransparencyKey(false);
+            _transparentFormSwitch._moveInnerKey = _draggerInner_ToInner._switchKeys;
+            _transparentFormSwitch._moveFrameKey = _draggerFrame._switchKeys;
+            //_transparentFormSwitch._moveFrameKey = _draggerInner_ToFrame._switchKeys;
 
             // Panel のクリックされた位置が右側半分か左側半分か判定する
             JudgeClickRightOrLeft judgeClickRightOrLeft = new JudgeClickRightOrLeft(_logger, _parentControl);
@@ -121,11 +130,13 @@ namespace ImageViewer5.ImageControl
             //ChangeSizeByMouseWheelWithMousePointer changeSizeByMouseWheelWithMousePointer;
 
             _viewImageFunction.InitializeValue();
+            _transparentFormSwitch.SwitchFlagsByTransparencyKey(false);
+            _transparentFormSwitch.SwitchDefault();
         }
 
         public void ShowImageThisPath()
         {
-            _logger.PrintInfo("ImageViewerMainClass > ShowImageThisPath");
+            _logger.PrintInfo(this.Name + " > ShowImageThisPath");
             //
             _viewImageFunction._imagePlayer.ViewImageMain();
         }
@@ -137,7 +148,7 @@ namespace ImageViewer5.ImageControl
         /// <param name="path"></param>
         public void ShowImageAfterInitialize(string path)
         {
-            _logger.PrintInfo("ImageViewerMainClass > ShowImageAfterInitialize");
+            _logger.PrintInfo(this.Name + " > ShowImageAfterInitialize");
             _viewImageFunction._imagePlayer.ViewImageMain();
         }
 
@@ -160,7 +171,7 @@ namespace ImageViewer5.ImageControl
         {
             try
             {
-                _logger.AddLog(this, "ReadFileEvent");
+                _logger.PrintInfo(this.Name + " > ReadFileEvent");
                 _viewImageFunction._imagePlayer.ViewImageMain();
             }
             catch (Exception ex)
