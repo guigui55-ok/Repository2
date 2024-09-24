@@ -97,6 +97,7 @@
     <Compile Include="FormPlayWebp.Designer.cs">
       <DependentUpon>FormPlayWebp.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="PlayWebpClassMagic.cs" />
     <Compile Include="PlayWebpClassSkiaSharp.cs" />
     <Compile Include="PlayWebpClassImageProcessor.cs" />

@@ -1,0 +1,13 @@
+{
+  "TabAmount": 2,
+  "TabPage0": {
+    "SendButton1": {
+      "ButtonName": "SendButton1",
+      "ButtonText": "Button",
+      "DirectoryPath": "",
+      "ButtonColorText": "Color [Control]",
+      "ButtonColor": "Control"
+    },
+    "TabPageText": "Tab1"
+  }
+}

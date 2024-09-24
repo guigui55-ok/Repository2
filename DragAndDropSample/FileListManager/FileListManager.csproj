@@ -69,6 +69,7 @@
     <Compile Include="..\FileListManagerSample\FileListManager\ShortCutReader.cs">
       <Link>ShortCutReader.cs</Link>
     </Compile>
+    <Compile Include="FileListManagerSetting.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,217 +1,237 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
-using SharpDX.Direct3D11;
-using SharpDX.DXGI;
 using SharpDX.MediaFoundation;
-using SharpDX.Mathematics.Interop;
-using AppLoggerModule;
-using SharpDX.Direct3D;
+using System.Runtime.InteropServices;
+using System.Diagnostics;
+using System.Drawing.Imaging;
 using Timer = System.Windows.Forms.Timer;
+using AppLoggerModule;
 
+/*
+ * 
+ * 
+ * 注意点:
+
+このコードは、動画のフレームを読み込み、PictureBox に表示しますが、音声の再生は行っていません。
+音声を再生するには、追加の実装が必要であり、Media Foundationを直接使用して音声を再生するのは複雑です。
+RtlMoveMemory を使用してネイティブメモリからマネージドメモリにデータをコピーしています。
+フォームには PictureBox と再生・停止ボタンが必要です。
+参考サイトとの関連:
+
+参考サイトのコードをベースに、動画フレームを取得し、それを連続して表示することで動画再生を実現しています。
+MediaManager.Startup() と MediaManager.Shutdown() の適切な使用。
+SourceReader を使用して動画からフレームを取得。
+追加のアドバイス:
+
+音声も含めて動画を再生したい場合は、Windows Media Player コントロールや他のマルチメディアライブラリの使用を検討してください。
+SharpDX は高度なグラフィックス処理に適していますが、マルチメディア再生全般を簡単に行うためのものではありません。
+ * 
+ * 
+ */
 namespace PlayMovieForm
 {
-    public class VideoPlayer : IDisposable
+    public class VideoPlayerMediaFoundation : IDisposable
     {
-        private Panel _panel;
+        [DllImport("Kernel32.dll", EntryPoint = "RtlMoveMemory", CallingConvention = CallingConvention.StdCall)]
+        private static extern void RtlMoveMemory(IntPtr Destination, IntPtr Source, int Length);
+
+        private SourceReader _sourceReader;
+        private int _frameWidth, _frameHeight, _stride;
+        private double _frameRate;
+        private Timer _timer;
+        private PictureBox _pictureBox;
+        private bool _isPlaying;
+
         private AppLogger _logger;
-        private MediaEngine _mediaEngine;
-        private MediaEngineEx _mediaEngineEx;
-        private Texture2D _texture;
-        private SharpDX.Direct3D11.Device _device; // Direct3D11.Deviceを明示
-        private SwapChain _swapChain;
-
-        public VideoPlayer(Panel panel, AppLogger logger)
+        public VideoPlayerMediaFoundation(PictureBox pictureBox, AppLogger logger)
         {
-            _panel = panel;
+            _pictureBox = pictureBox;
             _logger = logger;
-
-            try
-            {
-                // Media Foundationの初期化
-                MediaManager.Startup();
-
-                // Direct3Dデバイスの初期化
-                InitializeDirect3D();
-
-                // Media Engineのセットアップ
-                InitializeMediaEngine();
-                _logger.PrintInfo("Video player initialized.");
-            }
-            catch (Exception ex)
-            {
-                _logger.PrintError(ex, "Error initializing video player.");
-            }
+            MediaManager.Startup();
         }
-
-        private void InitializeDirect3D()
-        {
-            var factory = new SharpDX.Direct3D11.Device(DriverType.Hardware, DeviceCreationFlags.BgraSupport);
-            _device = factory;
-
-            var swapChainDescription = new SwapChainDescription()
-            {
-                BufferCount = 1,
-                ModeDescription = new ModeDescription(_panel.Width, _panel.Height, new Rational(60, 1), Format.R8G8B8A8_UNorm),
-                IsWindowed = true,
-                OutputHandle = _panel.Handle,
-                SampleDescription = new SampleDescription(1, 0),
-                SwapEffect = SwapEffect.Discard,
-                Usage = Usage.RenderTargetOutput
-            };
-
-            using (var dxgiFactory = _device.QueryInterface<SharpDX.DXGI.Device>().Adapter.GetParent<Factory>())
-            {
-                _swapChain = new SwapChain(dxgiFactory, _device, swapChainDescription);
-            }
-
-            var textureDesc = new Texture2DDescription
-            {
-                ArraySize = 1,
-                BindFlags = BindFlags.RenderTarget | BindFlags.ShaderResource,
-                CpuAccessFlags = CpuAccessFlags.None,
-                Format = SharpDX.DXGI.Format.B8G8R8A8_UNorm,
-                Height = _panel.Height,
-                Width = _panel.Width,
-                MipLevels = 1,
-                SampleDescription = new SampleDescription(1, 0),
-                Usage = ResourceUsage.Default,
-                OptionFlags = ResourceOptionFlags.None
-            };
-
-            _texture = new Texture2D(factory, textureDesc);
-        }
-
-        private void InitializeMediaEngine()
-        {
-            var factory = new MediaEngineClassFactory();
-            var attributes = new MediaEngineAttributes
-            {
-                DxgiManager = new DXGIDeviceManager()
-            };
-
-            // usingを削除して、MediaEngineのインスタンスを保持するように修正
-            _mediaEngine = new MediaEngine(factory, attributes, MediaEngineCreateFlags.None);
-            _mediaEngineEx = _mediaEngine.QueryInterface<MediaEngineEx>();
-        }
-
         public void SetMovie(string moviePath)
         {
+            DisposeSourceReader();
+
+            var attributes = new MediaAttributes(1);
+            attributes.Set(SourceReaderAttributeKeys.EnableVideoProcessing.Guid, true);
+
+            _sourceReader = new SourceReader(moviePath, attributes);
+
+            // 入力動画ストリームのネイティブメディアタイプを取得
+            var nativeMediaType = _sourceReader.GetNativeMediaType(SourceReaderIndex.FirstVideoStream, 0);
+
+            // 入力動画ストリームのサブタイプ（フォーマット）を取得
+            Guid inputVideoFormat = nativeMediaType.Get(MediaTypeAttributeKeys.Subtype);
+
+            // フォーマット名を取得
+            string formatName = GetVideoFormatName(inputVideoFormat);
+
+            Debug.WriteLine($"Input video format GUID: {inputVideoFormat}");
+            Debug.WriteLine($"Input video format: {formatName}");
+
+            // 希望するメディアタイプを設定
+            var mediaType = new MediaType();
+            mediaType.Set(MediaTypeAttributeKeys.MajorType, MediaTypeGuids.Video);
+            mediaType.Set(MediaTypeAttributeKeys.Subtype, VideoFormatGuids.Rgb32);
+
             try
             {
-                _mediaEngineEx.Source = moviePath;
-                _logger.PrintInfo($"Movie set to: {moviePath}");
-            }
-            catch (Exception ex)
-            {
-                _logger.PrintError(ex, $"Failed to set movie: {moviePath}");
-            }
-        }
-        public void Play()
-        {
-            try
-            {
-                _mediaEngineEx.Play();
-                _logger.PrintInfo("Movie playing.");
+                _sourceReader.SetCurrentMediaType(SourceReaderIndex.FirstVideoStream, mediaType);
 
-                // タイマーを使ってフレーム描画を繰り返す
-                Timer timer = new Timer();
-                timer.Interval = 16; // 60 FPSに近いレートで呼び出し
-                timer.Tick += (s, e) =>
-                {
-                    if (!_mediaEngineEx.IsPaused)
-                    {
-                        RenderFrame();
-                    }
-                    else
-                    {
-                        _logger.PrintInfo("Video is paused or not ready for rendering.");
-                    }
-                };
-                timer.Start();
-            }
-            catch (Exception ex)
-            {
-                _logger.PrintError(ex, "Error playing movie.");
-            }
-        }
+                var actualMediaType = _sourceReader.GetCurrentMediaType(SourceReaderIndex.FirstVideoStream);
 
+                long frameSize = actualMediaType.Get(MediaTypeAttributeKeys.FrameSize);
+                _frameWidth = (int)(frameSize >> 32);
+                _frameHeight = (int)(frameSize & 0xFFFFFFFF);
 
-        private void RenderFrame()
-        {
-            try
-            {
-                // フレームが利用可能かを確認
-                bool isFrameAvailable = _mediaEngine.OnVideoStreamTick(out long presentationTime);
+                _stride = actualMediaType.Get(MediaTypeAttributeKeys.DefaultStride);
 
-                if (!isFrameAvailable)
-                {
-                    _logger.PrintInfo("No video frame available at this time.");
-                    return; // フレームが取得できなければ描画を中断
-                }
-
-                // スワップチェインのバックバッファを取得
-                using (var backBuffer = _swapChain.GetBackBuffer<Texture2D>(0))
-                {
-                    var renderTargetView = new RenderTargetView(_device, backBuffer);
-
-                    // 画面をクリア
-                    _device.ImmediateContext.ClearRenderTargetView(renderTargetView, new RawColor4(0, 0, 0, 1));
-
-                    // MediaEngineでビデオフレームを描画
-                    _mediaEngine.TransferVideoFrame(_texture, null, new RawRectangle(0, 0, _panel.Width, _panel.Height), null);
-
-                    // スワップチェインを表示
-                    _swapChain.Present(1, PresentFlags.None);
-                }
+                // フレームレートの取得（既存のコードを使用）
+                // ...
             }
             catch (SharpDX.SharpDXException ex)
             {
-                if (ex.ResultCode.Code == unchecked((int)0xC00D4E26))
-                {
-                    _logger.PrintError(ex, "Frame is not ready yet, skipping this render.");
-                }
-                else
-                {
-                    _logger.PrintError(ex, "Error rendering video frame.");
-                }
+                // エラー情報と入力動画のフォーマットをログに出力
+                _logger.PrintInfo($"Error setting media type: {ex.Message}");
+                _logger.PrintInfo($"Input video format GUID: {inputVideoFormat}");
+                _logger.PrintInfo($"Input video format: {formatName}");
+
+                // ユーザーにメッセージを表示
+                //MessageBox.Show($"動画のデコードに失敗しました。\nフォーマット: {formatName}\nGUID: {inputVideoFormat}\n必要なコーデックをインストールしてください。", "デコーダーが見つかりません", MessageBoxButtons.OK, MessageBoxIcon.Error); MessageBox.Show($"動画のデコードに失敗しました。\nフォーマット: {formatName}\nGUID: {inputVideoFormat}\n必要なコーデックをインストールしてください。", "デコーダーが見つかりません", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _logger.PrintError(ex, $"動画のデコードに失敗しました。\nフォーマット: {formatName}\nGUID: {inputVideoFormat}\n必要なコーデックをインストールしてください。");
+
+                // 必要に応じて例外を再スロー
+                // throw;
             }
         }
 
-
-
-
-        public void Stop()
+        // フォーマットGUIDを人間が読める形式のフォーマット名にマッピングするヘルパーメソッド
+        private string GetVideoFormatName(Guid formatGuid)
         {
+            if (formatGuid == VideoFormatGuids.H264)
+                return "H.264";
+            if (formatGuid == VideoFormatGuids.Mjpg)
+                return "Motion JPEG";
+            if (formatGuid == VideoFormatGuids.Mpeg2)
+                return "MPEG-2";
+            if (formatGuid == VideoFormatGuids.Wmv3)
+                return "WMV3";
+            if (formatGuid == VideoFormatGuids.Hevc)
+                return "HEVC (H.265)";
+            // 必要に応じて他のフォーマットを追加
+
+            // 不明なフォーマットの場合はGUIDをそのまま返す
+            return formatGuid.ToString();
+        }
+
+        public void Play()
+        {
+            if (_isPlaying)
+                return;
+
+            _isPlaying = true;
+
+            int interval = (int)(1000 / _frameRate);
+
+            _timer = new Timer();
+            _timer.Interval = interval > 0 ? interval : 33; // intervalが0以下の場合は33msに設定
+            _timer.Tick += Timer_Tick;
+            _timer.Start();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            if (!_isPlaying)
+                return;
+
+            int actualStreamIndex;
+            SourceReaderFlags flags;
+            long timeStamp;
+
             try
             {
-                _mediaEngineEx.Pause();
-                _logger.PrintInfo("Movie stopped.");
+                var sample = _sourceReader.ReadSample(SourceReaderIndex.FirstVideoStream, SourceReaderControlFlags.None, out actualStreamIndex, out flags, out timeStamp);
+
+                if (sample != null)
+                {
+                    using (sample)
+                    {
+                        using (var buffer = sample.ConvertToContiguousBuffer())
+                        {
+                            IntPtr bufferPtr;
+                            int maxLength, currentLength;
+
+                            bufferPtr = buffer.Lock(out maxLength, out currentLength);
+
+                            // コピーサイズをバッファの実際の長さと比較して決定
+                            int copySize = Math.Min(currentLength, _stride * _frameHeight);
+
+                            Bitmap bitmap = new Bitmap(_frameWidth, _frameHeight, System.Drawing.Imaging.PixelFormat.Format32bppRgb);
+                            var bmpData = bitmap.LockBits(new Rectangle(0, 0, _frameWidth, _frameHeight), ImageLockMode.WriteOnly, System.Drawing.Imaging.PixelFormat.Format32bppRgb);
+
+                            // メモリコピーを安全に行う
+                            RtlMoveMemory(bmpData.Scan0, bufferPtr, copySize);
+
+                            bitmap.UnlockBits(bmpData);
+
+                            buffer.Unlock();
+
+                            // PictureBoxを更新
+                            _pictureBox.BeginInvoke((Action)(() =>
+                            {
+                                if (_pictureBox.Image != null)
+                                {
+                                    _pictureBox.Image.Dispose();
+                                }
+                                _pictureBox.Image = bitmap;
+                            }));
+                        }
+                    }
+                }
+                else
+                {
+                    // 再生終了
+                    Stop();
+                }
             }
             catch (Exception ex)
             {
-                _logger.PrintError(ex, "Error stopping movie.");
+                Debug.WriteLine($"Error in Timer_Tick: {ex.Message}");
+                Stop();
+            }
+        }
+
+        public void Stop()
+        {
+            if (!_isPlaying)
+                return;
+
+            _isPlaying = false;
+
+            if (_timer != null)
+            {
+                _timer.Stop();
+                _timer.Dispose();
+                _timer = null;
+            }
+        }
+
+        private void DisposeSourceReader()
+        {
+            if (_sourceReader != null)
+            {
+                _sourceReader.Dispose();
+                _sourceReader = null;
             }
         }
 
         public void Dispose()
         {
-            _mediaEngine?.Dispose();
-            _texture?.Dispose();
-            _device?.Dispose();
-            _swapChain?.Dispose();
+            Stop();
+            DisposeSourceReader();
             MediaManager.Shutdown();
-        }
-        public void SetVolume(int volume)
-        {
-            try
-            {
-                _mediaEngineEx.Volume = volume / 100.0; // 音量は0.0～1.0の範囲で設定
-                _logger.PrintInfo($"Volume set to {volume}");
-            }
-            catch (Exception ex)
-            {
-                _logger.PrintError(ex, $"Failed to set volume to {volume}");
-            }
         }
     }
 }

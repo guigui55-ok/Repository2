@@ -1,16 +1,21 @@
-﻿using System;
+﻿//////////////////////////////
+//FormPlayMovie.cs
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using AppLoggerModule;
 using CommonModules;
 using System.IO;
 
+
 namespace PlayMovieForm
 {
     public partial class FormMainPlayMoview : Form
     {
         private AppLogger _logger;
-        private VideoPlayer _videoPlayer;
+        //private VideoPlayerMediaFoundation _videoPlayer;
+        //VideoPlayerVlc _videoPlayer;
+        VideoPlayerMf _videoPlayer;
         private List<string> _movieList;
         private int _currentMovieIndex = 0;
         private int _volume = 30; // デフォルト音量
@@ -25,16 +30,29 @@ namespace PlayMovieForm
             _logger.PrintInfo("Logger.FilePath = " + _logger.FilePath);
             Console.WriteLine(_logger.FilePath);
             _movieList = GetFileList();
+
         }
 
 
         private void FormMainPlayMoview_Load(object sender, EventArgs e)
         {
-            _videoPlayer = new VideoPlayer(panel1, _logger);
+            //#
+            //_videoPlayer = new VideoPlayerMediaFoundation(pictureBox1, _logger);
+            //# 
+            //// Vlcの場合 PictureBoxは消して、VideoViewに移す
+            //pictureBox1.Visible = false;
+            //_videoPlayer = new VideoPlayerVlc(videoView1, _logger);
+            //_videoPlayer.SetMovie(_movieList[_currentMovieIndex]);
+            //#
+            // MediaFoundationの場合
+            videoView1.Visible = false;
+            _videoPlayer = new VideoPlayerMf(pictureBox1, _logger);
+
+
             if (_movieList.Count > 0)
             {
                 _videoPlayer.SetMovie(_movieList[_currentMovieIndex]); // 最初の動画を設定
-                _videoPlayer.SetVolume(_volume); // デフォルト音量を設定
+                //_videoPlayer.SetVolume(_volume); // デフォルト音量を設定
                 _logger.PrintInfo($"Default volume set to {_volume}");
 
                 _logger.PrintInfo(String.Format("Panel.Size = {0}", panel1.Size));
@@ -105,6 +123,7 @@ namespace PlayMovieForm
         {
             if (_movieList.Count > 0)
             {
+                if (_videoPlayer._isPlaying) { _videoPlayer.Stop(); }
                 _currentMovieIndex = (_currentMovieIndex + 1) % _movieList.Count;
                 _videoPlayer.SetMovie(_movieList[_currentMovieIndex]);
                 _logger.PrintInfo($"Playing next movie: {_movieList[_currentMovieIndex]}");
@@ -116,6 +135,7 @@ namespace PlayMovieForm
         {
             if (_movieList.Count > 0)
             {
+                if (_videoPlayer._isPlaying) { _videoPlayer.Stop(); }
                 _currentMovieIndex = (_currentMovieIndex - 1 + _movieList.Count) % _movieList.Count;
                 _videoPlayer.SetMovie(_movieList[_currentMovieIndex]);
                 _logger.PrintInfo($"Playing previous movie: {_movieList[_currentMovieIndex]}");
@@ -128,7 +148,7 @@ namespace PlayMovieForm
             if (_volume < 100) // 音量の最大値は100とする
             {
                 _volume++;
-                _videoPlayer.SetVolume(_volume);
+                //_videoPlayer.SetVolume(_volume);
                 _logger.PrintInfo($"Increased volume to {_volume}");
             }
         }
@@ -138,9 +158,19 @@ namespace PlayMovieForm
             if (_volume > 0) // 音量の最小値は0とする
             {
                 _volume--;
-                _videoPlayer.SetVolume(_volume);
+                //_videoPlayer.SetVolume(_volume);
                 _logger.PrintInfo($"Decreased volume to {_volume}");
             }
+        }
+
+        private void btnPlay_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void btnStop_MouseClick(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }

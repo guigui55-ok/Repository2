@@ -25,6 +25,13 @@ namespace CommonModule
 
     public static class CommonGeneral
     {
+        /// <summary>
+        /// タイプとマッチした子コントロールをすべて取得する
+        /// （子の子以下のコントロール以下すべてが対象）
+        /// </summary>
+        /// <param name="control"></param>
+        /// <param name="typeObject"></param>
+        /// <returns></returns>
         public static List<Control> GetControlListIsMatchType(Control control, Type typeObject)
         {
             List<Control> retList = new List<Control> { };
@@ -41,7 +48,13 @@ namespace CommonModule
             return retList;
         }
 
-
+        /// <summary>
+        /// 名前と合致するコントロールをすべて取得する
+        /// （子の子以下のコントロール以下すべてが対象）
+        /// </summary>
+        /// <param name="control"></param>
+        /// <param name="objectName"></param>
+        /// <returns></returns>
         public static List<Control> GetControlListIsMatchName(Control control, string objectName)
         {
             List<Control> retList = new List<Control> { };

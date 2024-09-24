@@ -45,3 +45,7 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Style", "IDE0059:値の不必要な代入", Justification = "<保留中>", Scope = "member", Target = "~M:ImageViewer5.ImageControl.ImageMainClass.InitializeValues(System.Collections.Generic.List{System.String})")]
 [assembly: SuppressMessage("Style", "IDE0060:未使用のパラメーターを削除します", Justification = "<保留中>", Scope = "member", Target = "~M:ImageViewer5.ImageControl.Function.ImageFrameArgs.ExecuteFunctionByArgs(System.Collections.Generic.Dictionary{System.String,System.Object})")]
 [assembly: SuppressMessage("Style", "IDE0059:値の不必要な代入", Justification = "<保留中>", Scope = "member", Target = "~M:ImageViewer5.Program.Main(System.String[])")]
+[assembly: SuppressMessage("CodeQuality", "IDE0052:読み取られていないプライベート メンバーを削除", Justification = "<保留中>", Scope = "member", Target = "~F:ImageViewer5.MainFrameManager._nowImageMainFrame")]
+[assembly: SuppressMessage("Style", "IDE0059:値の不必要な代入", Justification = "<保留中>", Scope = "member", Target = "~M:ImageViewer5.MainFrameManager.AdjustSizeAndLocation(System.Int32)")]
+[assembly: SuppressMessage("Style", "IDE0017:オブジェクトの初期化を簡略化します", Justification = "<保留中>", Scope = "member", Target = "~M:ImageViewer5.ImageControl.Function.ViewImageSlideShow.GetNewTimer~System.Windows.Forms.Timer")]
+[assembly: SuppressMessage("Style", "IDE0017:オブジェクトの初期化を簡略化します", Justification = "<保留中>", Scope = "member", Target = "~M:ImageViewer5.MainFrameManager.CreateImageMainFrame(System.Int32)~ImageViewer5.ImageControl.ImageMainFrame")]

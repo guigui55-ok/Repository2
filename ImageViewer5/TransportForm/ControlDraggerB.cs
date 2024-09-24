@@ -277,7 +277,57 @@ namespace TransportForm
             }
             else
             {
-                ret = true;
+                //_key==Keys.None
+                ret = false;
+            }
+            //Console.WriteLine("IsMatch = " + (ret && retCon));
+            return ret && retCon;
+        }
+
+
+        /// <summary>
+        /// KeyUpの時はControl判定が異なる
+        /// </summary>
+        /// <param name="e"></param>
+        /// <returns></returns>
+        public bool IsMatchUp(KeyEventArgs e)
+        {
+            bool retCon;
+            bool ret;
+            //Control以外は未対応
+            //(_controlKey == Keys.Control)
+            //Console.WriteLine(string.Format("## {0} , {1}", _controlKey, e.KeyData)); //## Control , ControlKey, Contro
+            //Console.WriteLine(string.Format("## {0} , {1}", _controlKey, e.KeyData));
+            //if (_controlKey  Keys.ControlKey == e.KeyCode)
+            if (e.KeyCode == _controlKey)
+            {
+                retCon = true;
+                //Controlキーのみで判定する
+                if (_isControlOnly)
+                {
+                    return retCon;
+                }
+            }
+            else
+            {
+                retCon = true;
+            }
+            //
+            if (_key != Keys.None)
+            {
+                if (e.KeyCode == _key)
+                {
+                    ret = true;
+                }
+                else
+                {
+                    ret = false;
+                }
+            }
+            else
+            {
+                //_key==Keys.None
+                ret = false;
             }
             //Console.WriteLine("IsMatch = " + (ret && retCon));
             return ret && retCon;

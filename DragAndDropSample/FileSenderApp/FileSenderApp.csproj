@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C416B557-7674-4CFF-A81D-B357C4C2413D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FileSenderApp</RootNamespace>
+    <AssemblyName>FileSenderApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppLoggerB.cs" />
+    <Compile Include="ButtonsGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ButtonsGroup.Designer.cs">
+      <DependentUpon>ButtonsGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule.cs" />
+    <Compile Include="FileSenderSettingValues.cs" />
+    <Compile Include="FileSenderSetting\ButtonSettingGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileSenderSetting\ButtonSettingGroup.Designer.cs">
+      <DependentUpon>ButtonSettingGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileSenderSetting\ColorPicker.cs" />
+    <Compile Include="FormFileSenderApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFileSenderApp.Designer.cs">
+      <DependentUpon>FormFileSenderApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileSenderSetting\FormFileSenderButtonSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileSenderSetting\FormFileSenderButtonSetting.Designer.cs">
+      <DependentUpon>FormFileSenderButtonSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SenderMainTab.cs" />
+    <EmbeddedResource Include="ButtonsGroup.resx">
+      <DependentUpon>ButtonsGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSenderSetting\ButtonSettingGroup.resx">
+      <DependentUpon>ButtonSettingGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFileSenderApp.resx">
+      <DependentUpon>FormFileSenderApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSenderSetting\FormFileSenderButtonSetting.resx">
+      <DependentUpon>FormFileSenderButtonSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="setting_test1.json" />
+    <None Include="setting_test2.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_FileSenderApp_memo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Repository3_CS\JsonStream\JsonStream\JsonStream.csproj">
+      <Project>{9793AD01-29A7-4DF1-99F5-9CF53BE02F80}</Project>
+      <Name>JsonStream</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonModulesProject\CommonModulesProject.csproj">
+      <Project>{ACCD9FD8-7CE5-491F-BD29-1CB9F52C061F}</Project>
+      <Name>CommonModulesProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DragAndDropSample\DragAndDropSample.csproj">
+      <Project>{C9697700-9378-4A1E-8D52-F8E72E36CF25}</Project>
+      <Name>DragAndDropSample</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileListManager\FileListManager.csproj">
+      <Project>{9733F7E6-999A-4E4D-9B5B-C47433806252}</Project>
+      <Name>FileListManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

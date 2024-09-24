@@ -1,0 +1,30 @@
+{
+  "TabAmount": 3,
+  "TabPage0": {
+    "SendButton1": {
+      "ButtonName": "SendButton1",
+      "ButtonText": "Button",
+      "DirectoryPath": "",
+      "ButtonColorText": "Color [Control]",
+      "ButtonColor": "Control"
+    },
+    "TabPageText": "Tab1"
+  },
+  "TabPage1": {
+    "SendButton1": {
+      "ButtonName": "SendButton1",
+      "ButtonText": "Button",
+      "DirectoryPath": "",
+      "ButtonColorText": "Color [Control]",
+      "ButtonColor": "Control"
+    },
+    "SendButton2": {
+      "ButtonName": "SendButton2",
+      "ButtonText": "SendButton2",
+      "DirectoryPath": "",
+      "ButtonColorText": "Color [Control]",
+      "ButtonColor": "Control"
+    },
+    "TabPageText": "NewTab1"
+  }
+}

@@ -233,6 +233,16 @@ namespace ImageViewer5
                         bufFrame._imageViewerMain._viewImageFunction._viewImageFunction_FitInnerToFrame.FitImageToControl(true);
                     }
                 }
+                else if (e.KeyCode == Keys.NumPad5)
+                {
+                    _logger.PrintInfo("FormMain_KeyDown  NumPad5");
+                    // 表示しているFrame（UserControl）のサイズに、InnerのPictureBoxのサイズを変更する
+                    for (int i = 0; i < _mainFrameManager._imageMainFrameList.Count; i++)
+                    {
+                        ImageMainFrame bufFrame = _mainFrameManager._imageMainFrameList[i];
+                        bufFrame._imageViewerMain._viewImageFunction._viewImageFunction_FitInnerToFrame.FitImageToControl(true);
+                    }
+                }
                 else if (e.KeyCode == Keys.NumPad6 && e.Control)
                 {
                     _logger.PrintInfo("FormMain_KeyDown  Ctrl+NumPad6");

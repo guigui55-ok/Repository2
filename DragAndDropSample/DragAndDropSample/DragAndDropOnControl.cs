@@ -13,9 +13,17 @@ namespace DragAndDropSample
         public AppLogger _logger;
         protected Control _control;
         public EventHandler DragAndDropAfterEvent;
+        //
+        // 240921 追加
+        // D&D時ファイルなどを取得する為のクラス
+        public DragAndDropForFile _dragAndDropForFile;
         public DragAndDropOnControl(AppLogger logger, Control recieveEventControl)
         {
             _logger = logger;
+            if (recieveEventControl == null) {
+                _control = recieveEventControl;
+                return; 
+            }
             _control = recieveEventControl;
             _control.DragDrop += Control_DragDrop;
             _control.DragEnter += Control_DragEnter;
@@ -59,7 +67,7 @@ namespace DragAndDropSample
 
         private void Control_DragEnter(object sender, DragEventArgs e)
         {
-            _logger.AddLog(this, "Control_DragEnter");
+            _logger.AddLog(this, _control.Name + " > Control_DragEnter");
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 e.Effect = DragDropEffects.Copy;
         }
@@ -68,17 +76,17 @@ namespace DragAndDropSample
         {
             try
             {
-                _logger.AddLog(this, "Control_DragDrop");
+                _logger.AddLog(this, _control.Name + " > Control_DragDrop");
                 // 受け取った EventArgs はほかのクラスで処理する
                 DragAndDropAfterEvent?.Invoke(sender, e);
             }
             catch (Exception ex)
             {
-                _logger.AddException(ex, this, "Control_DragDrop");
+                _logger.AddException(ex, this, _control.Name + " > Control_DragDrop");
             }
             finally
             {
-                _logger.AddLog(this, "Control_DragDrop Finally");
+                _logger.AddLog(this, _control.Name + " > Control_DragDrop Finally");
             }
         }
 

@@ -33,7 +33,6 @@ C:\Users\OK\source\repos\Repository2\DragAndDropSample\FileListManagerSample\obj
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\bin\Release\FileListManagerSample.exe.config
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\bin\Release\FileListManagerSample.exe
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\bin\Release\FileListManagerSample.pdb
-C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Release\FileListManagerSample.csprojAssemblyReference.cache
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Release\Interop.IWshRuntimeLibrary.dll
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Release\FileListManagerSample.csproj.ResolveComReference.cache
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Release\FileListManagerSample.FileListManagerSampleForm.resources
@@ -46,3 +45,4 @@ C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\bin\Release\CommonModulesProject.dll
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\bin\Release\CommonModulesProject.pdb
 C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Release\FileListManagerSample.FileListManagerSettingForm.resources
+C:\Users\OK\source\repos\Repository2_CS\DragAndDropSample\FileListManagerSample\obj\Release\FileListManagerSample.csproj.AssemblyReference.cache
