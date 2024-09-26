@@ -27,6 +27,11 @@ namespace FileSenderApp
         int _colMax = 2;
         int _orderPriority_RowCol = ConstFileSender.TO_RIGHT; //ボタンを配置するときに、右方向を優先するか、下方向を優先するか。0=右,1=下
         public FileSenderSettingValues _fileSenderSettingValues;
+        //ボタンが押されたときのイベント（すべてのボタン）
+        // 第1引数は SendButtonオブジェクト
+        // FormFileSenderApp.AnyButtonClickedRecieveEvent に紐づける
+        public EventHandler SendButtonClickEvent;
+
         public ButtonsGroup()
         {
             InitializeComponent();
@@ -44,11 +49,14 @@ namespace FileSenderApp
 
         private void Button_Click(object sender ,EventArgs e)
         {
+            // このイベントはボタン生成時 AttachButtonClickHandler で SendButon.Clickと このメソッドが紐づけられる
             SendButton clickedButton = sender as SendButton;
             if (clickedButton != null)
             {
                 string buttonName = clickedButton.Name;
                 _logger.PrintInfo($"Button Name: {buttonName}");
+                if (SendButtonClickEvent == null) { _logger.PrintInfo("SendButtonClickEvent==null"); }
+                SendButtonClickEvent?.Invoke(clickedButton, e);
             }
         }
 
@@ -130,7 +138,7 @@ namespace FileSenderApp
                 CommonGeneral.PrintDict(buttonSettingDict);
                 SendButton sendButton = this.AddButton();
                 sendButton = this.ApplySettingButtonSingle(sendButton, buttonName, buttonSettingDict);
-                _logger.PrintInfo(string.Format("ButtonsGroup > ApplySettingButton > [{0}]", buttonName));
+                _logger.PrintInfo(string.Format("ButtonsGroup > ApplySettingButton > [{0} : {1}]", buttonName, sendButton.Text));
             }
             /*
              * ボタン設定は以下のようなDictを受け取る
@@ -390,9 +398,11 @@ namespace FileSenderApp
 
     }
 
-    ////////////////////////////////////////////////////////
+    // ################################################################################
+    // ################################################################################
+    // ################################################################################
     /// <summary>
-    /// 
+    /// 送信ボタン　オブジェクト
     /// </summary>
     public class SendButton : Button
     {
@@ -458,6 +468,7 @@ namespace FileSenderApp
                 _logger.AddLog("  GetPath=" + targetPathB);
                 //ファイル名をボタンTextに出力
                 string buf = Path.GetFileName(targetPathB);
+                _directoryPath = targetPathB;
                 this.Text = buf;
             }
             catch (Exception ex)

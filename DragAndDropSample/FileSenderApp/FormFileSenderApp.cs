@@ -10,17 +10,29 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using JsonStreamModule;
 using System.IO;
-
+using System.Threading;
 
 namespace FileSenderApp
 {
     public partial class FormFileSenderApp : Form
     {
-        AppLogger _logger;
+        public AppLogger _logger;
         SenderMainTab _senderMainTab;
         JsonStream _jsonStream;
         bool isOutputSetting = true; // アプリ起動終了時、setting.jsonをログ・コンソールに出力するか。（長くなるのでフラグで管理＞デバッグ用）
         public FileSenderSettingValues _fileSenderSettingValues;
+        public DataBridgeFromExternal _dataBridgeFromExternal;
+
+        //サブフォームとして呼び出すか
+        // trueの場合は、Close時 e.Cancel=true、this.Visible=falseとして、オブジェクトを破棄しない（再度呼び出せるように）
+        public bool _isSubForm = false;
+
+        //ボタンが押されたときのイベント
+        public EventHandler AnySendButton_Clicked;
+        public bool _isMoveFile = false;
+        //
+        public int _waitTime = 50; // m_secontd
+
         public FormFileSenderApp()
         {
             InitializeComponent();
@@ -30,16 +42,20 @@ namespace FileSenderApp
             _logger.PrintInfo("##############################");
             //#
             //以下の処理は デザイナで設定したタブの設定となる。これは削除予定
-            _senderMainTab = new SenderMainTab(_logger, tabControl1, panel1, this);
+            _senderMainTab = new SenderMainTab(_logger, tabControl1, panel1, panelCheckBox, this);
             _senderMainTab.Initialize();
-            //
+            //#
+            //初期化処理①
             textBoxRenameTabPage.Parent = panel1;
+            _dataBridgeFromExternal = new DataBridgeFromExternal(_logger);
+            //#
+            //設定値読み込み初期化
             _jsonStream = new JsonStream();
             SettingFileInitialize();
 
             this.KeyPreview = true;
             ClearTabControl();
-            _senderMainTab = new SenderMainTab(_logger, tabControl1, panel1, this);
+            _senderMainTab = new SenderMainTab(_logger, tabControl1, panel1, panelCheckBox, this);
             _senderMainTab.Initialize();
             //_senderMainTab.AddTabPage();
             AddPageBySetting();
@@ -47,10 +63,85 @@ namespace FileSenderApp
             _logger.PrintInfo("==========");
         }
 
+        public void AnyButtonClickedRecieveEvent(object sender , EventArgs e)
+        {
+            _logger.PrintInfo("AnyButtonClickedRecieveEvent");
+            //#
+            // 
+            SendButton sendButton = (SendButton)sender;
+            string distDirPath = sendButton._directoryPath;
+            string srdFilePath = _dataBridgeFromExternal.GetData<string>();
+            _logger.PrintInfo("srdFilePath = " + srdFilePath.ToString());
+            bool isExecute = FileMoveOrCopy(srdFilePath, distDirPath);
+            if (isExecute)
+            {
+                if (AnySendButton_Clicked == null) { _logger.PrintInfo("AnySendButton_Clicked==null"); }
+                AnySendButton_Clicked?.Invoke(sender, e);
+            }
+        }
+
+
+        public bool FileMoveOrCopy(string srcFilePath, string distDirPath)
+        {
+            try
+            {
+                if (!(File.Exists(srcFilePath)))
+                {
+                    string msg = string.Format("File Is Not Found [{0}]", srcFilePath);
+                    _logger.PrintInfo(msg);
+                    return false;
+                }
+                string distFilePath = Path.Combine(distDirPath, Path.GetFileName(srcFilePath));
+                bool isExecute = false;
+                if (File.Exists(distFilePath))
+                {
+                    string msg = "ファイルが既に存在します。上書きしますか？";
+                    DialogResult ret = MessageBox.Show(msg, "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    if (ret == DialogResult.Cancel)
+                    {
+                        _logger.PrintInfo("FileMoveOrCopy Cancel");
+                        isExecute = false;
+                    }
+                    else
+                    {
+                        _logger.PrintInfo("FileMoveOrCopy Delete");
+                        File.Delete(distFilePath);
+                        //await Task.Delay(100);
+                        Thread.Sleep(_waitTime);
+                        isExecute = true;
+                    }
+                }
+                else
+                {
+                    isExecute = true;
+                }
+                if (isExecute)
+                {
+                    if (checkBoxFileMove.Checked)
+                    {
+                        File.Move(srcFilePath, distFilePath);
+                        _logger.PrintInfo(string.Format("Move ,src={0}, dist={1}", srcFilePath, distDirPath));
+                        Thread.Sleep(_waitTime);
+                    }
+                    else
+                    {
+                        File.Copy(srcFilePath, distFilePath, true);
+                        _logger.PrintInfo(string.Format("Copy ,src={0}, dist={1}", srcFilePath, distDirPath));
+                        Thread.Sleep(_waitTime);
+                    }
+                }
+                return isExecute;
+            } catch(Exception ex)
+            {
+                _logger.PrintError(ex, "FileMoveOrCopy Error");
+                return false;
+            }
+        }
+
 
         /// <summary>
         /// 設定値を反映させる（設定値を読み取りパーツを配置していく）
-        /// 設定値は関数下のようなものが渡る
+        /// , 設定値は関数下のコメントようなものが渡る
         /// </summary>
         private void AddPageBySetting()
         {
@@ -82,7 +173,8 @@ namespace FileSenderApp
                 //SendButton sendButton = buttonsGroup.AddButton();
                 buttonsGroup.DeleteAllButton();
                 buttonsGroup.ApplySettingButton(newTabPageSettingDict);
-                //@@
+                buttonsGroup.SendButtonClickEvent -= AnyButtonClickedRecieveEvent;
+                buttonsGroup.SendButtonClickEvent += AnyButtonClickedRecieveEvent;
             }
             /*
              * 
@@ -312,8 +404,58 @@ namespace FileSenderApp
 
         private void FormFileSenderApp_FormClosing(object sender, FormClosingEventArgs e)
         {
-            _logger.PrintInfo("******************************");
             _logger.PrintInfo("FormFileSenderApp_FormClosing");
+            if (_isSubForm)
+            {
+                _logger.PrintInfo("_isSubForm = true, e.Cancel=true, this.Visible=false");
+                e.Cancel = true;
+                this.Visible = false;
+            }
+        }
+
+        private void FormFileSenderApp_KeyDown(object sender, KeyEventArgs e)
+        {
+            _logger.PrintInfo("FormFileSenderApp_KeyDown");
+            if (e.KeyCode == Keys.NumPad5)
+            {
+                _logger.PrintInfo("FormFileSenderApp_KeyDown  NumPad5");
+                FormFileSenderApp_FormClosing(this, new FormClosingEventArgs(CloseReason.None, false));
+            }
+        }
+
+        private void TextBoxRenameTab_KeyDown(object sender, KeyEventArgs e)
+        {
+            _logger.PrintInfo("TextBoxRenameTab_KeyDown");
+            if (e.KeyCode == Keys.Enter)
+            {
+                _logger.PrintInfo("TextBoxRenameTab_KeyDown  Enter");
+                ButtonRenameTabOK_Click(buttonRenameTabOK, EventArgs.Empty);
+            }
+        }
+
+        private void ButtonRenameTabOK_Click(object sender, EventArgs e)
+        {
+            _logger.PrintInfo("ButtonRenameTabOK_Click");
+            if (textBoxRenameTabPage.Text != "")
+            {
+                _senderMainTab._tabControl.TabPages[_senderMainTab._tabControl.SelectedIndex].Text = textBoxRenameTabPage.Text;
+            }
+            _senderMainTab.UnvisibleRenameControl();
+        }
+
+        private void TextBoxRenameTab_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //EnterやEscapeキーでビープ音が鳴らないようにする
+            if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Escape)
+            {
+                e.Handled = true;
+            }
+        }
+
+        public void FormFileSenderApp_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _logger.PrintInfo("******************************");
+            _logger.PrintInfo("FormFileSenderApp_FormClosed");
             TabControl tabControl = this.tabControl1;
             Dictionary<string, object> allInfoDict = _senderMainTab.GetValueAll();
             //_senderMainTab.PrintInfoDictAll(allInfoDict);
@@ -326,39 +468,6 @@ namespace FileSenderApp
                 string json = _jsonStream.DictToJson(allInfoDict);
                 _logger.PrintInfo("allInfoDict = ");
                 _logger.PrintInfo(json);
-            }
-        }
-
-        private void FormFileSenderApp_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.NumPad5)
-            {
-                _logger.PrintInfo("FormFileSenderApp_KeyDown  NumPad5");
-                FormFileSenderApp_FormClosing(this, new FormClosingEventArgs(CloseReason.None, false));
-            }
-        }
-
-        private void TextBoxRenameTab_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                _logger.PrintInfo("TextBoxRenameTab_KeyDown  Enter");
-                ButtonRenameTabOK_Click(buttonRenameTabOK, EventArgs.Empty);
-            }
-        }
-
-        private void ButtonRenameTabOK_Click(object sender, EventArgs e)
-        {
-            _logger.PrintInfo("ButtonRenameTabOK_Click");
-            _senderMainTab._tabControl.TabPages[_senderMainTab._tabControl.SelectedIndex].Text = textBoxRenameTabPage.Text;
-        }
-
-        private void TextBoxRenameTab_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //EnterやEscapeキーでビープ音が鳴らないようにする
-            if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Escape)
-            {
-                e.Handled = true;
             }
         }
     }

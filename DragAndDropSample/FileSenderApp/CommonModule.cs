@@ -62,7 +62,27 @@ namespace CommonModule
             }
         }
 
+        /// <summary>
+        /// 指定されたディレクトリからGIFファイルのパスリストを取得するメソッド
+        /// </summary>
+        /// <param name="defaultDirPath"></param>
+        /// <returns></returns>
+        public static List<string> GetPathList(string defaultDirPath, string searchPattern = "*.*")
+        {
+            List<string> retPaths = new List<string>();
 
+            if (Directory.Exists(defaultDirPath))
+            {
+                // ディレクトリ内の特定のファイルのみを取得
+                retPaths = Directory.GetFiles(defaultDirPath, searchPattern, SearchOption.TopDirectoryOnly).ToList();
+            }
+            else
+            {
+                //_logger.PrintError($"指定されたディレクトリが存在しません: {defaultDirPath}");
+            }
+
+            return retPaths;
+        }
 
         /// <summary>
         /// 親ディレクトリを取得する

@@ -31,15 +31,18 @@ namespace FileSenderApp
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonsGroup1 = new FileSenderApp.ButtonsGroup();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonRenameTabOK = new System.Windows.Forms.Button();
             this.textBoxRenameTabPage = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonsGroup1 = new FileSenderApp.ButtonsGroup();
+            this.panelCheckBox = new System.Windows.Forms.Panel();
+            this.checkBoxFileMove = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panelCheckBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -49,10 +52,10 @@ namespace FileSenderApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(-3, 29);
+            this.tabControl1.Location = new System.Drawing.Point(-3, 54);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(350, 292);
+            this.tabControl1.Size = new System.Drawing.Size(350, 267);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -62,9 +65,16 @@ namespace FileSenderApp
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(342, 266);
+            this.tabPage1.Size = new System.Drawing.Size(342, 241);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Tab1";
+            // 
+            // buttonsGroup1
+            // 
+            this.buttonsGroup1.Location = new System.Drawing.Point(0, 3);
+            this.buttonsGroup1.Name = "buttonsGroup1";
+            this.buttonsGroup1.Size = new System.Drawing.Size(342, 266);
+            this.buttonsGroup1.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -73,7 +83,7 @@ namespace FileSenderApp
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(342, 266);
+            this.tabPage2.Size = new System.Drawing.Size(342, 241);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "[+]Add Tab";
             // 
@@ -82,7 +92,7 @@ namespace FileSenderApp
             this.panel1.Controls.Add(this.buttonRenameTabOK);
             this.panel1.Controls.Add(this.textBoxRenameTabPage);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-3, 1);
+            this.panel1.Location = new System.Drawing.Point(-3, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(344, 26);
             this.panel1.TabIndex = 1;
@@ -115,29 +125,44 @@ namespace FileSenderApp
             this.label1.TabIndex = 0;
             this.label1.Text = "Rename:";
             // 
-            // buttonsGroup1
+            // panelCheckBox
             // 
-            this.buttonsGroup1.Location = new System.Drawing.Point(0, 3);
-            this.buttonsGroup1.Name = "buttonsGroup1";
-            this.buttonsGroup1.Size = new System.Drawing.Size(342, 266);
-            this.buttonsGroup1.TabIndex = 0;
+            this.panelCheckBox.Controls.Add(this.checkBoxFileMove);
+            this.panelCheckBox.Location = new System.Drawing.Point(0, 28);
+            this.panelCheckBox.Name = "panelCheckBox";
+            this.panelCheckBox.Size = new System.Drawing.Size(346, 22);
+            this.panelCheckBox.TabIndex = 1;
+            // 
+            // checkBoxFileMove
+            // 
+            this.checkBoxFileMove.AutoSize = true;
+            this.checkBoxFileMove.Location = new System.Drawing.Point(4, 3);
+            this.checkBoxFileMove.Name = "checkBoxFileMove";
+            this.checkBoxFileMove.Size = new System.Drawing.Size(193, 16);
+            this.checkBoxFileMove.TabIndex = 0;
+            this.checkBoxFileMove.Text = "FileMove ( CheckOff = FileCopy)";
+            this.checkBoxFileMove.UseVisualStyleBackColor = true;
             // 
             // FormFileSenderApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 321);
+            this.Controls.Add(this.panelCheckBox);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Name = "FormFileSenderApp";
             this.Text = "File Sender";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormFileSenderApp_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormFileSenderApp_FormClosed);
             this.Load += new System.EventHandler(this.FormFileSenderApp_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormFileSenderApp_KeyDown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelCheckBox.ResumeLayout(false);
+            this.panelCheckBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -152,6 +177,8 @@ namespace FileSenderApp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonRenameTabOK;
         private ButtonsGroup buttonsGroup1;
+        private System.Windows.Forms.Panel panelCheckBox;
+        private System.Windows.Forms.CheckBox checkBoxFileMove;
     }
 }
 

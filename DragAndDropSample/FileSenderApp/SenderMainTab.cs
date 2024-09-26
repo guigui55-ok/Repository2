@@ -16,16 +16,18 @@ namespace FileSenderApp
         public TabControl _tabControl;
         TabPage _rightTabPage;
         Control _renameControl;
+        Control _checkBoxControl;
         Form _parentForm;
         string NEW_TAB_NAME = "[+]Add Tab";
         int _tmpHeight;
         string _ObjectName = "SenderMainTab1";
-        public SenderMainTab(AppLogger logger, TabControl tabControl, Control renameControl, Form parentForm)
+        public SenderMainTab(AppLogger logger, TabControl tabControl, Control renameControl,Control checkboxControl, Form parentForm)
         {
             _logger = logger;
             _tabControl = tabControl;
             //_rightTabPage = _tabControl.TabPages[1];
             _renameControl = renameControl;
+            _checkBoxControl = checkboxControl;
             _parentForm = parentForm;
             _tabControl.KeyDown += TabControl_KeyDown;
         }
@@ -78,6 +80,9 @@ namespace FileSenderApp
                 {
                     ButtonsGroup buttonGroup = (ButtonsGroup)buttonGroupList[0];
                     InitializeButtonGroupSingle(buttonGroup);
+                    FormFileSenderApp formMain = (FormFileSenderApp)_parentForm;
+                    buttonGroup.SendButtonClickEvent -= formMain.AnyButtonClickedRecieveEvent;
+                    buttonGroup.SendButtonClickEvent += formMain.AnyButtonClickedRecieveEvent;
                 }
                 else
                 {
@@ -237,28 +242,40 @@ namespace FileSenderApp
         public void UnvisibleRenameControl()
         {
             _renameControl.Visible = false;
-            _tabControl.Location = new Point(0, 0);
+            _checkBoxControl.Location = new Point(0, 0);
+            _tabControl.Location = new Point(0, _checkBoxControl.Height);
             _tabControl.Size = _parentForm.ClientSize;
             //サイズ変更したときに、イベントをとらえなくなる？
+            // タブを切り替えないと、TabControl_KeyDownが実行されない
+            //_tabControl.KeyDown -= TabControl_KeyDown;
             //_tabControl.KeyDown += TabControl_KeyDown;
         }
 
         private void TabControl_KeyDown(object sender, KeyEventArgs e)
         {
+            _logger.PrintInfo("TabControl_KeyDown");
             if (e.KeyCode == Keys.F2)
             {
                 _logger.PrintInfo("TabControl_KeyDown  F2");
-                _tabControl.Location = new Point(0, _tmpHeight);
-                Size newSize = _parentForm.ClientSize;
-                newSize.Height -= _tmpHeight;
-                _tabControl.Size = newSize;
-                _renameControl.Visible = true;
-                foreach (Control con in _renameControl.Controls)
+                if (_renameControl.Visible)
                 {
-                    if (con.GetType().ToString().IndexOf("TextBox") > 0)
+                    UnvisibleRenameControl();
+                }
+                else
+                {
+                    _checkBoxControl.Location = new Point(0, _tmpHeight);
+                    _tabControl.Location = new Point(0, _tmpHeight + _checkBoxControl.Height);
+                    Size newSize = _parentForm.ClientSize;
+                    newSize.Height -= (_tmpHeight + _checkBoxControl.Height);
+                    _tabControl.Size = newSize;
+                    _renameControl.Visible = true;
+                    foreach (Control con in _renameControl.Controls)
                     {
-                        TextBox buf = (TextBox)con;
-                        buf.Focus();
+                        if (con.GetType().ToString().IndexOf("TextBox") > 0)
+                        {
+                            TextBox buf = (TextBox)con;
+                            buf.Focus();
+                        }
                     }
                 }
                 //_renameControl.Focus();
@@ -330,6 +347,8 @@ namespace FileSenderApp
             buttonsGroup._fileSenderSettingValues = formMain._fileSenderSettingValues;
             InitializeButtonInButtonGroupSingle(buttonsGroup);
             InitializeButtonGroupSingle(buttonsGroup);
+            buttonsGroup.SendButtonClickEvent -= formMain.AnyButtonClickedRecieveEvent;
+            buttonsGroup.SendButtonClickEvent += formMain.AnyButtonClickedRecieveEvent;
             return buttonsGroup;
         }
 

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C416B557-7674-4CFF-A81D-B357C4C2413D}</ProjectGuid>
+    <ProjectGuid>{89B4E38E-6A17-48A6-B418-706C92C8193F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>FileSenderApp</RootNamespace>
-    <AssemblyName>FileSenderApp</AssemblyName>
+    <RootNamespace>FileSenderAppSample</RootNamespace>
+    <AssemblyName>FileSenderAppSample</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,50 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppLoggerB.cs" />
-    <Compile Include="ButtonsGroup.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ButtonsGroup.Designer.cs">
-      <DependentUpon>ButtonsGroup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CommonModule.cs" />
-    <Compile Include="DataBridgeFromExternal.cs" />
-    <Compile Include="FileSenderSettingValues.cs" />
-    <Compile Include="FileSenderSetting\ButtonSettingGroup.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FileSenderSetting\ButtonSettingGroup.Designer.cs">
-      <DependentUpon>ButtonSettingGroup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FileSenderSetting\ColorPicker.cs" />
-    <Compile Include="FormFileSenderApp.cs">
+    <Compile Include="FormFileSenderSample.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormFileSenderApp.Designer.cs">
-      <DependentUpon>FormFileSenderApp.cs</DependentUpon>
+    <Compile Include="FormFileSenderSample.Designer.cs">
+      <DependentUpon>FormFileSenderSample.cs</DependentUpon>
     </Compile>
-    <Compile Include="FileSenderSetting\FormFileSenderButtonSetting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FileSenderSetting\FormFileSenderButtonSetting.Designer.cs">
-      <DependentUpon>FormFileSenderButtonSetting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SenderMainTab.cs" />
-    <EmbeddedResource Include="ButtonsGroup.resx">
-      <DependentUpon>ButtonsGroup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FileSenderSetting\ButtonSettingGroup.resx">
-      <DependentUpon>ButtonSettingGroup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormFileSenderApp.resx">
-      <DependentUpon>FormFileSenderApp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FileSenderSetting\FormFileSenderButtonSetting.resx">
-      <DependentUpon>FormFileSenderButtonSetting.cs</DependentUpon>
+    <EmbeddedResource Include="FormFileSenderSample.resx">
+      <DependentUpon>FormFileSenderSample.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,31 +75,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="setting_test1.json" />
-    <None Include="setting_test2.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="_FileSenderApp_memo.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Repository3_CS\JsonStream\JsonStream\JsonStream.csproj">
-      <Project>{9793AD01-29A7-4DF1-99F5-9CF53BE02F80}</Project>
-      <Name>JsonStream</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CommonModulesProject\CommonModulesProject.csproj">
-      <Project>{ACCD9FD8-7CE5-491F-BD29-1CB9F52C061F}</Project>
+      <Project>{accd9fd8-7ce5-491f-bd29-1cb9f52c061f}</Project>
       <Name>CommonModulesProject</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DragAndDropSample\DragAndDropSample.csproj">
-      <Project>{C9697700-9378-4A1E-8D52-F8E72E36CF25}</Project>
-      <Name>DragAndDropSample</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FileListManager\FileListManager.csproj">
-      <Project>{9733F7E6-999A-4E4D-9B5B-C47433806252}</Project>
-      <Name>FileListManager</Name>
+    <ProjectReference Include="..\FileSenderApp\FileSenderApp.csproj">
+      <Project>{C416B557-7674-4CFF-A81D-B357C4C2413D}</Project>
+      <Name>FileSenderApp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
