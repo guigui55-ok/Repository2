@@ -23,7 +23,7 @@ namespace CommonModule
         }
     }
 
-    public static class CommonGeneral
+    public static class CommonGeneralB
     {
         /// <summary>
         /// タイプとマッチした子コントロールをすべて取得する
@@ -35,9 +35,9 @@ namespace CommonModule
         public static List<Control> GetControlListIsMatchType(Control control, Type typeObject)
         {
             List<Control> retList = new List<Control> { };
-            foreach(Control con in control.Controls)
+            foreach (Control con in control.Controls)
             {
-                if(con.GetType() == typeObject)
+                if (con.GetType() == typeObject)
                 {
                     retList.Add(con);
                     List<Control> bufList = GetControlListIsMatchType(con, typeObject);
@@ -115,7 +115,7 @@ namespace CommonModule
         /// <param name="menuItem"></param>
         /// <param name="objectName"></param>
         /// <returns></returns>
-        public static List<ToolStripMenuItem> GetMenuItemListIsMatchNameInMenuItem(ToolStripMenuItem　menuItem, string objectName)
+        public static List<ToolStripMenuItem> GetMenuItemListIsMatchNameInMenuItem(ToolStripMenuItem menuItem, string objectName)
         {
             List<ToolStripMenuItem> retList = new List<ToolStripMenuItem> { };
             foreach (ToolStripMenuItem con in menuItem.DropDownItems)

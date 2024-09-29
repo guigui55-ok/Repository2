@@ -38,7 +38,7 @@ namespace PlayMovieForm
 
         private SourceReader _sourceReader;
         private int _frameWidth, _frameHeight, _stride;
-        private double _frameRate;
+        private double _frameRate = 0;
         private Timer _timer;
         private PictureBox _pictureBox;
         private bool _isPlaying;

@@ -12,6 +12,10 @@ using ViewImageModule;
 
 namespace ImageViewer5
 {
+    /// <summary>
+    /// ImageMainFrameのリストを扱うクラス
+    /// 　、FrameListすべてに処理が必要なときなどにも使用する
+    /// </summary>
     public class MainFrameManager
     {
         AppLogger _logger;
@@ -211,7 +215,17 @@ namespace ImageViewer5
             // Anchorがどこかで Top,Left となる
             imageMainFrame.Anchor = AnchorStyles.None;
             // デザイナの設定と重複する可能性があるので、ログ出力
+            // 240926
+            _formMain._fileSenderFunction.AddEventHandler(imageMainFrame);
             _logger.PrintInfo(imageMainFrame.Name + " > Set Anchor.None");
+        }
+
+        public void ClearFrameFocusFlag()
+        {
+            foreach(ImageMainFrame frame in this._imageMainFrameList)
+            {
+                frame._imageViewerMain._isFocusFrame = false;
+            }
         }
     }
 }

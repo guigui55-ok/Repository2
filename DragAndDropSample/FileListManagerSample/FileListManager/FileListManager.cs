@@ -89,6 +89,9 @@ namespace CommonUtility.FileListUtility
 
         /// <summary>
         /// フォルダ・ファイルリスト読み込み・ファイルリスト設定をお行うメインメソッド
+        /// <para></para>
+        /// FilterList, IgnoreList は FileListManager._filesRegister に保存される
+        /// （path は FileListManager._filesRegister.DirectoryPath に保存される）
         /// </summary>
         /// <param name="path"></param>
         /// <param name="fileFilterConditionList"></param>

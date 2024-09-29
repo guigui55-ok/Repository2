@@ -181,6 +181,7 @@ namespace CommonUtility.FileListUtility
         /// <summary>
         /// パスを受け取りディレクトリパスを取得、そのファイルリスをを取得して
         /// 条件で絞込、メンバへセットする（FileListRegister._fileList)
+        /// 引数pathは this.DirectoryPathにセットされる
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>

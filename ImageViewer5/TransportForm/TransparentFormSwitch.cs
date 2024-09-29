@@ -77,6 +77,9 @@ namespace TransportForm
         private ExecuteDelayTimer _frameKeyTimer = new ExecuteDelayTimer();
         int _mode;
         string msg = "";
+        // 240926 ログが出すぎるので
+        public bool _isDebugPrint = false;
+
         public TransparentFormSwitch(AppLogger logger, Form form, Control control)
         {
             _logger = logger;
@@ -337,6 +340,14 @@ namespace TransportForm
             }
         }
 
+        private void PrintDebug(string value)
+        {
+            if (_isDebugPrint)
+            {
+                _logger.PrintInfo(value);
+            }
+        }
+
         private void PrintInfoFlags()
         {
             string buf = "";
@@ -345,7 +356,7 @@ namespace TransportForm
             buf += string.Format(" ,IN>FO:{0}", _innerToFormDragFlag._value);
             buf += string.Format(" ,FR>FR:{0}", _frameToFrameDragFlag._value);
             buf += string.Format(" ,FR>FO:{0}", _frameToFormDragFlag._value);
-            _logger.PrintInfo(buf);
+            PrintDebug(buf);
         }
 
         private void FormTransport_KeyUp(object sender, KeyEventArgs e)
@@ -409,7 +420,7 @@ namespace TransportForm
                     _innerToFormDragFlag._value = !FrameIsOn;
                     _frameToFrameDragFlag._value = FrameIsOn;
                     _frameToFormDragFlag._value = !FrameIsOn;
-                    _logger.PrintInfo("======");
+                    PrintDebug("======");
                     PrintInfoFlags();
                 }
                 else if (_moveInnerKey.IsMatch(e))
@@ -422,7 +433,7 @@ namespace TransportForm
                     _innerToFormDragFlag._value = !InnerIsOn;
                     _frameToFrameDragFlag._value = InnerIsOn; 
                     _frameToFormDragFlag._value = !InnerIsOn;
-                    _logger.PrintInfo("*****");
+                    PrintDebug("*****");
                     PrintInfoFlags();
                 }
 

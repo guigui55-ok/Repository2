@@ -9,6 +9,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Timer = System.Timers.Timer;
+using System.Reflection;
 
 namespace CommonModules
 {
@@ -16,6 +17,32 @@ namespace CommonModules
 
     public static class CommonGeneral
     {
+
+        public static string GetApplicationPath()
+        {
+            Assembly myAssembly = Assembly.GetEntryAssembly();
+            //_logger.PrintInfo(String.Format("myAssembly.Location = {0}", myAssembly.Location));
+            return myAssembly.Location;
+        }
+
+
+        /// <summary>
+        /// 指定されたフォルダパスでエクスプローラを開く関数
+        /// </summary>
+        /// <param name="folderPath">表示したいフォルダのパス</param>
+        public static void OpenFolder(string folderPath)
+        {
+            if (!string.IsNullOrEmpty(folderPath))
+            {
+                // エクスプローラでフォルダを開く
+                Process.Start("explorer.exe", folderPath);
+            }
+            else
+            {
+                // パスが無効の場合はデフォルトの「マイ コンピュータ」を開く
+                Process.Start("explorer.exe");
+            }
+        }
 
         public static void LogCallerInfo(int stackFrameIndex = 1)
         {

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using AppLoggerModule;
 using ImageViewer5.ImageControl;
 using CommonModule;
+using CommonModulesProject;
 
 namespace ImageViewer5
 {
@@ -34,14 +35,19 @@ namespace ImageViewer5
         {
             try
             {
+                string value;
                 _logger.PrintInfo("## ApplySettings > ApplyArgs");
-                Size winSize = imageViewerArgs.GetWindowSize();
+                //Size winSize = imageViewerArgs.GetWindowSize();
+                value = (string)_formMain._formMainSetting._settingDictionary._settingDict[SettingKey.MAIN_FORM_SIZE];
+                Size winSize = FormMainSetting.ConvertStringToSize(value);
                 if (!winSize.Equals(new Size()))
                 {
                     _logger.PrintInfo(string.Format("Args winSize = {0}", winSize));
                     _formMain.Size = winSize;
                 }
-                Point winLoc = imageViewerArgs.GetWindowLocation();
+                //Point winLoc = imageViewerArgs.GetWindowLocation();
+                value = (string)_formMain._formMainSetting._settingDictionary._settingDict[SettingKey.MAIN_FORM_LOC];
+                Point winLoc = FormMainSetting.ConvertStringToPoint(value);
                 if (!winLoc.Equals(new Point()))
                 {
                     _logger.PrintInfo(string.Format("Args winLoc = {0}", winLoc));
@@ -72,7 +78,9 @@ namespace ImageViewer5
                     _logger.PrintInfo(string.Format("----- frameNumber = {0}", frameNumber));
                     var dictStr = String.Join(",", dict.Select(kvp => kvp.Key + " : " + kvp.Value));
                     _logger.PrintInfo(string.Format("dictStr = {0}", dictStr));
-
+                    //
+                    SettingDictionary bufSettingObj = imageViewerArgs.GetSettingDictionaryByNumber(frameNumber);
+                    //
                     if (_formMain._mainFrameManager._imageMainFrameList.Count < frameNumber)
                     {
                         _logger.PrintError(this.ToString() + ".ApplyArgsImageViewerFrame  # OutOfRange");
@@ -85,6 +93,7 @@ namespace ImageViewer5
                     }
                     ImageMainFrame imageMainFrame = _formMain._mainFrameManager._imageMainFrameList[frameNumber-1];
                     string folderPath = (string)GetDictValue(dict, SETTINGS_KEYS.FOLDER);
+                    folderPath = bufSettingObj.GetValueString(SettingKey.RESTORE_PREV_DIR);
                     if (folderPath != "")
                     {
                         _logger.PrintInfo(string.Format("Args folderPath = {0}", folderPath));
@@ -93,9 +102,11 @@ namespace ImageViewer5
                         //フォルダパスが存在しなければ処理はしない（未実装）
                     }
                     string sizeFrameStr = (string)GetDictValue(dict, SETTINGS_KEYS.FRAME_SIZE);
+                    sizeFrameStr = bufSettingObj.GetValueString(SettingKey.FRAME_SIZE);
                     if (sizeFrameStr!="")
                     {
-                        Size frameSize = imageViewerArgs.CnvWindowSize(dict, SETTINGS_KEYS.FRAME_SIZE);
+                        //Size frameSize = imageViewerArgs.CnvWindowSize(dict, SETTINGS_KEYS.FRAME_SIZE);
+                        Size frameSize = FormMainSetting.ConvertStringToSize(sizeFrameStr);
                         _logger.PrintInfo(string.Format("Args frameSize = {0}", frameSize));
                         //Frameのサイズを変更する 処理を記載
                         imageMainFrame.Size = frameSize;
@@ -103,9 +114,11 @@ namespace ImageViewer5
 
 
                     string frameLocationStr = (string)GetDictValue(dict, SETTINGS_KEYS.FRAME_LOC);
+                    frameLocationStr = bufSettingObj.GetValueString(SettingKey.FRAME_LOC);
                     if (frameLocationStr != "")
                     {
-                        Point frameLoc = imageViewerArgs.CnvWindowLocation(dict, SETTINGS_KEYS.FRAME_LOC);
+                        //Point frameLoc = imageViewerArgs.CnvWindowLocation(dict, SETTINGS_KEYS.FRAME_LOC);
+                        Point frameLoc = FormMainSetting.ConvertStringToPoint(frameLocationStr);
                         _logger.PrintInfo(string.Format("Args frameLoc = {0}", frameLoc));
                         //FrameのLocationを変更する 処理を記載
                         imageMainFrame.Location = frameLoc;
@@ -115,6 +128,7 @@ namespace ImageViewer5
 
                     //string readSubFolderStr = (string)GetDictValue(dict, SETTINGS_KEYS.SUBFOLDERS);
                     bool readSubFolderBool = (bool)GetDictValue(dict, SETTINGS_KEYS.SUBFOLDERS);
+                    readSubFolderBool = bufSettingObj.GetValueBool(SettingKey.INCLUDE_SUB_DIR_FILE);
                     if (readSubFolderBool)
                     {
                         //bool readSubFolder = CommonGeneral.AnyToBool(readSubFolderStr);
@@ -124,6 +138,7 @@ namespace ImageViewer5
                     }
                     //string randomrStr = (string)GetDictValue(dict, SETTINGS_KEYS.RANDOM);
                     bool randomBool = (bool)GetDictValue(dict, SETTINGS_KEYS.RANDOM);
+                    randomBool = bufSettingObj.GetValueBool(SettingKey.FILE_LIST_RANDOM);
                     if (randomBool)
                     {
                         //bool randomBool = CommonGeneral.AnyToBool(randomrStr);
@@ -132,6 +147,7 @@ namespace ImageViewer5
                         imageMainFrame._formFileList._fileListManagerSettingForm._fileListManagerSetting.ChangeListRandom(randomBool);
                     }
                     int slideShowIntervalInt = (int)GetDictValue(dict, SETTINGS_KEYS.INTERVAL);
+                    slideShowIntervalInt = bufSettingObj.GetValueInt(SettingKey.SLIDE_SHOW_INTERVAL);
                     if (slideShowIntervalInt >= 0)
                     {
                         //int.TryParse(slideShowIntervalStr,out slideShowIntervalInt);
@@ -140,6 +156,7 @@ namespace ImageViewer5
                         imageMainFrame._imageViewerMain._viewImageFunction._viewImageSlideShow._SlideShowTimer.Interval = slideShowIntervalInt;
                     }
                     bool slideShowBool = (bool )GetDictValue(dict, SETTINGS_KEYS.SLIDESHOW);
+                    slideShowBool = bufSettingObj.GetValueBool(SettingKey.SLIDE_SHOW_ON);
                     if (slideShowBool)
                     {
                         _logger.PrintInfo(string.Format("Args slideShowBool = {0}", slideShowBool));
@@ -148,9 +165,11 @@ namespace ImageViewer5
                         imageMainFrame._imageViewerMain._viewImageFunction._viewImageSlideShow.ChangeOnOffByFlag(1);
                     }
                     int fileListWIndow = (int)GetDictValueInt(dict, SETTINGS_KEYS.FILE_LIST_WINDOW);
-                    if (fileListWIndow >= 0)
+                    bool fileListWindowbool = bufSettingObj.GetValueBool(SettingKey.SHOW_LIST_SUB_WINDOW);
+                    if (!(fileListWindowbool))
                     {
                         _logger.PrintInfo(string.Format("Args fileListtWindow = {0}", fileListWIndow));
+                        _logger.PrintInfo(string.Format("Args fileListWindowbool = {0}", fileListWindowbool));
                         //fileListWIndowを表示する 処理を記載
                         imageMainFrame._formFileList.Visible = false;
                     }

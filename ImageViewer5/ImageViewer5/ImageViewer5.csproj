@@ -46,8 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddFunction\FileSenderFunction.cs" />
     <Compile Include="ApplySettings.cs" />
-    <Compile Include="CommonModules\AppLogger.cs" />
     <Compile Include="CommonModules\ChangeSizeByMouseWheel.cs" />
     <Compile Include="CommonModules\CommonModule.cs" />
     <Compile Include="CommonModules\ControlDragger.cs" />
@@ -70,6 +70,7 @@
     <Compile Include="ImageControl\Function\ImagePlayer.cs" />
     <Compile Include="ImageControl\Function\ViewImageFunction.cs" />
     <Compile Include="ImageControl\Function\ViewImageFunction_FitInnerToFrame.cs" />
+    <Compile Include="ImageControl\Function\ViewImageOtherFunction.cs" />
     <Compile Include="ImageControl\Function\ViewImageSlideShow.cs" />
     <Compile Include="ImageControl\ImageMainFrame.cs">
       <SubType>UserControl</SubType>
@@ -90,6 +91,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FormMainSetting.cs" />
+    <Compile Include="ViewImageCommon.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +127,10 @@
     <Content Include="memo.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Repository3_CS\JsonStream\JsonStream\JsonStream.csproj">
+      <Project>{9793AD01-29A7-4DF1-99F5-9CF53BE02F80}</Project>
+      <Name>JsonStream</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\DragAndDropSample\CommonModulesProject\CommonModulesProject.csproj">
       <Project>{ACCD9FD8-7CE5-491F-BD29-1CB9F52C061F}</Project>
       <Name>CommonModulesProject</Name>
@@ -132,6 +138,10 @@
     <ProjectReference Include="..\..\DragAndDropSample\FileListManagerSample\FileListManagerSample.csproj">
       <Project>{0BF9FE4E-A958-4796-A3CE-CFF7FF50A06F}</Project>
       <Name>FileListManagerSample</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DragAndDropSample\FileSenderApp\FileSenderApp.csproj">
+      <Project>{C416B557-7674-4CFF-A81D-B357C4C2413D}</Project>
+      <Name>FileSenderApp</Name>
     </ProjectReference>
     <ProjectReference Include="..\MouseWheelZoomHandler\MouseWheelZoomHandler.csproj">
       <Project>{A87514EA-C1E3-4B68-B935-8BEDAB629C20}</Project>

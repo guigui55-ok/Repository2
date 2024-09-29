@@ -49,11 +49,12 @@ namespace FileSenderAppSample
             this.KeyPreview = true;
 
             //ボタンイベント紐づけ（FileSenderAppの）
+            //ファイルリストのカレントファイルが変更されたときに、FileSenderAppのBridgeValueを変更する
+            //　=値（パス）の入れ替え時は、fileSender.DataBridgeも更新（テキストボックス更新＞DataBridge更新）
             _filechangeSimple.ChangeFileEvent += ChangeFileEventRecieve;
             //このフォームのボタンでダイアログを表示
-            //値（パス）の入れ替え時は、fileSender.DataBridgeも更新（テキストボックス更新＞DataBridge更新）
             //fileSenderのイベント成功を受け取り
-            //削除したら、こっちのリストも更新する
+            //削除したら、ファイルのリストも更新する
             _fileSenderApp.AnySendButton_Clicked += FileSenderApp_ClickedButton_RecieveEvent;
 
             _filechangeSimple.MoveIndex(0, true);

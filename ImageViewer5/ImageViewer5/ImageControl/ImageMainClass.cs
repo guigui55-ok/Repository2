@@ -41,6 +41,8 @@ namespace ImageViewer5.ImageControl
         FormDragger _formDraggerByInner;
 
         TransparentFormSwitch _transparentFormSwitch;
+        //
+        public bool _isFocusFrame = false;
 
         /// <summary>
         /// ViewImageのコントロールや機能を取りまとめるクラス

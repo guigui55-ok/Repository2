@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayMovieForm", "PlayMovieF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayWebp", "PlayWebp\PlayWebp.csproj", "{DD77DCC4-6F84-44AC-A238-70790B5B4532}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSenderApp", "..\DragAndDropSample\FileSenderApp\FileSenderApp.csproj", "{C416B557-7674-4CFF-A81D-B357C4C2413D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonStream", "..\..\Repository3_CS\JsonStream\JsonStream\JsonStream.csproj", "{9793AD01-29A7-4DF1-99F5-9CF53BE02F80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{DD77DCC4-6F84-44AC-A238-70790B5B4532}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD77DCC4-6F84-44AC-A238-70790B5B4532}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD77DCC4-6F84-44AC-A238-70790B5B4532}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C416B557-7674-4CFF-A81D-B357C4C2413D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C416B557-7674-4CFF-A81D-B357C4C2413D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C416B557-7674-4CFF-A81D-B357C4C2413D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C416B557-7674-4CFF-A81D-B357C4C2413D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9793AD01-29A7-4DF1-99F5-9CF53BE02F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9793AD01-29A7-4DF1-99F5-9CF53BE02F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9793AD01-29A7-4DF1-99F5-9CF53BE02F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9793AD01-29A7-4DF1-99F5-9CF53BE02F80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

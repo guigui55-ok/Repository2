@@ -14,7 +14,7 @@ namespace FileSenderApp
     {
         AppLogger _logger;
         public TabControl _tabControl;
-        TabPage _rightTabPage;
+        TabPage _rightTabPage=null;
         Control _renameControl;
         Control _checkBoxControl;
         Form _parentForm;
@@ -30,6 +30,9 @@ namespace FileSenderApp
             _checkBoxControl = checkboxControl;
             _parentForm = parentForm;
             _tabControl.KeyDown += TabControl_KeyDown;
+            // エラー抑制用
+            _rightTabPage = null;
+            _ObjectName = "SenderMainTab1";
         }
 
         public void Initialize()

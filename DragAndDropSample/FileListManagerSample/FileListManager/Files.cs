@@ -326,5 +326,10 @@ namespace CommonUtility.FileListUtility
             //_logger.PrintInfo("fileNameList = " + bufJoin);
             return bufJoin;
         }
+
+        public int GetCurrentIndex()
+        {
+            return NowIndex;
+        }
     }
 }

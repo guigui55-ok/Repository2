@@ -32,6 +32,8 @@ namespace ViewImageModule
         //複数同時に実行されることがあるため
         public string Name;
 
+        public ViewImageOtherFunction _viewImageOtherFunction;
+
         public ViewImageFunction(
             AppLogger logger,
             IViewImage viewImage,
@@ -49,6 +51,7 @@ namespace ViewImageModule
             _viewImageFunction_FitInnerToFrame = new ViewImageFunction_FitInnerToFrame(
                 _logger, _viewImageFrameControl, _viewImageControl, _viewImage);
             this.Name = "ViewImageFunction" + imageMainFrame.GetComponentNumber();
+            _viewImageOtherFunction = new ViewImageOtherFunction(_logger, imageMainFrame);
         }
 
         public void InitializeValue()
@@ -69,6 +72,7 @@ namespace ViewImageModule
             _viewImageSlideShow = new ViewImageSlideShow(_logger, _imageMainFrame);
             _viewImageSlideShow.Initialize_LoadAfter();
             //_viewImageSlideShow._SlideShowTimer.Tick += _imageMainFrame._formFileList._fileListManager.MoveNextFileWhenLastFileNextDirectoryEvent;
+            _viewImageOtherFunction.Initialize();
             ForDebug();
         }
 

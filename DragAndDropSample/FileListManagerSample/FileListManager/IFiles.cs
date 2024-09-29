@@ -23,6 +23,7 @@ namespace CommonUtility.FileListUtility
         void MoveNext();
         void MovePrevious();
         string GetCurrentValue();
+        int GetCurrentIndex();
         List<string> GetList();
 
         string StringJoinList(int index=-1);

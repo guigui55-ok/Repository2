@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppLoggerModule;
 using CommonModule;
+using CommonModulesProject;
 
 namespace ImageViewer5.ImageControl.Function
 {

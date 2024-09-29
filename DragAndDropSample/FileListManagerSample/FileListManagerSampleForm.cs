@@ -79,6 +79,8 @@ namespace FileListManagerSample
 
         /// <summary>
         /// ファイルパスから、ファイルリストをセットする（外部から操作する用）
+        /// <para></para>
+        /// FilterList, IgnoreList は FileListManager._filesRegister に保存される
         /// </summary>
         /// <param name="filePath"></param>
         /// <param name="supportedImageExtentionList">

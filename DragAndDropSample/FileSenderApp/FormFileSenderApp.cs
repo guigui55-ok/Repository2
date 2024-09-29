@@ -33,10 +33,10 @@ namespace FileSenderApp
         //
         public int _waitTime = 50; // m_secontd
 
-        public FormFileSenderApp()
+        public FormFileSenderApp(AppLogger logger=null)
         {
             InitializeComponent();
-            _logger = new AppLogger();
+            if (logger == null){_logger = new AppLogger();} else { _logger = logger; }
             _logger.LogOutPutMode = OutputMode.DEBUG_WINDOW | OutputMode.FILE;
             _logger.FilePath = Directory.GetCurrentDirectory() + "\\" + "__test_log.log";
             _logger.PrintInfo("##############################");
@@ -61,6 +61,12 @@ namespace FileSenderApp
             AddPageBySetting();
             _logger.PrintInfo("FormFileSenderApp Initialize End");
             _logger.PrintInfo("==========");
+        }
+
+        public void SetDataFromExternal(object value)
+        {
+            _logger.PrintInfo(string.Format("SetDataFromExternal [{0}]", value));
+            this._dataBridgeFromExternal.SetData(value);
         }
 
         public void AnyButtonClickedRecieveEvent(object sender , EventArgs e)
@@ -136,6 +142,11 @@ namespace FileSenderApp
                 _logger.PrintError(ex, "FileMoveOrCopy Error");
                 return false;
             }
+        }
+
+        public bool IsCheckedMove()
+        {
+            return checkBoxFileMove.Checked;
         }
 
 

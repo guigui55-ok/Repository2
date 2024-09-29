@@ -437,17 +437,21 @@ namespace FileSenderApp
             item_Setting.Click += Menu_Setting_Click;
             menu.Items.Add(item_Setting);
             //#
-            ToolStripMenuItem item_SetDirPath = new ToolStripMenuItem("SetDirPath");
-            item_SetDirPath.Click += Menu_SetDirPath_Click;
-            menu.Items.Add(item_SetDirPath);
+            ToolStripMenuItem item_OpenFolder = new ToolStripMenuItem("OpenFolder");
+            item_OpenFolder.Click += Menu_OpenFolder_Click;
+            menu.Items.Add(item_OpenFolder);
             //#
-            ToolStripMenuItem item_Rename = new ToolStripMenuItem("Rename");
-            item_Rename.Click += Menu_Rename_Click;
-            menu.Items.Add(item_Rename);
-            //#
-            ToolStripMenuItem item_ChangeColor = new ToolStripMenuItem("ChangeColor");
-            item_ChangeColor.Click += Menu_ChangeColor_Click;
-            menu.Items.Add(item_ChangeColor);
+            //ToolStripMenuItem item_SetDirPath = new ToolStripMenuItem("SetDirPath");
+            //item_SetDirPath.Click += Menu_SetDirPath_Click;
+            //menu.Items.Add(item_SetDirPath);
+            ////#
+            //ToolStripMenuItem item_Rename = new ToolStripMenuItem("Rename");
+            //item_Rename.Click += Menu_Rename_Click;
+            //menu.Items.Add(item_Rename);
+            ////#
+            //ToolStripMenuItem item_ChangeColor = new ToolStripMenuItem("ChangeColor");
+            //item_ChangeColor.Click += Menu_ChangeColor_Click;
+            //menu.Items.Add(item_ChangeColor);
             //#
             this.ContextMenuStrip = menu;
         }
@@ -487,7 +491,11 @@ namespace FileSenderApp
             _formSetting.ClearSettingParts();
             _formSetting.ShowDialogForList(_logger, list);
             _formSetting.Show();
-
+        }
+        public void Menu_OpenFolder_Click(object sender, EventArgs e)
+        {
+            _logger.PrintInfo("Menu_OpenFolder_Click");
+            CommonModules.CommonGeneral.OpenFolder(this._directoryPath);
         }
 
         public void RecieveInfoFromSettingForm(object sender, EventArgs e)
@@ -570,7 +578,8 @@ namespace FileSenderApp
 }";
         // DefaultJson END
         //#
-        public static readonly string SETTING_FILE_NAME = "setting.json";
+        //public static readonly string SETTING_FILE_NAME = "setting.json";
+        public static readonly string SETTING_FILE_NAME = "settingFileSender.json";
         //#
         //設定
         public static readonly string KEY_SETTING_ITEM_KIND = "ItemKind";

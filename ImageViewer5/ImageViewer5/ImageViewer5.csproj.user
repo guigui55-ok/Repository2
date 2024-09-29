@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>--frame-count=1 --frame1-folder="H:\ZPICTURE\jpg ss new\jpg Edit All\00sss\0darkmikan a" --frame1-size=580x630 --frame1-location=0,0 --frame1-subfolders=false --frame1-random=true --frame1-slideshow=true --frame1-interval=2800 --frame1-file-list-window=0</StartArguments>
+    <StartArguments>
+    </StartArguments>
   </PropertyGroup>
 </Project>

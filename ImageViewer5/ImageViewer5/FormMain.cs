@@ -13,6 +13,8 @@ using CommonModule;
 using ImageViewer5.ImageControl;
 using System.Reflection;
 using ViewImageModule;
+using ImageViewer5.AddFunction;
+using System.IO;
 
 namespace ImageViewer5
 {
@@ -26,6 +28,8 @@ namespace ImageViewer5
         //public List<ImageMainFrame> _imageMainFrameList;
         public MainFrameManager _mainFrameManager;
         public FormMainSetting _formMainSetting;
+        // 240626 追加
+        public FileSenderFunction _fileSenderFunction;
         public FormMain(string[] args)
         {
             Debugger.DebugPrint("FormMain New");
@@ -43,10 +47,13 @@ namespace ImageViewer5
             // ログをコンソールとファイルに出力するように設定
             _logger.LogOutPutMode = OutputMode.CONSOLE | OutputMode.FILE;
             //#
+            _logger.PrintInfo("#########  FormMain New  #########");
             Assembly myAssembly = Assembly.GetEntryAssembly();
             _logger.PrintInfo(String.Format("myAssembly.Location = {0}", myAssembly.Location));
             //#
-            _formMainSetting = new FormMainSetting();
+            _formMainSetting = new FormMainSetting(_logger, this);
+            string settingPath = Path.Combine(Directory.GetCurrentDirectory(), ImageViewerConstants.IMAGE_VIEWER_SETTING_FILE_NAME);
+            _formMainSetting.ReadSettingFile(settingPath);
             //#
             _imageViewerArgs = new ImageViewerArgs(_logger, args);
             _imageViewerArgs.ParseArguments(args);
@@ -61,6 +68,9 @@ namespace ImageViewer5
             //
             //#
             _mainFrameManager = new MainFrameManager(_logger, this);
+            //
+            _fileSenderFunction = new FileSenderFunction(_logger, this);
+            _fileSenderFunction.Initialize();
             //#
             //this.imageMainFrame1._logger = _logger;
             //this.imageMainFrame1.Parent = this;
@@ -93,6 +103,7 @@ namespace ImageViewer5
             }
             finally
             {
+                _logger.PrintInfo("FormMain_Load finally");
                 //#
                 //テスト値
                 //List<string> ignoreList = new List<string> { "_4a44d3" };
@@ -121,6 +132,9 @@ namespace ImageViewer5
                 _nowImageMainFrame.Anchor = AnchorStyles.None;
                 // デザイナの設定と重複する可能性があるので、ログ出力
                 _logger.PrintInfo(_nowImageMainFrame.Name + " > Set Anchor.None");
+                // 240926
+                _fileSenderFunction.AddEventHandler(_nowImageMainFrame);
+                _logger.PrintInfo("FormMain_Load finally End");
             }
         }
 
@@ -132,7 +146,10 @@ namespace ImageViewer5
 
         private void FormMain_Closed(object sender, FormClosedEventArgs e)
         {
-            _logger.PrintInfo("##########  Form_Closed  #########");
+            _logger.PrintInfo("##########  Form_Closed A_Part  #########");
+            this._fileSenderFunction._fileSenderApp.FormFileSenderApp_FormClosed(sender, e);
+            _formMainSetting.SaveSetting();
+            _logger.PrintInfo("##########  Form_Closed B_Part  #########");
             Console.WriteLine("Logger.FilePath");
             Console.WriteLine(_logger.FilePath);
             Console.WriteLine("");
@@ -146,6 +163,8 @@ namespace ImageViewer5
                 {
                     _logger.PrintInfo(String.Format("FormMain_Paint First"));
                     _logger.PrintInfo(String.Format("FormMain.Size = {0}", this.Size));
+                    //最初だけ実行する
+                    _nowImageMainFrame._imageViewerMain._viewImageFunction._viewImageOtherFunction.ImageMainFrameAny_MouseDown(this, EventArgs.Empty);
                     // FormMain_Loadの最後だと描画されない
                     _nowImageMainFrame._imageViewerMain.ShowImageAfterInitialize(
                         _nowImageMainFrame._formFileList._files.GetCurrentValue());
@@ -221,7 +240,6 @@ namespace ImageViewer5
                     bufFrame.Visible = false;
                     this.Controls.Remove(bufFrame);
                     _mainFrameManager._imageMainFrameList.Remove(bufFrame);
-
                 }
                 else if (e.KeyCode == Keys.NumPad5 && e.Control)
                 {

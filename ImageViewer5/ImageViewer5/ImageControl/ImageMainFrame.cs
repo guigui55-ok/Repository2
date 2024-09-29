@@ -42,12 +42,12 @@ namespace ImageViewer5.ImageControl
 
             //#
             // 設定ファイルを読み込み反映させる場合はここで行う（未対応） 240901
-            _imageMainFrameSetting = new ImageMainFrameSetting();
+            _imageMainFrameSetting = new ImageMainFrameSetting(_logger, this);
         }
 
         public void InitializeValues(List<string> SupportedImageExtList)
         {
-            _logger.PrintInfo(this.Name + " > InitializeValues");
+            _logger.PrintInfo("ImageMainFrame > InitializeValues > " + this.Name);
             _imageViewerMain = new ImageMainClass(
                 _logger, (Form)this.Parent, this, this.pictureBox_ImageMain, this.GetComponentNumber());
             _imageViewerMain.InitializeValues(SupportedImageExtList);
@@ -79,6 +79,15 @@ namespace ImageViewer5.ImageControl
             {
 
             }
+        }
+
+        public void UpdateFileList()
+        {
+            _logger.PrintInfo(this.Name + " > UpdateFileList");
+            this._formFileList.SetFilesFromPath(
+                this._formFileList._fileListManager._filesRegister.DirectoryPath,
+                this._formFileList._fileListManager._filesRegister._fileFilterConditionList,
+                this._formFileList._fileListManager._filesRegister._fileIgnoreConditionList);
         }
 
         /// <summary>
@@ -144,14 +153,26 @@ namespace ImageViewer5.ImageControl
             //この方法では、ShowSubFormFileList メソッドの引数を object 型として受け取り、必要に応じてキャストして使用します。
         }
 
+        /// <summary>
+        /// ファイルが選択されたときに呼び出される
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectedFile(object sender, EventArgs e)
         {
+            // this.ShowSubFormFileList で _formFileList.AddEventHandler_SelectedFileEventに紐づけられる
             _logger.PrintInfo(this.Name + " > SelectedFile  > sender = " + (string)sender);
             _imageViewerMain.ShowImageThisPath();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ChangeFileListEvent(object sender, EventArgs e)
         {
+            // this._formFileList.AddEventHandler_UpdateFileListAfterEvent(ChangeFileListEvent);
             string[] recvList = (string[])sender;
             _logger.PrintInfo(this.Name + " > ChangeFileListEvent  > sender.Length = " + recvList.Length);
         }
@@ -356,5 +377,34 @@ namespace ImageViewer5.ImageControl
             }
             return 0;
         }
+
+        private void CloseFrame_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _logger.PrintInfo("CloseFrame_ToolStripMenuItem_Click");
+            // 表示しているFrame（UserControl）のリストの最後を除去する
+            //ImageMainFrame bufFrame = _mainFrameManager._imageMainFrameList[_mainFrameManager._imageMainFrameList.Count - 1];
+            ImageMainFrame bufFrame = this;
+            bufFrame._imageViewerMain._viewImage.DisposeImage();
+            bufFrame.Visible = false;
+            this.Controls.Remove(bufFrame);
+            bufFrame.Dispose();
+            FormMain formMain = (FormMain)this.Parent;
+            MainFrameManager mainFrameManager = formMain._mainFrameManager;
+            mainFrameManager._imageMainFrameList.Remove(bufFrame);
+        }
+
+        public void Dispose()
+        { 
+            _logger.PrintInfo("Dispose");
+            _logger.PrintInfo("Dispose NotImplemented");
+        }
+
+        private void ShowFileSenderForm_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _logger.PrintInfo("ShowFileSenderForm_ToolStripMenuItem_Click");
+            FormMain formMain = ViewImageCommon.ConvertToFormMain(this.Parent);
+            formMain._fileSenderFunction._fileSenderApp.Visible = true;
+        }
+        
     }
 }

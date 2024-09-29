@@ -9,20 +9,20 @@ using System.IO;
 
 namespace CommonModule
 {
-    public static class Debugger
-    {
-        public static void DebugPrint(string value)
-        {
-            Debug.Print(value);
-        }
-        public static void DebugPrint(params string[] values)
-        {
-            foreach (var value in values)
-            {
-                Debug.Print(value);
-            }
-        }
-    }
+    //public static class Debugger
+    //{
+    //    public static void DebugPrint(string value)
+    //    {
+    //        Debug.Print(value);
+    //    }
+    //    public static void DebugPrint(params string[] values)
+    //    {
+    //        foreach (var value in values)
+    //        {
+    //            Debug.Print(value);
+    //        }
+    //    }
+    //}
 
     public static class CommonGeneral
     {
