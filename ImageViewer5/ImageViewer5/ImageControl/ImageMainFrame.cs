@@ -41,8 +41,12 @@ namespace ImageViewer5.ImageControl
             InitializeComponent();
 
             //#
-            // 設定ファイルを読み込み反映させる場合はここで行う（未対応） 240901
-            _imageMainFrameSetting = new ImageMainFrameSetting(_logger, this);
+            // 設定ファイルを読み込み反映させる場合はここで行う 240901
+            // 設定ファイルは、Newの後、InitializeValuesの中か、その前で行う 241003　対応中
+            // ここでは_loggerはnullとなるので注意
+            //_imageMainFrameSetting = new ImageMainFrameSetting(_logger, this);
+            _imageMainFrameSetting = new ImageMainFrameSetting(null, this);
+
         }
 
         public void InitializeValues(List<string> SupportedImageExtList)
@@ -51,7 +55,12 @@ namespace ImageViewer5.ImageControl
             _imageViewerMain = new ImageMainClass(
                 _logger, (Form)this.Parent, this, this.pictureBox_ImageMain, this.GetComponentNumber());
             _imageViewerMain.InitializeValues(SupportedImageExtList);
-            //this._formFileList.SetFilesFromPath(path);
+            // 241006
+            // コントロールの設定（見つけやすいと思うので、とりあえずここで行う）念のためログに残す
+            _logger.PrintInfo( this.Name + "  >  AnchorStyles.None");
+            this.Anchor = AnchorStyles.None;
+            _logger.PrintInfo(this.Name + "  >  DockStyle.None");
+            this.Dock = DockStyle.None;
         }
 
         public delegate void DelegateUpdateText();

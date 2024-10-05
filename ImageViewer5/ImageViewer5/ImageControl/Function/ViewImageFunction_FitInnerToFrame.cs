@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using AppLoggerModule;
@@ -44,11 +45,14 @@ namespace ViewImageModule
         {
             try
             {
+                // 241005 FormMainとImageFrameが連動する箇所を特定する調査用
+                //List<string> bufList = CommonModules.CommonGeneral.GetCallerInfo(0, 15);
+                //_logger.PrintInfo("Stack : ");
+                //_logger.PrintInfo(String.Join("\n", bufList));
                 _logger.AddLog(this, "FitImageToControl_bool");
                 if (!ControlIsValid()) { return; }
                 if (_viewImage.ImageIsNull()) { _logger.AddLog("ImageIsNull"); return; }
-                if (!flag) { 
-
+                if (!flag) {
                     return;
                 }
 

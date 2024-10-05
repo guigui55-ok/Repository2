@@ -23,22 +23,48 @@ namespace CommonModulesProject
             _settingDict[key] = value;
         }
 
-        public object GetValue(string key)
+        public object GetValue(string key, object defaultValue = null)
         {
-            return _settingDict[key];
+            try
+            {
+                return _settingDict[key];
+            }catch(System.Collections.Generic.KeyNotFoundException ex)
+            {
+                string buf = ex.Message;
+                return  null;
+            }
+            catch(Exception)
+            {
+                return null;
+            }            
         }
 
-        public string GetValueString(string key)
+        public string GetValueString(string key, string defaultValue = "")
         {
-            return (string)GetValue(key);
+            object ret = GetValue(key);
+            if (ret == null)
+            {
+                return defaultValue;
+            }
+            return (string)ret;
         }
-        public int GetValueInt(string key)
+        public int GetValueInt(string key, int defaultValue = 0)
         {
-            return (int)GetValue(key);
+            object ret = GetValue(key);
+            if (ret == null)
+            {
+                return defaultValue;
+            }
+            return (int)ret;
         }
-        public bool GetValueBool(string key)
+        public bool GetValueBool(string key, bool defaultValue = false)
         {
-            return (bool)GetValue(key);
+            object ret = GetValue(key);
+            if (ret == null)
+            {
+                return defaultValue;
+            }
+            return (bool)ret;
         }
 
         public Dictionary<string, object> GetSettingDict()

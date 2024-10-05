@@ -9,6 +9,7 @@ namespace AppLoggerModule
     using System.Diagnostics;
     using System.IO;
     using System.Collections.Generic;
+    using System.Threading;
 
     public enum LogLevel
     {
@@ -39,6 +40,7 @@ namespace AppLoggerModule
         public string FilePath { get; set; } = "";
         public string LogFileTimeFormat { get; set; } = "_yyyyMMdd_HHmmss";
         public OutputMode LogOutPutMode { get; set; } = OutputMode.DEBUG_WINDOW;
+        public bool isShowThreadId = false;
         public bool AddTime { get; set; } = true;
         public List<Exception> ErrorList = new List<Exception> { };
         public List<string> ErrorMessagelist = new List<string> { };
@@ -121,9 +123,8 @@ namespace AppLoggerModule
             if (LogLevel.ERR <= this.LoggerLogLevel)
             {
                 this.Print(value);
-                this.Print("ex.Message");
-                this.Print(ex.Message);
-                this.Print("ex.StackTrace");
+                this.Print("[EXCEPTION]" + ex.GetType().ToString() + " : " + ex.Message);
+                this.Print("[StackTrace]");
                 this.Print(ex.StackTrace);
             }
         }
@@ -148,6 +149,54 @@ namespace AppLoggerModule
             if (LogLevel.INFO <= this.LoggerLogLevel)
             {
                 this.Print(value);
+            }
+        }
+
+        public List<string> sepaleteValue(string value, int charCount)
+        {
+            List<string> retList = new List<string>();
+            int leaveCount = value.Length;
+            string nowValue = value;
+            int count = 0;
+            if (leaveCount <= 0) { return retList; }
+            while (true)
+            {
+                if (charCount < nowValue.Length)
+                {
+                    int cutLength;
+                    if (nowValue.Length < charCount) { cutLength = nowValue.Length; }
+                    else{ cutLength = charCount; }
+                    retList.Add(nowValue.Substring(0, cutLength));
+                    nowValue = nowValue.Substring(cutLength);
+                }
+                else
+                {
+                    // nowValue.Length <= charCount
+                    retList.Add(nowValue);
+                    break;
+                }
+                if (1000 < count) { Console.WriteLine("AppLogger.sepaleteValue : LoopCount Max Over 1000 "); break; }
+                if (nowValue.Length < 1) { break; }
+                count++;
+            }
+            return retList;
+        }
+
+
+        /// <summary>
+        /// ログが長い場合、charCountごとに区切って出力する　241005追加
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="charCount"></param>
+        public void PrintInfoSepalete(string value, int charCount = 200)
+        {
+            if (LogLevel.INFO <= this.LoggerLogLevel)
+            {
+                List<string> valueBList = sepaleteValue(value, charCount);
+                foreach(string valueB in valueBList)
+                {
+                    this.Print(valueB);
+                }
             }
         }
 
@@ -189,8 +238,22 @@ namespace AppLoggerModule
             return now.ToString("yyyy/MM/dd HH:mm:ss ffffff");
         }
 
+        private string AddThreadId(string value)
+        {
+            //241005追加
+            //AddTimeValueの後ろ、ログ文字列の前に連結する
+            // addTimveValueの前にじっこする
+            if (this.isShowThreadId)
+            {
+                return string.Format(" [TID {0}]", Thread.CurrentThread.ManagedThreadId) + value;
+            }
+            return value;
+        }
+
+
         private void Print(string value)
         {
+            value = this.AddThreadId(value);
             value = this.AddTimeValue(value);
             if ((this.LogOutPutMode & OutputMode.DEBUG_WINDOW) == OutputMode.DEBUG_WINDOW)
             {
@@ -236,7 +299,7 @@ namespace AppLoggerModule
         }
         public void AddException(Exception ex)
         {
-            this.PrintError(ex.Message);
+            this.PrintError(ex.GetType().ToString() + " : " +  ex.Message);
             this.PrintError(ex.StackTrace);
             this.ErrorList.Add(ex);
         }
@@ -252,12 +315,14 @@ namespace AppLoggerModule
         }
         public void AddException(Exception ex, object obj, string addMessage)
         {
-            this.AddException(obj.ToString() + "." + addMessage);
+            // objはクラスオブジェクト(object)や関数名（string)を渡す想定
+            this.AddException(  obj.ToString() + "." + addMessage);
             this.AddException(ex);
         }
         public void AddException(object obj, string addMessage, Exception ex)
         {
-            this.AddException(obj.ToString() + "." + addMessage);
+            // objはクラスオブジェクト(object)や関数名（string)を渡す想定
+            this.AddException( obj.ToString() + "." + addMessage);
             this.AddException(ex);
         }
         public void AddLogWarning(string message)

@@ -1,20 +1,49 @@
 
 
+完全パスをコピー
+フォルダを開く
+
+LastFileName Open
 
 
-
+ImageFrameが複数あるとき、選択したらCurrentolを移動、SenderAppのBridgeDataも更新
 
 Frame並べて表示（別クラス、FrameControl,InnerControl、本番はFrame＞Form、Inner＞UserControlで）
 
 イメージオブジェクトの貼り付け、コピー、ファイル書き出し
 表示されたイメージオブジェクトを自動保存
 
+
 動画再生（出来れば）
 
 +-キーでFrame大きさ変更
+
+
+LinkControlSize, frameControl._imageMainFrameSetting._isFitFormMain
+FormMain、サイズ変更時、ImageFrameのサイズ、Locationも変更される（調査中）（Anchor、Dock？）
+
+##########
+設定値を増やすとき
+*SettingKey
+	Key追加
+*FormMainSetting
+	GetSettingValueInitialize
+	SetSettingValueToThisFromNowState
+	FormMain_Load  ApplySettings  ApplyArgs
+
 ***************
 実装済み
 ***************
+241006
+	FileSenderApp、Redo/Undo実装、実行時FormMain-CurrentImageframeに反映
+241005
+	修正　イメージは気処理、ViewImageControl.Disposeメソッド、viewImageControl.DisposeImageメソッド修正　済
+	FileSenderAppでMoveFile時、送信元プロセスが使用されているエラーが発生、ファイル削除・移動ができない問題修正　済
+241004
+241004
+	FileSenderApp, チェックボックス ファイルMoveON状態を保存、復元
+241003
+	設定ファイル、前のフォルダを開く
 240929
 設定値書き込み保存、確認
 	MainForm　Location
@@ -211,6 +240,9 @@ Window透過（新要件）
 		ランダム、
 		スライドショー、インターバル
 ######################
+
+240929
+設定ファイルに現在の設定を保存、起動時呼び出し
 ====================
 240911保留
 
@@ -297,14 +329,49 @@ FileListManager
 Form右クリック、フレームを追加
 ====================
 
-240929
-設定ファイルに現在の設定を保存、起動時呼び出し
+FileManager、矢印キーで移動したときに、ImageViewerが反映しない
 
 機能別ロガー、関数名含む、クラス名含む
 
 F5キーでリフレッシュ、パスがなければ、リストを再作成して、次のインデックスのパスにする
 
-fif 別フレーム
+fifファイル 別フレーム
 
+
+
+************
+Form、ImageFrame連動、サイズ変更調査メモ
+
+                        ViewImageFunction_FitInnerToFrame calcrator = bufFrame._imageViewerMain._viewImageFunction._viewImageFunction_FitInnerToFrame;
+                        // サイズ計算 Panel にフィットさせる
+                        Size newSize = calcrator.GetSizeFitFrame(_formSize, _frameSize);
+
+
+        public void AdjustSizeAndLocation(int frameNum=0)
+        {
+            _logger.PrintInfo("MainFrameManager > AdjustSizeAndLocation");
+
+
+    public class LinkControlSize
+
+
+LinkControlSize, frameControl._imageMainFrameSetting._isFitFormMain
+
+
+ChangeSizeByMouseWheelWithMousePointer
+ViewImageFunction_FitInnerToFrame
+
+
+2024/10/05 07:35:24 032176    ViewImageModule.ViewImageFunction_FitInnerToFrame > FitImageToControl_bool
+
+ｘｘｘ
+            _logger.PrintInfo("MainFrameManager > AdjustSizeAndLocation");
+
+Caller File: C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\ImageControl\Function\ViewImageFunction_FitInnerToFrame.cs, Method: FitImageToControl, Line: 47
+
+Caller File: C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\ImageControl\Function\ImagePlayer.cs, Method: ViewImageDefault, Line: 69
+
+
+C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\MouseWheelZoomHandler\FormMouseWheelZoomHandler.Designer.cs
 
 

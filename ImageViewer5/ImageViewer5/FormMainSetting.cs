@@ -127,6 +127,9 @@ namespace ImageViewer5
                 string key = (string)imageMainFrame._imageMainFrameSetting._settingDictionary._settingDict[SettingKey.FRAME_NAME];
                 //bufDict.Add(key, imageMainFrame._imageMainFrameSetting._settingDictionary._settingDict);//同一のキー
                 bufDict[key] = imageMainFrame._imageMainFrameSetting._settingDictionary._settingDict;
+                Console.WriteLine(" ########## ");
+                //CommonModule.CommonGeneral.PrintDict(imageMainFrame._imageMainFrameSetting._settingDictionary._settingDict);
+                CommonModule.CommonGeneral.PrintDict(bufDict);
             }
             return bufDict;
         }
@@ -155,6 +158,9 @@ namespace ImageViewer5
             //#
             value = _formMain._mainFrameManager._imageMainFrameList.Count;
             _settingDictionary.AddValue(SettingKey.FRAME_COUNT, value);
+            //#
+            value = _formMain._fileSenderFunction._fileSenderApp.Visible;
+            _settingDictionary.AddValue(SettingKey.SHOW_SENDER_DIALOG, value);
         }
 
         /// <summary>
@@ -212,6 +218,9 @@ namespace ImageViewer5
             //#
             value = 1;
             bufDict.Add(SettingKey.FRAME_COUNT, value);
+            //#
+            value = false;
+            bufDict.Add(SettingKey.SHOW_SENDER_DIALOG, value);
             return bufDict;
         }
 

@@ -80,8 +80,8 @@ namespace ImageViewer5.ImageControl
 
         /// <summary>
         /// クラス内の状態を初期化する
-        /// FormMain_Load（またはそのすぐあと）で実行される想定
-        /// 各種イベントメソッドとの紐づけを行っている
+        /// （FormMain_Load（またはそのすぐあと）で実行される想定）
+        /// （各種イベントメソッドとの紐づけを行っている）
         /// </summary>
         /// <param name="initPath"></param>
         public void InitializeValues(List<string> SupportedImageExtList)

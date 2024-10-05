@@ -58,3 +58,6 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:ImageViewer5.MainFrameManager._nowImageMainFrame")]
 [assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:ImageViewer5.MainFrameManager._nowIndex")]
 [assembly: SuppressMessage("Style", "IDE0017:オブジェクトの初期化を簡略化します", Justification = "<保留中>", Scope = "member", Target = "~M:ImageViewer5.AddFunction.FileSenderFunction.Initialize")]
+[assembly: SuppressMessage("Style", "IDE0059:値の不必要な代入", Justification = "<保留中>", Scope = "member", Target = "~M:ImageViewer5.AddFunction.FileSenderFunction.Initialize")]
+[assembly: SuppressMessage("Style", "IDE0017:オブジェクトの初期化を簡略化します", Justification = "<保留中>", Scope = "member", Target = "~M:ImageViewer5.ImageControl.ImageMainFrameSetting.#ctor(AppLoggerModule.AppLogger,ImageViewer5.ImageControl.ImageMainFrame)")]
+[assembly: SuppressMessage("Style", "IDE0059:値の不必要な代入", Justification = "<保留中>", Scope = "member", Target = "~M:ImageViewer5.ImageViewerArgs.ParseArguments(System.String[])~System.Collections.Generic.Dictionary{System.String,System.Object}")]

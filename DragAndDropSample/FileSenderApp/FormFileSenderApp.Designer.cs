@@ -31,7 +31,6 @@ namespace FileSenderApp
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.buttonsGroup1 = new FileSenderApp.ButtonsGroup();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonRenameTabOK = new System.Windows.Forms.Button();
@@ -39,6 +38,9 @@ namespace FileSenderApp
             this.label1 = new System.Windows.Forms.Label();
             this.panelCheckBox = new System.Windows.Forms.Panel();
             this.checkBoxFileMove = new System.Windows.Forms.CheckBox();
+            this.buttonUndo = new System.Windows.Forms.Button();
+            this.buttonRedo = new System.Windows.Forms.Button();
+            this.buttonsGroup1 = new FileSenderApp.ButtonsGroup();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -68,13 +70,6 @@ namespace FileSenderApp
             this.tabPage1.Size = new System.Drawing.Size(342, 241);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Tab1";
-            // 
-            // buttonsGroup1
-            // 
-            this.buttonsGroup1.Location = new System.Drawing.Point(0, 3);
-            this.buttonsGroup1.Name = "buttonsGroup1";
-            this.buttonsGroup1.Size = new System.Drawing.Size(342, 266);
-            this.buttonsGroup1.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -127,6 +122,8 @@ namespace FileSenderApp
             // 
             // panelCheckBox
             // 
+            this.panelCheckBox.Controls.Add(this.buttonRedo);
+            this.panelCheckBox.Controls.Add(this.buttonUndo);
             this.panelCheckBox.Controls.Add(this.checkBoxFileMove);
             this.panelCheckBox.Location = new System.Drawing.Point(0, 28);
             this.panelCheckBox.Name = "panelCheckBox";
@@ -143,6 +140,35 @@ namespace FileSenderApp
             this.checkBoxFileMove.Text = "FileMove ( CheckOff = FileCopy)";
             this.checkBoxFileMove.UseVisualStyleBackColor = true;
             // 
+            // buttonUndo
+            // 
+            this.buttonUndo.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonUndo.Location = new System.Drawing.Point(264, 0);
+            this.buttonUndo.Name = "buttonUndo";
+            this.buttonUndo.Size = new System.Drawing.Size(30, 22);
+            this.buttonUndo.TabIndex = 1;
+            this.buttonUndo.Text = "←";
+            this.buttonUndo.UseVisualStyleBackColor = true;
+            this.buttonUndo.Click += new System.EventHandler(this.buttonUndo_Click);
+            // 
+            // buttonRedo
+            // 
+            this.buttonRedo.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonRedo.Location = new System.Drawing.Point(302, 0);
+            this.buttonRedo.Name = "buttonRedo";
+            this.buttonRedo.Size = new System.Drawing.Size(30, 22);
+            this.buttonRedo.TabIndex = 2;
+            this.buttonRedo.Text = "→";
+            this.buttonRedo.UseVisualStyleBackColor = false;
+            this.buttonRedo.Click += new System.EventHandler(this.buttonRedo_Click);
+            // 
+            // buttonsGroup1
+            // 
+            this.buttonsGroup1.Location = new System.Drawing.Point(0, 3);
+            this.buttonsGroup1.Name = "buttonsGroup1";
+            this.buttonsGroup1.Size = new System.Drawing.Size(342, 266);
+            this.buttonsGroup1.TabIndex = 0;
+            // 
             // FormFileSenderApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -153,6 +179,7 @@ namespace FileSenderApp
             this.Controls.Add(this.tabControl1);
             this.Name = "FormFileSenderApp";
             this.Text = "File Sender";
+            this.Activated += new System.EventHandler(this.FormFileSenderApp_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormFileSenderApp_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormFileSenderApp_FormClosed);
             this.Load += new System.EventHandler(this.FormFileSenderApp_Load);
@@ -179,6 +206,8 @@ namespace FileSenderApp
         private ButtonsGroup buttonsGroup1;
         private System.Windows.Forms.Panel panelCheckBox;
         private System.Windows.Forms.CheckBox checkBoxFileMove;
+        private System.Windows.Forms.Button buttonRedo;
+        private System.Windows.Forms.Button buttonUndo;
     }
 }
 

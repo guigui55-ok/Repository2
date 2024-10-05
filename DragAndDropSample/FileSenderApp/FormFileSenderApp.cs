@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using JsonStreamModule;
 using System.IO;
 using System.Threading;
+using FileSenderApp.Job;
 
 namespace FileSenderApp
 {
@@ -19,7 +20,7 @@ namespace FileSenderApp
         public AppLogger _logger;
         SenderMainTab _senderMainTab;
         JsonStream _jsonStream;
-        bool isOutputSetting = true; // アプリ起動終了時、setting.jsonをログ・コンソールに出力するか。（長くなるのでフラグで管理＞デバッグ用）
+        public bool isOutputSetting = true; // アプリ起動終了時、setting.jsonをログ・コンソールに出力するか。（長くなるのでフラグで管理＞デバッグ用）
         public FileSenderSettingValues _fileSenderSettingValues;
         public DataBridgeFromExternal _dataBridgeFromExternal;
 
@@ -28,10 +29,21 @@ namespace FileSenderApp
         public bool _isSubForm = false;
 
         //ボタンが押されたときのイベント
+        // ファイル移動後
         public EventHandler AnySendButton_Clicked;
+        // ファイル移動前
+        public EventHandler AnySendButton_Clicked_MoveBefore;
         public bool _isMoveFile = false;
         //
-        public int _waitTime = 50; // m_secontd
+        //public int _waitTime = 50; // m_secontd
+        public int _waitTime = 0; // m_secontd
+        // 241006 追加
+        // ReDo、Undo用
+        public JobManager _jobManager;
+        public EventHandler ExecuteUndo_After;
+        public EventHandler ExecuteRedo_After;
+        public EventHandler ExecuteUndo_Before;
+        public EventHandler ExecuteRedo_Before;
 
         public FormFileSenderApp(AppLogger logger=null)
         {
@@ -61,6 +73,31 @@ namespace FileSenderApp
             AddPageBySetting();
             _logger.PrintInfo("FormFileSenderApp Initialize End");
             _logger.PrintInfo("==========");
+            //#
+            List<string> jobKeyList = new List<string>()
+            {
+                ConstJobFileSender.KEY_PROCESS_NAME,
+                ConstJobFileSender.KEY_SRC_FILE_PATH,
+                ConstJobFileSender.KEY_DST_FILE_PATH,
+                ConstJobFileSender.KEY_UNDO
+            };
+            _jobManager = new JobManager(_logger, jobKeyList);
+        }
+
+        private void ApplySetting()
+        {
+            try
+            {
+                _logger.PrintInfo("ApplySetting");
+                bool isCheckON = (bool)_fileSenderSettingValues._settingDictBase[ConstFileSender.KEY_SETTING_FILE_MOVE_CHECK_BOX];
+                if (isCheckON)
+                {
+                    checkBoxFileMove.Checked = true;
+                }
+            } catch(Exception ex)
+            {
+                _logger.PrintError(ex, "ApplySetting");
+            }
         }
 
         public void SetDataFromExternal(object value)
@@ -74,21 +111,145 @@ namespace FileSenderApp
             _logger.PrintInfo("AnyButtonClickedRecieveEvent");
             //#
             // 
-            SendButton sendButton = (SendButton)sender;
-            string distDirPath = sendButton._directoryPath;
-            string srdFilePath = _dataBridgeFromExternal.GetData<string>();
-            _logger.PrintInfo("srdFilePath = " + srdFilePath.ToString());
-            bool isExecute = FileMoveOrCopy(srdFilePath, distDirPath);
-            if (isExecute)
+            try
             {
-                if (AnySendButton_Clicked == null) { _logger.PrintInfo("AnySendButton_Clicked==null"); }
-                AnySendButton_Clicked?.Invoke(sender, e);
+                SendButton sendButton = (SendButton)sender;
+                string distDirPath = sendButton._directoryPath;
+                string srdFilePath = _dataBridgeFromExternal.GetData<string>();
+                _logger.PrintInfo("srcFilePath = " + srdFilePath.ToString());
+                AnySendButton_Clicked_MoveBefore?.Invoke(sender, e);
+                bool isExecute = FileMoveOrCopy(srdFilePath, distDirPath, checkBoxFileMove.Checked);
+                if (isExecute)
+                {
+                    if (AnySendButton_Clicked == null) { _logger.PrintInfo("AnySendButton_Clicked==null"); }
+                    AnySendButton_Clicked?.Invoke(sender, e);
+                    SetUndo(srdFilePath, distDirPath, checkBoxFileMove.Checked);
+                    SetButtonEnableRedoUndo();
+                }
+                else
+                {
+                    AnySendButton_Clicked?.Invoke(sender, e);
+                    //_logger.PrintInfo("FileMoveOrCopy isExcute=false , StopButtonProc");
+                }
+            } catch (Exception ex)
+            {
+                _logger.PrintError(ex, "AnyButtonClickedRecieveEvent");
+            }
+            _logger.PrintInfo(" ***** AnyButtonClickedRecieveEvent END");
+        }
+
+        // ##############################
+        // # RedoUndo関連 BEGIN
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="srcFilePath"></param>
+        /// <param name="distDirPath"></param>
+        /// <param name="isFileMove"></param>
+        private void SetUndo(string srcFilePath, string distDirPath, bool isFileMove)
+        {
+            _logger.PrintInfo("SetUndo");
+            string distFilePath = GetDistFilePath(srcFilePath, distDirPath);
+            Dictionary<string, object> newDict = new Dictionary<string, object>();
+            newDict.Add(ConstJobFileSender.KEY_SRC_FILE_PATH, srcFilePath);
+            newDict.Add(ConstJobFileSender.KEY_DST_FILE_PATH, distFilePath);
+            string proc;
+            if (isFileMove) { proc = ConstJobFileSender.VAL_PROCESS_MOVE; }
+            else { proc = ConstJobFileSender.VAL_PROCESS_COPY; }
+            newDict.Add(ConstJobFileSender.KEY_PROCESS_NAME, proc);
+            newDict.Add(ConstJobFileSender.KEY_UNDO, false);
+            _jobManager.AddJobItem(newDict);
+        }
+
+        private void ExecuteUndoRedo(object undoJobItemObj, int redoOrUndo)
+        {
+            try
+            {
+                _logger.PrintInfo(" ********** ");
+                _logger.PrintInfo("ExecuteUndoRedo");
+                JobItem item = (JobItem)undoJobItemObj;
+                string src = (string)item._valueDict[ConstJobFileSender.KEY_SRC_FILE_PATH];
+                string dst = (string)item._valueDict[ConstJobFileSender.KEY_DST_FILE_PATH];
+                string proc = (string)item._valueDict[ConstJobFileSender.KEY_PROCESS_NAME];
+                bool isMove = false;
+                if (proc == ConstJobFileSender.VAL_PROCESS_MOVE) { isMove = true; }
+                bool undo = (bool)item._valueDict[ConstJobFileSender.KEY_UNDO];
+                if (redoOrUndo == ConstFileSender.UNDO)
+                {
+                    _logger.PrintInfo("Execute UNDO");
+                    ExecuteUndo_Before?.Invoke(this, EventArgs.Empty);
+                    if (proc == ConstJobFileSender.VAL_PROCESS_COPY)
+                    {
+                        //コピーの場合は、コピー先を消すだけ
+                        File.Delete(dst);
+                        _logger.PrintInfo(string.Format("DeleteFile : ", dst));
+                    }
+                    else if (proc == ConstJobFileSender.VAL_PROCESS_MOVE)
+                    {
+                        //Moveの場合は、移動先から移動元に再移動する
+                        File.Move(dst, src);
+                        _logger.PrintInfo(string.Format("MoveFile : {0}  >>  {1}", dst, src));
+                    }
+                    else
+                    {
+                        _logger.PrintError(string.Format("ExecuteUndo, InvalidValue Proc={0}", proc));
+                    }
+                    SetButtonEnableRedoUndo();
+                    ExecuteUndo_After?.Invoke(this, EventArgs.Empty);
+                }
+                else
+                {
+                    _logger.PrintInfo("Execute REDO");
+                    ExecuteRedo_Before?.Invoke(this, EventArgs.Empty);
+                    // redoOrUndo == ConstFileSender.REDO
+                    bool isSuccess = FileMoveOrCopy(src, dst, isMove);
+                    if (!isSuccess)
+                    {
+                        _jobManager.ReverseItemJobListToUndo();
+                    }
+                    SetButtonEnableRedoUndo();
+                    //Event
+                    ExecuteRedo_After?.Invoke(this, EventArgs.Empty);
+                }
+            } catch(Exception ex)
+            {
+                _logger.PrintError(ex, "ExecuteUndo");
             }
         }
 
-
-        public bool FileMoveOrCopy(string srcFilePath, string distDirPath)
+        private void SetButtonEnableRedoUndo()
         {
+            if (_jobManager.IsUndoEnable())
+            {
+                buttonUndo.Enabled = true;
+            }
+            else
+            {
+                buttonUndo.Enabled = false;
+            }
+            if (_jobManager.IsRedoEnable())
+            {
+                buttonRedo.Enabled = true;
+            }
+            else
+            {
+                buttonRedo.Enabled = false;
+            }
+        }
+
+        // # RedoUndo関連 END
+        // ##############################
+
+        private string GetDistFilePath(string srcFilePath, string distDirPath)
+        {
+            return Path.Combine(distDirPath, Path.GetFileName(srcFilePath));
+        }
+
+
+        public bool FileMoveOrCopy(string srcFilePath, string distDirPath, bool isMove)
+        {
+            string distFilePath = "";
             try
             {
                 if (!(File.Exists(srcFilePath)))
@@ -97,7 +258,7 @@ namespace FileSenderApp
                     _logger.PrintInfo(msg);
                     return false;
                 }
-                string distFilePath = Path.Combine(distDirPath, Path.GetFileName(srcFilePath));
+                distFilePath = GetDistFilePath(srcFilePath, distDirPath);
                 bool isExecute = false;
                 if (File.Exists(distFilePath))
                 {
@@ -123,9 +284,20 @@ namespace FileSenderApp
                 }
                 if (isExecute)
                 {
-                    if (checkBoxFileMove.Checked)
+                    if (isMove)
                     {
                         File.Move(srcFilePath, distFilePath);
+                        //CommonModules.CommonGeneral.MoveFile(srcFilePath, distFilePath);
+                        //CommonModules.CommonGeneral.MoveFile(srcFilePath, distFilePath);
+                        //int errcode = CommonModules.FileMoverWin32.MoveFileExUsingWin32(srcFilePath, distFilePath, 0x2);
+                        //if (0 != errcode)
+                        //{
+                        //    _logger.PrintError("MoveFile Failed");
+                        //    if (errcode == 3)
+                        //    {
+                        //        _logger.PrintError("指定したパスが見つかりません。 ERROR_TOO_MANY_OPEN_FILES");
+                        //    }
+                        //}
                         _logger.PrintInfo(string.Format("Move ,src={0}, dist={1}", srcFilePath, distDirPath));
                         Thread.Sleep(_waitTime);
                     }
@@ -140,6 +312,22 @@ namespace FileSenderApp
             } catch(Exception ex)
             {
                 _logger.PrintError(ex, "FileMoveOrCopy Error");
+                //#
+                // エラー調査用
+                // System.IO.IOException : ファイルが別のプロセスで使用されているため、プロセスはファイルにアクセスできません。
+                string handlePath = @"C:\Users\OK\source\repos\Repository2_CS\ImageViewer5\ImageViewer5\bin\Debug\Handle\handle.exe";
+                if (File.Exists(handlePath))
+                {
+                    string handleRet = CommonModules.FileLockInfo.GetFileLockingProcess(handlePath, srcFilePath);
+                    _logger.PrintInfo(string.Format("handleRet src = {0}", handleRet));
+                    handleRet = CommonModules.FileLockInfo.GetFileLockingProcess(handlePath, distFilePath);
+                    _logger.PrintInfo(string.Format("handleRet dst = {0}", handleRet));
+                }
+                else
+                {
+                    _logger.PrintInfo(string.Format("hendlePath not Founc [{0}]", handlePath));
+                }
+                //#
                 return false;
             }
         }
@@ -402,36 +590,9 @@ namespace FileSenderApp
             return match.Value;
         }
 
-        private void FormFileSenderApp_Load(object sender, EventArgs e)
-        {
-            _logger.PrintInfo("FormFileSenderApp_Load");
-            _logger.PrintInfo("==============================");
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void FormFileSenderApp_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            _logger.PrintInfo("FormFileSenderApp_FormClosing");
-            if (_isSubForm)
-            {
-                _logger.PrintInfo("_isSubForm = true, e.Cancel=true, this.Visible=false");
-                e.Cancel = true;
-                this.Visible = false;
-            }
-        }
-
-        private void FormFileSenderApp_KeyDown(object sender, KeyEventArgs e)
-        {
-            _logger.PrintInfo("FormFileSenderApp_KeyDown");
-            if (e.KeyCode == Keys.NumPad5)
-            {
-                _logger.PrintInfo("FormFileSenderApp_KeyDown  NumPad5");
-                FormFileSenderApp_FormClosing(this, new FormClosingEventArgs(CloseReason.None, false));
-            }
         }
 
         private void TextBoxRenameTab_KeyDown(object sender, KeyEventArgs e)
@@ -463,6 +624,46 @@ namespace FileSenderApp
             }
         }
 
+        private void FormFileSenderApp_Load(object sender, EventArgs e)
+        {
+            _logger.PrintInfo("FormFileSenderApp_Load");
+            _logger.PrintInfo("==============================");
+            ApplySetting();
+        }
+
+
+        private void FormFileSenderApp_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _logger.PrintInfo("FormFileSenderApp_FormClosing");
+            if (_isSubForm)
+            {
+                _logger.PrintInfo("_isSubForm = true, e.Cancel=true, this.Visible=false");
+                e.Cancel = true;
+                this.Visible = false;
+            }
+        }
+
+        private void FormFileSenderApp_KeyDown(object sender, KeyEventArgs e)
+        {
+            _logger.PrintInfo("FormFileSenderApp_KeyDown");
+            if (e.KeyCode == Keys.NumPad5)
+            {
+                _logger.PrintInfo("FormFileSenderApp_KeyDown  NumPad5");
+                FormFileSenderApp_FormClosing(this, new FormClosingEventArgs(CloseReason.None, false));
+            }
+            else if (e.KeyCode == Keys.Z && e.Control)
+            {
+                _logger.PrintInfo("FormFileSenderApp_KeyDown  Ctrl+Z");
+                JobItem item = _jobManager.GetUndoItem();
+                ExecuteUndoRedo(item, ConstFileSender.UNDO);
+            }
+            else if (e.Shift && e.Control && e.KeyCode == Keys.Z)
+            {
+                _logger.PrintInfo("FormFileSenderApp_KeyDown  Ctrl+Shift+Z");
+                JobItem item = _jobManager.GetRedoItem();
+                ExecuteUndoRedo(item, ConstFileSender.REDO);
+            }
+        }
         public void FormFileSenderApp_FormClosed(object sender, FormClosedEventArgs e)
         {
             _logger.PrintInfo("******************************");
@@ -480,6 +681,23 @@ namespace FileSenderApp
                 _logger.PrintInfo("allInfoDict = ");
                 _logger.PrintInfo(json);
             }
+        }
+
+        private void FormFileSenderApp_Activated(object sender, EventArgs e)
+        {
+            SetButtonEnableRedoUndo();
+        }
+
+        private void buttonUndo_Click(object sender, EventArgs e)
+        {
+            JobItem item = _jobManager.GetUndoItem();
+            ExecuteUndoRedo(item, ConstFileSender.UNDO);
+        }
+
+        private void buttonRedo_Click(object sender, EventArgs e)
+        {
+            JobItem item = _jobManager.GetRedoItem();
+            ExecuteUndoRedo(item, ConstFileSender.REDO);
         }
     }
 }

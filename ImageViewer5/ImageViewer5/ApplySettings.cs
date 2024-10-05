@@ -35,11 +35,11 @@ namespace ImageViewer5
         {
             try
             {
-                string value;
+                object value;
                 _logger.PrintInfo("## ApplySettings > ApplyArgs");
                 //Size winSize = imageViewerArgs.GetWindowSize();
                 value = (string)_formMain._formMainSetting._settingDictionary._settingDict[SettingKey.MAIN_FORM_SIZE];
-                Size winSize = FormMainSetting.ConvertStringToSize(value);
+                Size winSize = FormMainSetting.ConvertStringToSize((string)value);
                 if (!winSize.Equals(new Size()))
                 {
                     _logger.PrintInfo(string.Format("Args winSize = {0}", winSize));
@@ -47,13 +47,22 @@ namespace ImageViewer5
                 }
                 //Point winLoc = imageViewerArgs.GetWindowLocation();
                 value = (string)_formMain._formMainSetting._settingDictionary._settingDict[SettingKey.MAIN_FORM_LOC];
-                Point winLoc = FormMainSetting.ConvertStringToPoint(value);
+                Point winLoc = FormMainSetting.ConvertStringToPoint((string)value);
                 if (!winLoc.Equals(new Point()))
                 {
                     _logger.PrintInfo(string.Format("Args winLoc = {0}", winLoc));
                     _formMain.Location = winLoc;
                 }
+                //#
                 ApplyArgsImageViewerFrame(imageViewerArgs);
+                //#
+                value = (bool)_formMain._formMainSetting._settingDictionary._settingDict[SettingKey.SHOW_SENDER_DIALOG];
+                bool isShowSenderDialog = (bool)value;
+                if (isShowSenderDialog)
+                {
+                    _logger.PrintInfo(string.Format("Args isShowSenderDialog = {0}", isShowSenderDialog));
+                    _formMain._fileSenderFunction._fileSenderApp.Visible = true;
+                }
             } catch (Exception ex)
             {
                 _logger.PrintError(ex, this.ToString() + ".ApplyArgs");

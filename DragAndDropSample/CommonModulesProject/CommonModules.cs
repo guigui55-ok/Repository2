@@ -10,13 +10,150 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Timer = System.Timers.Timer;
 using System.Reflection;
+using System.Runtime.InteropServices;
 
 namespace CommonModules
 {
 
+    public class FileMoverWin32
+    {
+        // MoveFileの宣言
+        [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        private static extern bool MoveFile(string lpExistingFileName, string lpNewFileName);
+
+        // MoveFileExの宣言
+        [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        private static extern bool MoveFileEx(string lpExistingFileName, string lpNewFileName, uint dwFlags);
+
+        // MoveFile を使用する関数
+        public static void MoveFileUsingWin32(string sourceFilePath, string destinationFilePath)
+        {
+            if (!MoveFile(sourceFilePath, destinationFilePath))
+            {
+                // エラー時の処理
+                int errorCode = Marshal.GetLastWin32Error();
+                Console.WriteLine($"MoveFile failed with error code: {errorCode}");
+            }
+            else
+            {
+                Console.WriteLine("ファイルを正常に移動しました。");
+            }
+        }
+
+        // MoveFileEx を使用する関数
+        public static int MoveFileExUsingWin32(string sourceFilePath, string destinationFilePath, uint flags)
+        {
+            if (!MoveFileEx(sourceFilePath, destinationFilePath, flags))
+            {
+                // エラー時の処理
+                int errorCode = Marshal.GetLastWin32Error();
+                Console.WriteLine($"[ERROR] MoveFileEx failed with error code: {errorCode}");
+                //3  : 指定したパスが見つかりません。 ERROR_TOO_MANY_OPEN_FILES
+                //32 : ファイルが別のプロセスによってロックされている ERROR_SHARING_VIOLATION (32)
+                return errorCode;
+            }
+            else
+            {
+                Console.WriteLine("ファイルを正常に移動しました。");
+                return 0;
+            }
+        }
+    }
+
+    public class FileLockInfo
+    {
+
+        public static string GetFileLockingProcess(string handleExePath, string filePath)
+        {
+            string ret = "";
+            try
+            {
+                // Handle.exe のパス
+                //string handleExePath = @"path\to\handle.exe";  // Handle.exe の実行ファイルパス
+                string arguments = filePath;
+
+                // Handle.exe のプロセスを実行
+                Process process = new Process
+                {
+                    StartInfo = new ProcessStartInfo
+                    {
+                        FileName = handleExePath,
+                        Arguments = arguments,
+                        RedirectStandardOutput = true,
+                        UseShellExecute = false,
+                        CreateNoWindow = true
+                    }
+                };
+
+                process.Start();
+                string output = process.StandardOutput.ReadToEnd(); // Handleの出力結果を取得
+                process.WaitForExit();
+
+                // 出力を解析する正規表現 (プロセスIDとプロセス名の取得)
+                Regex regex = new Regex(@"(?<ProcessName>\S+)\s+pid:\s+(?<PID>\d+)", RegexOptions.IgnoreCase);
+
+                // 出力結果からプロセス情報を抽出
+                MatchCollection matches = regex.Matches(output);
+                if (matches.Count > 0)
+                {
+                    //Console.WriteLine("ファイルをロックしているプロセス:");
+                    foreach (Match match in matches)
+                    {
+                        string processName = match.Groups["ProcessName"].Value;
+                        string processId = match.Groups["PID"].Value;
+                        ret += $"プロセス名: {processName}, プロセスID: {processId}";
+                        Console.WriteLine(ret);
+                    }
+                }
+                else
+                {
+                    ret = "ファイルをロックしているプロセスは見つかりませんでした。";
+                    Console.WriteLine(ret);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"エラー: {ex.Message}");
+            }
+            return ret;
+        }
+    }
+
 
     public static class CommonGeneral
     {
+        public static void MoveFile(string sourceFilePath, string destinationFilePath)
+        {
+            try
+            {
+                // まず、ファイルが存在するかを確認
+                if (!File.Exists(sourceFilePath))
+                {
+                    throw new FileNotFoundException("ソースファイルが見つかりません。", sourceFilePath);
+                }
+
+                // 既に目的地にファイルが存在する場合、例外を投げる
+                if (File.Exists(destinationFilePath))
+                {
+                    throw new IOException("目的地に同じ名前のファイルが既に存在します。");
+                }
+
+                // ファイルをコピーする
+                File.Copy(sourceFilePath, destinationFilePath);
+
+                // コピーが成功したら、元ファイルを削除する
+                File.Delete(sourceFilePath);
+
+                //Console.WriteLine("ファイルを正常に移動しました。");
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine($"エラーが発生しました: {ex.Message}");
+                throw ex;
+            }
+        }
+
+
 
         public static string GetApplicationPath()
         {
@@ -44,32 +181,72 @@ namespace CommonModules
             }
         }
 
-        public static void LogCallerInfo(int stackFrameIndex = 1)
+        public static void LogCallerInfo(int stackFrameIndex = 0, int MaxIndex = 0)
         {
+            List<string> retList = new List<string>();
             try
             {
-                // スタックトレースを取得
-                StackTrace stackTrace = new StackTrace(true);
-
-                // 指定された階層のスタックフレームを取得
-                if (stackFrameIndex < stackTrace.FrameCount)
+                retList = GetCallerInfo(stackFrameIndex, MaxIndex);
+                for (int i = 0; i < retList.Count; i++)
                 {
-                    StackFrame frame = stackTrace.GetFrame(stackFrameIndex);
-                    string fileName = frame.GetFileName();
-                    string methodName = frame.GetMethod().Name;
-                    int lineNumber = frame.GetFileLineNumber();
+                    Console.WriteLine(retList[i]);
+                }
 
-                    Console.WriteLine($"Caller File: {fileName}, Method: {methodName}, Line: {lineNumber}");
-                }
-                else
-                {
-                    Console.WriteLine($"The specified stack frame index ({stackFrameIndex}) exceeds the stack depth.");
-                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
+        }
+
+
+        public static List<string> GetCallerInfo(int stackFrameIndex = 0, int MaxIndex = 0)
+        {
+            List<string> retList = new List<string>();
+            try
+            {
+                // スタックトレースを取得
+                StackTrace stackTrace = new StackTrace(true);
+
+                if (MaxIndex < 0) { MaxIndex = stackTrace.FrameCount; }
+                for (int i = stackFrameIndex; i < stackTrace.FrameCount; i++)
+                {
+
+                    StackFrame frame = stackTrace.GetFrame(i);
+                    string fileName = frame.GetFileName();
+                    string methodName = frame.GetMethod().Name;
+                    int lineNumber = frame.GetFileLineNumber();
+
+                    string buf = $"[{i}]Caller File: {fileName}, Method: {methodName}, Line: {lineNumber}";
+                    retList.Add(buf);
+                    if (MaxIndex <= i) { break; }
+                }
+                //for (int i = 0; i < retList.Count; i++)
+                //{
+                //    Console.WriteLine(retList[i]);
+                //}
+
+                //// 指定された階層のスタックフレームを取得
+                //if (stackFrameIndex < stackTrace.FrameCount)
+                //{
+                //    StackFrame frame = stackTrace.GetFrame(stackFrameIndex);
+                //    string fileName = frame.GetFileName();
+                //    string methodName = frame.GetMethod().Name;
+                //    int lineNumber = frame.GetFileLineNumber();
+
+                //    Console.WriteLine($"Caller File: {fileName}, Method: {methodName}, Line: {lineNumber}");
+                //}
+                //else
+                //{
+                //    Console.WriteLine($"The specified stack frame index ({stackFrameIndex}) exceeds the stack depth.");
+                //}
+            }
+            catch (Exception ex)
+            {
+                string err = $"An error occurred: {ex.Message}";
+                retList.Add(err);
+            }
+            return retList;
         }
 
         /// <summary>

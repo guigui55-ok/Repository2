@@ -135,10 +135,14 @@ namespace ViewImageModule
         {
             try
             {
-                if (_pictureBox == null)
-                {
-                    _pictureBox.Image.Dispose();
-                }
+                //if (_pictureBox == null)
+                //{
+                //    _pictureBox.Image.Dispose();
+                //}
+                // 241003
+                //Dispose();
+                // 241005
+                DisposeImage();
                 _pictureBox.Image = image;
                 SetImageSettings();
 
@@ -148,6 +152,39 @@ namespace ViewImageModule
                 _logger.AddException(ex, this, "SetImageWithDispose");
             }
         }
+
+        public void Dispose()
+        {
+            try
+            {
+                if (_pictureBox != null) // 241005 (_pictureBox == null)から変更
+                {
+                    DisposeImage();
+                    _pictureBox.Dispose();
+                    _pictureBox = null;
+                }
+            } catch(Exception ex)
+            {
+                _logger.AddException(ex, this, "Dispose");
+            }
+        }
+
+        public void DisposeImage()
+        {
+            try
+            {
+                if (_pictureBox.Image != null)
+                {
+                    _pictureBox.Image.Dispose();
+                    _pictureBox.Image = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.AddException(ex, this, "DisposeImage");
+            }
+        }
+
         
         public void SetImageNotDispose(Image image)
         {
@@ -308,7 +345,19 @@ namespace ViewImageModule
             {
                 //Graphics g = Graphics.FromImage(pictureBox1.Image);
                 //myPainting(g); // Bitmapオブジェクトに描画
-                _pictureBox.Refresh();
+                // 241005
+                //_pictureBox.SizeMode = PictureBoxSizeMode.Normal;  //System.ArgumentException: 使用されたパラメーターが有効ではありません。　＞解決せず、
+
+                if (_pictureBox.Image != null)
+                {
+                    //_pictureBox.SizeMode = PictureBoxSizeMode.Normal;
+                    //_pictureBox.Refresh();
+                    _pictureBox.Invalidate();
+                }
+                else
+                {
+                    _logger.PrintInfo("_pictureBox is Null");
+                }
             }
             catch (Exception ex) { _logger.AddException(ex, this,"RefreshPaint"); return; }
         }

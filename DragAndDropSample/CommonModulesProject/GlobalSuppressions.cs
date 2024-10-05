@@ -10,3 +10,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Style", "IDE0060:未使用のパラメーターを削除します", Justification = "<保留中>", Scope = "member", Target = "~M:AppLoggerModule.AppLogger.GetErrorMessages(System.Boolean,System.Boolean)~System.Collections.Generic.List{System.String}")]
 [assembly: SuppressMessage("Style", "IDE0060:未使用のパラメーターを削除します", Justification = "<保留中>", Scope = "member", Target = "~M:AppLoggerModule.AppLogger.GetLastErrorMessagesAsString(System.Int32,System.Boolean)~System.String")]
 [assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:CommonModules.ExecuteDelayTimer._timer")]
+[assembly: SuppressMessage("Style", "IDE0059:値の不必要な代入", Justification = "<保留中>", Scope = "member", Target = "~M:CommonModules.CommonGeneral.LogCallerInfo(System.Int32,System.Int32)")]

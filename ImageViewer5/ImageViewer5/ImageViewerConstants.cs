@@ -56,7 +56,7 @@ namespace ImageViewer5
         public static readonly int FRAME_COL_MAX = -1;
         // #####
         // ImageMainFrame
-        public static readonly string FRAME_NAME = "ImageMainFrame";
+        public static readonly string FRAME_NAME = "imageMainFrame";
         public static readonly bool RESTORE_PREV_FRAME = true;
         public static readonly Size FRAME_SIZE = new Size(480, 640);
         public static readonly Point FRAME_LOC = new Point(0, 0);
@@ -95,12 +95,13 @@ namespace ImageViewer5
         //public static readonly string FIX_FRAME_SIZE = "FixFrameSize";
         public static readonly string FRAME_COUNT = "FrameCount";
 
+        public static readonly string SHOW_SENDER_DIALOG = "ShowSenderDialog";
 
         // ##########
         // ImageMainFrame用 (Frame=ImageMainFrame=UserControl)
         public static readonly string FRAME_NAME = "FrameName";
-        public static readonly string RESTORE_PREV_FRAME = "RestorePreviousStateFrame";
-        public static readonly string RESTORE_PREV_DIR = "RestorePreviousDir"; //元のディレクトリを復元する
+        public static readonly string RESTORE_PREV_FRAME = "RestorePreviousStateFrame";　//元のディレクトリを復元する
+        public static readonly string RESTORE_PREV_DIR = "RestorePreviousDir"; 
         public static readonly string FRAME_SIZE = "FrameSize";
         public static readonly string FRAME_LOC = "FrameLoc";
         public static readonly string IMAGE_CONTROL_SIZE = "ImageControlSize"; // ImageControl=PictureBox

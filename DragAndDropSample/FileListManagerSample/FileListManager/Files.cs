@@ -311,13 +311,18 @@ namespace CommonUtility.FileListUtility
         public string StringJoinList(int index=-1)
         {
             //#
+            List<string> beforeList = new List<string> { };
             List<string> bufList = new List<string> { };
             if (0 < index)
             {
                 //長いとき用
-                bufList = _fileList.GetRange(0, index);
+                beforeList = _fileList.GetRange(0, index);
             }
-            foreach (string buf in _fileList)
+            else
+            {
+                beforeList = _fileList;
+            }
+            foreach (string buf in beforeList)
             {
                 bufList.Add(Path.GetFileName(buf));
             }

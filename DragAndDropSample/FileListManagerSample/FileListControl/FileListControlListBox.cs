@@ -97,7 +97,11 @@ namespace CommonUtility.FileListUtility.FileListControl
             {
                 _logger.AddLog(this, "UpdateFileListAfterEvent");
                 int ret = SetFilesToControl(_files);
-                _logger.PrintInfo("ListJoin = " + _files.StringJoinList());
+                //ログが5000文字以上となることがあるので調整  241005
+                //_logger.PrintInfo("ListJoin = " + _files.StringJoinList());
+                //_logger.PrintInfoSepalete("ListJoin = " + _files.StringJoinList()); //行数が40行くらいになるので調整
+                _logger.PrintInfoSepalete("ListJoin = " + _files.StringJoinList(5));
+                _logger.PrintInfo(string.Format("List.Count = {0}", _files.FileList.Count));
                 if (_logger.hasError()) { _logger.AddLog(" SetFilesToControl Failed"); _logger.ClearError(); }
                 SelectItem(0);
             } catch (Exception ex)

@@ -14,13 +14,13 @@ namespace FileSenderApp
     {
         AppLogger _logger;
         public TabControl _tabControl;
-        TabPage _rightTabPage=null;
+        //TabPage _rightTabPage=null;
         Control _renameControl;
         Control _checkBoxControl;
         Form _parentForm;
         string NEW_TAB_NAME = "[+]Add Tab";
         int _tmpHeight;
-        string _ObjectName = "SenderMainTab1";
+        //string _ObjectName = "SenderMainTab1";
         public SenderMainTab(AppLogger logger, TabControl tabControl, Control renameControl,Control checkboxControl, Form parentForm)
         {
             _logger = logger;
@@ -30,9 +30,9 @@ namespace FileSenderApp
             _checkBoxControl = checkboxControl;
             _parentForm = parentForm;
             _tabControl.KeyDown += TabControl_KeyDown;
-            // エラー抑制用
-            _rightTabPage = null;
-            _ObjectName = "SenderMainTab1";
+            //// エラー抑制用
+            //_rightTabPage = null;
+            //_ObjectName = "SenderMainTab1";
         }
 
         public void Initialize()
@@ -516,7 +516,9 @@ namespace FileSenderApp
         public Dictionary<string, object> GetValueAll()
         {
             Dictionary<string, object> retDict = new Dictionary<string, object> { };
-            retDict.Add("TabAmount", _tabControl.TabPages.Count);
+            retDict.Add(ConstFileSender.KEY_SETTING_TAB_AMOUNT, _tabControl.TabPages.Count);
+            FormFileSenderApp formMain = (FormFileSenderApp)_parentForm;
+            retDict.Add(ConstFileSender.KEY_SETTING_FILE_MOVE_CHECK_BOX, formMain.IsCheckedMove());            
             int count = 0;
             foreach(TabPage page in _tabControl.TabPages)
             {

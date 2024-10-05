@@ -67,3 +67,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:FileSenderApp.FormFileSenderApp.isOutputSetting")]
 [assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:FileSenderApp.SenderMainTab._checkBoxControl")]
 [assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:FileSenderApp.DataBridgeFromExternal._logger")]
+[assembly: SuppressMessage("Style", "IDE0059:値の不必要な代入", Justification = "<保留中>", Scope = "member", Target = "~M:FileSenderApp.FormFileSenderApp.FormFileSenderApp_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)")]

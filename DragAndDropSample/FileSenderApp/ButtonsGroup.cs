@@ -53,10 +53,13 @@ namespace FileSenderApp
             SendButton clickedButton = sender as SendButton;
             if (clickedButton != null)
             {
+                _logger.PrintInfo(" ********** ");
+                _logger.PrintInfo("FileSenderApp.ButtonsGroup.Button_Click");
                 string buttonName = clickedButton.Name;
-                _logger.PrintInfo($"Button Name: {buttonName}");
+                _logger.PrintInfo($"Button Name: {buttonName} [{clickedButton.Text}]");
                 if (SendButtonClickEvent == null) { _logger.PrintInfo("SendButtonClickEvent==null"); }
                 SendButtonClickEvent?.Invoke(clickedButton, e);
+                _logger.PrintInfo(" **********  FileSenderApp.ButtonsGroup.Button_Click END");
             }
         }
 
@@ -590,6 +593,13 @@ namespace FileSenderApp
         public static readonly string KEY_SETTING_TAB_PAGE_NAME = "TabPageName";
         public static readonly string KEY_SETTING_TAB_CONTROL_TEXT = "TabControlText";
         public static readonly string KEY_SETTING_TAB_CONTROL_NAME = "TabControlName";
+        //
+        public static readonly string KEY_SETTING_TAB_AMOUNT = "TabAmount";
+        public static readonly string KEY_SETTING_FILE_MOVE_CHECK_BOX = "FileMoveCheckBox";
+        //
+        //RedoUndo用
+        public static readonly int UNDO = 0;
+        public static readonly int REDO = 1;
 
 
     }

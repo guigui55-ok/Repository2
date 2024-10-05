@@ -20,6 +20,9 @@ namespace FileSenderAppSample
         List<string> _pathList;
         FormFileSenderApp _fileSenderApp;
         FileChangerSimple _filechangeSimple;
+        //
+        string _copyBaseDirPath;
+        string _defaultSrcDirPath;
         public FormFileSenderAppSample()
         {
             InitializeComponent();
@@ -32,8 +35,10 @@ namespace FileSenderAppSample
             //srcにファイルをコピー
             // テスト用フォルダパスセット
             string copyDir = @"J:\ZMyFolder_2\jpgbest";
+            _copyBaseDirPath = copyDir;
             string defaultSrcDirPath = @"J:\ZMyFolder_2\jpgbest\zz_src";
             string defaultDistDirPath = @"J:\ZMyFolder_2\jpgbest\zz_dist";
+            _defaultSrcDirPath = defaultSrcDirPath;
             _filechangeSimple.CopyFilesInDirectory(copyDir , defaultSrcDirPath);
             // ファイル一覧読み込み
             _filechangeSimple.SetFileListByPath(defaultSrcDirPath);
@@ -98,6 +103,16 @@ namespace FileSenderAppSample
         private void FormFileSenderSample_FormClosed(object sender, FormClosedEventArgs e)
         {
             _fileSenderApp.FormFileSenderApp_FormClosed(sender, e);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            _filechangeSimple.CopyFilesInDirectory(_copyBaseDirPath, _defaultSrcDirPath);
+            _pathList = CommonGeneral.GetPathList(_defaultSrcDirPath);
+            _filechangeSimple.UpdateFileList();
+            string filePath = _filechangeSimple.GetCurrentPath();
+            _fileSenderApp._dataBridgeFromExternal.SetData(filePath);
+            textBox1.Text = filePath;
         }
     }
 }

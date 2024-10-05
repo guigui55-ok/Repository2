@@ -12,3 +12,5 @@
 **/.suo
 **/obj/**/*.cache
 **/.git/
+settingFileSender.json
+settingImageViewer.json

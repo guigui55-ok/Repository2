@@ -11,7 +11,7 @@ namespace ImageViewer5.ImageControl
 {
     public class ImageMainFrameSetting
     {
-        AppLogger _logger;
+        public AppLogger _logger;
         ImageMainFrame _imageMainFrame;
         public SettingDictionary _settingDictionary;
         public ImageMainFrameSetting(AppLogger logger, ImageMainFrame imageMainFrame)
@@ -53,7 +53,30 @@ namespace ImageViewer5.ImageControl
             _settingDictionary._settingDict = buf;
 
             //    // デフォルトに上書きしていく
+            //string key = _imageMainFrame.Name;
+            bool isFound = false;
+            foreach(string key in formMainSetting._settingDictionary._settingDict.Keys)
+            {
+                if (key == _imageMainFrame.Name)
+                {
+                    object obj = formMainSetting._settingDictionary._settingDict[key];
+                    _logger.PrintInfo(string.Format(" formMainSetting._settingDictionary._settingDict[key].GetType() = {0}", obj.GetType().ToString()));
+                    //_settingDictionary._settingDict = (Dictionary<string,object>)obj;
+                    _settingDictionary._settingDict = JsonStreamModule.JsonStream.ConvertJObjectToDict(obj);
+                    isFound = true;
+                    break;
+                }
+            }
+            if (!(isFound))
+            {
+                _logger.PrintInfo(string.Format("# Not Fount Setting [{0}]", _imageMainFrame.Name));
+                _settingDictionary._settingDict = GetSettingValueInitialize(_imageMainFrame.GetComponentNumber());
+            }
+            //System.Collections.Generic.KeyNotFoundException 指定されたキーはディレクトリ内に存在しませんでした。
+            //_slideShowOn = (bool)_settingDictionary._settingDict[SettingKey.SLIDE_SHOW_ON];
+            //_slideShowInterval = (int)_settingDictionary._settingDict[SettingKey.SLIDE_SHOW_INTERVAL];
         }
+
 
 
         public void SetSettingValueToThisFromNowState()
@@ -87,6 +110,27 @@ namespace ImageViewer5.ImageControl
             value = _imageMainFrame._formFileList._fileListManager._files.GetCurrentIndex();
             _settingDictionary.AddValue(SettingKey.CURRENT_INDEX, value);
             //#
+            value = _imageMainFrame._formFileList._fileListManager._fileListManagerSetting._isListRandom;
+            _settingDictionary.AddValue(SettingKey.FILE_LIST_RANDOM, value);
+            //#
+            value = this._slideShowOn;
+            _settingDictionary.AddValue(SettingKey.SLIDE_SHOW_ON, value);
+            //#
+            value = this._slideShowInterval;
+            _settingDictionary.AddValue(SettingKey.SLIDE_SHOW_INTERVAL, value);
+            //#
+            value = _settingDictionary.GetValueBool(SettingKey.FIT_IMAGE_TO_FRAME);
+            _settingDictionary.AddValue(SettingKey.FIT_IMAGE_TO_FRAME, value);
+            //#
+            value = this._isFitFormMain;
+            _settingDictionary.AddValue(SettingKey.LINK_SIZE_WITH_FORM, value);
+            //#
+            value = _settingDictionary.GetValueBool(SettingKey.LINK_LOC_WITH_FORM);
+            _settingDictionary.AddValue(SettingKey.LINK_LOC_WITH_FORM, value);
+            //#
+            value = _settingDictionary.GetValueBool(SettingKey.SHOW_LIST_SUB_WINDOW);
+            _settingDictionary.AddValue(SettingKey.SHOW_LIST_SUB_WINDOW, value);
+            //#
             //以下の値はそのまま使う
             // INCLUDE_SUB_DIR_FILE
             // FILE_LIST_RANDOM
@@ -108,7 +152,7 @@ namespace ImageViewer5.ImageControl
 
 
 
-        static public Dictionary<string, object> GetSettingValueInitialize()
+        static public Dictionary<string, object> GetSettingValueInitialize(int frameNum = 1)
         {
             Dictionary<string, object> bufDict = new Dictionary<string, object>();
             string key;
@@ -116,7 +160,7 @@ namespace ImageViewer5.ImageControl
             //KeyValuePair<string, object> bufItem;
             //bufDict = new KeyValuePair<string, object>(SettingKey.RESTORE_PREV_FRAME, SettingValueDefault.RESTORE_PREV_FRAME);
             //#
-            value = SettingValueDefault.FRAME_NAME;
+            value = SettingValueDefault.FRAME_NAME + frameNum.ToString();
             bufDict.Add(SettingKey.FRAME_NAME, value);
             //#
             value = SettingValueDefault.RESTORE_PREV_FRAME;

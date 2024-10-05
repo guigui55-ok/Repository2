@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using AppLoggerModule;
 using FileSenderApp;
@@ -41,7 +42,24 @@ namespace ImageViewer5.AddFunction
         {
             imageMainFrame._formFileList.AddEventHandler_SelectedFileEvent(ChangeFileEventRecieve);
             _fileSenderApp.AnySendButton_Clicked += FileSenderApp_ClickedButton_RecieveEvent;
+            _fileSenderApp.AnySendButton_Clicked_MoveBefore += FileSenderApp_ClickedButton_BeforeChangeFile_RecieveEvent;
+            // 241006 追加
+            _fileSenderApp.ExecuteRedo_Before += FileSenderApp_ClickedButton_BeforeChangeFile_RecieveEvent;
+            _fileSenderApp.ExecuteRedo_After += FileSenderApp_ClickedButton_RecieveEvent;
+            _fileSenderApp.ExecuteUndo_After += FileSenderApp_ClickedButton_RecieveEvent;
         }
+
+
+        private void FileSenderApp_ClickedButton_BeforeChangeFile_RecieveEvent(object sender, EventArgs e)
+        {
+            _logger.PrintInfo("FileSenderFunction > FileSenderApp_ClickedButton_BeforeChangeFile_RecieveEvent");
+            ImageMainFrame imageMainFrame = _formMain._mainFrameManager.GetCurrentFrame();
+            //imageMainFrame._imageViewerMain._viewImageControl.Dispose();
+            imageMainFrame._imageViewerMain._viewImage.DisposeImage();
+            //imageMainFrame._imageViewerMain._viewImageControl.RefreshPaint(); // Error
+            //Thread.Sleep(300);
+        }
+
 
         private void FileSenderApp_ClickedButton_RecieveEvent(object sender, EventArgs e)
         {
@@ -75,6 +93,7 @@ namespace ImageViewer5.AddFunction
             //_fileSenderApp._dataBridgeFromExternal.SetData(filePath);
             _fileSenderApp.SetDataFromExternal(filePath);
             //textBox1.Text = filePath;
+            _logger.PrintInfo(" ****** Send Proc End ");
         }
     }
 }

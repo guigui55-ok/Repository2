@@ -46,6 +46,8 @@ namespace ImageViewer5
             _logger.LoggerLogLevel = LogLevel.INFO;
             // ログをコンソールとファイルに出力するように設定
             _logger.LogOutPutMode = OutputMode.CONSOLE | OutputMode.FILE;
+            //
+            _logger.isShowThreadId = true;
             //#
             _logger.PrintInfo("#########  FormMain New  #########");
             Assembly myAssembly = Assembly.GetEntryAssembly();
@@ -74,10 +76,13 @@ namespace ImageViewer5
             //#
             //this.imageMainFrame1._logger = _logger;
             //this.imageMainFrame1.Parent = this;
+            // ViewImageFrameを複数作るならここらへんで行う
             foreach (ImageMainFrame bufMainFrame in _mainFrameManager._imageMainFrameList)
             {
                 bufMainFrame._logger = _logger;
                 bufMainFrame.Parent = this;
+                bufMainFrame._imageMainFrameSetting._logger = _logger;
+                bufMainFrame._imageMainFrameSetting.SetSettingDatFromMain(_formMainSetting);
             }
             //_nowImageMainFrame = imageMainFrame1;
             _nowImageMainFrame = _mainFrameManager._imageMainFrameList[0];
@@ -94,23 +99,14 @@ namespace ImageViewer5
                 //FormMain_Load中の処理
                 _applySettings = new ApplySettings(_logger, this);
                 //
-                _logger.PrintInfo("FormMain_Load End");
-
-            } catch (Exception ex)
-            {
-                _logger.AddException(ex, this, "FormMain_Load");
-
-            }
-            finally
-            {
-                _logger.PrintInfo("FormMain_Load finally");
                 //#
                 //テスト値
                 //List<string> ignoreList = new List<string> { "_4a44d3" };
                 List<string> ignoreList = new List<string> { "" };
-                string path = @"C:\Users\OK\source\repos\test_media_files\test_jpg";
                 List<string> filterList = ImageViewerConstants.SUPPORTED_IMAGE_EXTENTION_DEFAULT_LIST;
+                string path = @"C:\Users\OK\source\repos\test_media_files\test_jpg";
                 //#
+                path = (string)_nowImageMainFrame._imageMainFrameSetting._settingDictionary._settingDict[SettingKey.RESTORE_PREV_DIR];
                 _nowImageMainFrame.InitializeValues(filterList);
                 // タプルを作成して渡す
                 var parameters = Tuple.Create(
@@ -134,6 +130,16 @@ namespace ImageViewer5
                 _logger.PrintInfo(_nowImageMainFrame.Name + " > Set Anchor.None");
                 // 240926
                 _fileSenderFunction.AddEventHandler(_nowImageMainFrame);
+                _logger.PrintInfo("FormMain_Load End");
+
+            } catch (Exception ex)
+            {
+                _logger.AddException(ex, this, "FormMain_Load");
+
+            }
+            finally
+            {
+                _logger.PrintInfo("FormMain_Load finally");
                 _logger.PrintInfo("FormMain_Load finally End");
             }
         }
@@ -146,8 +152,13 @@ namespace ImageViewer5
 
         private void FormMain_Closed(object sender, FormClosedEventArgs e)
         {
+            // 241005 デバッグ・調査用　一時的に抑制する 
+            bool IsOutputLog = false;
+            //
             _logger.PrintInfo("##########  Form_Closed A_Part  #########");
+            _fileSenderFunction._fileSenderApp.isOutputSetting = IsOutputLog;
             this._fileSenderFunction._fileSenderApp.FormFileSenderApp_FormClosed(sender, e);
+            _formMainSetting.isOutputSetting = IsOutputLog;
             _formMainSetting.SaveSetting();
             _logger.PrintInfo("##########  Form_Closed B_Part  #########");
             Console.WriteLine("Logger.FilePath");
@@ -168,8 +179,17 @@ namespace ImageViewer5
                     // FormMain_Loadの最後だと描画されない
                     _nowImageMainFrame._imageViewerMain.ShowImageAfterInitialize(
                         _nowImageMainFrame._formFileList._files.GetCurrentValue());
-                    //_nowImageMainFrame._imageViewerMain.ShowImageThisPath();
                     _mainFrameManager._imageMainFrameList[0] = _nowImageMainFrame;
+                    // 241005 FileSenderが表示ONのときに前面に
+                    if (_fileSenderFunction._fileSenderApp.Visible)
+                    {
+                        _fileSenderFunction._fileSenderApp.Activate();
+                    }
+                    // 241005 暫定対応 画像をFrameにFitさせる
+                    _nowImageMainFrame._imageViewerMain._viewImageFunction._viewImageFunction_FitInnerToFrame.FitImageToControl(true);
+                    // FileSenderに値をセットする
+                    string path = _nowImageMainFrame._formFileList._files.GetCurrentValue();
+                    this._fileSenderFunction._fileSenderApp._dataBridgeFromExternal.SetData(path);
                     _isFirstPaint = false;
                 }
             }
@@ -178,8 +198,6 @@ namespace ImageViewer5
                 _logger.AddException(ex, this, "FormMain_Paint");
             }
         }
-
-
 
         private void FormMain_KeyDown(object sender, KeyEventArgs e)
         {
@@ -273,8 +291,6 @@ namespace ImageViewer5
                         Size imageSize = bufFrame.Size;
                         Size _frameSize = bufFrame.Size;
                         Size _formSize = this.ClientSize;
-                        //ViewImageFunction_FitInnerToFrame calcrator = new ViewImageFunction_FitInnerToFrame(
-                        //    _logger, bufFrame._imageViewerMain._viewImageFrameControl, bufFrame._imageViewerMain._viewImageControl, bufFrame._imageViewerMain._viewImage);
                         ViewImageFunction_FitInnerToFrame calcrator = bufFrame._imageViewerMain._viewImageFunction._viewImageFunction_FitInnerToFrame;
                         // サイズ計算 Panel にフィットさせる
                         Size newSize = calcrator.GetSizeFitFrame(_formSize, _frameSize);
@@ -282,12 +298,6 @@ namespace ImageViewer5
                         bufFrame.Size = newSize;
                         // Location 計算
                         // 中央に表示する
-                        //Point newPoint = GetLocationFrameCenter(frameSize, newSize);
-
-                        //_viewImageControl.SetVisible(false);
-                        //_viewImageControl.ChangeLocation(newPoint);
-                        //_viewImageControl.ChangeSize(newSize);
-                        //_viewImageControl.SetVisible(true);
                     }
                     else
                     {
@@ -300,23 +310,19 @@ namespace ImageViewer5
                             Size imageSize = bufFrame.Size;
                             Size _frameSize = bufFrame.Size;
                             Size _formSize = this.ClientSize;
-                            //ViewImageFunction_FitInnerToFrame calcrator = new ViewImageFunction_FitInnerToFrame(
-                            //    _logger, bufFrame._imageViewerMain._viewImageFrameControl, bufFrame._imageViewerMain._viewImageControl, bufFrame._imageViewerMain._viewImage);
                             ViewImageFunction_FitInnerToFrame calcrator = bufFrame._imageViewerMain._viewImageFunction._viewImageFunction_FitInnerToFrame;
                             // サイズ計算 Panel にフィットさせる
                             Size newSize = calcrator.GetSizeFitFrame(_formSize, _frameSize);
 
                             //// Location 計算
                             //// 中央に表示する
-                            //Point newPoint = GetLocationFrameCenter(frameSize, newSize);
-
-                            ////_viewImageControl.SetVisible(false);
-                            ////_viewImageControl.ChangeLocation(newPoint);
-                            ////_viewImageControl.ChangeSize(newSize);
-                            ////_viewImageControl.SetVisible(true);
                         }
                     }
-
+                } else if (e.KeyCode == Keys.NumPad9)
+                {
+                    _logger.PrintInfo("FormMain_KeyDown  NumPad9");
+                    ImageMainFrame imageMainFrame = this._mainFrameManager.GetCurrentFrame();
+                    imageMainFrame._imageViewerMain._viewImage.DisposeImage();
                 }
             }
             catch (Exception ex)

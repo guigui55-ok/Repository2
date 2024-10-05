@@ -24,6 +24,8 @@ namespace ViewImageModule
         int Initialize();
         void SetImageWithDispose(Image image);
         void SetImageNotDispose(Image image);
+
+        void Dispose();
         Size GetSize();
         Point GetLocation();
         void ChangeSize(Size size);
