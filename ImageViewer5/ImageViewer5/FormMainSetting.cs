@@ -62,7 +62,7 @@ namespace ImageViewer5
             _logger.PrintError("FormMainSetting > SaveSetting");
             try
             {
-                // Default値を設定して、Jsonファイルを書き込み
+                // 現在の状態から設定値を取得、Jsonファイルを書き込み
                 var writeDict = GetSettingValueFromNowState_WithImageMainFrame();
                 _jsonStream.WriteFile(writeDict);
                 if (isOutputSetting)
@@ -129,7 +129,7 @@ namespace ImageViewer5
                 bufDict[key] = imageMainFrame._imageMainFrameSetting._settingDictionary._settingDict;
                 Console.WriteLine(" ########## ");
                 //CommonModule.CommonGeneral.PrintDict(imageMainFrame._imageMainFrameSetting._settingDictionary._settingDict);
-                CommonModule.CommonGeneral.PrintDict(bufDict);
+                CommonModuleFileSenderApp.CommonGeneral.PrintDict(bufDict);
             }
             return bufDict;
         }
@@ -143,6 +143,9 @@ namespace ImageViewer5
             _settingDictionary.AddValue(SettingKey.APP_PATH, value);
             //#
             // RESTORE_PREV_STATE
+            // 241006 設定フォームなどで管理する予定、現状はTrue固定
+            value = true;
+            _settingDictionary.AddValue(SettingKey.RESTORE_PREV_FRAME, value);
             //#
             value = _formMain.Size;
             _settingDictionary.AddValue(SettingKey.MAIN_FORM_SIZE, value);
@@ -189,8 +192,8 @@ namespace ImageViewer5
             value = CommonGeneral.GetApplicationPath();
             bufDict.Add(SettingKey.APP_PATH, value);
             //#
-            value = SettingValueDefault.RESTORE_PREV_STATE;
-            bufDict.Add(SettingKey.RESTORE_PREV_STATE, value);
+            value = SettingValueDefault.RESTORE_PREV_FRAME;
+            bufDict.Add(SettingKey.RESTORE_PREV_FRAME, value);
             //#
             value = SettingValueDefault.MAIN_FORM_SIZE;
             bufDict.Add(SettingKey.MAIN_FORM_SIZE, value);

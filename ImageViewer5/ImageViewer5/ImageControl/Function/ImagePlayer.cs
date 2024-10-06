@@ -3,7 +3,7 @@ using System;
 using System.Windows.Forms;
 using AppLoggerModule;
 using ImageViewer5;
-using ImageViewer5.CommonModules;
+using ImageViewer5.CommonModulesImageViewer;
 using ImageViewer5.ImageControl;
 using PlayImageTest;
 using ViewImageModule;

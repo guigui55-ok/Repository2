@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppLoggerModule;
-using CommonModule;
+using CommonModuleImageViewer;
 //using CommonModulesProject;
 using ImageViewer5.ImageControl;
 using System.Reflection;
@@ -121,6 +121,7 @@ namespace ImageViewer5
                 _nowImageMainFrame._imageViewerMain._viewImageFunction.InitializeValue_LoadAfter();
                 //引数設定を適用
                 //（スライドショーインスタンス生成などがあるため）
+                _applySettings.ApplyArgsImageViewerFrameByDict(_formMainSetting._settingDictionary, 1);
                 _applySettings.ApplyArgs(_imageViewerArgs);
                 // 1つ目のスライドショーが終わらなくなるため、ON/OFFしておく（原因不明）
                 // 240920
@@ -144,28 +145,6 @@ namespace ImageViewer5
             }
         }
 
-
-        public ImageMainFrame GetNowImageMainFrame()
-        {
-            return _nowImageMainFrame;
-        }
-
-        private void FormMain_Closed(object sender, FormClosedEventArgs e)
-        {
-            // 241005 デバッグ・調査用　一時的に抑制する 
-            bool IsOutputLog = false;
-            //
-            _logger.PrintInfo("##########  Form_Closed A_Part  #########");
-            _fileSenderFunction._fileSenderApp.isOutputSetting = IsOutputLog;
-            this._fileSenderFunction._fileSenderApp.FormFileSenderApp_FormClosed(sender, e);
-            _formMainSetting.isOutputSetting = IsOutputLog;
-            _formMainSetting.SaveSetting();
-            _logger.PrintInfo("##########  Form_Closed B_Part  #########");
-            Console.WriteLine("Logger.FilePath");
-            Console.WriteLine(_logger.FilePath);
-            Console.WriteLine("");
-        }
-
         private void FormMain_Paint(object sender, PaintEventArgs e)
         {
             try
@@ -174,6 +153,7 @@ namespace ImageViewer5
                 {
                     _logger.PrintInfo(String.Format("FormMain_Paint First"));
                     _logger.PrintInfo(String.Format("FormMain.Size = {0}", this.Size));
+                    _applySettings.ApplyArgsForSetting(_formMainSetting._settingDictionary);
                     //最初だけ実行する
                     _nowImageMainFrame._imageViewerMain._viewImageFunction._viewImageOtherFunction.ImageMainFrameAny_MouseDown(this, EventArgs.Empty);
                     // FormMain_Loadの最後だと描画されない
@@ -199,6 +179,27 @@ namespace ImageViewer5
             }
         }
 
+        public ImageMainFrame GetNowImageMainFrame()
+        {
+            return _nowImageMainFrame;
+        }
+
+        private void FormMain_Closed(object sender, FormClosedEventArgs e)
+        {
+            // 241005 デバッグ・調査用　一時的に抑制する 
+            bool IsOutputLog = false;
+            IsOutputLog = true;
+            //
+            _logger.PrintInfo("##########  Form_Closed A_Part  #########");
+            _fileSenderFunction._fileSenderApp.isOutputSetting = IsOutputLog;
+            this._fileSenderFunction._fileSenderApp.FormFileSenderApp_FormClosed(sender, e);
+            _formMainSetting.isOutputSetting = IsOutputLog;
+            _formMainSetting.SaveSetting();
+            _logger.PrintInfo("##########  Form_Closed B_Part  #########");
+            Console.WriteLine("Logger.FilePath");
+            Console.WriteLine(_logger.FilePath);
+            Console.WriteLine("");
+        }
         private void FormMain_KeyDown(object sender, KeyEventArgs e)
         {
             try
@@ -209,6 +210,18 @@ namespace ImageViewer5
                     // 必要なら、イベントを処理済みとしてマーク
                     e.Handled = true;
                     this.Close();
+                }
+                else if (e.KeyCode == Keys.Right)
+                {
+                    _logger.PrintInfo("FormMain_KeyDown  Keys.Right");
+                    ImageMainFrame imageFrame = _mainFrameManager.GetCurrentFrame();
+                    imageFrame._formFileList._fileListManager.MoveNextFile();
+                }
+                else if (e.KeyCode == Keys.Left)
+                {
+                    _logger.PrintInfo("FormMain_KeyDown  Keys.Left");
+                    ImageMainFrame imageFrame = _mainFrameManager.GetCurrentFrame();
+                    imageFrame._formFileList._fileListManager.MovePrevFile();
                 }
                 else if (e.KeyCode == Keys.A && e.Control)
                 {
@@ -263,7 +276,7 @@ namespace ImageViewer5
                 {
                     _logger.PrintInfo("FormMain_KeyDown  Ctrl+NumPad5");
                     // 表示しているFrame（UserControl）のサイズに、InnerのPictureBoxのサイズを変更する
-                    for (int i = 0; i<_mainFrameManager._imageMainFrameList.Count; i++)
+                    for (int i = 0; i < _mainFrameManager._imageMainFrameList.Count; i++)
                     {
                         ImageMainFrame bufFrame = _mainFrameManager._imageMainFrameList[i];
                         bufFrame._imageViewerMain._viewImageFunction._viewImageFunction_FitInnerToFrame.FitImageToControl(true);
@@ -318,7 +331,8 @@ namespace ImageViewer5
                             //// 中央に表示する
                         }
                     }
-                } else if (e.KeyCode == Keys.NumPad9)
+                }
+                else if (e.KeyCode == Keys.NumPad9)
                 {
                     _logger.PrintInfo("FormMain_KeyDown  NumPad9");
                     ImageMainFrame imageMainFrame = this._mainFrameManager.GetCurrentFrame();

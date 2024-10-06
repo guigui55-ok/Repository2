@@ -220,6 +220,19 @@ namespace CommonUtility.FileListUtility
             bool isMove = MoveNextFileWhenLastFileNextDirectory();
         }
 
+
+        public void MoveNextFile()
+        {
+            // _isDoLoopWhenOverListMaxMin =trueのとき、端に来たらindex=0になる
+            _files.MoveNext();
+        }
+
+        public void MovePrevFile()
+        {
+            // _isDoLoopWhenOverListMaxMin =trueのとき、端に来たら、index=Maxになる
+            _files.MovePrevious();
+        }
+
         public bool MoveNextFileWhenLastFileNextDirectory()
         {
             try

@@ -23,6 +23,47 @@ namespace CommonModulesProject
             _settingDict[key] = value;
         }
 
+
+        /// <summary>
+        /// keyIncludeを含むKeyValueをリストで取得する
+        /// </summary>
+        /// <param name="keyInclude"></param>
+        /// <returns></returns>
+        public List<object>GetValueList(string keyInclude)
+        {
+            List<object> retList = new List<object>();
+            foreach(string key in this._settingDict.Keys)
+            {
+                if (key.IndexOf(keyInclude) >= 0)
+                {
+                    retList.Add(_settingDict[key]);
+                }
+            }
+            return retList;
+        }
+
+
+        /// <summary>
+        /// keyIncludeを含むKeyValueをリストで取得する （一致したときの攻勢そのままで返す {key: matchValue}）
+        /// </summary>
+        /// <param name="keyInclude"></param>
+        /// <returns></returns>
+        public List<object> GetValueListWithKeyName(string keyInclude)
+        {
+            List<object> retList = new List<object>();
+            foreach (string key in this._settingDict.Keys)
+            {
+                if (key.IndexOf(keyInclude) >= 0)
+                {
+                    //retList.Add(_settingDict[key]);
+                    Dictionary<string, object> buf = new Dictionary<string, object>();
+                    buf.Add(key, _settingDict[key]);
+                    retList.Add(buf);
+                }
+            }
+            return retList;
+        }
+
         public object GetValue(string key, object defaultValue = null)
         {
             try

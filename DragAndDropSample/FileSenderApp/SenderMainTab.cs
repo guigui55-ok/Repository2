@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppLoggerModule;
-using CommonModule;
+using CommonModules;
 
 namespace FileSenderApp
 {
@@ -131,7 +131,7 @@ namespace FileSenderApp
 
         public ButtonsGroup GetButtonsGroupMatchName(TabPage page)
         {
-            List<Control> conList = CommonModule.CommonGeneral.GetControlListIsMatchType(page, typeof(ButtonsGroup));
+            List<Control> conList = CommonModules.CommonGeneral.GetControlListIsMatchType(page, typeof(ButtonsGroup));
             return (ButtonsGroup)conList[0];
         }
 

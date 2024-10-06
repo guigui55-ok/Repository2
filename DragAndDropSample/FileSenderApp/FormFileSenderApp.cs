@@ -352,7 +352,7 @@ namespace FileSenderApp
                 TabPage newTabPage = _senderMainTab.AddTabPage();
                 Dictionary<string, object> settingDictB = (Dictionary<string, object>)settingDict;
                 _logger.PrintInfo("AddPageBySetting >> SettingDictB");
-                CommonModule.CommonGeneral.PrintDict(settingDictB, withDataType:true);
+                CommonModuleFileSenderApp.CommonGeneral.PrintDict(settingDictB, withDataType:true);
                 //#
                 // key=TabPageName: TabPageSettingDict となっているはず
                 string newTabPageName = settingDict.Keys.ToArray()[0];
@@ -368,7 +368,7 @@ namespace FileSenderApp
                 // ボタン設定
                 ButtonsGroup buttonsGroup = _senderMainTab.GetButtonsGroupMatchName(newTabPage);
                 _logger.PrintInfo("AddPageBySetting >> Button");
-                CommonModule.CommonGeneral.PrintDict(newTabPageSettingDict);
+                CommonModuleFileSenderApp.CommonGeneral.PrintDict(newTabPageSettingDict);
                 //SendButton sendButton = buttonsGroup.AddButton();
                 buttonsGroup.DeleteAllButton();
                 buttonsGroup.ApplySettingButton(newTabPageSettingDict);
@@ -649,7 +649,7 @@ namespace FileSenderApp
             if (e.KeyCode == Keys.NumPad5)
             {
                 _logger.PrintInfo("FormFileSenderApp_KeyDown  NumPad5");
-                FormFileSenderApp_FormClosing(this, new FormClosingEventArgs(CloseReason.None, false));
+                //FormFileSenderApp_FormClosing(this, new FormClosingEventArgs(CloseReason.None, false));
             }
             else if (e.KeyCode == Keys.Z && e.Control)
             {
@@ -672,7 +672,7 @@ namespace FileSenderApp
             Dictionary<string, object> allInfoDict = _senderMainTab.GetValueAll();
             //_senderMainTab.PrintInfoDictAll(allInfoDict);
             //_jsonStream.WriteFile(allInfoDict);
-            CommonModule.CommonGeneral.PrintDict(allInfoDict, withDataType: false);
+            CommonModuleFileSenderApp.CommonGeneral.PrintDict(allInfoDict, withDataType: false);
             _jsonStream.WriteFile(allInfoDict);
             if (isOutputSetting)
             {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppLoggerModule;
 
-namespace ImageViewer5.CommonModules
+namespace ImageViewer5.CommonModulesImageViewer
 {
     public class LinkControlSize
     {

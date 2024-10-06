@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.IO;
 
-namespace CommonModule
+namespace CommonModuleFileSenderApp
 {
     //public static class Debugger
     //{

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DragAndDropModule;
-using CommonModule;
+using CommonModuleImageViewer;
 using AppLoggerModule;
 using System.IO;
 using System.Threading;
@@ -414,6 +414,34 @@ namespace ImageViewer5.ImageControl
             FormMain formMain = ViewImageCommon.ConvertToFormMain(this.Parent);
             formMain._fileSenderFunction._fileSenderApp.Visible = true;
         }
-        
+
+        private void CopyFullPath_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _logger.PrintInfo("CopyFullPath_ToolStripMenuItem_Click");
+            string path = _formFileList._fileListManager._files.GetCurrentValue();
+            Clipboard.SetText(path);
+        }
+
+        private void OpenFolder_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _logger.PrintInfo("CopyFullPath_ToolStripMenuItem_Click");
+            try
+            {
+                string filePath = _formFileList._fileListManager._files.GetCurrentValue();
+                if (File.Exists(filePath))
+                {
+                    // Explorerで指定したファイルを選択状態で開く
+                    System.Diagnostics.Process.Start("explorer.exe", $"/select, \"{filePath}\"");
+                }
+                else
+                {
+                    // ファイルが存在しない場合のエラーメッセージ
+                    MessageBox.Show("ファイルが存在しません。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } catch(Exception ex)
+            {
+                _logger.PrintError(ex, "OpenFolder_ToolStripMenuItem_Click");
+            }
+        }
     }
 }

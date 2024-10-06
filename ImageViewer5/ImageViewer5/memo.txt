@@ -1,9 +1,9 @@
 
 
-完全パスをコピー
-フォルダを開く
 
-LastFileName Open
+ボタン位置変更
+
+設定ファイル、ImageサイズLocation復元
 
 
 ImageFrameが複数あるとき、選択したらCurrentolを移動、SenderAppのBridgeDataも更新
@@ -19,8 +19,17 @@ Frame並べて表示（別クラス、FrameControl,InnerControl、本番はFrame
 +-キーでFrame大きさ変更
 
 
-LinkControlSize, frameControl._imageMainFrameSetting._isFitFormMain
+アプリ起動中、フォルダ移動（フォルダ更新）
+
+サイズ連動機能調整LinkControlSize, frameControl._imageMainFrameSetting._isFitFormMain（課題）
 FormMain、サイズ変更時、ImageFrameのサイズ、Locationも変更される（調査中）（Anchor、Dock？）
+起動時、引数設定と設定ファイルの処理が複数行われている（課題）
+設定ファイルの設定から、2つ目以降のFrame（ImageMainFrame）の表示対応（現状は1つだけ）
+Keys.Left,Rightでファイルが変更しない、Ctrl+出ないと変更されない（課題）
+
+FileSenderAppの位置も復元
+　画面をはみ出すときは、すべて表示されるように、画面端に寄せる
+定位置に表示
 
 ##########
 設定値を増やすとき
@@ -36,6 +45,11 @@ FormMain、サイズ変更時、ImageFrameのサイズ、Locationも変更され
 ***************
 241006
 	FileSenderApp、Redo/Undo実装、実行時FormMain-CurrentImageframeに反映
+    完全パスをコピー
+    フォルダを開く
+	設定　最終位置（最終パス）を次回起動時に表示
+	設定ファイルの内容を起動時に反映
+	矢印キー（右左）でファイルを変更
 241005
 	修正　イメージは気処理、ViewImageControl.Disposeメソッド、viewImageControl.DisposeImageメソッド修正　済
 	FileSenderAppでMoveFile時、送信元プロセスが使用されているエラーが発生、ファイル削除・移動ができない問題修正　済

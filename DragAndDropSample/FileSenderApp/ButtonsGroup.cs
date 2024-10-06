@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppLoggerModule;
-using CommonModule;
+using CommonModuleFileSenderApp;
 using CommonUtility.FileListUtility;
 using DragAndDropSample;
 using JsonStreamModule;
@@ -73,7 +73,7 @@ namespace FileSenderApp
         public void DeleteAllButton()
         {
             _logger.PrintInfo("ButtonsGroup > DeleteAllButton");
-            List<Control> conList = CommonModule.CommonGeneral.GetControlListIsMatchType(panelButtons, typeof(SendButton));
+            List<Control> conList = CommonModuleFileSenderApp.CommonGeneral.GetControlListIsMatchType(panelButtons, typeof(SendButton));
             //List<Control> conList = CommonModule.CommonGeneral.GetControlListIsMatchType(this, typeof(SendButton));
             List<SendButton> btnList = this.ConvertControlList(conList);
             foreach(SendButton btn in btnList)
@@ -300,7 +300,7 @@ namespace FileSenderApp
 
         public int GetButtonAmount()
         {
-            List<Control> list = CommonModule.CommonGeneral.GetControlListIsMatchType(panelButtons, typeof(SendButton));
+            List<Control> list = CommonModuleFileSenderApp.CommonGeneral.GetControlListIsMatchType(panelButtons, typeof(SendButton));
             return list.Count;
         }
 

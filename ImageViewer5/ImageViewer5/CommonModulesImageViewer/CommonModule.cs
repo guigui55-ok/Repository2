@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Windows.Forms;
 
-namespace CommonModule
+namespace CommonModuleImageViewer
 {
     public static class Debugger
     {

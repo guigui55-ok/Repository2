@@ -122,6 +122,21 @@ namespace CommonModules
 
     public static class CommonGeneral
     {
+        public static string GetLastNumberRegix(string value)
+        {
+            // 正規表現で文字列の末尾の連続する数字を抽出
+            System.Text.RegularExpressions.Match match = System.Text.RegularExpressions.Regex.Match(value, @"\d+$");
+
+            // マッチする数字がなければ空文字を返す
+            if (!match.Success)
+            {
+                return string.Empty;
+            }
+
+            // マッチした数字部分を文字列として返す
+            return match.Value;
+        }
+
         public static void MoveFile(string sourceFilePath, string destinationFilePath)
         {
             try

@@ -8,7 +8,7 @@ using AppLoggerModule;
 using System.Drawing;
 using ViewImageModule;
 using CommonControlUtilityModule;
-using ImageViewer5.CommonModules;
+using ImageViewer5.CommonModulesImageViewer;
 using CommonControlUtilityModuleB;
 using TransportForm;
 

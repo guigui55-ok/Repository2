@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppLoggerModule;
-using CommonModule;
+//using CommonModule;
 using CommonModulesProject;
 
 namespace ImageViewer5.ImageControl.Function
@@ -126,7 +126,7 @@ namespace ImageViewer5.ImageControl.Function
                 afterFlag = false;
             }
             _imageMainFrame._imageMainFrameSetting._slideShowOn = afterFlag;
-            List<ToolStripMenuItem> bufList = CommonGeneral.GetMenuItemListIsMatchNameInMenuStrip(
+            List<ToolStripMenuItem> bufList = CommonModuleFileSenderApp.CommonGeneral.GetMenuItemListIsMatchNameInMenuStrip(
                 _imageMainFrame.ContextMenuStrip, "SlideShowOnOff_ToolStripMenuItem");
             // 1つだけしかないはず;
             ToolStripMenuItem menuItem = (ToolStripMenuItem)bufList[0];

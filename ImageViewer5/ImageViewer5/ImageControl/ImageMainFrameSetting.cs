@@ -83,11 +83,13 @@ namespace ImageViewer5.ImageControl
         {
             //string key;
             object value;
-            //以下の値はそのまま使う
-            // SettingKey.RESTORE_PREV_FRAME
             //#
             value = _imageMainFrame.Name;
             _settingDictionary.AddValue(SettingKey.FRAME_NAME, value);
+            //#
+            //241006 設定値フォームなどで変更するか検討中、現所はtrue固定
+            value = true;
+            _settingDictionary.AddValue(SettingKey.RESTORE_PREV_FRAME, value);
             //#
             value = _imageMainFrame._formFileList._fileListManager._filesRegister.DirectoryPath;
             _settingDictionary.AddValue(SettingKey.RESTORE_PREV_DIR, value);
@@ -109,6 +111,9 @@ namespace ImageViewer5.ImageControl
             //#
             value = _imageMainFrame._formFileList._fileListManager._files.GetCurrentIndex();
             _settingDictionary.AddValue(SettingKey.CURRENT_INDEX, value);
+            //#
+            value = _imageMainFrame._formFileList._fileListManager._fileListManagerSetting._isLoadEverythingUnderSubfoldersFiles;
+            _settingDictionary.AddValue(SettingKey.INCLUDE_SUB_DIR_FILE, value);
             //#
             value = _imageMainFrame._formFileList._fileListManager._fileListManagerSetting._isListRandom;
             _settingDictionary.AddValue(SettingKey.FILE_LIST_RANDOM, value);

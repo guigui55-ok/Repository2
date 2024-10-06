@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppLoggerModule;
-using CommonModule;
+//using CommonModulesImageViewer;
 using ImageViewer5.ImageControl;
 using ViewImageModule;
 
@@ -28,7 +28,7 @@ namespace ImageViewer5
             _logger = logger;
             _formMain = formMain;
 
-            List<Control> conList = CommonGeneral.GetControlListIsMatchType(_formMain, typeof(ImageMainFrame));
+            List<Control> conList = CommonModuleFileSenderApp.CommonGeneral.GetControlListIsMatchType(_formMain, typeof(ImageMainFrame));
             _imageMainFrameList = ConvertControlListToImageMainFrameList(conList);
             _nowIndex = 0;
             _nowImageMainFrame = GetCurrentFrame();
