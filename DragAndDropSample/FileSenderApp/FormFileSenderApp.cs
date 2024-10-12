@@ -45,6 +45,10 @@ namespace FileSenderApp
         public EventHandler ExecuteUndo_Before;
         public EventHandler ExecuteRedo_Before;
 
+        // 241010追加
+        //最初にフォームが描画された
+        bool _isFirstPaint = false;
+
         public FormFileSenderApp(AppLogger logger=null)
         {
             InitializeComponent();
@@ -402,6 +406,23 @@ namespace FileSenderApp
              */
         }
 
+        public void AdjustWindowAtTabPageButtonsHeight(int index=0)
+        {
+            _logger.PrintInfo("AdjustWindowAtTabPageButtonsHeight");
+            ButtonsGroup buttonsGroup = _senderMainTab.GetButtonGroupInTabPage(index);
+            int bottomY = buttonsGroup.GetBottomY_ForAdjustWindowSize();
+            if(bottomY <= 0)
+            {
+                return;
+            }
+            int panelButtonsHeight = buttonsGroup.GetPanelButtons().Size.Height;
+            int nowSize_RemoveButtonsGroup = this.Size.Height - panelButtonsHeight;
+            int margin = 120;
+            //int changeHeight = nowSize_RemoveButtonsGroup + bottomY + margin;
+            int changeHeight = 40 + bottomY + margin;
+            this.Size = new Size(this.Size.Width, changeHeight);
+        }
+
 
         /// <summary>
         /// TabControlをクリアして、新しいタブコントロールとTabPage1つを追加
@@ -698,6 +719,21 @@ namespace FileSenderApp
         {
             JobItem item = _jobManager.GetRedoItem();
             ExecuteUndoRedo(item, ConstFileSender.REDO);
+        }
+
+        private void FormFileSenderApp_Paint(object sender, PaintEventArgs e)
+        {
+            try
+            {
+                if (!_isFirstPaint)
+                {
+                    AdjustWindowAtTabPageButtonsHeight(0);
+                    _isFirstPaint = true;
+                }
+            } catch(Exception ex)
+            {
+                _logger.PrintError(ex, "FormFileSenderApp_Paint");
+            }
         }
     }
 }

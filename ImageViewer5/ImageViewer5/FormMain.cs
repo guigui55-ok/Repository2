@@ -338,10 +338,38 @@ namespace ImageViewer5
                     ImageMainFrame imageMainFrame = this._mainFrameManager.GetCurrentFrame();
                     imageMainFrame._imageViewerMain._viewImage.DisposeImage();
                 }
+                else if (e.KeyCode == Keys.L)
+                {
+                    _logger.PrintInfo("FormMain_KeyDown  L");
+
+                    string filePath = @"C:\Users\OK\AppData\Local\Programs\Microsoft VS Code\Code.exe";
+                    try
+                    {
+                        if (File.Exists(filePath))
+                        {
+                            string filePathB = string.Format("\"{0}\"", filePath);
+                            string loggerPathB = string.Format("\"{0}\"", _logger.FilePath);
+                            string cmd = filePathB + " " + loggerPathB;
+                            System.Diagnostics.Process.Start(filePathB, loggerPathB);
+                            _logger.PrintInfo("Open Log By VisualStudioCode");
+                        }
+                        else
+                        {
+                            // ファイルが存在しない場合のエラーメッセージ
+                            _logger.PrintError(string.Format("LogOpen Error , ファイルが存在しません。[{0}]", filePath));
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.PrintError(ex, string.Format("LogOpen Error 2, ファイルが存在しません。[{0}]", filePath));
+                    }
+
+                }
             }
             catch (Exception ex)
             {
                 _logger.AddException(ex, this, "FormMain_KeyDown");
+
             }
             
         }

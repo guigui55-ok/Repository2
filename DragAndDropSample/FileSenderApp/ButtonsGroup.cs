@@ -163,6 +163,33 @@ namespace FileSenderApp
         }
 
         /// <summary>
+        /// Windowの高さをボタンの数に合わせて調整する（ボタン見切れを直す）為の下限のLocationを取得する
+        /// （表示されているTabPageに合わせる）
+        /// </summary>
+        public int GetBottomY_ForAdjustWindowSize()
+        {
+            int bottomY = 0;
+            try
+            {
+                List<Control> conList = CommonGeneral.GetControlListIsMatchType(this.panelButtons,  typeof(SendButton));
+                foreach(Control con in conList)
+                {
+                    SendButton button = (SendButton)con;
+                    int checkY = button.Location.Y + button.Height;
+                    if (bottomY < checkY)
+                    {
+                        bottomY = checkY;
+                    }
+                }
+                
+            } catch(Exception ex)
+            {
+                _logger.PrintError(ex, "AdjustWindowSize");
+            }
+            return bottomY;
+        }
+
+        /// <summary>
         /// 設定を反映させる（初期化時に実行する）
         /// </summary>
         /// <param name="settingDict"></param>

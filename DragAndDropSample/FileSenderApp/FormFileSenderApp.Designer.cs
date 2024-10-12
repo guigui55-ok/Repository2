@@ -31,16 +31,16 @@ namespace FileSenderApp
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonsGroup1 = new FileSenderApp.ButtonsGroup();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonRenameTabOK = new System.Windows.Forms.Button();
             this.textBoxRenameTabPage = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelCheckBox = new System.Windows.Forms.Panel();
-            this.checkBoxFileMove = new System.Windows.Forms.CheckBox();
-            this.buttonUndo = new System.Windows.Forms.Button();
             this.buttonRedo = new System.Windows.Forms.Button();
-            this.buttonsGroup1 = new FileSenderApp.ButtonsGroup();
+            this.buttonUndo = new System.Windows.Forms.Button();
+            this.checkBoxFileMove = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -70,6 +70,13 @@ namespace FileSenderApp
             this.tabPage1.Size = new System.Drawing.Size(342, 241);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Tab1";
+            // 
+            // buttonsGroup1
+            // 
+            this.buttonsGroup1.Location = new System.Drawing.Point(0, 3);
+            this.buttonsGroup1.Name = "buttonsGroup1";
+            this.buttonsGroup1.Size = new System.Drawing.Size(342, 266);
+            this.buttonsGroup1.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -130,15 +137,16 @@ namespace FileSenderApp
             this.panelCheckBox.Size = new System.Drawing.Size(346, 22);
             this.panelCheckBox.TabIndex = 1;
             // 
-            // checkBoxFileMove
+            // buttonRedo
             // 
-            this.checkBoxFileMove.AutoSize = true;
-            this.checkBoxFileMove.Location = new System.Drawing.Point(4, 3);
-            this.checkBoxFileMove.Name = "checkBoxFileMove";
-            this.checkBoxFileMove.Size = new System.Drawing.Size(193, 16);
-            this.checkBoxFileMove.TabIndex = 0;
-            this.checkBoxFileMove.Text = "FileMove ( CheckOff = FileCopy)";
-            this.checkBoxFileMove.UseVisualStyleBackColor = true;
+            this.buttonRedo.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonRedo.Location = new System.Drawing.Point(302, 0);
+            this.buttonRedo.Name = "buttonRedo";
+            this.buttonRedo.Size = new System.Drawing.Size(30, 22);
+            this.buttonRedo.TabIndex = 2;
+            this.buttonRedo.Text = "→";
+            this.buttonRedo.UseVisualStyleBackColor = false;
+            this.buttonRedo.Click += new System.EventHandler(this.buttonRedo_Click);
             // 
             // buttonUndo
             // 
@@ -151,23 +159,15 @@ namespace FileSenderApp
             this.buttonUndo.UseVisualStyleBackColor = true;
             this.buttonUndo.Click += new System.EventHandler(this.buttonUndo_Click);
             // 
-            // buttonRedo
+            // checkBoxFileMove
             // 
-            this.buttonRedo.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.buttonRedo.Location = new System.Drawing.Point(302, 0);
-            this.buttonRedo.Name = "buttonRedo";
-            this.buttonRedo.Size = new System.Drawing.Size(30, 22);
-            this.buttonRedo.TabIndex = 2;
-            this.buttonRedo.Text = "→";
-            this.buttonRedo.UseVisualStyleBackColor = false;
-            this.buttonRedo.Click += new System.EventHandler(this.buttonRedo_Click);
-            // 
-            // buttonsGroup1
-            // 
-            this.buttonsGroup1.Location = new System.Drawing.Point(0, 3);
-            this.buttonsGroup1.Name = "buttonsGroup1";
-            this.buttonsGroup1.Size = new System.Drawing.Size(342, 266);
-            this.buttonsGroup1.TabIndex = 0;
+            this.checkBoxFileMove.AutoSize = true;
+            this.checkBoxFileMove.Location = new System.Drawing.Point(4, 3);
+            this.checkBoxFileMove.Name = "checkBoxFileMove";
+            this.checkBoxFileMove.Size = new System.Drawing.Size(193, 16);
+            this.checkBoxFileMove.TabIndex = 0;
+            this.checkBoxFileMove.Text = "FileMove ( CheckOff = FileCopy)";
+            this.checkBoxFileMove.UseVisualStyleBackColor = true;
             // 
             // FormFileSenderApp
             // 
@@ -183,6 +183,7 @@ namespace FileSenderApp
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormFileSenderApp_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormFileSenderApp_FormClosed);
             this.Load += new System.EventHandler(this.FormFileSenderApp_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormFileSenderApp_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormFileSenderApp_KeyDown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

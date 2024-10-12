@@ -31,7 +31,14 @@ FileSenderAppの位置も復元
 　画面をはみ出すときは、すべて表示されるように、画面端に寄せる
 定位置に表示
 
+
+
+--frame-count=1 --frame1-folder="H:\ZPICTURE\jpg ss new\jpg Edit All\00sss\0darkmikan a" --frame1-size=580, 630 --frame1-location=0,0 --frame1-subfolders=false --frame1-random=true --frame1-slideshow=true --frame1-interval=2800 --frame1-file-list-window=0
+
+
+
 ##########
+
 設定値を増やすとき
 *SettingKey
 	Key追加
@@ -43,6 +50,9 @@ FileSenderAppの位置も復元
 ***************
 実装済み
 ***************
+241010
+	FileSenderApp、ボタンに合わせて高さ調整
+	ImageViewer、ログファイルをVsCodeで開く
 241006
 	FileSenderApp、Redo/Undo実装、実行時FormMain-CurrentImageframeに反映
     完全パスをコピー

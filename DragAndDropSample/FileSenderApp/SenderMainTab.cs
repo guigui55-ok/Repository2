@@ -54,6 +54,10 @@ namespace FileSenderApp
             menu.Items.Add(item_Delete);
             item_Delete.Click += DeleteTab_Click;
             //
+            ToolStripMenuItem item_FixWindowSize = new ToolStripMenuItem("ウィンドウサイズ調整");
+            menu.Items.Add(item_FixWindowSize);
+            item_FixWindowSize.Click += AdjustWindowSizeTab_Click;
+            //
             _tabControl.ContextMenuStrip = menu;
             //#
             _tmpHeight = _renameControl.Height;
@@ -286,6 +290,33 @@ namespace FileSenderApp
             else
             {
                 _logger.PrintInfo("TabControl_KeyDown");
+            }
+        }
+
+        /// <summary>
+        /// ウィンドウサイズ調整メニュークリック
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AdjustWindowSizeTab_Click(object sender, EventArgs e)
+        {
+            int nowIndex = _tabControl.SelectedIndex;
+            if (_tabControl.TabPages[nowIndex].Text == NEW_TAB_NAME)
+            {
+                return;
+            }
+            else
+            {
+                FormFileSenderApp formMain = (FormFileSenderApp)_parentForm;
+                formMain.AdjustWindowAtTabPageButtonsHeight(nowIndex);
+                //string nowTab = _tabControl.TabPages[nowIndex].Text;
+                //if (ret == DialogResult.Yes)
+                //{
+                //    //_tabControl.TabPages.RemoveAt(nowIndex);
+                //    //_tabControl.TabPages.RemoveByKey(nowTab);
+                //    _tabControl.TabPages.Remove(_tabControl.TabPages[nowIndex]);
+                //    _logger.PrintInfo(string.Format("Deleted Tab [{0}]({1})", nowTab, nowIndex));
+                //}
             }
         }
 
