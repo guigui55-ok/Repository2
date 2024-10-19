@@ -19,20 +19,21 @@ namespace ViewImageModule
     /// </summary>
     public class ViewImageFunction
     {
+        //外部からの移譲
+        public ImageMainFrame _imageMainFrame;
         protected AppLogger _logger;
         protected IViewImage _viewImage;
         protected IViewImageControl _viewImageControl;
         protected IViewImageFrameControl _viewImageFrameControl;
-        public ImageMainFrame _imageMainFrame;
+        // クラス内で生成
         public LinkControlSize _linkControlSize;
         public ViewImageSlideShow _viewImageSlideShow;
         //
         public ImagePlayer _imagePlayer;
         public ViewImageFunction_FitInnerToFrame _viewImageFunction_FitInnerToFrame;
+        public ViewImageOtherFunction _viewImageOtherFunction;
         //複数同時に実行されることがあるため
         public string Name;
-
-        public ViewImageOtherFunction _viewImageOtherFunction;
 
         public ViewImageFunction(
             AppLogger logger,
@@ -52,6 +53,29 @@ namespace ViewImageModule
                 _logger, _viewImageFrameControl, _viewImageControl, _viewImage);
             this.Name = "ViewImageFunction" + imageMainFrame.GetComponentNumber();
             _viewImageOtherFunction = new ViewImageOtherFunction(_logger, imageMainFrame);
+        }
+
+        public void Dispose()
+        {
+            try
+            {
+                _linkControlSize.DisposeObjects();
+                _linkControlSize = null;
+                _viewImageSlideShow.Dispose();
+                _viewImageSlideShow = null;
+                _imagePlayer.Dispose();
+                _imagePlayer = null;
+                _viewImageFunction_FitInnerToFrame.Dispose();
+                _viewImageFunction_FitInnerToFrame = null;
+                _viewImageOtherFunction.Dispose();
+                _viewImageOtherFunction = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
         }
 
         public void InitializeValue()

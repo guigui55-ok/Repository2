@@ -49,6 +49,8 @@ namespace PlayImageTest
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormMainPlayImageTest";
             this.Text = "FormMainPlayImageTest";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMainPlayImageTest_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMainPlayImageTest_FormClosed);
             this.Load += new System.EventHandler(this.FormMainPlayImageTest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

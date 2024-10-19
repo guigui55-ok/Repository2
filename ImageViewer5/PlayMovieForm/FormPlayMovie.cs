@@ -172,5 +172,19 @@ namespace PlayMovieForm
         {
 
         }
+
+        private void FormMainPlayMovie_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            try
+            {
+                _logger.Dispose();
+                _videoPlayer.Dispose();
+            } catch ( Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
     }
 }

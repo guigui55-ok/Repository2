@@ -21,6 +21,23 @@ namespace SlideShowImage
             _logger = logger;
         }
 
+        public void Dispose()
+        {
+            try
+            {
+                if (_image != null)
+                {
+                    _image.Dispose();
+                    _image = null;
+                }
+            } catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         public void SetControlAndImage(Control control, Image image)
         {
             _control = control;

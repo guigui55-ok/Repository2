@@ -46,6 +46,22 @@ namespace ImageViewer5
             _settingDictionary = new SettingDictionary("SettingDict_FormMain");
         }
 
+        public void DisposeObjects()
+        {
+            try
+            {
+                _settingDictionary.DisposeObjects();
+                _settingDictionary = null;
+                _jsonStream = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         /// <summary>
         /// 外部から読み込み、設定値を格納する
         /// </summary>

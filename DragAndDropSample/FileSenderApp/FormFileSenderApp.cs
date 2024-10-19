@@ -88,6 +88,23 @@ namespace FileSenderApp
             _jobManager = new JobManager(_logger, jobKeyList);
         }
 
+        public void DisposeObjects()
+        {
+            try
+            {
+                _jsonStream = null;
+                _dataBridgeFromExternal = null;
+                _senderMainTab.DisposeObjects();
+                _senderMainTab = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         private void ApplySetting()
         {
             try

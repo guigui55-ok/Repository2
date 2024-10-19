@@ -96,6 +96,20 @@ namespace PlayWebp
             return retPaths;
         }
 
+        private void FormPlayWebp_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            try
+            {
+                _pathList.Clear();
+                _pathList = null;
+                _playWebp.Dispose();
+            } catch ( Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
     }
 
     public static class Debugger

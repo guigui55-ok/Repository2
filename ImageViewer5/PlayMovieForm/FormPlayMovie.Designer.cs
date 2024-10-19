@@ -30,13 +30,13 @@ namespace PlayMovieForm
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.videoView1 = new LibVLCSharp.WinForms.VideoView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPlay = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
-            this.videoView1 = new LibVLCSharp.WinForms.VideoView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -52,6 +52,16 @@ namespace PlayMovieForm
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(470, 268);
             this.panel1.TabIndex = 0;
+            // 
+            // videoView1
+            // 
+            this.videoView1.BackColor = System.Drawing.Color.Black;
+            this.videoView1.Location = new System.Drawing.Point(3, 3);
+            this.videoView1.MediaPlayer = null;
+            this.videoView1.Name = "videoView1";
+            this.videoView1.Size = new System.Drawing.Size(464, 231);
+            this.videoView1.TabIndex = 4;
+            this.videoView1.Text = "videoView1";
             // 
             // pictureBox1
             // 
@@ -88,16 +98,6 @@ namespace PlayMovieForm
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             this.btnStop.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnStop_MouseClick);
             // 
-            // videoView1
-            // 
-            this.videoView1.BackColor = System.Drawing.Color.Black;
-            this.videoView1.Location = new System.Drawing.Point(3, 3);
-            this.videoView1.MediaPlayer = null;
-            this.videoView1.Name = "videoView1";
-            this.videoView1.Size = new System.Drawing.Size(464, 231);
-            this.videoView1.TabIndex = 4;
-            this.videoView1.Text = "videoView1";
-            // 
             // FormMainPlayMoview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -106,10 +106,11 @@ namespace PlayMovieForm
             this.Controls.Add(this.panel1);
             this.Name = "FormMainPlayMoview";
             this.Text = "FormMainPlayMoview";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMainPlayMovie_FormClosed);
             this.Load += new System.EventHandler(this.FormMainPlayMoview_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

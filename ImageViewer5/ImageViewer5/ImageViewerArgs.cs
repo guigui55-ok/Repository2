@@ -54,6 +54,35 @@ namespace ImageViewer5
             _frameSettingObjectList = new List<SettingDictionary>();
         }
 
+        public void DisposeObjects()
+        {
+            try
+            {
+                _settings.Clear();
+                _settings = null;
+                _settingDict.Clear();
+                _settingDict = null;
+                if (0<_frameSettingsList.Count)
+                {
+                    for (int i = 0; i < _frameSettingsList.Count; i++)
+                    {
+                        _frameSettingsList[i].Clear();
+                        _frameSettingsList[i] = null;
+                    }
+                }
+                _frameSettingsList.Clear();
+                _frameSettingsList = null;
+                _frameSettingObjectList.Clear();
+                _frameSettingObjectList = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         // ##########
 
         public SettingDictionary GetSettingDictionaryByNumber(int number)

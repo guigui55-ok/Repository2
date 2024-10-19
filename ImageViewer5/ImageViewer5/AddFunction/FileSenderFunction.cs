@@ -49,6 +49,30 @@ namespace ImageViewer5.AddFunction
             _fileSenderApp.ExecuteUndo_After += FileSenderApp_ClickedButton_RecieveEvent;
         }
 
+        public void DisposeObjects()
+        {
+            try
+            {
+                //imageMainFrame._formFileList.AddEventHandler_SelectedFileEvent(ChangeFileEventRecieve);
+                _fileSenderApp.AnySendButton_Clicked -= FileSenderApp_ClickedButton_RecieveEvent;
+                _fileSenderApp.AnySendButton_Clicked_MoveBefore -= FileSenderApp_ClickedButton_BeforeChangeFile_RecieveEvent;
+                // 241006 追加
+                _fileSenderApp.ExecuteRedo_Before -= FileSenderApp_ClickedButton_BeforeChangeFile_RecieveEvent;
+                _fileSenderApp.ExecuteRedo_After -= FileSenderApp_ClickedButton_RecieveEvent;
+                _fileSenderApp.ExecuteUndo_After -= FileSenderApp_ClickedButton_RecieveEvent;
+
+                _fileSenderApp.DisposeObjects();
+                _fileSenderApp.Dispose();
+                _fileSenderApp = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
 
         private void FileSenderApp_ClickedButton_BeforeChangeFile_RecieveEvent(object sender, EventArgs e)
         {

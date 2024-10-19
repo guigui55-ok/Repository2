@@ -38,6 +38,24 @@ namespace CommonControlUtilityModule
             _dragAndDropForFile.DragAndDropEventAfterEventForFile += DragAndDropEventAfterEventForFile;
         }
 
+        public void Dispose()
+        {
+            try
+            {
+                _dragAndDropOnControl.Dispose();
+                _dragAndDropForFile.Dispose();
+                FileList.Clear();
+                FileList = null;
+                Files = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         private void DragAndDropEventAfterEventForFile(object sender, EventArgs e)
         {
             try

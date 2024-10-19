@@ -64,6 +64,7 @@ namespace MouseWheelZoomHandler
             this.Controls.Add(this.panel1);
             this.Name = "FormMouseWheelZoomHandler";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMouseWheelZoomHandler_FormClosed);
             this.Load += new System.EventHandler(this.FormMouseWheelZoomHandler_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

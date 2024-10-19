@@ -427,5 +427,24 @@ namespace AppLoggerModule
             }
             return ret;
         }
+
+        public void Dispose()
+        {
+            try
+            {
+                ErrorMessagelist.Clear();
+                ErrorMessagelist = null;
+                AlertMessageList.Clear();
+                AlertMessageList = null;
+                ErrorList.Clear();
+                ErrorList = null;
+            } catch (Exception ex)
+            {
+                Console.WriteLine( this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
     }
 }

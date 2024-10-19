@@ -67,3 +67,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:ImageViewer5.ImageControl.Function.ViewImageOtherFunction._imageMainFrame")]
 [assembly: SuppressMessage("Style", "IDE0044:読み取り専用修飾子を追加します", Justification = "<保留中>", Scope = "member", Target = "~F:ImageViewer5.ImageControl.Function.ViewImageOtherFunction._logger")]
 [assembly: SuppressMessage("Style", "IDE0059:値の不必要な代入", Justification = "<保留中>", Scope = "member", Target = "~M:ImageViewer5.FormMain.FormMain_Closed(System.Object,System.Windows.Forms.FormClosedEventArgs)")]
+[assembly: SuppressMessage("CodeQuality", "IDE0051:使用されていないプライベート メンバーを削除する", Justification = "<保留中>", Scope = "member", Target = "~M:ImageViewer5.FormMain.DisposeObjects")]

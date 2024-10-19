@@ -185,5 +185,25 @@ namespace SlideShowImage
 
             return gifPaths;
         }
+
+        private void FormSlideShowTest_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            try
+            {
+                _logger.Dispose();
+                _pathList.Clear();
+                _pathList = null;
+                _playImage.Dispose();
+                _slideShowFunction.Dispose();
+                _effectFadeSetting.Dispose();
+                _drawImageFade.DisposeAll();
+
+            } catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
     }
 }

@@ -38,6 +38,23 @@ namespace CommonControlUtilityModule
             _control.MouseUp += Control_MouseUp;
             _control.MouseMove += Control_MouseMove;
         }
+
+        public void Dispose()
+        {
+            try
+            {
+                _control.MouseClick -= Control_MouseClick;
+                _control.MouseDown -= Control_MouseDown;
+                _control.MouseUp -= Control_MouseUp;
+                _control.MouseMove -= Control_MouseMove;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
         private void Control_MouseMove(object sender, MouseEventArgs e)
         {
             if (IsDown) { IsDrag = true; }

@@ -20,8 +20,10 @@ namespace ImageViewer5.ImageControl
 {
     public partial class ImageMainFrame : UserControl
     {
-        private DragAndDropReciever dragAndDropReciever;
+        // 外部から移譲
         public AppLogger _logger;
+        // クラス内で生成
+        private DragAndDropReciever _dragAndDropReciever;
         //ファイルリスト処理・フォームを処理するサブスレッド
         Thread _fileListSubThread;
         //フォームを閉じるときにサブスレッドを終了させるようフラグ
@@ -48,6 +50,26 @@ namespace ImageViewer5.ImageControl
             _imageMainFrameSetting = new ImageMainFrameSetting(null, this);
 
         }
+
+        public void DiseposeObjects()
+        {
+            try
+            {
+                _imageViewerMain.DisposeObjects();
+                _imageViewerMain = null;
+                _dragAndDropReciever.DisposeObjects();
+                _dragAndDropReciever = null;
+                _imageMainFrameSetting.DisposeObjects();
+                _imageMainFrameSetting = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
 
         public void InitializeValues(List<string> SupportedImageExtList)
         {
@@ -197,9 +219,9 @@ namespace ImageViewer5.ImageControl
                 this._logger.PrintInfo(this.Name + " > ImageMainFrame_Load");
             }
             // ここでは、PictureBox対してドラッグアンドドロップを受け付けます。
-            dragAndDropReciever = new DragAndDropReciever(this.pictureBox_ImageMain);
+            _dragAndDropReciever = new DragAndDropReciever(this.pictureBox_ImageMain);
             // イベントにメソッドを紐づける
-            dragAndDropReciever.DropDetected += RecieveDropEvent;
+            _dragAndDropReciever.DropDetected += RecieveDropEvent;
 
             //SubProcMain();
             //this._logger.PrintInfo("_fileListSubThread.ManagedThreadId = " + _fileListSubThread.ManagedThreadId);
@@ -402,11 +424,6 @@ namespace ImageViewer5.ImageControl
             mainFrameManager._imageMainFrameList.Remove(bufFrame);
         }
 
-        public void Dispose()
-        { 
-            _logger.PrintInfo("Dispose");
-            _logger.PrintInfo("Dispose NotImplemented");
-        }
 
         private void ShowFileSenderForm_ToolStripMenuItem_Click(object sender, EventArgs e)
         {

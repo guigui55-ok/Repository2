@@ -35,6 +35,23 @@ namespace FileSenderApp
             //_ObjectName = "SenderMainTab1";
         }
 
+        public void DisposeObjects()
+        {
+            try
+            {
+                _tabControl.KeyDown -= TabControl_KeyDown;
+                _tabControl.Selecting -= TabControl_Selecting;
+                DisposeButtonGroup();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         public void Initialize()
         {
             _logger.PrintInfo(this.ToString() + " > Initialize") ;
@@ -76,6 +93,37 @@ namespace FileSenderApp
             InitializeButtonGroup();
         }
 
+        public void DisposeButtonGroup()
+        {
+            _logger.PrintInfo(this.ToString() + " > DisposeButtonGroup");
+            foreach (TabPage page in _tabControl.TabPages)
+            {
+                List<Control> buttonGroupList = CommonGeneral.GetControlListIsMatchType(page, typeof(ButtonsGroup));
+                if (0 < buttonGroupList.Count)
+                {
+                    ButtonsGroup buttonGroup = (ButtonsGroup)buttonGroupList[0];
+                    FormFileSenderApp formMain = (FormFileSenderApp)_parentForm;
+                    buttonGroup.SendButtonClickEvent -= formMain.AnyButtonClickedRecieveEvent;
+                    buttonGroup.SendButtonClickEvent -= formMain.AnyButtonClickedRecieveEvent;
+                    DisposeButtonGroupSingle(buttonGroup);
+                    buttonGroup.Dispose();
+                    buttonGroup = null;
+                }
+                else
+                {
+                    // ButtonGroupがない
+                }
+                buttonGroupList.Clear();
+                buttonGroupList = null;
+            }
+        }
+        private void DisposeButtonGroupSingle(ButtonsGroup buttonGroup)
+        {
+            FormFileSenderApp formMain = (FormFileSenderApp)this._parentForm;
+            //buttonGroup._fileSenderSettingValues = formMain._fileSenderSettingValues;
+            Panel panelButtons = buttonGroup.GetPanelButtons();
+            //buttonGroup.UnvisibleRenamePanel();
+        }
 
         public void InitializeButtonGroup()
         {

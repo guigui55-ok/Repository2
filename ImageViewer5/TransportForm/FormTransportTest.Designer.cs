@@ -64,6 +64,7 @@ namespace TransportForm
             this.Controls.Add(this.panel1);
             this.Name = "FormTransportTest";
             this.Text = "FormTransportTest";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormTransportTest_FormClosed);
             this.Load += new System.EventHandler(this.FormTransportTest_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormTransportTest_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

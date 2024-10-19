@@ -25,6 +25,12 @@ namespace CommonControlUtilityModule
             _control.DragEnter += Control_DragEnter;
         }
 
+        public void Dispose()
+        {
+            _control.DragDrop -= Control_DragDrop;
+            _control.DragEnter -= Control_DragEnter;
+        }
+
         public void AddRecieveControls(Control[] controls)
         {
             try

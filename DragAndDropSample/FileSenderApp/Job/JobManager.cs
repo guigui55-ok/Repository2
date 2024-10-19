@@ -99,7 +99,7 @@ namespace FileSenderApp.Job
         public JobItem GetUndoItem()
         {
             //Undo
-            JobItem ret = null;
+            //JobItem ret = null;
             //List<JobItem> workList = new List<JobItem>(_jobItemList.ToArray());
             //if (workList.Count<1)
             //{
@@ -135,7 +135,7 @@ namespace FileSenderApp.Job
 
         public JobItem GetRedoItem()
         {
-            JobItem ret = null;
+            //JobItem ret = null;
             //#
             // RedoUndoListからJobItemListに移動
             if (_redoUndoList.Count < 1)

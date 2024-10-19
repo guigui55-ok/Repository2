@@ -48,7 +48,7 @@ namespace TransportForm
             {
                 _switchKeys = switchKeys;
             }
-            _switchKeys.SetEventForControl(recieveEventControl);
+            _switchKeys.SetEventForControl(_recieveControl);
             // イベントのインスタンスを生成
             //MouseEventHandler = new ViewImageMouseEventHandler();
             // このクラス内のメソッドをイベントへ紐づけ
@@ -65,6 +65,28 @@ namespace TransportForm
                 _logger.PrintInfo("ControlDraggerB > _isDebugMatch = true");
                 _logger.PrintInfo(_DebugMemo);
             }
+        }
+
+        public void Dispose()
+        {
+            try
+            {
+                _recieveControl.MouseMove -= Control_MouseMove;
+                _recieveControl.MouseDown -= Control_MouseDown;
+                _recieveControl.MouseUp -= Control_MouseUp;
+                if (_switchKeys != null)
+                {
+                    _switchKeys.ResetEventForControl(_recieveControl);
+                }
+                _historyList.Clear();
+                _historyList = null;
+            } catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+
         }
 
         public void SetTrigerKey(Keys key)
@@ -212,10 +234,32 @@ namespace TransportForm
             _isEnableFlag = new IsEnableFlag();
         }
 
+        public void Dispose()
+        {
+            try
+            {
+                //ResetEventForControl();
+                _isEnableFlag = null;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         public void SetEventForControl(Control control)
         {
             control.KeyDown += SwitchKeys_KeyDown;
             control.KeyUp += SwitchKeys_KeyUp;
+        }
+
+        public void ResetEventForControl(Control control)
+        {
+            control.KeyDown -= SwitchKeys_KeyDown;
+            control.KeyUp -= SwitchKeys_KeyUp;
         }
 
         public void SwitchKeys_KeyDown(object sender, KeyEventArgs e)

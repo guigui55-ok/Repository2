@@ -12,8 +12,10 @@ namespace ImageViewer5.ImageControl.Function
 {
     public class ViewImageSlideShow
     {
+        //外部から移譲
         AppLogger _logger;
         ImageMainFrame _imageMainFrame;
+        //クラス内で生成
         public Timer _SlideShowTimer;
         public ViewImageSlideShow(AppLogger logger, ImageMainFrame imageMainFrame)
         {
@@ -33,6 +35,27 @@ namespace ImageViewer5.ImageControl.Function
              * だんだん遅くなる、早くなる、Interval時間ランダム（設定範囲内）
              * 
              */
+        }
+
+        public void Dispose()
+        {
+            try
+            {
+                if (_SlideShowTimer != null)
+                {
+                    _SlideShowTimer.Stop();
+                    _SlideShowTimer.Enabled = false;
+                    _SlideShowTimer.Tick -= _imageMainFrame._formFileList._fileListManager.MoveNextFileWhenLastFileNextDirectoryEvent;
+                    _SlideShowTimer.Dispose();
+                    _SlideShowTimer = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
         }
 
         public void Initialize_LoadAfter()

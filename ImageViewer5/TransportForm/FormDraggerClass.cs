@@ -30,6 +30,26 @@ namespace TransportForm
             _sendControl.MouseUp += Form1_MouseUp;
         }
 
+        public void Dispose()
+        {
+            try
+            {
+                _sendControl.MouseDown -= Form1_MouseDown;
+                _sendControl.MouseMove -= Form1_MouseMove;
+                _sendControl.MouseUp -= Form1_MouseUp;
+                _isDragEnable = null;
+                _historyList.Clear();
+                _historyList = null;
+            } catch ( Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+
+        }
+
+
         public void PrintInfo(string value)
         {
             string msg = this.ToString() + " > ";

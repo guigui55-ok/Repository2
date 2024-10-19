@@ -25,6 +25,22 @@ namespace PlayImageModule
             _fader = new ImageFader(_logger, _control, _fadeDuration); // フェーダークラスのインスタンス作成
         }
 
+        public void Dispose()
+        {
+            try
+            {
+                if (_image != null)
+                {
+                    _image?.Dispose();
+                }
+                _fader.Dispose();
+            } catch(Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
         
 
         // 静止画（JPG/PNGなど）をControlに表示するメソッド

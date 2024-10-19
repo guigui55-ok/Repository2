@@ -16,6 +16,21 @@ namespace CommonModulesProject
             _settingDict = new Dictionary<string, object>();
         }
 
+        public void DisposeObjects()
+        {
+            try
+            {
+                _settingDict.Clear();
+                _settingDict = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         public void AddValue(string key, object value)
         {
             //_settingDict.Add(key, value);

@@ -25,6 +25,39 @@ namespace PlayImageModule
             _timer.Tick += new EventHandler(OnFrameChanged);
         }
 
+        public void Dispose()
+        {
+            try
+            {
+                if (_gifImage != null)
+                {
+                    _gifImage.Dispose();
+                    _gifImage = null;
+                }
+                if (_frameDimension != null)
+                {
+                    _frameDimension = null;
+                }
+                if (_currentFrameImage != null)
+                {
+                    _currentFrameImage.Dispose();
+                    _currentFrameImage = null;
+                }
+                if (_timer != null)
+                {
+                    _timer.Stop();
+                    _timer.Tick -= OnFrameChanged;
+                    _timer.Dispose();
+                    _timer = null;
+                }
+            } catch ( Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         /// <summary>
         /// // 現在のタイマーを停止し、フレームとリソースをリセット
         /// </summary>

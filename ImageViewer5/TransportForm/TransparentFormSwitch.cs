@@ -70,6 +70,7 @@ namespace TransportForm
         //public SwitchKeys _moveInnerKey);
         //public SwitchKeys _moveFrameKeyl;
         //Load時に参照エラーとなるのでインスタンスを生成（初期化時に外部からインスタンスが生成されるので注意）
+        // ControlDraggerB のオブジェクトを渡して使用する（破棄はControlDraggerで行う）
         public SwitchKeys _moveInnerKey = new SwitchKeys(Keys.None); 
         public SwitchKeys _moveFrameKey = new SwitchKeys(Keys.None);
         //
@@ -88,6 +89,25 @@ namespace TransportForm
             _control = control;
             _form.KeyDown += FormTransport_KeyDown;
             _form.KeyUp += FormTransport_KeyUp;
+        }
+
+        public void Dispose()
+        {
+            try
+            {
+                _form.KeyDown -= FormTransport_KeyDown;
+                _form.KeyUp -= FormTransport_KeyUp;
+                _innerKeyTimer.Dispose();
+                _innerKeyTimer = null;
+                _frameKeyTimer.Dispose();
+                _frameKeyTimer = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
         }
 
         /// <summary>

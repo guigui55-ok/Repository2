@@ -22,6 +22,21 @@ namespace ImageViewer5.ImageControl.Function
             _imageMainFrame = imageMainFrame;            
         }
 
+        public void Dispose()
+        {
+            try
+            {
+                _imageMainFrame._imageViewerMain._parentControl.MouseDown -= this.ImageMainFrameAny_MouseDown;
+                _imageMainFrame._imageViewerMain._pictureBox.MouseDown -= this.ImageMainFrameAny_MouseDown;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         public void Initialize()
         {
             _logger.PrintInfo("ViewImageOtherFunction > Initialize > " + _imageMainFrame.Name);

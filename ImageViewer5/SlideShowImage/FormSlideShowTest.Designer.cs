@@ -49,6 +49,7 @@ namespace SlideShowImage
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormSlideShowTest";
             this.Text = "SlideShowTest";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormSlideShowTest_FormClosed);
             this.Load += new System.EventHandler(this.FormSlideShowTest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

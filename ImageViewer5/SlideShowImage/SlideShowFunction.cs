@@ -25,6 +25,25 @@ namespace SlideShowImage
             _timer.Interval = 2000;
         }
 
+        public void Dispose()
+        {
+            try
+            {
+                if (_timer != null)
+                {
+                    _timer.Stop();
+                    _timer.Dispose();
+                    _timer = null;
+                }
+                _control = null;
+            } catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         public void StartTimer()
         {
             _logger.PrintInfo(_itemName + " > Start");

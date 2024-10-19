@@ -40,6 +40,10 @@ namespace CommonControlUtilityModuleB
             _parentControl.MouseWheel += Control_MouseWheel;
         }
 
+        public void Dispose()
+        {
+            _parentControl.MouseWheel -= Control_MouseWheel;
+        }
 
         private void Control_MouseWheel(object sender, MouseEventArgs e)
         {

@@ -41,6 +41,33 @@ namespace SlideShowImage
             _calclator = new CalcImageSizeWithControl(_logger);
         }
 
+        public void DisposeAll()
+        {
+            try
+            {
+                if (_drawMainImage != null)
+                {
+                    _drawMainImage.Dispose();
+                    _drawMainImage = null;
+                }
+                if (_imageCanvas != null)
+                {
+                    _imageCanvas.Dispose();
+                    _imageCanvas = null;
+                }
+                if (_calclator != null)
+                {
+                    _calclator?.Dispose();
+                }
+            } catch(Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
+
         //DrawImage
         public void DisposeImage()
         {

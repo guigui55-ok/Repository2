@@ -11,8 +11,10 @@ namespace ImageViewer5.ImageControl
 {
     public class ImageMainFrameSetting
     {
+        //外部から移譲
         public AppLogger _logger;
         ImageMainFrame _imageMainFrame;
+        //クラス内で生成
         public SettingDictionary _settingDictionary;
         public ImageMainFrameSetting(AppLogger logger, ImageMainFrame imageMainFrame)
         {
@@ -38,6 +40,21 @@ namespace ImageViewer5.ImageControl
         /*
          * 
          */
+
+        public void DisposeObjects()
+        {
+            try
+            {
+                _settingDictionary.DisposeObjects();
+                _settingDictionary = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
 
         /// <summary>
         /// 設定値読み込み時に受け取る
@@ -160,7 +177,7 @@ namespace ImageViewer5.ImageControl
         static public Dictionary<string, object> GetSettingValueInitialize(int frameNum = 1)
         {
             Dictionary<string, object> bufDict = new Dictionary<string, object>();
-            string key;
+            //string key;
             object value;
             //KeyValuePair<string, object> bufItem;
             //bufDict = new KeyValuePair<string, object>(SettingKey.RESTORE_PREV_FRAME, SettingValueDefault.RESTORE_PREV_FRAME);

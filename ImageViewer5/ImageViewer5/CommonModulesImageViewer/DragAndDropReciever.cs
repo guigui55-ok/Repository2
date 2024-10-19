@@ -25,6 +25,20 @@ namespace DragAndDropModule
             _control.DragDrop += new DragEventHandler(Control_DragDrop);
         }
 
+        public void DisposeObjects()
+        {
+            try
+            {
+                _control.DragEnter -= Control_DragEnter;
+                _control.DragDrop -= Control_DragDrop;
+            } catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         private void Control_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))

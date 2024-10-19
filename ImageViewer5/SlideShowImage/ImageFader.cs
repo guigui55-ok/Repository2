@@ -21,6 +21,38 @@ public class ImageFader
         _logger.PrintInfo($"ImageFader initialized with fade duration: {_fadeDuration}ms.");
     }
 
+    public void Dispose()
+    {
+        try
+        {
+            if (_control is PictureBox pictureBox)
+            {
+                if (_control != null)
+                {
+                    PictureBox buf = (PictureBox)_control;
+                    if (buf.Image != null)
+                    {
+                        buf.Image.Dispose();
+                        buf.Image = null;
+                    }
+                    buf.Dispose();
+                    buf = null;
+                    if (_control != null)
+                    {
+                        _control.Dispose();
+                    }
+                    _control = null;
+                }
+            }
+
+        } catch (Exception ex)
+        {
+            Console.WriteLine(this.ToString() + ".Dispose Error");
+            Console.WriteLine(ex.ToString() + ":" + ex.Message);
+            Console.WriteLine(ex.StackTrace);
+        }
+    }
+
     // フェードアウト・フェードインを行うメソッド
     public async Task FadeOutAndInAsync(Image newImage)
     {

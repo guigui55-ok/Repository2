@@ -25,6 +25,20 @@ namespace ImageViewer5.CommonModulesImageViewer
             _parentControl.ClientSizeChanged += LinkControlSize_ClientSizeChanged;
         }
 
+        public void DisposeObjects()
+        {
+            try
+            {
+                _parentControl.ClientSizeChanged -= LinkControlSize_ClientSizeChanged;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         private void LinkControlSize_ClientSizeChanged(object sender , EventArgs e)
         {
             if (_isEnable)

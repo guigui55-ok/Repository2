@@ -49,6 +49,7 @@ namespace PlayWebp
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormPlayWebp";
             this.Text = "Play Webp";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormPlayWebp_FormClosed);
             this.Load += new System.EventHandler(this.FormPlayWebp_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPlayWebp_OnKeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

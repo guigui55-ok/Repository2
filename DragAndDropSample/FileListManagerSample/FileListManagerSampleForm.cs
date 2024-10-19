@@ -66,6 +66,28 @@ namespace FileListManagerSample
             //this.listBox_FileList.SelectedIndexChanged += listBox_FileList_ChangedItem;
         }
 
+        public void DisposeObjects()
+        {
+            try
+            {
+                _fileListControl.SelectedItemEvent -= _files.ChangeFileRecieve;
+                _files.SelectedFileEvent -= _fileListControl.ChangedFileInFile;
+                _files.FileList.Clear();
+                _files.FileList = null;
+                _files = null;
+                _fileListManager.UpdateFileListAfterEvent -= _fileListControl.UpdateFileListAfterEvent;
+                _fileListManager.UpdateFileListAfterEvent -= FileListManagerForm_UpdateFileListAfterEvent;
+                _fileListManager.Dispose();
+                _fileListManager = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         public void FileListManagerForm_UpdateFileListAfterEvent(object sender, EventArgs e)
         {
             try

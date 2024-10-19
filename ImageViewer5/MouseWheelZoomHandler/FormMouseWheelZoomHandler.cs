@@ -32,5 +32,11 @@ namespace MouseWheelZoomHandler
             _changeSizeByMouseWheelWithMousePointer = new ChangeSizeByMouseWheelWithMousePointer(
                 _logger, pictureBox1, panel1);
         }
+
+        private void FormMouseWheelZoomHandler_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _logger.Dispose();
+            _changeSizeByMouseWheelWithMousePointer.Dispose();
+        }
     }
 }

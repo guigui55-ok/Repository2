@@ -20,6 +20,7 @@ namespace ImageViewer5.ImageControl
     /// </summary>
     public class ImageMainClass
     {
+        //外部から移譲
         public PictureBox _pictureBox;
         public Control _parentControl;
         protected AppLogger _logger;
@@ -39,8 +40,11 @@ namespace ImageViewer5.ImageControl
         FormDragger _formDraggerByFrame;
         //
         FormDragger _formDraggerByInner;
-
         TransparentFormSwitch _transparentFormSwitch;
+        //
+        JudgeClickRightOrLeft _judgeClickRightOrLeft;
+        JudgeClickRightOrLeftChild _judgeClickRightOrLeftChild;
+        ChangeSizeByMouseWheelWithMousePointer _changeSizeByMouseWheel;
         //
         public bool _isFocusFrame = false;
 
@@ -65,7 +69,10 @@ namespace ImageViewer5.ImageControl
             this.Name = "ImageMainClass" + componentNumber;
 
 
+
         }
+
+
         private void SetImageSettings()
         {
             try
@@ -116,18 +123,18 @@ namespace ImageViewer5.ImageControl
             //_transparentFormSwitch._moveFrameKey = _draggerInner_ToFrame._switchKeys;
 
             // Panel のクリックされた位置が右側半分か左側半分か判定する
-            JudgeClickRightOrLeft judgeClickRightOrLeft = new JudgeClickRightOrLeft(_logger, _parentControl);
+            _judgeClickRightOrLeft = new JudgeClickRightOrLeft(_logger, _parentControl);
 
             // PictureBox のクリックされた位置が Panel の右側半分か左側半分か判定する
-            JudgeClickRightOrLeftChild judgeClickRightOrLeftChild =
+            _judgeClickRightOrLeftChild =
                 new JudgeClickRightOrLeftChild(_logger, _pictureBox, _parentControl);
-            judgeClickRightOrLeftChild.ClickRight += PictureBox_ClickRightEvent;
-            judgeClickRightOrLeftChild.ClickLeft += PictureBox_ClickLeftEvent;
+            _judgeClickRightOrLeftChild.ClickRight += PictureBox_ClickRightEvent;
+            _judgeClickRightOrLeftChild.ClickLeft += PictureBox_ClickLeftEvent;
 
             // Panel が MouseWheel を受けたとき、PictureBox の大きさを変更する
             //ChangeSizeByMouseWheel changeSizeByMouseWheel = new ChangeSizeByMouseWheel(
             //    _logger, _pictureBox, _parentControl);
-            ChangeSizeByMouseWheelWithMousePointer _changeSizeByMouseWheel = new ChangeSizeByMouseWheelWithMousePointer(
+            _changeSizeByMouseWheel = new ChangeSizeByMouseWheelWithMousePointer(
                 _logger, _pictureBox, _parentControl);
             //ChangeSizeByMouseWheelWithMousePointer changeSizeByMouseWheelWithMousePointer;
 
@@ -135,6 +142,54 @@ namespace ImageViewer5.ImageControl
             _transparentFormSwitch.SwitchFlagsByTransparencyKey(false);
             _transparentFormSwitch.SwitchDefault();
         }
+
+
+        public void DisposeObjects()
+        {
+            try
+            {
+                _viewImage.DisposeImage();
+                _viewImage = null;
+                _viewImageControl.Dispose();
+                _viewImageControl = null;
+                _viewImageFrameControl = null;
+                _readFileByDragDrop.Dispose();
+                _readFileByDragDrop = null;
+                _viewImageFunction.Dispose();
+                _viewImageFunction = null;
+                _draggerFrame.Dispose();
+                _draggerFrame = null;
+                _draggerInner_ToInner.Dispose();
+                _draggerInner_ToInner = null;
+                _draggerInner_ToFrame.Dispose();
+                _draggerInner_ToFrame = null;
+                _formDraggerByForm.Dispose();
+                _formDraggerByForm = null;
+                _formDraggerByFrame.Dispose();
+                _formDraggerByFrame = null;
+                _formDraggerByInner.Dispose();
+                _formDraggerByInner = null;
+                _transparentFormSwitch.Dispose();
+                _transparentFormSwitch = null;
+                _judgeClickRightOrLeft.Dispose();
+                _judgeClickRightOrLeft = null;
+                _judgeClickRightOrLeftChild.ClickRight -= PictureBox_ClickRightEvent;
+                _judgeClickRightOrLeftChild.ClickLeft -= PictureBox_ClickLeftEvent;
+                _judgeClickRightOrLeftChild.Dispose();
+                _judgeClickRightOrLeftChild = null;
+                _changeSizeByMouseWheel.Dispose();
+                _changeSizeByMouseWheel = null;
+                _changeSizeByMouseWheel.Dispose();
+                _changeSizeByMouseWheel = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
 
         public void ShowImageThisPath()
         {

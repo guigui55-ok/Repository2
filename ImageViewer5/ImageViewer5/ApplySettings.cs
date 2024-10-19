@@ -13,14 +13,31 @@ namespace ImageViewer5
 {
     public class ApplySettings
     {
+        // 外部からの異常
         AppLogger _logger;
         ImageMainFrame _nowImageMainFrame;
         FormMain _formMain;
+        // クラス内で生成
+        // なし
         public ApplySettings(AppLogger logger, FormMain formMain)
         {
             _logger = logger;
             _formMain = formMain;
             _nowImageMainFrame = _formMain.GetNowImageMainFrame();
+        }
+
+        public void DisposeObjects()
+        {
+            try
+            {
+                //とくになし
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
         }
 
 

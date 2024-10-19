@@ -27,6 +27,21 @@ namespace ViewImageModule
             _viewImageControl.GetParentControl().DoubleClick += FitImage_DoubleClick;
         }
 
+        public void Dispose()
+        {
+            try
+            {
+                _viewImageControl.GetControl().DoubleClick -= FitImage_DoubleClick;
+                _viewImageControl.GetParentControl().DoubleClick -= FitImage_DoubleClick;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         private void FitImage_DoubleClick(object sender, EventArgs e)
         {
             try

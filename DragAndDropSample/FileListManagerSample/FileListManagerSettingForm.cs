@@ -30,6 +30,23 @@ namespace FileListManagerSample
             SetEventChangeValue();
         }
 
+        public void DisposeObjects()
+        {
+            try
+            {
+                checkBox_FixedDirectory.CheckedChanged -= SettingValueChanged;
+                checkBox_FixedFileList.CheckedChanged -= SettingValueChanged;
+                checkBox_ReadSubDirFiles.CheckedChanged -= SettingValueChanged;
+                checkBox_EnableRandomList.CheckedChanged -= SettingValueChanged;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         private void SetEventChangeValue()
         {
             checkBox_FixedDirectory.CheckedChanged += SettingValueChanged;

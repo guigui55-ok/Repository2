@@ -18,12 +18,14 @@ namespace ImageViewer5.ImageControl.Function
     /// </summary>
     public class ImagePlayer
     {
+        // 外部から移譲
         protected AppLogger _logger;
         protected IViewImage _viewImage;
         protected IViewImageControl _viewImageControl;
         protected IViewImageFrameControl _viewImageFrameControl;
         public ImageMainFrame _imageMainFrame;
         //#
+        //クラス内で生成
         //画像表示関連
         private PlayGif _playGif;
         private PlayAnimatedWebp _playWebp;
@@ -40,6 +42,23 @@ namespace ImageViewer5.ImageControl.Function
             _viewImageFrameControl = viewImageFrameControl;
             _imageMainFrame = imageMainFrame;
             this.Initialize();
+        }
+
+        public void Dispose()
+        {
+            try
+            {
+                _playGif.Dispose();
+                _playGif = null;
+                _playWebp.Dispose();
+                _playWebp = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
         }
 
         public void Initialize()

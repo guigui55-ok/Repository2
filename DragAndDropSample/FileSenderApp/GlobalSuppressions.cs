@@ -79,3 +79,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Style", "IDE1006:命名スタイル", Justification = "<保留中>", Scope = "member", Target = "~M:FileSenderApp.FormFileSenderApp.buttonRedo_Click(System.Object,System.EventArgs)")]
 [assembly: SuppressMessage("Style", "IDE1006:命名スタイル", Justification = "<保留中>", Scope = "member", Target = "~M:FileSenderApp.FormFileSenderApp.buttonUndo_Click(System.Object,System.EventArgs)")]
 [assembly: SuppressMessage("CodeQuality", "IDE0052:読み取られていないプライベート メンバーを削除", Justification = "<保留中>", Scope = "member", Target = "~F:FileSenderApp.DataBridgeFromExternal._logger")]
+[assembly: SuppressMessage("Style", "IDE0059:値の不必要な代入", Justification = "<保留中>", Scope = "member", Target = "~M:FileSenderApp.FormFileSenderApp.AdjustWindowAtTabPageButtonsHeight(System.Int32)")]

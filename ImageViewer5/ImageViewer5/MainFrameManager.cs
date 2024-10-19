@@ -18,11 +18,15 @@ namespace ImageViewer5
     /// </summary>
     public class MainFrameManager
     {
+        // 外部からの移譲
         AppLogger _logger;
         FormMain _formMain;
         public List<ImageMainFrame> _imageMainFrameList;
         int _nowIndex = 0;
         ImageMainFrame _nowImageMainFrame;
+        // クラス内で生成
+        // なし
+        ViewImageFunction_FitInnerToFrame _fitFunction;
         public MainFrameManager(AppLogger logger, FormMain formMain)
         {
             _logger = logger;
@@ -32,6 +36,30 @@ namespace ImageViewer5
             _imageMainFrameList = ConvertControlListToImageMainFrameList(conList);
             _nowIndex = 0;
             _nowImageMainFrame = GetCurrentFrame();
+        }
+
+        public void DisposeObjects()
+        {
+            try
+            {
+                for (int i = 0; i < _imageMainFrameList.Count; i++)
+                {
+                    _imageMainFrameList[i].Dispose();
+                    _imageMainFrameList[i] = null;
+                }
+                _imageMainFrameList.Clear();
+                _imageMainFrameList = null;
+                if (_fitFunction != null)
+                {
+                    _fitFunction.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
         }
 
         public ImageMainFrame GetCurrentFrame()
@@ -162,10 +190,11 @@ namespace ImageViewer5
 
                 ImageMainFrame frameParts = _imageMainFrameList[i];
                 ImageMainClass frameObj = frameParts._imageViewerMain;
-                ViewImageFunction_FitInnerToFrame fitFunction =
-                    new ViewImageFunction_FitInnerToFrame(
-                        _logger,
-                        frameObj._viewImageFrameControl, frameObj._viewImageControl, frameObj._viewImage);
+                //ViewImageFunction_FitInnerToFrame fitFunction =
+                //    new ViewImageFunction_FitInnerToFrame(
+                //        _logger,
+                //        frameObj._viewImageFrameControl, frameObj._viewImageControl, frameObj._viewImage);
+                ViewImageFunction_FitInnerToFrame fitFunction = frameObj._viewImageFunction._viewImageFunction_FitInnerToFrame;
                 fitFunction.FitImageToControl(frameParts._imageMainFrameSetting._isFitFormMain);
             }
             if (_formMain._formMainSetting.iIsFixFrameSize == ImageViewerConstants.FIX_FORM_SIZE)

@@ -199,7 +199,34 @@ namespace ImageViewer5
             Console.WriteLine("Logger.FilePath");
             Console.WriteLine(_logger.FilePath);
             Console.WriteLine("");
+            this.DisposeObjects();
         }
+
+        private void DisposeObjects()
+        {
+            try
+            {
+                _fileSenderFunction.DisposeObjects();
+                _fileSenderFunction = null;
+                _formMainSetting.DisposeObjects();
+                _formMainSetting = null;
+                _mainFrameManager.DisposeObjects();
+                _mainFrameManager = null;
+                _applySettings.DisposeObjects();
+                _applySettings = null;
+                _imageViewerArgs.DisposeObjects();
+                _imageViewerArgs = null;
+                _nowImageMainFrame = null;
+                _logger.Dispose();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         private void FormMain_KeyDown(object sender, KeyEventArgs e)
         {
             try

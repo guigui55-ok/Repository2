@@ -29,6 +29,20 @@ namespace CommonUtility.FileListUtility.FileListControl
             _listBox.Click += ListBox_Click;
         }
 
+        public void Dispose()
+        {
+            try
+            {
+                _listBox.Click -= ListBox_Click;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         /// <summary>
         /// _filesが直接変更されたとき、コントロールに反映させる
         /// _files.SelectedItemから呼び出される（RecieveEvent用）

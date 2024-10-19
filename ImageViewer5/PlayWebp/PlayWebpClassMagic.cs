@@ -29,6 +29,29 @@ namespace PlayWebp
             _timer.Tick += OnTick;
         }
 
+        public void Dispose()
+        {
+            try
+            {
+                if(_timer != null)
+                {
+                    _timer.Stop();
+                    _timer.Tick -= OnTick;
+                    _timer.Dispose();
+                    _timer = null;
+                }
+                if (_frames != null)
+                {
+                    _frames.Dispose();
+                }
+            } catch ( Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
 
         public Image GetImageFirstFrameFromFile(string path)
         {

@@ -564,6 +564,30 @@ namespace CommonModules
             _timer.Elapsed += OnTimerElapsed;
         }
 
+        public void Dispose()
+        {
+            try
+            {
+                if(_timer != null)
+                {
+                    _timer.Stop();
+                    _timer.Elapsed -= OnTimerElapsed;
+                    _timer.Dispose();
+                    _timer = null;
+                }
+                if (_argExecuteTimerMethod != null)
+                {
+                    _argExecuteTimerMethod = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         public void Execute(Action<object> ArgExecuteTimerTickMethod, object TimerMethodValue)
         {
             _argExecuteTimerMethod = ArgExecuteTimerTickMethod;

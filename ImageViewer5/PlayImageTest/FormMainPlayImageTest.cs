@@ -97,5 +97,11 @@ namespace PlayImageTest
 
             return gifPaths;
         }
+
+        private void FormMainPlayImageTest_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _logger.Dispose();
+            _playGif.Dispose();
+        }
     }
 }

@@ -66,6 +66,25 @@ namespace CommonUtility.FileListUtility
             IsRandom = _fileListManagerSetting._isListRandom;
         }
 
+        public void Dispose()
+        {
+            try
+            {
+                _fileListManagerSetting = null;
+                _directoryGetter = null;
+                _filesRegister.Dispose();
+                _filesRegister = null;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
+
         // SetFileListFromFolderList
         // NextFolder
         // PreviousFolder

@@ -30,6 +30,7 @@ namespace SlideShowImage
             SetColorMatrix(alphaPercent);
         }
 
+
         public void logColorMatrix(ColorMatrix matrix)
         {
             _logger.PrintInfo($"ColorMatrix values:");
@@ -74,6 +75,17 @@ namespace SlideShowImage
         {
             //Dispose();
             GC.SuppressFinalize(this);
+
+            try
+            {
+                _matrix = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
         }
 
         //protected override void Dispose(bool disposing)

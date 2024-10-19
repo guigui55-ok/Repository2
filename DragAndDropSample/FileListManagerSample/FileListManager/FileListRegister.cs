@@ -75,6 +75,35 @@ namespace CommonUtility.FileListUtility
         {
         }
 
+        public void Dispose()
+        {
+            try
+            {
+                _fileList.Clear();
+                _fileList = null;
+                _folderList.Clear();
+                _folderList = null;
+                _includeFileTypeList.Clear();
+                _includeFileTypeList = null;
+                _notIncludeFileTypeList.Clear();
+                _notIncludeFileTypeList = null;
+                _includeFileNameList.Clear();
+                _includeFileNameList = null;
+                _notIncludeFileNameList.Clear();
+                _notIncludeFileNameList = null;
+                _fileFilterConditionList.Clear();
+                _fileFilterConditionList = null;
+                _fileIgnoreConditionList.Clear();
+                _fileIgnoreConditionList = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
         public FileListRegister(AppLogger logger, List<string> list)
         {
             this._logger = logger;

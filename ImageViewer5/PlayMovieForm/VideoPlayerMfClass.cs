@@ -39,6 +39,7 @@ namespace PlayMovieForm
             _logger.PrintInfo("Media Foundation initialized.");
         }
 
+
         public void SetMovie(string moviePath)
         {
             _moviePath = moviePath;
@@ -290,6 +291,26 @@ namespace PlayMovieForm
             // Media Foundation の終了処理
             MFShutdown();
             _logger.PrintInfo("Media Foundation shutdown.");
+
+            try
+            {
+                if (_mediaSession != null)
+                {
+                    try { _mediaSession.Close(); } catch (Exception ex) { Console.WriteLine(ex.ToString() + ":" + ex.Message + "\n" + ex.StackTrace); }
+                    try { _mediaSession.Close(); } catch (Exception ex) { Console.WriteLine(ex.ToString() + ":" + ex.Message + "\n" + ex.StackTrace); }
+                }
+                _mediaSession = null;
+                try { _mediaSource.Shutdown(); } catch (Exception ex) { Console.WriteLine(ex.ToString() + ":" + ex.Message + "\n" + ex.StackTrace); }
+                try { _topology.Clear(); } catch (Exception ex) { Console.WriteLine(ex.ToString() + ":" + ex.Message + "\n" + ex.StackTrace); }
+                try { _videoDisplayControl = null; } catch (Exception ex) { Console.WriteLine(ex.ToString() + ":" + ex.Message + "\n" + ex.StackTrace); }
+                try { _volumeControl = null; } catch (Exception ex) { Console.WriteLine(ex.ToString() + ":" + ex.Message + "\n" + ex.StackTrace); }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(this.ToString() + ".Dispose Error");
+                Console.WriteLine(ex.ToString() + ":" + ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
         }
 
         // IMFAsyncCallback の実装

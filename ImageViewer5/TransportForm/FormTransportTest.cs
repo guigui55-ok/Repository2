@@ -163,5 +163,16 @@ namespace TransportForm
                 //}
             }
         }
+
+        private void FormTransportTest_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _logger.Dispose();
+            _draggerInnerToInner.Dispose();
+            _draggerInnerToFrame.Dispose();
+            _draggerFrameToFrame.Dispose();
+            _draggerFrameToForm.Dispose();
+            _draggerInnerToForm.Dispose();
+            _draggerFormToForm.Dispose();
+        }
     }
 }
